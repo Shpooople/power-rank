@@ -59,29 +59,73 @@ const TeamSection = ({ team }) => {
             data={[{
               type: 'scatterpolar',
               r: [qbStrength, rbStrength, wrStrength, teStrength, kStrength],
-              theta: ['QB', 'RB', 'WR', 'TE', 'K'],
-              fill: 'toself'
+              theta: ['QB', 'RB', 'WR', 'TE', 'K',],
+              fill: 'toself',
+              line: {
+                color: '#153448',  // Change the line color (e.g., orange-red)
+                width: 3           // Optional: set the line width
+              },
+             // text: [qbStrength, rbStrength, wrStrength, teStrength, kStrength],  // Display the values
+             // textposition: 'right',  // Position the text at the top of each point
+              // textfont: {
+                  //  family: 'Arial, sans-serif',  // Change the font family
+                   // size: 16,                    // Change the font size
+                   // color: '#000',               // Change the text color
+                   // weight: 'bold'               // Make the text bold
+                 // },
+              mode: 'lines+markers+text',  // Show markers, lines, and text
+              marker: { size: 10 },  // Customize marker size
+              connectgaps: true,
+              line_close: true
             }]}
             layout={{ 
                   title: {
-      text: 'Aktuelle Teamstärke',  // Title text
-      font: {
-        family: 'Arial, sans-serif',  // Font family for the title
-        size: 20,                    // Font size for the title
-        color: '#333'
-        }
-        },         
-              polar: { radialaxis: { visible: true, range: [0, 100] } },
+                  text: 'AKTUELLE TEAMSTÄRKE',  // Title text
+                        font: {
+                        family: 'Roboto, sans-serif',  // Font family for the title
+                        weight: 'bold',
+                        size: 16,                    // Font size for the title
+                        color: '#153448'
+                              }
+                         },         
+              polar: { radialaxis: { 
+                visible: true, 
+                range: [0, 100],
+                showticklabels: true,
+                color: '#3C5B6F',
+                ticks: '',
+                tickfont: {
+                  family: 'Roboto, sans-serif',  // Customize tick font family
+                  size: 12,
+                  weight: 'bold',                     // Customize tick font size
+                  color: '#222831'                 // Customize tick font color
+                },  
+              }, 
+              angularaxis:{
+                rotation: 90,
+                color: '#153448',
+                tickfont: {
+                  family: 'Roboto, sans-serif',  // Customize theta label font family
+                  weight: 'bold',
+                  size: 12,                      // Customize theta label font size
+                  color: '#222831'               // Customize theta label font color
+                }
+              }
+
+              },
               showlegend: false,
     margin: {
-      l: 10, // Reduce left margin
+      l: 30, // Reduce left margin
       r: 30, // Reduce right margin
-      t: 50, // Reduce top margin
+      t: 60, // Reduce top margin
       b: -20  // Reduce bottom margin
-    }
+    },
+        // Transition settings for initial animation
+
               }}
   config={{
-    displayModeBar: false // This hides the mode bar while keeping hover functionality
+    displayModeBar: false, // This hides the mode bar while keeping hover functionality
+    staticPlot: true
   }}
           
           />
@@ -89,29 +133,61 @@ const TeamSection = ({ team }) => {
           <Plot
   data={[{
     type: 'scatter',
-    y: Object.values(weekData) // Week scores (use data from Week 1, Week 2, etc.)
+    y: Object.values(weekData), // Week scores (use data from Week 1, Week 2, etc.)
+
+                  line: {
+                     color: '#153448',  // Change the line color (e.g., orange-red)
+                     width: 3           // Optional: set the line width
+                   },
+              mode: 'lines+markers+text',  // Show markers, lines, and text
+              marker: { size: 10 },  // Customize marker size
   }]}
   layout={{
     title: {
-      text: 'Saisonverlauf',  // Title text
+      text: 'SAISONVERLAUF',  // Title text
       font: {
         family: 'Arial, sans-serif',  // Font family for the title
-        size: 20,                    // Font size for the title
-        color: '#333'                 // Font color for the title
+        weight: 'bold',
+        size: 16,                    // Font size for the title
+        color: '#153448'                 // Font color for the title
       }
     },
-    xaxis: { title: 'Wochen' },
-    yaxis: { title: '' },
+    xaxis: { 
+      title: '',
+      showgrid:false,
+      zeroline: false,
+      tickvals: Object.keys(weekData).map((key, index) => index ),  // Custom tick values (1, 2, 3, ...)
+      ticktext: Object.keys(weekData).map((key, index) => index + 1),
+        tickfont: {
+        family: 'Roboto, sans-serif',  // Customize tick font family
+        size: 12,
+        weight: 'bold',                     // Customize tick font size
+        color: '#222831'                 // Customize tick font color
+        }, 
+    },
+    yaxis: { 
+      title: '',
+      zeroline: false,
+      showticklabels: true,
+        tickfont: {
+        family: 'Roboto, sans-serif',  // Customize tick font family
+        size: 12,
+        weight: 'bold',                     // Customize tick font size
+        color: '#222831'                 // Customize tick font color
+        }, 
+    },
     height: 300,
     margin: {
       l: 30, // Reduce left margin
       r: 20, // Reduce right margin
       t: 30, // Reduce top margin
       b: -30  // Reduce bottom margin
-    }
+    },
+
   }}
   config={{
-    displayModeBar: false // This hides the mode bar while keeping hover functionality
+    displayModeBar: false, // This hides the mode bar while keeping hover functionality
+    staticPlot: true
   }}
   /* Properly close the Plot component here with /> */
   />

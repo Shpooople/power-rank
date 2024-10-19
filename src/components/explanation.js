@@ -1,4 +1,5 @@
 import React from 'react';
+import './explanation.css';
 
 const Explanation = () => {
   return (
@@ -39,7 +40,7 @@ const Explanation = () => {
         <li><strong>Kicker (K)</strong>: Der Punktwert des besten Kickers.</li>
       </ul>
       <p>
-        Diese Summen der Punktwerte werden für jedes Team berechnet und geben die Stärke der jeweiligen Position wieder. Die stärksten Spieler auf diesen Positionen erhalten also den größten Einfluss auf die berechnete Positionsstärke.
+        Diese Summen der Punktwerte werden für jedes Team berechnet und geben die Stärke der jeweiligen Position wieder. Dazu werden die Werte auf einer Skala von eins bis 100 normalisiert, das Team mit dem höchsten Wert bekommt 100 Punkte und alle weiteren Teams bekommen prozentual weniger. Die stärksten Spieler auf diesen Positionen erhalten den größten Einfluss auf die berechnete Positionsstärke.
       </p>
       <h3>Warum die Positionsstärke nicht im Power Ranking berücksichtigt wird:</h3>
       <p>

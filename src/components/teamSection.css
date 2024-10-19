@@ -90,6 +90,12 @@
     justify-content: space-between;
   }
 
+  .team-roster thead th {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: bolder;
+    color: #153448;
+  }
   .team-roster thead,
   .team-roster tbody {
     display: flex;
@@ -105,6 +111,9 @@
   }
 
   .team-roster tbody {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    color: #222831;
     display: flex;
     flex-direction: row; /* Display data (td) horizontally next to the headers */
   }
