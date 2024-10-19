@@ -18,8 +18,8 @@
     "K Strength": 83,
     "QB": "Jayden Daniels",
     "RB": "Roschon Johnson, Kimani Vidal, Kareem Hunt, David Montgomery, J.K. Dobbins, Isiah Pacheco",
-    "WR": "Jayden Reed, Mike Evans, Terry McLaurin, Justin Jefferson, Darnell Mooney",
-    "TE": "Zach Ertz, T.J. Hockenson, Cole Kmet",
+    "WR": "Jayden Reed, Mike Evans, Calvin Ridley, Terry McLaurin, Justin Jefferson, Darnell Mooney",
+    "TE": "T.J. Hockenson, Cole Kmet",
     "K": "Austin Seibert",
     "DEF": "Pittsburgh Steelers",
     "Week 1": 164.47,
@@ -45,12 +45,12 @@
     "TREND": "NO TREND",
     "Trend Percentage": -3.7,
     "QB Strength": 49,
-    "RB Strength": 64,
+    "RB Strength": 54,
     "WR Strength": 57,
     "TE Strength": 63,
     "K Strength": 100,
     "QB": "Patrick Mahomes",
-    "RB": "Tyrone Tracy, Jonathan Taylor, Trey Sermon, James Cook",
+    "RB": "Tyrone Tracy, Jonathan Taylor, Clyde Edwards-Helaire, James Cook",
     "WR": "DeAndre Hopkins, JuJu Smith-Schuster, Tee Higgins, Jaylen Waddle, Puka Nacua, Zay Flowers",
     "TE": "Jake Ferguson, Isaiah Likely",
     "K": "Brandon Aubrey, Joshua Karty",
@@ -63,7 +63,7 @@
     "Week 6": 94.17,
     "POWER RANK": 9,
     "Power Rank Score": 7.7,
-    "COMMENTS": "Der großartige Teamname hat diese Jahr noch nicht ganz so viel Glück gebracht. Die Apukalipse hat nicht lange auf sich warten lassen, als Puka in Woche 1 direkt kaputt gegangen ist. Aber der Rookie of the Year kann in der zweiten Hälfte der Retter sein. Aprospros Retter. Der wirkliche Star ist der 29 jährige Brandon Aubrey. Er hat Lückes Rumpeltruppe die ein oder andere Woche gerettet. Diese Woche fehlt der alte Fußballspieler mit der längsten Reichweite der Liga. dafür startet aber Kermit the Frog als QB. 29% Win Chance in Woche 7. But hey, any given Sunday."
+    "COMMENTS": "Wer die meisten Punkte macht und die meisten Wins hat, darf sich selber auch auf Platz 1 der Power Rankings stellen. Wuerde ich sagen, wenn ich entscheiden würde wer auf Platz eins landet. Habe ich das Modell so angelegt dass ich gut dastehe? Ja. Aber eigentlich wollte ich mich in noch besseres Licht ruecken. Leider war mir das vergoennt, da mir die Hackerfaehigkeiten gefehlt haben und ich an manche Daten nicht gekommen bin. Jetzt aber mal ganz im Ernst, das Team ist stabil und macht bis auf eine Ausnahme in Woche 3 richtig viele Punkte. Der Draft lief gut, die Trades liefen noch besser. Mehr jinxen kann man sich eigentlich nicht, naja egal."
   },
   {
     "User ID": 718524962947801100,
@@ -96,7 +96,7 @@
     "Week 6": 146.6,
     "POWER RANK": 4,
     "Power Rank Score": 5.45,
-    "COMMENTS": "Nach gutem Start, ging es für den Zungenbrecher Brijaleon Daltallen Jr. erstmal ins Tal der Traurigkeit. Till hat wieder die ein oder andere Brücke verbrannt. Kommt Najee jetzt auch auf seine Blacklist? Das Team, dass aus Tills \"Never Draft Again Liste\" steht könnte vermutlich 3 Fantasy Championsships am Stück gewinnen, aber der Mann steht zu seinen Prinzipien. Najee konnte sich nochmal mit dem Hechtsprung Richtung Pylon vor der Liste retten, vermute ich mal. Die 7 scheint Tills Glückszahl zu sein, denn Courtland Sutton hat ihm direkt eine schöne 0.00 in Woche 7 geschenkt."
+    "COMMENTS": "Wer die meisten Punkte macht und die meisten Wins hat, darf sich selber auch auf Platz 1 der Power Rankings stellen. Wuerde ich sagen, wenn ich entscheiden würde wer auf Platz eins landet. Habe ich das Modell so angelegt dass ich gut dastehe? Ja. Aber eigentlich wollte ich mich in noch besseres Licht ruecken. Leider war mir das vergoennt, da mir die Hackerfaehigkeiten gefehlt haben und ich an manche Daten nicht gekommen bin. Jetzt aber mal ganz im Ernst, das Team ist stabil und macht bis auf eine Ausnahme in Woche 3 richtig viele Punkte. Der Draft lief gut, die Trades liefen noch besser. Mehr jinxen kann man sich eigentlich nicht, naja egal."
   },
   {
     "User ID": 718516055202418700,
@@ -129,7 +129,7 @@
     "Week 6": 134.61,
     "POWER RANK": 7,
     "Power Rank Score": 7.05,
-    "COMMENTS": "Felix hat es schon selber am besten gesagt. Meine Woche läuft wie die der Saints. PHENOMENALER START gefolgt von bitterster Enttäuschung. Die hat ja bei den Saints schon einen neuen Höhe bzw Tiefpunkt gefunden, mit dem Debakel gegen die Pferdemänner aus den Bergen. Schlechtes Omen für Kamara Hallis? Ich wills mal hoffen. Dabei ist das Team gut ausbalanciert und hat mit weitem Abstand den besten TE, George Kittle. Es geht leicht aufwärts für den Favoriten zum besten Team Namen 2024. (New Award incoming?)"
+    "COMMENTS": "Wer die meisten Punkte macht und die meisten Wins hat, darf sich selber auch auf Platz 1 der Power Rankings stellen. Wuerde ich sagen, wenn ich entscheiden würde wer auf Platz eins landet. Habe ich das Modell so angelegt dass ich gut dastehe? Ja. Aber eigentlich wollte ich mich in noch besseres Licht ruecken. Leider war mir das vergoennt, da mir die Hackerfaehigkeiten gefehlt haben und ich an manche Daten nicht gekommen bin. Jetzt aber mal ganz im Ernst, das Team ist stabil und macht bis auf eine Ausnahme in Woche 3 richtig viele Punkte. Der Draft lief gut, die Trades liefen noch besser. Mehr jinxen kann man sich eigentlich nicht, naja egal."
   },
   {
     "User ID": 718795712124510200,
@@ -145,12 +145,12 @@
     "Trend Percentage": 8.5,
     "QB Strength": 58,
     "RB Strength": 70,
-    "WR Strength": 78,
+    "WR Strength": 79,
     "TE Strength": 87,
     "K Strength": 51,
     "QB": "Sam Darnold, Jordan Love",
     "RB": "Bucky Irving, Raheem Mostert, Joe Mixon, Jahmyr Gibbs",
-    "WR": "Marvin Harrison, Stefon Diggs, Hollywood Brown, Jakobi Meyers, Jauan Jennings, George Pickens, Dontayvion Wicks",
+    "WR": "Marvin Harrison, Stefon Diggs, Hollywood Brown, Jakobi Meyers, George Pickens, Rashid Shaheed, Dontayvion Wicks",
     "TE": "Brock Bowers",
     "K": "Cameron Dicker",
     "DEF": "Cincinnati Bengals",
@@ -162,7 +162,7 @@
     "Week 6": 142.32,
     "POWER RANK": 5,
     "Power Rank Score": 6.3,
-    "COMMENTS": "Tja, wenn die Minnesota Vikings ein Football Team wären, dann wäre es pk123, eigentlich \"No Team Name\" (danke für den extra aufwand beim coden damit der andere Name angezeigt wird), denn er hat tatsächlich den besten all time record von uns allen. Aber noch keine Hardware dafür vorzuweisen. Dieses Jahr war die Performance bislang eher durchwachsen, aber Woche 6 hat für einen Aufwärtstrend gesorgt. Jordan Love ist auch wieder zurück, Mixon läuft besser als jemals zuvor und MHJ hat ein paar BOOM Perfomances im Köcher. Die Bank ist nicht besonders deep und weitere Verletzungen könnten das Team wieder runterziehen."
+    "COMMENTS": "Wer die meisten Punkte macht und die meisten Wins hat, darf sich selber auch auf Platz 1 der Power Rankings stellen. Wuerde ich sagen, wenn ich entscheiden würde wer auf Platz eins landet. Habe ich das Modell so angelegt dass ich gut dastehe? Ja. Aber eigentlich wollte ich mich in noch besseres Licht ruecken. Leider war mir das vergoennt, da mir die Hackerfaehigkeiten gefehlt haben und ich an manche Daten nicht gekommen bin. Jetzt aber mal ganz im Ernst, das Team ist stabil und macht bis auf eine Ausnahme in Woche 3 richtig viele Punkte. Der Draft lief gut, die Trades liefen noch besser. Mehr jinxen kann man sich eigentlich nicht, naja egal."
   },
   {
     "User ID": 722748718910083100,
@@ -195,7 +195,7 @@
     "Week 6": 132.55,
     "POWER RANK": 2,
     "Power Rank Score": 2.8,
-    "COMMENTS": "Die amtierende Meisterin und beste aktive Fantasy Spielerin dieser Liga hat schonwieder ein gutes Team zusammengestellt. Durch die Bank stabil auf allen Positionen. Free Agent Aquisition Bakearrr Mayfield ist überraschend der QB2 der Season, mal gucken ob das so bleibt. Angeführt wird das zweitstärkste Team vom King persönlich. Henry ist auf Rekordkurs und das als 2nd Round Fantasy Pick. Wow, wer hat den wo liegen lassen? Selbst Superbust Kandidat G Wilson fängt jetzt Bälle, aber mit D.Adams im Haus, auch vielleicht ein Traum von gestern. Nico raus, Nick rein. Nachdem ich erst dachte Nr. 24 wird niewieder Football spielen kommt Chubb diese Woche wieder. Passend, da der leading WR (Collins) für weitere drei Wochen fehlen wird."
+    "COMMENTS": "Wer die meisten Punkte macht und die meisten Wins hat, darf sich selber auch auf Platz 1 der Power Rankings stellen. Wuerde ich sagen, wenn ich entscheiden würde wer auf Platz eins landet. Habe ich das Modell so angelegt dass ich gut dastehe? Ja. Aber eigentlich wollte ich mich in noch besseres Licht ruecken. Leider war mir das vergoennt, da mir die Hackerfaehigkeiten gefehlt haben und ich an manche Daten nicht gekommen bin. Jetzt aber mal ganz im Ernst, das Team ist stabil und macht bis auf eine Ausnahme in Woche 3 richtig viele Punkte. Der Draft lief gut, die Trades liefen noch besser. Mehr jinxen kann man sich eigentlich nicht, naja egal."
   },
   {
     "User ID": 723145047784116200,
@@ -228,7 +228,7 @@
     "Week 6": 127.27,
     "POWER RANK": 3,
     "Power Rank Score": 3.8,
-    "COMMENTS": "Der Fantasy Boomer kanns immernoch. Auch mit dem ganzen neuen Quatsch. Früher, als Obama noch President war und 100 Punkte noch nen sicheren Win bedeutet haben, hat Leo schon Fantasy gespielt. Die Erfahrung scheint dieses Jahr Früchte zu tragen. Bis auf einen Ausreisser sind die Performances stetig über 120 Punkte. Consistency wins in Fantasy. Nirgendswo so richtig gut, aber nirgendswo so richtig schlecht scheint der Mango Mochi Approach zu sein. Die Frage ist nur ob Butker nicht den Lockerroom verpestet. Instant 2 Verletzungen nach der Free Agency Aquisition. Autsch. Dafür hat er jetzt so ziemlich die beste D der Liga. Life ehh finds a way."
+    "COMMENTS": "Wer die meisten Punkte macht und die meisten Wins hat, darf sich selber auch auf Platz 1 der Power Rankings stellen. Wuerde ich sagen, wenn ich entscheiden würde wer auf Platz eins landet. Habe ich das Modell so angelegt dass ich gut dastehe? Ja. Aber eigentlich wollte ich mich in noch besseres Licht ruecken. Leider war mir das vergoennt, da mir die Hackerfaehigkeiten gefehlt haben und ich an manche Daten nicht gekommen bin. Jetzt aber mal ganz im Ernst, das Team ist stabil und macht bis auf eine Ausnahme in Woche 3 richtig viele Punkte. Der Draft lief gut, die Trades liefen noch besser. Mehr jinxen kann man sich eigentlich nicht, naja egal."
   },
   {
     "User ID": 1127992026114461700,
@@ -246,12 +246,12 @@
     "RB Strength": 67,
     "WR Strength": 53,
     "TE Strength": 49,
-    "K Strength": 53,
+    "K Strength": 56,
     "QB": "Geno Smith, Jalen Hurts",
     "RB": "Jaleel McLaughlin, Saquon Barkley, Devin Singletary, Rachaad White",
     "WR": "Brian Thomas, Christian Kirk, A.J. Brown, Tank Dell, Quentin Johnston",
     "TE": "Hunter Henry, David Njoku",
-    "K": "Tyler Bass",
+    "K": "Cairo Santos",
     "DEF": "Philadelphia Eagles",
     "Week 1": 127.12,
     "Week 2": 103.42,
@@ -261,7 +261,7 @@
     "Week 6": 105.91,
     "POWER RANK": 8,
     "Power Rank Score": 7.2,
-    "COMMENTS": "Ob ich hier was schreibe oder nicht. Is glaub ich ziemlich egal. Ben wirds vermutlich nicht lesen. Also da gehe ich mal stark von aus. Ben wenn du das liest, dann benche doch bitte J.McLaughlin. Du findest bessere Starter. Aber hey, man muss nicht wirklich aktiv sein um Fantasy zu spielen. Ben is middle of the pack und das obwohl seine geliebten Adler sich schon im Horst eine Woche ausruhen dürften. Das Rezept ist einfach. Eagles win, Ben wins. Oder irgendwie so. Saquad könnte als RB1 oder Overall 1 der Fantasy Season enden, auch einer der nächstes Jahr wohl früher gepickt wird."
+    "COMMENTS": "Wer die meisten Punkte macht und die meisten Wins hat, darf sich selber auch auf Platz 1 der Power Rankings stellen. Wuerde ich sagen, wenn ich entscheiden würde wer auf Platz eins landet. Habe ich das Modell so angelegt dass ich gut dastehe? Ja. Aber eigentlich wollte ich mich in noch besseres Licht ruecken. Leider war mir das vergoennt, da mir die Hackerfaehigkeiten gefehlt haben und ich an manche Daten nicht gekommen bin. Jetzt aber mal ganz im Ernst, das Team ist stabil und macht bis auf eine Ausnahme in Woche 3 richtig viele Punkte. Der Draft lief gut, die Trades liefen noch besser. Mehr jinxen kann man sich eigentlich nicht, naja egal."
   },
   {
     "User ID": 723153820145758200,
@@ -294,7 +294,7 @@
     "Week 6": 98.85,
     "POWER RANK": 6,
     "Power Rank Score": 6.6,
-    "COMMENTS": "Nach Woche 4 dachte ich schon. Fuck, Mo gewinnt die Scheiße. Namensgeber Nabers sieht fantastisch aus. Und das bei den Giants. Wer hätte es gedacht? Keiner ausserhalb Giants nation. Irgendwie hat sich das team aber im Mittelfeld eingepegelt, auch nicht zuletzt wegen Nabers Concussion. Wenn aber CeeDee, Jacobs und -5 FAAB erstmal anfangen TDs zu machen dann ist dieses Team echt scary. Worthy hat auch das Potenzial gerade zum Ende der Saison ein absolutes Monster zu werden, wenn der Wind ihn nicht vorher wegweht. Mo ist schön aktiv und sucht immer nach trades. Dafür gibt es vielleicht den Scott Hanson Man of the Year Award am Ende der Season. (Trademark pending)"
+    "COMMENTS": "Wer die meisten Punkte macht und die meisten Wins hat, darf sich selber auch auf Platz 1 der Power Rankings stellen. Wuerde ich sagen, wenn ich entscheiden würde wer auf Platz eins landet. Habe ich das Modell so angelegt dass ich gut dastehe? Ja. Aber eigentlich wollte ich mich in noch besseres Licht ruecken. Leider war mir das vergoennt, da mir die Hackerfaehigkeiten gefehlt haben und ich an manche Daten nicht gekommen bin. Jetzt aber mal ganz im Ernst, das Team ist stabil und macht bis auf eine Ausnahme in Woche 3 richtig viele Punkte. Der Draft lief gut, die Trades liefen noch besser. Mehr jinxen kann man sich eigentlich nicht, naja egal."
   },
   {
     "User ID": 723213691029368800,
@@ -327,7 +327,7 @@
     "Week 6": 114.63,
     "POWER RANK": 9,
     "Power Rank Score": 7.7,
-    "COMMENTS": "Nach seinem Sieg im Jahr 2022/23 hat Jay mal so richtig viel Pech letztes Jahr gehabt. Bring in CMC 2024. Gehandycapped wegen der doppelten Sehnenentzündung des besten Fantasy Spielers der Liga, hat Jay versucht sich aus dem Loch zu graben. Und das hat er auch geschafft. Tyreek, Engram, Jamo & Mason sind alles neue Assets in Jays Kader. Wenn dann CMC und Tua auch noch wiederkommen steht einem späten Run Richtung Playoffs und Chip kaum was im Weg."
+    "COMMENTS": "Wer die meisten Punkte macht und die meisten Wins hat, darf sich selber auch auf Platz 1 der Power Rankings stellen. Wuerde ich sagen, wenn ich entscheiden würde wer auf Platz eins landet. Habe ich das Modell so angelegt dass ich gut dastehe? Ja. Aber eigentlich wollte ich mich in noch besseres Licht ruecken. Leider war mir das vergoennt, da mir die Hackerfaehigkeiten gefehlt haben und ich an manche Daten nicht gekommen bin. Jetzt aber mal ganz im Ernst, das Team ist stabil und macht bis auf eine Ausnahme in Woche 3 richtig viele Punkte. Der Draft lief gut, die Trades liefen noch besser. Mehr jinxen kann man sich eigentlich nicht, naja egal."
   },
   {
     "User ID": 986549581037002800,
@@ -343,12 +343,12 @@
     "Trend Percentage": -13.2,
     "QB Strength": 68,
     "RB Strength": 77,
-    "WR Strength": 58,
+    "WR Strength": 63,
     "TE Strength": 53,
     "K Strength": 69,
     "QB": "Brock Purdy",
     "RB": "Jonathon Brooks, Aaron Jones, Justice Hill, D'Andre Swift, Tyler Allgeier, De'Von Achane",
-    "WR": "Rashee Rice, Jordan Whittington, Ladd McConkey, Tyler Lockett, Deebo Samuel",
+    "WR": "Rashee Rice, Ladd McConkey, Tyler Lockett, Deebo Samuel, Darius Slayton",
     "TE": "Travis Kelce, Mark Andrews, Pat Freiermuth",
     "K": "Justin Tucker",
     "DEF": "Baltimore Ravens",
@@ -360,7 +360,7 @@
     "Week 6": 119.5,
     "POWER RANK": 12,
     "Power Rank Score": 10.6,
-    "COMMENTS": "Der Miami stack, gepaart mit Aaron Jons, Deebo und Rashee sah in Woche 1 DYNAMITE aus. Und wäre vermutlich immernoch super strong. Aber dann kamen die Verletzungen von Svens Spielern und noch Tua. Die grottenschlechte Leistung der Tua-less Dolphins haben zum headscratcher Trade der Season geführt: Hill raus, Kelce rein. Dem Teamnamen zu liebe, nehme ich an. Keiner versucht mehr zu traden als Sven. Er traded viel, vielleicht zu viel. Naja, time will tell. Das Team ist wirklich dünn besetzt aktuell und kann die Hilfe von Rookie Brooks vielleicht gut gebrauchen. Zudem hat Swift seinen Fehlstart mit 3 guten Performances wieder gut gemacht. Es kann auf jeden Fall nur besser werden."
+    "COMMENTS": "Wer die meisten Punkte macht und die meisten Wins hat, darf sich selber auch auf Platz 1 der Power Rankings stellen. Wuerde ich sagen, wenn ich entscheiden würde wer auf Platz eins landet. Habe ich das Modell so angelegt dass ich gut dastehe? Ja. Aber eigentlich wollte ich mich in noch besseres Licht ruecken. Leider war mir das vergoennt, da mir die Hackerfaehigkeiten gefehlt haben und ich an manche Daten nicht gekommen bin. Jetzt aber mal ganz im Ernst, das Team ist stabil und macht bis auf eine Ausnahme in Woche 3 richtig viele Punkte. Der Draft lief gut, die Trades liefen noch besser. Mehr jinxen kann man sich eigentlich nicht, naja egal."
   },
   {
     "User ID": 1137349364512510000,
@@ -393,6 +393,6 @@
     "Week 6": 85.27,
     "POWER RANK": 11,
     "Power Rank Score": 10.3,
-    "COMMENTS": "Ich weiß leider seinen Namen nicht mehr, aber Sandmann spielt auf jeden Fall gut mit. Nachdem uns Felle am Draft hat stehen lassen, musste er die Autodraft Truppe übernehmen. Dafür macht das Team mit dem besten QB alle zwei Wochen über 140 Punkte. Jetzt wäre wieder eine dran und auch bitter nötig. Kaum ein Team is so boom or bust. Amari Cooper zu den Bills könnte auch der Turningpoint werden. Vielleicht ist es mitlerweile an der Zeit von Richardson loszulassen. Auf jeden Fall Danke dass du mitmachst!"
+    "COMMENTS": "Wer die meisten Punkte macht und die meisten Wins hat, darf sich selber auch auf Platz 1 der Power Rankings stellen. Wuerde ich sagen, wenn ich entscheiden würde wer auf Platz eins landet. Habe ich das Modell so angelegt dass ich gut dastehe? Ja. Aber eigentlich wollte ich mich in noch besseres Licht ruecken. Leider war mir das vergoennt, da mir die Hackerfaehigkeiten gefehlt haben und ich an manche Daten nicht gekommen bin. Jetzt aber mal ganz im Ernst, das Team ist stabil und macht bis auf eine Ausnahme in Woche 3 richtig viele Punkte. Der Draft lief gut, die Trades liefen noch besser. Mehr jinxen kann man sich eigentlich nicht, naja egal."
   }
 ]
