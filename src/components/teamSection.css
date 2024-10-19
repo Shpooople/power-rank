@@ -1,0 +1,188 @@
+/* General styles */
+.team-section {
+  padding: 20px;
+  background-color: white;
+  max-width: 1000px; /* Ensure full width of container adapts to screen */
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  color: black;
+  box-sizing: border-box;
+  margin: 0 auto;
+  margin-top: 20px;
+  overflow: hidden; /* Prevent overflow */
+}
+
+
+
+/* Grid layout for content */
+.team-overview {
+  display: grid;
+  grid-template-columns: 1fr; /* Stack items vertically on small screens */
+  grid-gap: 60px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Ensure text fits well within the grid */
+.team-text {
+  grid-area: team-text;
+  width: 100%;
+  word-wrap: break-word;
+  box-sizing: border-box;
+}
+
+.team-roster td {
+  vertical-align: top;
+}
+
+.trend-up {
+  color: green;
+  font-size: 1.2rem;
+  font-weight: bold; /* Make the arrow bolder */
+}
+
+.trend-down {
+  color: red;
+  font-size: 1.2rem;
+  font-weight: bold; /* Make the arrow bolder */
+}
+
+
+.trend-no-trend {
+  color: gray; /* Neutral color for no trend */
+  font-size: 1.2rem;
+}
+
+
+
+/* For larger screens, separate text and charts into two balanced columns */
+@media (min-width: 768px) {
+  .team-overview {
+    grid-template-columns: 1fr 1fr; /* Give text more space than charts */
+    grid-template-areas:
+      "team-text charts-container"
+      "team-roster charts-container";
+  }
+
+  .charts-container {
+    grid-area: charts-container;
+    width: 100%; /* Ensure charts fit within their grid area */
+    max-width: 400px; /* Set a reasonable max width for charts */
+    height: auto; /* Maintain aspect ratio */
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  .team-roster {
+    grid-area: team-roster;
+    margin-top: 10px;
+    width: 100%; /* Full width for the roster */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; /* Align headers and data vertically */
+  }
+
+  .team-roster table {
+    display: flex; /* Make table rows vertical */
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .team-roster thead,
+  .team-roster tbody {
+    display: flex;
+    flex-direction: column; /* Make headers and data columns */
+  }
+
+  .team-roster thead th,
+  .team-roster tbody td {
+    min-height: 60px;
+    display: block;
+    text-align: left;
+    padding: 10px;
+  }
+
+  .team-roster tbody {
+    display: flex;
+    flex-direction: row; /* Display data (td) horizontally next to the headers */
+  }
+
+  .team-roster tbody td {
+    border: none;
+  }
+}
+
+/* Team-roster font scaling for smaller screens */
+@media (max-width: 768px) {
+  .team-roster {
+    font-size: 1rem; /* Smaller font for smaller screens */
+    width: 100%;
+    display: block; /* Default stacked layout for small screens */
+  }
+
+  .plot-container.plotly {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .team-roster table {
+    display: block; /* Stacked table */
+    width: 100%;
+  }
+
+  .team-roster th,
+  .team-roster td {
+    display: table-cell;
+    padding: 8px;
+    text-align: left;
+  }
+
+  .team-roster th {
+    background-color: #f9f9f9;
+  }
+
+  .team-roster td {
+    background-color: white;
+  }
+}
+
+/* Ensure chart scaling and prevent overflow */
+.charts-container > * {
+  width: 100%; /* Make the charts take full width */
+  height: auto; /* Keep the aspect ratio */
+  max-width: 100%; /* Ensure charts don't exceed container size */
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+/* Adjust for small screens */
+@media (max-width: 768px) {
+  .team-overview {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  .team-roster {
+    font-size: 0.7rem;
+  }
+
+  .team-text {
+    font-size: 0.9rem;
+  }
+
+  p {
+    font-size: 1rem;
+    word-wrap: break-word;
+    line-height: 1.5;
+  }
+
+  .charts-container {
+    width: 100%;
+  }
+
+
+}

@@ -1,0 +1,44 @@
+/* header.css */
+.header {
+  text-align: center;
+  padding: 20px;
+  background-color: white;
+  color: black;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header h1, .header h2 {
+  margin: 0;
+  color: #021526;
+  font-family: 'Roboto', sans-serif;
+}
+
+.intro {
+  margin: 10px;
+  font-size: 13px;
+  color: #021526;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+.logo {
+  display: block;
+  margin: 10px auto;
+  width: 150px;
+  height: auto;
+}
+
+.jump-to-bottom {
+  display: inline-block;
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.jump-to-bottom:hover {
+  background-color: #0056b3;
+}

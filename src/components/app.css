@@ -1,0 +1,15 @@
+/* General styles for the whole app */
+body {
+  font-family: Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+}
+
+h1, h2 {
+  font-family: Roboto, sans-serif;
+  margin: 0;
+  color: #021526;
+}
+
+/* Optional: Styles for other components or global layout */
