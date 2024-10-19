@@ -1,4 +1,5 @@
-{
+{ 
+  "homepage": "http://shpooople.github.io/power-rank/",
   "name": "fantasy-power-rankings",
   "version": "0.1.0",
   "private": true,
@@ -13,6 +14,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "open": "http-server build -a localhost -p 1234 -o"
