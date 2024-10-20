@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.fc00adf6.css",
-    "main.js": "/static/js/main.d3726282.js",
-    "static/media/RobotoCondensed-Italic-VariableFont_wght.ttf": "/static/media/RobotoCondensed-Italic-VariableFont_wght.07eb8810353a0680cff5.ttf",
-    "static/media/RobotoCondensed-VariableFont_wght.ttf": "/static/media/RobotoCondensed-VariableFont_wght.ff29b2791402495b1616.ttf",
-    "static/media/Roboto-Regular.ttf": "/static/media/Roboto-Regular.27f62b53b93858475a7f.ttf",
-    "static/media/Roboto-Bold.ttf": "/static/media/Roboto-Bold.d50a80138ec4f2fb5e9f.ttf",
-    "index.html": "/index.html",
-    "main.fc00adf6.css.map": "/static/css/main.fc00adf6.css.map",
-    "main.d3726282.js.map": "/static/js/main.d3726282.js.map"
+    "main.css": "/power-rank/static/css/main.d5eca61d.css",
+    "main.js": "/power-rank/static/js/main.d3726282.js",
+    "static/media/RobotoCondensed-Italic-VariableFont_wght.ttf": "/power-rank/static/media/RobotoCondensed-Italic-VariableFont_wght.07eb8810353a0680cff5.ttf",
+    "static/media/RobotoCondensed-VariableFont_wght.ttf": "/power-rank/static/media/RobotoCondensed-VariableFont_wght.ff29b2791402495b1616.ttf",
+    "static/media/Roboto-Regular.ttf": "/power-rank/static/media/Roboto-Regular.27f62b53b93858475a7f.ttf",
+    "static/media/Roboto-Bold.ttf": "/power-rank/static/media/Roboto-Bold.d50a80138ec4f2fb5e9f.ttf",
+    "index.html": "/power-rank/index.html",
+    "main.d5eca61d.css.map": "/power-rank/static/css/main.d5eca61d.css.map",
+    "main.d3726282.js.map": "/power-rank/static/js/main.d3726282.js.map"
   },
   "entrypoints": [
-    "static/css/main.fc00adf6.css",
+    "static/css/main.d5eca61d.css",
     "static/js/main.d3726282.js"
   ]
 }
