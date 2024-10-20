@@ -1,4 +1,18 @@
 /* header.css */
+@font-face {
+  font-family: 'Roboto';
+  src: url('/public/fonts/Roboto-Regular.ttf') format('truetype');  /* Relative to public folder */
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/public/fonts/Roboto-Bold.ttf') format('truetype');  /* Relative to public folder */
+  font-weight: 700;
+  font-style: bold;
+}
+
 .header {
   text-align: center;
   max-width: 960px;

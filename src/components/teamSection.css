@@ -1,4 +1,32 @@
 /* General styles */
+@font-face {
+  font-family: 'Roboto';
+  src: url('/public/fonts/Roboto-Regular.ttf') format('truetype');  /* Relative to public folder */
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/public/fonts/Roboto-Bold.ttf') format('truetype');  /* Relative to public folder */
+  font-weight: 700;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  src: url('/public/fonts/RobotoCondensed-VariableFont_wght.ttf') format('truetype');  /* Add Roboto Condensed Regular */
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  src: url('/public/fonts/RobotoCondensed-Italic-VariableFont_wght.ttf') format('truetype');  /* Add Roboto Condensed Bold */
+  font-weight: 700;
+  font-style: bold;
+}
+
 .team-section {
   padding: 20px;
   background-color: white;
@@ -111,7 +139,7 @@
   }
 
   .team-roster tbody {
-    font-family: Roboto, sans-serif;
+    font-family: Roboto Condensed, sans-serif;
     font-size: 16px;
     color: #222831;
     display: flex;
@@ -156,6 +184,10 @@
   .team-roster td {
     background-color: white;
   }
+
+  .team-roster tbody {
+    font-family: Roboto Condensed, sans-serif;
+  }  
 }
 
 /* Ensure chart scaling and prevent overflow */
