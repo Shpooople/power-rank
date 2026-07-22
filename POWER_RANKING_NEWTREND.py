@@ -110,40 +110,58 @@ if using_previous_season_chart_data:
         using_previous_season_chart_data = False
         print(f"Vorsaison-Daten für den Saisonverlauf konnten nicht geladen werden: {e}")
 
-# --- NEU: Jahr in den CSV-URLs kommt automatisch aus "season", mit Fallback ---
-# Vor Saisonstart legt die Datenquelle (hvpkod/NFL-Data) den Ordner fürs neue
-# Jahr oft noch nicht an. Falls die aktuelle Saison 404 liefert, weichen wir
-# automatisch auf die Vorjahresdaten aus.
-def load_position_points(season_to_try):
-    csv_urls = {
-        'QB': f'https://raw.githubusercontent.com/hvpkod/NFL-Data/main/NFL-data-Players/{season_to_try}/QB_season.csv',
-        'RB': f'https://raw.githubusercontent.com/hvpkod/NFL-Data/main/NFL-data-Players/{season_to_try}/RB_season.csv',
-        'WR': f'https://raw.githubusercontent.com/hvpkod/NFL-Data/main/NFL-data-Players/{season_to_try}/WR_season.csv',
-        'TE': f'https://raw.githubusercontent.com/hvpkod/NFL-Data/main/NFL-data-Players/{season_to_try}/TE_season.csv',
-        'K': f'https://raw.githubusercontent.com/hvpkod/NFL-Data/main/NFL-data-Players/{season_to_try}/K_season.csv',
-    }
-    points = {}
-    for position, url in csv_urls.items():
-        df = pd.read_csv(url)
-        points[position] = dict(zip(df['PlayerName'], df['TotalPoints']))
-    return points
+# --- NEU: Punkte pro Spiel statt Gesamtpunkte für die Positionsstärke ---
+# Wir holen uns für jede gespielte Woche die kompletten Sleeper-Stats aller
+# Spieler (ein API-Call pro Woche, wie beim Projections-Endpoint weiter unten)
+# und zählen selbst mit: in wie vielen Wochen hat ein Spieler tatsächlich
+# gespielt, und wie viele Half-PPR-Punkte hat er insgesamt gemacht.
+# PPG = Gesamtpunkte / Spiele. Das ersetzt die vorherige externe CSV-Quelle
+# (hvpkod/NFL-Data) komplett - spart eine Abhängigkeit und matched über
+# Spieler-IDs statt über (fehleranfällige) Namensvergleiche.
+games_played_by_player = {}
+total_points_by_player = {}
 
-try:
-    position_points = load_position_points(season)
-except Exception as e:
-    fallback_season = str(int(season) - 1)
-    print(f"Daten für Saison {season} nicht verfügbar ({e}). Verwende Vorjahresdaten {fallback_season}.")
-    position_points = load_position_points(fallback_season)
+for wk in weeks:
+    try:
+        stats_url = (
+            f"https://api.sleeper.app/stats/nfl/{season}/{wk}"
+            "?season_type=regular&position[]=QB&position[]=RB&position[]=WR"
+            "&position[]=TE&position[]=K&position[]=DEF"
+        )
+        stats_response = requests.get(stats_url)
+        week_stats = stats_response.json() or []
+        for entry in week_stats:
+            pid = entry.get('player_id')
+            if not pid:
+                continue
+            stats = entry.get('stats', {}) or {}
+            # "gp" liefert Sleeper meist direkt mit. Falls das Feld fehlt,
+            # reicht "hat irgendeine Stat-Zeile" NICHT als Signal - ein
+            # Spieler kann 0 Fantasy-Punkte machen und trotzdem gespielt
+            # haben. Wir schauen deshalb zusätzlich auf Snap-Counts
+            # (Offense/Special-Teams/Defense), die auch bei 0 Punkten meist
+            # vorhanden sind, solange der Spieler auf dem Feld stand.
+            played = stats.get('gp')
+            if played is None:
+                snap_counts = [stats.get('off_snp', 0), stats.get('st_snp', 0), stats.get('def_snp', 0)]
+                played = 1 if any(snap_counts) or len(stats) > 0 else 0
+            if played:
+                games_played_by_player[pid] = games_played_by_player.get(pid, 0) + 1
+            pts = stats.get('pts_half_ppr', stats.get('pts_std', stats.get('pts_ppr', 0))) or 0
+            total_points_by_player[pid] = total_points_by_player.get(pid, 0) + pts
+    except Exception as e:
+        print(f"Stats für Woche {wk} konnten nicht geladen werden: {e}")
 
-# Helper function to calculate position strength based on total points
-def calculate_strength(roster, position_dict, num_players):
-    player_points = []
-    for player_name in roster:
-        if player_name in position_dict:
-            total_points = position_dict[player_name]
-            player_points.append(total_points)
-    player_points.sort(reverse=True)
-    return int(sum(player_points[:num_players]))  # Sum of the top 'num_players'
+def ppg(pid):
+    games = games_played_by_player.get(pid, 0)
+    if games <= 0:
+        return 0
+    return total_points_by_player.get(pid, 0) / games
+
+# Helper function to calculate position strength based on points-per-game
+def calculate_strength(player_ids, num_players):
+    player_ppgs = sorted((ppg(pid) for pid in player_ids), reverse=True)
+    return round(sum(player_ppgs[:num_players]), 1)
 
 # Initialize lists for data collection
 user_ids, team_names, display_names = [], [], []
@@ -268,8 +286,9 @@ for team in rosters:
     points_for.append(team['settings'].get('fpts', 0))
     points_against.append(team['settings'].get('fpts_against', 0))
 
-    # Collect player names for each position
+    # Collect player names (fürs Roster) UND ids (für die PPG-Berechnung)
     qb_roster, rb_roster, wr_roster, te_roster, k_roster, def_roster = [], [], [], [], [], []
+    qb_ids, rb_ids, wr_ids, te_ids, k_ids = [], [], [], [], []
     for player_id in team['players']:
         if player_id in players:
             player = players[player_id]
@@ -278,14 +297,19 @@ for team in rosters:
 
             if position == 'QB':
                 qb_roster.append(player_name)
+                qb_ids.append(player_id)
             elif position == 'RB':
                 rb_roster.append(player_name)
+                rb_ids.append(player_id)
             elif position == 'WR':
                 wr_roster.append(player_name)
+                wr_ids.append(player_id)
             elif position == 'TE':
                 te_roster.append(player_name)
+                te_ids.append(player_id)
             elif position == 'K':
                 k_roster.append(player_name)
+                k_ids.append(player_id)
             elif position == 'DEF':
                 def_roster.append(player_name)
 
@@ -296,12 +320,13 @@ for team in rosters:
     k_list.append(", ".join(k_roster))
     def_list.append(", ".join(def_roster))
 
-    # Calculate strengths using the original logic
-    qb_strength.append(calculate_strength(qb_roster, position_points['QB'], 1))
-    rb_strength.append(calculate_strength(rb_roster, position_points['RB'], 3))
-    wr_strength.append(calculate_strength(wr_roster, position_points['WR'], 4))
-    te_strength.append(calculate_strength(te_roster, position_points['TE'], 1))
-    k_strength.append(calculate_strength(k_roster, position_points['K'], 1))
+    # Positionsstärke jetzt auf Basis von Punkten pro Spiel (PPG) statt
+    # Saison-Gesamtpunkten - fairer bei Verletzungspausen/späten Einstiegen.
+    qb_strength.append(calculate_strength(qb_ids, 1))
+    rb_strength.append(calculate_strength(rb_ids, 3))
+    wr_strength.append(calculate_strength(wr_ids, 4))
+    te_strength.append(calculate_strength(te_ids, 1))
+    k_strength.append(calculate_strength(k_ids, 1))
 
     # Adjusted Average: remove highest and lowest scoring weeks
     team_weekly_points = [weekly_points[week][rosters.index(team)] for week in weeks if weekly_points[week][rosters.index(team)] > 0]
