@@ -24,30 +24,45 @@ if current_week < 1:
 print(f"Ermittelte Saison: {season}, aktuelle Woche: {current_week}")
 
 # Sleeper API for fetching rosters, players, etc.
-league_id = "1238466927777546240"  # Aktuelle/eigentliche Liga-ID
+league_id = "1368162392545988608"  # Aktuelle/eigentliche Liga-ID (Saison 2026)
 
-# --- NEU: Fallback auf Vorjahres-Woche 13, solange die reguläre Saison noch nicht läuft ---
-# nfl_state["season_type"] ist z.B. "pre", "regular", "post" oder "off".
-# Vor Saisonstart gäbe es sonst kaum/keine echten Wochendaten zu zeigen -
-# stattdessen zeigen wir übergangsweise den Stand aus Woche 13 der Vorsaison,
-# damit Saisonverlauf/Charts nicht leer sind. Sleeper verlinkt die Vorjahres-Liga
-# automatisch über das Feld "previous_league_id".
+# --- NEU: Fallback auf Woche 13 der letzten abgeschlossenen Saison, solange die
+# reguläre Saison noch nicht läuft. Wichtig: Die hinterlegte league_id "rollt"
+# bei Sleeper oft erst manuell auf die neue Saison um. Wir prüfen daher zuerst,
+# zu welcher Saison die Liga-ID selbst gehört, statt blind eine Saison
+# zurückzurechnen - sonst landet man leicht zwei Saisons zu früh (siehe Bug:
+# 2026 -> fälschlich 2024 statt 2025).
 if nfl_state.get("season_type") != "regular":
     print(f"Saison-Typ ist '{nfl_state.get('season_type')}' - reguläre Saison läuft noch nicht.")
-    previous_league_id = None
     try:
         league_info = requests.get(f"https://api.sleeper.app/v1/league/{league_id}").json()
-        previous_league_id = league_info.get("previous_league_id")
     except Exception as e:
+        league_info = {}
         print(f"Liga-Infos konnten nicht geladen werden: {e}")
 
-    if previous_league_id:
-        league_id = previous_league_id
-        season = str(int(season) - 1)
+    league_own_season = league_info.get("season")
+
+    if league_own_season and league_own_season != nfl_state.get("season"):
+        # Die hinterlegte Liga-ID ist noch nicht auf die neue Saison
+        # "hochgerollt" - sie IST bereits die zuletzt abgeschlossene Saison.
+        season = league_own_season
         current_week = 13
-        print(f"Fallback aktiv: Vorjahres-Liga {league_id}, Saison {season}, Woche {current_week}.")
+        print(f"Fallback aktiv: Liga {league_id} ist bereits die Vorjahres-Liga (Saison {season}), Woche {current_week}.")
     else:
-        print("Keine Vorjahres-Liga gefunden - bleibe bei Woche 1 der aktuellen (noch leeren) Saison.")
+        # Liga-ID gehört schon zur neuen Saison (die aber noch nicht läuft) ->
+        # einen Schritt über previous_league_id zur letzten Saison zurückgehen.
+        previous_league_id = league_info.get("previous_league_id")
+        if previous_league_id:
+            try:
+                prev_league_info = requests.get(f"https://api.sleeper.app/v1/league/{previous_league_id}").json()
+                league_id = previous_league_id
+                season = prev_league_info.get("season", str(int(season) - 1))
+                current_week = 13
+                print(f"Fallback aktiv: Vorjahres-Liga {league_id}, Saison {season}, Woche {current_week}.")
+            except Exception as e:
+                print(f"Vorjahres-Liga konnte nicht geladen werden: {e}")
+        else:
+            print("Keine Vorjahres-Liga gefunden - bleibe bei Woche 1 der aktuellen (noch leeren) Saison.")
 
 weeks = range(1, current_week + 1)  # Include only weeks that have been played
 url_rosters = f"https://api.sleeper.app/v1/league/{league_id}/rosters"
