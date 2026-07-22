@@ -58,3 +58,16 @@
 .jump-to-bottom:hover {
   background-color: #0056b3;
 }
+/* --- Für header.css: Vorsaison-Hinweis --- */
+.preseason-note {
+  margin: 8px auto 0;
+  max-width: 500px;
+  font-size: 13px;
+  font-style: italic;
+  color: #555;
+  background-color: #f4f4f9;
+  border-radius: 6px;
+  padding: 6px 10px;
+}
+ 
+
