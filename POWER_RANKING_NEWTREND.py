@@ -121,6 +121,17 @@ if using_previous_season_chart_data:
 games_played_by_player = {}
 total_points_by_player = {}
 
+# --- NEU: Rohstats für die Roster-Anzeige (Comp/Att, Yards, TDs etc.) ---
+# Werden in derselben Schleife mitgesammelt - kein zusätzlicher API-Call nötig.
+SEASON_STAT_KEYS = [
+    'pass_cmp', 'pass_att', 'pass_yd', 'pass_td',
+    'rush_att', 'rush_yd', 'rush_td',
+    'rec', 'rec_tgt', 'rec_yd', 'rec_td',
+    'fgm', 'fga', 'xpm', 'xpa',
+    'sack', 'int', 'fum_rec', 'def_td'
+]
+season_stats_by_player = {}
+
 for wk in weeks:
     try:
         stats_url = (
@@ -153,6 +164,10 @@ for wk in weeks:
                 games_played_by_player[pid] = games_played_by_player.get(pid, 0) + 1
             pts = stats.get('pts_half_ppr', stats.get('pts_std', stats.get('pts_ppr', 0))) or 0
             total_points_by_player[pid] = total_points_by_player.get(pid, 0) + pts
+
+            player_season = season_stats_by_player.setdefault(pid, {k: 0 for k in SEASON_STAT_KEYS})
+            for k in SEASON_STAT_KEYS:
+                player_season[k] += stats.get(k, 0) or 0
     except Exception as e:
         print(f"Stats für Woche {wk} konnten nicht geladen werden: {e}")
 
@@ -166,6 +181,74 @@ def ppg(pid):
 def calculate_strength(player_ids, num_players):
     player_ppgs = sorted((ppg(pid) for pid in player_ids), reverse=True)
     return round(sum(player_ppgs[:num_players]), 1)
+
+# --- NEU: Detail-Stats + Spielerbild fürs Roster ---
+def qb_stats(pid):
+    s = season_stats_by_player.get(pid, {})
+    return {
+        "comp": int(s.get('pass_cmp', 0)),
+        "att": int(s.get('pass_att', 0)),
+        "pass_yd": int(s.get('pass_yd', 0)),
+        "rush_yd": int(s.get('rush_yd', 0)),
+        "td": int(s.get('pass_td', 0) + s.get('rush_td', 0)),
+    }
+
+def rb_stats(pid):
+    s = season_stats_by_player.get(pid, {})
+    att = s.get('rush_att', 0)
+    yd = s.get('rush_yd', 0)
+    ypc = round(yd / att, 1) if att else 0
+    return {
+        "att": int(att),
+        "yd": int(yd),
+        "ypc": ypc,
+        "td": int(s.get('rush_td', 0) + s.get('rec_td', 0)),
+    }
+
+def wr_stats(pid):
+    s = season_stats_by_player.get(pid, {})
+    return {
+        "targets": int(s.get('rec_tgt', 0)),
+        "catches": int(s.get('rec', 0)),
+        "yd": int(s.get('rec_yd', 0)),
+        "td": int(s.get('rec_td', 0) + s.get('rush_td', 0)),
+    }
+
+def k_stats(pid):
+    s = season_stats_by_player.get(pid, {})
+    return {
+        "fgm": int(s.get('fgm', 0)),
+        "fga": int(s.get('fga', 0)),
+        "xpm": int(s.get('xpm', 0)),
+        "xpa": int(s.get('xpa', 0)),
+    }
+
+def def_stats(pid):
+    s = season_stats_by_player.get(pid, {})
+    return {
+        "sack": int(s.get('sack', 0)),
+        "int": int(s.get('int', 0)),
+        "fum_rec": int(s.get('fum_rec', 0)),
+        "td": int(s.get('def_td', 0)),
+    }
+
+def team_logo_url(pid):
+    # Team-Defenses sind in Sleeper über das Team-Kürzel (z.B. "SF") indiziert
+    # und haben kein Spielerfoto - stattdessen das Team-Logo verwenden.
+    return f"https://sleepercdn.com/images/team_logos/nfl/{pid.lower()}.png"
+
+def build_roster_entries(ids, names, extra_stats_fn=None, image_url_fn=None):
+    entries = []
+    for pid, player_name in zip(ids, names):
+        image_url = image_url_fn(pid) if image_url_fn else f"https://sleepercdn.com/content/nfl/players/{pid}.jpg"
+        entry = {
+            "name": player_name,
+            "image_url": image_url,
+        }
+        if extra_stats_fn:
+            entry.update(extra_stats_fn(pid))
+        entries.append(entry)
+    return entries
 
 # Initialize lists for data collection
 user_ids, team_names, display_names = [], [], []
@@ -292,7 +375,7 @@ for team in rosters:
 
     # Collect player names (fürs Roster) UND ids (für die PPG-Berechnung)
     qb_roster, rb_roster, wr_roster, te_roster, k_roster, def_roster = [], [], [], [], [], []
-    qb_ids, rb_ids, wr_ids, te_ids, k_ids = [], [], [], [], []
+    qb_ids, rb_ids, wr_ids, te_ids, k_ids, def_ids = [], [], [], [], [], []
     for player_id in team['players']:
         if player_id in players:
             player = players[player_id]
@@ -316,13 +399,14 @@ for team in rosters:
                 k_ids.append(player_id)
             elif position == 'DEF':
                 def_roster.append(player_name)
+                def_ids.append(player_id)
 
-    qb_list.append(", ".join(qb_roster))
-    rb_list.append(", ".join(rb_roster))
-    wr_list.append(", ".join(wr_roster))
-    te_list.append(", ".join(te_roster))
-    k_list.append(", ".join(k_roster))
-    def_list.append(", ".join(def_roster))
+    qb_list.append(build_roster_entries(qb_ids, qb_roster, qb_stats))
+    rb_list.append(build_roster_entries(rb_ids, rb_roster, rb_stats))
+    wr_list.append(build_roster_entries(wr_ids, wr_roster, wr_stats))
+    te_list.append(build_roster_entries(te_ids, te_roster, wr_stats))
+    k_list.append(build_roster_entries(k_ids, k_roster, k_stats))
+    def_list.append(build_roster_entries(def_ids, def_roster, def_stats, image_url_fn=team_logo_url))
 
     # Positionsstärke jetzt auf Basis von Punkten pro Spiel (PPG) statt
     # Saison-Gesamtpunkten - fairer bei Verletzungspausen/späten Einstiegen.
