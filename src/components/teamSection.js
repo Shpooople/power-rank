@@ -25,6 +25,12 @@ const PlayerCard = ({ player, note }) => {
   );
 };
 
+const outcomeClass = (outcome) => {
+  if (outcome === 'Sieg') return 'outcome-win';
+  if (outcome === 'Niederlage') return 'outcome-loss';
+  return 'outcome-tie';
+};
+
 const TeamSection = ({ team }) => {
 
   // Adjusting to match the JSON structure
@@ -54,13 +60,17 @@ const TeamSection = ({ team }) => {
     "TE Strength": teStrength,
     "K Strength": kStrength,
     "COMMENTS": comment,
-    // Neue Felder für Performer & Gegner
+    // Performer-Felder
     "TOP_PERFORMERS": topPerformers = [],
     "BOTTOM_PERFORMERS": bottomPerformers = [],
     "BENCHWARMER": benchwarmer,
-    "CURRENT_OPPONENT": currentOpponent,
-    "CURRENT_OPPONENT_WIN_PROB": winProb,
-    "NEXT_OPPONENT": nextOpponent,
+    // Gegner-Felder (müssen hier destrukturiert werden, sonst landen sie
+    // versehentlich im Wochenpunkte-Chart-Objekt weiter unten!)
+    "LAST_WEEK_OPPONENT": lastWeekOpponent,
+    "LAST_WEEK_RESULT": lastWeekResult,
+    "THIS_WEEK_OPPONENT": thisWeekOpponent,
+    "THIS_WEEK_WIN_PROB": thisWeekWinProb,
+    "DISPLAY_WEEK_LABEL": displayWeekLabel,
     // Add week-wise data if needed
     ...weekData // This will spread the remaining week data into an object
 
@@ -78,18 +88,24 @@ const TeamSection = ({ team }) => {
         </span> | AAvg.: {adjustedAvg}
       </p>
 
-      {(currentOpponent || nextOpponent) && (
+      {(lastWeekResult || thisWeekOpponent) && (
         <div className="matchup-info">
-          {currentOpponent && (
+          {lastWeekResult && (
             <p>
-              <strong>Gegner diese Woche:</strong> {currentOpponent}
-              {winProb != null && (
-                <span className="win-prob"> · {winProb}% Gewinnchance</span>
-              )}
+              <strong>Letzte Woche</strong> vs. {lastWeekOpponent}: {' '}
+              <span className={outcomeClass(lastWeekResult.outcome)}>
+                {lastWeekResult.outcome}
+              </span>
+              {' '}({lastWeekResult.own_points} : {lastWeekResult.opponent_points})
             </p>
           )}
-          {nextOpponent && (
-            <p><strong>Nächste Woche:</strong> {nextOpponent}</p>
+          {thisWeekOpponent && (
+            <p>
+              <strong>Diese Woche:</strong> {thisWeekOpponent}
+              {thisWeekWinProb != null && (
+                <span className="win-prob"> · {thisWeekWinProb}% Gewinnchance</span>
+              )}
+            </p>
           )}
         </div>
       )}
@@ -111,14 +127,6 @@ const TeamSection = ({ team }) => {
                 color: '#153448',  // Change the line color (e.g., orange-red)
                 width: 3           // Optional: set the line width
               },
-             // text: [qbStrength, rbStrength, wrStrength, teStrength, kStrength],  // Display the values
-             // textposition: 'right',  // Position the text at the top of each point
-              // textfont: {
-                  //  family: 'Arial, sans-serif',  // Change the font family
-                   // size: 16,                    // Change the font size
-                   // color: '#000',               // Change the text color
-                   // weight: 'bold'               // Make the text bold
-                 // },
               mode: 'lines+markers+text',  // Show markers, lines, and text
               marker: { size: 10 },  // Customize marker size
               connectgaps: true,
@@ -166,7 +174,6 @@ const TeamSection = ({ team }) => {
       t: 60, // Reduce top margin
       b: -20  // Reduce bottom margin
     },
-        // Transition settings for initial animation
 
               }}
   config={{
