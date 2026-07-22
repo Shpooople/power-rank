@@ -31,6 +31,54 @@ const outcomeClass = (outcome) => {
   return 'outcome-tie';
 };
 
+// Baut die Stat-Zeile je nach Position (QB/RB/WR bekommen Detail-Stats,
+// TE/K nur Name+Bild ohne Zusatzstats)
+const formatPositionStats = (pos, p) => {
+  if (pos === 'QB') {
+    return `${p.comp}/${p.att} Cmp · ${p.pass_yd} Pass-Yds · ${p.rush_yd} Rush-Yds · ${p.td} TD`;
+  }
+  if (pos === 'RB') {
+    return `${p.att} Att · ${p.yd} Yds · ${p.ypc} YPC · ${p.td} TD`;
+  }
+  if (pos === 'WR' || pos === 'TE') {
+    return `${p.targets} Tgts · ${p.catches} Rec · ${p.yd} Yds · ${p.td} TD`;
+  }
+  if (pos === 'K') {
+    return `${p.fgm}/${p.fga} FG · ${p.xpm}/${p.xpa} XP`;
+  }
+  if (pos === 'DEF') {
+    return `${p.sack} Sacks · ${p.int} INT · ${p.fum_rec} FumRec · ${p.td} TD`;
+  }
+  return null;
+};
+
+// Eine Positionsgruppe im Roster (z.B. alle WR eines Teams)
+const RosterPositionGroup = ({ label, players }) => {
+  if (!players || players.length === 0) return null;
+  return (
+    <div className="roster-position-group">
+      <h4 className="roster-position-label">{label}</h4>
+      {players.map((p, i) => {
+        const statLine = formatPositionStats(label, p);
+        return (
+          <div className="roster-player-row" key={i}>
+            <img
+              src={p.image_url}
+              alt={p.name}
+              className="roster-player-image"
+              onError={(e) => { e.target.src = './thf_color.svg'; }}
+            />
+            <div className="roster-player-details">
+              <span className="roster-player-name">{p.name}</span>
+              {statLine && <span className="roster-player-stats">{statLine}</span>}
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
+
 // Dark-Theme-Farben für die Plotly-Charts (müssen hier als JS-Werte stehen,
 // da Plotly keine CSS-Variablen versteht)
 const CHART_COLORS = {
@@ -57,12 +105,13 @@ const TeamSection = ({ team }) => {
     "TREND": trend = 'NO TREND',
     "Trend Percentage": trenPercentage,
     "Adjusted Average": adjustedAvg,
-    "QB": qb,
-    "RB": rb,
-    "WR": wr,
-    "TE": te,
-    "K": k,
-    "DEF": def,
+    // Roster-Felder: jetzt Arrays mit {name, image_url, ...stats} statt Strings
+    "QB": qb = [],
+    "RB": rb = [],
+    "WR": wr = [],
+    "TE": te = [],
+    "K": k = [],
+    "DEF": def_ = [],
     "QB Strength": qbStrength,
     "RB Strength": rbStrength,
     "WR Strength": wrStrength,
@@ -87,8 +136,6 @@ const TeamSection = ({ team }) => {
   } = team;
 
   // NEU: ersten Punkt am Ende wiederholen, damit sich das Pentagon schließt
-  // (die vorherige "line_close: true"-Eigenschaft existiert in Plotly nicht
-  // und wurde stillschweigend ignoriert).
   const radarR = [qbStrength, rbStrength, wrStrength, teStrength, kStrength, qbStrength];
   const radarTheta = ['QB', 'RB', 'WR', 'TE', 'K', 'QB'];
 
@@ -270,27 +317,15 @@ const TeamSection = ({ team }) => {
             }}
           />
         </div>
+
+        {/* Roster: jetzt mit Spielerbild + Detail-Stats statt reiner Namensliste */}
         <div className="team-roster">
-          <table>
-            <thead>
-              <tr>
-                <th>QB</th>
-                <th>RB</th>
-                <th>WR</th>
-                <th>TE</th>
-                <th>K</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>{qb}</td>
-                <td>{rb}</td>
-                <td>{wr}</td>
-                <td>{te}</td>
-                <td>{k}</td>
-              </tr>
-            </tbody>
-          </table>
+          <RosterPositionGroup label="QB" players={qb} />
+          <RosterPositionGroup label="RB" players={rb} />
+          <RosterPositionGroup label="WR" players={wr} />
+          <RosterPositionGroup label="TE" players={te} />
+          <RosterPositionGroup label="K" players={k} />
+          <RosterPositionGroup label="DEF" players={def_} />
         </div>
       </div>
 
