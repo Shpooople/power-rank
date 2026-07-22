@@ -258,11 +258,12 @@ const TeamSection = ({ team }) => {
                 }
               },
               showlegend: false,
+              height: 350,
               margin: {
                 l: 30,
                 r: 30,
                 t: 70,
-                b: -20
+                b: 20
               },
             }}
             config={{
@@ -333,7 +334,7 @@ const TeamSection = ({ team }) => {
                   color: CHART_COLORS.textMuted
                 },
               },
-              height: 300,
+              height: 350,
               margin: {
                 l: 30,
                 r: 20,
@@ -348,50 +349,56 @@ const TeamSection = ({ team }) => {
           />
         </div>
 
-        {/* Roster: jetzt mit Spielerbild + Detail-Stats statt reiner Namensliste */}
-        <div className="team-roster">
-          <RosterPositionGroup label="QB" players={qb} />
-          <RosterPositionGroup label="RB" players={rb} />
-          <RosterPositionGroup label="WR" players={wr} />
-          <RosterPositionGroup label="TE" players={te} />
-          <RosterPositionGroup label="K" players={k} />
-          <RosterPositionGroup label="DEF" players={def_} />
-        </div>
+        {/* Roster: jetzt mit Spielerbild + Detail-Stats, ausklappbar */}
+        <details className="collapsible team-roster">
+          <summary>Roster anzeigen</summary>
+          <div className="collapsible-content">
+            <RosterPositionGroup label="QB" players={qb} />
+            <RosterPositionGroup label="RB" players={rb} />
+            <RosterPositionGroup label="WR" players={wr} />
+            <RosterPositionGroup label="TE" players={te} />
+            <RosterPositionGroup label="K" players={k} />
+            <RosterPositionGroup label="DEF" players={def_} />
+          </div>
+        </details>
       </div>
 
       {(topPerformers.length > 0 || bottomPerformers.length > 0 || benchwarmer) && (
-        <div className="performers-section">
-          {topPerformers.length > 0 && (
-            <div className="performer-group">
-              <h3>Top Performer der Woche</h3>
-              <div className="performer-cards">
-                {topPerformers.map((p, i) => (
-                  <PlayerCard key={`top-${i}`} player={p} />
-                ))}
+        <details className="collapsible performers-section">
+          <summary>Performer der Woche anzeigen</summary>
+          <div className="collapsible-content">
+            {topPerformers.length > 0 && (
+              <div className="performer-group">
+                <h3>Top Performer der Woche</h3>
+                <div className="performer-cards">
+                  {topPerformers.map((p, i) => (
+                    <PlayerCard key={`top-${i}`} player={p} />
+                  ))}
+                </div>
               </div>
-            </div>
-          )}
+            )}
 
-          {bottomPerformers.length > 0 && (
-            <div className="performer-group">
-              <h3>Flop Performer der Woche</h3>
-              <div className="performer-cards">
-                {bottomPerformers.map((p, i) => (
-                  <PlayerCard key={`bottom-${i}`} player={p} />
-                ))}
+            {bottomPerformers.length > 0 && (
+              <div className="performer-group">
+                <h3>Flop Performer der Woche</h3>
+                <div className="performer-cards">
+                  {bottomPerformers.map((p, i) => (
+                    <PlayerCard key={`bottom-${i}`} player={p} />
+                  ))}
+                </div>
               </div>
-            </div>
-          )}
+            )}
 
-          {benchwarmer && (
-            <div className="performer-group">
-              <h3>Benchwarmer der Woche</h3>
-              <div className="performer-cards">
-                <PlayerCard player={benchwarmer} note="Bank" />
+            {benchwarmer && (
+              <div className="performer-group">
+                <h3>Benchwarmer der Woche</h3>
+                <div className="performer-cards">
+                  <PlayerCard player={benchwarmer} note="Bank" />
+                </div>
               </div>
-            </div>
-          )}
-        </div>
+            )}
+          </div>
+        </details>
       )}
     </div>
   );
