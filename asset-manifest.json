@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/power-rank/static/css/main.8ea833ca.css",
-    "main.js": "/power-rank/static/js/main.6d549bf0.js",
+    "main.css": "/power-rank/static/css/main.cd246513.css",
+    "main.js": "/power-rank/static/js/main.dbaed981.js",
     "static/media/RobotoCondensed-Italic-VariableFont_wght.ttf": "/power-rank/static/media/RobotoCondensed-Italic-VariableFont_wght.07eb8810353a0680cff5.ttf",
     "static/media/RobotoCondensed-VariableFont_wght.ttf": "/power-rank/static/media/RobotoCondensed-VariableFont_wght.ff29b2791402495b1616.ttf",
     "static/media/Roboto-Regular.ttf": "/power-rank/static/media/Roboto-Regular.27f62b53b93858475a7f.ttf",
     "static/media/Roboto-Bold.ttf": "/power-rank/static/media/Roboto-Bold.d50a80138ec4f2fb5e9f.ttf",
     "index.html": "/power-rank/index.html",
-    "main.8ea833ca.css.map": "/power-rank/static/css/main.8ea833ca.css.map",
-    "main.6d549bf0.js.map": "/power-rank/static/js/main.6d549bf0.js.map"
+    "main.cd246513.css.map": "/power-rank/static/css/main.cd246513.css.map",
+    "main.dbaed981.js.map": "/power-rank/static/js/main.dbaed981.js.map"
   },
   "entrypoints": [
-    "static/css/main.8ea833ca.css",
-    "static/js/main.6d549bf0.js"
+    "static/css/main.cd246513.css",
+    "static/js/main.dbaed981.js"
   ]
 }
