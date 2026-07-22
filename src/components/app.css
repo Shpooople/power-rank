@@ -1,29 +1,51 @@
 /* General styles for the whole app */
 @font-face {
   font-family: 'Roboto';
-  src: url('/public/fonts/Roboto-Regular.ttf') format('truetype');  /* Relative to public folder */
+  src: url('/public/fonts/Roboto-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Roboto';
-  src: url('/public/fonts/Roboto-Bold.ttf') format('truetype');  /* Relative to public folder */
+  src: url('/public/fonts/Roboto-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: bold;
+}
+
+/* --- NEU: Dark-Theme Farbsystem (Navy + Gold) --- */
+:root {
+  --color-bg: #0F1B2B;
+  --color-surface: #172A3D;
+  --color-surface-alt: #1E3349;
+  --color-border: #2A3F55;
+  --color-text: #E8EDF2;
+  --color-text-muted: #8FA3B8;
+  --color-accent: #D4A657;
+  --color-accent-dark: #B98B3E;
+  --color-win: #4CAF7D;
+  --color-loss: #E2665B;
+  --color-tie: #8FA3B8;
 }
 
 body {
   font-family: Roboto, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f9;
+  background-color: var(--color-bg);
+  color: var(--color-text);
 }
 
 h1, h2 {
-  font-family: Roboto, sans-serif;
+  font-family: 'Roboto Condensed', Roboto, sans-serif;
   margin: 0;
-  color: #153448;
+  color: var(--color-text);
 }
 
-/* Optional: Styles for other components or global layout */
+a {
+  color: var(--color-accent);
+}
+
+.App {
+  padding-bottom: 40px;
+}
