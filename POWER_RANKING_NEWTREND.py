@@ -136,15 +136,19 @@ for wk in weeks:
                 continue
             stats = entry.get('stats', {}) or {}
             # "gp" liefert Sleeper meist direkt mit. Falls das Feld fehlt,
-            # reicht "hat irgendeine Stat-Zeile" NICHT als Signal - ein
-            # Spieler kann 0 Fantasy-Punkte machen und trotzdem gespielt
-            # haben. Wir schauen deshalb zusätzlich auf Snap-Counts
-            # (Offense/Special-Teams/Defense), die auch bei 0 Punkten meist
-            # vorhanden sind, solange der Spieler auf dem Feld stand.
+            # darf NICHT "irgendein Stats-Feld ist vorhanden" als Signal
+            # reichen - Sleeper liefert oft auch für verletzte/inaktive
+            # Spieler einen (nullwertigen) Stats-Eintrag, weil deren TEAM ja
+            # gespielt hat. Wir prüfen stattdessen gezielt auf echte
+            # Aktivitäts-Indikatoren über alle Positionen hinweg.
             played = stats.get('gp')
             if played is None:
-                snap_counts = [stats.get('off_snp', 0), stats.get('st_snp', 0), stats.get('def_snp', 0)]
-                played = 1 if any(snap_counts) or len(stats) > 0 else 0
+                activity_keys = [
+                    'off_snp', 'st_snp', 'def_snp',
+                    'pass_att', 'rush_att', 'rec_tgt',
+                    'fga', 'xpa', 'idp_tkl'
+                ]
+                played = 1 if any(stats.get(k, 0) for k in activity_keys) else 0
             if played:
                 games_played_by_player[pid] = games_played_by_player.get(pid, 0) + 1
             pts = stats.get('pts_half_ppr', stats.get('pts_std', stats.get('pts_ppr', 0))) or 0
