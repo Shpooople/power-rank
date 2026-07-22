@@ -6,7 +6,7 @@ import './teamSection.css';  // Import the stylesheet
 // (wird für Top-Performer, Flop-Performer und Benchwarmer wiederverwendet)
 const PlayerCard = ({ player, note }) => {
   if (!player) return null;
-  const statLine = formatPositionStats(player.position, player);
+  const statLine = formatPositionStats(player.position, player, { showTotal: false });
   return (
     <div className="performer-card">
       <img
@@ -35,21 +35,22 @@ const outcomeClass = (outcome) => {
 
 // Baut die Stat-Zeile je nach Position (QB/RB/WR bekommen Detail-Stats,
 // TE/K nur Name+Bild ohne Zusatzstats)
-const formatPositionStats = (pos, p) => {
+const formatPositionStats = (pos, p, { showTotal = true } = {}) => {
+  const totalSuffix = showTotal ? ` · ${p.total_pts} Pkt.` : '';
   if (pos === 'QB') {
-    return `${p.comp}/${p.att} Cmp · ${p.pass_yd} Pass-Yds · ${p.rush_yd} Rush-Yds · ${p.td} TD · ${p.total_pts} Pkt.`;
+    return `${p.comp}/${p.att} Cmp · ${p.pass_yd} Pass-Yds · ${p.rush_yd} Rush-Yds · ${p.td} TD${totalSuffix}`;
   }
   if (pos === 'RB') {
-    return `${p.att} Att · ${p.yd} Yds · ${p.ypc} YPC · ${p.td} TD · ${p.total_pts} Pkt.`;
+    return `${p.att} Att · ${p.yd} Yds · ${p.ypc} YPC · ${p.td} TD${totalSuffix}`;
   }
   if (pos === 'WR' || pos === 'TE') {
-    return `${p.targets} Tgts · ${p.catches} Rec · ${p.yd} Yds · ${p.td} TD · ${p.total_pts} Pkt.`;
+    return `${p.targets} Tgts · ${p.catches} Rec · ${p.yd} Yds · ${p.td} TD${totalSuffix}`;
   }
   if (pos === 'K') {
-    return `${p.fgm}/${p.fga} FG · ${p.xpm}/${p.xpa} XP · ${p.total_pts} Pkt.`;
+    return `${p.fgm}/${p.fga} FG · ${p.xpm}/${p.xpa} XP${totalSuffix}`;
   }
   if (pos === 'DEF') {
-    return `${p.sack} Sacks · ${p.int} INT · ${p.fum_rec} FumRec · ${p.td} TD · ${p.total_pts} Pkt.`;
+    return `${p.sack} Sacks · ${p.int} INT · ${p.fum_rec} FumRec · ${p.td} TD${totalSuffix}`;
   }
   return null;
 };
@@ -186,6 +187,8 @@ const TeamSection = ({ team }) => {
         <div className="charts-container">
           {/* Radar Chart */}
           <Plot
+            useResizeHandler={true}
+            style={{ width: '100%', height: '100%' }}
             data={[{
               type: 'scatterpolar',
               r: radarR,
@@ -194,8 +197,7 @@ const TeamSection = ({ team }) => {
               fillcolor: 'rgba(212, 166, 87, 0.25)',
               line: {
                 color: CHART_COLORS.accent,
-                width: 3,
-                shape: 'spline'
+                width: 3
               },
               mode: 'lines+markers',
               marker: {
@@ -270,15 +272,15 @@ const TeamSection = ({ team }) => {
           />
           {/* Line Chart */}
           <Plot
+            useResizeHandler={true}
+            style={{ width: '100%', height: '100%' }}
             data={[{
               type: 'scatter',
               x: Object.keys(weekData).map((key, index) => index + 1),
               y: Object.values(weekData),
               line: {
                 color: CHART_COLORS.accent,
-                width: 3,
-                shape: 'spline',
-                smoothing: 0.5
+                width: 3
               },
               mode: 'lines+markers',
               marker: {
