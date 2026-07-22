@@ -75,21 +75,28 @@
   color: var(--color-text-muted);
 }
 
-/* Grid layout for content */
+/* Text volle Breite oben, Charts nebeneinander darunter, Roster darunter */
 .team-overview {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 30px;
-  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .team-text {
-  grid-area: team-text;
   width: 100%;
-  word-wrap: break-word;
   box-sizing: border-box;
   color: var(--color-text);
+  padding-right: 4px;
+}
+
+.charts-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .trend-up {
@@ -273,28 +280,20 @@
   margin-top: 2px;
 }
 
-/* For larger screens: Text + Charts nebeneinander, Roster darunter über die
-   volle Breite als horizontales Grid (statt einer langen Spalte neben viel
-   Leerraum rechts) */
+/* For larger screens: Charts nebeneinander, Roster als horizontales Grid */
 @media (min-width: 768px) {
-  .team-overview {
-    grid-template-columns: 1.3fr 1fr;
-    grid-template-areas: "team-text charts-container";
-    align-items: start;
+  .charts-container {
+    flex-direction: row;
+    gap: 24px;
   }
 
-  .charts-container {
-    grid-area: charts-container;
-    width: 100%;
-    max-width: 420px;
-    height: auto;
-    justify-self: end;
-    box-sizing: border-box;
+  .charts-container > * {
+    flex: 1 1 0;
+    min-width: 0;
   }
 
   .team-roster {
-    grid-column: 1 / -1;
-    margin-top: 24px;
+    margin-top: 4px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 8px 28px;
