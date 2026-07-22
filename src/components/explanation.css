@@ -1,54 +1,66 @@
 /* explanation.css */
 @font-face {
   font-family: 'Roboto';
-  src: url('/public/fonts/Roboto-Regular.ttf') format('truetype');  /* Relative to public folder */
+  src: url('/public/fonts/Roboto-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Roboto';
-  src: url('/public/fonts/Roboto-Bold.ttf') format('truetype');  /* Relative to public folder */
+  src: url('/public/fonts/Roboto-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: bold;
 }
 
 .explanation {
-  padding: 20px;
-  background-color: #f9f9f9;
+  padding: 24px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
   margin: 0 auto;
   margin-top: 20px;
-  border-radius: 10px;
+  border-radius: 12px;
   max-width: 960px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
 }
 
 .explanation h2, .explanation h3 {
-  color: #021526;
+  color: var(--color-accent);
+  font-family: 'Roboto Condensed', Roboto, sans-serif;
 }
 
 .explanation p {
   font-size: 16px;
   line-height: 1.6;
+  color: var(--color-text-muted);
 }
 
 .explanation ol, .explanation ul {
   padding-left: 20px;
   margin-bottom: 20px;
+  color: var(--color-text-muted);
 }
 
 .explanation li {
   margin-bottom: 10px;
 }
+
+.explanation strong {
+  color: var(--color-text);
+}
+
 .jump-to-top {
-    display: inline-block;
-    background-color: #3C5B6F;
-    color: white;
-    padding: 10px 15px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 10px;
+  display: inline-block;
+  background-color: var(--color-accent);
+  color: #12202E;
+  font-weight: bold;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 6px;
+  margin-top: 10px;
+  transition: background-color 0.15s ease;
 }
 
 .jump-to-top:hover {
-    background-color: #0056b3;
+  background-color: var(--color-accent-dark);
 }
