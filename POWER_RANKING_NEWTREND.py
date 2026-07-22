@@ -244,6 +244,7 @@ def build_roster_entries(ids, names, extra_stats_fn=None, image_url_fn=None):
         entry = {
             "name": player_name,
             "image_url": image_url,
+            "total_pts": round(total_points_by_player.get(pid, 0), 1),
         }
         if extra_stats_fn:
             entry.update(extra_stats_fn(pid))
@@ -353,12 +354,28 @@ if league_stdev == 0:
 def player_info(pid):
     p = players.get(pid, {})
     name = f"{p.get('first_name', '')} {p.get('last_name', '')}".strip() or pid
-    return {
+    position = p.get('position', '')
+    info = {
         "name": name,
-        "position": p.get('position', ''),
+        "position": position,
         "points": 0,
-        "image_url": f"https://sleepercdn.com/content/nfl/players/{pid}.jpg"
+        "image_url": f"https://sleepercdn.com/content/nfl/players/{pid}.jpg",
+        "total_pts": round(total_points_by_player.get(pid, 0), 1),
     }
+    # Dieselben Detail-Stats wie im Roster ergänzen (werden weiter unten
+    # definiert, aber zum Aufrufzeitpunkt von player_info() längst bekannt).
+    if position == 'QB':
+        info.update(qb_stats(pid))
+    elif position == 'RB':
+        info.update(rb_stats(pid))
+    elif position in ('WR', 'TE'):
+        info.update(wr_stats(pid))
+    elif position == 'K':
+        info.update(k_stats(pid))
+    elif position == 'DEF':
+        info.update(def_stats(pid))
+        info["image_url"] = team_logo_url(pid)
+    return info
 
 # Process each team's data
 for team in rosters:
