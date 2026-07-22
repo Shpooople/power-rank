@@ -313,3 +313,21 @@
     width: 100%;
   }
 }
+
+/* --- Für teamSection.css: Sieg/Niederlage/Unentschieden-Farben --- */
+.outcome-win {
+  color: green;
+  font-weight: bold;
+}
+ 
+.outcome-loss {
+  color: red;
+  font-weight: bold;
+}
+ 
+.outcome-tie {
+  color: gray;
+  font-weight: bold;
+}
+ 
+
