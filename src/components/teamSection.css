@@ -41,7 +41,7 @@
   overflow: hidden;
 }
 
-/* --- NEU: Rang-Badge --- */
+/* --- Rang-Badge --- */
 .team-header-row {
   display: flex;
   align-items: center;
@@ -79,7 +79,7 @@
 .team-overview {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 60px;
+  grid-gap: 30px;
   box-sizing: border-box;
   width: 100%;
 }
@@ -89,11 +89,6 @@
   width: 100%;
   word-wrap: break-word;
   box-sizing: border-box;
-  color: var(--color-text);
-}
-
-.team-roster td {
-  vertical-align: top;
   color: var(--color-text);
 }
 
@@ -146,7 +141,72 @@
   font-weight: bold;
 }
 
-/* --- Top/Flop-Performer & Benchwarmer --- */
+/* --- NEU: Roster als Spielerliste mit Bild + Stats (statt Tabelle) --- */
+.team-roster {
+  grid-area: team-roster;
+  margin-top: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.roster-position-group {
+  margin-bottom: 14px;
+}
+
+.roster-position-label {
+  font-family: 'Roboto Condensed', Roboto, sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  color: var(--color-accent);
+  margin: 0 0 6px 0;
+  text-transform: uppercase;
+}
+
+.roster-player-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 0;
+}
+
+.roster-player-image {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: var(--color-border);
+  flex-shrink: 0;
+}
+
+.roster-player-details {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.roster-player-name {
+  font-size: 13px;
+  font-weight: bold;
+  color: var(--color-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.roster-player-stats {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.roster-def-text {
+  font-size: 13px;
+  color: var(--color-text);
+  margin: 0;
+}
+
+/* --- Top/Flop-Performer & Benchwarmer (größere Bilder als im Roster) --- */
 .performers-section {
   margin-top: 20px;
   padding-top: 16px;
@@ -167,26 +227,27 @@
 .performer-cards {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 12px;
 }
 
 .performer-card {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   background-color: var(--color-surface-alt);
   border: 1px solid var(--color-border);
-  border-radius: 6px;
-  padding: 6px 10px;
-  min-width: 150px;
+  border-radius: 8px;
+  padding: 8px 14px;
+  min-width: 170px;
 }
 
 .performer-image {
-  width: 40px;
-  height: 40px;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
   object-fit: cover;
   background-color: var(--color-border);
+  flex-shrink: 0;
 }
 
 .performer-details {
@@ -196,7 +257,7 @@
 }
 
 .performer-name {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: bold;
   color: var(--color-text);
 }
@@ -224,93 +285,28 @@
     align-items: center;
     box-sizing: border-box;
   }
-
-  .team-roster {
-    grid-area: team-roster;
-    margin-top: 10px;
-    width: 100%;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .team-roster table {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  .team-roster thead th {
-    font-family: Roboto, sans-serif;
-    font-size: 16px;
-    font-weight: bolder;
-    color: var(--color-accent);
-  }
-  .team-roster thead,
-  .team-roster tbody {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .team-roster thead th,
-  .team-roster tbody td {
-    min-height: 60px;
-    display: block;
-    text-align: left;
-    padding: 10px;
-  }
-
-  .team-roster tbody {
-    font-family: Roboto Condensed, sans-serif;
-    font-size: 16px;
-    color: var(--color-text);
-    display: flex;
-    flex-direction: row;
-  }
-
-  .team-roster tbody td {
-    border: none;
-  }
 }
 
-/* Team-roster font scaling for smaller screens */
+/* Adjust for small screens */
 @media (max-width: 768px) {
-  .team-roster {
+  .team-overview {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  .team-text {
+    font-size: 0.9rem;
+  }
+
+  p {
     font-size: 1rem;
+    word-wrap: break-word;
+    line-height: 1.5;
+  }
+
+  .charts-container {
     width: 100%;
-    display: block;
-  }
-
-  .plot-container.plotly {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-  }
-
-  .team-roster table {
-    display: block;
-    width: 100%;
-  }
-
-  .team-roster th,
-  .team-roster td {
-    display: table-cell;
-    padding: 8px;
-    text-align: left;
-  }
-
-  .team-roster th {
-    background-color: var(--color-surface-alt);
-    color: var(--color-accent);
-  }
-
-  .team-roster td {
-    background-color: var(--color-surface);
-  }
-
-  .team-roster tbody {
-    font-family: Roboto Condensed, sans-serif;
   }
 
   .performer-cards {
@@ -330,31 +326,4 @@
   max-width: 100%;
   box-sizing: border-box;
   margin: 0 auto;
-}
-
-/* Adjust for small screens */
-@media (max-width: 768px) {
-  .team-overview {
-    display: block;
-    box-sizing: border-box;
-    width: 100%;
-  }
-
-  .team-roster {
-    font-size: 0.7rem;
-  }
-
-  .team-text {
-    font-size: 0.9rem;
-  }
-
-  p {
-    font-size: 1rem;
-    word-wrap: break-word;
-    line-height: 1.5;
-  }
-
-  .charts-container {
-    width: 100%;
-  }
 }
