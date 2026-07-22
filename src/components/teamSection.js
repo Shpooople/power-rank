@@ -6,6 +6,7 @@ import './teamSection.css';  // Import the stylesheet
 // (wird für Top-Performer, Flop-Performer und Benchwarmer wiederverwendet)
 const PlayerCard = ({ player, note }) => {
   if (!player) return null;
+  const statLine = formatPositionStats(player.position, player);
   return (
     <div className="performer-card">
       <img
@@ -17,9 +18,10 @@ const PlayerCard = ({ player, note }) => {
       <div className="performer-details">
         <span className="performer-name">{player.name}</span>
         <span className="performer-meta">
-          {player.position ? `${player.position} · ` : ''}{player.points} Pkt.
+          {player.position ? `${player.position} · ` : ''}{player.points} Pkt. diese Woche
           {note ? ` (${note})` : ''}
         </span>
+        {statLine && <span className="performer-stats">{statLine}</span>}
       </div>
     </div>
   );
@@ -35,19 +37,19 @@ const outcomeClass = (outcome) => {
 // TE/K nur Name+Bild ohne Zusatzstats)
 const formatPositionStats = (pos, p) => {
   if (pos === 'QB') {
-    return `${p.comp}/${p.att} Cmp · ${p.pass_yd} Pass-Yds · ${p.rush_yd} Rush-Yds · ${p.td} TD`;
+    return `${p.comp}/${p.att} Cmp · ${p.pass_yd} Pass-Yds · ${p.rush_yd} Rush-Yds · ${p.td} TD · ${p.total_pts} Pkt.`;
   }
   if (pos === 'RB') {
-    return `${p.att} Att · ${p.yd} Yds · ${p.ypc} YPC · ${p.td} TD`;
+    return `${p.att} Att · ${p.yd} Yds · ${p.ypc} YPC · ${p.td} TD · ${p.total_pts} Pkt.`;
   }
   if (pos === 'WR' || pos === 'TE') {
-    return `${p.targets} Tgts · ${p.catches} Rec · ${p.yd} Yds · ${p.td} TD`;
+    return `${p.targets} Tgts · ${p.catches} Rec · ${p.yd} Yds · ${p.td} TD · ${p.total_pts} Pkt.`;
   }
   if (pos === 'K') {
-    return `${p.fgm}/${p.fga} FG · ${p.xpm}/${p.xpa} XP`;
+    return `${p.fgm}/${p.fga} FG · ${p.xpm}/${p.xpa} XP · ${p.total_pts} Pkt.`;
   }
   if (pos === 'DEF') {
-    return `${p.sack} Sacks · ${p.int} INT · ${p.fum_rec} FumRec · ${p.td} TD`;
+    return `${p.sack} Sacks · ${p.int} INT · ${p.fum_rec} FumRec · ${p.td} TD · ${p.total_pts} Pkt.`;
   }
   return null;
 };
@@ -86,6 +88,7 @@ const CHART_COLORS = {
   text: '#E8EDF2',
   textMuted: '#8FA3B8',
   grid: '#2A3F55',
+  surface: '#1E3349',
 };
 
 const TeamSection = ({ team }) => {
@@ -191,15 +194,27 @@ const TeamSection = ({ team }) => {
               fillcolor: 'rgba(212, 166, 87, 0.25)',
               line: {
                 color: CHART_COLORS.accent,
-                width: 3
+                width: 3,
+                shape: 'spline'
               },
               mode: 'lines+markers',
-              marker: { size: 8, color: CHART_COLORS.accent },
-              connectgaps: true
+              marker: {
+                size: 9,
+                color: CHART_COLORS.accent,
+                line: { color: CHART_COLORS.surface, width: 2 }
+              },
+              connectgaps: true,
+              hovertemplate: '%{theta}: %{r}/100<extra></extra>'
             }]}
             layout={{
               paper_bgcolor: 'transparent',
               plot_bgcolor: 'transparent',
+              hovermode: 'closest',
+              hoverlabel: {
+                bgcolor: CHART_COLORS.surface,
+                bordercolor: CHART_COLORS.accent,
+                font: { color: CHART_COLORS.text, family: 'Roboto, sans-serif', size: 13 }
+              },
               title: {
                 text: 'AKTUELLE TEAMSTÄRKE',
                 y: 0.98,
@@ -250,24 +265,38 @@ const TeamSection = ({ team }) => {
             }}
             config={{
               displayModeBar: false,
-              staticPlot: true
+              responsive: true
             }}
           />
           {/* Line Chart */}
           <Plot
             data={[{
               type: 'scatter',
+              x: Object.keys(weekData).map((key, index) => index + 1),
               y: Object.values(weekData),
               line: {
                 color: CHART_COLORS.accent,
-                width: 3
+                width: 3,
+                shape: 'spline',
+                smoothing: 0.5
               },
               mode: 'lines+markers',
-              marker: { size: 8, color: CHART_COLORS.accent },
+              marker: {
+                size: 9,
+                color: CHART_COLORS.accent,
+                line: { color: CHART_COLORS.surface, width: 2 }
+              },
+              hovertemplate: 'Woche %{x}<br>%{y} Punkte<extra></extra>'
             }]}
             layout={{
               paper_bgcolor: 'transparent',
               plot_bgcolor: 'transparent',
+              hovermode: 'closest',
+              hoverlabel: {
+                bgcolor: CHART_COLORS.surface,
+                bordercolor: CHART_COLORS.accent,
+                font: { color: CHART_COLORS.text, family: 'Roboto, sans-serif', size: 13 }
+              },
               title: {
                 text: 'SAISONVERLAUF',
                 font: {
@@ -281,8 +310,7 @@ const TeamSection = ({ team }) => {
                 title: '',
                 showgrid: false,
                 zeroline: false,
-                tickvals: Object.keys(weekData).map((key, index) => index),
-                ticktext: Object.keys(weekData).map((key, index) => index + 1),
+                dtick: 1,
                 tickfont: {
                   family: 'Roboto, sans-serif',
                   size: 12,
@@ -308,12 +336,12 @@ const TeamSection = ({ team }) => {
                 l: 30,
                 r: 20,
                 t: 30,
-                b: -30
+                b: 30
               },
             }}
             config={{
               displayModeBar: false,
-              staticPlot: true
+              responsive: true
             }}
           />
         </div>
