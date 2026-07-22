@@ -22,6 +22,55 @@
     "TE":"Brenton Strange",
     "K":"Cameron Dicker",
     "DEF":"New Orleans Saints",
+    "TOP_PERFORMERS":[
+      {
+        "name":"Derrick Henry",
+        "position":"RB",
+        "points":29.7,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/3198.jpg"
+      },
+      {
+        "name":"Brock Purdy",
+        "position":"QB",
+        "points":24.1,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8183.jpg"
+      },
+      {
+        "name":"Cam Little",
+        "position":"K",
+        "points":16.8,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11786.jpg"
+      }
+    ],
+    "BOTTOM_PERFORMERS":[
+      {
+        "name":"Mark Andrews",
+        "position":"TE",
+        "points":1.0,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5012.jpg"
+      },
+      {
+        "name":"George Pickens",
+        "position":"WR",
+        "points":5.0,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8137.jpg"
+      },
+      {
+        "name":"Minnesota Vikings",
+        "position":"DEF",
+        "points":7.5,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/MIN.jpg"
+      }
+    ],
+    "BENCHWARMER":{
+      "name":"Kyle Monangai",
+      "position":"RB",
+      "points":1.9,
+      "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12534.jpg"
+    },
+    "CURRENT_OPPONENT":"Alvin had a little Lamb",
+    "CURRENT_OPPONENT_WIN_PROB":90.7,
+    "NEXT_OPPONENT":"Always sunny´n Scarycity",
     "POWER RANK":3,
     "Power Rank Score":5.15,
     "COMMENTS":"TESTESTEST",
@@ -50,9 +99,58 @@
     "TE":"Darren Waller, George Kittle",
     "K":"Jason Myers",
     "DEF":"Buffalo Bills, Los Angeles Rams",
+    "TOP_PERFORMERS":[
+      {
+        "name":"Zay Flowers",
+        "position":"WR",
+        "points":25.6,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9997.jpg"
+      },
+      {
+        "name":"Kyren Williams",
+        "position":"RB",
+        "points":13.9,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8150.jpg"
+      },
+      {
+        "name":"Los Angeles Rams",
+        "position":"DEF",
+        "points":12.8,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/LAR.jpg"
+      }
+    ],
+    "BOTTOM_PERFORMERS":[
+      {
+        "name":"Terry McLaurin",
+        "position":"WR",
+        "points":4.0,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5927.jpg"
+      },
+      {
+        "name":"Jake Bates",
+        "position":"K",
+        "points":7.0,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11539.jpg"
+      },
+      {
+        "name":"Amon-Ra St. Brown",
+        "position":"WR",
+        "points":7.5,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7547.jpg"
+      }
+    ],
+    "BENCHWARMER":{
+      "name":"Buffalo Bills",
+      "position":"DEF",
+      "points":1.8,
+      "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/BUF.jpg"
+    },
+    "CURRENT_OPPONENT":"Addison Rae",
+    "CURRENT_OPPONENT_WIN_PROB":58.3,
+    "NEXT_OPPONENT":"The ImBortles",
     "POWER RANK":10,
     "Power Rank Score":8.57,
-    "COMMENTS":"In der Tabelle noch auf der gefürchteten 12, rundet Lücke in den Powerrankings auf Platz 10 die unterste Tier ab. In der “Points For”-Kategorie unterscheidet die drei Schlusslichter nicht mal SECHS mickrige Punkte.\nLücke selber hat dabei die kleinste Zahl, aber in den letzten drei Wochen hat er sich stetig gesteigert. Der Trend geht nach oben.\nVermutlich hat Lücke schon länger kein Football mehr geschaut, sonst würde er wissen, dass Kirk Cousins diese Woche bestimmt nicht die beste Option ist. Aber wer weiß. Vielleicht packt Kirko Chainz ja eine Vintage Performance aus.",
+    "COMMENTS":"TESTESTETS",
     "Week 1":112.09
   },
   {
@@ -78,6 +176,55 @@
     "TE":"Trey McBride",
     "K":"Chase McLaughlin",
     "DEF":"Cleveland Browns, Jacksonville Jaguars",
+    "TOP_PERFORMERS":[
+      {
+        "name":"Lamar Jackson",
+        "position":"QB",
+        "points":35.0,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4881.jpg"
+      },
+      {
+        "name":"Jaylen Warren",
+        "position":"RB",
+        "points":13.4,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8228.jpg"
+      },
+      {
+        "name":"Justin Jefferson",
+        "position":"WR",
+        "points":13.1,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6794.jpg"
+      }
+    ],
+    "BOTTOM_PERFORMERS":[
+      {
+        "name":"Tank Bigsby",
+        "position":"RB",
+        "points":1.4,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9225.jpg"
+      },
+      {
+        "name":"New York Giants",
+        "position":"DEF",
+        "points":2.2,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/NYG.jpg"
+      },
+      {
+        "name":"Tyrone Tracy",
+        "position":"RB",
+        "points":4.8,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11655.jpg"
+      }
+    ],
+    "BENCHWARMER":{
+      "name":"Tre Tucker",
+      "position":"WR",
+      "points":0,
+      "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/10213.jpg"
+    },
+    "CURRENT_OPPONENT":"pk123",
+    "CURRENT_OPPONENT_WIN_PROB":60.3,
+    "NEXT_OPPONENT":"TetaTet with a Mustardson",
     "POWER RANK":12,
     "Power Rank Score":8.93,
     "COMMENTS":"Man würde meinen, dass die Founding Fathers nach einer 2-Punkte-Woche einen deutlichen Sprung nach oben in den Powerrankings machen müssten. Immerhin haben sie ihre Gesamtpunktzahl um ein Drittel erhöht.\nUnd jeder weiß, dass man in der THF nicht leicht an die heiß begehrten Doppelpunkte kommt. Aber das Powerranking-System sagt: „Ab nach unten mit euch.“\nWie kommt’s?\nDie Pioniere des Co-Managements haben in den letzten drei Wochen einen Schnitt von 106 Punkten. Das ist einfach zu wenig, auch wenn das in Woche 11 noch für zwei Punkte gesorgt hat.\nUnd dabei gibt es fantastische Performances von den Onesie-Positionen. QB, TE und K-Production sind jeweils Top-3, wenn nicht sogar besser. Hilft anscheinend nicht, wenn die RBs und WRs nicht mitspielen.\nUm die Playoffs zu erreichen, müssen sehr viele Würfel richtig fallen, es ist aber noch nicht vorbei.\nDer Deadline-Trade mit Mo gibt mir nochmal Hoffnung, aber ich befürchte, die Boys hätten früher Moves machen müssen und ihre Underperformer mit Big-Name-Value traden sollen.",
@@ -106,6 +253,55 @@
     "TE":"Theo Johnson, Taysom Hill, Jake Ferguson",
     "K":"Cam Little",
     "DEF":"San Francisco 49ers",
+    "TOP_PERFORMERS":[
+      {
+        "name":"James Cook",
+        "position":"RB",
+        "points":19.4,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8138.jpg"
+      },
+      {
+        "name":"CeeDee Lamb",
+        "position":"WR",
+        "points":16.0,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6786.jpg"
+      },
+      {
+        "name":"Courtland Sutton",
+        "position":"WR",
+        "points":15.8,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5045.jpg"
+      }
+    ],
+    "BOTTOM_PERFORMERS":[
+      {
+        "name":"David Njoku",
+        "position":"TE",
+        "points":5.5,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4033.jpg"
+      },
+      {
+        "name":"Dak Prescott",
+        "position":"QB",
+        "points":8.7,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/3294.jpg"
+      },
+      {
+        "name":"San Francisco 49ers",
+        "position":"DEF",
+        "points":12.8,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/SF.jpg"
+      }
+    ],
+    "BENCHWARMER":{
+      "name":"Deebo Samuel",
+      "position":"WR",
+      "points":19.9,
+      "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5872.jpg"
+    },
+    "CURRENT_OPPONENT":"The ImBortles",
+    "CURRENT_OPPONENT_WIN_PROB":9.3,
+    "NEXT_OPPONENT":"Addison Rae",
     "POWER RANK":9,
     "Power Rank Score":7.72,
     "COMMENTS":"Nach drei Wochen hat er mal wieder die 120er Schallmauer durchbrochen. Herzlichen Glückwunsch. In einer Fantasywoche für die Geschichtsbücher hat eine 122 für das Matchup und den Median LOCKER gereicht.\nBei genauer Betrachtung des Rosters ist mir aufgefallen, dass Köppi quasi die bessere Version der FF Fathers hat. Super Onesies QB, TE und K, aber das Fundament, die Basis, scheint nicht ganz zu stimmen. Alvin Kamara denkt schon an die Piña Coladas in Cabo und Shaheed macht im Pacific North West noch Akklimatisierungsversuche.\nAber wir alle wissen, dass in Woche 12 gegen Michi wieder mindestens 130 Punkte drin sind.",
@@ -134,6 +330,55 @@
     "TE":"Harold Fannin, Hunter Henry",
     "K":"Tyler Loop",
     "DEF":"Miami Dolphins",
+    "TOP_PERFORMERS":[
+      {
+        "name":"Kyler Murray",
+        "position":"QB",
+        "points":24.0,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5849.jpg"
+      },
+      {
+        "name":"Puka Nacua",
+        "position":"WR",
+        "points":19.9,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9493.jpg"
+      },
+      {
+        "name":"Marvin Harrison",
+        "position":"WR",
+        "points":16.1,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11628.jpg"
+      }
+    ],
+    "BOTTOM_PERFORMERS":[
+      {
+        "name":"Arizona Cardinals",
+        "position":"DEF",
+        "points":5.8,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/ARI.jpg"
+      },
+      {
+        "name":"Tyreek Hill",
+        "position":"WR",
+        "points":6.8,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/3321.jpg"
+      },
+      {
+        "name":"D'Andre Swift",
+        "position":"RB",
+        "points":8.8,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6790.jpg"
+      }
+    ],
+    "BENCHWARMER":{
+      "name":"Dylan Sampson",
+      "position":"RB",
+      "points":0,
+      "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12469.jpg"
+    },
+    "CURRENT_OPPONENT":"The Founding Fathers ",
+    "CURRENT_OPPONENT_WIN_PROB":39.7,
+    "NEXT_OPPONENT":"sandmann1ps",
     "POWER RANK":8,
     "Power Rank Score":6.8,
     "COMMENTS":"Philipp hat in unserem All-Time-Ranking die meisten Punkte und dann in den Playoffs immer Pech. Dieses Jahr steht er ganz gut in der Liga da, aber hauptsächlich weil er die wenigsten Points Against hat. Muss ein komisches Gefühl sein.\nSein Team ist wahnsinnig inkonsistent, mit vier Performances von 105 Punkten oder sogar deutlich weniger. Verletzungen spielen da auch eine große Rolle, zuletzt hat der Blinddarm von MHJ den Geist aufgegeben.\npk123, legendärer Teamname, wird das nicht stören, solange er in die Playoffs kommt. Wer mit 90 Punkten sein Matchup gewinnt, hat Fortuna definitiv auf seiner Seite.",
@@ -162,6 +407,55 @@
     "TE":"Colston Loveland",
     "K":"Jake Bates",
     "DEF":"Seattle Seahawks",
+    "TOP_PERFORMERS":[
+      {
+        "name":"Baker Mayfield",
+        "position":"QB",
+        "points":30.0,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4892.jpg"
+      },
+      {
+        "name":"Breece Hall",
+        "position":"RB",
+        "points":17.5,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8155.jpg"
+      },
+      {
+        "name":"Chuba Hubbard",
+        "position":"RB",
+        "points":17.1,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7594.jpg"
+      }
+    ],
+    "BOTTOM_PERFORMERS":[
+      {
+        "name":"Evan Engram",
+        "position":"TE",
+        "points":3.9,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4066.jpg"
+      },
+      {
+        "name":"Nico Collins",
+        "position":"WR",
+        "points":4.0,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7569.jpg"
+      },
+      {
+        "name":"Isiah Pacheco",
+        "position":"RB",
+        "points":4.0,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8205.jpg"
+      }
+    ],
+    "BENCHWARMER":{
+      "name":"Michael Pittman",
+      "position":"WR",
+      "points":17.8,
+      "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6819.jpg"
+    },
+    "CURRENT_OPPONENT":"Waddle in the Huddle",
+    "CURRENT_OPPONENT_WIN_PROB":8.5,
+    "NEXT_OPPONENT":"Chase me if you can",
     "POWER RANK":10,
     "Power Rank Score":8.57,
     "COMMENTS":"Das Rennen um die „Football-in-die-Leisten-Trophy“ wird nochmal richtig spannend. In einem Blowout-100-Point-Swing ist Tine auf 8 Punkte rangekommen. Jetzt hält sie mit 66 Punkten den Negativrekord im Jahr 2025.\nNachdem die 2024 THF-Gewinnerin dem Injury Death entkommen schien, als sie Nabers getradet hatte, kam der zurück und hat sich seine Rache mit Zinsen geholt. Final Destination Style.\nYou can’t outrun the Injury Death.\nSkattebo, Wilson, zeitweise Egbuka, Pacheco und um ehrlich zu sein Chuba auch.\nDie Liste der Verluste ist lang und Tine spielt ab sofort einfach ihre Short Kings, auch wenn die vielleicht nicht die beste Option sind.\nGodspeed, little ones.",
@@ -190,6 +484,55 @@
     "TE":"Dalton Kincaid, Colby Parkinson",
     "K":"Eddy Pineiro",
     "DEF":"Detroit Lions, Tampa Bay Buccaneers",
+    "TOP_PERFORMERS":[
+      {
+        "name":"Jalen Hurts",
+        "position":"QB",
+        "points":26.1,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6904.jpg"
+      },
+      {
+        "name":"Jonathan Taylor",
+        "position":"RB",
+        "points":12.6,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6813.jpg"
+      },
+      {
+        "name":"Washington Commanders",
+        "position":"DEF",
+        "points":12.2,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/WAS.jpg"
+      }
+    ],
+    "BOTTOM_PERFORMERS":[
+      {
+        "name":"Xavier Worthy",
+        "position":"WR",
+        "points":0.0,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11624.jpg"
+      },
+      {
+        "name":"Jauan Jennings",
+        "position":"WR",
+        "points":2.9,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7049.jpg"
+      },
+      {
+        "name":"Jameson Williams",
+        "position":"WR",
+        "points":5.1,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8148.jpg"
+      }
+    ],
+    "BENCHWARMER":{
+      "name":"Rome Odunze",
+      "position":"WR",
+      "points":13.2,
+      "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11620.jpg"
+    },
+    "CURRENT_OPPONENT":"Chase me if you can",
+    "CURRENT_OPPONENT_WIN_PROB":42.4,
+    "NEXT_OPPONENT":"Waddle in the Huddle",
     "POWER RANK":2,
     "Power Rank Score":4.72,
     "COMMENTS":"Kein Jonathan Taylor, kein Proble… oh Shit. 77 Punkte. Das macht JT doch sonst alleine.\nEs war keine gute Woche für Leos Team. Fehlt es etwa an Depth? Naja, jetzt ist der erste RB-MVP der NFL seit AP wieder da. Aber kann JT seine fantastische Fantasy-Performance für den Rest der Season beibehalten?\nDie Schedule der Colts scheint wohl deutlich schwerer zu werden.\nBei uns in der THF sieht die Sleeper-Projection Leo definitiv als großen Favoriten im Spitzenduell gegen Svens Wackeltruppe.",
@@ -218,6 +561,55 @@
     "TE":"Travis Kelce, Juwan Johnson",
     "K":"Harrison Butker",
     "DEF":"Los Angeles Chargers",
+    "TOP_PERFORMERS":[
+      {
+        "name":"Josh Allen",
+        "position":"QB",
+        "points":44.9,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4984.jpg"
+      },
+      {
+        "name":"Christian McCaffrey",
+        "position":"RB",
+        "points":20.9,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4034.jpg"
+      },
+      {
+        "name":"Travis Kelce",
+        "position":"TE",
+        "points":11.9,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/1466.jpg"
+      }
+    ],
+    "BOTTOM_PERFORMERS":[
+      {
+        "name":"Kaleb Johnson",
+        "position":"RB",
+        "points":-1.2,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12504.jpg"
+      },
+      {
+        "name":"A.J. Brown",
+        "position":"WR",
+        "points":1.3,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5859.jpg"
+      },
+      {
+        "name":"Rachaad White",
+        "position":"RB",
+        "points":2.4,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8136.jpg"
+      }
+    ],
+    "BENCHWARMER":{
+      "name":"Troy Franklin",
+      "position":"WR",
+      "points":0,
+      "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11627.jpg"
+    },
+    "CURRENT_OPPONENT":"Always sunny´n Scarycity",
+    "CURRENT_OPPONENT_WIN_PROB":41.7,
+    "NEXT_OPPONENT":"Alvin had a little Lamb",
     "POWER RANK":5,
     "Power Rank Score":5.75,
     "COMMENTS":"80 Punkte von zwei Spielern. Josh Allen mit 50 und CMC mit 30. Absolute Frechheit. Damit hätte Ben gegen Tine oder gegen Leo in Woche 11 gewonnen. Nimmt man Kelce mit seinen 20 noch dazu, hätte es auch für Peter, Sven und Philipp gereicht.\nDabei hatte Ben auch noch 27 von Gainwell und 17 von Santos auf der Bank. Fantastische Woche für unseren Sophomore-Youngster. Kann er daran anknüpfen?\nJosh hat dazu am Donnerstag schon mal ganz klar „NEIN“ gesagt.",
@@ -246,6 +638,55 @@
     "TE":"Tyler Warren",
     "K":"Ka'imi Fairbairn",
     "DEF":"Atlanta Falcons, Pittsburgh Steelers",
+    "TOP_PERFORMERS":[
+      {
+        "name":"Bijan Robinson",
+        "position":"RB",
+        "points":21.9,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9509.jpg"
+      },
+      {
+        "name":"Emeka Egbuka",
+        "position":"WR",
+        "points":21.6,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12514.jpg"
+      },
+      {
+        "name":"Garrett Wilson",
+        "position":"WR",
+        "points":19.8,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8146.jpg"
+      }
+    ],
+    "BOTTOM_PERFORMERS":[
+      {
+        "name":"Kenneth Walker",
+        "position":"RB",
+        "points":3.9,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8151.jpg"
+      },
+      {
+        "name":"Houston Texans",
+        "position":"DEF",
+        "points":8.2,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/HOU.jpg"
+      },
+      {
+        "name":"Wil Lutz",
+        "position":"K",
+        "points":9.2,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/3678.jpg"
+      }
+    ],
+    "BENCHWARMER":{
+      "name":"Zach Charbonnet",
+      "position":"RB",
+      "points":11.4,
+      "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9753.jpg"
+    },
+    "CURRENT_OPPONENT":"sandmann1ps",
+    "CURRENT_OPPONENT_WIN_PROB":65.1,
+    "NEXT_OPPONENT":"The Founding Fathers ",
     "POWER RANK":7,
     "Power Rank Score":6.55,
     "COMMENTS":"Da macht man mal 137 Punkte, die drittmeisten in der Woche, und man bekommt keinen Punkt. Halt doch – der Median. Was für eine Erleichterung. Doch nicht so kacke, oder Mo?\nBei Mo haben eigentlich nur 5 Spieler Punkte gemacht, den Rest hätte man auch auf 0 abrunden können. Wenn der QB 5 Punkte macht, hat man eigentlich schon verloren… außer man hat T-Mac und den Senfmann.\n(60 Points combined)\nEs sieht so aus, als würden B. Young und T-Mac jetzt richtig durchstarten. Vielleicht sollte Mo die beiden stacken in Justins BYE-Week.\nMo hätte schon längst aus gutem Grund aufgeben können, aber sein Team ist immer noch stark genug, um in die Playoffs zu kommen.\nVielleicht brauchen wir noch eine Trophy für den most resilient Manager (Arbeitstitel). Ein Voting-basierter Award für den besten Manager, der aus Scheiße Gold macht. Sowas wie Coach of the Year in der NFL.",
@@ -274,6 +715,55 @@
     "TE":"Brock Bowers, Oronde Gadsden",
     "K":"Evan McPherson",
     "DEF":"Houston Texans, Philadelphia Eagles",
+    "TOP_PERFORMERS":[
+      {
+        "name":"Jayden Daniels",
+        "position":"QB",
+        "points":23.9,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11566.jpg"
+      },
+      {
+        "name":"Saquon Barkley",
+        "position":"RB",
+        "points":17.6,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4866.jpg"
+      },
+      {
+        "name":"Chris Boswell",
+        "position":"K",
+        "points":15.6,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/1945.jpg"
+      }
+    ],
+    "BOTTOM_PERFORMERS":[
+      {
+        "name":"DeVonta Smith",
+        "position":"WR",
+        "points":3.4,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7525.jpg"
+      },
+      {
+        "name":"Philadelphia Eagles",
+        "position":"DEF",
+        "points":4.8,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/PHI.jpg"
+      },
+      {
+        "name":"Jaylen Waddle",
+        "position":"WR",
+        "points":5.2,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7526.jpg"
+      }
+    ],
+    "BENCHWARMER":{
+      "name":"Kareem Hunt",
+      "position":"RB",
+      "points":4.3,
+      "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4098.jpg"
+    },
+    "CURRENT_OPPONENT":"It's Swiftney bitch",
+    "CURRENT_OPPONENT_WIN_PROB":91.5,
+    "NEXT_OPPONENT":"Pandan Buns",
     "POWER RANK":4,
     "Power Rank Score":5.52,
     "COMMENTS":"Nach einer der besten Drei-Spiele-Serien aus Woche 8, 9 und 10 mit 154 Punkten im Schnitt, kam Jays Team crashing down to Earth. Es wirkt aber wie eine Ausnahme, denn am Donnerstag haben die Texans schon 8 Sacks ausgepackt.\nJay ist back on track, würde man meinen. Aber ohne Waddle und Achane könnte es trotzdem eine sehr schwierige Woche werden. Zum Glück spielt er gegen Tines Team, da sollte eigentlich nichts anbrennen. (Definitiv kein Jinx-Versuch)",
@@ -302,6 +792,55 @@
     "TE":"Dallas Goedert, Kyle Pitts",
     "K":"Brandon Aubrey",
     "DEF":"Denver Broncos, New England Patriots",
+    "TOP_PERFORMERS":[
+      {
+        "name":"Denver Broncos",
+        "position":"DEF",
+        "points":19.2,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/DEN.jpg"
+      },
+      {
+        "name":"Travis Etienne",
+        "position":"RB",
+        "points":18.1,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7543.jpg"
+      },
+      {
+        "name":"Jaxon Smith-Njigba",
+        "position":"WR",
+        "points":15.4,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9488.jpg"
+      }
+    ],
+    "BOTTOM_PERFORMERS":[
+      {
+        "name":"Cooper Kupp",
+        "position":"WR",
+        "points":2.5,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4039.jpg"
+      },
+      {
+        "name":"Ja'Marr Chase",
+        "position":"WR",
+        "points":3.9,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7564.jpg"
+      },
+      {
+        "name":"David Montgomery",
+        "position":"RB",
+        "points":6.8,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5892.jpg"
+      }
+    ],
+    "BENCHWARMER":{
+      "name":"Javonte Williams",
+      "position":"RB",
+      "points":20.1,
+      "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7588.jpg"
+    },
+    "CURRENT_OPPONENT":"Pandan Buns",
+    "CURRENT_OPPONENT_WIN_PROB":57.6,
+    "NEXT_OPPONENT":"It's Swiftney bitch",
     "POWER RANK":1,
     "Power Rank Score":3.7,
     "COMMENTS":"Ohhh how the mighty have fallen. „On top of the world“ war der gute Sven noch vor einem Monat. Jetzt schmilzt der Abstand schneller als die Polarkappen.\nDie Teams, die nicht den perfekten Draft und Start in die Season hatten, haben Svens Truppe in Production schon eingeholt.\nIn der Liga ist er nur noch auf Platz zwei und eine halbe Woche vor den Verfolgern. Jetzt spielt er auch noch im Spitzenduell gegen Leos Truppe – ohne Llama Chase und Ladd McConkey.\nIch hoffe, Sven macht sich nicht zu viele Sorgen, er ist ja schon fast sicher in den Playoffs… fast sicher…",
@@ -330,6 +869,55 @@
     "TE":"Dalton Schultz, T.J. Hockenson",
     "K":"Matt Prater",
     "DEF":"Green Bay Packers",
+    "TOP_PERFORMERS":[
+      {
+        "name":"Patrick Mahomes",
+        "position":"QB",
+        "points":29.8,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4046.jpg"
+      },
+      {
+        "name":"Bucky Irving",
+        "position":"RB",
+        "points":12.8,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11584.jpg"
+      },
+      {
+        "name":"Jahmyr Gibbs",
+        "position":"RB",
+        "points":10.5,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9221.jpg"
+      }
+    ],
+    "BOTTOM_PERFORMERS":[
+      {
+        "name":"Detroit Lions",
+        "position":"DEF",
+        "points":0.5,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/DET.jpg"
+      },
+      {
+        "name":"T.J. Hockenson",
+        "position":"TE",
+        "points":3.0,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5844.jpg"
+      },
+      {
+        "name":"Tee Higgins",
+        "position":"WR",
+        "points":5.3,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6801.jpg"
+      }
+    ],
+    "BENCHWARMER":{
+      "name":"Emanuel Wilson",
+      "position":"RB",
+      "points":0,
+      "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11435.jpg"
+    },
+    "CURRENT_OPPONENT":"TetaTet with a Mustardson",
+    "CURRENT_OPPONENT_WIN_PROB":34.9,
+    "NEXT_OPPONENT":"pk123",
     "POWER RANK":6,
     "Power Rank Score":6.0,
     "COMMENTS":"Peter hatte einfach eine dieser Wochen. Die drei folgenden Stats fassen das eigentlich ganz gut zusammen:\nDavante Adams 1\/8 Receptions für 1 Yard und 1 TD.\nDie Chargers-D mit -1 – ausgerechnet gegen Jacksonville ohne deren WR1 und WR2.\nKhalil Shakir mit 1\/3 Receptions für -3 Yards. Calvin Austin 1\/1 Receptions für 5 Yards.\nDas sind die Wochen, in denen man daran zweifelt, was man hier eigentlich macht. Wo man am liebsten das ganze Team traden würde und mit Football nichts zu tun haben möchte.\nAber dann kommt schon der nächste Mittwoch und man fängt wieder von vorne an.",
