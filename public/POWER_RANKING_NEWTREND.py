@@ -1,9 +1,25 @@
 import requests
 import pandas as pd
 from datetime import datetime
+import os
 
-# Set the current week (or determine it dynamically)
-current_week = 11  # Replace this with the actual current week of the season
+# --- NEU: Woche und Saison automatisch von Sleeper ermitteln ---
+# Sleeper stellt den globalen NFL-Status bereit, inkl. aktueller Woche & Saison.
+state_response = requests.get("https://api.sleeper.app/v1/state/nfl")
+nfl_state = state_response.json()
+
+season = nfl_state["season"]  # z.B. "2025"
+
+# WICHTIG: Bitte nach dem ersten Testlauf prüfen, ob "week" bereits die
+# abgeschlossene Woche ist oder die kommende. Sleeper zählt "week" meist als
+# die *aktuell laufende* Woche. Falls deine bisherige manuelle current_week
+# immer "die letzte abgeschlossene Woche" war, ggf. auf nfl_state["week"] - 1
+# anpassen. Einmal gegen deinen bisherigen manuellen Wert gegenchecken.
+current_week = nfl_state["week"] - 1
+if current_week < 1:
+    current_week = 1
+
+print(f"Ermittelte Saison: {season}, aktuelle Woche: {current_week}")
 
 # Sleeper API for fetching rosters, players, etc.
 league_id = "1238466927777546240"
@@ -20,13 +36,13 @@ players = response_players.json()
 response_users = requests.get(url_users)
 users = response_users.json()
 
-# CSV URLs for player points by position
+# --- NEU: Jahr in den CSV-URLs kommt jetzt automatisch aus "season" ---
 csv_urls = {
-    'QB': 'https://raw.githubusercontent.com/hvpkod/NFL-Data/main/NFL-data-Players/2025/QB_season.csv',
-    'RB': 'https://raw.githubusercontent.com/hvpkod/NFL-Data/main/NFL-data-Players/2025/RB_season.csv',
-    'WR': 'https://raw.githubusercontent.com/hvpkod/NFL-Data/main/NFL-data-Players/2025/WR_season.csv',
-    'TE': 'https://raw.githubusercontent.com/hvpkod/NFL-Data/main/NFL-data-Players/2025/TE_season.csv',
-    'K': 'https://raw.githubusercontent.com/hvpkod/NFL-Data/main/NFL-data-Players/2025/K_season.csv',
+    'QB': f'https://raw.githubusercontent.com/hvpkod/NFL-Data/main/NFL-data-Players/{season}/QB_season.csv',
+    'RB': f'https://raw.githubusercontent.com/hvpkod/NFL-Data/main/NFL-data-Players/{season}/RB_season.csv',
+    'WR': f'https://raw.githubusercontent.com/hvpkod/NFL-Data/main/NFL-data-Players/{season}/WR_season.csv',
+    'TE': f'https://raw.githubusercontent.com/hvpkod/NFL-Data/main/NFL-data-Players/{season}/TE_season.csv',
+    'K': f'https://raw.githubusercontent.com/hvpkod/NFL-Data/main/NFL-data-Players/{season}/K_season.csv',
 }
 
 # Fetch player points from CSVs
@@ -133,10 +149,9 @@ for team in rosters:
 
     # Calculate Trend and Trend Percentage using the updated logic
     if len(team_weekly_points) > 2:
-        # Calculate the league's average for remaining weeks (excluding last two weeks)
         all_teams_scores = [
             weekly_points[week][i]
-            for week in weeks[:-2]  # Exclude last two weeks
+            for week in weeks[:-2]
             for i in range(len(rosters))
         ]
         league_average = sum(all_teams_scores) / len(all_teams_scores) if all_teams_scores else 0
@@ -165,7 +180,6 @@ def normalize_strength(strengths):
     max_value = max(strengths) if max(strengths) > 0 else 1
     return [round((strength / max_value) * 100) for strength in strengths]
 
-# Apply normalization
 qb_strength_normalized = normalize_strength(qb_strength)
 rb_strength_normalized = normalize_strength(rb_strength)
 wr_strength_normalized = normalize_strength(wr_strength)
@@ -206,7 +220,6 @@ power_rankings['Trend Percentage Rank'] = df['Trend Percentage'].rank(ascending=
 power_rankings['Points Against Rank'] = df['Points Against'].rank(ascending=False)
 power_rankings['Adjusted Average Rank'] = df['Adjusted Average'].rank(ascending=False)
 
-# Calculate Power Rank Score with the appropriate weight
 power_rankings['Power Rank Score'] = (
     power_rankings['Wins Rank'] * 0.25 +
     power_rankings['Points For Rank'] * 0.25 +
@@ -215,39 +228,37 @@ power_rankings['Power Rank Score'] = (
     power_rankings['Adjusted Average Rank'] * 0.15
 )
 
-# Calculate Power Rank based on Power Rank Score
 df["POWER RANK"] = power_rankings['Power Rank Score'].rank(ascending=True).astype(int)
 df["Power Rank Score"] = power_rankings['Power Rank Score'].round(2)
 
-# Add empty 'COMMENTS' column
 df['COMMENTS'] = ""
 
-# Load the PowerRanking_Text.csv file
-text_df = pd.read_csv('PowerRanking_Text.csv')
+# Kommentare werden jetzt aus dem veröffentlichten Google Sheet geladen
+# (statt aus der lokalen PowerRanking_Text.csv). Die Tabelle enthält zur
+# Orientierung auch "Display Name" - wir brauchen daraus nur "User ID" und "TEXT".
+comments_sheet_url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQCnrwSeNaWZpB01mPcy6Glr9vQPk_Vq6OtgxkqcSgCmNiK-yXVYpc7QbslQI9wulq5SHQ5vwijUzKx/pub?output=csv"
+text_df = pd.read_csv(comments_sheet_url)
 
-# Ensure 'User ID' in both dataframes are of the same type (convert to string for consistency)
 df['User ID'] = df['User ID'].astype(str)
 text_df['User ID'] = text_df['User ID'].astype(str)
 
-# Merge the TEXT from PowerRanking_Text.csv with the main df based on 'User ID'
 df = pd.merge(df, text_df[['User ID', 'TEXT']], on='User ID', how='left')
-
-# Assign the TEXT column to the COMMENTS column
 df['COMMENTS'] = df['TEXT']
-
-# Drop the TEXT column after merging (optional)
 df.drop(columns=['TEXT'], inplace=True)
 
 # Convert the weekly points dictionary into a DataFrame
 weekly_points_df = pd.DataFrame(weekly_points)
 weekly_points_df.columns = [f'Week {week}' for week in weeks]
 
-# Merge the weekly points with the main DataFrame
 df = pd.concat([df, weekly_points_df], axis=1)
 
-# Save to CSV
+# Save to CSV (weiterhin als Backup/Debug-Datei)
 csv_file = "POWERRANK.csv"
 df.to_csv(csv_file, index=False)
-
 print(f"Standings data saved to {csv_file}")
 
+# --- NEU: Direkter JSON-Export statt Online-Konverter-Tool ---
+# Pfad ggf. anpassen, falls dieses Script nicht im Repo-Root liegt.
+json_file = os.path.join("public", "powerrank.json")
+df.to_json(json_file, orient="records", force_ascii=False, indent=2)
+print(f"JSON data saved to {json_file}")
