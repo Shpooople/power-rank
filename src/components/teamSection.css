@@ -148,6 +148,45 @@
   font-weight: bold;
 }
 
+/* --- NEU: Ausklappbare Boxen (Roster, Performer der Woche) --- */
+.collapsible {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background-color: var(--color-surface-alt);
+  padding: 10px 14px;
+}
+
+.collapsible summary {
+  cursor: pointer;
+  font-family: 'Roboto Condensed', Roboto, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  color: var(--color-accent);
+  list-style: none;
+  display: flex;
+  align-items: center;
+  user-select: none;
+}
+
+.collapsible summary::-webkit-details-marker {
+  display: none;
+}
+
+.collapsible summary::before {
+  content: '▸';
+  display: inline-block;
+  margin-right: 8px;
+  transition: transform 0.15s ease;
+}
+
+.collapsible[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.collapsible-content {
+  margin-top: 12px;
+}
+
 /* --- NEU: Roster als Spielerliste mit Bild + Stats (statt Tabelle) --- */
 .team-roster {
   margin-top: 10px;
@@ -215,8 +254,6 @@
 /* --- Top/Flop-Performer & Benchwarmer (größere Bilder als im Roster) --- */
 .performers-section {
   margin-top: 20px;
-  padding-top: 16px;
-  border-top: 1px solid var(--color-border);
 }
 
 .performer-group {
@@ -284,6 +321,7 @@
 @media (min-width: 768px) {
   .charts-container {
     flex-direction: row;
+    align-items: flex-start;
     gap: 24px;
   }
 
@@ -292,8 +330,7 @@
     min-width: 0;
   }
 
-  .team-roster {
-    margin-top: 4px;
+  .team-roster .collapsible-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 8px 28px;
