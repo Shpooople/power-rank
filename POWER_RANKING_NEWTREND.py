@@ -24,7 +24,31 @@ if current_week < 1:
 print(f"Ermittelte Saison: {season}, aktuelle Woche: {current_week}")
 
 # Sleeper API for fetching rosters, players, etc.
-league_id = "1238466927777546240"
+league_id = "1238466927777546240"  # Aktuelle/eigentliche Liga-ID
+
+# --- NEU: Fallback auf Vorjahres-Woche 13, solange die reguläre Saison noch nicht läuft ---
+# nfl_state["season_type"] ist z.B. "pre", "regular", "post" oder "off".
+# Vor Saisonstart gäbe es sonst kaum/keine echten Wochendaten zu zeigen -
+# stattdessen zeigen wir übergangsweise den Stand aus Woche 13 der Vorsaison,
+# damit Saisonverlauf/Charts nicht leer sind. Sleeper verlinkt die Vorjahres-Liga
+# automatisch über das Feld "previous_league_id".
+if nfl_state.get("season_type") != "regular":
+    print(f"Saison-Typ ist '{nfl_state.get('season_type')}' - reguläre Saison läuft noch nicht.")
+    previous_league_id = None
+    try:
+        league_info = requests.get(f"https://api.sleeper.app/v1/league/{league_id}").json()
+        previous_league_id = league_info.get("previous_league_id")
+    except Exception as e:
+        print(f"Liga-Infos konnten nicht geladen werden: {e}")
+
+    if previous_league_id:
+        league_id = previous_league_id
+        season = str(int(season) - 1)
+        current_week = 13
+        print(f"Fallback aktiv: Vorjahres-Liga {league_id}, Saison {season}, Woche {current_week}.")
+    else:
+        print("Keine Vorjahres-Liga gefunden - bleibe bei Woche 1 der aktuellen (noch leeren) Saison.")
+
 weeks = range(1, current_week + 1)  # Include only weeks that have been played
 url_rosters = f"https://api.sleeper.app/v1/league/{league_id}/rosters"
 url_players = "https://api.sleeper.app/v1/players/nfl"
@@ -37,6 +61,39 @@ response_players = requests.get(url_players)
 players = response_players.json()
 response_users = requests.get(url_users)
 users = response_users.json()
+
+# --- NEU: Saisonverlauf-Fallback für die Vorsaison ---
+# Läuft die Saison noch nicht (Preseason/Offseason), gäbe es für den
+# "Saisonverlauf"-Chart nur 0-1 (leere) Wochen der aktuellen Saison. Damit
+# der Chart trotzdem aussagekräftig ist, verwenden wir dann die Wochen 1-12
+# der VORSAISON als Platzhalterdaten - zugeordnet über die owner_id, da die
+# roster_id sich zwischen Saisons/Ligen ändern kann.
+season_type = nfl_state.get("season_type", "regular")
+using_previous_season_chart_data = season_type != "regular"
+fallback_week_count = 12
+fallback_weekly_points_by_owner = {}
+
+if using_previous_season_chart_data:
+    try:
+        league_info = requests.get(f"https://api.sleeper.app/v1/league/{league_id}").json()
+        previous_league_id = league_info.get("previous_league_id")
+        if previous_league_id:
+            prev_rosters = requests.get(f"https://api.sleeper.app/v1/league/{previous_league_id}/rosters").json()
+            prev_roster_to_owner = {r['roster_id']: r['owner_id'] for r in prev_rosters}
+            for wk in range(1, fallback_week_count + 1):
+                wk_matchups = requests.get(
+                    f"https://api.sleeper.app/v1/league/{previous_league_id}/matchups/{wk}"
+                ).json()
+                for m in wk_matchups:
+                    owner = prev_roster_to_owner.get(m['roster_id'])
+                    if owner:
+                        fallback_weekly_points_by_owner.setdefault(owner, []).append(m.get('points', 0))
+        else:
+            using_previous_season_chart_data = False
+            print("Keine previous_league_id gefunden, Saisonverlauf bleibt leer bis Saisonstart.")
+    except Exception as e:
+        using_previous_season_chart_data = False
+        print(f"Vorsaison-Daten für den Saisonverlauf konnten nicht geladen werden: {e}")
 
 # --- NEU: Jahr in den CSV-URLs kommt automatisch aus "season", mit Fallback ---
 # Vor Saisonstart legt die Datenquelle (hvpkod/NFL-Data) den Ordner fürs neue
@@ -80,7 +137,8 @@ adjusted_averages, trends, trend_percentages = [], [], []
 qb_list, rb_list, wr_list, te_list, k_list, def_list = [], [], [], [], [], []
 qb_strength, rb_strength, wr_strength, te_strength, k_strength = [], [], [], [], []
 top_performers_list, bottom_performers_list, benchwarmer_list = [], [], []
-current_opponent_list, current_opponent_winprob_list, next_opponent_list = [], [], []
+last_week_opponent_list, last_week_result_list = [], []
+this_week_opponent_list, this_week_winprob_list = [], []
 
 # Map user_id to team_name and display_name
 user_data_dict = {
@@ -117,8 +175,8 @@ def fetch_matchups(week):
     except Exception:
         return None
 
-next_week = current_week + 1
-next_week_matchups = fetch_matchups(next_week)
+this_week = current_week + 1  # aktuell laufende/kommende Woche (current_week = letzte ABGESCHLOSSENE Woche)
+this_week_matchups = fetch_matchups(this_week)
 
 def build_opponent_map(matchup_list):
     """Baut roster_id -> gegnerische roster_id, basierend auf gleicher matchup_id."""
@@ -134,8 +192,8 @@ def build_opponent_map(matchup_list):
             opponent_map[ids[1]] = ids[0]
     return opponent_map
 
-current_week_opponent_map = build_opponent_map(current_week_matchups)
-next_week_opponent_map = build_opponent_map(next_week_matchups)
+last_week_opponent_map = build_opponent_map(current_week_matchups)  # current_week_matchups = letzte abgeschlossene Woche
+this_week_opponent_map = build_opponent_map(this_week_matchups)
 
 roster_id_to_owner = {r['roster_id']: r['owner_id'] for r in rosters}
 
@@ -146,11 +204,11 @@ def team_display(roster_id):
     display_name = info.get('display_name', 'No Display Name')
     return display_name if team_name == 'No Team Name' else team_name
 
-# Projections für die aktuelle Woche laden (inoffizieller, aber weit genutzter Sleeper-Endpoint)
+# Projections für die KOMMENDE Woche laden (inoffizieller, aber weit genutzter Sleeper-Endpoint)
 projections_by_player = {}
 try:
     proj_url = (
-        f"https://api.sleeper.app/projections/nfl/{season}/{current_week}"
+        f"https://api.sleeper.app/projections/nfl/{season}/{this_week}"
         "?season_type=regular&position[]=QB&position[]=RB&position[]=WR"
         "&position[]=TE&position[]=K&position[]=DEF"
     )
@@ -270,12 +328,11 @@ for team in rosters:
 
     # --- NEU: Top/Flop-Performer, Benchwarmer, Gegner & Win-Probability ---
     roster_id = team['roster_id']
-    match_entry = None
+    match_entry = None  # letzte ABGESCHLOSSENE Woche
     if current_week_matchups:
         match_entry = next((m for m in current_week_matchups if m['roster_id'] == roster_id), None)
 
     top_performers, bottom_performers, benchwarmer = [], [], None
-    own_projected_total = 0
 
     if match_entry:
         starters = [s for s in match_entry.get('starters', []) if s and s != '0']
@@ -295,30 +352,65 @@ for team in rosters:
             info['points'] = round(pts, 1)
             bottom_performers.append(info)
 
-        bench_ids = [pid for pid in team['players'] if pid not in starters]
+        # WICHTIG: für den Bank-Vergleich den tatsächlichen Kader DIESER Woche nehmen
+        # (match_entry['players']), nicht den aktuellen Kader von heute - sonst
+        # verfälschen zwischenzeitliche Waiver/Trades das Ergebnis.
+        full_roster_that_week = match_entry.get('players') or team['players']
+        bench_ids = [pid for pid in full_roster_that_week if pid not in starters]
         bench_scores = [(pid, players_points_week.get(pid, 0)) for pid in bench_ids]
         if bench_scores:
             best_bench_pid, best_bench_pts = max(bench_scores, key=lambda x: x[1])
             benchwarmer = player_info(best_bench_pid)
             benchwarmer['points'] = round(best_bench_pts, 1)
 
-        own_projected_total = sum(projections_by_player.get(pid, 0) for pid in starters)
-
     top_performers_list.append(top_performers)
     bottom_performers_list.append(bottom_performers)
     benchwarmer_list.append(benchwarmer)
 
-    # Gegner aktuelle Woche + Win-Probability (basierend auf Projections)
-    opp_roster_id = current_week_opponent_map.get(roster_id)
-    if opp_roster_id is not None:
-        current_opponent_name = team_display(opp_roster_id)
-        opp_match_entry = None
-        if current_week_matchups:
-            opp_match_entry = next((m for m in current_week_matchups if m['roster_id'] == opp_roster_id), None)
+    # Gegner + Ergebnis der LETZTEN (abgeschlossenen) Woche
+    last_opp_roster_id = last_week_opponent_map.get(roster_id)
+    last_week_opponent_name = None
+    last_week_result = None
+    if last_opp_roster_id is not None and match_entry:
+        last_week_opponent_name = team_display(last_opp_roster_id)
+        opp_match_entry_last = next((m for m in current_week_matchups if m['roster_id'] == last_opp_roster_id), None)
+        if opp_match_entry_last:
+            own_pts = match_entry.get('points', 0)
+            opp_pts = opp_match_entry_last.get('points', 0)
+            if own_pts > opp_pts:
+                outcome = "Sieg"
+            elif own_pts < opp_pts:
+                outcome = "Niederlage"
+            else:
+                outcome = "Unentschieden"
+            last_week_result = {
+                "own_points": round(own_pts, 1),
+                "opponent_points": round(opp_pts, 1),
+                "outcome": outcome
+            }
+    last_week_opponent_list.append(last_week_opponent_name)
+    last_week_result_list.append(last_week_result)
+
+    # Gegner DIESER (kommenden) Woche + Win-Probability (basierend auf Projections)
+    this_opp_roster_id = this_week_opponent_map.get(roster_id)
+    this_match_entry = None
+    if this_week_matchups:
+        this_match_entry = next((m for m in this_week_matchups if m['roster_id'] == roster_id), None)
+
+    own_projected_total = 0
+    if this_match_entry:
+        this_week_starters = [s for s in this_match_entry.get('starters', []) if s and s != '0']
+        own_projected_total = sum(projections_by_player.get(pid, 0) for pid in this_week_starters)
+
+    if this_opp_roster_id is not None:
+        this_week_opponent_name = team_display(this_opp_roster_id)
+        opp_match_entry_this = None
+        if this_week_matchups:
+            opp_match_entry_this = next((m for m in this_week_matchups if m['roster_id'] == this_opp_roster_id), None)
 
         opp_projected_total = 0
-        if opp_match_entry:
-            opp_starters = [s for s in opp_match_entry.get('starters', []) if s and s != '0']
+        if opp_match_entry_this:
+            opp_starters = [s for s in opp_match_entry_this.get('starters', []) if s and s != '0']
             opp_projected_total = sum(projections_by_player.get(pid, 0) for pid in opp_starters)
 
         diff = own_projected_total - opp_projected_total
@@ -326,15 +418,11 @@ for team in rosters:
         # mit jeweiliger Streuung league_stdev -> Win-Probability per CDF (erf).
         win_prob = 0.5 * (1 + math.erf(diff / (league_stdev * 2)))
         win_prob = max(0.01, min(0.99, win_prob))
-        current_opponent_winprob_list.append(round(win_prob * 100, 1))
+        this_week_winprob_list.append(round(win_prob * 100, 1))
     else:
-        current_opponent_name = None
-        current_opponent_winprob_list.append(None)
-    current_opponent_list.append(current_opponent_name)
-
-    # Gegner nächste Woche (nur Name, keine Projections verfügbar/verlässlich)
-    next_opp_roster_id = next_week_opponent_map.get(roster_id)
-    next_opponent_list.append(team_display(next_opp_roster_id) if next_opp_roster_id is not None else None)
+        this_week_opponent_name = None
+        this_week_winprob_list.append(None)
+    this_week_opponent_list.append(this_week_opponent_name)
 
 # Normalize the strengths using the original normalization logic
 def normalize_strength(strengths):
@@ -374,9 +462,10 @@ df = pd.DataFrame({
     "TOP_PERFORMERS": top_performers_list,
     "BOTTOM_PERFORMERS": bottom_performers_list,
     "BENCHWARMER": benchwarmer_list,
-    "CURRENT_OPPONENT": current_opponent_list,
-    "CURRENT_OPPONENT_WIN_PROB": current_opponent_winprob_list,
-    "NEXT_OPPONENT": next_opponent_list
+    "LAST_WEEK_OPPONENT": last_week_opponent_list,
+    "LAST_WEEK_RESULT": last_week_result_list,
+    "THIS_WEEK_OPPONENT": this_week_opponent_list,
+    "THIS_WEEK_WIN_PROB": this_week_winprob_list
 })
 
 # Power Rank calculations
@@ -413,11 +502,26 @@ df = pd.merge(df, text_df[['User ID', 'TEXT']], on='User ID', how='left')
 df['COMMENTS'] = df['TEXT']
 df.drop(columns=['TEXT'], inplace=True)
 
-# Convert the weekly points dictionary into a DataFrame
-weekly_points_df = pd.DataFrame(weekly_points)
-weekly_points_df.columns = [f'Week {week}' for week in weeks]
+# Wochenpunkte für den Saisonverlauf: normal die aktuelle Saison, außer die
+# Saison läuft noch nicht - dann Wochen 1-12 der Vorsaison als Platzhalter.
+if using_previous_season_chart_data and fallback_weekly_points_by_owner:
+    weekly_points_df = pd.DataFrame({
+        f"Week {wk} (Vorsaison)": [
+            fallback_weekly_points_by_owner.get(uid, [])[wk - 1]
+            if len(fallback_weekly_points_by_owner.get(uid, [])) >= wk else 0
+            for uid in user_ids
+        ]
+        for wk in range(1, fallback_week_count + 1)
+    })
+    print("Saisonverlauf nutzt Platzhalterdaten aus der Vorsaison (Wochen 1-12).")
+else:
+    weekly_points_df = pd.DataFrame(weekly_points)
+    weekly_points_df.columns = [f'Week {week}' for week in weeks]
 
 df = pd.concat([df, weekly_points_df], axis=1)
+
+# Eindeutiges Anzeige-Label fürs Frontend (statt Woche aus Spaltenanzahl zu raten)
+df["DISPLAY_WEEK_LABEL"] = "Vorsaison" if (using_previous_season_chart_data and fallback_weekly_points_by_owner) else f"Woche {current_week}"
 
 # Save to CSV (weiterhin als Backup/Debug-Datei)
 csv_file = "POWERRANK.csv"
