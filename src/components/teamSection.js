@@ -155,8 +155,9 @@ const TeamSection = ({ team }) => {
               plot_bgcolor: 'transparent',
               title: {
                 text: 'AKTUELLE TEAMSTÄRKE',
-                y: 0.9,
-                pad: { t: 25 },
+                y: 0.98,
+                yanchor: 'top',
+                pad: { t: 10 },
                 font: {
                   family: 'Roboto, sans-serif',
                   weight: 'bold',
@@ -196,7 +197,7 @@ const TeamSection = ({ team }) => {
               margin: {
                 l: 30,
                 r: 30,
-                t: 60,
+                t: 70,
                 b: -20
               },
             }}
