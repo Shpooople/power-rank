@@ -1,0 +1,52 @@
+name: Update Power Rankings
+
+# Manuell per Klick auf "Run workflow" auslösbar, zusätzlich jeden Dienstag
+# um 10:00 UTC automatisch (Zeit/Tag nach Belieben anpassen).
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 10 * * 2"
+
+permissions:
+  contents: write
+
+jobs:
+  update-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repo auschecken
+        uses: actions/checkout@v4
+
+      - name: Python einrichten
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Python-Abhängigkeiten installieren
+        run: pip install requests pandas
+
+      - name: Power-Ranking-Script ausführen
+        run: python POWER_RANKING_NEWTREND.py
+
+      - name: Generierte Daten committen
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Automatisches Power-Ranking-Update"
+          file_pattern: "public/powerrank.json POWERRANK.csv"
+
+      - name: Node einrichten
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: npm-Abhängigkeiten installieren
+        run: npm ci
+
+      - name: React-App bauen
+        run: npm run build
+
+      - name: Auf GitHub Pages deployen
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
