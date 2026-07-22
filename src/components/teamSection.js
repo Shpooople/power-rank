@@ -361,7 +361,7 @@ const TeamSection = ({ team }) => {
         <div className="performers-section">
           {topPerformers.length > 0 && (
             <div className="performer-group">
-              <h3>Top Performer</h3>
+              <h3>Top Performer der Woche</h3>
               <div className="performer-cards">
                 {topPerformers.map((p, i) => (
                   <PlayerCard key={`top-${i}`} player={p} />
@@ -372,7 +372,7 @@ const TeamSection = ({ team }) => {
 
           {bottomPerformers.length > 0 && (
             <div className="performer-group">
-              <h3>Flop Performer</h3>
+              <h3>Flop Performer der Woche</h3>
               <div className="performer-cards">
                 {bottomPerformers.map((p, i) => (
                   <PlayerCard key={`bottom-${i}`} player={p} />
