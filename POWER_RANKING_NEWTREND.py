@@ -36,20 +36,30 @@ players = response_players.json()
 response_users = requests.get(url_users)
 users = response_users.json()
 
-# --- NEU: Jahr in den CSV-URLs kommt jetzt automatisch aus "season" ---
-csv_urls = {
-    'QB': f'https://raw.githubusercontent.com/hvpkod/NFL-Data/main/NFL-data-Players/{season}/QB_season.csv',
-    'RB': f'https://raw.githubusercontent.com/hvpkod/NFL-Data/main/NFL-data-Players/{season}/RB_season.csv',
-    'WR': f'https://raw.githubusercontent.com/hvpkod/NFL-Data/main/NFL-data-Players/{season}/WR_season.csv',
-    'TE': f'https://raw.githubusercontent.com/hvpkod/NFL-Data/main/NFL-data-Players/{season}/TE_season.csv',
-    'K': f'https://raw.githubusercontent.com/hvpkod/NFL-Data/main/NFL-data-Players/{season}/K_season.csv',
-}
+# --- NEU: Jahr in den CSV-URLs kommt automatisch aus "season", mit Fallback ---
+# Vor Saisonstart legt die Datenquelle (hvpkod/NFL-Data) den Ordner fürs neue
+# Jahr oft noch nicht an. Falls die aktuelle Saison 404 liefert, weichen wir
+# automatisch auf die Vorjahresdaten aus.
+def load_position_points(season_to_try):
+    csv_urls = {
+        'QB': f'https://raw.githubusercontent.com/hvpkod/NFL-Data/main/NFL-data-Players/{season_to_try}/QB_season.csv',
+        'RB': f'https://raw.githubusercontent.com/hvpkod/NFL-Data/main/NFL-data-Players/{season_to_try}/RB_season.csv',
+        'WR': f'https://raw.githubusercontent.com/hvpkod/NFL-Data/main/NFL-data-Players/{season_to_try}/WR_season.csv',
+        'TE': f'https://raw.githubusercontent.com/hvpkod/NFL-Data/main/NFL-data-Players/{season_to_try}/TE_season.csv',
+        'K': f'https://raw.githubusercontent.com/hvpkod/NFL-Data/main/NFL-data-Players/{season_to_try}/K_season.csv',
+    }
+    points = {}
+    for position, url in csv_urls.items():
+        df = pd.read_csv(url)
+        points[position] = dict(zip(df['PlayerName'], df['TotalPoints']))
+    return points
 
-# Fetch player points from CSVs
-position_points = {}
-for position, url in csv_urls.items():
-    df = pd.read_csv(url)
-    position_points[position] = dict(zip(df['PlayerName'], df['TotalPoints']))
+try:
+    position_points = load_position_points(season)
+except Exception as e:
+    fallback_season = str(int(season) - 1)
+    print(f"Daten für Saison {season} nicht verfügbar ({e}). Verwende Vorjahresdaten {fallback_season}.")
+    position_points = load_position_points(fallback_season)
 
 # Helper function to calculate position strength based on total points
 def calculate_strength(roster, position_dict, num_players):
@@ -233,8 +243,11 @@ df["Power Rank Score"] = power_rankings['Power Rank Score'].round(2)
 
 df['COMMENTS'] = ""
 
-# Load the PowerRanking_Text.csv file (weiterhin manuell gepflegt)
-text_df = pd.read_csv('PowerRanking_Text.csv')
+# Kommentare werden jetzt aus dem veröffentlichten Google Sheet geladen
+# (statt aus der lokalen PowerRanking_Text.csv). Die Tabelle enthält zur
+# Orientierung auch "Display Name" - wir brauchen daraus nur "User ID" und "TEXT".
+comments_sheet_url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQCnrwSeNaWZpB01mPcy6Glr9vQPk_Vq6OtgxkqcSgCmNiK-yXVYpc7QbslQI9wulq5SHQ5vwijUzKx/pub?output=csv"
+text_df = pd.read_csv(comments_sheet_url)
 
 df['User ID'] = df['User ID'].astype(str)
 text_df['User ID'] = text_df['User ID'].astype(str)
