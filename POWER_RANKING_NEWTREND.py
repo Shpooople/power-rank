@@ -131,6 +131,9 @@ SEASON_STAT_KEYS = [
     'sack', 'int', 'fum_rec', 'def_td'
 ]
 season_stats_by_player = {}
+# NEU: Rohstats NUR der aktuellen (letzten abgeschlossenen) Woche separat
+# sichern - für die Performer-Karten, die Wochen- statt Saison-Stats zeigen sollen.
+current_week_player_stats = {}
 
 for wk in weeks:
     try:
@@ -146,6 +149,8 @@ for wk in weeks:
             if not pid:
                 continue
             stats = entry.get('stats', {}) or {}
+            if wk == current_week:
+                current_week_player_stats[pid] = stats
             # "gp" liefert Sleeper meist direkt mit. Falls das Feld fehlt,
             # darf NICHT "irgendein Stats-Feld ist vorhanden" als Signal
             # reichen - Sleeper liefert oft auch für verletzte/inaktive
@@ -183,8 +188,10 @@ def calculate_strength(player_ids, num_players):
     return round(sum(player_ppgs[:num_players]), 1)
 
 # --- NEU: Detail-Stats + Spielerbild fürs Roster ---
-def qb_stats(pid):
-    s = season_stats_by_player.get(pid, {})
+# Die _from-Varianten arbeiten auf einem rohen Stats-Dict (egal ob Saison-
+# Summe oder Einzelwoche) - so lassen sie sich für Roster (Saison) UND
+# Performer-Karten (nur aktuelle Woche) wiederverwenden.
+def _qb_stats_from(s):
     return {
         "comp": int(s.get('pass_cmp', 0)),
         "att": int(s.get('pass_att', 0)),
@@ -193,8 +200,7 @@ def qb_stats(pid):
         "td": int(s.get('pass_td', 0) + s.get('rush_td', 0)),
     }
 
-def rb_stats(pid):
-    s = season_stats_by_player.get(pid, {})
+def _rb_stats_from(s):
     att = s.get('rush_att', 0)
     yd = s.get('rush_yd', 0)
     ypc = round(yd / att, 1) if att else 0
@@ -205,8 +211,7 @@ def rb_stats(pid):
         "td": int(s.get('rush_td', 0) + s.get('rec_td', 0)),
     }
 
-def wr_stats(pid):
-    s = season_stats_by_player.get(pid, {})
+def _wr_stats_from(s):
     return {
         "targets": int(s.get('rec_tgt', 0)),
         "catches": int(s.get('rec', 0)),
@@ -214,8 +219,7 @@ def wr_stats(pid):
         "td": int(s.get('rec_td', 0) + s.get('rush_td', 0)),
     }
 
-def k_stats(pid):
-    s = season_stats_by_player.get(pid, {})
+def _k_stats_from(s):
     return {
         "fgm": int(s.get('fgm', 0)),
         "fga": int(s.get('fga', 0)),
@@ -223,14 +227,29 @@ def k_stats(pid):
         "xpa": int(s.get('xpa', 0)),
     }
 
-def def_stats(pid):
-    s = season_stats_by_player.get(pid, {})
+def _def_stats_from(s):
     return {
         "sack": int(s.get('sack', 0)),
         "int": int(s.get('int', 0)),
         "fum_rec": int(s.get('fum_rec', 0)),
         "td": int(s.get('def_td', 0)),
     }
+
+# Saison-Varianten (fürs Roster)
+def qb_stats(pid):
+    return _qb_stats_from(season_stats_by_player.get(pid, {}))
+
+def rb_stats(pid):
+    return _rb_stats_from(season_stats_by_player.get(pid, {}))
+
+def wr_stats(pid):
+    return _wr_stats_from(season_stats_by_player.get(pid, {}))
+
+def k_stats(pid):
+    return _k_stats_from(season_stats_by_player.get(pid, {}))
+
+def def_stats(pid):
+    return _def_stats_from(season_stats_by_player.get(pid, {}))
 
 def team_logo_url(pid):
     # Team-Defenses sind in Sleeper über das Team-Kürzel (z.B. "SF") indiziert
@@ -355,6 +374,7 @@ def player_info(pid):
     p = players.get(pid, {})
     name = f"{p.get('first_name', '')} {p.get('last_name', '')}".strip() or pid
     position = p.get('position', '')
+    week_stats_raw = current_week_player_stats.get(pid, {})
     info = {
         "name": name,
         "position": position,
@@ -362,18 +382,18 @@ def player_info(pid):
         "image_url": f"https://sleepercdn.com/content/nfl/players/{pid}.jpg",
         "total_pts": round(total_points_by_player.get(pid, 0), 1),
     }
-    # Dieselben Detail-Stats wie im Roster ergänzen (werden weiter unten
-    # definiert, aber zum Aufrufzeitpunkt von player_info() längst bekannt).
+    # NEU: hier bewusst die WOCHEN-Rohstats (nicht die Saison-Summe) nutzen -
+    # Top/Flop/Benchwarmer sollen zeigen, was in DIESER Woche passiert ist.
     if position == 'QB':
-        info.update(qb_stats(pid))
+        info.update(_qb_stats_from(week_stats_raw))
     elif position == 'RB':
-        info.update(rb_stats(pid))
+        info.update(_rb_stats_from(week_stats_raw))
     elif position in ('WR', 'TE'):
-        info.update(wr_stats(pid))
+        info.update(_wr_stats_from(week_stats_raw))
     elif position == 'K':
-        info.update(k_stats(pid))
+        info.update(_k_stats_from(week_stats_raw))
     elif position == 'DEF':
-        info.update(def_stats(pid))
+        info.update(_def_stats_from(week_stats_raw))
         info["image_url"] = team_logo_url(pid)
     return info
 
