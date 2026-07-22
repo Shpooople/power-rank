@@ -2,6 +2,29 @@ import React from 'react';
 import Plot from 'react-plotly.js';
 import './teamSection.css';  // Import the stylesheet
 
+// Kleine Helfer-Komponente für eine einzelne Spieler-Karte
+// (wird für Top-Performer, Flop-Performer und Benchwarmer wiederverwendet)
+const PlayerCard = ({ player, note }) => {
+  if (!player) return null;
+  return (
+    <div className="performer-card">
+      <img
+        src={player.image_url}
+        alt={player.name}
+        className="performer-image"
+        onError={(e) => { e.target.src = './thf_color.svg'; }}
+      />
+      <div className="performer-details">
+        <span className="performer-name">{player.name}</span>
+        <span className="performer-meta">
+          {player.position ? `${player.position} · ` : ''}{player.points} Pkt.
+          {note ? ` (${note})` : ''}
+        </span>
+      </div>
+    </div>
+  );
+};
+
 const TeamSection = ({ team }) => {
 
   // Adjusting to match the JSON structure
@@ -31,6 +54,13 @@ const TeamSection = ({ team }) => {
     "TE Strength": teStrength,
     "K Strength": kStrength,
     "COMMENTS": comment,
+    // Neue Felder für Performer & Gegner
+    "TOP_PERFORMERS": topPerformers = [],
+    "BOTTOM_PERFORMERS": bottomPerformers = [],
+    "BENCHWARMER": benchwarmer,
+    "CURRENT_OPPONENT": currentOpponent,
+    "CURRENT_OPPONENT_WIN_PROB": winProb,
+    "NEXT_OPPONENT": nextOpponent,
     // Add week-wise data if needed
     ...weekData // This will spread the remaining week data into an object
 
@@ -47,6 +77,22 @@ const TeamSection = ({ team }) => {
           {trend === 'UP' ? '↑' : trend === 'DOWN' ? '↓' : '-'}
         </span> | AAvg.: {adjustedAvg}
       </p>
+
+      {(currentOpponent || nextOpponent) && (
+        <div className="matchup-info">
+          {currentOpponent && (
+            <p>
+              <strong>Gegner diese Woche:</strong> {currentOpponent}
+              {winProb != null && (
+                <span className="win-prob"> · {winProb}% Gewinnchance</span>
+              )}
+            </p>
+          )}
+          {nextOpponent && (
+            <p><strong>Nächste Woche:</strong> {nextOpponent}</p>
+          )}
+        </div>
+      )}
 
       <div className="team-overview">
         <div className="team-text">
@@ -215,6 +261,41 @@ const TeamSection = ({ team }) => {
           </table>
         </div>
       </div>
+
+      {(topPerformers.length > 0 || bottomPerformers.length > 0 || benchwarmer) && (
+        <div className="performers-section">
+          {topPerformers.length > 0 && (
+            <div className="performer-group">
+              <h3>Top Performer</h3>
+              <div className="performer-cards">
+                {topPerformers.map((p, i) => (
+                  <PlayerCard key={`top-${i}`} player={p} />
+                ))}
+              </div>
+            </div>
+          )}
+
+          {bottomPerformers.length > 0 && (
+            <div className="performer-group">
+              <h3>Flop Performer</h3>
+              <div className="performer-cards">
+                {bottomPerformers.map((p, i) => (
+                  <PlayerCard key={`bottom-${i}`} player={p} />
+                ))}
+              </div>
+            </div>
+          )}
+
+          {benchwarmer && (
+            <div className="performer-group">
+              <h3>Benchwarmer der Woche</h3>
+              <div className="performer-cards">
+                <PlayerCard player={benchwarmer} note="Bank" />
+              </div>
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 };
