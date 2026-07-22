@@ -31,6 +31,15 @@ const outcomeClass = (outcome) => {
   return 'outcome-tie';
 };
 
+// Dark-Theme-Farben für die Plotly-Charts (müssen hier als JS-Werte stehen,
+// da Plotly keine CSS-Variablen versteht)
+const CHART_COLORS = {
+  accent: '#D4A657',
+  text: '#E8EDF2',
+  textMuted: '#8FA3B8',
+  grid: '#2A3F55',
+};
+
 const TeamSection = ({ team }) => {
 
   // Adjusting to match the JSON structure
@@ -77,10 +86,19 @@ const TeamSection = ({ team }) => {
 
   } = team;
 
+  // NEU: ersten Punkt am Ende wiederholen, damit sich das Pentagon schließt
+  // (die vorherige "line_close: true"-Eigenschaft existiert in Plotly nicht
+  // und wurde stillschweigend ignoriert).
+  const radarR = [qbStrength, rbStrength, wrStrength, teStrength, kStrength, qbStrength];
+  const radarTheta = ['QB', 'RB', 'WR', 'TE', 'K', 'QB'];
+
   return (
     <div className="team-section">
 
-      <h2>Rank {team["POWER RANK"]} - {name==="No Team Name" ?displayName:name}</h2>
+      <div className="team-header-row">
+        <span className="rank-badge">#{team["POWER RANK"]}</span>
+        <h2 className="team-title">{name === "No Team Name" ? displayName : name}</h2>
+      </div>
       <p>
         <strong>Record:</strong> {wins}-{losses} | 
         Trend: <span className={`trend-${trend.toLowerCase()}`}>
@@ -120,130 +138,136 @@ const TeamSection = ({ team }) => {
           <Plot
             data={[{
               type: 'scatterpolar',
-              r: [qbStrength, rbStrength, wrStrength, teStrength, kStrength],
-              theta: ['QB', 'RB', 'WR', 'TE', 'K',],
+              r: radarR,
+              theta: radarTheta,
               fill: 'toself',
+              fillcolor: 'rgba(212, 166, 87, 0.25)',
               line: {
-                color: '#153448',  // Change the line color (e.g., orange-red)
-                width: 3           // Optional: set the line width
+                color: CHART_COLORS.accent,
+                width: 3
               },
-              mode: 'lines+markers+text',  // Show markers, lines, and text
-              marker: { size: 10 },  // Customize marker size
-              connectgaps: true,
-              line_close: true
+              mode: 'lines+markers',
+              marker: { size: 8, color: CHART_COLORS.accent },
+              connectgaps: true
             }]}
-            layout={{ 
-                  title: {
-                  text: 'AKTUELLE TEAMSTÄRKE',  // Title text
-                        font: {
-                        family: 'Roboto, sans-serif',  // Font family for the title
-                        weight: 'bold',
-                        size: 16,                    // Font size for the title
-                        color: '#153448'
-                              }
-                         },         
-              polar: { radialaxis: { 
-                visible: true, 
-                range: [0, 100],
-                showticklabels: true,
-                color: '#3C5B6F',
-                ticks: '',
-                tickfont: {
-                  family: 'Roboto, sans-serif',  // Customize tick font family
-                  size: 12,
-                  weight: 'bold',                     // Customize tick font size
-                  color: '#222831'                 // Customize tick font color
-                },  
-              }, 
-              angularaxis:{
-                rotation: 90,
-                color: '#153448',
-                tickfont: {
-                  family: 'Roboto, sans-serif',  // Customize theta label font family
+            layout={{
+              paper_bgcolor: 'transparent',
+              plot_bgcolor: 'transparent',
+              title: {
+                text: 'AKTUELLE TEAMSTÄRKE',
+                y: 0.9,
+                pad: { t: 25 },
+                font: {
+                  family: 'Roboto, sans-serif',
                   weight: 'bold',
-                  size: 12,                      // Customize theta label font size
-                  color: '#222831'               // Customize theta label font color
+                  size: 16,
+                  color: CHART_COLORS.text
                 }
-              }
-
+              },
+              polar: {
+                bgcolor: 'transparent',
+                radialaxis: {
+                  visible: true,
+                  range: [0, 100],
+                  showticklabels: true,
+                  gridcolor: CHART_COLORS.grid,
+                  linecolor: CHART_COLORS.grid,
+                  ticks: '',
+                  tickfont: {
+                    family: 'Roboto, sans-serif',
+                    size: 12,
+                    weight: 'bold',
+                    color: CHART_COLORS.textMuted
+                  }
+                },
+                angularaxis: {
+                  rotation: 90,
+                  gridcolor: CHART_COLORS.grid,
+                  linecolor: CHART_COLORS.grid,
+                  tickfont: {
+                    family: 'Roboto, sans-serif',
+                    weight: 'bold',
+                    size: 12,
+                    color: CHART_COLORS.text
+                  }
+                }
               },
               showlegend: false,
-    margin: {
-      l: 30, // Reduce left margin
-      r: 30, // Reduce right margin
-      t: 60, // Reduce top margin
-      b: -20  // Reduce bottom margin
-    },
-
-              }}
-  config={{
-    displayModeBar: false, // This hides the mode bar while keeping hover functionality
-    staticPlot: true
-  }}
-          
+              margin: {
+                l: 30,
+                r: 30,
+                t: 60,
+                b: -20
+              },
+            }}
+            config={{
+              displayModeBar: false,
+              staticPlot: true
+            }}
           />
           {/* Line Chart */}
           <Plot
-  data={[{
-    type: 'scatter',
-    y: Object.values(weekData), // Week scores (use data from Week 1, Week 2, etc.)
-
-                  line: {
-                     color: '#153448',  // Change the line color (e.g., orange-red)
-                     width: 3           // Optional: set the line width
-                   },
-              mode: 'lines+markers+text',  // Show markers, lines, and text
-              marker: { size: 10 },  // Customize marker size
-  }]}
-  layout={{
-    title: {
-      text: 'SAISONVERLAUF',  // Title text
-      font: {
-        family: 'Arial, sans-serif',  // Font family for the title
-        weight: 'bold',
-        size: 16,                    // Font size for the title
-        color: '#153448'                 // Font color for the title
-      }
-    },
-    xaxis: { 
-      title: '',
-      showgrid:false,
-      zeroline: false,
-      tickvals: Object.keys(weekData).map((key, index) => index ),  // Custom tick values (1, 2, 3, ...)
-      ticktext: Object.keys(weekData).map((key, index) => index + 1),
-        tickfont: {
-        family: 'Roboto, sans-serif',  // Customize tick font family
-        size: 12,
-        weight: 'bold',                     // Customize tick font size
-        color: '#222831'                 // Customize tick font color
-        }, 
-    },
-    yaxis: { 
-      title: '',
-      zeroline: false,
-      showticklabels: true,
-        tickfont: {
-        family: 'Roboto, sans-serif',  // Customize tick font family
-        size: 12,
-        weight: 'bold',                     // Customize tick font size
-        color: '#222831'                 // Customize tick font color
-        }, 
-    },
-    height: 300,
-    margin: {
-      l: 30, // Reduce left margin
-      r: 20, // Reduce right margin
-      t: 30, // Reduce top margin
-      b: -30  // Reduce bottom margin
-    },
-
-  }}
-  config={{
-    displayModeBar: false, // This hides the mode bar while keeping hover functionality
-    staticPlot: true
-  }}
-  /* Properly close the Plot component here with /> */
-  />
+            data={[{
+              type: 'scatter',
+              y: Object.values(weekData),
+              line: {
+                color: CHART_COLORS.accent,
+                width: 3
+              },
+              mode: 'lines+markers',
+              marker: { size: 8, color: CHART_COLORS.accent },
+            }]}
+            layout={{
+              paper_bgcolor: 'transparent',
+              plot_bgcolor: 'transparent',
+              title: {
+                text: 'SAISONVERLAUF',
+                font: {
+                  family: 'Arial, sans-serif',
+                  weight: 'bold',
+                  size: 16,
+                  color: CHART_COLORS.text
+                }
+              },
+              xaxis: {
+                title: '',
+                showgrid: false,
+                zeroline: false,
+                tickvals: Object.keys(weekData).map((key, index) => index),
+                ticktext: Object.keys(weekData).map((key, index) => index + 1),
+                tickfont: {
+                  family: 'Roboto, sans-serif',
+                  size: 12,
+                  weight: 'bold',
+                  color: CHART_COLORS.textMuted
+                },
+                linecolor: CHART_COLORS.grid
+              },
+              yaxis: {
+                title: '',
+                zeroline: false,
+                showticklabels: true,
+                gridcolor: CHART_COLORS.grid,
+                tickfont: {
+                  family: 'Roboto, sans-serif',
+                  size: 12,
+                  weight: 'bold',
+                  color: CHART_COLORS.textMuted
+                },
+              },
+              height: 300,
+              margin: {
+                l: 30,
+                r: 20,
+                t: 30,
+                b: -30
+              },
+            }}
+            config={{
+              displayModeBar: false,
+              staticPlot: true
+            }}
+          />
         </div>
         <div className="team-roster">
           <table>
