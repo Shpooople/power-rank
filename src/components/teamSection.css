@@ -143,7 +143,6 @@
 
 /* --- NEU: Roster als Spielerliste mit Bild + Stats (statt Tabelle) --- */
 .team-roster {
-  grid-area: team-roster;
   margin-top: 10px;
   width: 100%;
   box-sizing: border-box;
@@ -267,23 +266,38 @@
   color: var(--color-text-muted);
 }
 
-/* For larger screens, separate text and charts into two balanced columns */
+.performer-stats {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  font-family: 'Roboto Condensed', sans-serif;
+  margin-top: 2px;
+}
+
+/* For larger screens: Text + Charts nebeneinander, Roster darunter über die
+   volle Breite als horizontales Grid (statt einer langen Spalte neben viel
+   Leerraum rechts) */
 @media (min-width: 768px) {
   .team-overview {
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-      "team-text charts-container"
-      "team-roster charts-container";
+    grid-template-columns: 1.3fr 1fr;
+    grid-template-areas: "team-text charts-container";
+    align-items: start;
   }
 
   .charts-container {
     grid-area: charts-container;
     width: 100%;
-    max-width: 400px;
+    max-width: 420px;
     height: auto;
-    justify-content: center;
-    align-items: center;
+    justify-self: end;
     box-sizing: border-box;
+  }
+
+  .team-roster {
+    grid-column: 1 / -1;
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 8px 28px;
   }
 }
 
