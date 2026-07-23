@@ -95,6 +95,19 @@
   display: block;
 }
 
+/* Auf Mobile: Tooltip als fixe Leiste am unteren Rand, damit es nie über
+   den Bildschirmrand hinausragt, egal an welcher Position das Icon sitzt */
+@media (max-width: 768px) {
+  .badge-tooltip {
+    position: fixed;
+    top: auto;
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    width: auto;
+  }
+}
+
 @media (min-width: 768px) {
   .team-badges {
     position: absolute;
