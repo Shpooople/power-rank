@@ -652,6 +652,14 @@ power_rankings['Power Rank Score'] = (
 df["POWER RANK"] = power_rankings['Power Rank Score'].rank(ascending=True).astype(int)
 df["Power Rank Score"] = power_rankings['Power Rank Score'].round(2)
 
+# --- NEU: Rang pro Position (1 = stärkstes Team der Liga in dieser Kategorie) ---
+# Wird für die farbcodierte Bar-Chart-Anzeige gebraucht (Wert + Rang beim Tap/Hover)
+df["QB Strength Rank"] = df["QB Strength"].rank(ascending=False, method='min').astype(int)
+df["RB Strength Rank"] = df["RB Strength"].rank(ascending=False, method='min').astype(int)
+df["WR Strength Rank"] = df["WR Strength"].rank(ascending=False, method='min').astype(int)
+df["TE Strength Rank"] = df["TE Strength"].rank(ascending=False, method='min').astype(int)
+df["K Strength Rank"] = df["K Strength"].rank(ascending=False, method='min').astype(int)
+
 df['COMMENTS'] = ""
 
 # Kommentare werden jetzt aus dem veröffentlichten Google Sheet geladen
