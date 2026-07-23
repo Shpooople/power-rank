@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Plot from 'react-plotly.js';
 import './teamSection.css';  // Import the stylesheet
 
@@ -121,6 +121,11 @@ const TeamSection = ({ team }) => {
     "WR Strength": wrStrength,
     "TE Strength": teStrength,
     "K Strength": kStrength,
+    "QB Strength Rank": qbRank,
+    "RB Strength Rank": rbRank,
+    "WR Strength Rank": wrRank,
+    "TE Strength Rank": teRank,
+    "K Strength Rank": kRank,
     "COMMENTS": comment,
     // Performer-Felder
     "TOP_PERFORMERS": topPerformers = [],
@@ -139,9 +144,41 @@ const TeamSection = ({ team }) => {
 
   } = team;
 
-  // NEU: ersten Punkt am Ende wiederholen, damit sich das Pentagon schließt
-  const radarR = [qbStrength, rbStrength, wrStrength, teStrength, kStrength, qbStrength];
-  const radarTheta = ['QB', 'RB', 'WR', 'TE', 'K', 'QB'];
+  // NEU: Bar-Chart statt Pentagon - Kategorien, Werte, Ränge und Farbcodierung
+  const strengthCategories = ['QB', 'RB', 'WR', 'TE', 'K'];
+  const strengthValues = [qbStrength, rbStrength, wrStrength, teStrength, kStrength];
+  const strengthRanks = [qbRank, rbRank, wrRank, teRank, kRank];
+
+  const colorForValue = (v) => {
+    if (v >= 66) return CHART_COLORS.win;
+    if (v >= 33) return CHART_COLORS.accent;
+    return CHART_COLORS.loss;
+  };
+  const barColors = strengthValues.map(colorForValue);
+
+  // NEU: Balken wachsen erst, sobald die Karte ins Bild scrollt
+  const [barsRevealed, setBarsRevealed] = useState(false);
+  const chartWrapperRef = useRef(null);
+
+  useEffect(() => {
+    const el = chartWrapperRef.current;
+    if (!el) return undefined;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setBarsRevealed(true);
+            observer.disconnect();
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  const displayedStrengthValues = barsRevealed ? strengthValues : strengthValues.map(() => 0);
 
   return (
     <div className="team-section">
@@ -185,168 +222,159 @@ const TeamSection = ({ team }) => {
         </div>
 
         <div className="charts-container">
-          {/* Radar Chart */}
-          <Plot
-            useResizeHandler={true}
-            style={{ width: '100%', height: '100%' }}
-            data={[{
-              type: 'scatterpolar',
-              r: radarR,
-              theta: radarTheta,
-              fill: 'toself',
-              fillcolor: 'rgba(212, 166, 87, 0.25)',
-              line: {
-                color: CHART_COLORS.accent,
-                width: 3
-              },
-              mode: 'lines+markers',
-              marker: {
-                size: 9,
-                color: CHART_COLORS.accent,
-                line: { color: CHART_COLORS.surface, width: 2 }
-              },
-              connectgaps: true,
-              hovertemplate: '%{theta}: %{r}/100<extra></extra>'
-            }]}
-            layout={{
-              paper_bgcolor: 'transparent',
-              plot_bgcolor: 'transparent',
-              hovermode: 'closest',
-              hoverlabel: {
-                bgcolor: CHART_COLORS.surface,
-                bordercolor: CHART_COLORS.accent,
-                font: { color: CHART_COLORS.text, family: 'Roboto, sans-serif', size: 13 }
-              },
-              title: {
-                text: 'AKTUELLE TEAMSTÄRKE',
-                y: 0.98,
-                yanchor: 'top',
-                pad: { t: 10 },
-                font: {
-                  family: 'Roboto, sans-serif',
-                  weight: 'bold',
-                  size: 16,
-                  color: CHART_COLORS.text
-                }
-              },
-              polar: {
-                bgcolor: 'transparent',
-                radialaxis: {
-                  visible: true,
+          {/* Positionsstärke als farbcodierter Bar-Chart */}
+          <div ref={chartWrapperRef} className="chart-touch-wrapper">
+            <Plot
+              useResizeHandler={true}
+              style={{ width: '100%', height: '100%' }}
+              data={[{
+                type: 'bar',
+                x: strengthCategories,
+                y: displayedStrengthValues,
+                customdata: strengthRanks,
+                marker: { color: barColors },
+                hovertemplate: '<b>%{x}</b><br>Wert: %{y}/100<br>Rang %{customdata} von 12<extra></extra>'
+              }]}
+              layout={{
+                paper_bgcolor: 'transparent',
+                plot_bgcolor: 'transparent',
+                dragmode: false,
+                transition: { duration: 800, easing: 'cubic-in-out' },
+                hovermode: 'closest',
+                hoverlabel: {
+                  bgcolor: CHART_COLORS.surface,
+                  bordercolor: CHART_COLORS.accent,
+                  font: { color: CHART_COLORS.text, family: 'Roboto, sans-serif', size: 13 }
+                },
+                title: {
+                  text: 'AKTUELLE TEAMSTÄRKE',
+                  font: {
+                    family: 'Roboto, sans-serif',
+                    weight: 'bold',
+                    size: 16,
+                    color: CHART_COLORS.text
+                  }
+                },
+                xaxis: {
+                  fixedrange: true,
+                  tickfont: {
+                    family: 'Roboto, sans-serif',
+                    weight: 'bold',
+                    size: 13,
+                    color: CHART_COLORS.text
+                  },
+                  linecolor: CHART_COLORS.grid
+                },
+                yaxis: {
+                  fixedrange: true,
                   range: [0, 100],
-                  showticklabels: true,
                   gridcolor: CHART_COLORS.grid,
-                  linecolor: CHART_COLORS.grid,
-                  ticks: '',
+                  tickfont: {
+                    family: 'Roboto, sans-serif',
+                    size: 12,
+                    color: CHART_COLORS.textMuted
+                  }
+                },
+                showlegend: false,
+                height: 350,
+                margin: {
+                  l: 30,
+                  r: 20,
+                  t: 50,
+                  b: 30
+                },
+              }}
+              config={{
+                displayModeBar: false,
+                responsive: true,
+                scrollZoom: false,
+                doubleClick: false
+              }}
+            />
+          </div>
+          {/* Line Chart */}
+          <div className="chart-touch-wrapper">
+            <Plot
+              useResizeHandler={true}
+              style={{ width: '100%', height: '100%' }}
+              data={[{
+                type: 'scatter',
+                x: Object.keys(weekData).map((key, index) => index + 1),
+                y: Object.values(weekData),
+                line: {
+                  color: CHART_COLORS.accent,
+                  width: 3
+                },
+                mode: 'lines+markers',
+                marker: {
+                  size: 9,
+                  color: CHART_COLORS.accent,
+                  line: { color: CHART_COLORS.surface, width: 2 }
+                },
+                hovertemplate: 'Woche %{x}<br>%{y} Punkte<extra></extra>'
+              }]}
+              layout={{
+                paper_bgcolor: 'transparent',
+                plot_bgcolor: 'transparent',
+                dragmode: false,
+                hovermode: 'closest',
+                hoverlabel: {
+                  bgcolor: CHART_COLORS.surface,
+                  bordercolor: CHART_COLORS.accent,
+                  font: { color: CHART_COLORS.text, family: 'Roboto, sans-serif', size: 13 }
+                },
+                title: {
+                  text: 'SAISONVERLAUF',
+                  font: {
+                    family: 'Arial, sans-serif',
+                    weight: 'bold',
+                    size: 16,
+                    color: CHART_COLORS.text
+                  }
+                },
+                xaxis: {
+                  title: '',
+                  showgrid: false,
+                  zeroline: false,
+                  dtick: 1,
+                  fixedrange: true,
                   tickfont: {
                     family: 'Roboto, sans-serif',
                     size: 12,
                     weight: 'bold',
                     color: CHART_COLORS.textMuted
-                  }
+                  },
+                  linecolor: CHART_COLORS.grid
                 },
-                angularaxis: {
-                  rotation: 90,
+                yaxis: {
+                  title: '',
+                  zeroline: false,
+                  showticklabels: true,
+                  fixedrange: true,
                   gridcolor: CHART_COLORS.grid,
-                  linecolor: CHART_COLORS.grid,
                   tickfont: {
                     family: 'Roboto, sans-serif',
-                    weight: 'bold',
                     size: 12,
-                    color: CHART_COLORS.text
-                  }
-                }
-              },
-              showlegend: false,
-              height: 350,
-              margin: {
-                l: 30,
-                r: 30,
-                t: 70,
-                b: 20
-              },
-            }}
-            config={{
-              displayModeBar: false,
-              responsive: true
-            }}
-          />
-          {/* Line Chart */}
-          <Plot
-            useResizeHandler={true}
-            style={{ width: '100%', height: '100%' }}
-            data={[{
-              type: 'scatter',
-              x: Object.keys(weekData).map((key, index) => index + 1),
-              y: Object.values(weekData),
-              line: {
-                color: CHART_COLORS.accent,
-                width: 3
-              },
-              mode: 'lines+markers',
-              marker: {
-                size: 9,
-                color: CHART_COLORS.accent,
-                line: { color: CHART_COLORS.surface, width: 2 }
-              },
-              hovertemplate: 'Woche %{x}<br>%{y} Punkte<extra></extra>'
-            }]}
-            layout={{
-              paper_bgcolor: 'transparent',
-              plot_bgcolor: 'transparent',
-              hovermode: 'closest',
-              hoverlabel: {
-                bgcolor: CHART_COLORS.surface,
-                bordercolor: CHART_COLORS.accent,
-                font: { color: CHART_COLORS.text, family: 'Roboto, sans-serif', size: 13 }
-              },
-              title: {
-                text: 'SAISONVERLAUF',
-                font: {
-                  family: 'Arial, sans-serif',
-                  weight: 'bold',
-                  size: 16,
-                  color: CHART_COLORS.text
-                }
-              },
-              xaxis: {
-                title: '',
-                showgrid: false,
-                zeroline: false,
-                dtick: 1,
-                tickfont: {
-                  family: 'Roboto, sans-serif',
-                  size: 12,
-                  weight: 'bold',
-                  color: CHART_COLORS.textMuted
+                    weight: 'bold',
+                    color: CHART_COLORS.textMuted
+                  },
                 },
-                linecolor: CHART_COLORS.grid
-              },
-              yaxis: {
-                title: '',
-                zeroline: false,
-                showticklabels: true,
-                gridcolor: CHART_COLORS.grid,
-                tickfont: {
-                  family: 'Roboto, sans-serif',
-                  size: 12,
-                  weight: 'bold',
-                  color: CHART_COLORS.textMuted
+                height: 350,
+                margin: {
+                  l: 30,
+                  r: 20,
+                  t: 30,
+                  b: 30
                 },
-              },
-              height: 350,
-              margin: {
-                l: 30,
-                r: 20,
-                t: 30,
-                b: 30
-              },
-            }}
-            config={{
-              displayModeBar: false,
-              responsive: true
-            }}
-          />
+              }}
+              config={{
+                displayModeBar: false,
+                responsive: true,
+                scrollZoom: false,
+                doubleClick: false
+              }}
+            />
+          </div>
         </div>
 
         {/* Roster: jetzt mit Spielerbild + Detail-Stats, ausklappbar */}
