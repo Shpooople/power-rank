@@ -86,3 +86,21 @@
   border-radius: 6px;
   padding: 8px 12px;
 }
+
+.week-selector {
+  display: block;
+  margin: 12px auto 0;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-family: 'Roboto Condensed', Roboto, sans-serif;
+  font-weight: bold;
+  color: var(--color-text);
+  background-color: var(--color-surface-alt);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.week-selector:hover {
+  border-color: var(--color-accent);
+}
