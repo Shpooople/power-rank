@@ -166,6 +166,27 @@
   color: var(--color-text-muted);
 }
 
+.rank-movement {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin: 2px 0 8px 0;
+}
+
+.rank-up {
+  color: var(--color-win);
+  font-weight: bold;
+}
+
+.rank-down {
+  color: var(--color-loss);
+  font-weight: bold;
+}
+
+.rank-same {
+  color: var(--color-tie);
+  font-weight: bold;
+}
+
 .team-section p {
   color: var(--color-text-muted);
 }
