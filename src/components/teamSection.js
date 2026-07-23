@@ -24,6 +24,26 @@ const colorForRank = (rank) => {
   return RANK_COLOR_SCALE[idx];
 };
 
+// Kleines Badge-Icon mit Hover- (Desktop) bzw. Tap-Tooltip (Mobile)
+const BadgeIcon = ({ badge }) => {
+  const [open, setOpen] = useState(false);
+  return (
+    <span
+      className="badge-icon"
+      tabIndex={0}
+      onClick={() => setOpen((o) => !o)}
+      onBlur={() => setOpen(false)}
+    >
+      {badge.icon}
+      <span className={`badge-tooltip${open ? ' badge-tooltip-open' : ''}`}>
+        <strong>{badge.label}</strong>
+        <br />
+        {badge.description}
+      </span>
+    </span>
+  );
+};
+
 // Kleine Helfer-Komponente für die Trend-Anzeige (Dreieck + fetter Wert,
 // eingefärbt nach Liga-Rang des Trends)
 const TrendIndicator = ({ value, rank }) => {
@@ -147,6 +167,7 @@ const TeamSection = ({ team }) => {
     "TREND Rank": trendRank,
     "Adjusted Average": adjustedAvg,
     "Adjusted Average Rank": aavgRank,
+    "BADGES": badges = [],
     // Roster-Felder: jetzt Arrays mit {name, image_url, ...stats} statt Strings
     "QB": qb = [],
     "RB": rb = [],
@@ -271,6 +292,15 @@ const TeamSection = ({ team }) => {
           <span className="team-record"> ({wins}-{losses})</span>
         </h2>
       </div>
+
+      {badges.length > 0 && (
+        <div className="team-badges">
+          {badges.map((badge, i) => (
+            <BadgeIcon key={i} badge={badge} />
+          ))}
+        </div>
+      )}
+
       <p>
         Trend: <TrendIndicator value={trenPercentage} rank={trendRank} /> | AAvg.:{' '}
         <span style={{ color: colorForRank(aavgRank), fontWeight: 'bold' }}>{adjustedAvg}</span>
