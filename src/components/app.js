@@ -9,10 +9,26 @@ import Explanation from './explanation';
 const App = () => {
   const [teams, setTeams] = useState([]);
   const [weekLabel, setWeekLabel] = useState(null); // z.B. "Woche 13" oder "Vorsaison"
+  const [historyIndex, setHistoryIndex] = useState([]);
+  const [selectedFile, setSelectedFile] = useState(null); // null = aktuelle Woche (powerrank.json)
 
+  // Verfügbare historische Wochen laden (falls es schon welche gibt)
   useEffect(() => {
-    // Fetch JSON data
-    fetch("./powerrank.json")
+    fetch("./history/index.json")
+      .then((res) => (res.ok ? res.json() : []))
+      .then((data) => {
+        const entries = Array.isArray(data) ? data : [];
+        // Neueste zuerst im Dropdown
+        entries.sort((a, b) => (b.season - a.season) || (b.week - a.week));
+        setHistoryIndex(entries);
+      })
+      .catch(() => setHistoryIndex([]));
+  }, []);
+
+  // Daten laden - entweder die aktuelle Woche oder eine ausgewählte historische Woche
+  useEffect(() => {
+    const url = selectedFile ? `./history/${selectedFile}` : "./powerrank.json";
+    fetch(url)
       .then((res) => res.json())
       .then((data) => {
         console.log("Fetched data:", data); // Log data for debugging
@@ -37,13 +53,18 @@ const App = () => {
       .catch((error) => {
         console.error("Error fetching JSON data:", error);
       });
-  }, []);
+  }, [selectedFile]);
 
   return (
     <div className="App">
-      {/* Pass the week label to the Header */}
-      <Header weekLabel={weekLabel} />
-      
+      {/* Pass the week label und die History-Auswahl an die Header-Komponente */}
+      <Header
+        weekLabel={weekLabel}
+        historyIndex={historyIndex}
+        selectedFile={selectedFile}
+        onSelectFile={setSelectedFile}
+      />
+
       {teams.map((team, index) => (
         <TeamSection key={index} team={team} />
       ))}
