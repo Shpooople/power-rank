@@ -4,6 +4,7 @@ from datetime import datetime
 import os
 import math
 import statistics
+import json
 
 # --- NEU: Woche und Saison automatisch von Sleeper ermitteln ---
 # Sleeper stellt den globalen NFL-Status bereit, inkl. aktueller Woche & Saison.
@@ -659,6 +660,46 @@ power_rankings['Power Rank Score'] = (
 df["POWER RANK"] = power_rankings['Power Rank Score'].rank(ascending=True).astype(int)
 df["Power Rank Score"] = power_rankings['Power Rank Score'].round(2)
 
+# --- NEU: Wochen-Historie & Rang-Bewegung gegenüber der letzten archivierten Woche ---
+HISTORY_DIR = "public/history"
+INDEX_FILE = os.path.join(HISTORY_DIR, "index.json")
+os.makedirs(HISTORY_DIR, exist_ok=True)
+
+try:
+    with open(INDEX_FILE, encoding="utf-8") as f:
+        history_index = json.load(f)
+except (FileNotFoundError, json.JSONDecodeError):
+    history_index = []
+
+# Letzte archivierte Woche finden, die NICHT die aktuelle ist (falls schon
+# vorhanden - dann vergleichen wir sonst mit uns selbst)
+previous_entries = [
+    e for e in history_index if not (e["season"] == season and e["week"] == current_week)
+]
+previous_rank_by_user = {}
+if previous_entries:
+    previous_entries.sort(key=lambda e: (e["season"], e["week"]))
+    latest_previous = previous_entries[-1]
+    try:
+        with open(os.path.join(HISTORY_DIR, latest_previous["file"]), encoding="utf-8") as f:
+            previous_data = json.load(f)
+        previous_rank_by_user = {rec["User ID"]: rec["POWER RANK"] for rec in previous_data}
+    except Exception as e:
+        print(f"Vorherige Historie-Datei konnte nicht gelesen werden: {e}")
+
+def rank_delta_for(user_id, current_rank):
+    prev_rank = previous_rank_by_user.get(str(user_id))
+    if prev_rank is None:
+        return None
+    return prev_rank - current_rank  # positiv = aufgestiegen, negativ = gefallen
+
+df["LAST_WEEK_POWER_RANK"] = df["User ID"].apply(lambda uid: previous_rank_by_user.get(str(uid)))
+df["POWER_RANK_DELTA"] = df.apply(lambda row: rank_delta_for(row["User ID"], row["POWER RANK"]), axis=1)
+
+# Archivieren nur beim automatischen Zeitplan-Lauf (siehe update-rankings.yml),
+# damit manuelle Testläufe die Historie nicht verfälschen.
+should_archive = os.environ.get("ARCHIVE_SNAPSHOT") == "true"
+
 # --- NEU: Rang pro Position (1 = stärkstes Team der Liga in dieser Kategorie) ---
 # Wird für die farbcodierte Bar-Chart-Anzeige gebraucht (Wert + Rang beim Tap/Hover)
 df["QB Strength Rank"] = df["QB Strength"].rank(ascending=False, method='min').astype(int)
@@ -1045,3 +1086,27 @@ print(f"Standings data saved to {csv_file}")
 json_file = os.path.join("public", "powerrank.json")
 df.to_json(json_file, orient="records", force_ascii=False, indent=2)
 print(f"JSON data saved to {json_file}")
+
+# --- NEU: Wochen-Snapshot archivieren (nur beim automatischen Zeitplan-Lauf) ---
+if should_archive:
+    week_label = "Vorsaison" if using_previous_season_chart_data else f"Woche {current_week}"
+    history_filename = f"{season}-week-{current_week}.json"
+    history_path = os.path.join(HISTORY_DIR, history_filename)
+    df.to_json(history_path, orient="records", force_ascii=False, indent=2)
+
+    history_index = [
+        e for e in history_index if not (e["season"] == season and e["week"] == current_week)
+    ]
+    history_index.append({
+        "season": season,
+        "week": current_week,
+        "file": history_filename,
+        "label": f"{season} - {week_label}",
+    })
+    history_index.sort(key=lambda e: (e["season"], e["week"]))
+    with open(INDEX_FILE, "w", encoding="utf-8") as f:
+        json.dump(history_index, f, indent=2)
+
+    print(f"Woche archiviert: {history_path}")
+else:
+    print("Kein Archiv-Lauf (ARCHIVE_SNAPSHOT nicht gesetzt) - Historie bleibt unverändert.")
