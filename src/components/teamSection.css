@@ -53,14 +53,14 @@
 
 .badge-icon {
   position: relative;
-  font-size: 18px;
+  font-size: 26px;
   line-height: 1;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  width: 46px;
+  height: 46px;
   background-color: var(--color-surface-alt);
   border: 1px solid var(--color-border);
   border-radius: 50%;
@@ -101,6 +101,12 @@
     top: 20px;
     right: 20px;
     margin: 0;
+  }
+
+  .badge-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 34px;
   }
 }
 
