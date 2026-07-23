@@ -671,21 +671,20 @@ try:
 except (FileNotFoundError, json.JSONDecodeError):
     history_index = []
 
-# Letzte archivierte Woche finden, die NICHT die aktuelle ist (falls schon
-# vorhanden - dann vergleichen wir sonst mit uns selbst)
-previous_entries = [
-    e for e in history_index if not (e["season"] == season and e["week"] == current_week)
-]
+# Vorwoche innerhalb DERSELBEN Saison finden (Woche 1 einer Saison hat nie
+# eine Vorwoche - saisonübergreifend zu vergleichen ergibt keinen Sinn).
+same_season_entries = [e for e in history_index if e["season"] == season]
 previous_rank_by_user = {}
-if previous_entries:
-    previous_entries.sort(key=lambda e: (e["season"], e["week"]))
-    latest_previous = previous_entries[-1]
-    try:
-        with open(os.path.join(HISTORY_DIR, latest_previous["file"]), encoding="utf-8") as f:
-            previous_data = json.load(f)
-        previous_rank_by_user = {rec["User ID"]: rec["POWER RANK"] for rec in previous_data}
-    except Exception as e:
-        print(f"Vorherige Historie-Datei konnte nicht gelesen werden: {e}")
+if current_week > 1 and same_season_entries:
+    matching_previous = [e for e in same_season_entries if e["week"] == current_week - 1]
+    if matching_previous:
+        latest_previous = matching_previous[0]
+        try:
+            with open(os.path.join(HISTORY_DIR, latest_previous["file"]), encoding="utf-8") as f:
+                previous_data = json.load(f)
+            previous_rank_by_user = {rec["User ID"]: rec["POWER RANK"] for rec in previous_data}
+        except Exception as e:
+            print(f"Vorherige Historie-Datei konnte nicht gelesen werden: {e}")
 
 def rank_delta_for(user_id, current_rank):
     prev_rank = previous_rank_by_user.get(str(user_id))
