@@ -27,13 +27,15 @@ jobs:
         run: pip install requests pandas
 
       - name: Power-Ranking-Script ausführen
+        env:
+          ARCHIVE_SNAPSHOT: ${{ github.event_name == 'schedule' && 'true' || 'false' }}
         run: python POWER_RANKING_NEWTREND.py
 
       - name: Generierte Daten committen
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Automatisches Power-Ranking-Update"
-          file_pattern: "public/powerrank.json POWERRANK.csv"
+          file_pattern: "public/powerrank.json public/history/* POWERRANK.csv"
 
       - name: Node einrichten
         uses: actions/setup-node@v4
