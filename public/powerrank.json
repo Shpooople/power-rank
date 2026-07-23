@@ -1761,6 +1761,12 @@
     "Adjusted Average Rank":11,
     "BADGES":[
       {
+        "icon":"homer",
+        "label":"DET-Homer",
+        "description":"3 Spieler von DET im Kader - eindeutig ein Fan.",
+        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/det.png"
+      },
+      {
         "icon":"cold",
         "label":"Cold Streak",
         "description":"3 Niederlagen in Folge - der Ofen ist aus."
@@ -2948,6 +2954,12 @@
     "Adjusted Average Rank":5,
     "BADGES":[
       {
+        "icon":"homer",
+        "label":"PHI-Homer",
+        "description":"3 Spieler von PHI im Kader - eindeutig ein Fan.",
+        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/phi.png"
+      },
+      {
         "icon":"giant_killer",
         "label":"Giant Killer",
         "description":"Sieg gegen ein 2 Plätze besser platziertes Team - Überraschungscoup der Woche."
@@ -3235,6 +3247,12 @@
     "TREND Rank":7,
     "Adjusted Average Rank":2,
     "BADGES":[
+      {
+        "icon":"homer",
+        "label":"DAL-Homer",
+        "description":"3 Spieler von DAL im Kader - eindeutig ein Fan.",
+        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/dal.png"
+      },
       {
         "icon":"clutch",
         "label":"Nervenstark",
