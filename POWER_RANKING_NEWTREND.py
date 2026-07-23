@@ -660,6 +660,13 @@ df["WR Strength Rank"] = df["WR Strength"].rank(ascending=False, method='min').a
 df["TE Strength Rank"] = df["TE Strength"].rank(ascending=False, method='min').astype(int)
 df["K Strength Rank"] = df["K Strength"].rank(ascending=False, method='min').astype(int)
 
+# NEU: Diese beiden Ränge werden intern schon für den Power-Rank-Score
+# gebraucht - jetzt zusätzlich als eigene Spalten rausgeben, damit das
+# Frontend Trend und AAvg mit demselben Rang-Farbschema (Blau bis Rot)
+# einfärben kann wie die Teamstärke.
+df["TREND Rank"] = power_rankings['Trend Percentage Rank'].astype(int)
+df["Adjusted Average Rank"] = power_rankings['Adjusted Average Rank'].astype(int)
+
 df['COMMENTS'] = ""
 
 # Kommentare werden jetzt aus dem veröffentlichten Google Sheet geladen
