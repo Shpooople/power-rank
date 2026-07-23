@@ -66,48 +66,6 @@
     "label": "2021 - Woche 11"
   },
   {
-    "season": "2021",
-    "week": 12,
-    "file": "2021-week-12.json",
-    "label": "2021 - Woche 12"
-  },
-  {
-    "season": "2021",
-    "week": 13,
-    "file": "2021-week-13.json",
-    "label": "2021 - Woche 13"
-  },
-  {
-    "season": "2021",
-    "week": 14,
-    "file": "2021-week-14.json",
-    "label": "2021 - Woche 14"
-  },
-  {
-    "season": "2021",
-    "week": 15,
-    "file": "2021-week-15.json",
-    "label": "2021 - Woche 15"
-  },
-  {
-    "season": "2021",
-    "week": 16,
-    "file": "2021-week-16.json",
-    "label": "2021 - Woche 16"
-  },
-  {
-    "season": "2021",
-    "week": 17,
-    "file": "2021-week-17.json",
-    "label": "2021 - Woche 17"
-  },
-  {
-    "season": "2021",
-    "week": 18,
-    "file": "2021-week-18.json",
-    "label": "2021 - Woche 18"
-  },
-  {
     "season": "2022",
     "week": 1,
     "file": "2022-week-1.json",
@@ -190,30 +148,6 @@
     "week": 14,
     "file": "2022-week-14.json",
     "label": "2022 - Woche 14"
-  },
-  {
-    "season": "2022",
-    "week": 15,
-    "file": "2022-week-15.json",
-    "label": "2022 - Woche 15"
-  },
-  {
-    "season": "2022",
-    "week": 16,
-    "file": "2022-week-16.json",
-    "label": "2022 - Woche 16"
-  },
-  {
-    "season": "2022",
-    "week": 17,
-    "file": "2022-week-17.json",
-    "label": "2022 - Woche 17"
-  },
-  {
-    "season": "2022",
-    "week": 18,
-    "file": "2022-week-18.json",
-    "label": "2022 - Woche 18"
   },
   {
     "season": "2023",
@@ -300,30 +234,6 @@
     "label": "2023 - Woche 14"
   },
   {
-    "season": "2023",
-    "week": 15,
-    "file": "2023-week-15.json",
-    "label": "2023 - Woche 15"
-  },
-  {
-    "season": "2023",
-    "week": 16,
-    "file": "2023-week-16.json",
-    "label": "2023 - Woche 16"
-  },
-  {
-    "season": "2023",
-    "week": 17,
-    "file": "2023-week-17.json",
-    "label": "2023 - Woche 17"
-  },
-  {
-    "season": "2023",
-    "week": 18,
-    "file": "2023-week-18.json",
-    "label": "2023 - Woche 18"
-  },
-  {
     "season": "2024",
     "week": 1,
     "file": "2024-week-1.json",
@@ -408,30 +318,6 @@
     "label": "2024 - Woche 14"
   },
   {
-    "season": "2024",
-    "week": 15,
-    "file": "2024-week-15.json",
-    "label": "2024 - Woche 15"
-  },
-  {
-    "season": "2024",
-    "week": 16,
-    "file": "2024-week-16.json",
-    "label": "2024 - Woche 16"
-  },
-  {
-    "season": "2024",
-    "week": 17,
-    "file": "2024-week-17.json",
-    "label": "2024 - Woche 17"
-  },
-  {
-    "season": "2024",
-    "week": 18,
-    "file": "2024-week-18.json",
-    "label": "2024 - Woche 18"
-  },
-  {
     "season": "2025",
     "week": 1,
     "file": "2025-week-1.json",
@@ -514,29 +400,5 @@
     "week": 14,
     "file": "2025-week-14.json",
     "label": "2025 - Woche 14"
-  },
-  {
-    "season": "2025",
-    "week": 15,
-    "file": "2025-week-15.json",
-    "label": "2025 - Woche 15"
-  },
-  {
-    "season": "2025",
-    "week": 16,
-    "file": "2025-week-16.json",
-    "label": "2025 - Woche 16"
-  },
-  {
-    "season": "2025",
-    "week": 17,
-    "file": "2025-week-17.json",
-    "label": "2025 - Woche 17"
-  },
-  {
-    "season": "2025",
-    "week": 18,
-    "file": "2025-week-18.json",
-    "label": "2025 - Woche 18"
   }
 ]
