@@ -2,6 +2,41 @@ import React, { useState, useEffect, useRef } from 'react';
 import Plot from 'react-plotly.js';
 import './teamSection.css';  // Import the stylesheet
 
+// NEU: 12-stufige Farbskala nach Liga-Rang (Platz 1 = Hellblau, Platz 12 =
+// Rot) - wird für Teamstärke-Balken, Trend UND AAvg gemeinsam genutzt.
+const RANK_COLOR_SCALE = [
+  '#5FD3F3', // Platz 1 - Hellblau
+  '#4FD9D0', // Platz 2 - Türkis
+  '#4FD9A8', // Platz 3 - grünliches Türkis
+  '#6BD96B', // Platz 4 - Grün
+  '#9CD95C', // Platz 5
+  '#C7D95C', // Platz 6
+  '#D9D95C', // Platz 7 - Gelb
+  '#D4A657', // Platz 8 - Gold
+  '#E08E45', // Platz 9 - Orange
+  '#E37A45', // Platz 10
+  '#E2665B', // Platz 11 - Rot-Orange
+  '#B93A34', // Platz 12 - Rot
+];
+
+const colorForRank = (rank) => {
+  const idx = Math.min(Math.max(rank, 1), RANK_COLOR_SCALE.length) - 1;
+  return RANK_COLOR_SCALE[idx];
+};
+
+// Kleine Helfer-Komponente für die Trend-Anzeige (Dreieck + fetter Wert,
+// eingefärbt nach Liga-Rang des Trends)
+const TrendIndicator = ({ value, rank }) => {
+  const isUp = value >= 0;
+  const color = colorForRank(rank);
+  const sign = value > 0 ? '+' : '';
+  return (
+    <span style={{ color, fontWeight: 'bold' }}>
+      {isUp ? '▲' : '▼'} {sign}{value}%
+    </span>
+  );
+};
+
 // Kleine Helfer-Komponente für eine einzelne Spieler-Karte
 // (wird für Top-Performer, Flop-Performer und Benchwarmer wiederverwendet)
 const PlayerCard = ({ player, note }) => {
@@ -108,7 +143,9 @@ const TeamSection = ({ team }) => {
     "Points Against": pointsAgainst,
     "TREND": trend = 'NO TREND',
     "Trend Percentage": trenPercentage,
+    "TREND Rank": trendRank,
     "Adjusted Average": adjustedAvg,
+    "Adjusted Average Rank": aavgRank,
     // Roster-Felder: jetzt Arrays mit {name, image_url, ...stats} statt Strings
     "QB": qb = [],
     "RB": rb = [],
@@ -149,34 +186,14 @@ const TeamSection = ({ team }) => {
   const strengthValues = [qbStrength, rbStrength, wrStrength, teStrength, kStrength];
   const strengthRanks = [qbRank, rbRank, wrRank, teRank, kRank];
 
-  // NEU: 12-stufige Farbskala nach Liga-Rang (Platz 1 = Hellblau, Platz 12 =
-  // Rot), nicht nach absolutem Wert - Rang 1 ist immer der höchste Balken.
-  const RANK_COLOR_SCALE = [
-    '#5FD3F3', // Platz 1 - Hellblau
-    '#4FD9D0', // Platz 2 - Türkis
-    '#4FD9A8', // Platz 3 - grünliches Türkis
-    '#6BD96B', // Platz 4 - Grün
-    '#9CD95C', // Platz 5
-    '#C7D95C', // Platz 6
-    '#D9D95C', // Platz 7 - Gelb
-    '#D4A657', // Platz 8 - Gold
-    '#E08E45', // Platz 9 - Orange
-    '#E37A45', // Platz 10
-    '#E2665B', // Platz 11 - Rot-Orange
-    '#B93A34', // Platz 12 - Rot
-  ];
-
-  const colorForRank = (rank) => {
-    const idx = Math.min(Math.max(rank, 1), RANK_COLOR_SCALE.length) - 1;
-    return RANK_COLOR_SCALE[idx];
-  };
-
   const barColors = strengthRanks.map(colorForRank);
 
-  // NEU: Balken wachsen + Linie zeichnet sich Woche für Woche, sobald die
-  // Charts zum ersten Mal ins Bild scrollen (ein gemeinsamer Observer)
+  // NEU: Balken wachsen + Linie "fährt" sichtbar von Punkt zu Punkt, sobald
+  // die Charts zum ersten Mal ins Bild scrollen (ein gemeinsamer Observer,
+  // Animation läuft per requestAnimationFrame statt fester Zeitschritte -
+  // dadurch flüssig statt abgehackt)
   const [barsRevealed, setBarsRevealed] = useState(false);
-  const [lineRevealCount, setLineRevealCount] = useState(0);
+  const [weekProgress, setWeekProgress] = useState(0);
   const chartsContainerRef = useRef(null);
 
   const weekKeys = Object.keys(weekData);
@@ -185,20 +202,28 @@ const TeamSection = ({ team }) => {
   useEffect(() => {
     const el = chartsContainerRef.current;
     if (!el) return undefined;
-    let interval;
+    let rafId;
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setBarsRevealed(true);
-            let count = 0;
-            interval = setInterval(() => {
-              count += 1;
-              setLineRevealCount(count);
-              if (count >= weekKeys.length) {
-                clearInterval(interval);
+
+            const totalPoints = weekValues.length;
+            const segments = Math.max(totalPoints - 1, 1);
+            const msPerSegment = 220; // Dauer pro "Fahrt" von Punkt zu Punkt
+            const totalDuration = segments * msPerSegment;
+            const startTime = performance.now();
+
+            const step = (now) => {
+              const elapsed = now - startTime;
+              const progress = Math.min(elapsed / totalDuration, 1) * segments;
+              setWeekProgress(progress);
+              if (elapsed < totalDuration) {
+                rafId = requestAnimationFrame(step);
               }
-            }, 120);
+            };
+            rafId = requestAnimationFrame(step);
             observer.disconnect();
           }
         });
@@ -208,15 +233,29 @@ const TeamSection = ({ team }) => {
     observer.observe(el);
     return () => {
       observer.disconnect();
-      if (interval) clearInterval(interval);
+      if (rafId) cancelAnimationFrame(rafId);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const displayedStrengthValues = barsRevealed ? strengthValues : strengthValues.map(() => 0);
 
-  const displayedWeekX = weekKeys.slice(0, lineRevealCount).map((key, index) => index + 1);
-  const displayedWeekY = weekValues.slice(0, lineRevealCount);
+  // weekProgress = wie viele Segmente (Punkt-zu-Punkt-Strecken) bereits
+  // "gefahren" wurden, inkl. Bruchteil für die aktuell laufende Strecke
+  const totalWeekPoints = weekValues.length;
+  const fullCount = Math.min(Math.floor(weekProgress) + 1, totalWeekPoints);
+  const segmentFraction = weekProgress - Math.floor(weekProgress);
+
+  const displayedWeekX = weekKeys.slice(0, fullCount).map((key, index) => index + 1);
+  const displayedWeekY = weekValues.slice(0, fullCount);
+
+  if (segmentFraction > 0 && fullCount < totalWeekPoints) {
+    const prevY = weekValues[fullCount - 1];
+    const nextY = weekValues[fullCount];
+    displayedWeekX.push(fullCount + segmentFraction);
+    displayedWeekY.push(prevY + (nextY - prevY) * segmentFraction);
+  }
+
   const weekYMin = weekValues.length ? Math.min(...weekValues) : 0;
   const weekYMax = weekValues.length ? Math.max(...weekValues) : 100;
   const weekYPadding = (weekYMax - weekYMin) * 0.15 || 10;
@@ -226,13 +265,14 @@ const TeamSection = ({ team }) => {
 
       <div className="team-header-row">
         <span className="rank-badge">#{team["POWER RANK"]}</span>
-        <h2 className="team-title">{name === "No Team Name" ? displayName : name}</h2>
+        <h2 className="team-title">
+          {name === "No Team Name" ? displayName : name}
+          <span className="team-record"> ({wins}-{losses})</span>
+        </h2>
       </div>
       <p>
-        <strong>Record:</strong> {wins}-{losses} | 
-        Trend: <span className={`trend-${trend.toLowerCase()}`}>
-          {trend === 'UP' ? '↑' : trend === 'DOWN' ? '↓' : '-'}
-        </span> | AAvg.: {adjustedAvg}
+        Trend: <TrendIndicator value={trenPercentage} rank={trendRank} /> | AAvg.:{' '}
+        <span style={{ color: colorForRank(aavgRank), fontWeight: 'bold' }}>{adjustedAvg}</span>
       </p>
 
       {(lastWeekResult || thisWeekOpponent) && (
@@ -358,7 +398,7 @@ const TeamSection = ({ team }) => {
                 paper_bgcolor: 'transparent',
                 plot_bgcolor: 'transparent',
                 dragmode: false,
-                transition: { duration: 150, easing: 'linear' },
+                transition: { duration: 0 },
                 hovermode: 'closest',
                 hoverlabel: {
                   bgcolor: CHART_COLORS.surface,
