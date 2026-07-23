@@ -347,6 +347,7 @@ const TeamSection = ({ team }) => {
                 },
                 yaxis: {
                   fixedrange: true,
+                  autorange: false,
                   range: [0, 100],
                   gridcolor: CHART_COLORS.grid,
                   tickfont: {
@@ -419,6 +420,7 @@ const TeamSection = ({ team }) => {
                   zeroline: false,
                   dtick: 1,
                   fixedrange: true,
+                  autorange: false,
                   range: [0.5, weekKeys.length + 0.5],
                   tickfont: {
                     family: 'Roboto, sans-serif',
@@ -433,6 +435,7 @@ const TeamSection = ({ team }) => {
                   zeroline: false,
                   showticklabels: true,
                   fixedrange: true,
+                  autorange: false,
                   range: [Math.max(0, weekYMin - weekYPadding), weekYMax + weekYPadding],
                   gridcolor: CHART_COLORS.grid,
                   tickfont: {
