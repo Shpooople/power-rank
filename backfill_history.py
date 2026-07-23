@@ -3,11 +3,32 @@ import pandas as pd
 import json
 import os
 
-# --- Hier die zu befüllenden Saisons/Ligen eintragen ---
-SEASONS_TO_BACKFILL = [
-    {"season": "2024", "league_id": "1091796858659381248"},
-    {"season": "2025", "league_id": "1238466927777546240"},
-]
+# --- Ausgangspunkt: die neueste bekannte Liga-ID. Von hier aus wandert das
+# Script automatisch über "previous_league_id" rückwärts durch die Saisons -
+# jede Sleeper-Liga kennt ihre Vorgänger-Liga, daher müssen die älteren
+# IDs nicht von Hand rausgesucht werden.
+STARTING_SEASON = "2025"
+STARTING_LEAGUE_ID = "1238466927777546240"
+SEASONS_BACK = 5  # 2025, 2024, 2023, 2022, 2021
+
+SEASONS_TO_BACKFILL = []
+current_id = STARTING_LEAGUE_ID
+current_season = STARTING_SEASON
+for _ in range(SEASONS_BACK):
+    SEASONS_TO_BACKFILL.append({"season": current_season, "league_id": current_id})
+    try:
+        league_info = requests.get(f"https://api.sleeper.app/v1/league/{current_id}").json()
+        prev_id = league_info.get("previous_league_id")
+    except Exception as e:
+        print(f"Liga-Info für {current_season} konnte nicht geladen werden: {e}")
+        prev_id = None
+    if not prev_id:
+        print(f"Keine Vorgänger-Liga vor Saison {current_season} gefunden - Kette endet hier.")
+        break
+    current_id = prev_id
+    current_season = str(int(current_season) - 1)
+
+print("Zu befüllende Saisons:", [s["season"] for s in SEASONS_TO_BACKFILL])
 
 HISTORY_DIR = "public/history"
 INDEX_FILE = os.path.join(HISTORY_DIR, "index.json")
@@ -58,6 +79,17 @@ for season_info in SEASONS_TO_BACKFILL:
         matchups = resp.json() or []
         if not matchups:
             print(f"  Keine Daten mehr für Woche {week} - Saison {season} endet bei Woche {week - 1}.")
+            break
+
+        # Playoffs erkennen: sobald nicht mehr alle Teams der Liga in den
+        # Matchups auftauchen (nur noch Playoff-Teilnehmer), hier aufhören -
+        # sonst entstehen unvollständige Wochen, die man händisch löschen müsste.
+        participating_ids = {m['roster_id'] for m in matchups}
+        if len(participating_ids) < len(roster_ids):
+            print(
+                f"  Woche {week} enthält nur {len(participating_ids)} von {len(roster_ids)} Teams "
+                f"(vermutlich Playoffs) - Saison {season} endet bei Woche {week - 1}."
+            )
             break
 
         week_points = {m['roster_id']: m.get('points', 0) or 0 for m in matchups}
