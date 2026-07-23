@@ -697,7 +697,10 @@ df["POWER_RANK_DELTA"] = df.apply(lambda row: rank_delta_for(row["User ID"], row
 
 # Archivieren nur beim automatischen Zeitplan-Lauf (siehe update-rankings.yml),
 # damit manuelle Testläufe die Historie nicht verfälschen.
-should_archive = os.environ.get("ARCHIVE_SNAPSHOT") == "true"
+# Archivieren nur beim automatischen Zeitplan-Lauf UND nur mit echten
+# Saison-Daten - solange nur der Vorsaison-Fallback aktiv ist, gibt es
+# nichts Sinnvolles zu archivieren.
+should_archive = os.environ.get("ARCHIVE_SNAPSHOT") == "true" and not using_previous_season_chart_data
 
 # --- NEU: Rang pro Position (1 = stärkstes Team der Liga in dieser Kategorie) ---
 # Wird für die farbcodierte Bar-Chart-Anzeige gebraucht (Wert + Rang beim Tap/Hover)
@@ -1108,4 +1111,5 @@ if should_archive:
 
     print(f"Woche archiviert: {history_path}")
 else:
-    print("Kein Archiv-Lauf (ARCHIVE_SNAPSHOT nicht gesetzt) - Historie bleibt unverändert.")
+    reason = "Vorsaison-Fallback aktiv (noch keine echten Saison-Daten)" if using_previous_season_chart_data else "kein Zeitplan-Lauf"
+    print(f"Kein Archiv-Lauf ({reason}) - Historie bleibt unverändert.")
