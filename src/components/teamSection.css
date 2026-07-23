@@ -99,6 +99,13 @@
   box-sizing: border-box;
 }
 
+/* NEU: verhindert, dass ein Scroll-Swipe auf einem Chart als Drag/Zoom-Geste
+   abgefangen wird - der Browser übernimmt vertikales Scrollen direkt */
+.chart-touch-wrapper {
+  touch-action: pan-y;
+  width: 100%;
+}
+
 .trend-up {
   color: var(--color-win);
   font-size: 1.2rem;
