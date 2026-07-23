@@ -1,0 +1,29 @@
+name: Cleanup History Index
+
+# Nur manuell auslösbar - einmaliger Aufräum-Vorgang
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repo auschecken
+        uses: actions/checkout@v4
+
+      - name: Python einrichten
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Aufräum-Script ausführen
+        run: python cleanup_history_index.py
+
+      - name: index.json committen
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Backfill-Saisons aus dem Historie-Dropdown entfernt"
+          file_pattern: "public/history/index.json"
