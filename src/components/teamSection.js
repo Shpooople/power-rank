@@ -378,22 +378,37 @@ const TeamSection = ({ team }) => {
             <Plot
               useResizeHandler={true}
               style={{ width: '100%', height: '100%' }}
-              data={[{
-                type: 'scatter',
-                x: displayedWeekX,
-                y: displayedWeekY,
-                line: {
-                  color: CHART_COLORS.accent,
-                  width: 3
+              data={[
+                {
+                  type: 'scatter',
+                  x: displayedWeekX,
+                  y: displayedWeekY,
+                  line: {
+                    color: CHART_COLORS.accent,
+                    width: 3
+                  },
+                  mode: 'lines+markers',
+                  marker: {
+                    size: 9,
+                    color: CHART_COLORS.accent,
+                    line: { color: CHART_COLORS.surface, width: 2 }
+                  },
+                  hovertemplate: 'Woche %{x}<br>%{y} Punkte<extra></extra>'
                 },
-                mode: 'lines+markers',
-                marker: {
-                  size: 9,
-                  color: CHART_COLORS.accent,
-                  line: { color: CHART_COLORS.surface, width: 2 }
-                },
-                hovertemplate: 'Woche %{x}<br>%{y} Punkte<extra></extra>'
-              }]}
+                // NEU: unsichtbare "Geister-Spur" mit den kompletten Werten -
+                // hält die Achsen-Range von Anfang an stabil, ohne autorange
+                // manuell abschalten zu müssen (das hatte das Chart zum
+                // Verschwinden gebracht statt nur das Flackern zu beheben)
+                {
+                  type: 'scatter',
+                  x: weekKeys.map((key, index) => index + 1),
+                  y: weekValues,
+                  mode: 'markers',
+                  marker: { size: 0, opacity: 0 },
+                  hoverinfo: 'skip',
+                  showlegend: false
+                }
+              ]}
               layout={{
                 paper_bgcolor: 'transparent',
                 plot_bgcolor: 'transparent',
@@ -420,7 +435,6 @@ const TeamSection = ({ team }) => {
                   zeroline: false,
                   dtick: 1,
                   fixedrange: true,
-                  autorange: false,
                   range: [0.5, weekKeys.length + 0.5],
                   tickfont: {
                     family: 'Roboto, sans-serif',
@@ -435,7 +449,6 @@ const TeamSection = ({ team }) => {
                   zeroline: false,
                   showticklabels: true,
                   fixedrange: true,
-                  autorange: false,
                   range: [Math.max(0, weekYMin - weekYPadding), weekYMax + weekYPadding],
                   gridcolor: CHART_COLORS.grid,
                   tickfont: {
