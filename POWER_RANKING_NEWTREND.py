@@ -463,18 +463,16 @@ for team in rosters:
 
     adjusted_averages.append(round(adjusted_average, 1))
 
-    # Calculate Trend and Trend Percentage using the updated logic
+    # Trend: Vergleich der letzten 2 Wochen mit dem EIGENEN bisherigen Schnitt
+    # (statt bisher mit dem Liga-Durchschnitt) - zeigt jetzt "besser/schlechter
+    # als die eigene bisherige Form", nicht "besser/schlechter als die Liga".
     if len(team_weekly_points) > 2:
-        all_teams_scores = [
-            weekly_points[week][i]
-            for week in weeks[:-2]
-            for i in range(len(rosters))
-        ]
-        league_average = sum(all_teams_scores) / len(all_teams_scores) if all_teams_scores else 0
+        baseline_weeks = team_weekly_points[:-2]
+        own_baseline_average = sum(baseline_weeks) / len(baseline_weeks) if baseline_weeks else 0
         last_two_weeks_average = sum(team_weekly_points[-2:]) / 2
 
-        if league_average > 0:
-            trend_percentage = ((last_two_weeks_average - league_average) / league_average) * 100
+        if own_baseline_average > 0:
+            trend_percentage = ((last_two_weeks_average - own_baseline_average) / own_baseline_average) * 100
         else:
             trend_percentage = 0
 
