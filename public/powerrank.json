@@ -268,12 +268,12 @@
     "Adjusted Average Rank":3,
     "BADGES":[
       {
-        "icon":"🔥",
+        "icon":"fire",
         "label":"On Fire",
         "description":"3 Siege in Folge - aktuell nicht zu stoppen."
       },
       {
-        "icon":"🎣",
+        "icon":"wizard",
         "label":"Waiver-Wire-Wizard",
         "description":"54 Waiver-Adds diese Saison - der fleißigste Kader-Bastler der Liga."
       }
@@ -560,22 +560,22 @@
     "Adjusted Average Rank":12,
     "BADGES":[
       {
-        "icon":"🩹",
+        "icon":"hospital",
         "label":"The Hospital",
         "description":"5 verletzte Spieler im Kader (Out\/IR\/Questionable\/Doubtful) - die größte Krankenstation der Liga."
       },
       {
-        "icon":"⚓",
+        "icon":"consistent",
         "label":"Mr. Consistent",
         "description":"Nur ±9.6 Punkte Schwankung - der Fels in der Brandung."
       },
       {
-        "icon":"🤡",
+        "icon":"blunder",
         "label":"Bank-Patzer",
         "description":"Ein Bankspieler hätte 16.8 Punkte mehr gebracht als der Starter auf derselben Position."
       },
       {
-        "icon":"🫠",
+        "icon":"bust",
         "label":"Totalausfall",
         "description":"Zay Flowers mit nur -0.4 Punkten - schwächste Starter-Leistung der Liga diese Woche."
       }
@@ -872,7 +872,7 @@
     "Adjusted Average Rank":10,
     "BADGES":[
       {
-        "icon":"🍀",
+        "icon":"unlucky",
         "label":"Pechvogel der Woche",
         "description":"127.6 Punkte - mehr als die halbe Liga - und trotzdem verloren."
       }
@@ -1161,12 +1161,13 @@
     "Adjusted Average Rank":8,
     "BADGES":[
       {
-        "icon":"🏟️",
+        "icon":"homer",
         "label":"DAL-Homer",
-        "description":"3 Spieler von DAL im Kader - eindeutig ein Fan."
+        "description":"3 Spieler von DAL im Kader - eindeutig ein Fan.",
+        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/dal.png"
       },
       {
-        "icon":"🥇",
+        "icon":"perfect",
         "label":"Perfektes Lineup",
         "description":"109.0% der bestmöglichen Aufstellung ausgeschöpft - kaum Verbesserungspotenzial."
       }
@@ -1453,7 +1454,7 @@
     "Adjusted Average Rank":9,
     "BADGES":[
       {
-        "icon":"📉",
+        "icon":"falling",
         "label":"Free Fall",
         "description":"Trend von -19.5% - der Sinkflug hält an."
       }
@@ -1760,7 +1761,7 @@
     "Adjusted Average Rank":11,
     "BADGES":[
       {
-        "icon":"🥶",
+        "icon":"cold",
         "label":"Cold Streak",
         "description":"3 Niederlagen in Folge - der Ofen ist aus."
       }
@@ -2056,12 +2057,12 @@
     "Adjusted Average Rank":1,
     "BADGES":[
       {
-        "icon":"🎢",
+        "icon":"rollercoaster",
         "label":"Rollercoaster",
         "description":"Schwankung von ±29.6 Punkten pro Woche - nie langweilig."
       },
       {
-        "icon":"🐉",
+        "icon":"dragon",
         "label":"Angstgegner",
         "description":"133.6 Punkte Schnitt pro Woche - das Team, das niemand gerne trifft."
       }
@@ -2357,7 +2358,7 @@
     "Adjusted Average Rank":4,
     "BADGES":[
       {
-        "icon":"👑",
+        "icon":"crown",
         "label":"Liga-Krösus",
         "description":"139.17 Punkte - Highscore der Liga in dieser Woche."
       }
@@ -2947,7 +2948,7 @@
     "Adjusted Average Rank":5,
     "BADGES":[
       {
-        "icon":"💥",
+        "icon":"giant_killer",
         "label":"Giant Killer",
         "description":"Sieg gegen ein 2 Plätze besser platziertes Team - Überraschungscoup der Woche."
       }
@@ -3235,17 +3236,17 @@
     "Adjusted Average Rank":2,
     "BADGES":[
       {
-        "icon":"🎯",
+        "icon":"clutch",
         "label":"Nervenstark",
         "description":"Sieg mit nur 4.9 Punkten Vorsprung - knapper geht's kaum."
       },
       {
-        "icon":"🪑",
+        "icon":"bench",
         "label":"Bankdrücker",
         "description":"27.0 Punkte auf der Bank liegen gelassen - autsch."
       },
       {
-        "icon":"🔒",
+        "icon":"lock",
         "label":"Punktgenau",
         "description":"Sieg gegen ein 11 Plätze schlechter platziertes Team - der Favorit hat geliefert."
       }
@@ -3533,12 +3534,12 @@
     "Adjusted Average Rank":7,
     "BADGES":[
       {
-        "icon":"📈",
+        "icon":"rising",
         "label":"Rising Star",
         "description":"Trend von +20.2% - aktuell das heißeste Team der Liga."
       },
       {
-        "icon":"💣",
+        "icon":"bigbang",
         "label":"Big Bang",
         "description":"Patrick Mahomes mit 38.99 Punkten - die stärkste Einzelleistung der Liga diese Woche."
       }
