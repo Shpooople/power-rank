@@ -1,7 +1,7 @@
 import React from 'react';
 import './header.css'; // Assuming you have a dedicated header stylesheet
 
-const Header = ({ weekLabel }) => {
+const Header = ({ weekLabel, historyIndex, selectedFile, onSelectFile }) => {
   const isPreseason = weekLabel === 'Vorsaison';
 
   return (
@@ -13,6 +13,22 @@ const Header = ({ weekLabel }) => {
       />
       <h1>THE HANSON FAMILY</h1>
       <h2>Power Rankings - {weekLabel ? weekLabel : 'Lädt...'}</h2>
+
+      {historyIndex.length > 0 && (
+        <select
+          className="week-selector"
+          value={selectedFile || ''}
+          onChange={(e) => onSelectFile(e.target.value || null)}
+        >
+          <option value="">Aktuelle Woche</option>
+          {historyIndex.map((entry) => (
+            <option key={entry.file} value={entry.file}>
+              {entry.label}
+            </option>
+          ))}
+        </select>
+      )}
+
       <p className="intro">
         Jede Woche werden hier alle Teams nach ihrer gesamten aber auch aktuellen Performance eingestuft. Alles ohne Hot Takes und persönlicher Meinung, sondern nach einem selbst erstelltem Modell.
       </p>
