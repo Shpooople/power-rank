@@ -141,7 +141,6 @@ const TeamSection = ({ team }) => {
     "Losses": losses,
     "Points For": pointsFor,
     "Points Against": pointsAgainst,
-    "TREND": trend = 'NO TREND',
     "Trend Percentage": trenPercentage,
     "TREND Rank": trendRank,
     "Adjusted Average": adjustedAvg,
