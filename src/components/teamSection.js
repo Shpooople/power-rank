@@ -415,6 +415,7 @@ const TeamSection = ({ team }) => {
                 dragmode: false,
                 transition: { duration: 0 },
                 hovermode: 'closest',
+                showlegend: false,
                 hoverlabel: {
                   bgcolor: CHART_COLORS.surface,
                   bordercolor: CHART_COLORS.accent,
@@ -433,9 +434,10 @@ const TeamSection = ({ team }) => {
                   title: '',
                   showgrid: false,
                   zeroline: false,
-                  dtick: 1,
                   fixedrange: true,
                   range: [0.5, weekKeys.length + 0.5],
+                  tickvals: weekKeys.map((key, index) => index + 1),
+                  ticktext: weekKeys.map((key, index) => index + 1),
                   tickfont: {
                     family: 'Roboto, sans-serif',
                     size: 12,
