@@ -141,6 +141,8 @@ const TeamSection = ({ team }) => {
     "Losses": losses,
     "Points For": pointsFor,
     "Points Against": pointsAgainst,
+    // eslint-disable-next-line no-unused-vars
+    "TREND": trend,
     "Trend Percentage": trenPercentage,
     "TREND Rank": trendRank,
     "Adjusted Average": adjustedAvg,
