@@ -149,12 +149,29 @@ const TeamSection = ({ team }) => {
   const strengthValues = [qbStrength, rbStrength, wrStrength, teStrength, kStrength];
   const strengthRanks = [qbRank, rbRank, wrRank, teRank, kRank];
 
-  const colorForValue = (v) => {
-    if (v >= 66) return CHART_COLORS.win;
-    if (v >= 33) return CHART_COLORS.accent;
-    return CHART_COLORS.loss;
+  // NEU: 12-stufige Farbskala nach Liga-Rang (Platz 1 = Hellblau, Platz 12 =
+  // Rot), nicht nach absolutem Wert - Rang 1 ist immer der höchste Balken.
+  const RANK_COLOR_SCALE = [
+    '#5FD3F3', // Platz 1 - Hellblau
+    '#4FD9D0', // Platz 2 - Türkis
+    '#4FD9A8', // Platz 3 - grünliches Türkis
+    '#6BD96B', // Platz 4 - Grün
+    '#9CD95C', // Platz 5
+    '#C7D95C', // Platz 6
+    '#D9D95C', // Platz 7 - Gelb
+    '#D4A657', // Platz 8 - Gold
+    '#E08E45', // Platz 9 - Orange
+    '#E37A45', // Platz 10
+    '#E2665B', // Platz 11 - Rot-Orange
+    '#B93A34', // Platz 12 - Rot
+  ];
+
+  const colorForRank = (rank) => {
+    const idx = Math.min(Math.max(rank, 1), RANK_COLOR_SCALE.length) - 1;
+    return RANK_COLOR_SCALE[idx];
   };
-  const barColors = strengthValues.map(colorForValue);
+
+  const barColors = strengthRanks.map(colorForRank);
 
   // NEU: Balken wachsen erst, sobald die Karte ins Bild scrollt
   const [barsRevealed, setBarsRevealed] = useState(false);
