@@ -15,20 +15,28 @@ SEASONS_TO_BACKFILL = []
 current_id = STARTING_LEAGUE_ID
 current_season = STARTING_SEASON
 for _ in range(SEASONS_BACK):
-    SEASONS_TO_BACKFILL.append({"season": current_season, "league_id": current_id})
     try:
         league_info = requests.get(f"https://api.sleeper.app/v1/league/{current_id}").json()
         prev_id = league_info.get("previous_league_id")
+        playoff_week_start = league_info.get("settings", {}).get("playoff_week_start")
     except Exception as e:
         print(f"Liga-Info für {current_season} konnte nicht geladen werden: {e}")
         prev_id = None
+        playoff_week_start = None
+
+    SEASONS_TO_BACKFILL.append({
+        "season": current_season,
+        "league_id": current_id,
+        "playoff_week_start": playoff_week_start,
+    })
+
     if not prev_id:
         print(f"Keine Vorgänger-Liga vor Saison {current_season} gefunden - Kette endet hier.")
         break
     current_id = prev_id
     current_season = str(int(current_season) - 1)
 
-print("Zu befüllende Saisons:", [s["season"] for s in SEASONS_TO_BACKFILL])
+print("Zu befüllende Saisons:", [(s["season"], s["playoff_week_start"]) for s in SEASONS_TO_BACKFILL])
 
 HISTORY_DIR = "public/history"
 INDEX_FILE = os.path.join(HISTORY_DIR, "index.json")
@@ -48,6 +56,7 @@ def team_display_name(team_name, display_name):
 for season_info in SEASONS_TO_BACKFILL:
     season = season_info["season"]
     league_id = season_info["league_id"]
+    playoff_week_start = season_info.get("playoff_week_start")
 
     print(f"--- Bearbeite Saison {season} (Liga {league_id}) ---")
 
@@ -73,7 +82,26 @@ for season_info in SEASONS_TO_BACKFILL:
     weekly_points_history = {rid: [] for rid in roster_ids}
 
     week = 1
-    max_weeks = 18  # Sicherheitsgrenze, Abbruch erfolgt vorher automatisch
+    # Zuverlässige Grenze: Sleepers eigene Liga-Einstellung, ab welcher Woche
+    # die Playoffs beginnen. Regulär gespielt wird bis einschließlich der
+    # Woche davor. Fallback auf 18, falls die Einstellung mal fehlen sollte.
+    if playoff_week_start:
+        max_weeks = playoff_week_start - 1
+        print(f"  Playoffs beginnen laut Liga-Einstellung in Woche {playoff_week_start} - Backfill bis Woche {max_weeks}.")
+    else:
+        max_weeks = 18
+        print("  Kein playoff_week_start gefunden - nutze Sicherheitsgrenze von 18 Wochen.")
+
+    # Aufräumen: Wochen-Dateien aus einem vorherigen Lauf, die über die jetzt
+    # bekannte Playoff-Grenze hinausgehen, wieder entfernen.
+    stale_entries = [e for e in history_index if e["season"] == season and e["week"] > max_weeks]
+    for entry in stale_entries:
+        stale_path = os.path.join(HISTORY_DIR, entry["file"])
+        if os.path.exists(stale_path):
+            os.remove(stale_path)
+            print(f"  Veraltete Datei entfernt: {stale_path}")
+    history_index = [e for e in history_index if not (e["season"] == season and e["week"] > max_weeks)]
+
     while week <= max_weeks:
         resp = requests.get(f"https://api.sleeper.app/v1/league/{league_id}/matchups/{week}")
         matchups = resp.json() or []
@@ -81,9 +109,8 @@ for season_info in SEASONS_TO_BACKFILL:
             print(f"  Keine Daten mehr für Woche {week} - Saison {season} endet bei Woche {week - 1}.")
             break
 
-        # Playoffs erkennen: sobald nicht mehr alle Teams der Liga in den
-        # Matchups auftauchen (nur noch Playoff-Teilnehmer), hier aufhören -
-        # sonst entstehen unvollständige Wochen, die man händisch löschen müsste.
+        # Zusätzliche Absicherung (Zweitcheck): falls trotz playoff_week_start
+        # eine Woche weniger Teams enthält, ebenfalls abbrechen.
         participating_ids = {m['roster_id'] for m in matchups}
         if len(participating_ids) < len(roster_ids):
             print(
