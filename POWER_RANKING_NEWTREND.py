@@ -249,7 +249,7 @@ user_ids, team_names, display_names = [], [], []
 wins, losses, ties, points_for, points_against = [], [], [], [], []
 adjusted_averages, trends, trend_percentages = [], [], []
 # NEU: Sammel-Listen für die Badge-Berechnungen weiter unten
-injury_counts, homer_team_list, homer_count_list = [], [], []
+injury_counts, homer_team_counts_list = [], []
 team_weekly_points_list = []
 qb_list, rb_list, wr_list, te_list, k_list, def_list = [], [], [], [], [], []
 qb_strength, rb_strength, wr_strength, te_strength, k_strength = [], [], [], [], []
@@ -444,13 +444,7 @@ for team in rosters:
                 def_ids.append(player_id)
 
     injury_counts.append(injury_count)
-    if nfl_team_counts:
-        top_nfl_team = max(nfl_team_counts, key=nfl_team_counts.get)
-        homer_team_list.append(top_nfl_team)
-        homer_count_list.append(nfl_team_counts[top_nfl_team])
-    else:
-        homer_team_list.append(None)
-        homer_count_list.append(0)
+    homer_team_counts_list.append(nfl_team_counts)
 
     qb_list.append(build_roster_entries(qb_ids, qb_roster, qb_stats))
     rb_list.append(build_roster_entries(rb_ids, rb_roster, rb_stats))
@@ -700,14 +694,15 @@ if injury_counts and max(injury_counts) > 0:
     )
 
 # 2) [NFL-Team]-Homer - auffällig viele Spieler von einem echten NFL-Team
-if homer_count_list and max(homer_count_list) >= 3:
-    idx = homer_count_list.index(max(homer_count_list))
-    nfl_team_label = homer_team_list[idx]
-    add_badge(
-        idx, "homer", f"{nfl_team_label}-Homer",
-        f"{homer_count_list[idx]} Spieler von {nfl_team_label} im Kader - eindeutig ein Fan.",
-        image_url=team_logo_url(nfl_team_label)
-    )
+# Ein Team kann hier mehrere Badges bekommen (z.B. Cowboys-Homer UND Bears-Homer)
+for i, team_counts in enumerate(homer_team_counts_list):
+    for nfl_team_label, count in team_counts.items():
+        if count >= 3:
+            add_badge(
+                i, "homer", f"{nfl_team_label}-Homer",
+                f"{count} Spieler von {nfl_team_label} im Kader - eindeutig ein Fan.",
+                image_url=team_logo_url(nfl_team_label)
+            )
 
 # 3) Pechvogel der Woche - verloren trotz Punkten über dem Liga-Median dieser Woche
 week_scores_for_pech = weekly_points.get(current_week, [])
