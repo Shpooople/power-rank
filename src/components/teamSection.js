@@ -188,6 +188,8 @@ const TeamSection = ({ team }) => {
     "User ID": userID,
     "Display Name": displayName,
     "POWER RANK": powerrank,
+    "LAST_WEEK_POWER_RANK": lastWeekPowerRank,
+    "POWER_RANK_DELTA": powerRankDelta,
     "Power Rank Score": powerrankscore,
     "Team Name": name,
     "Wins": wins,
@@ -241,6 +243,8 @@ const TeamSection = ({ team }) => {
   const strengthCategories = ['QB', 'RB', 'WR', 'TE', 'K'];
   const strengthValues = [qbStrength, rbStrength, wrStrength, teStrength, kStrength];
   const strengthRanks = [qbRank, rbRank, wrRank, teRank, kRank];
+  // Historische Wochen (Backfill) haben keine Positionsstärke-Daten
+  const hasStrengthData = strengthValues.some((v) => v != null);
 
   const barColors = strengthRanks.map(colorForRank);
 
@@ -327,6 +331,19 @@ const TeamSection = ({ team }) => {
         </h2>
       </div>
 
+      {lastWeekPowerRank != null && (
+        <p className="rank-movement">
+          Letzte Woche Rang {lastWeekPowerRank}{' '}
+          {powerRankDelta === 0 ? (
+            <span className="rank-same">(-)</span>
+          ) : powerRankDelta > 0 ? (
+            <span className="rank-up">(▲{powerRankDelta})</span>
+          ) : (
+            <span className="rank-down">(▼{Math.abs(powerRankDelta)})</span>
+          )}
+        </p>
+      )}
+
       {badges.length > 0 && (
         <div className="team-badges">
           {badges.map((badge, i) => (
@@ -368,7 +385,8 @@ const TeamSection = ({ team }) => {
         </div>
 
         <div className="charts-container" ref={chartsContainerRef}>
-          {/* Positionsstärke als farbcodierter Bar-Chart */}
+          {/* Positionsstärke als farbcodierter Bar-Chart - nur wenn Daten vorhanden (fehlt bei historischen Wochen) */}
+          {hasStrengthData && (
           <div className="chart-touch-wrapper">
             <Plot
               useResizeHandler={true}
@@ -441,6 +459,7 @@ const TeamSection = ({ team }) => {
               }}
             />
           </div>
+          )}
           {/* Line Chart */}
           <div className="chart-touch-wrapper">
             <Plot
@@ -548,7 +567,8 @@ const TeamSection = ({ team }) => {
           </div>
         </div>
 
-        {/* Roster: jetzt mit Spielerbild + Detail-Stats, ausklappbar */}
+        {/* Roster: jetzt mit Spielerbild + Detail-Stats, ausklappbar - nur wenn Kader-Daten vorhanden (fehlen bei historischen Wochen) */}
+        {(qb.length + rb.length + wr.length + te.length + k.length + def_.length) > 0 && (
         <details className="collapsible team-roster">
           <summary>Roster anzeigen</summary>
           <div className="collapsible-content">
@@ -560,6 +580,7 @@ const TeamSection = ({ team }) => {
             <RosterPositionGroup label="DEF" players={def_} />
           </div>
         </details>
+        )}
       </div>
 
       {(topPerformers.length > 0 || bottomPerformers.length > 0 || benchwarmer) && (
