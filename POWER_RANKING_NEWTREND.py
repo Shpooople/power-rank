@@ -827,6 +827,185 @@ if scores_this_week:
     idx = scores_this_week.index(max(scores_this_week))
     add_badge(idx, "👑", "Liga-Krösus", f"{scores_this_week[idx]} Punkte - Highscore der Liga in dieser Woche.")
 
+# 12) Bank-Patzer - Bankspieler hätte den Starter derselben Position überboten
+bench_blunder_candidates = []
+for i, team in enumerate(rosters):
+    match_entry = None
+    if current_week_matchups:
+        match_entry = next((m for m in current_week_matchups if m['roster_id'] == team['roster_id']), None)
+    if not match_entry:
+        continue
+    starters = [s for s in match_entry.get('starters', []) if s and s != '0']
+    ppw = match_entry.get('players_points', {}) or {}
+    bench_ids = [pid for pid in team['players'] if pid not in starters]
+
+    best_diff = 0
+    for starter_pid in starters:
+        starter_pos = players.get(starter_pid, {}).get('position')
+        if not starter_pos:
+            continue
+        starter_pts = ppw.get(starter_pid, 0)
+        for bench_pid in bench_ids:
+            if players.get(bench_pid, {}).get('position') == starter_pos:
+                diff = ppw.get(bench_pid, 0) - starter_pts
+                if diff > best_diff:
+                    best_diff = diff
+    if best_diff > 0:
+        bench_blunder_candidates.append((i, best_diff))
+
+if bench_blunder_candidates:
+    idx, diff = max(bench_blunder_candidates, key=lambda x: x[1])
+    add_badge(
+        idx, "🤡", "Bank-Patzer",
+        f"Ein Bankspieler hätte {round(diff, 1)} Punkte mehr gebracht als der Starter auf derselben Position."
+    )
+
+# 13) Perfektes Lineup - Aufstellung nahe der bestmöglichen aus dem Kader
+# Vereinfachung: greedy statt exakter Optimierung (spezifische Slots zuerst,
+# dann FLEX-Slots) - in seltenen Grenzfällen nicht zu 100% exakt optimal,
+# aber eine sehr gute Annäherung.
+try:
+    league_settings_info = requests.get(f"https://api.sleeper.app/v1/league/{league_id}").json()
+    roster_positions = league_settings_info.get("roster_positions", [])
+except Exception:
+    roster_positions = []
+
+NON_STARTING_SLOTS = {"BN", "IR", "TAXI"}
+starting_slots = [p for p in roster_positions if p not in NON_STARTING_SLOTS]
+FLEX_ELIGIBLE = {
+    "FLEX": {"RB", "WR", "TE"},
+    "SUPER_FLEX": {"QB", "RB", "WR", "TE"},
+    "WRRB_FLEX": {"RB", "WR"},
+    "REC_FLEX": {"WR", "TE"},
+}
+
+def optimal_lineup_points(team, match_entry):
+    if not match_entry or not starting_slots:
+        return None
+    ppw = match_entry.get('players_points', {}) or {}
+    pool = [
+        (pid, players.get(pid, {}).get('position'), ppw.get(pid, 0))
+        for pid in team['players'] if pid in players
+    ]
+    used = set()
+    total = 0
+    specific_slots = [s for s in starting_slots if s not in FLEX_ELIGIBLE]
+    flex_slots = [s for s in starting_slots if s in FLEX_ELIGIBLE]
+
+    for slot in specific_slots:
+        candidates = sorted(
+            (p for p in pool if p[1] == slot and p[0] not in used),
+            key=lambda p: p[2], reverse=True
+        )
+        if candidates:
+            best = candidates[0]
+            used.add(best[0])
+            total += best[2]
+
+    for slot in flex_slots:
+        eligible_positions = FLEX_ELIGIBLE[slot]
+        candidates = sorted(
+            (p for p in pool if p[1] in eligible_positions and p[0] not in used),
+            key=lambda p: p[2], reverse=True
+        )
+        if candidates:
+            best = candidates[0]
+            used.add(best[0])
+            total += best[2]
+
+    return total
+
+lineup_efficiency_candidates = []
+for i, team in enumerate(rosters):
+    match_entry = None
+    if current_week_matchups:
+        match_entry = next((m for m in current_week_matchups if m['roster_id'] == team['roster_id']), None)
+    if not match_entry:
+        continue
+    starters = [s for s in match_entry.get('starters', []) if s and s != '0']
+    ppw = match_entry.get('players_points', {}) or {}
+    actual_points = sum(ppw.get(pid, 0) for pid in starters)
+    optimal_points = optimal_lineup_points(team, match_entry)
+    if optimal_points and optimal_points > 0:
+        lineup_efficiency_candidates.append((i, actual_points / optimal_points))
+
+if lineup_efficiency_candidates:
+    idx, eff = max(lineup_efficiency_candidates, key=lambda x: x[1])
+    if eff >= 0.97:
+        add_badge(
+            idx, "🥇", "Perfektes Lineup",
+            f"{round(eff * 100, 1)}% der bestmöglichen Aufstellung ausgeschöpft - kaum Verbesserungspotenzial."
+        )
+
+# 14) Big Bang / Totalausfall - stärkste/schwächste Einzelperformance ligaweit
+all_starter_scores = []
+for i, team in enumerate(rosters):
+    match_entry = None
+    if current_week_matchups:
+        match_entry = next((m for m in current_week_matchups if m['roster_id'] == team['roster_id']), None)
+    if not match_entry:
+        continue
+    starters = [s for s in match_entry.get('starters', []) if s and s != '0']
+    ppw = match_entry.get('players_points', {}) or {}
+    for pid in starters:
+        all_starter_scores.append((i, pid, ppw.get(pid, 0)))
+
+if all_starter_scores:
+    top_i, top_pid, top_pts = max(all_starter_scores, key=lambda x: x[2])
+    top_name = f"{players.get(top_pid, {}).get('first_name', '')} {players.get(top_pid, {}).get('last_name', '')}".strip()
+    add_badge(top_i, "💣", "Big Bang", f"{top_name} mit {top_pts} Punkten - die stärkste Einzelleistung der Liga diese Woche.")
+
+    bottom_i, bottom_pid, bottom_pts = min(all_starter_scores, key=lambda x: x[2])
+    bottom_name = f"{players.get(bottom_pid, {}).get('first_name', '')} {players.get(bottom_pid, {}).get('last_name', '')}".strip()
+    add_badge(bottom_i, "🫠", "Totalausfall", f"{bottom_name} mit nur {bottom_pts} Punkten - schwächste Starter-Leistung der Liga diese Woche.")
+
+# 15) Angstgegner - höchster Punkteschnitt der Saison bisher
+season_averages = [
+    (i, sum(pts) / len(pts)) for i, pts in enumerate(team_weekly_points_list) if pts
+]
+if season_averages:
+    idx, avg = max(season_averages, key=lambda x: x[1])
+    add_badge(idx, "🐉", "Angstgegner", f"{round(avg, 1)} Punkte Schnitt pro Woche - das Team, das niemand gerne trifft.")
+
+# 16) Punktgenau - Sieg als klar besser platziertes Team (Favoritensieg bestätigt)
+favorite_win_candidates = []
+for i in range(len(df)):
+    res = last_week_result_list[i]
+    if res and res["outcome"] == "Sieg":
+        opp_idx = name_to_index.get(last_week_opponent_list[i])
+        if opp_idx is not None:
+            own_rank = df.loc[i, "POWER RANK"]
+            opp_rank = df.loc[opp_idx, "POWER RANK"]
+            if own_rank < opp_rank:  # besser platziert und trotzdem gewonnen - erwartungsgemäß
+                favorite_win_candidates.append((i, opp_rank - own_rank))
+if favorite_win_candidates:
+    idx, gap = max(favorite_win_candidates, key=lambda x: x[1])
+    add_badge(idx, "🔒", "Punktgenau", f"Sieg gegen ein {gap} Plätze schlechter platziertes Team - der Favorit hat geliefert.")
+
+# 17) Waiver-Wire-Wizard - meiste Waiver-/Free-Agent-Adds der Saison
+transaction_counts = {r['roster_id']: 0 for r in rosters}
+try:
+    for wk in weeks:
+        tx_response = requests.get(f"https://api.sleeper.app/v1/league/{league_id}/transactions/{wk}")
+        tx_data = tx_response.json() or []
+        for tx in tx_data:
+            if tx.get('type') in ('waiver', 'free_agent') and tx.get('status') == 'complete':
+                adds = tx.get('adds') or {}
+                for pid, roster_id in adds.items():
+                    if roster_id in transaction_counts:
+                        transaction_counts[roster_id] += 1
+except Exception as e:
+    print(f"Transaktionen konnten nicht geladen werden: {e}")
+
+if transaction_counts and max(transaction_counts.values()) > 0:
+    top_roster_id = max(transaction_counts, key=transaction_counts.get)
+    idx = next((i for i, r in enumerate(rosters) if r['roster_id'] == top_roster_id), None)
+    if idx is not None:
+        add_badge(
+            idx, "🎣", "Waiver-Wire-Wizard",
+            f"{transaction_counts[top_roster_id]} Waiver-Adds diese Saison - der fleißigste Kader-Bastler der Liga."
+        )
+
 df["BADGES"] = badges_list
 
 df['COMMENTS'] = ""
