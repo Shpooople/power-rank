@@ -24,77 +24,30 @@ const colorForRank = (rank) => {
   return RANK_COLOR_SCALE[idx];
 };
 
-// NEU: Eigene SVG-Icons in den Theme-Farben statt Emojis. Jedes Icon ist
-// ein simples 24x24-Symbol, das über currentColor die Textfarbe des
-// umgebenden Elements übernimmt (siehe .badge-icon CSS).
-const BADGE_ICON_PATHS = {
-  hospital: (
-    <path d="M12 3v6M12 15v6M3 12h6M15 12h6" strokeWidth="3" strokeLinecap="round" fill="none" />
-  ),
-  homer: (
-    <path d="M4 20V10l8-6 8 6v10M4 20h16M9 20v-6h6v6" strokeWidth="1.6" strokeLinejoin="round" fill="none" />
-  ),
-  unlucky: (
-    <path d="M12 3a3 3 0 013 3 3 3 0 01-3 3 3 3 0 01-3-3 3 3 0 013-3zM6 9a3 3 0 013 3 3 3 0 01-3 3 3 3 0 01-3-3 3 3 0 013-3zM18 9a3 3 0 013 3 3 3 0 01-3 3 3 3 0 01-3-3 3 3 0 013-3zM12 15a3 3 0 013 3 3 3 0 01-3 3 3 3 0 01-3-3 3 3 0 013-3zM12 9v6" strokeWidth="1.4" fill="none" />
-  ),
-  rising: (
-    <path d="M3 17l6-6 4 4 8-8M15 6h6v6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-  ),
-  falling: (
-    <path d="M3 7l6 6 4-4 8 8M15 18h6v-6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-  ),
-  giant_killer: (
-    <path d="M13 2L4 14h6l-1 8 9-12h-6z" strokeWidth="1.4" strokeLinejoin="round" />
-  ),
-  clutch: (
-    <path d="M12 21a9 9 0 100-18 9 9 0 000 18zM12 16a4 4 0 100-8 4 4 0 000 8zM12 12v.01" strokeWidth="1.6" fill="none" />
-  ),
-  fire: (
-    <path d="M12 2c1 4-4 5-4 9a4 4 0 008 0c0-1.5-1-2-1-3 2 1 3 3 3 5a6 6 0 01-12 0c0-5 4-6 6-11z" strokeWidth="1.2" strokeLinejoin="round" />
-  ),
-  cold: (
-    <path d="M12 2v20M5 6l14 12M19 6L5 18M2 12h20M6 3l1.5 3M18 3l-1.5 3M6 21l1.5-3M18 21l-1.5-3" strokeWidth="1.4" strokeLinecap="round" fill="none" />
-  ),
-  rollercoaster: (
-    <path d="M2 18c2 0 2-8 4-8s2 8 4 8 2-12 4-12 2 12 4 12 2-8 4-8" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-  ),
-  consistent: (
-    <path d="M12 3v4M12 21v-4M9 5h6M5 10h2a5 5 0 0010 0h2M7 10v4a5 5 0 0010 0v-4" strokeWidth="1.5" strokeLinecap="round" fill="none" />
-  ),
-  bench: (
-    <path d="M4 11h16v2H4zM6 13v6M18 13v6M4 8h16" strokeWidth="1.6" strokeLinecap="round" fill="none" />
-  ),
-  crown: (
-    <path d="M3 8l4 4 5-7 5 7 4-4-2 11H5z" strokeWidth="1.3" strokeLinejoin="round" />
-  ),
-  blunder: (
-    <path d="M12 17v.01M12 13a2.5 2.5 0 10-2.5-2.5M4 6c2-2 5-2 7 0M20 6c-2-2-5-2-7 0" strokeWidth="1.8" strokeLinecap="round" fill="none" />
-  ),
-  perfect: (
-    <path d="M12 15a6 6 0 100-12 6 6 0 000 12zM9 14l-2 7 5-3 5 3-2-7M9 9l2 2 4-4" strokeWidth="1.4" strokeLinejoin="round" fill="none" />
-  ),
-  bigbang: (
-    <path d="M12 2l1.5 6L20 4l-3 6 7 1-6 3 4 5-6-1 1 6-5-4-3 5-1-6-6 2 3-6-6-2 6-3-4-5 6 1z" strokeWidth="1" strokeLinejoin="round" />
-  ),
-  bust: (
-    <path d="M4 10a8 8 0 0116 0c0 3-2 4-2 7H6c0-3-2-4-2-7zM9 21c0-1 1-2 3-2s3 1 3 2" strokeWidth="1.4" strokeLinecap="round" fill="none" />
-  ),
-  dragon: (
-    <path d="M3 14c3-6 8-9 13-8-1 1-2 2-2 3 3 0 5 2 6 5-2-1-3-1-4 0 1 2 1 4 0 5-1-2-3-3-5-2 1 2 1 4-1 5 0-2-1-3-2-3-3 1-5 0-5-5z" strokeWidth="1" strokeLinejoin="round" />
-  ),
-  lock: (
-    <path d="M6 11V8a6 6 0 0112 0v3M5 11h14v9H5zM12 15v3" strokeWidth="1.6" strokeLinecap="round" fill="none" />
-  ),
-  wizard: (
-    <path d="M5 19L19 5M15 3l1 2 2 1-2 1-1 2-1-2-2-1 2-1zM5 15l.7 1.3L7 17l-1.3.7L5 19l-.7-1.3L3 17l1.3-.7z" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-  ),
+// Emoji-Zuordnung je Badge-Code (Script liefert Codes statt Emojis direkt,
+// damit Homer-Badges zusätzlich ein image_url-Feld fürs Team-Logo haben können)
+const BADGE_EMOJIS = {
+  hospital: '🩹',
+  homer: '🏟️',
+  unlucky: '🍀',
+  rising: '📈',
+  falling: '📉',
+  giant_killer: '💥',
+  clutch: '🎯',
+  fire: '🔥',
+  cold: '🥶',
+  rollercoaster: '🎢',
+  consistent: '⚓',
+  bench: '🪑',
+  crown: '👑',
+  blunder: '🤡',
+  perfect: '🥇',
+  bigbang: '💣',
+  bust: '🫠',
+  dragon: '🐉',
+  lock: '🔒',
+  wizard: '🎣',
 };
-
-const BadgeSvgIcon = ({ code }) => (
-  <svg viewBox="0 0 24 24" width="60%" height="60%" stroke="currentColor" fill="currentColor">
-    {BADGE_ICON_PATHS[code] || <circle cx="12" cy="12" r="8" strokeWidth="1.5" fill="none" />}
-  </svg>
-);
 
 // Kleines Badge-Icon mit Hover- (Desktop) bzw. Tap-Tooltip (Mobile)
 const BadgeIcon = ({ badge }) => {
@@ -114,7 +67,7 @@ const BadgeIcon = ({ badge }) => {
           onError={(e) => { e.target.style.display = 'none'; }}
         />
       ) : (
-        <BadgeSvgIcon code={badge.icon} />
+        <span className="badge-icon-emoji">{BADGE_EMOJIS[badge.icon] || badge.icon}</span>
       )}
       <span className={`badge-tooltip${open ? ' badge-tooltip-open' : ''}`}>
         <strong>{badge.label}</strong>
@@ -441,6 +394,8 @@ const TeamSection = ({ team }) => {
                 },
                 title: {
                   text: 'AKTUELLE TEAMSTÄRKE',
+                  y: 0.95,
+                  yanchor: 'top',
                   font: {
                     family: 'Roboto, sans-serif',
                     weight: 'bold',
@@ -536,8 +491,10 @@ const TeamSection = ({ team }) => {
                 },
                 title: {
                   text: 'SAISONVERLAUF',
+                  y: 0.95,
+                  yanchor: 'top',
                   font: {
-                    family: 'Arial, sans-serif',
+                    family: 'Roboto, sans-serif',
                     weight: 'bold',
                     size: 16,
                     color: CHART_COLORS.text
@@ -577,7 +534,7 @@ const TeamSection = ({ team }) => {
                 margin: {
                   l: 30,
                   r: 20,
-                  t: 30,
+                  t: 50,
                   b: 30
                 },
               }}
