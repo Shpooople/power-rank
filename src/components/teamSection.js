@@ -173,18 +173,32 @@ const TeamSection = ({ team }) => {
 
   const barColors = strengthRanks.map(colorForRank);
 
-  // NEU: Balken wachsen erst, sobald die Karte ins Bild scrollt
+  // NEU: Balken wachsen + Linie zeichnet sich Woche für Woche, sobald die
+  // Charts zum ersten Mal ins Bild scrollen (ein gemeinsamer Observer)
   const [barsRevealed, setBarsRevealed] = useState(false);
-  const chartWrapperRef = useRef(null);
+  const [lineRevealCount, setLineRevealCount] = useState(0);
+  const chartsContainerRef = useRef(null);
+
+  const weekKeys = Object.keys(weekData);
+  const weekValues = Object.values(weekData);
 
   useEffect(() => {
-    const el = chartWrapperRef.current;
+    const el = chartsContainerRef.current;
     if (!el) return undefined;
+    let interval;
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setBarsRevealed(true);
+            let count = 0;
+            interval = setInterval(() => {
+              count += 1;
+              setLineRevealCount(count);
+              if (count >= weekKeys.length) {
+                clearInterval(interval);
+              }
+            }, 120);
             observer.disconnect();
           }
         });
@@ -192,10 +206,20 @@ const TeamSection = ({ team }) => {
       { threshold: 0.3 }
     );
     observer.observe(el);
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+      if (interval) clearInterval(interval);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const displayedStrengthValues = barsRevealed ? strengthValues : strengthValues.map(() => 0);
+
+  const displayedWeekX = weekKeys.slice(0, lineRevealCount).map((key, index) => index + 1);
+  const displayedWeekY = weekValues.slice(0, lineRevealCount);
+  const weekYMin = weekValues.length ? Math.min(...weekValues) : 0;
+  const weekYMax = weekValues.length ? Math.max(...weekValues) : 100;
+  const weekYPadding = (weekYMax - weekYMin) * 0.15 || 10;
 
   return (
     <div className="team-section">
@@ -238,9 +262,9 @@ const TeamSection = ({ team }) => {
           <p>{comment}</p>
         </div>
 
-        <div className="charts-container">
+        <div className="charts-container" ref={chartsContainerRef}>
           {/* Positionsstärke als farbcodierter Bar-Chart */}
-          <div ref={chartWrapperRef} className="chart-touch-wrapper">
+          <div className="chart-touch-wrapper">
             <Plot
               useResizeHandler={true}
               style={{ width: '100%', height: '100%' }}
@@ -316,8 +340,8 @@ const TeamSection = ({ team }) => {
               style={{ width: '100%', height: '100%' }}
               data={[{
                 type: 'scatter',
-                x: Object.keys(weekData).map((key, index) => index + 1),
-                y: Object.values(weekData),
+                x: displayedWeekX,
+                y: displayedWeekY,
                 line: {
                   color: CHART_COLORS.accent,
                   width: 3
@@ -334,6 +358,7 @@ const TeamSection = ({ team }) => {
                 paper_bgcolor: 'transparent',
                 plot_bgcolor: 'transparent',
                 dragmode: false,
+                transition: { duration: 150, easing: 'linear' },
                 hovermode: 'closest',
                 hoverlabel: {
                   bgcolor: CHART_COLORS.surface,
@@ -355,6 +380,7 @@ const TeamSection = ({ team }) => {
                   zeroline: false,
                   dtick: 1,
                   fixedrange: true,
+                  range: [0.5, weekKeys.length + 0.5],
                   tickfont: {
                     family: 'Roboto, sans-serif',
                     size: 12,
@@ -368,6 +394,7 @@ const TeamSection = ({ team }) => {
                   zeroline: false,
                   showticklabels: true,
                   fixedrange: true,
+                  range: [Math.max(0, weekYMin - weekYPadding), weekYMax + weekYPadding],
                   gridcolor: CHART_COLORS.grid,
                   tickfont: {
                     family: 'Roboto, sans-serif',
