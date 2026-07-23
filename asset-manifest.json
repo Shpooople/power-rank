@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/power-rank/static/css/main.8aba8f52.css",
+    "main.css": "/power-rank/static/css/main.66f6bea4.css",
     "main.js": "/power-rank/static/js/main.a49bb3f6.js",
     "static/media/RobotoCondensed-Italic-VariableFont_wght.ttf": "/power-rank/static/media/RobotoCondensed-Italic-VariableFont_wght.07eb8810353a0680cff5.ttf",
     "static/media/RobotoCondensed-VariableFont_wght.ttf": "/power-rank/static/media/RobotoCondensed-VariableFont_wght.ff29b2791402495b1616.ttf",
     "static/media/Roboto-Regular.ttf": "/power-rank/static/media/Roboto-Regular.27f62b53b93858475a7f.ttf",
     "static/media/Roboto-Bold.ttf": "/power-rank/static/media/Roboto-Bold.d50a80138ec4f2fb5e9f.ttf",
     "index.html": "/power-rank/index.html",
-    "main.8aba8f52.css.map": "/power-rank/static/css/main.8aba8f52.css.map",
+    "main.66f6bea4.css.map": "/power-rank/static/css/main.66f6bea4.css.map",
     "main.a49bb3f6.js.map": "/power-rank/static/js/main.a49bb3f6.js.map"
   },
   "entrypoints": [
-    "static/css/main.8aba8f52.css",
+    "static/css/main.66f6bea4.css",
     "static/js/main.a49bb3f6.js"
   ]
 }
