@@ -685,14 +685,17 @@ df["Adjusted Average Rank"] = power_rankings['Adjusted Average Rank'].astype(int
 # dieser Kategorie), nicht an jedes Team, das eine Schwelle erreicht.
 badges_list = [[] for _ in range(len(df))]
 
-def add_badge(idx, icon, label, description):
-    badges_list[idx].append({"icon": icon, "label": label, "description": description})
+def add_badge(idx, icon, label, description, image_url=None):
+    badge = {"icon": icon, "label": label, "description": description}
+    if image_url:
+        badge["image_url"] = image_url
+    badges_list[idx].append(badge)
 
 # 1) The Hospital - meiste verletzte Spieler (Out/IR/Questionable/Doubtful)
 if injury_counts and max(injury_counts) > 0:
     idx = injury_counts.index(max(injury_counts))
     add_badge(
-        idx, "🩹", "The Hospital",
+        idx, "hospital", "The Hospital",
         f"{injury_counts[idx]} verletzte Spieler im Kader (Out/IR/Questionable/Doubtful) - die größte Krankenstation der Liga."
     )
 
@@ -701,8 +704,9 @@ if homer_count_list and max(homer_count_list) >= 3:
     idx = homer_count_list.index(max(homer_count_list))
     nfl_team_label = homer_team_list[idx]
     add_badge(
-        idx, "🏟️", f"{nfl_team_label}-Homer",
-        f"{homer_count_list[idx]} Spieler von {nfl_team_label} im Kader - eindeutig ein Fan."
+        idx, "homer", f"{nfl_team_label}-Homer",
+        f"{homer_count_list[idx]} Spieler von {nfl_team_label} im Kader - eindeutig ein Fan.",
+        image_url=team_logo_url(nfl_team_label)
     )
 
 # 3) Pechvogel der Woche - verloren trotz Punkten über dem Liga-Median dieser Woche
@@ -717,7 +721,7 @@ if week_scores_for_pech:
     if pech_candidates:
         idx = max(pech_candidates, key=lambda i: last_week_result_list[i]["own_points"])
         add_badge(
-            idx, "🍀", "Pechvogel der Woche",
+            idx, "unlucky", "Pechvogel der Woche",
             f"{last_week_result_list[idx]['own_points']} Punkte - mehr als die halbe Liga - und trotzdem verloren."
         )
 
@@ -725,7 +729,7 @@ if week_scores_for_pech:
 if trend_percentages and max(trend_percentages) > 7:
     idx = trend_percentages.index(max(trend_percentages))
     add_badge(
-        idx, "📈", "Rising Star",
+        idx, "rising", "Rising Star",
         f"Trend von +{trend_percentages[idx]}% - aktuell das heißeste Team der Liga."
     )
 
@@ -733,7 +737,7 @@ if trend_percentages and max(trend_percentages) > 7:
 if trend_percentages and min(trend_percentages) < -7:
     idx = trend_percentages.index(min(trend_percentages))
     add_badge(
-        idx, "📉", "Free Fall",
+        idx, "falling", "Free Fall",
         f"Trend von {trend_percentages[idx]}% - der Sinkflug hält an."
     )
 
@@ -756,7 +760,7 @@ for i in range(len(df)):
 if giant_killer_candidates:
     idx, gap = max(giant_killer_candidates, key=lambda x: x[1])
     add_badge(
-        idx, "💥", "Giant Killer",
+        idx, "giant_killer", "Giant Killer",
         f"Sieg gegen ein {gap} Plätze besser platziertes Team - Überraschungscoup der Woche."
     )
 
@@ -769,7 +773,7 @@ win_margins = [
 if win_margins:
     idx, margin = min(win_margins, key=lambda x: x[1])
     add_badge(
-        idx, "🎯", "Nervenstark",
+        idx, "clutch", "Nervenstark",
         f"Sieg mit nur {round(margin, 1)} Punkten Vorsprung - knapper geht's kaum."
     )
 
@@ -796,12 +800,12 @@ loss_streaks = [(i, s) for i, (res, s) in enumerate(streak_info) if res == 'L']
 if win_streaks:
     idx, s = max(win_streaks, key=lambda x: x[1])
     if s >= 2:
-        add_badge(idx, "🔥", "On Fire", f"{s} Siege in Folge - aktuell nicht zu stoppen.")
+        add_badge(idx, "fire", "On Fire", f"{s} Siege in Folge - aktuell nicht zu stoppen.")
 
 if loss_streaks:
     idx, s = max(loss_streaks, key=lambda x: x[1])
     if s >= 2:
-        add_badge(idx, "🥶", "Cold Streak", f"{s} Niederlagen in Folge - der Ofen ist aus.")
+        add_badge(idx, "cold", "Cold Streak", f"{s} Niederlagen in Folge - der Ofen ist aus.")
 
 # 9) Rollercoaster / Mr. Consistent - Schwankung der Wochenpunkte
 stdevs = [
@@ -811,21 +815,21 @@ stdevs = [
 valid_stdevs = [(i, s) for i, s in enumerate(stdevs) if s is not None]
 if valid_stdevs:
     idx_high, s_high = max(valid_stdevs, key=lambda x: x[1])
-    add_badge(idx_high, "🎢", "Rollercoaster", f"Schwankung von ±{round(s_high, 1)} Punkten pro Woche - nie langweilig.")
+    add_badge(idx_high, "rollercoaster", "Rollercoaster", f"Schwankung von ±{round(s_high, 1)} Punkten pro Woche - nie langweilig.")
     idx_low, s_low = min(valid_stdevs, key=lambda x: x[1])
-    add_badge(idx_low, "⚓", "Mr. Consistent", f"Nur ±{round(s_low, 1)} Punkte Schwankung - der Fels in der Brandung.")
+    add_badge(idx_low, "consistent", "Mr. Consistent", f"Nur ±{round(s_low, 1)} Punkte Schwankung - der Fels in der Brandung.")
 
 # 10) Bankdrücker - meiste Punkte auf der Bank liegen gelassen
 bench_scores = [(i, b["points"]) for i, b in enumerate(benchwarmer_list) if b]
 if bench_scores:
     idx, pts = max(bench_scores, key=lambda x: x[1])
-    add_badge(idx, "🪑", "Bankdrücker", f"{pts} Punkte auf der Bank liegen gelassen - autsch.")
+    add_badge(idx, "bench", "Bankdrücker", f"{pts} Punkte auf der Bank liegen gelassen - autsch.")
 
 # 11) Liga-Krösus - höchste Punktzahl der Woche ligaweit
 scores_this_week = weekly_points.get(current_week, [])
 if scores_this_week:
     idx = scores_this_week.index(max(scores_this_week))
-    add_badge(idx, "👑", "Liga-Krösus", f"{scores_this_week[idx]} Punkte - Highscore der Liga in dieser Woche.")
+    add_badge(idx, "crown", "Liga-Krösus", f"{scores_this_week[idx]} Punkte - Highscore der Liga in dieser Woche.")
 
 # 12) Bank-Patzer - Bankspieler hätte den Starter derselben Position überboten
 bench_blunder_candidates = []
@@ -856,7 +860,7 @@ for i, team in enumerate(rosters):
 if bench_blunder_candidates:
     idx, diff = max(bench_blunder_candidates, key=lambda x: x[1])
     add_badge(
-        idx, "🤡", "Bank-Patzer",
+        idx, "blunder", "Bank-Patzer",
         f"Ein Bankspieler hätte {round(diff, 1)} Punkte mehr gebracht als der Starter auf derselben Position."
     )
 
@@ -933,7 +937,7 @@ if lineup_efficiency_candidates:
     idx, eff = max(lineup_efficiency_candidates, key=lambda x: x[1])
     if eff >= 0.97:
         add_badge(
-            idx, "🥇", "Perfektes Lineup",
+            idx, "perfect", "Perfektes Lineup",
             f"{round(eff * 100, 1)}% der bestmöglichen Aufstellung ausgeschöpft - kaum Verbesserungspotenzial."
         )
 
@@ -953,11 +957,11 @@ for i, team in enumerate(rosters):
 if all_starter_scores:
     top_i, top_pid, top_pts = max(all_starter_scores, key=lambda x: x[2])
     top_name = f"{players.get(top_pid, {}).get('first_name', '')} {players.get(top_pid, {}).get('last_name', '')}".strip()
-    add_badge(top_i, "💣", "Big Bang", f"{top_name} mit {top_pts} Punkten - die stärkste Einzelleistung der Liga diese Woche.")
+    add_badge(top_i, "bigbang", "Big Bang", f"{top_name} mit {top_pts} Punkten - die stärkste Einzelleistung der Liga diese Woche.")
 
     bottom_i, bottom_pid, bottom_pts = min(all_starter_scores, key=lambda x: x[2])
     bottom_name = f"{players.get(bottom_pid, {}).get('first_name', '')} {players.get(bottom_pid, {}).get('last_name', '')}".strip()
-    add_badge(bottom_i, "🫠", "Totalausfall", f"{bottom_name} mit nur {bottom_pts} Punkten - schwächste Starter-Leistung der Liga diese Woche.")
+    add_badge(bottom_i, "bust", "Totalausfall", f"{bottom_name} mit nur {bottom_pts} Punkten - schwächste Starter-Leistung der Liga diese Woche.")
 
 # 15) Angstgegner - höchster Punkteschnitt der Saison bisher
 season_averages = [
@@ -965,7 +969,7 @@ season_averages = [
 ]
 if season_averages:
     idx, avg = max(season_averages, key=lambda x: x[1])
-    add_badge(idx, "🐉", "Angstgegner", f"{round(avg, 1)} Punkte Schnitt pro Woche - das Team, das niemand gerne trifft.")
+    add_badge(idx, "dragon", "Angstgegner", f"{round(avg, 1)} Punkte Schnitt pro Woche - das Team, das niemand gerne trifft.")
 
 # 16) Punktgenau - Sieg als klar besser platziertes Team (Favoritensieg bestätigt)
 favorite_win_candidates = []
@@ -980,7 +984,7 @@ for i in range(len(df)):
                 favorite_win_candidates.append((i, opp_rank - own_rank))
 if favorite_win_candidates:
     idx, gap = max(favorite_win_candidates, key=lambda x: x[1])
-    add_badge(idx, "🔒", "Punktgenau", f"Sieg gegen ein {gap} Plätze schlechter platziertes Team - der Favorit hat geliefert.")
+    add_badge(idx, "lock", "Punktgenau", f"Sieg gegen ein {gap} Plätze schlechter platziertes Team - der Favorit hat geliefert.")
 
 # 17) Waiver-Wire-Wizard - meiste Waiver-/Free-Agent-Adds der Saison
 transaction_counts = {r['roster_id']: 0 for r in rosters}
@@ -1002,7 +1006,7 @@ if transaction_counts and max(transaction_counts.values()) > 0:
     idx = next((i for i, r in enumerate(rosters) if r['roster_id'] == top_roster_id), None)
     if idx is not None:
         add_badge(
-            idx, "🎣", "Waiver-Wire-Wizard",
+            idx, "wizard", "Waiver-Wire-Wizard",
             f"{transaction_counts[top_roster_id]} Waiver-Adds diese Saison - der fleißigste Kader-Bastler der Liga."
         )
 
