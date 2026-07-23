@@ -77,38 +77,12 @@ players = response_players.json()
 response_users = requests.get(url_users)
 users = response_users.json()
 
-# --- NEU: Saisonverlauf-Fallback für die Vorsaison ---
-# Läuft die Saison noch nicht (Preseason/Offseason), gäbe es für den
-# "Saisonverlauf"-Chart nur 0-1 (leere) Wochen der aktuellen Saison. Damit
-# der Chart trotzdem aussagekräftig ist, verwenden wir dann die Wochen 1-12
-# der VORSAISON als Platzhalterdaten - zugeordnet über die owner_id, da die
-# roster_id sich zwischen Saisons/Ligen ändern kann.
+# --- Anzeige-Hinweis für die Vorsaison ---
+# Chart, Trend und Adjusted Average nutzen jetzt alle dieselbe Datenquelle
+# (weekly_points, weiter unten befüllt über die bereits korrekt ermittelte
+# league_id/season) - das verhindert Inkonsistenzen zwischen Chart und Trend.
 season_type = nfl_state.get("season_type", "regular")
 using_previous_season_chart_data = season_type != "regular"
-fallback_week_count = 12
-fallback_weekly_points_by_owner = {}
-
-if using_previous_season_chart_data:
-    try:
-        league_info = requests.get(f"https://api.sleeper.app/v1/league/{league_id}").json()
-        previous_league_id = league_info.get("previous_league_id")
-        if previous_league_id:
-            prev_rosters = requests.get(f"https://api.sleeper.app/v1/league/{previous_league_id}/rosters").json()
-            prev_roster_to_owner = {r['roster_id']: r['owner_id'] for r in prev_rosters}
-            for wk in range(1, fallback_week_count + 1):
-                wk_matchups = requests.get(
-                    f"https://api.sleeper.app/v1/league/{previous_league_id}/matchups/{wk}"
-                ).json()
-                for m in wk_matchups:
-                    owner = prev_roster_to_owner.get(m['roster_id'])
-                    if owner:
-                        fallback_weekly_points_by_owner.setdefault(owner, []).append(m.get('points', 0))
-        else:
-            using_previous_season_chart_data = False
-            print("Keine previous_league_id gefunden, Saisonverlauf bleibt leer bis Saisonstart.")
-    except Exception as e:
-        using_previous_season_chart_data = False
-        print(f"Vorsaison-Daten für den Saisonverlauf konnten nicht geladen werden: {e}")
 
 # --- NEU: Punkte pro Spiel statt Gesamtpunkte für die Positionsstärke ---
 # Wir holen uns für jede gespielte Woche die kompletten Sleeper-Stats aller
@@ -680,26 +654,18 @@ df = pd.merge(df, text_df[['User ID', 'TEXT']], on='User ID', how='left')
 df['COMMENTS'] = df['TEXT']
 df.drop(columns=['TEXT'], inplace=True)
 
-# Wochenpunkte für den Saisonverlauf: normal die aktuelle Saison, außer die
-# Saison läuft noch nicht - dann Wochen 1-12 der Vorsaison als Platzhalter.
-if using_previous_season_chart_data and fallback_weekly_points_by_owner:
-    weekly_points_df = pd.DataFrame({
-        f"Week {wk} (Vorsaison)": [
-            fallback_weekly_points_by_owner.get(uid, [])[wk - 1]
-            if len(fallback_weekly_points_by_owner.get(uid, [])) >= wk else 0
-            for uid in user_ids
-        ]
-        for wk in range(1, fallback_week_count + 1)
-    })
-    print("Saisonverlauf nutzt Platzhalterdaten aus der Vorsaison (Wochen 1-12).")
-else:
-    weekly_points_df = pd.DataFrame(weekly_points)
-    weekly_points_df.columns = [f'Week {week}' for week in weeks]
+# Wochenpunkte für den Saisonverlauf: dieselbe Quelle (weekly_points) wie für
+# Trend und Adjusted Average - Spaltenname bekommt in der Vorsaison den
+# Zusatz "(Vorsaison)" nur zur Anzeige, die Daten sind identisch zur echten
+# Berechnung oben.
+week_column_suffix = " (Vorsaison)" if using_previous_season_chart_data else ""
+weekly_points_df = pd.DataFrame(weekly_points)
+weekly_points_df.columns = [f'Week {week}{week_column_suffix}' for week in weeks]
 
 df = pd.concat([df, weekly_points_df], axis=1)
 
 # Eindeutiges Anzeige-Label fürs Frontend (statt Woche aus Spaltenanzahl zu raten)
-df["DISPLAY_WEEK_LABEL"] = "Vorsaison" if (using_previous_season_chart_data and fallback_weekly_points_by_owner) else f"Woche {current_week}"
+df["DISPLAY_WEEK_LABEL"] = "Vorsaison" if using_previous_season_chart_data else f"Woche {current_week}"
 
 # Save to CSV (weiterhin als Backup/Debug-Datei)
 csv_file = "POWERRANK.csv"
