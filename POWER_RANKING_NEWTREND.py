@@ -248,6 +248,9 @@ def build_roster_entries(ids, names, extra_stats_fn=None, image_url_fn=None):
 user_ids, team_names, display_names = [], [], []
 wins, losses, ties, points_for, points_against = [], [], [], [], []
 adjusted_averages, trends, trend_percentages = [], [], []
+# NEU: Sammel-Listen für die Badge-Berechnungen weiter unten
+injury_counts, homer_team_list, homer_count_list = [], [], []
+team_weekly_points_list = []
 qb_list, rb_list, wr_list, te_list, k_list, def_list = [], [], [], [], [], []
 qb_strength, rb_strength, wr_strength, te_strength, k_strength = [], [], [], [], []
 top_performers_list, bottom_performers_list, benchwarmer_list = [], [], []
@@ -265,6 +268,7 @@ user_data_dict = {
 
 # Collect weekly points
 weekly_points = {week: [] for week in weeks}
+weekly_results_by_roster = {r['roster_id']: [] for r in rosters}  # 'W'/'L'/'T' pro Woche, für Serien-Badges
 current_week_matchups = None
 for week in weeks:
     url_matchups = f"https://api.sleeper.app/v1/league/{league_id}/matchups/{week}"
@@ -278,6 +282,23 @@ for week in weeks:
     for team in rosters:
         roster_id = team['roster_id']
         weekly_points[week].append(week_points.get(roster_id, 0))
+
+    # NEU: Sieg/Niederlage pro Team fuer diese Woche ermitteln (Serien-Badges)
+    matchup_groups = {}
+    for m in matchups:
+        matchup_groups.setdefault(m['matchup_id'], []).append(m)
+    for pair in matchup_groups.values():
+        if len(pair) == 2:
+            a, b = pair
+            a_pts, b_pts = a.get('points', 0) or 0, b.get('points', 0) or 0
+            if a_pts > b_pts:
+                res_a, res_b = 'W', 'L'
+            elif b_pts > a_pts:
+                res_a, res_b = 'L', 'W'
+            else:
+                res_a, res_b = 'T', 'T'
+            weekly_results_by_roster.setdefault(a['roster_id'], []).append(res_a)
+            weekly_results_by_roster.setdefault(b['roster_id'], []).append(res_b)
 
 # --- NEU: Vorbereitung für Top/Flop-Performer, Benchwarmer, Gegner & Win-Probability ---
 
@@ -387,11 +408,21 @@ for team in rosters:
     # Collect player names (fürs Roster) UND ids (für die PPG-Berechnung)
     qb_roster, rb_roster, wr_roster, te_roster, k_roster, def_roster = [], [], [], [], [], []
     qb_ids, rb_ids, wr_ids, te_ids, k_ids, def_ids = [], [], [], [], [], []
+    injury_count = 0
+    nfl_team_counts = {}
     for player_id in team['players']:
         if player_id in players:
             player = players[player_id]
             player_name = f"{player.get('first_name', '')} {player.get('last_name', '')}".strip()
             position = player.get('position', '')
+
+            # NEU: Verletzungsstatus & NFL-Team für "The Hospital"/"[Team]-Homer"
+            injury_status = player.get('injury_status')
+            if injury_status in ('Out', 'IR', 'Questionable', 'Doubtful'):
+                injury_count += 1
+            nfl_team = player.get('team')
+            if nfl_team:
+                nfl_team_counts[nfl_team] = nfl_team_counts.get(nfl_team, 0) + 1
 
             if position == 'QB':
                 qb_roster.append(player_name)
@@ -412,6 +443,15 @@ for team in rosters:
                 def_roster.append(player_name)
                 def_ids.append(player_id)
 
+    injury_counts.append(injury_count)
+    if nfl_team_counts:
+        top_nfl_team = max(nfl_team_counts, key=nfl_team_counts.get)
+        homer_team_list.append(top_nfl_team)
+        homer_count_list.append(nfl_team_counts[top_nfl_team])
+    else:
+        homer_team_list.append(None)
+        homer_count_list.append(0)
+
     qb_list.append(build_roster_entries(qb_ids, qb_roster, qb_stats))
     rb_list.append(build_roster_entries(rb_ids, rb_roster, rb_stats))
     wr_list.append(build_roster_entries(wr_ids, wr_roster, wr_stats))
@@ -429,6 +469,7 @@ for team in rosters:
 
     # Adjusted Average: remove highest and lowest scoring weeks
     team_weekly_points = [weekly_points[week][rosters.index(team)] for week in weeks if weekly_points[week][rosters.index(team)] > 0]
+    team_weekly_points_list.append(team_weekly_points)
     if len(team_weekly_points) > 2:
         adjusted_points = sorted(team_weekly_points)[1:-1]
         adjusted_average = sum(adjusted_points) / len(adjusted_points) if adjusted_points else 0
@@ -638,6 +679,155 @@ df["K Strength Rank"] = df["K Strength"].rank(ascending=False, method='min').ast
 # einfärben kann wie die Teamstärke.
 df["TREND Rank"] = power_rankings['Trend Percentage Rank'].astype(int)
 df["Adjusted Average Rank"] = power_rankings['Adjusted Average Rank'].astype(int)
+
+# --- NEU: Spaßige Badges pro Team ---
+# Jedes Badge wird an genau EIN Team pro Kategorie vergeben (den "Sieger"
+# dieser Kategorie), nicht an jedes Team, das eine Schwelle erreicht.
+badges_list = [[] for _ in range(len(df))]
+
+def add_badge(idx, icon, label, description):
+    badges_list[idx].append({"icon": icon, "label": label, "description": description})
+
+# 1) The Hospital - meiste verletzte Spieler (Out/IR/Questionable/Doubtful)
+if injury_counts and max(injury_counts) > 0:
+    idx = injury_counts.index(max(injury_counts))
+    add_badge(
+        idx, "🩹", "The Hospital",
+        f"{injury_counts[idx]} verletzte Spieler im Kader (Out/IR/Questionable/Doubtful) - die größte Krankenstation der Liga."
+    )
+
+# 2) [NFL-Team]-Homer - auffällig viele Spieler von einem echten NFL-Team
+if homer_count_list and max(homer_count_list) >= 3:
+    idx = homer_count_list.index(max(homer_count_list))
+    nfl_team_label = homer_team_list[idx]
+    add_badge(
+        idx, "🏟️", f"{nfl_team_label}-Homer",
+        f"{homer_count_list[idx]} Spieler von {nfl_team_label} im Kader - eindeutig ein Fan."
+    )
+
+# 3) Pechvogel der Woche - verloren trotz Punkten über dem Liga-Median dieser Woche
+week_scores_for_pech = weekly_points.get(current_week, [])
+if week_scores_for_pech:
+    median_score = statistics.median(week_scores_for_pech)
+    pech_candidates = [
+        i for i in range(len(df))
+        if last_week_result_list[i] and last_week_result_list[i]["outcome"] == "Niederlage"
+        and last_week_result_list[i]["own_points"] > median_score
+    ]
+    if pech_candidates:
+        idx = max(pech_candidates, key=lambda i: last_week_result_list[i]["own_points"])
+        add_badge(
+            idx, "🍀", "Pechvogel der Woche",
+            f"{last_week_result_list[idx]['own_points']} Punkte - mehr als die halbe Liga - und trotzdem verloren."
+        )
+
+# 4) Rising Star - stärkster positiver Trend
+if trend_percentages and max(trend_percentages) > 7:
+    idx = trend_percentages.index(max(trend_percentages))
+    add_badge(
+        idx, "📈", "Rising Star",
+        f"Trend von +{trend_percentages[idx]}% - aktuell das heißeste Team der Liga."
+    )
+
+# 5) Free Fall - stärkster negativer Trend
+if trend_percentages and min(trend_percentages) < -7:
+    idx = trend_percentages.index(min(trend_percentages))
+    add_badge(
+        idx, "📉", "Free Fall",
+        f"Trend von {trend_percentages[idx]}% - der Sinkflug hält an."
+    )
+
+# 6) Giant Killer - Sieg gegen ein deutlich besser platziertes Team
+name_to_index = {}
+for i in range(len(df)):
+    label = team_names[i] if team_names[i] != 'No Team Name' else display_names[i]
+    name_to_index[label] = i
+
+giant_killer_candidates = []
+for i in range(len(df)):
+    res = last_week_result_list[i]
+    if res and res["outcome"] == "Sieg":
+        opp_idx = name_to_index.get(last_week_opponent_list[i])
+        if opp_idx is not None:
+            own_rank = df.loc[i, "POWER RANK"]
+            opp_rank = df.loc[opp_idx, "POWER RANK"]
+            if own_rank > opp_rank:  # höhere Zahl = schlechter platziert
+                giant_killer_candidates.append((i, own_rank - opp_rank))
+if giant_killer_candidates:
+    idx, gap = max(giant_killer_candidates, key=lambda x: x[1])
+    add_badge(
+        idx, "💥", "Giant Killer",
+        f"Sieg gegen ein {gap} Plätze besser platziertes Team - Überraschungscoup der Woche."
+    )
+
+# 7) Nervenstark - knappster Sieg der Woche
+win_margins = [
+    (i, last_week_result_list[i]["own_points"] - last_week_result_list[i]["opponent_points"])
+    for i in range(len(df))
+    if last_week_result_list[i] and last_week_result_list[i]["outcome"] == "Sieg"
+]
+if win_margins:
+    idx, margin = min(win_margins, key=lambda x: x[1])
+    add_badge(
+        idx, "🎯", "Nervenstark",
+        f"Sieg mit nur {round(margin, 1)} Punkten Vorsprung - knapper geht's kaum."
+    )
+
+# 8) On Fire / Cold Streak - aktuelle Sieg-/Niederlagenserie
+def current_streak(roster_id):
+    results = weekly_results_by_roster.get(roster_id, [])
+    if not results:
+        return None, 0
+    last = results[-1]
+    if last == 'T':
+        return 'T', 1
+    streak_len = 0
+    for r in reversed(results):
+        if r == last:
+            streak_len += 1
+        else:
+            break
+    return last, streak_len
+
+streak_info = [current_streak(team['roster_id']) for team in rosters]
+win_streaks = [(i, s) for i, (res, s) in enumerate(streak_info) if res == 'W']
+loss_streaks = [(i, s) for i, (res, s) in enumerate(streak_info) if res == 'L']
+
+if win_streaks:
+    idx, s = max(win_streaks, key=lambda x: x[1])
+    if s >= 2:
+        add_badge(idx, "🔥", "On Fire", f"{s} Siege in Folge - aktuell nicht zu stoppen.")
+
+if loss_streaks:
+    idx, s = max(loss_streaks, key=lambda x: x[1])
+    if s >= 2:
+        add_badge(idx, "🥶", "Cold Streak", f"{s} Niederlagen in Folge - der Ofen ist aus.")
+
+# 9) Rollercoaster / Mr. Consistent - Schwankung der Wochenpunkte
+stdevs = [
+    statistics.pstdev(pts) if len(pts) >= 3 else None
+    for pts in team_weekly_points_list
+]
+valid_stdevs = [(i, s) for i, s in enumerate(stdevs) if s is not None]
+if valid_stdevs:
+    idx_high, s_high = max(valid_stdevs, key=lambda x: x[1])
+    add_badge(idx_high, "🎢", "Rollercoaster", f"Schwankung von ±{round(s_high, 1)} Punkten pro Woche - nie langweilig.")
+    idx_low, s_low = min(valid_stdevs, key=lambda x: x[1])
+    add_badge(idx_low, "⚓", "Mr. Consistent", f"Nur ±{round(s_low, 1)} Punkte Schwankung - der Fels in der Brandung.")
+
+# 10) Bankdrücker - meiste Punkte auf der Bank liegen gelassen
+bench_scores = [(i, b["points"]) for i, b in enumerate(benchwarmer_list) if b]
+if bench_scores:
+    idx, pts = max(bench_scores, key=lambda x: x[1])
+    add_badge(idx, "🪑", "Bankdrücker", f"{pts} Punkte auf der Bank liegen gelassen - autsch.")
+
+# 11) Liga-Krösus - höchste Punktzahl der Woche ligaweit
+scores_this_week = weekly_points.get(current_week, [])
+if scores_this_week:
+    idx = scores_this_week.index(max(scores_this_week))
+    add_badge(idx, "👑", "Liga-Krösus", f"{scores_this_week[idx]} Punkte - Highscore der Liga in dieser Woche.")
+
+df["BADGES"] = badges_list
 
 df['COMMENTS'] = ""
 
