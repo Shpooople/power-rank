@@ -564,11 +564,6 @@
     "Adjusted Average Rank":12,
     "BADGES":[
       {
-        "icon":"hospital",
-        "label":"The Hospital",
-        "description":"4 verletzte Spieler im Kader (Out\/IR\/Questionable\/Doubtful) - die größte Krankenstation der Liga."
-      },
-      {
         "icon":"consistent",
         "label":"Mr. Consistent",
         "description":"Nur ±9.6 Punkte Schwankung - der Fels in der Brandung."
@@ -3575,6 +3570,11 @@
     "TREND Rank":1,
     "Adjusted Average Rank":7,
     "BADGES":[
+      {
+        "icon":"hospital",
+        "label":"The Hospital",
+        "description":"2 verletzte Spieler im Kader (Out\/IR\/Questionable\/Doubtful) - die größte Krankenstation der Liga."
+      },
       {
         "icon":"rising",
         "label":"Rising Star",
