@@ -222,6 +222,10 @@ const TeamSection = ({ team }) => {
     "TE Strength Rank": teRank,
     "K Strength Rank": kRank,
     "COMMENTS": comment,
+    // NEU: Prediction-Quiz-Scores (Biggest Football Brain Contest) - Array
+    // aus {name, score}, ein Eintrag pro Person (auch bei Co-Owner-Teams
+    // mehrere möglich, da beim Quiz individuell abgestimmt wird)
+    "QUIZ_SCORES": quizScores = [],
     // Performer-Felder
     "TOP_PERFORMERS": topPerformers = [],
     "BOTTOM_PERFORMERS": bottomPerformers = [],
@@ -356,6 +360,18 @@ const TeamSection = ({ team }) => {
         Trend: <TrendIndicator value={trenPercentage} rank={trendRank} /> | AAvg.:{' '}
         <span style={{ color: colorForRank(aavgRank), fontWeight: 'bold' }}>{adjustedAvg}</span>
       </p>
+
+      {quizScores.length > 0 && (
+        <p className="quiz-score-line">
+          🧠 Biggest Football Brain Contest:{' '}
+          {quizScores.map((q, i) => (
+            <span key={i}>
+              {q.name}: <strong>{q.score}</strong>
+              {i < quizScores.length - 1 ? ' · ' : ''}
+            </span>
+          ))}
+        </p>
+      )}
 
       {(lastWeekResult || thisWeekOpponent) && (
         <div className="matchup-info">
