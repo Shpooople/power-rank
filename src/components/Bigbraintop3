@@ -1,0 +1,91 @@
+.big-brain-top3 {
+  max-width: 1000px;
+  margin: 20px auto 0 auto;
+  padding: 20px 24px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.big-brain-title {
+  font-family: 'Roboto Condensed', Roboto, sans-serif;
+  font-size: 18px;
+  color: var(--color-text);
+  margin: 0 0 18px 0;
+}
+
+.big-brain-podium {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.big-brain-entry {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  font-family: 'Roboto Condensed', Roboto, sans-serif;
+  color: var(--color-text);
+  background-color: var(--color-surface-alt);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 16px 20px;
+}
+
+.big-brain-medal {
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.big-brain-name {
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.big-brain-score {
+  color: var(--color-accent);
+  font-weight: bold;
+}
+
+/* Größenhierarchie: Platz 1 am größten, Platz 3 am kleinsten */
+.big-brain-rank-1 {
+  order: 2;
+  padding-top: 26px;
+  padding-bottom: 26px;
+}
+.big-brain-rank-1 .big-brain-medal { font-size: 40px; }
+.big-brain-rank-1 .big-brain-name { font-size: 22px; }
+.big-brain-rank-1 .big-brain-score { font-size: 26px; }
+
+.big-brain-rank-2 {
+  order: 1;
+}
+.big-brain-rank-2 .big-brain-medal { font-size: 30px; }
+.big-brain-rank-2 .big-brain-name { font-size: 17px; }
+.big-brain-rank-2 .big-brain-score { font-size: 20px; }
+
+.big-brain-rank-3 {
+  order: 3;
+}
+.big-brain-rank-3 .big-brain-medal { font-size: 24px; }
+.big-brain-rank-3 .big-brain-name { font-size: 14px; }
+.big-brain-rank-3 .big-brain-score { font-size: 16px; }
+
+@media (max-width: 768px) {
+  .big-brain-podium {
+    gap: 12px;
+  }
+  .big-brain-entry {
+    padding: 12px 14px;
+  }
+  .big-brain-rank-1 {
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+}
