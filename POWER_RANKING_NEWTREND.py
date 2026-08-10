@@ -1052,6 +1052,32 @@ df["BADGES"] = badges_list
 
 df['COMMENTS'] = ""
 
+# --- NEU: Prediction-Quiz-Score einbinden ---
+# Kombinierte Export-Tabelle aus dem Prediction-Quiz-Sheet (Tab "QuizExport":
+# Sleeper User ID, Telegram Name, Score - dort schon per VLOOKUP aus Mapping +
+# OVERVIEW zusammengebaut). Pro Team werden Owner UND Co-Owner berücksichtigt,
+# da beim Quiz individuell abgestimmt wird - eine Karte kann also mehrere
+# Scores zeigen.
+quiz_sheet_url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSMFN74Gpnh950sftetagsv9m8ZTEqKpUNpIi22VdM6Ogg9m9Tvs9YKn5Y1jhK2l5noY6HhwHeb7Ysz/pub?gid=1194237017&single=true&output=csv"
+try:
+    quiz_df = pd.read_csv(quiz_sheet_url)
+    quiz_df['Sleeper User ID'] = quiz_df['Sleeper User ID'].astype(str)
+
+    quiz_scores_by_team = []
+    for team in rosters:
+        owner_ids = [str(team['owner_id'])] + [str(c) for c in (team.get('co_owners') or [])]
+        matches = quiz_df[quiz_df['Sleeper User ID'].isin(owner_ids)]
+        entries = [
+            {"name": row['Telegram Name'], "score": row['Score']}
+            for _, row in matches.iterrows()
+        ]
+        quiz_scores_by_team.append(entries)
+
+    df["QUIZ_SCORES"] = quiz_scores_by_team
+except Exception as e:
+    print(f"Quiz-Scores konnten nicht geladen werden: {e}")
+    df["QUIZ_SCORES"] = [[] for _ in range(len(df))]
+
 # Kommentare werden jetzt aus dem veröffentlichten Google Sheet geladen
 # (statt aus der lokalen PowerRanking_Text.csv). Die Tabelle enthält zur
 # Orientierung auch "Display Name" - wir brauchen daraus nur "User ID" und "TEXT".
