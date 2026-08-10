@@ -5,6 +5,7 @@ import './explanation.css';
 import Header from './header';
 import TeamSection from './teamSection';
 import Explanation from './explanation';
+import BigBrainTop3 from './BigBrainTop3';
 
 const App = () => {
   const [teams, setTeams] = useState([]);
@@ -55,6 +56,12 @@ const App = () => {
       });
   }, [selectedFile]);
 
+  // Top 3 der Big Brain Trophy: alle QUIZ_SCORES über alle Teams hinweg
+  // zusammenführen (auch Co-Owner-Teams haben ggf. mehrere Einträge) und
+  // nach Score absteigend sortieren.
+  const allQuizScores = teams.flatMap((team) => team.QUIZ_SCORES || []);
+  const topBigBrain = [...allQuizScores].sort((a, b) => b.score - a.score).slice(0, 3);
+
   return (
     <div className="App">
       {/* Pass the week label und die History-Auswahl an die Header-Komponente */}
@@ -64,6 +71,8 @@ const App = () => {
         selectedFile={selectedFile}
         onSelectFile={setSelectedFile}
       />
+
+      <BigBrainTop3 entries={topBigBrain} />
 
       {teams.map((team, index) => (
         <TeamSection key={index} team={team} />
