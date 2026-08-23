@@ -147,10 +147,15 @@ const formatPositionStats = (pos, p, { showTotal = true } = {}) => {
 // Eine Positionsgruppe im Roster (z.B. alle WR eines Teams)
 const RosterPositionGroup = ({ label, players }) => {
   if (!players || players.length === 0) return null;
+  // Nach Fantasy-Punkten absteigend sortieren, ohne die Original-Reihenfolge
+  // der Props zu verändern.
+  const sortedPlayers = [...players].sort(
+    (a, b) => (b.total_pts ?? 0) - (a.total_pts ?? 0)
+  );
   return (
     <div className="roster-position-group">
       <h4 className="roster-position-label">{label}</h4>
-      {players.map((p, i) => {
+      {sortedPlayers.map((p, i) => {
         const statLine = formatPositionStats(label, p);
         return (
           <div className="roster-player-row" key={i}>
@@ -161,7 +166,9 @@ const RosterPositionGroup = ({ label, players }) => {
               onError={(e) => { e.target.src = './thf_color.svg'; }}
             />
             <div className="roster-player-details">
-              <span className="roster-player-name">{p.name}</span>
+              <span className={`roster-player-name${p.my_guy ? ' my-guy' : ''}`}>
+                {p.name}{p.my_guy ? ' — My Guy' : ''}
+              </span>
               {statLine && <span className="roster-player-stats">{statLine}</span>}
             </div>
           </div>
@@ -366,7 +373,7 @@ const TeamSection = ({ team }) => {
           🧠 Biggest Football Brain Contest:{' '}
           {quizScores.map((q, i) => (
             <span key={i}>
-              {q.name}: <strong>{q.score}</strong>
+              {q.name}: <strong>{q.score} Punkte</strong>
               {i < quizScores.length - 1 ? ' · ' : ''}
             </span>
           ))}
