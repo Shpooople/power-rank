@@ -47,6 +47,12 @@ const BADGE_EMOJIS = {
   dragon: '🐉',
   lock: '🔒',
   wizard: '🎣',
+  superfan: '🏟️',
+  airraid: '🎯',
+  groundpound: '🚜',
+  touchdown: '🏈',
+  egg: '🥚',
+  footboot: '👢',
 };
 
 // Kleines Badge-Icon mit Hover- (Desktop) bzw. Tap-Tooltip (Mobile)
@@ -54,7 +60,7 @@ const BadgeIcon = ({ badge }) => {
   const [open, setOpen] = useState(false);
   return (
     <span
-      className="badge-icon"
+      className={`badge-icon${badge.icon === 'superfan' ? ' badge-icon-superfan' : ''}`}
       tabIndex={0}
       onClick={() => setOpen((o) => !o)}
       onBlur={() => setOpen(false)}
