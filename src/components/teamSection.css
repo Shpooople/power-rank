@@ -67,6 +67,13 @@
   color: var(--color-accent);
 }
 
+/* NEU: Superfan (5+ Spieler von einem NFL-Team) - goldener Rand statt des
+   normalen Rahmens, hebt sich sichtbar vom regulären Homer-Badge ab */
+.badge-icon-superfan {
+  border: 2px solid #FFD700;
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+}
+
 .badge-icon-image {
   width: 70%;
   height: 70%;
