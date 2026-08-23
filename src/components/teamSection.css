@@ -383,6 +383,13 @@
   text-overflow: ellipsis;
 }
 
+/* NEU: "My Guy" - Spieler, die schon mind. 3x bei diesem Team im Roster
+   standen, werden golden hervorgehoben */
+.roster-player-name.my-guy {
+  color: #FFD700;
+  text-shadow: 0 0 6px rgba(255, 215, 0, 0.35);
+}
+
 .roster-player-stats {
   font-size: 11px;
   color: var(--color-text-muted);
