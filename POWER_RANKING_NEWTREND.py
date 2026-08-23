@@ -800,6 +800,17 @@ for i, team_counts in enumerate(homer_team_counts_list):
                 image_url=team_logo_url(nfl_team_label)
             )
 
+# 2b) [NFL-Team]-Superfan - noch eine Stufe drüber (5+ Spieler von einem Team).
+# Bekommt im Frontend einen goldenen Rand statt des normalen Rahmens (icon "superfan").
+for i, team_counts in enumerate(homer_team_counts_list):
+    for nfl_team_label, count in team_counts.items():
+        if count >= 5:
+            add_badge(
+                i, "superfan", f"{nfl_team_label}-Superfan",
+                f"{count} Spieler von {nfl_team_label} im Kader - das nennt man Hingabe.",
+                image_url=team_logo_url(nfl_team_label)
+            )
+
 # 3) Pechvogel der Woche - verloren trotz Punkten über dem Liga-Median dieser Woche
 week_scores_for_pech = weekly_points.get(current_week, [])
 if week_scores_for_pech:
@@ -1100,6 +1111,109 @@ if transaction_counts and max(transaction_counts.values()) > 0:
             idx, "wizard", "Waiver-Wire-Wizard",
             f"{transaction_counts[top_roster_id]} Waiver-Adds diese Saison - der fleißigste Kader-Bastler der Liga."
         )
+
+# 18) Air Raid / Ground and Pound - welcher Positionsgruppe verdankt das Team
+# den Großteil seiner Wochenpunkte? Basis: nur die Starter dieser Woche.
+if current_week_matchups:
+    for m in current_week_matchups:
+        idx = next((i for i, r in enumerate(rosters) if r['roster_id'] == m['roster_id']), None)
+        if idx is None:
+            continue
+        starters = [s for s in m.get('starters', []) if s and s != '0']
+        ppw = m.get('players_points', {}) or {}
+        total_pts = sum(ppw.get(pid, 0) for pid in starters)
+        if not total_pts:
+            continue
+        pos_pts = {}
+        for pid in starters:
+            pos = players.get(pid, {}).get('position')
+            pos_pts[pos] = pos_pts.get(pos, 0) + ppw.get(pid, 0)
+        wr_share = pos_pts.get('WR', 0) / total_pts
+        rb_share = pos_pts.get('RB', 0) / total_pts
+        if wr_share >= 0.4:
+            add_badge(
+                idx, "airraid", "Air Raid",
+                f"{round(wr_share * 100, 1)}% der Punkte diese Woche kamen von den WRs - reine Luftshow."
+            )
+        if rb_share >= 0.4:
+            add_badge(
+                idx, "groundpound", "Ground and Pound",
+                f"{round(rb_share * 100, 1)}% der Punkte diese Woche kamen von den RBs - volle Kontrolle am Boden."
+            )
+
+# 19) Touchdown Overflow - meiste Touchdowns (Starter) der vergangenen Woche
+if current_week_matchups:
+    td_counts = []
+    for m in current_week_matchups:
+        idx = next((i for i, r in enumerate(rosters) if r['roster_id'] == m['roster_id']), None)
+        if idx is None:
+            continue
+        starters = [s for s in m.get('starters', []) if s and s != '0']
+        total_td = 0
+        for pid in starters:
+            stats = current_week_player_stats.get(pid, {})
+            total_td += (
+                (stats.get('pass_td', 0) or 0)
+                + (stats.get('rush_td', 0) or 0)
+                + (stats.get('rec_td', 0) or 0)
+                + (stats.get('def_td', 0) or 0)
+            )
+        td_counts.append((idx, total_td))
+    if td_counts:
+        top_idx, top_td = max(td_counts, key=lambda x: x[1])
+        if top_td > 0:
+            add_badge(
+                top_idx, "touchdown", "Touchdown Overflow",
+                f"{int(top_td)} Touchdowns in der vergangenen Woche - der meiste Endzonen-Spaß der Liga."
+            )
+
+# 20) "Klingeling, hier kommt der Eiermann" - ein Starter mit 0 Punkten
+if current_week_matchups:
+    for m in current_week_matchups:
+        idx = next((i for i, r in enumerate(rosters) if r['roster_id'] == m['roster_id']), None)
+        if idx is None:
+            continue
+        starters = [s for s in m.get('starters', []) if s and s != '0']
+        ppw = m.get('players_points', {}) or {}
+        zero_players = [pid for pid in starters if ppw.get(pid, 0) == 0]
+        if zero_players:
+            names = []
+            for pid in zero_players:
+                p = players.get(pid, {})
+                name = f"{p.get('first_name', '')} {p.get('last_name', '')}".strip()
+                names.append(name if name else pid)
+            add_badge(
+                idx, "egg", "Klingeling, hier kommt der Eiermann",
+                f"{', '.join(names)} mit 0 Punkten in der Startaufstellung - ein Ei gelegt."
+            )
+
+# 21) "Das heißt nicht umsonst FOOTball" - Kicker hat besten RB UND besten WR
+# im eigenen Lineup diese Woche überboten
+if current_week_matchups:
+    for m in current_week_matchups:
+        idx = next((i for i, r in enumerate(rosters) if r['roster_id'] == m['roster_id']), None)
+        if idx is None:
+            continue
+        starters = [s for s in m.get('starters', []) if s and s != '0']
+        ppw = m.get('players_points', {}) or {}
+        kicker_pts, rb_pts, wr_pts = None, [], []
+        for pid in starters:
+            pos = players.get(pid, {}).get('position')
+            pts = ppw.get(pid, 0)
+            if pos == 'K':
+                kicker_pts = pts if kicker_pts is None else max(kicker_pts, pts)
+            elif pos == 'RB':
+                rb_pts.append(pts)
+            elif pos == 'WR':
+                wr_pts.append(pts)
+        if kicker_pts is not None and rb_pts and wr_pts:
+            best_rb, best_wr = max(rb_pts), max(wr_pts)
+            if kicker_pts > best_rb and kicker_pts > best_wr:
+                add_badge(
+                    idx, "footboot", "Das heißt nicht umsonst FOOTball",
+                    f"Der Kicker hat mit {kicker_pts} Punkten sowohl den besten RB ({best_rb}) "
+                    f"als auch den besten WR ({best_wr}) im Lineup überboten."
+                )
 
 df["BADGES"] = badges_list
 
