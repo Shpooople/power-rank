@@ -25,7 +25,8 @@
         "att":0,
         "pass_yd":0,
         "rush_yd":0,
-        "td":0
+        "td":0,
+        "my_guy":false
       },
       {
         "name":"Jacoby Brissett",
@@ -35,7 +36,8 @@
         "att":302,
         "pass_yd":2188,
         "rush_yd":116,
-        "td":14
+        "td":14,
+        "my_guy":false
       },
       {
         "name":"Brock Purdy",
@@ -45,7 +47,8 @@
         "att":160,
         "pass_yd":1147,
         "rush_yd":43,
-        "td":10
+        "td":10,
+        "my_guy":false
       }
     ],
     "RB":[
@@ -56,7 +59,8 @@
         "att":66,
         "yd":314,
         "ypc":4.8,
-        "td":2
+        "td":2,
+        "my_guy":false
       },
       {
         "name":"TreVeyon Henderson",
@@ -65,7 +69,8 @@
         "att":129,
         "yd":625,
         "ypc":4.8,
-        "td":6
+        "td":6,
+        "my_guy":false
       },
       {
         "name":"Kyle Monangai",
@@ -74,7 +79,8 @@
         "att":121,
         "yd":591,
         "ypc":4.9,
-        "td":5
+        "td":5,
+        "my_guy":false
       },
       {
         "name":"Derrick Henry",
@@ -83,7 +89,8 @@
         "att":197,
         "yd":931,
         "ypc":4.7,
-        "td":10
+        "td":10,
+        "my_guy":false
       },
       {
         "name":"Rico Dowdle",
@@ -92,7 +99,8 @@
         "att":192,
         "yd":929,
         "ypc":4.8,
-        "td":6
+        "td":6,
+        "my_guy":false
       }
     ],
     "WR":[
@@ -103,7 +111,8 @@
         "targets":63,
         "catches":38,
         "yd":502,
-        "td":4
+        "td":4,
+        "my_guy":false
       },
       {
         "name":"Darnell Mooney",
@@ -112,7 +121,8 @@
         "targets":50,
         "catches":21,
         "yd":323,
-        "td":1
+        "td":1,
+        "my_guy":false
       },
       {
         "name":"Drake London",
@@ -121,7 +131,8 @@
         "targets":94,
         "catches":60,
         "yd":810,
-        "td":6
+        "td":6,
+        "my_guy":false
       },
       {
         "name":"George Pickens",
@@ -130,7 +141,8 @@
         "targets":105,
         "catches":73,
         "yd":1142,
-        "td":8
+        "td":8,
+        "my_guy":true
       }
     ],
     "TE":[
@@ -141,7 +153,8 @@
         "targets":33,
         "catches":28,
         "yd":342,
-        "td":1
+        "td":1,
+        "my_guy":false
       }
     ],
     "K":[
@@ -152,7 +165,8 @@
         "fgm":26,
         "fga":28,
         "xpm":27,
-        "xpa":27
+        "xpa":27,
+        "my_guy":false
       }
     ],
     "DEF":[
@@ -163,7 +177,8 @@
         "sack":28,
         "int":7,
         "fum_rec":7,
-        "td":2
+        "td":2,
+        "my_guy":false
       }
     ],
     "TOP_PERFORMERS":[
@@ -328,7 +343,8 @@
         "att":432,
         "pass_yd":2742,
         "rush_yd":229,
-        "td":22
+        "td":22,
+        "my_guy":false
       }
     ],
     "RB":[
@@ -339,7 +355,8 @@
         "att":71,
         "yd":320,
         "ypc":4.5,
-        "td":4
+        "td":4,
+        "my_guy":false
       },
       {
         "name":"Tony Pollard",
@@ -348,7 +365,8 @@
         "att":150,
         "yd":582,
         "ypc":3.9,
-        "td":2
+        "td":2,
+        "my_guy":false
       },
       {
         "name":"Devin Singletary",
@@ -357,7 +375,8 @@
         "att":86,
         "yd":306,
         "ypc":3.6,
-        "td":3
+        "td":3,
+        "my_guy":false
       },
       {
         "name":"Kyren Williams",
@@ -366,7 +385,8 @@
         "att":183,
         "yd":868,
         "ypc":4.7,
-        "td":10
+        "td":10,
+        "my_guy":false
       }
     ],
     "WR":[
@@ -377,7 +397,8 @@
         "targets":78,
         "catches":50,
         "yd":570,
-        "td":1
+        "td":1,
+        "my_guy":false
       },
       {
         "name":"Terry McLaurin",
@@ -386,7 +407,8 @@
         "targets":35,
         "catches":20,
         "yd":299,
-        "td":2
+        "td":2,
+        "my_guy":false
       },
       {
         "name":"Jerry Jeudy",
@@ -395,7 +417,8 @@
         "targets":80,
         "catches":35,
         "yd":421,
-        "td":1
+        "td":1,
+        "my_guy":false
       },
       {
         "name":"Amon-Ra St. Brown",
@@ -404,7 +427,8 @@
         "targets":108,
         "catches":75,
         "yd":884,
-        "td":9
+        "td":9,
+        "my_guy":false
       },
       {
         "name":"Zay Flowers",
@@ -413,7 +437,8 @@
         "targets":84,
         "catches":60,
         "yd":767,
-        "td":1
+        "td":1,
+        "my_guy":false
       }
     ],
     "TE":[
@@ -424,7 +449,8 @@
         "targets":15,
         "catches":12,
         "yd":164,
-        "td":4
+        "td":4,
+        "my_guy":false
       },
       {
         "name":"George Kittle",
@@ -433,7 +459,8 @@
         "targets":45,
         "catches":37,
         "yd":396,
-        "td":5
+        "td":5,
+        "my_guy":false
       }
     ],
     "K":[
@@ -444,7 +471,8 @@
         "fgm":28,
         "fga":33,
         "xpm":38,
-        "xpa":38
+        "xpa":38,
+        "my_guy":false
       }
     ],
     "DEF":[
@@ -455,7 +483,8 @@
         "sack":27,
         "int":8,
         "fum_rec":7,
-        "td":1
+        "td":1,
+        "my_guy":false
       },
       {
         "name":"Los Angeles Rams",
@@ -464,7 +493,8 @@
         "sack":33,
         "int":12,
         "fum_rec":7,
-        "td":1
+        "td":1,
+        "my_guy":true
       }
     ],
     "TOP_PERFORMERS":[
@@ -633,7 +663,8 @@
         "att":401,
         "pass_yd":3073,
         "rush_yd":-10,
-        "td":32
+        "td":32,
+        "my_guy":false
       },
       {
         "name":"Lamar Jackson",
@@ -643,7 +674,8 @@
         "att":227,
         "pass_yd":1841,
         "rush_yd":264,
-        "td":16
+        "td":16,
+        "my_guy":false
       }
     ],
     "RB":[
@@ -654,7 +686,8 @@
         "att":113,
         "yd":434,
         "ypc":3.8,
-        "td":1
+        "td":1,
+        "my_guy":false
       },
       {
         "name":"Woody Marks",
@@ -663,7 +696,8 @@
         "att":134,
         "yd":486,
         "ypc":3.6,
-        "td":4
+        "td":4,
+        "my_guy":false
       },
       {
         "name":"RJ Harvey",
@@ -672,7 +706,8 @@
         "att":74,
         "yd":279,
         "ypc":3.8,
-        "td":8
+        "td":8,
+        "my_guy":false
       },
       {
         "name":"Joe Mixon",
@@ -681,7 +716,8 @@
         "att":0,
         "yd":0,
         "ypc":0,
-        "td":0
+        "td":0,
+        "my_guy":false
       },
       {
         "name":"Kenneth Walker",
@@ -690,7 +726,8 @@
         "att":160,
         "yd":733,
         "ypc":4.6,
-        "td":4
+        "td":4,
+        "my_guy":false
       },
       {
         "name":"Jaylen Warren",
@@ -699,7 +736,8 @@
         "att":151,
         "yd":639,
         "ypc":4.2,
-        "td":5
+        "td":5,
+        "my_guy":false
       }
     ],
     "WR":[
@@ -710,7 +748,8 @@
         "targets":67,
         "catches":44,
         "yd":550,
-        "td":5
+        "td":5,
+        "my_guy":false
       },
       {
         "name":"Kyle Williams",
@@ -719,7 +758,8 @@
         "targets":13,
         "catches":5,
         "yd":143,
-        "td":2
+        "td":2,
+        "my_guy":false
       },
       {
         "name":"Justin Jefferson",
@@ -728,7 +768,8 @@
         "targets":105,
         "catches":62,
         "yd":799,
-        "td":2
+        "td":2,
+        "my_guy":false
       },
       {
         "name":"Romeo Doubs",
@@ -737,7 +778,8 @@
         "targets":71,
         "catches":45,
         "yd":542,
-        "td":5
+        "td":5,
+        "my_guy":false
       }
     ],
     "TE":[
@@ -748,7 +790,8 @@
         "targets":118,
         "catches":88,
         "yd":879,
-        "td":8
+        "td":8,
+        "my_guy":false
       }
     ],
     "K":[
@@ -759,7 +802,8 @@
         "fgm":22,
         "fga":26,
         "xpm":23,
-        "xpa":24
+        "xpa":24,
+        "my_guy":false
       }
     ],
     "DEF":[
@@ -770,7 +814,8 @@
         "sack":43,
         "int":9,
         "fum_rec":4,
-        "td":2
+        "td":2,
+        "my_guy":false
       },
       {
         "name":"Jacksonville Jaguars",
@@ -779,7 +824,8 @@
         "sack":24,
         "int":13,
         "fum_rec":5,
-        "td":1
+        "td":1,
+        "my_guy":false
       }
     ],
     "TOP_PERFORMERS":[
@@ -942,7 +988,8 @@
         "att":386,
         "pass_yd":3412,
         "rush_yd":319,
-        "td":25
+        "td":25,
+        "my_guy":false
       },
       {
         "name":"Dak Prescott",
@@ -952,7 +999,8 @@
         "att":437,
         "pass_yd":3261,
         "rush_yd":124,
-        "td":27
+        "td":27,
+        "my_guy":false
       }
     ],
     "RB":[
@@ -963,7 +1011,8 @@
         "att":131,
         "yd":471,
         "ypc":3.6,
-        "td":1
+        "td":1,
+        "my_guy":true
       },
       {
         "name":"Aaron Jones",
@@ -972,7 +1021,8 @@
         "att":67,
         "yd":300,
         "ypc":4.5,
-        "td":2
+        "td":2,
+        "my_guy":false
       },
       {
         "name":"James Cook",
@@ -981,7 +1031,8 @@
         "att":231,
         "yd":1228,
         "ypc":5.3,
-        "td":9
+        "td":9,
+        "my_guy":false
       }
     ],
     "WR":[
@@ -992,7 +1043,8 @@
         "targets":80,
         "catches":50,
         "yd":711,
-        "td":5
+        "td":5,
+        "my_guy":false
       },
       {
         "name":"Deebo Samuel",
@@ -1001,7 +1053,8 @@
         "targets":75,
         "catches":58,
         "yd":534,
-        "td":6
+        "td":6,
+        "my_guy":false
       },
       {
         "name":"CeeDee Lamb",
@@ -1010,7 +1063,8 @@
         "targets":81,
         "catches":51,
         "yd":744,
-        "td":3
+        "td":3,
+        "my_guy":false
       },
       {
         "name":"Rashid Shaheed",
@@ -1019,7 +1073,8 @@
         "targets":77,
         "catches":48,
         "yd":536,
-        "td":2
+        "td":2,
+        "my_guy":false
       },
       {
         "name":"Josh Downs",
@@ -1028,7 +1083,8 @@
         "targets":60,
         "catches":40,
         "yd":370,
-        "td":3
+        "td":3,
+        "my_guy":false
       }
     ],
     "TE":[
@@ -1039,7 +1095,8 @@
         "targets":68,
         "catches":42,
         "yd":456,
-        "td":5
+        "td":5,
+        "my_guy":false
       },
       {
         "name":"Taysom Hill",
@@ -1048,7 +1105,8 @@
         "targets":5,
         "catches":4,
         "yd":23,
-        "td":1
+        "td":1,
+        "my_guy":false
       },
       {
         "name":"Jake Ferguson",
@@ -1057,7 +1115,8 @@
         "targets":83,
         "catches":70,
         "yd":496,
-        "td":7
+        "td":7,
+        "my_guy":false
       }
     ],
     "K":[
@@ -1068,7 +1127,8 @@
         "fgm":19,
         "fga":23,
         "xpm":29,
-        "xpa":30
+        "xpa":30,
+        "my_guy":false
       }
     ],
     "DEF":[
@@ -1079,7 +1139,8 @@
         "sack":16,
         "int":5,
         "fum_rec":8,
-        "td":0
+        "td":0,
+        "my_guy":false
       }
     ],
     "TOP_PERFORMERS":[
@@ -1245,7 +1306,8 @@
         "att":361,
         "pass_yd":2794,
         "rush_yd":164,
-        "td":19
+        "td":19,
+        "my_guy":false
       }
     ],
     "RB":[
@@ -1256,7 +1318,8 @@
         "att":42,
         "yd":112,
         "ypc":2.7,
-        "td":2
+        "td":2,
+        "my_guy":false
       },
       {
         "name":"Josh Jacobs",
@@ -1265,7 +1328,8 @@
         "att":186,
         "yd":731,
         "ypc":3.9,
-        "td":11
+        "td":11,
+        "my_guy":false
       },
       {
         "name":"Tyler Allgeier",
@@ -1274,7 +1338,8 @@
         "att":97,
         "yd":344,
         "ypc":3.5,
-        "td":8
+        "td":8,
+        "my_guy":false
       },
       {
         "name":"Sean Tucker",
@@ -1283,7 +1348,8 @@
         "att":65,
         "yd":277,
         "ypc":4.3,
-        "td":5
+        "td":5,
+        "my_guy":false
       }
     ],
     "WR":[
@@ -1294,7 +1360,8 @@
         "targets":69,
         "catches":40,
         "yd":594,
-        "td":4
+        "td":4,
+        "my_guy":false
       },
       {
         "name":"Keenan Allen",
@@ -1303,7 +1370,8 @@
         "targets":91,
         "catches":60,
         "yd":622,
-        "td":4
+        "td":4,
+        "my_guy":false
       },
       {
         "name":"Chris Godwin",
@@ -1312,7 +1380,8 @@
         "targets":23,
         "catches":11,
         "yd":139,
-        "td":0
+        "td":0,
+        "my_guy":true
       },
       {
         "name":"Darius Slayton",
@@ -1321,7 +1390,8 @@
         "targets":39,
         "catches":26,
         "yd":407,
-        "td":1
+        "td":1,
+        "my_guy":false
       },
       {
         "name":"Nico Collins",
@@ -1330,7 +1400,8 @@
         "targets":95,
         "catches":57,
         "yd":795,
-        "td":5
+        "td":5,
+        "my_guy":false
       },
       {
         "name":"Puka Nacua",
@@ -1339,7 +1410,8 @@
         "targets":107,
         "catches":86,
         "yd":1019,
-        "td":5
+        "td":5,
+        "my_guy":false
       }
     ],
     "TE":[
@@ -1350,7 +1422,8 @@
         "targets":74,
         "catches":51,
         "yd":505,
-        "td":3
+        "td":3,
+        "my_guy":false
       },
       {
         "name":"Hunter Henry",
@@ -1359,7 +1432,8 @@
         "targets":69,
         "catches":45,
         "yd":610,
-        "td":5
+        "td":5,
+        "my_guy":false
       }
     ],
     "K":[
@@ -1370,7 +1444,8 @@
         "fgm":22,
         "fga":24,
         "xpm":29,
-        "xpa":30
+        "xpa":30,
+        "my_guy":false
       }
     ],
     "DEF":[
@@ -1381,7 +1456,8 @@
         "sack":25,
         "int":4,
         "fum_rec":8,
-        "td":0
+        "td":0,
+        "my_guy":false
       }
     ],
     "TOP_PERFORMERS":[
@@ -1540,7 +1616,8 @@
         "att":378,
         "pass_yd":3025,
         "rush_yd":46,
-        "td":25
+        "td":25,
+        "my_guy":false
       },
       {
         "name":"Baker Mayfield",
@@ -1550,7 +1627,8 @@
         "att":387,
         "pass_yd":2600,
         "rush_yd":243,
-        "td":20
+        "td":20,
+        "my_guy":false
       }
     ],
     "RB":[
@@ -1561,7 +1639,8 @@
         "att":3,
         "yd":3,
         "ypc":1.0,
-        "td":1
+        "td":1,
+        "my_guy":false
       },
       {
         "name":"Devin Neal",
@@ -1570,7 +1649,8 @@
         "att":31,
         "yd":108,
         "ypc":3.5,
-        "td":0
+        "td":0,
+        "my_guy":false
       },
       {
         "name":"Jacory Croskey-Merritt",
@@ -1579,7 +1659,8 @@
         "att":118,
         "yd":518,
         "ypc":4.4,
-        "td":4
+        "td":4,
+        "my_guy":false
       },
       {
         "name":"D'Andre Swift",
@@ -1588,7 +1669,8 @@
         "att":160,
         "yd":774,
         "ypc":4.8,
-        "td":6
+        "td":6,
+        "my_guy":false
       },
       {
         "name":"Michael Carter",
@@ -1597,7 +1679,8 @@
         "att":50,
         "yd":152,
         "ypc":3.0,
-        "td":1
+        "td":1,
+        "my_guy":false
       },
       {
         "name":"Breece Hall",
@@ -1606,7 +1689,8 @@
         "att":187,
         "yd":834,
         "ypc":4.5,
-        "td":4
+        "td":4,
+        "my_guy":false
       },
       {
         "name":"Isiah Pacheco",
@@ -1615,7 +1699,8 @@
         "att":81,
         "yd":345,
         "ypc":4.3,
-        "td":2
+        "td":2,
+        "my_guy":false
       },
       {
         "name":"Tyjae Spears",
@@ -1624,7 +1709,8 @@
         "att":39,
         "yd":158,
         "ypc":4.1,
-        "td":1
+        "td":1,
+        "my_guy":false
       }
     ],
     "WR":[
@@ -1635,7 +1721,8 @@
         "targets":101,
         "catches":52,
         "yd":791,
-        "td":6
+        "td":6,
+        "my_guy":false
       },
       {
         "name":"Michael Pittman",
@@ -1644,7 +1731,8 @@
         "targets":82,
         "catches":60,
         "yd":620,
-        "td":7
+        "td":7,
+        "my_guy":false
       },
       {
         "name":"Garrett Wilson",
@@ -1653,7 +1741,8 @@
         "targets":59,
         "catches":36,
         "yd":395,
-        "td":4
+        "td":4,
+        "my_guy":false
       },
       {
         "name":"Quentin Johnston",
@@ -1662,7 +1751,8 @@
         "targets":69,
         "catches":40,
         "yd":525,
-        "td":7
+        "td":7,
+        "my_guy":false
       }
     ],
     "TE":[
@@ -1673,7 +1763,8 @@
         "targets":44,
         "catches":31,
         "yd":406,
-        "td":3
+        "td":3,
+        "my_guy":false
       }
     ],
     "K":[
@@ -1684,7 +1775,8 @@
         "fgm":16,
         "fga":20,
         "xpm":40,
-        "xpa":42
+        "xpa":42,
+        "my_guy":false
       }
     ],
     "DEF":[
@@ -1695,7 +1787,8 @@
         "sack":40,
         "int":13,
         "fum_rec":4,
-        "td":3
+        "td":3,
+        "my_guy":false
       }
     ],
     "TOP_PERFORMERS":[
@@ -1804,7 +1897,7 @@
       {
         "icon":"hospital",
         "label":"The Hospital",
-        "description":"6 verletzte Spieler im Kader (Out\/IR\/Questionable\/Doubtful) - die größte Krankenstation der Liga."
+        "description":"7 verletzte Spieler im Kader (Out\/IR\/Questionable\/Doubtful) - die größte Krankenstation der Liga."
       },
       {
         "icon":"homer",
@@ -1866,7 +1959,8 @@
         "att":342,
         "pass_yd":2514,
         "rush_yd":329,
-        "td":27
+        "td":27,
+        "my_guy":false
       }
     ],
     "RB":[
@@ -1877,7 +1971,8 @@
         "att":89,
         "yd":422,
         "ypc":4.7,
-        "td":2
+        "td":2,
+        "my_guy":false
       },
       {
         "name":"Ashton Jeanty",
@@ -1886,7 +1981,8 @@
         "att":181,
         "yd":635,
         "ypc":3.5,
-        "td":8
+        "td":8,
+        "my_guy":false
       },
       {
         "name":"Jonathan Taylor",
@@ -1895,7 +1991,8 @@
         "att":226,
         "yd":1282,
         "ypc":5.7,
-        "td":17
+        "td":17,
+        "my_guy":false
       },
       {
         "name":"Jordan Mason",
@@ -1904,7 +2001,8 @@
         "att":122,
         "yd":578,
         "ypc":4.7,
-        "td":5
+        "td":5,
+        "my_guy":false
       }
     ],
     "WR":[
@@ -1915,7 +2013,8 @@
         "targets":90,
         "catches":44,
         "yd":661,
-        "td":6
+        "td":6,
+        "my_guy":false
       },
       {
         "name":"Luther Burden",
@@ -1924,7 +2023,8 @@
         "targets":34,
         "catches":26,
         "yd":328,
-        "td":1
+        "td":1,
+        "my_guy":false
       },
       {
         "name":"Mike Evans",
@@ -1933,7 +2033,8 @@
         "targets":31,
         "catches":14,
         "yd":140,
-        "td":1
+        "td":1,
+        "my_guy":false
       },
       {
         "name":"Jauan Jennings",
@@ -1942,7 +2043,8 @@
         "targets":69,
         "catches":41,
         "yd":458,
-        "td":5
+        "td":5,
+        "my_guy":false
       },
       {
         "name":"Wan'Dale Robinson",
@@ -1951,7 +2053,8 @@
         "targets":110,
         "catches":73,
         "yd":828,
-        "td":3
+        "td":3,
+        "my_guy":false
       },
       {
         "name":"Jameson Williams",
@@ -1960,7 +2063,8 @@
         "targets":63,
         "catches":38,
         "yd":706,
-        "td":6
+        "td":6,
+        "my_guy":false
       }
     ],
     "TE":[
@@ -1971,7 +2075,8 @@
         "targets":36,
         "catches":29,
         "yd":448,
-        "td":4
+        "td":4,
+        "my_guy":false
       },
       {
         "name":"Colby Parkinson",
@@ -1980,7 +2085,8 @@
         "targets":26,
         "catches":23,
         "yd":191,
-        "td":3
+        "td":3,
+        "my_guy":false
       }
     ],
     "K":[
@@ -1991,7 +2097,8 @@
         "fgm":22,
         "fga":22,
         "xpm":18,
-        "xpa":22
+        "xpa":22,
+        "my_guy":false
       }
     ],
     "DEF":[
@@ -2002,7 +2109,8 @@
         "sack":32,
         "int":9,
         "fum_rec":4,
-        "td":0
+        "td":0,
+        "my_guy":false
       },
       {
         "name":"Tampa Bay Buccaneers",
@@ -2011,7 +2119,8 @@
         "sack":29,
         "int":11,
         "fum_rec":6,
-        "td":2
+        "td":2,
+        "my_guy":true
       }
     ],
     "TOP_PERFORMERS":[
@@ -2175,7 +2284,8 @@
         "att":350,
         "pass_yd":2832,
         "rush_yd":409,
-        "td":30
+        "td":30,
+        "my_guy":false
       }
     ],
     "RB":[
@@ -2186,7 +2296,8 @@
         "att":121,
         "yd":543,
         "ypc":4.5,
-        "td":4
+        "td":4,
+        "my_guy":false
       },
       {
         "name":"Quinshon Judkins",
@@ -2195,7 +2306,8 @@
         "att":196,
         "yd":758,
         "ypc":3.9,
-        "td":7
+        "td":7,
+        "my_guy":false
       },
       {
         "name":"Christian McCaffrey",
@@ -2204,7 +2316,8 @@
         "att":237,
         "yd":849,
         "ypc":3.6,
-        "td":13
+        "td":13,
+        "my_guy":false
       },
       {
         "name":"Kenny Gainwell",
@@ -2213,7 +2326,8 @@
         "att":76,
         "yd":356,
         "ypc":4.7,
-        "td":5
+        "td":5,
+        "my_guy":false
       }
     ],
     "WR":[
@@ -2224,7 +2338,8 @@
         "targets":84,
         "catches":48,
         "yd":530,
-        "td":5
+        "td":5,
+        "my_guy":false
       },
       {
         "name":"Chimere Dike",
@@ -2233,7 +2348,8 @@
         "targets":47,
         "catches":29,
         "yd":260,
-        "td":2
+        "td":2,
+        "my_guy":false
       },
       {
         "name":"A.J. Brown",
@@ -2242,7 +2358,8 @@
         "targets":87,
         "catches":56,
         "yd":699,
-        "td":6
+        "td":6,
+        "my_guy":false
       },
       {
         "name":"Alec Pierce",
@@ -2251,7 +2368,8 @@
         "targets":59,
         "catches":33,
         "yd":689,
-        "td":2
+        "td":2,
+        "my_guy":false
       },
       {
         "name":"Parker Washington",
@@ -2260,7 +2378,8 @@
         "targets":63,
         "catches":36,
         "yd":447,
-        "td":3
+        "td":3,
+        "my_guy":false
       },
       {
         "name":"Kayshon Boutte",
@@ -2269,7 +2388,8 @@
         "targets":38,
         "catches":29,
         "yd":481,
-        "td":6
+        "td":6,
+        "my_guy":false
       },
       {
         "name":"Jordan Addison",
@@ -2278,7 +2398,8 @@
         "targets":63,
         "catches":33,
         "yd":448,
-        "td":3
+        "td":3,
+        "my_guy":false
       }
     ],
     "TE":[
@@ -2289,7 +2410,8 @@
         "targets":78,
         "catches":59,
         "yd":719,
-        "td":5
+        "td":5,
+        "my_guy":false
       },
       {
         "name":"Juwan Johnson",
@@ -2298,7 +2420,8 @@
         "targets":76,
         "catches":54,
         "yd":576,
-        "td":3
+        "td":3,
+        "my_guy":false
       }
     ],
     "K":[
@@ -2309,7 +2432,8 @@
         "fgm":21,
         "fga":24,
         "xpm":28,
-        "xpa":32
+        "xpa":32,
+        "my_guy":false
       }
     ],
     "DEF":[
@@ -2320,7 +2444,8 @@
         "sack":34,
         "int":11,
         "fum_rec":1,
-        "td":0
+        "td":0,
+        "my_guy":false
       }
     ],
     "TOP_PERFORMERS":[
@@ -2479,7 +2604,8 @@
         "att":396,
         "pass_yd":2842,
         "rush_yd":353,
-        "td":22
+        "td":22,
+        "my_guy":false
       },
       {
         "name":"Trevor Lawrence",
@@ -2489,7 +2615,8 @@
         "att":395,
         "pass_yd":2636,
         "rush_yd":235,
-        "td":21
+        "td":21,
+        "my_guy":false
       }
     ],
     "RB":[
@@ -2500,7 +2627,8 @@
         "att":101,
         "yd":324,
         "ypc":3.2,
-        "td":3
+        "td":3,
+        "my_guy":false
       },
       {
         "name":"Chase Brown",
@@ -2509,7 +2637,8 @@
         "att":160,
         "yd":704,
         "ypc":4.4,
-        "td":3
+        "td":3,
+        "my_guy":false
       },
       {
         "name":"Bijan Robinson",
@@ -2518,7 +2647,8 @@
         "att":195,
         "yd":995,
         "ypc":5.1,
-        "td":7
+        "td":7,
+        "my_guy":false
       },
       {
         "name":"Zach Charbonnet",
@@ -2527,7 +2657,8 @@
         "att":125,
         "yd":437,
         "ypc":3.5,
-        "td":8
+        "td":8,
+        "my_guy":false
       }
     ],
     "WR":[
@@ -2538,7 +2669,8 @@
         "targets":59,
         "catches":35,
         "yd":401,
-        "td":1
+        "td":1,
+        "my_guy":false
       },
       {
         "name":"Brian Thomas",
@@ -2547,7 +2679,8 @@
         "targets":63,
         "catches":32,
         "yd":448,
-        "td":2
+        "td":2,
+        "my_guy":false
       },
       {
         "name":"Tetairoa McMillan",
@@ -2556,7 +2689,8 @@
         "targets":98,
         "catches":57,
         "yd":826,
-        "td":6
+        "td":6,
+        "my_guy":false
       },
       {
         "name":"Stefon Diggs",
@@ -2565,7 +2699,8 @@
         "targets":79,
         "catches":64,
         "yd":705,
-        "td":3
+        "td":3,
+        "my_guy":false
       },
       {
         "name":"Christian Watson",
@@ -2574,7 +2709,8 @@
         "targets":34,
         "catches":21,
         "yd":363,
-        "td":3
+        "td":3,
+        "my_guy":false
       }
     ],
     "TE":[
@@ -2585,7 +2721,8 @@
         "targets":78,
         "catches":58,
         "yd":684,
-        "td":5
+        "td":5,
+        "my_guy":false
       }
     ],
     "K":[
@@ -2596,7 +2733,8 @@
         "fgm":27,
         "fga":30,
         "xpm":16,
-        "xpa":16
+        "xpa":16,
+        "my_guy":false
       }
     ],
     "DEF":[
@@ -2607,7 +2745,8 @@
         "sack":41,
         "int":9,
         "fum_rec":4,
-        "td":0
+        "td":0,
+        "my_guy":false
       },
       {
         "name":"Pittsburgh Steelers",
@@ -2616,7 +2755,8 @@
         "sack":34,
         "int":10,
         "fum_rec":10,
-        "td":3
+        "td":3,
+        "my_guy":false
       }
     ],
     "TOP_PERFORMERS":[
@@ -2771,7 +2911,8 @@
         "att":228,
         "pass_yd":1556,
         "rush_yd":337,
-        "td":18
+        "td":18,
+        "my_guy":false
       },
       {
         "name":"Daniel Jones",
@@ -2781,7 +2922,8 @@
         "att":377,
         "pass_yd":3041,
         "rush_yd":160,
-        "td":24
+        "td":24,
+        "my_guy":false
       }
     ],
     "RB":[
@@ -2792,7 +2934,8 @@
         "att":0,
         "yd":0,
         "ypc":0,
-        "td":0
+        "td":0,
+        "my_guy":false
       },
       {
         "name":"Kareem Hunt",
@@ -2801,7 +2944,8 @@
         "att":130,
         "yd":515,
         "ypc":4.0,
-        "td":8
+        "td":8,
+        "my_guy":false
       },
       {
         "name":"Saquon Barkley",
@@ -2810,7 +2954,8 @@
         "att":198,
         "yd":740,
         "ypc":3.7,
-        "td":6
+        "td":6,
+        "my_guy":false
       },
       {
         "name":"Zonovan Knight",
@@ -2819,7 +2964,8 @@
         "att":74,
         "yd":255,
         "ypc":3.4,
-        "td":5
+        "td":5,
+        "my_guy":false
       },
       {
         "name":"De'Von Achane",
@@ -2828,7 +2974,8 @@
         "att":186,
         "yd":1034,
         "ypc":5.6,
-        "td":10
+        "td":10,
+        "my_guy":false
       }
     ],
     "WR":[
@@ -2839,7 +2986,8 @@
         "targets":25,
         "catches":18,
         "yd":224,
-        "td":1
+        "td":1,
+        "my_guy":false
       },
       {
         "name":"Jayden Higgins",
@@ -2848,7 +2996,8 @@
         "targets":50,
         "catches":32,
         "yd":359,
-        "td":4
+        "td":4,
+        "my_guy":false
       },
       {
         "name":"Jakobi Meyers",
@@ -2857,7 +3006,8 @@
         "targets":70,
         "catches":51,
         "yd":597,
-        "td":2
+        "td":2,
+        "my_guy":false
       },
       {
         "name":"DeVonta Smith",
@@ -2866,7 +3016,8 @@
         "targets":86,
         "catches":60,
         "yd":802,
-        "td":3
+        "td":3,
+        "my_guy":false
       },
       {
         "name":"Jaylen Waddle",
@@ -2875,7 +3026,8 @@
         "targets":79,
         "catches":52,
         "yd":762,
-        "td":5
+        "td":5,
+        "my_guy":false
       }
     ],
     "TE":[
@@ -2886,7 +3038,8 @@
         "targets":68,
         "catches":49,
         "yd":573,
-        "td":5
+        "td":5,
+        "my_guy":false
       },
       {
         "name":"Oronde Gadsden",
@@ -2895,7 +3048,8 @@
         "targets":51,
         "catches":38,
         "yd":534,
-        "td":2
+        "td":2,
+        "my_guy":false
       }
     ],
     "K":[
@@ -2906,7 +3060,8 @@
         "fgm":23,
         "fga":26,
         "xpm":27,
-        "xpa":27
+        "xpa":27,
+        "my_guy":false
       }
     ],
     "DEF":[
@@ -2917,7 +3072,8 @@
         "sack":34,
         "int":12,
         "fum_rec":6,
-        "td":2
+        "td":2,
+        "my_guy":false
       },
       {
         "name":"Philadelphia Eagles",
@@ -2926,7 +3082,8 @@
         "sack":24,
         "int":8,
         "fum_rec":5,
-        "td":1
+        "td":1,
+        "my_guy":false
       }
     ],
     "TOP_PERFORMERS":[
@@ -3091,7 +3248,8 @@
         "att":82,
         "pass_yd":450,
         "rush_yd":11,
-        "td":4
+        "td":4,
+        "my_guy":false
       }
     ],
     "RB":[
@@ -3102,7 +3260,8 @@
         "att":123,
         "yd":543,
         "ypc":4.4,
-        "td":6
+        "td":6,
+        "my_guy":false
       },
       {
         "name":"Travis Etienne",
@@ -3111,7 +3270,8 @@
         "att":181,
         "yd":843,
         "ypc":4.7,
-        "td":7
+        "td":7,
+        "my_guy":false
       },
       {
         "name":"Javonte Williams",
@@ -3120,7 +3280,8 @@
         "att":198,
         "yd":955,
         "ypc":4.8,
-        "td":10
+        "td":10,
+        "my_guy":false
       },
       {
         "name":"Malik Davis",
@@ -3129,7 +3290,8 @@
         "att":13,
         "yd":97,
         "ypc":7.5,
-        "td":1
+        "td":1,
+        "my_guy":false
       }
     ],
     "WR":[
@@ -3140,7 +3302,8 @@
         "targets":59,
         "catches":42,
         "yd":486,
-        "td":6
+        "td":6,
+        "my_guy":false
       },
       {
         "name":"Adonai Mitchell",
@@ -3149,7 +3312,8 @@
         "targets":41,
         "catches":20,
         "yd":306,
-        "td":1
+        "td":1,
+        "my_guy":false
       },
       {
         "name":"Ladd McConkey",
@@ -3158,7 +3322,8 @@
         "targets":90,
         "catches":58,
         "yd":683,
-        "td":5
+        "td":5,
+        "my_guy":false
       },
       {
         "name":"Ja'Marr Chase",
@@ -3167,7 +3332,8 @@
         "targets":131,
         "catches":86,
         "yd":971,
-        "td":5
+        "td":5,
+        "my_guy":false
       },
       {
         "name":"Jaxon Smith-Njigba",
@@ -3176,7 +3342,8 @@
         "targets":111,
         "catches":82,
         "yd":1336,
-        "td":7
+        "td":7,
+        "my_guy":false
       }
     ],
     "TE":[
@@ -3187,7 +3354,8 @@
         "targets":56,
         "catches":40,
         "yd":403,
-        "td":7
+        "td":7,
+        "my_guy":false
       },
       {
         "name":"Kyle Pitts",
@@ -3196,7 +3364,8 @@
         "targets":75,
         "catches":56,
         "yd":541,
-        "td":1
+        "td":1,
+        "my_guy":false
       }
     ],
     "K":[
@@ -3207,7 +3376,8 @@
         "fgm":22,
         "fga":24,
         "xpm":37,
-        "xpa":38
+        "xpa":38,
+        "my_guy":false
       }
     ],
     "DEF":[
@@ -3218,7 +3388,8 @@
         "sack":51,
         "int":7,
         "fum_rec":2,
-        "td":0
+        "td":0,
+        "my_guy":false
       },
       {
         "name":"New England Patriots",
@@ -3227,7 +3398,8 @@
         "sack":27,
         "int":8,
         "fum_rec":5,
-        "td":2
+        "td":2,
+        "my_guy":false
       }
     ],
     "TOP_PERFORMERS":[
@@ -3403,7 +3575,8 @@
         "att":441,
         "pass_yd":3238,
         "rush_yd":348,
-        "td":26
+        "td":26,
+        "my_guy":false
       },
       {
         "name":"Aaron Rodgers",
@@ -3413,7 +3586,8 @@
         "att":310,
         "pass_yd":2086,
         "rush_yd":26,
-        "td":19
+        "td":19,
+        "my_guy":false
       }
     ],
     "RB":[
@@ -3424,7 +3598,8 @@
         "att":85,
         "yd":341,
         "ypc":4.0,
-        "td":3
+        "td":3,
+        "my_guy":false
       },
       {
         "name":"Bucky Irving",
@@ -3433,7 +3608,8 @@
         "att":88,
         "yd":298,
         "ypc":3.4,
-        "td":3
+        "td":3,
+        "my_guy":false
       },
       {
         "name":"Samaje Perine",
@@ -3442,7 +3618,8 @@
         "att":46,
         "yd":237,
         "ypc":5.2,
-        "td":1
+        "td":1,
+        "my_guy":false
       },
       {
         "name":"Jahmyr Gibbs",
@@ -3451,7 +3628,8 @@
         "att":175,
         "yd":1019,
         "ypc":5.8,
-        "td":13
+        "td":13,
+        "my_guy":false
       }
     ],
     "WR":[
@@ -3462,7 +3640,8 @@
         "targets":99,
         "catches":52,
         "yd":689,
-        "td":14
+        "td":14,
+        "my_guy":false
       },
       {
         "name":"Tee Higgins",
@@ -3471,7 +3650,8 @@
         "targets":70,
         "catches":40,
         "yd":575,
-        "td":7
+        "td":7,
+        "my_guy":false
       },
       {
         "name":"Calvin Austin",
@@ -3480,7 +3660,8 @@
         "targets":44,
         "catches":26,
         "yd":278,
-        "td":2
+        "td":2,
+        "my_guy":false
       },
       {
         "name":"Khalil Shakir",
@@ -3489,7 +3670,8 @@
         "targets":75,
         "catches":55,
         "yd":569,
-        "td":3
+        "td":3,
+        "my_guy":false
       },
       {
         "name":"Chris Olave",
@@ -3498,7 +3680,8 @@
         "targets":115,
         "catches":73,
         "yd":781,
-        "td":5
+        "td":5,
+        "my_guy":false
       }
     ],
     "TE":[
@@ -3509,7 +3692,8 @@
         "targets":80,
         "catches":59,
         "yd":552,
-        "td":1
+        "td":1,
+        "my_guy":false
       },
       {
         "name":"T.J. Hockenson",
@@ -3518,7 +3702,8 @@
         "targets":57,
         "catches":44,
         "yd":358,
-        "td":2
+        "td":2,
+        "my_guy":false
       }
     ],
     "K":[
@@ -3529,7 +3714,8 @@
         "fgm":17,
         "fga":19,
         "xpm":34,
-        "xpa":37
+        "xpa":37,
+        "my_guy":false
       }
     ],
     "DEF":[
@@ -3540,7 +3726,8 @@
         "sack":32,
         "int":6,
         "fum_rec":4,
-        "td":0
+        "td":0,
+        "my_guy":false
       }
     ],
     "TOP_PERFORMERS":[
