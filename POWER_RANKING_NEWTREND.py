@@ -231,7 +231,7 @@ def team_logo_url(pid):
     # und haben kein Spielerfoto - stattdessen das Team-Logo verwenden.
     return f"https://sleepercdn.com/images/team_logos/nfl/{pid.lower()}.png"
 
-def build_roster_entries(ids, names, extra_stats_fn=None, image_url_fn=None):
+def build_roster_entries(ids, names, extra_stats_fn=None, image_url_fn=None, my_guy_fn=None):
     entries = []
     for pid, player_name in zip(ids, names):
         image_url = image_url_fn(pid) if image_url_fn else f"https://sleepercdn.com/content/nfl/players/{pid}.jpg"
@@ -242,6 +242,8 @@ def build_roster_entries(ids, names, extra_stats_fn=None, image_url_fn=None):
         }
         if extra_stats_fn:
             entry.update(extra_stats_fn(pid))
+        if my_guy_fn:
+            entry["my_guy"] = my_guy_fn(pid)
         entries.append(entry)
     return entries
 
@@ -332,6 +334,57 @@ last_week_opponent_map = build_opponent_map(current_week_matchups)  # current_we
 this_week_opponent_map = build_opponent_map(this_week_matchups)
 
 roster_id_to_owner = {r['roster_id']: r['owner_id'] for r in rosters}
+
+# --- NEU: "My Guy" - Spieler, die schon mehrfach beim selben Team (Owner)
+# im Roster waren. Eine Saison zählt nur, wenn der Spieler dort mindestens
+# 3 Wochen im Roster stand. Ab 3 qualifizierenden Saisons gilt er als
+# "My Guy". Läuft über die komplette Liga-Historie via previous_league_id
+# (bei dieser Liga bis 2021 zurück) - pro Saison ein Rosters-Call plus ein
+# Matchups-Call pro Woche, macht insgesamt einige Dutzend zusätzliche
+# API-Calls, aber alle ohne Auth-Limit.
+def fetch_json_safe(url):
+    try:
+        r = requests.get(url)
+        return r.json()
+    except Exception:
+        return None
+
+season_league_ids = [league_id]
+_walk_id = league_id
+while True:
+    _info = fetch_json_safe(f"https://api.sleeper.app/v1/league/{_walk_id}")
+    _prev = _info.get("previous_league_id") if _info else None
+    if not _prev:
+        break
+    season_league_ids.append(_prev)
+    _walk_id = _prev
+
+print(f"My Guy: {len(season_league_ids)} Saison(s) in der Liga-Historie gefunden.")
+
+qualifying_seasons_count = {}  # (owner_id, player_id) -> Anzahl qualifizierender Saisons
+for s_league_id in season_league_ids:
+    s_rosters = fetch_json_safe(f"https://api.sleeper.app/v1/league/{s_league_id}/rosters") or []
+    s_roster_to_owner = {r['roster_id']: r['owner_id'] for r in s_rosters}
+
+    weeks_on_roster = {}  # (owner_id, player_id) -> Anzahl Wochen diese Saison
+    for wk in range(1, 18):  # großzügig; nicht existierende Wochen liefern einfach leer
+        s_matchups = fetch_json_safe(f"https://api.sleeper.app/v1/league/{s_league_id}/matchups/{wk}")
+        if not s_matchups:
+            continue
+        for m in s_matchups:
+            owner_id = s_roster_to_owner.get(m.get('roster_id'))
+            if not owner_id:
+                continue
+            for pid in (m.get('players') or []):
+                key = (owner_id, pid)
+                weeks_on_roster[key] = weeks_on_roster.get(key, 0) + 1
+
+    for (owner_id, pid), wk_count in weeks_on_roster.items():
+        if wk_count >= 3:
+            qualifying_seasons_count[(owner_id, pid)] = qualifying_seasons_count.get((owner_id, pid), 0) + 1
+
+def is_my_guy(owner_id, pid):
+    return qualifying_seasons_count.get((owner_id, pid), 0) >= 3
 
 def team_display(roster_id):
     owner_id = roster_id_to_owner.get(roster_id)
@@ -447,12 +500,12 @@ for team in rosters:
     injury_counts.append(injury_count)
     homer_team_counts_list.append(nfl_team_counts)
 
-    qb_list.append(build_roster_entries(qb_ids, qb_roster, qb_stats))
-    rb_list.append(build_roster_entries(rb_ids, rb_roster, rb_stats))
-    wr_list.append(build_roster_entries(wr_ids, wr_roster, wr_stats))
-    te_list.append(build_roster_entries(te_ids, te_roster, wr_stats))
-    k_list.append(build_roster_entries(k_ids, k_roster, k_stats))
-    def_list.append(build_roster_entries(def_ids, def_roster, def_stats, image_url_fn=team_logo_url))
+    qb_list.append(build_roster_entries(qb_ids, qb_roster, qb_stats, my_guy_fn=lambda pid: is_my_guy(user_id, pid)))
+    rb_list.append(build_roster_entries(rb_ids, rb_roster, rb_stats, my_guy_fn=lambda pid: is_my_guy(user_id, pid)))
+    wr_list.append(build_roster_entries(wr_ids, wr_roster, wr_stats, my_guy_fn=lambda pid: is_my_guy(user_id, pid)))
+    te_list.append(build_roster_entries(te_ids, te_roster, wr_stats, my_guy_fn=lambda pid: is_my_guy(user_id, pid)))
+    k_list.append(build_roster_entries(k_ids, k_roster, k_stats, my_guy_fn=lambda pid: is_my_guy(user_id, pid)))
+    def_list.append(build_roster_entries(def_ids, def_roster, def_stats, image_url_fn=team_logo_url, my_guy_fn=lambda pid: is_my_guy(user_id, pid)))
 
     # Positionsstärke jetzt auf Basis von Punkten pro Spiel (PPG) statt
     # Saison-Gesamtpunkten - fairer bei Verletzungspausen/späten Einstiegen.
