@@ -26,12 +26,15 @@ const colorForRank = (rank) => {
 
 // NEU: dunklere, aber farblich ähnliche Variante einer Hex-Farbe - für die
 // Bank-Balken (Team-Depth), damit sie zum jeweiligen Positions-Balken passen
-const darkenColor = (hex, amount = 0.4) => {
+// NEU: dunklere, aber farblich ähnliche Variante einer Hex-Farbe, mit
+// einstellbarer Transparenz - für das Fade-in der Zahlen in den
+// Positionsstärke-Balken
+const darkenColorAlpha = (hex, amount, alpha) => {
   const h = hex.replace('#', '');
   const r = Math.round(parseInt(h.substring(0, 2), 16) * (1 - amount));
   const g = Math.round(parseInt(h.substring(2, 4), 16) * (1 - amount));
   const b = Math.round(parseInt(h.substring(4, 6), 16) * (1 - amount));
-  return `rgb(${r}, ${g}, ${b})`;
+  return `rgba(${r}, ${g}, ${b}, ${alpha})`;
 };
 
 // NEU: Farbverlauf für den Saisonverlauf-Chart, entlang derselben Skala wie
@@ -208,7 +211,10 @@ const RosterPositionGroup = ({ label, players }) => {
               onError={(e) => { e.target.src = './thf_color.svg'; }}
             />
             <div className="roster-player-details">
-              <span className={`roster-player-name${p.my_guy ? ' my-guy' : ''}`}>
+              <span
+                className={`roster-player-name${p.my_guy ? ' my-guy' : ''}`}
+                title={p.my_guy ? `Schon ${p.my_guy_seasons}. Saison bei diesem Team` : undefined}
+              >
                 {p.name}{p.my_guy ? ' — My Guy' : ''}
               </span>
               {statLine && <span className="roster-player-stats">{statLine}</span>}
@@ -314,13 +320,13 @@ const TeamSection = ({ team }) => {
   const hasStrengthData = strengthValues.some((v) => v != null);
 
   const barColors = strengthRanks.map(colorForRank);
-  const benchBarColors = barColors.map((c) => darkenColor(c, 0.45));
 
   // NEU: Balken wachsen + Linie "fährt" sichtbar von Punkt zu Punkt, sobald
   // die Charts zum ersten Mal ins Bild scrollen (ein gemeinsamer Observer,
   // Animation läuft per requestAnimationFrame statt fester Zeitschritte -
   // dadurch flüssig statt abgehackt)
   const [barsRevealed, setBarsRevealed] = useState(false);
+  const [numbersOpacity, setNumbersOpacity] = useState(0);
   const [weekProgress, setWeekProgress] = useState(0);
   const chartsContainerRef = useRef(null);
 
@@ -336,6 +342,24 @@ const TeamSection = ({ team }) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setBarsRevealed(true);
+
+            // Zahlen faden erst ein, NACHDEM die Balken-Wachstumsanimation
+            // abgeschlossen ist (die dauert 800ms, siehe layout.transition
+            // beim Positionsstärke-Chart weiter unten).
+            const BAR_GROW_DURATION = 800;
+            let numbersRafId;
+            const fadeTimeout = setTimeout(() => {
+              const fadeDuration = 400;
+              const fadeStart = performance.now();
+              const fadeStep = (now) => {
+                const progress = Math.min((now - fadeStart) / fadeDuration, 1);
+                setNumbersOpacity(progress);
+                if (progress < 1) {
+                  numbersRafId = requestAnimationFrame(fadeStep);
+                }
+              };
+              numbersRafId = requestAnimationFrame(fadeStep);
+            }, BAR_GROW_DURATION);
 
             const totalPoints = weekValues.length;
             const segments = Math.max(totalPoints - 1, 1);
@@ -353,15 +377,21 @@ const TeamSection = ({ team }) => {
             };
             rafId = requestAnimationFrame(step);
             observer.disconnect();
+            observerCleanupExtras.push(() => {
+              clearTimeout(fadeTimeout);
+              if (numbersRafId) cancelAnimationFrame(numbersRafId);
+            });
           }
         });
       },
       { threshold: 0.3 }
     );
+    const observerCleanupExtras = [];
     observer.observe(el);
     return () => {
       observer.disconnect();
       if (rafId) cancelAnimationFrame(rafId);
+      observerCleanupExtras.forEach((fn) => fn());
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -505,7 +535,12 @@ const TeamSection = ({ team }) => {
                   text: strengthRanks.map((r) => (r != null ? `${r}` : '')),
                   textposition: 'inside',
                   insidetextanchor: 'middle',
-                  textfont: { color: benchBarColors, family: 'Roboto Condensed, sans-serif', size: 22, weight: 'bold' },
+                  textfont: {
+                    color: barColors.map((c) => darkenColorAlpha(c, 0.45, numbersOpacity)),
+                    family: 'Roboto Condensed, sans-serif',
+                    size: 22,
+                    weight: 'bold'
+                  },
                   marker: { color: barColors },
                   hovertemplate: '<b>%{x}</b><br>Wert: %{y}/100<br>Rang %{customdata[0]} von 12<br>Spieler gezählt: %{customdata[1]}<extra></extra>'
                 }
