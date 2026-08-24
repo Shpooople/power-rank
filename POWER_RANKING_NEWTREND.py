@@ -997,6 +997,14 @@ if win_margins:
         f"Sieg mit nur {round(margin, 1)} Punkten Vorsprung - knapper geht's kaum."
     )
 
+# 7b) Kantersieg - größter Punkteabstand bei einem Sieg
+if win_margins:
+    idx, margin = max(win_margins, key=lambda x: x[1])
+    add_badge(
+        idx, "hammer", "Kantersieg",
+        f"Sieg mit {round(margin, 1)} Punkten Vorsprung - eine klare Machtdemonstration."
+    )
+
 # 8) On Fire / Cold Streak - aktuelle Sieg-/Niederlagenserie
 def current_streak(roster_id):
     results = weekly_results_by_roster.get(roster_id, [])
@@ -1144,10 +1152,14 @@ for i, team in enumerate(rosters):
 
 if lineup_efficiency_candidates:
     idx, eff = max(lineup_efficiency_candidates, key=lambda x: x[1])
-    if eff >= 0.97:
+    # Die Greedy-Näherung für "optimal" ist in seltenen Grenzfällen nicht zu
+    # 100% exakt - dadurch könnte die tatsächliche Aufstellung sie knapp
+    # übertreffen (>100%). Das ist logisch nicht sinnvoll, daher deckeln.
+    eff_capped = min(eff, 1.0)
+    if eff_capped >= 0.97:
         add_badge(
             idx, "perfect", "Perfektes Lineup",
-            f"{round(eff * 100, 1)}% der bestmöglichen Aufstellung ausgeschöpft - kaum Verbesserungspotenzial."
+            f"{round(eff_capped * 100, 1)}% der bestmöglichen Aufstellung ausgeschöpft - kaum Verbesserungspotenzial."
         )
 
 # 14) Big Bang / Totalausfall - stärkste/schwächste Einzelperformance ligaweit
@@ -1294,8 +1306,8 @@ if current_week_matchups:
                 f"{', '.join(names)} mit 0 Punkten in der Startaufstellung - ein Ei gelegt."
             )
 
-# 21) "Das heißt nicht umsonst FOOTball" - Kicker hat besten RB UND besten WR
-# im eigenen Lineup diese Woche überboten
+# 21) "Das heißt nicht umsonst FOOTball" - Kicker war besser als der beste
+# RB ODER der beste WR ODER der QB im eigenen Lineup diese Woche
 if current_week_matchups:
     for m in current_week_matchups:
         idx = next((i for i, r in enumerate(rosters) if r['roster_id'] == m['roster_id']), None)
@@ -1303,7 +1315,7 @@ if current_week_matchups:
             continue
         starters = [s for s in m.get('starters', []) if s and s != '0']
         ppw = m.get('players_points', {}) or {}
-        kicker_pts, rb_pts, wr_pts = None, [], []
+        kicker_pts, rb_pts, wr_pts, qb_pts = None, [], [], []
         for pid in starters:
             pos = players.get(pid, {}).get('position')
             pts = ppw.get(pid, 0)
@@ -1313,17 +1325,24 @@ if current_week_matchups:
                 rb_pts.append(pts)
             elif pos == 'WR':
                 wr_pts.append(pts)
-        if kicker_pts is not None and rb_pts and wr_pts:
-            best_rb, best_wr = max(rb_pts), max(wr_pts)
-            if kicker_pts > best_rb and kicker_pts > best_wr:
+            elif pos == 'QB':
+                qb_pts.append(pts)
+        if kicker_pts is not None:
+            beaten = []
+            if rb_pts and kicker_pts > max(rb_pts):
+                beaten.append(f"jeden Running Back ({max(rb_pts)} Pkt.)")
+            if wr_pts and kicker_pts > max(wr_pts):
+                beaten.append(f"jeden Wide Receiver ({max(wr_pts)} Pkt.)")
+            if qb_pts and kicker_pts > max(qb_pts):
+                beaten.append(f"den Quarterback ({max(qb_pts)} Pkt.)")
+            if beaten:
                 add_badge(
                     idx, "footboot", "Das heißt nicht umsonst FOOTball",
-                    f"Der Kicker hat mit {kicker_pts} Punkten sowohl den besten RB ({best_rb}) "
-                    f"als auch den besten WR ({best_wr}) im Lineup überboten."
+                    f"Der Kicker war mit {kicker_pts} Punkten besser als {' und '.join(beaten)}."
                 )
 
-# 21b) "Defense wins Championships" - eigene DEF hat besten RB UND besten WR
-# im eigenen Lineup diese Woche überboten
+# 21b) "Defense wins Championships" - DEF war besser als der beste RB ODER
+# der beste WR ODER der QB im eigenen Lineup diese Woche
 if current_week_matchups:
     for m in current_week_matchups:
         idx = next((i for i, r in enumerate(rosters) if r['roster_id'] == m['roster_id']), None)
@@ -1331,7 +1350,7 @@ if current_week_matchups:
             continue
         starters = [s for s in m.get('starters', []) if s and s != '0']
         ppw = m.get('players_points', {}) or {}
-        def_pts, rb_pts_d, wr_pts_d = None, [], []
+        def_pts, rb_pts_d, wr_pts_d, qb_pts_d = None, [], [], []
         for pid in starters:
             pos = players.get(pid, {}).get('position')
             pts = ppw.get(pid, 0)
@@ -1341,13 +1360,20 @@ if current_week_matchups:
                 rb_pts_d.append(pts)
             elif pos == 'WR':
                 wr_pts_d.append(pts)
-        if def_pts is not None and rb_pts_d and wr_pts_d:
-            best_rb_d, best_wr_d = max(rb_pts_d), max(wr_pts_d)
-            if def_pts > best_rb_d and def_pts > best_wr_d:
+            elif pos == 'QB':
+                qb_pts_d.append(pts)
+        if def_pts is not None:
+            beaten_d = []
+            if rb_pts_d and def_pts > max(rb_pts_d):
+                beaten_d.append(f"jeden Running Back ({max(rb_pts_d)} Pkt.)")
+            if wr_pts_d and def_pts > max(wr_pts_d):
+                beaten_d.append(f"jeden Wide Receiver ({max(wr_pts_d)} Pkt.)")
+            if qb_pts_d and def_pts > max(qb_pts_d):
+                beaten_d.append(f"den Quarterback ({max(qb_pts_d)} Pkt.)")
+            if beaten_d:
                 add_badge(
                     idx, "shield", "Defense wins Championships",
-                    f"Die Defense hat mit {def_pts} Punkten sowohl den besten RB ({best_rb_d}) "
-                    f"als auch den besten WR ({best_wr_d}) im Lineup überboten."
+                    f"Die Defense war mit {def_pts} Punkten besser als {' und '.join(beaten_d)}."
                 )
 
 # 22) Reichstes/Ärmstes Team - FAAB-Restbudget
@@ -1370,6 +1396,41 @@ if faab_remaining_list:
             idx, "ruin", "Ärmstes Team",
             f"Nur noch {int(min_faab)} FAAB übrig - Waiver-Wire-Bettler."
         )
+
+# 23) Kindergarten - meiste Rookies im Kader (years_exp == 0 laut Sleeper)
+rookie_counts = []
+for team in rosters:
+    count = sum(
+        1 for pid in team.get('players', [])
+        if players.get(pid, {}).get('years_exp') == 0
+    )
+    rookie_counts.append(count)
+
+if rookie_counts and max(rookie_counts) > 0:
+    idx = rookie_counts.index(max(rookie_counts))
+    add_badge(
+        idx, "kindergarten", "Kindergarten",
+        f"{rookie_counts[idx]} Rookies im Kader - die Zukunft der Liga (hoffentlich)."
+    )
+
+# 24) Altersheim - ältester Kader im Schnitt (Sleeper liefert 'age' pro Spieler,
+# nicht bei jedem Spieler vorhanden - nur Spieler mit bekanntem Alter zählen)
+avg_ages = []
+for team in rosters:
+    ages = [
+        players.get(pid, {}).get('age')
+        for pid in team.get('players', [])
+        if players.get(pid, {}).get('age') is not None
+    ]
+    avg_ages.append(sum(ages) / len(ages) if ages else None)
+
+valid_avg_ages = [(i, a) for i, a in enumerate(avg_ages) if a is not None]
+if valid_avg_ages:
+    idx, oldest_avg = max(valid_avg_ages, key=lambda x: x[1])
+    add_badge(
+        idx, "oldfolks", "Altersheim",
+        f"Durchschnittsalter {round(oldest_avg, 1)} Jahre - der erfahrenste Kader der Liga."
+    )
 
 df["BADGES"] = badges_list
 
