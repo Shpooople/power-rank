@@ -11,8 +11,8 @@
     "Adjusted Average":133.1,
     "TREND":"NO TREND",
     "Trend Percentage":1.1,
-    "QB Strength":72,
-    "RB Strength":96,
+    "QB Strength":81,
+    "RB Strength":100,
     "WR Strength":53,
     "TE Strength":38,
     "K Strength":85,
@@ -21,34 +21,22 @@
     "WR Strength Count":2,
     "TE Strength Count":1,
     "K Strength Count":1,
-    "Bench Strength":81,
+    "Bench Strength":97,
     "Bench Strength Count":3,
     "QB":[
       {
-        "name":"Blake Bortles",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/1979.jpg",
-        "total_pts":0,
-        "comp":0,
-        "att":0,
-        "pass_yd":0,
-        "rush_yd":0,
-        "td":0,
+        "name":"Caleb Williams",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11560.jpg",
+        "total_pts":227.7,
+        "comp":230,
+        "att":396,
+        "pass_yd":2722,
+        "rush_yd":306,
+        "td":20,
         "my_guy":false,
-        "my_guy_seasons":0,
-        "is_starter":false
-      },
-      {
-        "name":"Jacoby Brissett",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/3257.jpg",
-        "total_pts":149.1,
-        "comp":204,
-        "att":302,
-        "pass_yd":2188,
-        "rush_yd":116,
-        "td":14,
-        "my_guy":false,
-        "my_guy_seasons":0,
-        "is_starter":false
+        "my_guy_seasons":2,
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Brock Purdy",
@@ -61,7 +49,8 @@
         "td":10,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":false
+        "in_bank":false,
+        "in_strength":false
       }
     ],
     "RB":[
@@ -75,7 +64,8 @@
         "td":2,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":false
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"TreVeyon Henderson",
@@ -87,7 +77,8 @@
         "td":6,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Kyle Monangai",
@@ -99,7 +90,8 @@
         "td":5,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":true,
+        "in_strength":false
       },
       {
         "name":"Derrick Henry",
@@ -111,7 +103,8 @@
         "td":10,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Rico Dowdle",
@@ -123,10 +116,37 @@
         "td":6,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "WR":[
+      {
+        "name":"Jayden Reed",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/10222.jpg",
+        "total_pts":12.0,
+        "targets":5,
+        "catches":3,
+        "yd":45,
+        "td":1,
+        "my_guy":true,
+        "my_guy_seasons":3,
+        "in_bank":false,
+        "in_strength":false
+      },
+      {
+        "name":"Keenan Allen",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/1479.jpg",
+        "total_pts":116.2,
+        "targets":91,
+        "catches":60,
+        "yd":622,
+        "td":4,
+        "my_guy":false,
+        "my_guy_seasons":1,
+        "in_bank":true,
+        "in_strength":false
+      },
       {
         "name":"DJ Moore",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4983.jpg",
@@ -137,19 +157,8 @@
         "td":4,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
-      },
-      {
-        "name":"Darnell Mooney",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7090.jpg",
-        "total_pts":48.8,
-        "targets":50,
-        "catches":21,
-        "yd":323,
-        "td":1,
-        "my_guy":false,
-        "my_guy_seasons":1,
-        "is_starter":false
+        "in_bank":true,
+        "in_strength":false
       },
       {
         "name":"Drake London",
@@ -161,7 +170,8 @@
         "td":6,
         "my_guy":false,
         "my_guy_seasons":2,
-        "is_starter":false
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"George Pickens",
@@ -173,10 +183,24 @@
         "td":8,
         "my_guy":true,
         "my_guy_seasons":3,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "TE":[
+      {
+        "name":"Mark Andrews",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5012.jpg",
+        "total_pts":92.2,
+        "targets":52,
+        "catches":37,
+        "yd":332,
+        "td":6,
+        "my_guy":false,
+        "my_guy_seasons":1,
+        "in_bank":false,
+        "in_strength":false
+      },
       {
         "name":"Brenton Strange",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9480.jpg",
@@ -187,7 +211,8 @@
         "td":1,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":false
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "K":[
@@ -201,10 +226,24 @@
         "xpa":27,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "DEF":[
+      {
+        "name":"Los Angeles Chargers",
+        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/lac.png",
+        "total_pts":71.0,
+        "sack":34,
+        "int":11,
+        "fum_rec":1,
+        "td":0,
+        "my_guy":false,
+        "my_guy_seasons":0,
+        "in_bank":false,
+        "in_strength":false
+      },
       {
         "name":"New Orleans Saints",
         "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/no.png",
@@ -215,7 +254,8 @@
         "td":2,
         "my_guy":false,
         "my_guy_seasons":2,
-        "is_starter":false
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "TOP_PERFORMERS":[
@@ -313,15 +353,21 @@
     "Power Rank Score":3.88,
     "LAST_WEEK_POWER_RANK":null,
     "POWER_RANK_DELTA":null,
-    "QB Strength Rank":10,
-    "RB Strength Rank":2,
+    "QB Strength Rank":7,
+    "RB Strength Rank":1,
     "WR Strength Rank":8,
     "TE Strength Rank":10,
-    "K Strength Rank":4,
-    "Bench Strength Rank":4,
+    "K Strength Rank":3,
+    "Bench Strength Rank":2,
     "TREND Rank":3,
     "Adjusted Average Rank":3,
     "BADGES":[
+      {
+        "icon":"homer",
+        "label":"LAC-Homer",
+        "description":"3 Spieler von LAC im Kader - eindeutig ein Fan.",
+        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/lac.png"
+      },
       {
         "icon":"fire",
         "label":"On Fire",
@@ -379,7 +425,7 @@
     "TREND":"NO TREND",
     "Trend Percentage":-3.2,
     "QB Strength":79,
-    "RB Strength":42,
+    "RB Strength":44,
     "WR Strength":56,
     "TE Strength":100,
     "K Strength":100,
@@ -388,7 +434,7 @@
     "WR Strength Count":3,
     "TE Strength Count":2,
     "K Strength Count":1,
-    "Bench Strength":67,
+    "Bench Strength":66,
     "Bench Strength Count":3,
     "QB":[
       {
@@ -402,7 +448,8 @@
         "td":22,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "RB":[
@@ -416,7 +463,8 @@
         "td":4,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":true,
+        "in_strength":false
       },
       {
         "name":"Tony Pollard",
@@ -428,7 +476,8 @@
         "td":2,
         "my_guy":false,
         "my_guy_seasons":2,
-        "is_starter":false
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Devin Singletary",
@@ -440,7 +489,8 @@
         "td":3,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":false
+        "in_bank":false,
+        "in_strength":false
       },
       {
         "name":"Kyren Williams",
@@ -452,7 +502,8 @@
         "td":10,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "WR":[
@@ -466,7 +517,8 @@
         "td":1,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":true,
+        "in_strength":false
       },
       {
         "name":"Terry McLaurin",
@@ -478,7 +530,8 @@
         "td":2,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Jerry Jeudy",
@@ -490,7 +543,8 @@
         "td":1,
         "my_guy":false,
         "my_guy_seasons":2,
-        "is_starter":false
+        "in_bank":true,
+        "in_strength":false
       },
       {
         "name":"Amon-Ra St. Brown",
@@ -502,7 +556,8 @@
         "td":9,
         "my_guy":false,
         "my_guy_seasons":2,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Zay Flowers",
@@ -514,7 +569,8 @@
         "td":1,
         "my_guy":false,
         "my_guy_seasons":2,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "TE":[
@@ -528,7 +584,8 @@
         "td":4,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":false
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"George Kittle",
@@ -540,7 +597,8 @@
         "td":5,
         "my_guy":false,
         "my_guy_seasons":2,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "K":[
@@ -554,7 +612,8 @@
         "xpa":38,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "DEF":[
@@ -568,7 +627,8 @@
         "td":1,
         "my_guy":false,
         "my_guy_seasons":2,
-        "is_starter":false
+        "in_bank":false,
+        "in_strength":false
       },
       {
         "name":"Los Angeles Rams",
@@ -580,7 +640,8 @@
         "td":1,
         "my_guy":true,
         "my_guy_seasons":3,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "TOP_PERFORMERS":[
@@ -677,12 +738,12 @@
     "Power Rank Score":9.77,
     "LAST_WEEK_POWER_RANK":null,
     "POWER_RANK_DELTA":null,
-    "QB Strength Rank":8,
+    "QB Strength Rank":9,
     "RB Strength Rank":12,
     "WR Strength Rank":6,
     "TE Strength Rank":1,
     "K Strength Rank":1,
-    "Bench Strength Rank":10,
+    "Bench Strength Rank":9,
     "TREND Rank":8,
     "Adjusted Average Rank":12,
     "BADGES":[
@@ -748,7 +809,7 @@
     "TREND":"NO TREND",
     "Trend Percentage":-0.2,
     "QB Strength":85,
-    "RB Strength":60,
+    "RB Strength":62,
     "WR Strength":46,
     "TE Strength":74,
     "K Strength":76,
@@ -757,7 +818,7 @@
     "WR Strength Count":3,
     "TE Strength Count":1,
     "K Strength Count":1,
-    "Bench Strength":66,
+    "Bench Strength":65,
     "Bench Strength Count":3,
     "QB":[
       {
@@ -771,7 +832,8 @@
         "td":32,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Lamar Jackson",
@@ -784,7 +846,8 @@
         "td":16,
         "my_guy":false,
         "my_guy_seasons":2,
-        "is_starter":false
+        "in_bank":false,
+        "in_strength":false
       }
     ],
     "RB":[
@@ -798,7 +861,8 @@
         "td":1,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":false
+        "in_bank":true,
+        "in_strength":false
       },
       {
         "name":"Woody Marks",
@@ -810,7 +874,8 @@
         "td":4,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":true,
+        "in_strength":false
       },
       {
         "name":"RJ Harvey",
@@ -822,7 +887,8 @@
         "td":8,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Joe Mixon",
@@ -834,7 +900,8 @@
         "td":0,
         "my_guy":false,
         "my_guy_seasons":2,
-        "is_starter":false
+        "in_bank":false,
+        "in_strength":false
       },
       {
         "name":"Kenneth Walker",
@@ -846,7 +913,8 @@
         "td":4,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Jaylen Warren",
@@ -858,7 +926,8 @@
         "td":5,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "WR":[
@@ -872,19 +941,21 @@
         "td":5,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":false
+        "in_bank":false,
+        "in_strength":true
       },
       {
-        "name":"Kyle Williams",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12547.jpg",
-        "total_pts":28.6,
-        "targets":13,
-        "catches":5,
-        "yd":143,
-        "td":2,
+        "name":"Tyrell Shavers",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11377.jpg",
+        "total_pts":28.7,
+        "targets":17,
+        "catches":11,
+        "yd":172,
+        "td":1,
         "my_guy":false,
-        "my_guy_seasons":0,
-        "is_starter":false
+        "my_guy_seasons":1,
+        "in_bank":true,
+        "in_strength":false
       },
       {
         "name":"Justin Jefferson",
@@ -896,7 +967,8 @@
         "td":2,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Romeo Doubs",
@@ -908,7 +980,8 @@
         "td":5,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "TE":[
@@ -922,7 +995,8 @@
         "td":8,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "K":[
@@ -936,7 +1010,8 @@
         "xpa":24,
         "my_guy":false,
         "my_guy_seasons":2,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "DEF":[
@@ -950,7 +1025,8 @@
         "td":2,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":false
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Jacksonville Jaguars",
@@ -962,7 +1038,8 @@
         "td":1,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":false
       }
     ],
     "TOP_PERFORMERS":[
@@ -1061,10 +1138,10 @@
     "POWER_RANK_DELTA":null,
     "QB Strength Rank":5,
     "RB Strength Rank":8,
-    "WR Strength Rank":11,
-    "TE Strength Rank":2,
-    "K Strength Rank":7,
-    "Bench Strength Rank":11,
+    "WR Strength Rank":12,
+    "TE Strength Rank":3,
+    "K Strength Rank":6,
+    "Bench Strength Rank":10,
     "TREND Rank":6,
     "Adjusted Average Rank":10,
     "BADGES":[
@@ -1124,16 +1201,16 @@
     "TREND":"DOWN",
     "Trend Percentage":-12.0,
     "QB Strength":88,
-    "RB Strength":63,
+    "RB Strength":67,
     "WR Strength":56,
     "TE Strength":51,
-    "K Strength":69,
+    "K Strength":78,
     "QB Strength Count":1,
     "RB Strength Count":3,
     "WR Strength Count":3,
     "TE Strength Count":1,
     "K Strength Count":1,
-    "Bench Strength":77,
+    "Bench Strength":80,
     "Bench Strength Count":3,
     "QB":[
       {
@@ -1147,7 +1224,8 @@
         "td":25,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":false
+        "in_bank":false,
+        "in_strength":false
       },
       {
         "name":"Dak Prescott",
@@ -1160,7 +1238,8 @@
         "td":27,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "RB":[
@@ -1174,7 +1253,8 @@
         "td":1,
         "my_guy":true,
         "my_guy_seasons":3,
-        "is_starter":false
+        "in_bank":true,
+        "in_strength":false
       },
       {
         "name":"Aaron Jones",
@@ -1186,7 +1266,21 @@
         "td":2,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
+      },
+      {
+        "name":"Rachaad White",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8136.jpg",
+        "total_pts":99.1,
+        "att":106,
+        "yd":421,
+        "ypc":4.0,
+        "td":4,
+        "my_guy":false,
+        "my_guy_seasons":1,
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"James Cook",
@@ -1198,7 +1292,8 @@
         "td":9,
         "my_guy":false,
         "my_guy_seasons":2,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "WR":[
@@ -1212,7 +1307,8 @@
         "td":5,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Deebo Samuel",
@@ -1224,7 +1320,8 @@
         "td":6,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"CeeDee Lamb",
@@ -1236,7 +1333,8 @@
         "td":3,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Rashid Shaheed",
@@ -1248,7 +1346,8 @@
         "td":2,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":false
+        "in_bank":true,
+        "in_strength":false
       },
       {
         "name":"Josh Downs",
@@ -1260,7 +1359,8 @@
         "td":3,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":false
       }
     ],
     "TE":[
@@ -1274,19 +1374,8 @@
         "td":5,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":false
-      },
-      {
-        "name":"Taysom Hill",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4381.jpg",
-        "total_pts":18.2,
-        "targets":5,
-        "catches":4,
-        "yd":23,
-        "td":1,
-        "my_guy":false,
-        "my_guy_seasons":2,
-        "is_starter":false
+        "in_bank":true,
+        "in_strength":false
       },
       {
         "name":"Jake Ferguson",
@@ -1298,35 +1387,38 @@
         "td":7,
         "my_guy":false,
         "my_guy_seasons":2,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "K":[
       {
-        "name":"Cam Little",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11786.jpg",
-        "total_pts":96.0,
-        "fgm":19,
-        "fga":23,
-        "xpm":29,
-        "xpa":30,
+        "name":"Cairo Santos",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/2020.jpg",
+        "total_pts":90.0,
+        "fgm":18,
+        "fga":22,
+        "xpm":28,
+        "xpa":28,
         "my_guy":false,
-        "my_guy_seasons":1,
-        "is_starter":false
+        "my_guy_seasons":0,
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "DEF":[
       {
-        "name":"San Francisco 49ers",
-        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/sf.png",
-        "total_pts":71.0,
-        "sack":16,
-        "int":5,
-        "fum_rec":8,
-        "td":0,
+        "name":"Baltimore Ravens",
+        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/bal.png",
+        "total_pts":63.0,
+        "sack":19,
+        "int":7,
+        "fum_rec":6,
+        "td":1,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":false
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "TOP_PERFORMERS":[
@@ -1427,8 +1519,8 @@
     "QB Strength Rank":4,
     "RB Strength Rank":7,
     "WR Strength Rank":6,
-    "TE Strength Rank":6,
-    "K Strength Rank":9,
+    "TE Strength Rank":7,
+    "K Strength Rank":5,
     "Bench Strength Rank":6,
     "TREND Rank":11,
     "Adjusted Average Rank":8,
@@ -1442,7 +1534,7 @@
       {
         "icon":"perfect",
         "label":"Perfektes Lineup",
-        "description":"100.0% der bestmöglichen Aufstellung ausgeschöpft - kaum Verbesserungspotenzial."
+        "description":"98.6% der bestmöglichen Aufstellung ausgeschöpft - kaum Verbesserungspotenzial."
       },
       {
         "icon":"airraid",
@@ -1485,46 +1577,35 @@
     "Adjusted Average":119.1,
     "TREND":"DOWN",
     "Trend Percentage":-19.5,
-    "QB Strength":71,
-    "RB Strength":45,
-    "WR Strength":79,
-    "TE Strength":43,
+    "QB Strength":63,
+    "RB Strength":47,
+    "WR Strength":63,
+    "TE Strength":89,
     "K Strength":72,
     "QB Strength Count":1,
     "RB Strength Count":2,
-    "WR Strength Count":4,
-    "TE Strength Count":1,
+    "WR Strength Count":3,
+    "TE Strength Count":2,
     "K Strength Count":1,
-    "Bench Strength":70,
+    "Bench Strength":65,
     "Bench Strength Count":3,
     "QB":[
       {
-        "name":"Jordan Love",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6804.jpg",
-        "total_pts":201.2,
-        "comp":242,
-        "att":361,
-        "pass_yd":2794,
-        "rush_yd":164,
+        "name":"Sam Darnold",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4943.jpg",
+        "total_pts":177.4,
+        "comp":221,
+        "att":324,
+        "pass_yd":2913,
+        "rush_yd":49,
         "td":19,
         "my_guy":false,
         "my_guy_seasons":2,
-        "is_starter":false
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "RB":[
-      {
-        "name":"Dylan Sampson",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12469.jpg",
-        "total_pts":54.2,
-        "att":42,
-        "yd":112,
-        "ypc":2.7,
-        "td":2,
-        "my_guy":false,
-        "my_guy_seasons":0,
-        "is_starter":false
-      },
       {
         "name":"Josh Jacobs",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5850.jpg",
@@ -1535,7 +1616,8 @@
         "td":11,
         "my_guy":false,
         "my_guy_seasons":2,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Tyler Allgeier",
@@ -1547,7 +1629,8 @@
         "td":8,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":false
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Sean Tucker",
@@ -1559,10 +1642,24 @@
         "td":5,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":true,
+        "in_strength":false
       }
     ],
     "WR":[
+      {
+        "name":"Malik Washington",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11610.jpg",
+        "total_pts":68.7,
+        "targets":52,
+        "catches":37,
+        "yd":264,
+        "td":2,
+        "my_guy":false,
+        "my_guy_seasons":1,
+        "in_bank":true,
+        "in_strength":false
+      },
       {
         "name":"Marvin Harrison",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11628.jpg",
@@ -1573,19 +1670,21 @@
         "td":4,
         "my_guy":false,
         "my_guy_seasons":2,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       },
       {
-        "name":"Keenan Allen",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/1479.jpg",
-        "total_pts":116.2,
-        "targets":91,
-        "catches":60,
-        "yd":622,
-        "td":4,
+        "name":"Ricky Pearsall",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11638.jpg",
+        "total_pts":47.0,
+        "targets":38,
+        "catches":25,
+        "yd":347,
+        "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":false
+        "in_bank":true,
+        "in_strength":false
       },
       {
         "name":"Chris Godwin",
@@ -1597,19 +1696,21 @@
         "td":0,
         "my_guy":true,
         "my_guy_seasons":3,
-        "is_starter":false
+        "in_bank":false,
+        "in_strength":false
       },
       {
-        "name":"Darius Slayton",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6149.jpg",
-        "total_pts":59.7,
-        "targets":39,
-        "catches":26,
-        "yd":407,
-        "td":1,
+        "name":"Greg Dortch",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5970.jpg",
+        "total_pts":60.6,
+        "targets":33,
+        "catches":29,
+        "yd":206,
+        "td":4,
         "my_guy":false,
-        "my_guy_seasons":1,
-        "is_starter":false
+        "my_guy_seasons":0,
+        "in_bank":false,
+        "in_strength":false
       },
       {
         "name":"Nico Collins",
@@ -1621,7 +1722,8 @@
         "td":5,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Puka Nacua",
@@ -1633,33 +1735,49 @@
         "td":5,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "TE":[
       {
-        "name":"Harold Fannin",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12506.jpg",
-        "total_pts":93.0,
-        "targets":74,
-        "catches":51,
-        "yd":505,
+        "name":"Sam LaPorta",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/10859.jpg",
+        "total_pts":86.9,
+        "targets":49,
+        "catches":40,
+        "yd":489,
         "td":3,
         "my_guy":false,
-        "my_guy_seasons":1,
-        "is_starter":false
+        "my_guy_seasons":2,
+        "in_bank":false,
+        "in_strength":true
       },
       {
-        "name":"Hunter Henry",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/3214.jpg",
-        "total_pts":113.5,
-        "targets":69,
-        "catches":45,
-        "yd":610,
-        "td":5,
+        "name":"Zach Ertz",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/1339.jpg",
+        "total_pts":99.8,
+        "targets":70,
+        "catches":49,
+        "yd":493,
+        "td":4,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":false
+        "in_bank":false,
+        "in_strength":true
+      },
+      {
+        "name":"Brock Wright",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7891.jpg",
+        "total_pts":29.8,
+        "targets":22,
+        "catches":14,
+        "yd":108,
+        "td":2,
+        "my_guy":false,
+        "my_guy_seasons":1,
+        "in_bank":false,
+        "in_strength":false
       }
     ],
     "K":[
@@ -1673,7 +1791,8 @@
         "xpa":30,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "DEF":[
@@ -1687,7 +1806,8 @@
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "TOP_PERFORMERS":[
@@ -1784,15 +1904,21 @@
     "Power Rank Score":8.55,
     "LAST_WEEK_POWER_RANK":null,
     "POWER_RANK_DELTA":null,
-    "QB Strength Rank":11,
+    "QB Strength Rank":12,
     "RB Strength Rank":11,
-    "WR Strength Rank":2,
-    "TE Strength Rank":9,
+    "WR Strength Rank":5,
+    "TE Strength Rank":2,
     "K Strength Rank":8,
-    "Bench Strength Rank":9,
+    "Bench Strength Rank":10,
     "TREND Rank":12,
     "Adjusted Average Rank":9,
     "BADGES":[
+      {
+        "icon":"homer",
+        "label":"DET-Homer",
+        "description":"3 Spieler von DET im Kader - eindeutig ein Fan.",
+        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/det.png"
+      },
       {
         "icon":"falling",
         "label":"Free Fall",
@@ -1850,16 +1976,16 @@
     "TREND":"DOWN",
     "Trend Percentage":-9.5,
     "QB Strength":77,
-    "RB Strength":49,
+    "RB Strength":51,
     "WR Strength":73,
     "TE Strength":33,
-    "K Strength":67,
+    "K Strength":48,
     "QB Strength Count":1,
     "RB Strength Count":2,
     "WR Strength Count":4,
     "TE Strength Count":1,
     "K Strength Count":1,
-    "Bench Strength":74,
+    "Bench Strength":76,
     "Bench Strength Count":3,
     "QB":[
       {
@@ -1873,7 +1999,8 @@
         "td":25,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":false
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Baker Mayfield",
@@ -1886,22 +2013,11 @@
         "td":20,
         "my_guy":false,
         "my_guy_seasons":2,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":false
       }
     ],
     "RB":[
-      {
-        "name":"Raheim Sanders",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12472.jpg",
-        "total_pts":6.3,
-        "att":3,
-        "yd":3,
-        "ypc":1.0,
-        "td":1,
-        "my_guy":false,
-        "my_guy_seasons":0,
-        "is_starter":false
-      },
       {
         "name":"Devin Neal",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12476.jpg",
@@ -1912,19 +2028,8 @@
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
-      },
-      {
-        "name":"Jacory Croskey-Merritt",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12533.jpg",
-        "total_pts":83.1,
-        "att":118,
-        "yd":518,
-        "ypc":4.4,
-        "td":4,
-        "my_guy":false,
-        "my_guy_seasons":0,
-        "is_starter":false
+        "in_bank":false,
+        "in_strength":false
       },
       {
         "name":"D'Andre Swift",
@@ -1936,19 +2041,8 @@
         "td":6,
         "my_guy":false,
         "my_guy_seasons":2,
-        "is_starter":true
-      },
-      {
-        "name":"Michael Carter",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7607.jpg",
-        "total_pts":49.8,
-        "att":50,
-        "yd":152,
-        "ypc":3.0,
-        "td":1,
-        "my_guy":false,
-        "my_guy_seasons":1,
-        "is_starter":false
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Breece Hall",
@@ -1960,7 +2054,8 @@
         "td":4,
         "my_guy":false,
         "my_guy_seasons":2,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Isiah Pacheco",
@@ -1972,7 +2067,8 @@
         "td":2,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":false
+        "in_bank":true,
+        "in_strength":false
       },
       {
         "name":"Tyjae Spears",
@@ -1984,7 +2080,8 @@
         "td":1,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":false
+        "in_bank":true,
+        "in_strength":false
       }
     ],
     "WR":[
@@ -1998,7 +2095,21 @@
         "td":6,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
+      },
+      {
+        "name":"Chimere Dike",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12540.jpg",
+        "total_pts":64.3,
+        "targets":47,
+        "catches":29,
+        "yd":260,
+        "td":2,
+        "my_guy":false,
+        "my_guy_seasons":1,
+        "in_bank":false,
+        "in_strength":false
       },
       {
         "name":"Michael Pittman",
@@ -2010,7 +2121,8 @@
         "td":7,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Garrett Wilson",
@@ -2022,7 +2134,21 @@
         "td":4,
         "my_guy":false,
         "my_guy_seasons":2,
-        "is_starter":false
+        "in_bank":false,
+        "in_strength":true
+      },
+      {
+        "name":"Parker Washington",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9487.jpg",
+        "total_pts":93.2,
+        "targets":63,
+        "catches":36,
+        "yd":447,
+        "td":3,
+        "my_guy":false,
+        "my_guy_seasons":1,
+        "in_bank":true,
+        "in_strength":false
       },
       {
         "name":"Quentin Johnston",
@@ -2034,7 +2160,8 @@
         "td":7,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "TE":[
@@ -2048,21 +2175,23 @@
         "td":3,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "K":[
       {
-        "name":"Jake Bates",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11539.jpg",
-        "total_pts":94.0,
-        "fgm":16,
-        "fga":20,
-        "xpm":40,
-        "xpa":42,
-        "my_guy":false,
-        "my_guy_seasons":1,
-        "is_starter":false
+        "name":"Younghoe Koo",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4666.jpg",
+        "total_pts":28.0,
+        "fgm":6,
+        "fga":7,
+        "xpm":10,
+        "xpa":11,
+        "my_guy":true,
+        "my_guy_seasons":5,
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "DEF":[
@@ -2076,7 +2205,8 @@
         "td":3,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "TOP_PERFORMERS":[
@@ -2174,11 +2304,11 @@
     "Power Rank Score":10.12,
     "LAST_WEEK_POWER_RANK":null,
     "POWER_RANK_DELTA":null,
-    "QB Strength Rank":9,
+    "QB Strength Rank":10,
     "RB Strength Rank":10,
-    "WR Strength Rank":4,
+    "WR Strength Rank":3,
     "TE Strength Rank":12,
-    "K Strength Rank":10,
+    "K Strength Rank":12,
     "Bench Strength Rank":7,
     "TREND Rank":10,
     "Adjusted Average Rank":11,
@@ -2187,12 +2317,6 @@
         "icon":"hospital",
         "label":"The Hospital",
         "description":"7 verletzte Spieler im Kader (Out\/IR\/Questionable\/Doubtful) - die größte Krankenstation der Liga."
-      },
-      {
-        "icon":"homer",
-        "label":"DET-Homer",
-        "description":"3 Spieler von DET im Kader - eindeutig ein Fan.",
-        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/det.png"
       },
       {
         "icon":"cold",
@@ -2246,16 +2370,16 @@
     "TREND":"NO TREND",
     "Trend Percentage":-5.4,
     "QB Strength":89,
-    "RB Strength":69,
+    "RB Strength":72,
     "WR Strength":64,
     "TE Strength":51,
-    "K Strength":86,
+    "K Strength":76,
     "QB Strength Count":1,
     "RB Strength Count":2,
     "WR Strength Count":4,
     "TE Strength Count":1,
     "K Strength Count":1,
-    "Bench Strength":72,
+    "Bench Strength":87,
     "Bench Strength Count":3,
     "QB":[
       {
@@ -2269,7 +2393,8 @@
         "td":27,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "RB":[
@@ -2283,7 +2408,21 @@
         "td":2,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":false
+        "in_bank":false,
+        "in_strength":false
+      },
+      {
+        "name":"Bhayshul Tuten",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12490.jpg",
+        "total_pts":68.0,
+        "att":75,
+        "yd":272,
+        "ypc":3.6,
+        "td":5,
+        "my_guy":false,
+        "my_guy_seasons":1,
+        "in_bank":false,
+        "in_strength":false
       },
       {
         "name":"Ashton Jeanty",
@@ -2295,7 +2434,8 @@
         "td":8,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Jonathan Taylor",
@@ -2307,7 +2447,8 @@
         "td":17,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Jordan Mason",
@@ -2319,7 +2460,8 @@
         "td":5,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":false
+        "in_bank":true,
+        "in_strength":false
       }
     ],
     "WR":[
@@ -2333,19 +2475,21 @@
         "td":6,
         "my_guy":false,
         "my_guy_seasons":2,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       },
       {
-        "name":"Luther Burden",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12519.jpg",
-        "total_pts":54.2,
-        "targets":34,
-        "catches":26,
-        "yd":328,
+        "name":"Xavier Worthy",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11624.jpg",
+        "total_pts":72.2,
+        "targets":59,
+        "catches":35,
+        "yd":401,
         "td":1,
         "my_guy":false,
-        "my_guy_seasons":0,
-        "is_starter":false
+        "my_guy_seasons":1,
+        "in_bank":true,
+        "in_strength":false
       },
       {
         "name":"Mike Evans",
@@ -2357,7 +2501,8 @@
         "td":1,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":false
+        "in_bank":false,
+        "in_strength":false
       },
       {
         "name":"Jauan Jennings",
@@ -2369,7 +2514,8 @@
         "td":5,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":false
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Wan'Dale Robinson",
@@ -2381,7 +2527,8 @@
         "td":3,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Jameson Williams",
@@ -2393,7 +2540,8 @@
         "td":6,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "TE":[
@@ -2407,48 +2555,39 @@
         "td":4,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":false
+        "in_bank":false,
+        "in_strength":true
       },
       {
-        "name":"Colby Parkinson",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6865.jpg",
-        "total_pts":46.6,
-        "targets":26,
-        "catches":23,
-        "yd":191,
-        "td":3,
+        "name":"Hunter Henry",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/3214.jpg",
+        "total_pts":113.5,
+        "targets":69,
+        "catches":45,
+        "yd":610,
+        "td":5,
         "my_guy":false,
-        "my_guy_seasons":0,
-        "is_starter":false
+        "my_guy_seasons":2,
+        "in_bank":true,
+        "in_strength":false
       }
     ],
     "K":[
       {
-        "name":"Eddy Pineiro",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5189.jpg",
-        "total_pts":100.0,
-        "fgm":22,
+        "name":"Chris Boswell",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/1945.jpg",
+        "total_pts":106.0,
+        "fgm":19,
         "fga":22,
-        "xpm":18,
-        "xpa":22,
+        "xpm":30,
+        "xpa":30,
         "my_guy":false,
-        "my_guy_seasons":0,
-        "is_starter":false
+        "my_guy_seasons":1,
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "DEF":[
-      {
-        "name":"Detroit Lions",
-        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/det.png",
-        "total_pts":82.0,
-        "sack":32,
-        "int":9,
-        "fum_rec":4,
-        "td":0,
-        "my_guy":false,
-        "my_guy_seasons":0,
-        "is_starter":false
-      },
       {
         "name":"Tampa Bay Buccaneers",
         "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/tb.png",
@@ -2459,7 +2598,8 @@
         "td":2,
         "my_guy":true,
         "my_guy_seasons":3,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "TOP_PERFORMERS":[
@@ -2558,10 +2698,10 @@
     "POWER_RANK_DELTA":null,
     "QB Strength Rank":3,
     "RB Strength Rank":5,
-    "WR Strength Rank":5,
-    "TE Strength Rank":6,
-    "K Strength Rank":3,
-    "Bench Strength Rank":8,
+    "WR Strength Rank":4,
+    "TE Strength Rank":7,
+    "K Strength Rank":6,
+    "Bench Strength Rank":3,
     "TREND Rank":9,
     "Adjusted Average Rank":1,
     "BADGES":[
@@ -2617,13 +2757,13 @@
     "TREND":"NO TREND",
     "Trend Percentage":2.4,
     "QB Strength":100,
-    "RB Strength":100,
-    "WR Strength":35,
+    "RB Strength":86,
+    "WR Strength":51,
     "TE Strength":55,
     "K Strength":67,
     "QB Strength Count":1,
-    "RB Strength Count":4,
-    "WR Strength Count":2,
+    "RB Strength Count":3,
+    "WR Strength Count":3,
     "TE Strength Count":1,
     "K Strength Count":1,
     "Bench Strength":100,
@@ -2640,7 +2780,8 @@
         "td":30,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "RB":[
@@ -2654,7 +2795,8 @@
         "td":4,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Quinshon Judkins",
@@ -2666,7 +2808,8 @@
         "td":7,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Christian McCaffrey",
@@ -2678,7 +2821,8 @@
         "td":13,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Kenny Gainwell",
@@ -2690,7 +2834,8 @@
         "td":5,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":true,
+        "in_strength":false
       }
     ],
     "WR":[
@@ -2704,19 +2849,21 @@
         "td":5,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":false
+        "in_bank":true,
+        "in_strength":false
       },
       {
-        "name":"Chimere Dike",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12540.jpg",
-        "total_pts":64.3,
-        "targets":47,
-        "catches":29,
-        "yd":260,
-        "td":2,
+        "name":"DK Metcalf",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5846.jpg",
+        "total_pts":120.2,
+        "targets":75,
+        "catches":45,
+        "yd":605,
+        "td":6,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":false
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"A.J. Brown",
@@ -2728,7 +2875,8 @@
         "td":6,
         "my_guy":false,
         "my_guy_seasons":2,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Alec Pierce",
@@ -2740,19 +2888,8 @@
         "td":2,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":false
-      },
-      {
-        "name":"Parker Washington",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9487.jpg",
-        "total_pts":93.2,
-        "targets":63,
-        "catches":36,
-        "yd":447,
-        "td":3,
-        "my_guy":false,
-        "my_guy_seasons":0,
-        "is_starter":false
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Kayshon Boutte",
@@ -2764,7 +2901,8 @@
         "td":6,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":false
+        "in_bank":false,
+        "in_strength":false
       },
       {
         "name":"Jordan Addison",
@@ -2776,7 +2914,8 @@
         "td":3,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":false
+        "in_bank":true,
+        "in_strength":false
       }
     ],
     "TE":[
@@ -2790,7 +2929,8 @@
         "td":5,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Juwan Johnson",
@@ -2802,7 +2942,8 @@
         "td":3,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":false
+        "in_bank":false,
+        "in_strength":false
       }
     ],
     "K":[
@@ -2816,21 +2957,23 @@
         "xpa":32,
         "my_guy":false,
         "my_guy_seasons":2,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "DEF":[
       {
-        "name":"Los Angeles Chargers",
-        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/lac.png",
-        "total_pts":71.0,
-        "sack":34,
-        "int":11,
-        "fum_rec":1,
+        "name":"Atlanta Falcons",
+        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/atl.png",
+        "total_pts":90.0,
+        "sack":41,
+        "int":9,
+        "fum_rec":4,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":0,
-        "is_starter":false
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "TOP_PERFORMERS":[
@@ -2928,10 +3071,10 @@
     "LAST_WEEK_POWER_RANK":null,
     "POWER_RANK_DELTA":null,
     "QB Strength Rank":1,
-    "RB Strength Rank":1,
-    "WR Strength Rank":12,
-    "TE Strength Rank":4,
-    "K Strength Rank":10,
+    "RB Strength Rank":2,
+    "WR Strength Rank":9,
+    "TE Strength Rank":5,
+    "K Strength Rank":9,
     "Bench Strength Rank":1,
     "TREND Rank":2,
     "Adjusted Average Rank":4,
@@ -2983,7 +3126,7 @@
     "TREND":"NO TREND",
     "Trend Percentage":1.1,
     "QB Strength":81,
-    "RB Strength":76,
+    "RB Strength":79,
     "WR Strength":50,
     "TE Strength":53,
     "K Strength":97,
@@ -2992,7 +3135,7 @@
     "WR Strength Count":3,
     "TE Strength Count":1,
     "K Strength Count":1,
-    "Bench Strength":85,
+    "Bench Strength":76,
     "Bench Strength Count":3,
     "QB":[
       {
@@ -3006,34 +3149,36 @@
         "td":22,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
-      },
-      {
-        "name":"Trevor Lawrence",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7523.jpg",
-        "total_pts":207.9,
-        "comp":236,
-        "att":395,
-        "pass_yd":2636,
-        "rush_yd":235,
-        "td":21,
-        "my_guy":false,
-        "my_guy_seasons":1,
-        "is_starter":false
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "RB":[
       {
-        "name":"Rhamondre Stevenson",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7611.jpg",
-        "total_pts":77.8,
-        "att":101,
-        "yd":324,
-        "ypc":3.2,
-        "td":3,
+        "name":"Jaleel McLaughlin",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11439.jpg",
+        "total_pts":11.4,
+        "att":13,
+        "yd":43,
+        "ypc":3.3,
+        "td":1,
         "my_guy":false,
-        "my_guy_seasons":2,
-        "is_starter":false
+        "my_guy_seasons":0,
+        "in_bank":false,
+        "in_strength":false
+      },
+      {
+        "name":"Trey Benson",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11589.jpg",
+        "total_pts":28.9,
+        "att":29,
+        "yd":160,
+        "ypc":5.5,
+        "td":0,
+        "my_guy":false,
+        "my_guy_seasons":1,
+        "in_bank":true,
+        "in_strength":false
       },
       {
         "name":"Chase Brown",
@@ -3045,7 +3190,8 @@
         "td":3,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Bijan Robinson",
@@ -3057,7 +3203,8 @@
         "td":7,
         "my_guy":false,
         "my_guy_seasons":2,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Zach Charbonnet",
@@ -3069,21 +3216,23 @@
         "td":8,
         "my_guy":false,
         "my_guy_seasons":2,
-        "is_starter":false
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "WR":[
       {
-        "name":"Xavier Worthy",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11624.jpg",
-        "total_pts":72.2,
-        "targets":59,
-        "catches":35,
-        "yd":401,
-        "td":1,
+        "name":"Andrei Iosivas",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/10226.jpg",
+        "total_pts":60.0,
+        "targets":44,
+        "catches":24,
+        "yd":346,
+        "td":2,
         "my_guy":false,
-        "my_guy_seasons":1,
-        "is_starter":false
+        "my_guy_seasons":0,
+        "in_bank":false,
+        "in_strength":false
       },
       {
         "name":"Brian Thomas",
@@ -3095,7 +3244,21 @@
         "td":2,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":true,
+        "in_strength":false
+      },
+      {
+        "name":"Elic Ayomanor",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12499.jpg",
+        "total_pts":60.4,
+        "targets":64,
+        "catches":29,
+        "yd":339,
+        "td":2,
+        "my_guy":false,
+        "my_guy_seasons":1,
+        "in_bank":true,
+        "in_strength":false
       },
       {
         "name":"Tetairoa McMillan",
@@ -3107,7 +3270,8 @@
         "td":6,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Stefon Diggs",
@@ -3119,7 +3283,34 @@
         "td":3,
         "my_guy":false,
         "my_guy_seasons":2,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
+      },
+      {
+        "name":"Darnell Mooney",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7090.jpg",
+        "total_pts":48.8,
+        "targets":50,
+        "catches":21,
+        "yd":323,
+        "td":1,
+        "my_guy":false,
+        "my_guy_seasons":2,
+        "in_bank":false,
+        "in_strength":false
+      },
+      {
+        "name":"John Metchie",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8147.jpg",
+        "total_pts":35.1,
+        "targets":23,
+        "catches":18,
+        "yd":150,
+        "td":2,
+        "my_guy":false,
+        "my_guy_seasons":1,
+        "in_bank":false,
+        "in_strength":false
       },
       {
         "name":"Christian Watson",
@@ -3131,7 +3322,8 @@
         "td":3,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "TE":[
@@ -3145,7 +3337,8 @@
         "td":5,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "K":[
@@ -3159,33 +3352,23 @@
         "xpa":16,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "DEF":[
       {
-        "name":"Atlanta Falcons",
-        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/atl.png",
-        "total_pts":90.0,
-        "sack":41,
-        "int":9,
-        "fum_rec":4,
-        "td":0,
-        "my_guy":false,
-        "my_guy_seasons":0,
-        "is_starter":false
-      },
-      {
-        "name":"Pittsburgh Steelers",
-        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/pit.png",
-        "total_pts":110.0,
-        "sack":34,
-        "int":10,
-        "fum_rec":10,
-        "td":3,
+        "name":"New England Patriots",
+        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/ne.png",
+        "total_pts":104.0,
+        "sack":27,
+        "int":8,
+        "fum_rec":5,
+        "td":2,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":false
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "TOP_PERFORMERS":[
@@ -3284,10 +3467,10 @@
     "POWER_RANK_DELTA":null,
     "QB Strength Rank":7,
     "RB Strength Rank":4,
-    "WR Strength Rank":9,
-    "TE Strength Rank":5,
+    "WR Strength Rank":10,
+    "TE Strength Rank":6,
     "K Strength Rank":2,
-    "Bench Strength Rank":2,
+    "Bench Strength Rank":7,
     "TREND Rank":3,
     "Adjusted Average Rank":6,
     "BADGES":[
@@ -3333,16 +3516,16 @@
     "TREND":"NO TREND",
     "Trend Percentage":0.9,
     "QB Strength":83,
-    "RB Strength":78,
+    "RB Strength":81,
     "WR Strength":49,
     "TE Strength":63,
-    "K Strength":79,
+    "K Strength":67,
     "QB Strength Count":1,
     "RB Strength Count":3,
     "WR Strength Count":3,
     "TE Strength Count":1,
     "K Strength Count":1,
-    "Bench Strength":82,
+    "Bench Strength":81,
     "Bench Strength Count":3,
     "QB":[
       {
@@ -3356,7 +3539,8 @@
         "td":18,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":false
       },
       {
         "name":"Daniel Jones",
@@ -3369,22 +3553,11 @@
         "td":24,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":false
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "RB":[
-      {
-        "name":"Audric Estime",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11579.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
-        "td":0,
-        "my_guy":false,
-        "my_guy_seasons":0,
-        "is_starter":false
-      },
       {
         "name":"Kareem Hunt",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4098.jpg",
@@ -3395,7 +3568,8 @@
         "td":8,
         "my_guy":false,
         "my_guy_seasons":2,
-        "is_starter":false
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Saquon Barkley",
@@ -3407,7 +3581,8 @@
         "td":6,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Zonovan Knight",
@@ -3419,7 +3594,8 @@
         "td":5,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":true,
+        "in_strength":false
       },
       {
         "name":"De'Von Achane",
@@ -3431,22 +3607,11 @@
         "td":10,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "WR":[
-      {
-        "name":"Jalen Coker",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11646.jpg",
-        "total_pts":39.4,
-        "targets":25,
-        "catches":18,
-        "yd":224,
-        "td":1,
-        "my_guy":false,
-        "my_guy_seasons":0,
-        "is_starter":false
-      },
       {
         "name":"Jayden Higgins",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12484.jpg",
@@ -3457,7 +3622,8 @@
         "td":4,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":false
+        "in_bank":true,
+        "in_strength":false
       },
       {
         "name":"Jakobi Meyers",
@@ -3469,7 +3635,8 @@
         "td":2,
         "my_guy":false,
         "my_guy_seasons":2,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"DeVonta Smith",
@@ -3481,7 +3648,8 @@
         "td":3,
         "my_guy":false,
         "my_guy_seasons":2,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Jaylen Waddle",
@@ -3493,7 +3661,8 @@
         "td":5,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "TE":[
@@ -3507,7 +3676,8 @@
         "td":5,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Oronde Gadsden",
@@ -3519,21 +3689,23 @@
         "td":2,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":false
+        "in_bank":true,
+        "in_strength":false
       }
     ],
     "K":[
       {
-        "name":"Evan McPherson",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7839.jpg",
-        "total_pts":110.0,
-        "fgm":23,
-        "fga":26,
-        "xpm":27,
-        "xpa":27,
+        "name":"Jake Bates",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11539.jpg",
+        "total_pts":94.0,
+        "fgm":16,
+        "fga":20,
+        "xpm":40,
+        "xpa":42,
         "my_guy":false,
-        "my_guy_seasons":1,
-        "is_starter":false
+        "my_guy_seasons":2,
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "DEF":[
@@ -3547,7 +3719,8 @@
         "td":2,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":false
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Philadelphia Eagles",
@@ -3559,7 +3732,8 @@
         "td":1,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":false
       }
     ],
     "TOP_PERFORMERS":[
@@ -3658,10 +3832,10 @@
     "POWER_RANK_DELTA":null,
     "QB Strength Rank":6,
     "RB Strength Rank":3,
-    "WR Strength Rank":10,
-    "TE Strength Rank":3,
-    "K Strength Rank":6,
-    "Bench Strength Rank":3,
+    "WR Strength Rank":11,
+    "TE Strength Rank":4,
+    "K Strength Rank":9,
+    "Bench Strength Rank":5,
     "TREND Rank":5,
     "Adjusted Average Rank":5,
     "BADGES":[
@@ -3717,8 +3891,8 @@
     "Adjusted Average":133.3,
     "TREND":"NO TREND",
     "Trend Percentage":-3.0,
-    "QB Strength":50,
-    "RB Strength":53,
+    "QB Strength":74,
+    "RB Strength":55,
     "WR Strength":100,
     "TE Strength":46,
     "K Strength":84,
@@ -3727,7 +3901,7 @@
     "WR Strength Count":4,
     "TE Strength Count":1,
     "K Strength Count":1,
-    "Bench Strength":78,
+    "Bench Strength":84,
     "Bench Strength Count":3,
     "QB":[
       {
@@ -3741,7 +3915,22 @@
         "td":4,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":false
+      },
+      {
+        "name":"Trevor Lawrence",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7523.jpg",
+        "total_pts":207.9,
+        "comp":236,
+        "att":395,
+        "pass_yd":2636,
+        "rush_yd":235,
+        "td":21,
+        "my_guy":false,
+        "my_guy_seasons":0,
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "RB":[
@@ -3755,7 +3944,8 @@
         "td":6,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":false
+        "in_bank":true,
+        "in_strength":false
       },
       {
         "name":"Travis Etienne",
@@ -3767,7 +3957,8 @@
         "td":7,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Javonte Williams",
@@ -3779,19 +3970,8 @@
         "td":10,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
-      },
-      {
-        "name":"Malik Davis",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8800.jpg",
-        "total_pts":15.7,
-        "att":13,
-        "yd":97,
-        "ypc":7.5,
-        "td":1,
-        "my_guy":false,
-        "my_guy_seasons":0,
-        "is_starter":false
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "WR":[
@@ -3805,19 +3985,8 @@
         "td":6,
         "my_guy":false,
         "my_guy_seasons":2,
-        "is_starter":true
-      },
-      {
-        "name":"Adonai Mitchell",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11625.jpg",
-        "total_pts":44.6,
-        "targets":41,
-        "catches":20,
-        "yd":306,
-        "td":1,
-        "my_guy":false,
-        "my_guy_seasons":1,
-        "is_starter":false
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Ladd McConkey",
@@ -3829,7 +3998,21 @@
         "td":5,
         "my_guy":false,
         "my_guy_seasons":2,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
+      },
+      {
+        "name":"Cooper Kupp",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4039.jpg",
+        "total_pts":65.8,
+        "targets":50,
+        "catches":34,
+        "yd":438,
+        "td":1,
+        "my_guy":false,
+        "my_guy_seasons":2,
+        "in_bank":true,
+        "in_strength":false
       },
       {
         "name":"Ja'Marr Chase",
@@ -3841,7 +4024,8 @@
         "td":5,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Jaxon Smith-Njigba",
@@ -3853,10 +4037,24 @@
         "td":7,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "TE":[
+      {
+        "name":"Taysom Hill",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4381.jpg",
+        "total_pts":18.2,
+        "targets":5,
+        "catches":4,
+        "yd":23,
+        "td":1,
+        "my_guy":false,
+        "my_guy_seasons":0,
+        "in_bank":false,
+        "in_strength":false
+      },
       {
         "name":"Dallas Goedert",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5022.jpg",
@@ -3867,7 +4065,8 @@
         "td":7,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Kyle Pitts",
@@ -3879,7 +4078,8 @@
         "td":1,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":false
+        "in_bank":true,
+        "in_strength":false
       }
     ],
     "K":[
@@ -3893,7 +4093,8 @@
         "xpa":38,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "DEF":[
@@ -3907,19 +4108,8 @@
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
-      },
-      {
-        "name":"New England Patriots",
-        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/ne.png",
-        "total_pts":104.0,
-        "sack":27,
-        "int":8,
-        "fum_rec":5,
-        "td":2,
-        "my_guy":false,
-        "my_guy_seasons":1,
-        "is_starter":false
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "TOP_PERFORMERS":[
@@ -4017,21 +4207,15 @@
     "Power Rank Score":3.15,
     "LAST_WEEK_POWER_RANK":null,
     "POWER_RANK_DELTA":null,
-    "QB Strength Rank":12,
+    "QB Strength Rank":11,
     "RB Strength Rank":9,
     "WR Strength Rank":1,
-    "TE Strength Rank":8,
-    "K Strength Rank":5,
-    "Bench Strength Rank":5,
+    "TE Strength Rank":9,
+    "K Strength Rank":4,
+    "Bench Strength Rank":4,
     "TREND Rank":7,
     "Adjusted Average Rank":2,
     "BADGES":[
-      {
-        "icon":"homer",
-        "label":"DAL-Homer",
-        "description":"3 Spieler von DAL im Kader - eindeutig ein Fan.",
-        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/dal.png"
-      },
       {
         "icon":"clutch",
         "label":"Nervenstark",
@@ -4094,7 +4278,7 @@
     "TREND":"UP",
     "Trend Percentage":20.2,
     "QB Strength":97,
-    "RB Strength":68,
+    "RB Strength":71,
     "WR Strength":74,
     "TE Strength":37,
     "K Strength":63,
@@ -4103,7 +4287,7 @@
     "WR Strength Count":4,
     "TE Strength Count":1,
     "K Strength Count":1,
-    "Bench Strength":62,
+    "Bench Strength":61,
     "Bench Strength Count":3,
     "QB":[
       {
@@ -4117,7 +4301,8 @@
         "td":26,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Aaron Rodgers",
@@ -4130,7 +4315,8 @@
         "td":19,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":false
+        "in_bank":false,
+        "in_strength":false
       }
     ],
     "RB":[
@@ -4144,7 +4330,8 @@
         "td":3,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":true,
+        "in_strength":false
       },
       {
         "name":"Bucky Irving",
@@ -4156,7 +4343,8 @@
         "td":3,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Samaje Perine",
@@ -4168,7 +4356,8 @@
         "td":1,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":false
+        "in_bank":false,
+        "in_strength":false
       },
       {
         "name":"Jahmyr Gibbs",
@@ -4180,7 +4369,8 @@
         "td":13,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "WR":[
@@ -4194,7 +4384,8 @@
         "td":14,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Tee Higgins",
@@ -4206,7 +4397,8 @@
         "td":7,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":false
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Calvin Austin",
@@ -4218,7 +4410,8 @@
         "td":2,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":false
+        "in_bank":true,
+        "in_strength":false
       },
       {
         "name":"Khalil Shakir",
@@ -4230,7 +4423,8 @@
         "td":3,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Chris Olave",
@@ -4242,7 +4436,8 @@
         "td":5,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "TE":[
@@ -4256,7 +4451,8 @@
         "td":1,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"T.J. Hockenson",
@@ -4268,7 +4464,8 @@
         "td":2,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":false
+        "in_bank":true,
+        "in_strength":false
       }
     ],
     "K":[
@@ -4282,21 +4479,23 @@
         "xpa":37,
         "my_guy":false,
         "my_guy_seasons":1,
-        "is_starter":true
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "DEF":[
       {
-        "name":"Green Bay Packers",
-        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/gb.png",
-        "total_pts":73.0,
-        "sack":32,
-        "int":6,
-        "fum_rec":4,
-        "td":0,
+        "name":"Chicago Bears",
+        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/chi.png",
+        "total_pts":85.0,
+        "sack":23,
+        "int":17,
+        "fum_rec":9,
+        "td":1,
         "my_guy":false,
-        "my_guy_seasons":1,
-        "is_starter":false
+        "my_guy_seasons":0,
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "TOP_PERFORMERS":[
@@ -4395,9 +4594,9 @@
     "POWER_RANK_DELTA":null,
     "QB Strength Rank":2,
     "RB Strength Rank":6,
-    "WR Strength Rank":3,
+    "WR Strength Rank":2,
     "TE Strength Rank":11,
-    "K Strength Rank":12,
+    "K Strength Rank":11,
     "Bench Strength Rank":12,
     "TREND Rank":1,
     "Adjusted Average Rank":7,
