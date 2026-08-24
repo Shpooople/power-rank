@@ -12,10 +12,15 @@
     "TREND":"NO TREND",
     "Trend Percentage":1.1,
     "QB Strength":72,
-    "RB Strength":91,
-    "WR Strength":74,
-    "TE Strength":51,
+    "RB Strength":96,
+    "WR Strength":53,
+    "TE Strength":38,
     "K Strength":85,
+    "QB Strength Count":1,
+    "RB Strength Count":4,
+    "WR Strength Count":2,
+    "TE Strength Count":1,
+    "K Strength Count":1,
     "QB":[
       {
         "name":"Blake Bortles",
@@ -277,8 +282,8 @@
     "LAST_WEEK_POWER_RANK":null,
     "POWER_RANK_DELTA":null,
     "QB Strength Rank":10,
-    "RB Strength Rank":5,
-    "WR Strength Rank":3,
+    "RB Strength Rank":2,
+    "WR Strength Rank":8,
     "TE Strength Rank":10,
     "K Strength Rank":4,
     "TREND Rank":3,
@@ -298,9 +303,15 @@
         "icon":"groundpound",
         "label":"Ground and Pound",
         "description":"48.5% der Punkte diese Woche kamen von den RBs - volle Kontrolle am Boden."
+      },
+      {
+        "icon":"ruin",
+        "label":"Ärmstes Team",
+        "description":"Nur noch 0 FAAB übrig - Waiver-Wire-Bettler."
       }
     ],
     "COMMENTS":"TESTESTEST",
+    "FAAB_REMAINING":0,
     "QUIZ_SCORES":[
       {
         "name":"Michi",
@@ -335,10 +346,15 @@
     "TREND":"NO TREND",
     "Trend Percentage":-3.2,
     "QB Strength":79,
-    "RB Strength":63,
-    "WR Strength":68,
-    "TE Strength":73,
+    "RB Strength":42,
+    "WR Strength":56,
+    "TE Strength":100,
     "K Strength":100,
+    "QB Strength Count":1,
+    "RB Strength Count":2,
+    "WR Strength Count":3,
+    "TE Strength Count":2,
+    "K Strength Count":1,
     "QB":[
       {
         "name":"Bo Nix",
@@ -599,7 +615,7 @@
     "QB Strength Rank":8,
     "RB Strength Rank":12,
     "WR Strength Rank":6,
-    "TE Strength Rank":4,
+    "TE Strength Rank":1,
     "K Strength Rank":1,
     "TREND Rank":8,
     "Adjusted Average Rank":12,
@@ -626,6 +642,7 @@
       }
     ],
     "COMMENTS":"TESTESTETS",
+    "FAAB_REMAINING":12,
     "QUIZ_SCORES":[
       {
         "name":"Lücke",
@@ -660,10 +677,15 @@
     "TREND":"NO TREND",
     "Trend Percentage":-0.2,
     "QB Strength":85,
-    "RB Strength":71,
-    "WR Strength":49,
-    "TE Strength":100,
+    "RB Strength":60,
+    "WR Strength":46,
+    "TE Strength":74,
     "K Strength":76,
+    "QB Strength Count":1,
+    "RB Strength Count":3,
+    "WR Strength Count":3,
+    "TE Strength Count":1,
+    "K Strength Count":1,
     "QB":[
       {
         "name":"Matthew Stafford",
@@ -933,9 +955,9 @@
     "LAST_WEEK_POWER_RANK":null,
     "POWER_RANK_DELTA":null,
     "QB Strength Rank":5,
-    "RB Strength Rank":10,
-    "WR Strength Rank":12,
-    "TE Strength Rank":1,
+    "RB Strength Rank":8,
+    "WR Strength Rank":11,
+    "TE Strength Rank":2,
     "K Strength Rank":7,
     "TREND Rank":6,
     "Adjusted Average Rank":10,
@@ -947,6 +969,7 @@
       }
     ],
     "COMMENTS":"Man würde meinen, dass die Founding Fathers nach einer 2-Punkte-Woche einen deutlichen Sprung nach oben in den Powerrankings machen müssten. Immerhin haben sie ihre Gesamtpunktzahl um ein Drittel erhöht.\nUnd jeder weiß, dass man in der THF nicht leicht an die heiß begehrten Doppelpunkte kommt. Aber das Powerranking-System sagt: „Ab nach unten mit euch.“\nWie kommt’s?\nDie Pioniere des Co-Managements haben in den letzten drei Wochen einen Schnitt von 106 Punkten. Das ist einfach zu wenig, auch wenn das in Woche 11 noch für zwei Punkte gesorgt hat.\nUnd dabei gibt es fantastische Performances von den Onesie-Positionen. QB, TE und K-Production sind jeweils Top-3, wenn nicht sogar besser. Hilft anscheinend nicht, wenn die RBs und WRs nicht mitspielen.\nUm die Playoffs zu erreichen, müssen sehr viele Würfel richtig fallen, es ist aber noch nicht vorbei.\nDer Deadline-Trade mit Mo gibt mir nochmal Hoffnung, aber ich befürchte, die Boys hätten früher Moves machen müssen und ihre Underperformer mit Big-Name-Value traden sollen.",
+    "FAAB_REMAINING":17,
     "QUIZ_SCORES":[
       {
         "name":"Till",
@@ -985,10 +1008,15 @@
     "TREND":"DOWN",
     "Trend Percentage":-12.0,
     "QB Strength":88,
-    "RB Strength":75,
-    "WR Strength":67,
-    "TE Strength":69,
+    "RB Strength":63,
+    "WR Strength":56,
+    "TE Strength":51,
     "K Strength":69,
+    "QB Strength Count":1,
+    "RB Strength Count":3,
+    "WR Strength Count":3,
+    "TE Strength Count":1,
+    "K Strength Count":1,
     "QB":[
       {
         "name":"Drake Maye",
@@ -1249,8 +1277,8 @@
     "LAST_WEEK_POWER_RANK":null,
     "POWER_RANK_DELTA":null,
     "QB Strength Rank":4,
-    "RB Strength Rank":8,
-    "WR Strength Rank":7,
+    "RB Strength Rank":7,
+    "WR Strength Rank":6,
     "TE Strength Rank":6,
     "K Strength Rank":9,
     "TREND Rank":11,
@@ -1274,6 +1302,7 @@
       }
     ],
     "COMMENTS":"Nach drei Wochen hat er mal wieder die 120er Schallmauer durchbrochen. Herzlichen Glückwunsch. In einer Fantasywoche für die Geschichtsbücher hat eine 122 für das Matchup und den Median LOCKER gereicht.\nBei genauer Betrachtung des Rosters ist mir aufgefallen, dass Köppi quasi die bessere Version der FF Fathers hat. Super Onesies QB, TE und K, aber das Fundament, die Basis, scheint nicht ganz zu stimmen. Alvin Kamara denkt schon an die Piña Coladas in Cabo und Shaheed macht im Pacific North West noch Akklimatisierungsversuche.\nAber wir alle wissen, dass in Woche 12 gegen Michi wieder mindestens 130 Punkte drin sind.",
+    "FAAB_REMAINING":19,
     "QUIZ_SCORES":[
       {
         "name":"Felix",
@@ -1308,10 +1337,15 @@
     "TREND":"DOWN",
     "Trend Percentage":-19.5,
     "QB Strength":71,
-    "RB Strength":66,
+    "RB Strength":45,
     "WR Strength":79,
-    "TE Strength":58,
+    "TE Strength":43,
     "K Strength":72,
+    "QB Strength Count":1,
+    "RB Strength Count":2,
+    "WR Strength Count":4,
+    "TE Strength Count":1,
+    "K Strength Count":1,
     "QB":[
       {
         "name":"Jordan Love",
@@ -1586,9 +1620,15 @@
         "icon":"airraid",
         "label":"Air Raid",
         "description":"51.9% der Punkte diese Woche kamen von den WRs - reine Luftshow."
+      },
+      {
+        "icon":"ruin",
+        "label":"Ärmstes Team",
+        "description":"Nur noch 0 FAAB übrig - Waiver-Wire-Bettler."
       }
     ],
     "COMMENTS":"Philipp hat in unserem All-Time-Ranking die meisten Punkte und dann in den Playoffs immer Pech. Dieses Jahr steht er ganz gut in der Liga da, aber hauptsächlich weil er die wenigsten Points Against hat. Muss ein komisches Gefühl sein.\nSein Team ist wahnsinnig inkonsistent, mit vier Performances von 105 Punkten oder sogar deutlich weniger. Verletzungen spielen da auch eine große Rolle, zuletzt hat der Blinddarm von MHJ den Geist aufgegeben.\npk123, legendärer Teamname, wird das nicht stören, solange er in die Playoffs kommt. Wer mit 90 Punkten sein Matchup gewinnt, hat Fortuna definitiv auf seiner Seite.",
+    "FAAB_REMAINING":0,
     "QUIZ_SCORES":[
       {
         "name":"Philipp",
@@ -1623,10 +1663,15 @@
     "TREND":"DOWN",
     "Trend Percentage":-9.5,
     "QB Strength":77,
-    "RB Strength":74,
+    "RB Strength":49,
     "WR Strength":73,
-    "TE Strength":45,
+    "TE Strength":33,
     "K Strength":67,
+    "QB Strength Count":1,
+    "RB Strength Count":2,
+    "WR Strength Count":4,
+    "TE Strength Count":1,
+    "K Strength Count":1,
     "QB":[
       {
         "name":"Jared Goff",
@@ -1907,8 +1952,8 @@
     "LAST_WEEK_POWER_RANK":null,
     "POWER_RANK_DELTA":null,
     "QB Strength Rank":9,
-    "RB Strength Rank":9,
-    "WR Strength Rank":5,
+    "RB Strength Rank":10,
+    "WR Strength Rank":4,
     "TE Strength Rank":12,
     "K Strength Rank":10,
     "TREND Rank":10,
@@ -1929,9 +1974,15 @@
         "icon":"cold",
         "label":"Cold Streak",
         "description":"3 Niederlagen in Folge - der Ofen ist aus."
+      },
+      {
+        "icon":"ruin",
+        "label":"Ärmstes Team",
+        "description":"Nur noch 0 FAAB übrig - Waiver-Wire-Bettler."
       }
     ],
     "COMMENTS":"Das Rennen um die „Football-in-die-Leisten-Trophy“ wird nochmal richtig spannend. In einem Blowout-100-Point-Swing ist Tine auf 8 Punkte rangekommen. Jetzt hält sie mit 66 Punkten den Negativrekord im Jahr 2025.\nNachdem die 2024 THF-Gewinnerin dem Injury Death entkommen schien, als sie Nabers getradet hatte, kam der zurück und hat sich seine Rache mit Zinsen geholt. Final Destination Style.\nYou can’t outrun the Injury Death.\nSkattebo, Wilson, zeitweise Egbuka, Pacheco und um ehrlich zu sein Chuba auch.\nDie Liste der Verluste ist lang und Tine spielt ab sofort einfach ihre Short Kings, auch wenn die vielleicht nicht die beste Option sind.\nGodspeed, little ones.",
+    "FAAB_REMAINING":0,
     "QUIZ_SCORES":[
       {
         "name":"Tine",
@@ -1966,10 +2017,15 @@
     "TREND":"NO TREND",
     "Trend Percentage":-5.4,
     "QB Strength":89,
-    "RB Strength":100,
+    "RB Strength":69,
     "WR Strength":64,
-    "TE Strength":69,
+    "TE Strength":51,
     "K Strength":86,
+    "QB Strength Count":1,
+    "RB Strength Count":2,
+    "WR Strength Count":4,
+    "TE Strength Count":1,
+    "K Strength Count":1,
     "QB":[
       {
         "name":"Jalen Hurts",
@@ -2238,8 +2294,8 @@
     "LAST_WEEK_POWER_RANK":null,
     "POWER_RANK_DELTA":null,
     "QB Strength Rank":3,
-    "RB Strength Rank":1,
-    "WR Strength Rank":8,
+    "RB Strength Rank":5,
+    "WR Strength Rank":5,
     "TE Strength Rank":6,
     "K Strength Rank":3,
     "TREND Rank":9,
@@ -2254,9 +2310,15 @@
         "icon":"dragon",
         "label":"Angstgegner",
         "description":"133.6 Punkte Schnitt pro Woche - das Team, das niemand gerne trifft."
+      },
+      {
+        "icon":"ruin",
+        "label":"Ärmstes Team",
+        "description":"Nur noch 0 FAAB übrig - Waiver-Wire-Bettler."
       }
     ],
     "COMMENTS":"Kein Jonathan Taylor, kein Proble… oh Shit. 77 Punkte. Das macht JT doch sonst alleine.\nEs war keine gute Woche für Leos Team. Fehlt es etwa an Depth? Naja, jetzt ist der erste RB-MVP der NFL seit AP wieder da. Aber kann JT seine fantastische Fantasy-Performance für den Rest der Season beibehalten?\nDie Schedule der Colts scheint wohl deutlich schwerer zu werden.\nBei uns in der THF sieht die Sleeper-Projection Leo definitiv als großen Favoriten im Spitzenduell gegen Svens Wackeltruppe.",
+    "FAAB_REMAINING":0,
     "QUIZ_SCORES":[
       {
         "name":"Leo",
@@ -2291,10 +2353,15 @@
     "TREND":"NO TREND",
     "Trend Percentage":2.4,
     "QB Strength":100,
-    "RB Strength":98,
-    "WR Strength":64,
-    "TE Strength":74,
+    "RB Strength":100,
+    "WR Strength":35,
+    "TE Strength":55,
     "K Strength":67,
+    "QB Strength Count":1,
+    "RB Strength Count":4,
+    "WR Strength Count":2,
+    "TE Strength Count":1,
+    "K Strength Count":1,
     "QB":[
       {
         "name":"Josh Allen",
@@ -2563,9 +2630,9 @@
     "LAST_WEEK_POWER_RANK":null,
     "POWER_RANK_DELTA":null,
     "QB Strength Rank":1,
-    "RB Strength Rank":2,
-    "WR Strength Rank":8,
-    "TE Strength Rank":3,
+    "RB Strength Rank":1,
+    "WR Strength Rank":12,
+    "TE Strength Rank":4,
     "K Strength Rank":10,
     "TREND Rank":2,
     "Adjusted Average Rank":4,
@@ -2582,6 +2649,7 @@
       }
     ],
     "COMMENTS":"80 Punkte von zwei Spielern. Josh Allen mit 50 und CMC mit 30. Absolute Frechheit. Damit hätte Ben gegen Tine oder gegen Leo in Woche 11 gewonnen. Nimmt man Kelce mit seinen 20 noch dazu, hätte es auch für Peter, Sven und Philipp gereicht.\nDabei hatte Ben auch noch 27 von Gainwell und 17 von Santos auf der Bank. Fantastische Woche für unseren Sophomore-Youngster. Kann er daran anknüpfen?\nJosh hat dazu am Donnerstag schon mal ganz klar „NEIN“ gesagt.",
+    "FAAB_REMAINING":30,
     "QUIZ_SCORES":[
       {
         "name":"Ben",
@@ -2616,10 +2684,15 @@
     "TREND":"NO TREND",
     "Trend Percentage":1.1,
     "QB Strength":81,
-    "RB Strength":91,
-    "WR Strength":64,
-    "TE Strength":71,
+    "RB Strength":76,
+    "WR Strength":50,
+    "TE Strength":53,
     "K Strength":97,
+    "QB Strength Count":1,
+    "RB Strength Count":3,
+    "WR Strength Count":3,
+    "TE Strength Count":1,
+    "K Strength Count":1,
     "QB":[
       {
         "name":"Justin Herbert",
@@ -2879,16 +2952,21 @@
     "LAST_WEEK_POWER_RANK":null,
     "POWER_RANK_DELTA":null,
     "QB Strength Rank":7,
-    "RB Strength Rank":5,
-    "WR Strength Rank":8,
+    "RB Strength Rank":4,
+    "WR Strength Rank":9,
     "TE Strength Rank":5,
     "K Strength Rank":2,
     "TREND Rank":3,
     "Adjusted Average Rank":6,
     "BADGES":[
-
+      {
+        "icon":"ruin",
+        "label":"Ärmstes Team",
+        "description":"Nur noch 0 FAAB übrig - Waiver-Wire-Bettler."
+      }
     ],
     "COMMENTS":"Da macht man mal 137 Punkte, die drittmeisten in der Woche, und man bekommt keinen Punkt. Halt doch – der Median. Was für eine Erleichterung. Doch nicht so kacke, oder Mo?\nBei Mo haben eigentlich nur 5 Spieler Punkte gemacht, den Rest hätte man auch auf 0 abrunden können. Wenn der QB 5 Punkte macht, hat man eigentlich schon verloren… außer man hat T-Mac und den Senfmann.\n(60 Points combined)\nEs sieht so aus, als würden B. Young und T-Mac jetzt richtig durchstarten. Vielleicht sollte Mo die beiden stacken in Justins BYE-Week.\nMo hätte schon längst aus gutem Grund aufgeben können, aber sein Team ist immer noch stark genug, um in die Playoffs zu kommen.\nVielleicht brauchen wir noch eine Trophy für den most resilient Manager (Arbeitstitel). Ein Voting-basierter Award für den besten Manager, der aus Scheiße Gold macht. Sowas wie Coach of the Year in der NFL.",
+    "FAAB_REMAINING":0,
     "QUIZ_SCORES":[
       {
         "name":"Mo",
@@ -2923,10 +3001,15 @@
     "TREND":"NO TREND",
     "Trend Percentage":0.9,
     "QB Strength":83,
-    "RB Strength":93,
-    "WR Strength":59,
-    "TE Strength":85,
+    "RB Strength":78,
+    "WR Strength":49,
+    "TE Strength":63,
     "K Strength":79,
+    "QB Strength Count":1,
+    "RB Strength Count":3,
+    "WR Strength Count":3,
+    "TE Strength Count":1,
+    "K Strength Count":1,
     "QB":[
       {
         "name":"Jaxson Dart",
@@ -3206,9 +3289,9 @@
     "LAST_WEEK_POWER_RANK":null,
     "POWER_RANK_DELTA":null,
     "QB Strength Rank":6,
-    "RB Strength Rank":4,
-    "WR Strength Rank":11,
-    "TE Strength Rank":2,
+    "RB Strength Rank":3,
+    "WR Strength Rank":10,
+    "TE Strength Rank":3,
     "K Strength Rank":6,
     "TREND Rank":5,
     "Adjusted Average Rank":5,
@@ -3223,9 +3306,15 @@
         "icon":"giant_killer",
         "label":"Giant Killer",
         "description":"Sieg gegen ein 2 Plätze besser platziertes Team - Überraschungscoup der Woche."
+      },
+      {
+        "icon":"ruin",
+        "label":"Ärmstes Team",
+        "description":"Nur noch 0 FAAB übrig - Waiver-Wire-Bettler."
       }
     ],
     "COMMENTS":"Nach einer der besten Drei-Spiele-Serien aus Woche 8, 9 und 10 mit 154 Punkten im Schnitt, kam Jays Team crashing down to Earth. Es wirkt aber wie eine Ausnahme, denn am Donnerstag haben die Texans schon 8 Sacks ausgepackt.\nJay ist back on track, würde man meinen. Aber ohne Waddle und Achane könnte es trotzdem eine sehr schwierige Woche werden. Zum Glück spielt er gegen Tines Team, da sollte eigentlich nichts anbrennen. (Definitiv kein Jinx-Versuch)",
+    "FAAB_REMAINING":0,
     "QUIZ_SCORES":[
       {
         "name":"Jay",
@@ -3260,10 +3349,15 @@
     "TREND":"NO TREND",
     "Trend Percentage":-3.0,
     "QB Strength":50,
-    "RB Strength":86,
+    "RB Strength":53,
     "WR Strength":100,
-    "TE Strength":62,
+    "TE Strength":46,
     "K Strength":84,
+    "QB Strength Count":1,
+    "RB Strength Count":2,
+    "WR Strength Count":4,
+    "TE Strength Count":1,
+    "K Strength Count":1,
     "QB":[
       {
         "name":"Joe Burrow",
@@ -3523,7 +3617,7 @@
     "LAST_WEEK_POWER_RANK":null,
     "POWER_RANK_DELTA":null,
     "QB Strength Rank":12,
-    "RB Strength Rank":7,
+    "RB Strength Rank":9,
     "WR Strength Rank":1,
     "TE Strength Rank":8,
     "K Strength Rank":5,
@@ -3555,9 +3649,15 @@
         "icon":"airraid",
         "label":"Air Raid",
         "description":"44.9% der Punkte diese Woche kamen von den WRs - reine Luftshow."
+      },
+      {
+        "icon":"ruin",
+        "label":"Ärmstes Team",
+        "description":"Nur noch 0 FAAB übrig - Waiver-Wire-Bettler."
       }
     ],
     "COMMENTS":"Ohhh how the mighty have fallen. „On top of the world“ war der gute Sven noch vor einem Monat. Jetzt schmilzt der Abstand schneller als die Polarkappen.\nDie Teams, die nicht den perfekten Draft und Start in die Season hatten, haben Svens Truppe in Production schon eingeholt.\nIn der Liga ist er nur noch auf Platz zwei und eine halbe Woche vor den Verfolgern. Jetzt spielt er auch noch im Spitzenduell gegen Leos Truppe – ohne Llama Chase und Ladd McConkey.\nIch hoffe, Sven macht sich nicht zu viele Sorgen, er ist ja schon fast sicher in den Playoffs… fast sicher…",
+    "FAAB_REMAINING":0,
     "QUIZ_SCORES":[
       {
         "name":"Sven",
@@ -3592,10 +3692,15 @@
     "TREND":"UP",
     "Trend Percentage":20.2,
     "QB Strength":97,
-    "RB Strength":94,
+    "RB Strength":68,
     "WR Strength":74,
-    "TE Strength":51,
+    "TE Strength":37,
     "K Strength":63,
+    "QB Strength Count":1,
+    "RB Strength Count":2,
+    "WR Strength Count":4,
+    "TE Strength Count":1,
+    "K Strength Count":1,
     "QB":[
       {
         "name":"Patrick Mahomes",
@@ -3855,9 +3960,9 @@
     "LAST_WEEK_POWER_RANK":null,
     "POWER_RANK_DELTA":null,
     "QB Strength Rank":2,
-    "RB Strength Rank":3,
+    "RB Strength Rank":6,
     "WR Strength Rank":3,
-    "TE Strength Rank":10,
+    "TE Strength Rank":11,
     "K Strength Rank":12,
     "TREND Rank":1,
     "Adjusted Average Rank":7,
@@ -3876,9 +3981,15 @@
         "icon":"touchdown",
         "label":"Touchdown Overflow",
         "description":"8 Touchdowns in der vergangenen Woche - der meiste Endzonen-Spaß der Liga."
+      },
+      {
+        "icon":"money",
+        "label":"Reichstes Team",
+        "description":"40 FAAB übrig - der Wal der Liga."
       }
     ],
     "COMMENTS":"Peter hatte einfach eine dieser Wochen. Die drei folgenden Stats fassen das eigentlich ganz gut zusammen:\nDavante Adams 1\/8 Receptions für 1 Yard und 1 TD.\nDie Chargers-D mit -1 – ausgerechnet gegen Jacksonville ohne deren WR1 und WR2.\nKhalil Shakir mit 1\/3 Receptions für -3 Yards. Calvin Austin 1\/1 Receptions für 5 Yards.\nDas sind die Wochen, in denen man daran zweifelt, was man hier eigentlich macht. Wo man am liebsten das ganze Team traden würde und mit Football nichts zu tun haben möchte.\nAber dann kommt schon der nächste Mittwoch und man fängt wieder von vorne an.",
+    "FAAB_REMAINING":40,
     "QUIZ_SCORES":[
       {
         "name":"Peter",
