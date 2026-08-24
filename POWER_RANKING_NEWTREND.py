@@ -220,15 +220,15 @@ def calculate_flexible_strength(team_players_by_pos):
     starters = {pos: (round(sum(vals), 1), len(vals)) for pos, vals in contribution.items()}
 
     # NEU: Statt Bank pro Einzelposition gibt es eine einzige "Bank"-Kennzahl:
-    # die 4 besten übrig gebliebenen Flex-Spieler (RB/WR/TE), unabhängig von
+    # die 3 besten übrig gebliebenen Flex-Spieler (RB/WR/TE), unabhängig von
     # der genauen Position - spiegelt am ehesten wider, wie stark die Bank
     # im Ernstfall (Verletzung eines Starters) einspringen könnte.
     flex_bench_values = sorted(
         (value for pid, pos, value in pool if pid not in used and pos in ("RB", "WR", "TE")),
         reverse=True
     )
-    top4 = flex_bench_values[:4]
-    bench_flex = (round(sum(top4), 1), len(top4))
+    top3 = flex_bench_values[:3]
+    bench_flex = (round(sum(top3), 1), len(top3))
 
     return starters, bench_flex
 
