@@ -1322,6 +1322,34 @@ if current_week_matchups:
                     f"als auch den besten WR ({best_wr}) im Lineup überboten."
                 )
 
+# 21b) "Defense wins Championships" - eigene DEF hat besten RB UND besten WR
+# im eigenen Lineup diese Woche überboten
+if current_week_matchups:
+    for m in current_week_matchups:
+        idx = next((i for i, r in enumerate(rosters) if r['roster_id'] == m['roster_id']), None)
+        if idx is None:
+            continue
+        starters = [s for s in m.get('starters', []) if s and s != '0']
+        ppw = m.get('players_points', {}) or {}
+        def_pts, rb_pts_d, wr_pts_d = None, [], []
+        for pid in starters:
+            pos = players.get(pid, {}).get('position')
+            pts = ppw.get(pid, 0)
+            if pos == 'DEF':
+                def_pts = pts if def_pts is None else max(def_pts, pts)
+            elif pos == 'RB':
+                rb_pts_d.append(pts)
+            elif pos == 'WR':
+                wr_pts_d.append(pts)
+        if def_pts is not None and rb_pts_d and wr_pts_d:
+            best_rb_d, best_wr_d = max(rb_pts_d), max(wr_pts_d)
+            if def_pts > best_rb_d and def_pts > best_wr_d:
+                add_badge(
+                    idx, "shield", "Defense wins Championships",
+                    f"Die Defense hat mit {def_pts} Punkten sowohl den besten RB ({best_rb_d}) "
+                    f"als auch den besten WR ({best_wr_d}) im Lineup überboten."
+                )
+
 # 22) Reichstes/Ärmstes Team - FAAB-Restbudget
 if faab_remaining_list:
     max_faab = max(faab_remaining_list)
