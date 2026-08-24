@@ -78,6 +78,25 @@ players = response_players.json()
 response_users = requests.get(url_users)
 users = response_users.json()
 
+# --- NEU: Echte Slot-Konfiguration der Liga laden (für flexible
+# Positionsstärke UND "Perfektes Lineup" weiter unten) - statt hardcoded
+# Annahmen wird die tatsächliche Anzahl QB/RB/WR/TE/FLEX/SUPER_FLEX-Slots
+# aus den Liga-Einstellungen genutzt.
+try:
+    league_settings_info = requests.get(f"https://api.sleeper.app/v1/league/{league_id}").json()
+    roster_positions = league_settings_info.get("roster_positions", [])
+except Exception:
+    roster_positions = []
+
+NON_STARTING_SLOTS = {"BN", "IR", "TAXI"}
+starting_slots = [p for p in roster_positions if p not in NON_STARTING_SLOTS]
+FLEX_ELIGIBLE = {
+    "FLEX": {"RB", "WR", "TE"},
+    "SUPER_FLEX": {"QB", "RB", "WR", "TE"},
+    "WRRB_FLEX": {"RB", "WR"},
+    "REC_FLEX": {"WR", "TE"},
+}
+
 # --- Anzeige-Hinweis für die Vorsaison ---
 # Chart, Trend und Adjusted Average nutzen jetzt alle dieselbe Datenquelle
 # (weekly_points, weiter unten befüllt über die bereits korrekt ermittelte
@@ -158,9 +177,47 @@ def ppg(pid):
     return total_points_by_player.get(pid, 0) / games
 
 # Helper function to calculate position strength based on points-per-game
-def calculate_strength(player_ids, num_players):
-    player_ppgs = sorted((ppg(pid) for pid in player_ids), reverse=True)
-    return round(sum(player_ppgs[:num_players]), 1)
+# --- NEU: Flexible Positionsstärke statt hardcoded Spieleranzahl ---
+# Nutzt dieselbe Slot-Logik wie "Perfektes Lineup" (echte Liga-Konfiguration
+# aus roster_positions, inkl. FLEX/SUPER_FLEX), aber auf Basis der Saison-PPG
+# statt einer einzelnen Woche. Ein RB, der einen FLEX-Slot belegt, zählt zur
+# RB-Stärke - hat ein Team also 4 starke RBs, können alle 4 einfließen, wenn
+# sie die besten verfügbaren Flex-Optionen sind. Gibt pro Position sowohl die
+# Summe der PPG als auch die Anzahl der eingerechneten Spieler zurück (die
+# Anzahl wird im Frontend neben dem Balken angezeigt).
+def calculate_flexible_strength(team_players_by_pos):
+    pool = []
+    for pos, ids in team_players_by_pos.items():
+        for pid in ids:
+            pool.append((pid, pos, ppg(pid)))
+
+    used = set()
+    contribution = {pos: [] for pos in team_players_by_pos}
+    specific_slots_local = [s for s in starting_slots if s not in FLEX_ELIGIBLE]
+    flex_slots_local = [s for s in starting_slots if s in FLEX_ELIGIBLE]
+
+    for slot in specific_slots_local:
+        candidates = sorted(
+            (p for p in pool if p[1] == slot and p[0] not in used),
+            key=lambda p: p[2], reverse=True
+        )
+        if candidates:
+            best = candidates[0]
+            used.add(best[0])
+            contribution[best[1]].append(best[2])
+
+    for slot in flex_slots_local:
+        eligible_positions = FLEX_ELIGIBLE[slot]
+        candidates = sorted(
+            (p for p in pool if p[1] in eligible_positions and p[0] not in used),
+            key=lambda p: p[2], reverse=True
+        )
+        if candidates:
+            best = candidates[0]
+            used.add(best[0])
+            contribution[best[1]].append(best[2])
+
+    return {pos: (round(sum(vals), 1), len(vals)) for pos, vals in contribution.items()}
 
 # --- NEU: Detail-Stats + Spielerbild fürs Roster ---
 # Die _from-Varianten arbeiten auf einem rohen Stats-Dict (egal ob Saison-
@@ -256,6 +313,7 @@ injury_counts, homer_team_counts_list = [], []
 team_weekly_points_list = []
 qb_list, rb_list, wr_list, te_list, k_list, def_list = [], [], [], [], [], []
 qb_strength, rb_strength, wr_strength, te_strength, k_strength = [], [], [], [], []
+qb_strength_count, rb_strength_count, wr_strength_count, te_strength_count, k_strength_count = [], [], [], [], []
 top_performers_list, bottom_performers_list, benchwarmer_list = [], [], []
 last_week_opponent_list, last_week_result_list = [], []
 this_week_opponent_list, this_week_winprob_list = [], []
@@ -334,6 +392,15 @@ last_week_opponent_map = build_opponent_map(current_week_matchups)  # current_we
 this_week_opponent_map = build_opponent_map(this_week_matchups)
 
 roster_id_to_owner = {r['roster_id']: r['owner_id'] for r in rosters}
+
+# --- NEU: FAAB-Kontostand - Gesamtbudget der Liga einmalig abrufen, pro
+# Team wird davon dann settings.waiver_budget_used abgezogen.
+try:
+    _league_settings_for_faab = requests.get(f"https://api.sleeper.app/v1/league/{league_id}").json()
+    total_faab_budget = (_league_settings_for_faab.get("settings", {}) or {}).get("waiver_budget", 100)
+except Exception:
+    total_faab_budget = 100
+faab_remaining_list = []
 
 # --- NEU: "My Guy" - Spieler, die schon mehrfach beim selben Team (Owner)
 # im Roster waren. Eine Saison zählt nur, wenn der Spieler dort mindestens
@@ -458,6 +525,7 @@ for team in rosters:
     ties.append(team['settings'].get('ties', 0))
     points_for.append(team['settings'].get('fpts', 0))
     points_against.append(team['settings'].get('fpts_against', 0))
+    faab_remaining_list.append(total_faab_budget - team['settings'].get('waiver_budget_used', 0))
 
     # Collect player names (fürs Roster) UND ids (für die PPG-Berechnung)
     qb_roster, rb_roster, wr_roster, te_roster, k_roster, def_roster = [], [], [], [], [], []
@@ -507,13 +575,29 @@ for team in rosters:
     k_list.append(build_roster_entries(k_ids, k_roster, k_stats, my_guy_fn=lambda pid: is_my_guy(user_id, pid)))
     def_list.append(build_roster_entries(def_ids, def_roster, def_stats, image_url_fn=team_logo_url, my_guy_fn=lambda pid: is_my_guy(user_id, pid)))
 
-    # Positionsstärke jetzt auf Basis von Punkten pro Spiel (PPG) statt
-    # Saison-Gesamtpunkten - fairer bei Verletzungspausen/späten Einstiegen.
-    qb_strength.append(calculate_strength(qb_ids, 1))
-    rb_strength.append(calculate_strength(rb_ids, 3))
-    wr_strength.append(calculate_strength(wr_ids, 4))
-    te_strength.append(calculate_strength(te_ids, 1))
-    k_strength.append(calculate_strength(k_ids, 1))
+    # Positionsstärke jetzt flexibel auf Basis der echten Liga-Slots (inkl.
+    # FLEX/SUPER_FLEX) und Punkten pro Spiel (PPG) statt hardcoded Anzahl -
+    # siehe calculate_flexible_strength() weiter oben.
+    flex_result = calculate_flexible_strength({
+        "QB": qb_ids, "RB": rb_ids, "WR": wr_ids, "TE": te_ids, "K": k_ids, "DEF": def_ids,
+    })
+    qb_pts, qb_cnt = flex_result.get("QB", (0, 0))
+    rb_pts, rb_cnt = flex_result.get("RB", (0, 0))
+    wr_pts, wr_cnt = flex_result.get("WR", (0, 0))
+    te_pts, te_cnt = flex_result.get("TE", (0, 0))
+    k_pts, k_cnt = flex_result.get("K", (0, 0))
+
+    qb_strength.append(qb_pts)
+    rb_strength.append(rb_pts)
+    wr_strength.append(wr_pts)
+    te_strength.append(te_pts)
+    k_strength.append(k_pts)
+
+    qb_strength_count.append(qb_cnt)
+    rb_strength_count.append(rb_cnt)
+    wr_strength_count.append(wr_cnt)
+    te_strength_count.append(te_cnt)
+    k_strength_count.append(k_cnt)
 
     # Adjusted Average: remove highest and lowest scoring weeks
     team_weekly_points = [weekly_points[week][rosters.index(team)] for week in weeks if weekly_points[week][rosters.index(team)] > 0]
@@ -679,6 +763,11 @@ df = pd.DataFrame({
     "WR Strength": wr_strength_normalized,
     "TE Strength": te_strength_normalized,
     "K Strength": k_strength_normalized,
+    "QB Strength Count": qb_strength_count,
+    "RB Strength Count": rb_strength_count,
+    "WR Strength Count": wr_strength_count,
+    "TE Strength Count": te_strength_count,
+    "K Strength Count": k_strength_count,
     "QB": qb_list,
     "RB": rb_list,
     "WR": wr_list,
@@ -970,20 +1059,9 @@ if bench_blunder_candidates:
 # Vereinfachung: greedy statt exakter Optimierung (spezifische Slots zuerst,
 # dann FLEX-Slots) - in seltenen Grenzfällen nicht zu 100% exakt optimal,
 # aber eine sehr gute Annäherung.
-try:
-    league_settings_info = requests.get(f"https://api.sleeper.app/v1/league/{league_id}").json()
-    roster_positions = league_settings_info.get("roster_positions", [])
-except Exception:
-    roster_positions = []
-
-NON_STARTING_SLOTS = {"BN", "IR", "TAXI"}
-starting_slots = [p for p in roster_positions if p not in NON_STARTING_SLOTS]
-FLEX_ELIGIBLE = {
-    "FLEX": {"RB", "WR", "TE"},
-    "SUPER_FLEX": {"QB", "RB", "WR", "TE"},
-    "WRRB_FLEX": {"RB", "WR"},
-    "REC_FLEX": {"WR", "TE"},
-}
+# (roster_positions/starting_slots/FLEX_ELIGIBLE werden jetzt zentral ganz
+# oben im Script geladen - werden dort auch für die flexible Positionsstärke
+# gebraucht.)
 
 def optimal_lineup_points(team, match_entry):
     if not match_entry or not starting_slots:
@@ -1215,9 +1293,31 @@ if current_week_matchups:
                     f"als auch den besten WR ({best_wr}) im Lineup überboten."
                 )
 
+# 22) Reichstes/Ärmstes Team - FAAB-Restbudget
+if faab_remaining_list:
+    max_faab = max(faab_remaining_list)
+    min_faab = min(faab_remaining_list)
+    richest_indices = [i for i, v in enumerate(faab_remaining_list) if v == max_faab]
+    poorest_indices = [i for i, v in enumerate(faab_remaining_list) if v == min_faab]
+
+    # Bei Gleichstand bekommt KEIN Team das Reichstes-Team-Badge
+    if len(richest_indices) == 1:
+        add_badge(
+            richest_indices[0], "money", "Reichstes Team",
+            f"{int(max_faab)} FAAB übrig - der Wal der Liga."
+        )
+
+    # Ärmstes Team: bei Gleichstand bekommen alle betroffenen Teams das Badge
+    for idx in poorest_indices:
+        add_badge(
+            idx, "ruin", "Ärmstes Team",
+            f"Nur noch {int(min_faab)} FAAB übrig - Waiver-Wire-Bettler."
+        )
+
 df["BADGES"] = badges_list
 
 df['COMMENTS'] = ""
+df['FAAB_REMAINING'] = faab_remaining_list
 
 # --- NEU: Prediction-Quiz-Score einbinden ---
 # Kombinierte Export-Tabelle aus dem Prediction-Quiz-Sheet (Tab "QuizExport":
