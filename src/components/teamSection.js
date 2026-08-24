@@ -412,7 +412,7 @@ const TeamSection = ({ team }) => {
       x: [displayedWeekX[i], displayedWeekX[i + 1]],
       y: [displayedWeekY[i], displayedWeekY[i + 1]],
       mode: 'lines',
-      line: { color: interpolateColors(weekPointColors[i], weekPointColors[i + 1], 0.5), width: 3 },
+      line: { color: weekPointColors[i + 1], width: 3 },
       hoverinfo: 'skip',
       showlegend: false,
     });
