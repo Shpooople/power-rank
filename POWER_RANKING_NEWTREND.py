@@ -301,7 +301,7 @@ def team_logo_url(pid):
     # und haben kein Spielerfoto - stattdessen das Team-Logo verwenden.
     return f"https://sleepercdn.com/images/team_logos/nfl/{pid.lower()}.png"
 
-def build_roster_entries(ids, names, extra_stats_fn=None, image_url_fn=None, my_guy_fn=None, my_guy_seasons_fn=None):
+def build_roster_entries(ids, names, extra_stats_fn=None, image_url_fn=None, my_guy_fn=None, my_guy_seasons_fn=None, is_starter_fn=None):
     entries = []
     for pid, player_name in zip(ids, names):
         image_url = image_url_fn(pid) if image_url_fn else f"https://sleepercdn.com/content/nfl/players/{pid}.jpg"
@@ -316,6 +316,8 @@ def build_roster_entries(ids, names, extra_stats_fn=None, image_url_fn=None, my_
             entry["my_guy"] = my_guy_fn(pid)
         if my_guy_seasons_fn:
             entry["my_guy_seasons"] = my_guy_seasons_fn(pid)
+        if is_starter_fn:
+            entry["is_starter"] = is_starter_fn(pid)
         entries.append(entry)
     return entries
 
@@ -546,6 +548,20 @@ for team in rosters:
     points_against.append(team['settings'].get('fpts_against', 0))
     faab_remaining_list.append(total_faab_budget - team['settings'].get('waiver_budget_used', 0))
 
+    # NEU: Aktuelle Starter dieser Woche ermitteln (fürs Markieren der
+    # Bank-Spieler im Roster) - dieselbe Quelle wie current_week_matchups
+    # sonst im Script.
+    current_match_entry = None
+    if current_week_matchups:
+        current_match_entry = next(
+            (m for m in current_week_matchups if m['roster_id'] == team['roster_id']), None
+        )
+    current_starters = set(
+        s for s in (current_match_entry.get('starters', []) if current_match_entry else [])
+        if s and s != '0'
+    )
+    is_starter_fn = lambda pid: pid in current_starters
+
     # Collect player names (fürs Roster) UND ids (für die PPG-Berechnung)
     qb_roster, rb_roster, wr_roster, te_roster, k_roster, def_roster = [], [], [], [], [], []
     qb_ids, rb_ids, wr_ids, te_ids, k_ids, def_ids = [], [], [], [], [], []
@@ -587,12 +603,12 @@ for team in rosters:
     injury_counts.append(injury_count)
     homer_team_counts_list.append(nfl_team_counts)
 
-    qb_list.append(build_roster_entries(qb_ids, qb_roster, qb_stats, my_guy_fn=lambda pid: is_my_guy(user_id, pid), my_guy_seasons_fn=lambda pid: my_guy_seasons(user_id, pid)))
-    rb_list.append(build_roster_entries(rb_ids, rb_roster, rb_stats, my_guy_fn=lambda pid: is_my_guy(user_id, pid), my_guy_seasons_fn=lambda pid: my_guy_seasons(user_id, pid)))
-    wr_list.append(build_roster_entries(wr_ids, wr_roster, wr_stats, my_guy_fn=lambda pid: is_my_guy(user_id, pid), my_guy_seasons_fn=lambda pid: my_guy_seasons(user_id, pid)))
-    te_list.append(build_roster_entries(te_ids, te_roster, wr_stats, my_guy_fn=lambda pid: is_my_guy(user_id, pid), my_guy_seasons_fn=lambda pid: my_guy_seasons(user_id, pid)))
-    k_list.append(build_roster_entries(k_ids, k_roster, k_stats, my_guy_fn=lambda pid: is_my_guy(user_id, pid), my_guy_seasons_fn=lambda pid: my_guy_seasons(user_id, pid)))
-    def_list.append(build_roster_entries(def_ids, def_roster, def_stats, image_url_fn=team_logo_url, my_guy_fn=lambda pid: is_my_guy(user_id, pid), my_guy_seasons_fn=lambda pid: my_guy_seasons(user_id, pid)))
+    qb_list.append(build_roster_entries(qb_ids, qb_roster, qb_stats, my_guy_fn=lambda pid: is_my_guy(user_id, pid), my_guy_seasons_fn=lambda pid: my_guy_seasons(user_id, pid), is_starter_fn=is_starter_fn))
+    rb_list.append(build_roster_entries(rb_ids, rb_roster, rb_stats, my_guy_fn=lambda pid: is_my_guy(user_id, pid), my_guy_seasons_fn=lambda pid: my_guy_seasons(user_id, pid), is_starter_fn=is_starter_fn))
+    wr_list.append(build_roster_entries(wr_ids, wr_roster, wr_stats, my_guy_fn=lambda pid: is_my_guy(user_id, pid), my_guy_seasons_fn=lambda pid: my_guy_seasons(user_id, pid), is_starter_fn=is_starter_fn))
+    te_list.append(build_roster_entries(te_ids, te_roster, wr_stats, my_guy_fn=lambda pid: is_my_guy(user_id, pid), my_guy_seasons_fn=lambda pid: my_guy_seasons(user_id, pid), is_starter_fn=is_starter_fn))
+    k_list.append(build_roster_entries(k_ids, k_roster, k_stats, my_guy_fn=lambda pid: is_my_guy(user_id, pid), my_guy_seasons_fn=lambda pid: my_guy_seasons(user_id, pid), is_starter_fn=is_starter_fn))
+    def_list.append(build_roster_entries(def_ids, def_roster, def_stats, image_url_fn=team_logo_url, my_guy_fn=lambda pid: is_my_guy(user_id, pid), my_guy_seasons_fn=lambda pid: my_guy_seasons(user_id, pid), is_starter_fn=is_starter_fn))
 
     # Positionsstärke jetzt flexibel auf Basis der echten Liga-Slots (inkl.
     # FLEX/SUPER_FLEX) und Punkten pro Spiel (PPG) statt hardcoded Anzahl -
