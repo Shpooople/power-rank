@@ -21,7 +21,7 @@
     "WR Strength Count":2,
     "TE Strength Count":1,
     "K Strength Count":1,
-    "Bench Strength":62,
+    "Bench Strength":81,
     "Bench Strength Count":3,
     "QB":[
       {
@@ -288,7 +288,7 @@
     "WR Strength Rank":8,
     "TE Strength Rank":10,
     "K Strength Rank":4,
-    "Bench Strength Rank":10,
+    "Bench Strength Rank":4,
     "TREND Rank":3,
     "Adjusted Average Rank":3,
     "BADGES":[
@@ -358,8 +358,8 @@
     "WR Strength Count":3,
     "TE Strength Count":2,
     "K Strength Count":1,
-    "Bench Strength":66,
-    "Bench Strength Count":4,
+    "Bench Strength":67,
+    "Bench Strength Count":3,
     "QB":[
       {
         "name":"Bo Nix",
@@ -622,7 +622,7 @@
     "WR Strength Rank":6,
     "TE Strength Rank":1,
     "K Strength Rank":1,
-    "Bench Strength Rank":7,
+    "Bench Strength Rank":10,
     "TREND Rank":8,
     "Adjusted Average Rank":12,
     "BADGES":[
@@ -692,8 +692,8 @@
     "WR Strength Count":3,
     "TE Strength Count":1,
     "K Strength Count":1,
-    "Bench Strength":50,
-    "Bench Strength Count":4,
+    "Bench Strength":66,
+    "Bench Strength Count":3,
     "QB":[
       {
         "name":"Matthew Stafford",
@@ -967,7 +967,7 @@
     "WR Strength Rank":11,
     "TE Strength Rank":2,
     "K Strength Rank":7,
-    "Bench Strength Rank":12,
+    "Bench Strength Rank":11,
     "TREND Rank":6,
     "Adjusted Average Rank":10,
     "BADGES":[
@@ -1026,8 +1026,8 @@
     "WR Strength Count":3,
     "TE Strength Count":1,
     "K Strength Count":1,
-    "Bench Strength":66,
-    "Bench Strength Count":4,
+    "Bench Strength":77,
+    "Bench Strength Count":3,
     "QB":[
       {
         "name":"Drake Maye",
@@ -1292,7 +1292,7 @@
     "WR Strength Rank":6,
     "TE Strength Rank":6,
     "K Strength Rank":9,
-    "Bench Strength Rank":7,
+    "Bench Strength Rank":6,
     "TREND Rank":11,
     "Adjusted Average Rank":8,
     "BADGES":[
@@ -1358,8 +1358,8 @@
     "WR Strength Count":4,
     "TE Strength Count":1,
     "K Strength Count":1,
-    "Bench Strength":67,
-    "Bench Strength Count":4,
+    "Bench Strength":70,
+    "Bench Strength Count":3,
     "QB":[
       {
         "name":"Jordan Love",
@@ -1622,7 +1622,7 @@
     "WR Strength Rank":2,
     "TE Strength Rank":9,
     "K Strength Rank":8,
-    "Bench Strength Rank":5,
+    "Bench Strength Rank":9,
     "TREND Rank":12,
     "Adjusted Average Rank":9,
     "BADGES":[
@@ -1688,7 +1688,7 @@
     "TE Strength Count":1,
     "K Strength Count":1,
     "Bench Strength":74,
-    "Bench Strength Count":4,
+    "Bench Strength Count":3,
     "QB":[
       {
         "name":"Jared Goff",
@@ -1973,7 +1973,7 @@
     "WR Strength Rank":4,
     "TE Strength Rank":12,
     "K Strength Rank":10,
-    "Bench Strength Rank":3,
+    "Bench Strength Rank":7,
     "TREND Rank":10,
     "Adjusted Average Rank":11,
     "BADGES":[
@@ -2044,8 +2044,8 @@
     "WR Strength Count":4,
     "TE Strength Count":1,
     "K Strength Count":1,
-    "Bench Strength":69,
-    "Bench Strength Count":4,
+    "Bench Strength":72,
+    "Bench Strength Count":3,
     "QB":[
       {
         "name":"Jalen Hurts",
@@ -2318,7 +2318,7 @@
     "WR Strength Rank":5,
     "TE Strength Rank":6,
     "K Strength Rank":3,
-    "Bench Strength Rank":4,
+    "Bench Strength Rank":8,
     "TREND Rank":9,
     "Adjusted Average Rank":1,
     "BADGES":[
@@ -2384,7 +2384,7 @@
     "TE Strength Count":1,
     "K Strength Count":1,
     "Bench Strength":100,
-    "Bench Strength Count":4,
+    "Bench Strength Count":3,
     "QB":[
       {
         "name":"Josh Allen",
@@ -2717,7 +2717,7 @@
     "WR Strength Count":3,
     "TE Strength Count":1,
     "K Strength Count":1,
-    "Bench Strength":65,
+    "Bench Strength":85,
     "Bench Strength Count":3,
     "QB":[
       {
@@ -2982,7 +2982,7 @@
     "WR Strength Rank":9,
     "TE Strength Rank":5,
     "K Strength Rank":2,
-    "Bench Strength Rank":9,
+    "Bench Strength Rank":2,
     "TREND Rank":3,
     "Adjusted Average Rank":6,
     "BADGES":[
@@ -3037,8 +3037,8 @@
     "WR Strength Count":3,
     "TE Strength Count":1,
     "K Strength Count":1,
-    "Bench Strength":78,
-    "Bench Strength Count":4,
+    "Bench Strength":82,
+    "Bench Strength Count":3,
     "QB":[
       {
         "name":"Jaxson Dart",
@@ -3322,7 +3322,7 @@
     "WR Strength Rank":10,
     "TE Strength Rank":3,
     "K Strength Rank":6,
-    "Bench Strength Rank":2,
+    "Bench Strength Rank":3,
     "TREND Rank":5,
     "Adjusted Average Rank":5,
     "BADGES":[
@@ -3388,8 +3388,8 @@
     "WR Strength Count":4,
     "TE Strength Count":1,
     "K Strength Count":1,
-    "Bench Strength":67,
-    "Bench Strength Count":4,
+    "Bench Strength":78,
+    "Bench Strength Count":3,
     "QB":[
       {
         "name":"Joe Burrow",
@@ -3734,8 +3734,8 @@
     "WR Strength Count":4,
     "TE Strength Count":1,
     "K Strength Count":1,
-    "Bench Strength":57,
-    "Bench Strength Count":4,
+    "Bench Strength":62,
+    "Bench Strength Count":3,
     "QB":[
       {
         "name":"Patrick Mahomes",
@@ -3999,7 +3999,7 @@
     "WR Strength Rank":3,
     "TE Strength Rank":11,
     "K Strength Rank":12,
-    "Bench Strength Rank":11,
+    "Bench Strength Rank":12,
     "TREND Rank":1,
     "Adjusted Average Rank":7,
     "BADGES":[
