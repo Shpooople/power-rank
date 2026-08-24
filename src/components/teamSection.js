@@ -206,8 +206,9 @@ const RosterPositionGroup = ({ label, players }) => {
       <h4 className="roster-position-label">{label}</h4>
       {sortedPlayers.map((p, i) => {
         const statLine = formatPositionStats(label, p);
+        const dimmed = p.in_strength === false && p.in_bank !== true;
         return (
-          <div className={`roster-player-row${p.is_starter === false ? ' bench-player' : ''}`} key={i}>
+          <div className={`roster-player-row${dimmed ? ' bench-player' : ''}`} key={i}>
             <img
               src={p.image_url}
               alt={p.name}
@@ -220,7 +221,7 @@ const RosterPositionGroup = ({ label, players }) => {
                 title={p.my_guy ? `Schon ${p.my_guy_seasons}. Saison bei diesem Team` : undefined}
               >
                 {p.name}{p.my_guy ? ' — My Guy' : ''}
-                {p.is_starter === false && <span className="bench-tag">Bank</span>}
+                {p.in_bank === true && <span className="bench-tag">Bank</span>}
               </span>
               {statLine && <span className="roster-player-stats">{statLine}</span>}
             </div>
