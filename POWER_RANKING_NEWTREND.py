@@ -223,14 +223,15 @@ def calculate_flexible_strength(team_players_by_pos):
     # die 3 besten übrig gebliebenen Flex-Spieler (RB/WR/TE), unabhängig von
     # der genauen Position - spiegelt am ehesten wider, wie stark die Bank
     # im Ernstfall (Verletzung eines Starters) einspringen könnte.
-    flex_bench_values = sorted(
-        (value for pid, pos, value in pool if pid not in used and pos in ("RB", "WR", "TE")),
-        reverse=True
+    flex_bench_candidates = sorted(
+        (p for p in pool if p[0] not in used and p[1] in ("RB", "WR", "TE")),
+        key=lambda p: p[2], reverse=True
     )
-    top3 = flex_bench_values[:3]
-    bench_flex = (round(sum(top3), 1), len(top3))
+    top3 = flex_bench_candidates[:3]
+    bench_flex = (round(sum(p[2] for p in top3), 1), len(top3))
+    bank_pids = {p[0] for p in top3}
 
-    return starters, bench_flex
+    return starters, bench_flex, used, bank_pids
 
 # --- NEU: Detail-Stats + Spielerbild fürs Roster ---
 # Die _from-Varianten arbeiten auf einem rohen Stats-Dict (egal ob Saison-
@@ -301,7 +302,7 @@ def team_logo_url(pid):
     # und haben kein Spielerfoto - stattdessen das Team-Logo verwenden.
     return f"https://sleepercdn.com/images/team_logos/nfl/{pid.lower()}.png"
 
-def build_roster_entries(ids, names, extra_stats_fn=None, image_url_fn=None, my_guy_fn=None, my_guy_seasons_fn=None, is_starter_fn=None):
+def build_roster_entries(ids, names, extra_stats_fn=None, image_url_fn=None, my_guy_fn=None, my_guy_seasons_fn=None, in_bank_fn=None, in_strength_fn=None):
     entries = []
     for pid, player_name in zip(ids, names):
         image_url = image_url_fn(pid) if image_url_fn else f"https://sleepercdn.com/content/nfl/players/{pid}.jpg"
@@ -316,8 +317,10 @@ def build_roster_entries(ids, names, extra_stats_fn=None, image_url_fn=None, my_
             entry["my_guy"] = my_guy_fn(pid)
         if my_guy_seasons_fn:
             entry["my_guy_seasons"] = my_guy_seasons_fn(pid)
-        if is_starter_fn:
-            entry["is_starter"] = is_starter_fn(pid)
+        if in_bank_fn:
+            entry["in_bank"] = in_bank_fn(pid)
+        if in_strength_fn:
+            entry["in_strength"] = in_strength_fn(pid)
         entries.append(entry)
     return entries
 
@@ -548,26 +551,28 @@ for team in rosters:
     points_against.append(team['settings'].get('fpts_against', 0))
     faab_remaining_list.append(total_faab_budget - team['settings'].get('waiver_budget_used', 0))
 
-    # NEU: Aktuelle Starter dieser Woche ermitteln (fürs Markieren der
-    # Bank-Spieler im Roster) - dieselbe Quelle wie current_week_matchups
-    # sonst im Script.
+    # NEU: Sleeper liefert über /rosters (team['players']) IMMER nur den
+    # aktuellen/letzten Kader-Stand - bei einer bereits beendeten Saison also
+    # den Stand nach den Playoffs, nicht den Stand der jeweils angezeigten
+    # Woche. Der Matchup-Eintrag dieser Woche (current_week_matchups) hat
+    # dagegen sein eigenes 'players'-Feld, das den Kader GENAU zum Zeitpunkt
+    # dieser Woche zeigt - das ist die historisch korrekte Quelle.
     current_match_entry = None
     if current_week_matchups:
         current_match_entry = next(
             (m for m in current_week_matchups if m['roster_id'] == team['roster_id']), None
         )
-    current_starters = set(
-        s for s in (current_match_entry.get('starters', []) if current_match_entry else [])
-        if s and s != '0'
-    )
-    is_starter_fn = lambda pid: pid in current_starters
+    if current_match_entry and current_match_entry.get('players'):
+        roster_player_ids = current_match_entry['players']
+    else:
+        roster_player_ids = team['players']
 
     # Collect player names (fürs Roster) UND ids (für die PPG-Berechnung)
     qb_roster, rb_roster, wr_roster, te_roster, k_roster, def_roster = [], [], [], [], [], []
     qb_ids, rb_ids, wr_ids, te_ids, k_ids, def_ids = [], [], [], [], [], []
     injury_count = 0
     nfl_team_counts = {}
-    for player_id in team['players']:
+    for player_id in roster_player_ids:
         if player_id in players:
             player = players[player_id]
             player_name = f"{player.get('first_name', '')} {player.get('last_name', '')}".strip()
@@ -603,19 +608,12 @@ for team in rosters:
     injury_counts.append(injury_count)
     homer_team_counts_list.append(nfl_team_counts)
 
-    qb_list.append(build_roster_entries(qb_ids, qb_roster, qb_stats, my_guy_fn=lambda pid: is_my_guy(user_id, pid), my_guy_seasons_fn=lambda pid: my_guy_seasons(user_id, pid), is_starter_fn=is_starter_fn))
-    rb_list.append(build_roster_entries(rb_ids, rb_roster, rb_stats, my_guy_fn=lambda pid: is_my_guy(user_id, pid), my_guy_seasons_fn=lambda pid: my_guy_seasons(user_id, pid), is_starter_fn=is_starter_fn))
-    wr_list.append(build_roster_entries(wr_ids, wr_roster, wr_stats, my_guy_fn=lambda pid: is_my_guy(user_id, pid), my_guy_seasons_fn=lambda pid: my_guy_seasons(user_id, pid), is_starter_fn=is_starter_fn))
-    te_list.append(build_roster_entries(te_ids, te_roster, wr_stats, my_guy_fn=lambda pid: is_my_guy(user_id, pid), my_guy_seasons_fn=lambda pid: my_guy_seasons(user_id, pid), is_starter_fn=is_starter_fn))
-    k_list.append(build_roster_entries(k_ids, k_roster, k_stats, my_guy_fn=lambda pid: is_my_guy(user_id, pid), my_guy_seasons_fn=lambda pid: my_guy_seasons(user_id, pid), is_starter_fn=is_starter_fn))
-    def_list.append(build_roster_entries(def_ids, def_roster, def_stats, image_url_fn=team_logo_url, my_guy_fn=lambda pid: is_my_guy(user_id, pid), my_guy_seasons_fn=lambda pid: my_guy_seasons(user_id, pid), is_starter_fn=is_starter_fn))
-
     # Positionsstärke jetzt flexibel auf Basis der echten Liga-Slots (inkl.
     # FLEX/SUPER_FLEX) und Punkten pro Spiel (PPG) statt hardcoded Anzahl -
     # siehe calculate_flexible_strength() weiter oben. Zusätzlich Bankstärke
     # (Team-Depth) aus denselben Spielern, die NICHT in der Startaufstellung
     # gebraucht wurden.
-    flex_result, bench_flex_summary = calculate_flexible_strength({
+    flex_result, bench_flex_summary, strength_used_pids, bank_pids = calculate_flexible_strength({
         "QB": qb_ids, "RB": rb_ids, "WR": wr_ids, "TE": te_ids, "K": k_ids, "DEF": def_ids,
     })
     qb_pts, qb_cnt = flex_result.get("QB", (0, 0))
@@ -639,6 +637,19 @@ for team in rosters:
     bp, bc = bench_flex_summary
     bench_flex_strength.append(bp)
     bench_flex_count.append(bc)
+
+    # NEU: fürs Roster - Bank-Label nur für die tatsächlichen Top-3-Bank-
+    # Spieler, gedimmt alle anderen, die nicht in die Teamstärke einfließen
+    # (weder Starter-Slot noch Top-3-Bank).
+    in_bank_fn = lambda pid: pid in bank_pids
+    in_strength_fn = lambda pid: pid in strength_used_pids
+
+    qb_list.append(build_roster_entries(qb_ids, qb_roster, qb_stats, my_guy_fn=lambda pid: is_my_guy(user_id, pid), my_guy_seasons_fn=lambda pid: my_guy_seasons(user_id, pid), in_bank_fn=in_bank_fn, in_strength_fn=in_strength_fn))
+    rb_list.append(build_roster_entries(rb_ids, rb_roster, rb_stats, my_guy_fn=lambda pid: is_my_guy(user_id, pid), my_guy_seasons_fn=lambda pid: my_guy_seasons(user_id, pid), in_bank_fn=in_bank_fn, in_strength_fn=in_strength_fn))
+    wr_list.append(build_roster_entries(wr_ids, wr_roster, wr_stats, my_guy_fn=lambda pid: is_my_guy(user_id, pid), my_guy_seasons_fn=lambda pid: my_guy_seasons(user_id, pid), in_bank_fn=in_bank_fn, in_strength_fn=in_strength_fn))
+    te_list.append(build_roster_entries(te_ids, te_roster, wr_stats, my_guy_fn=lambda pid: is_my_guy(user_id, pid), my_guy_seasons_fn=lambda pid: my_guy_seasons(user_id, pid), in_bank_fn=in_bank_fn, in_strength_fn=in_strength_fn))
+    k_list.append(build_roster_entries(k_ids, k_roster, k_stats, my_guy_fn=lambda pid: is_my_guy(user_id, pid), my_guy_seasons_fn=lambda pid: my_guy_seasons(user_id, pid), in_bank_fn=in_bank_fn, in_strength_fn=in_strength_fn))
+    def_list.append(build_roster_entries(def_ids, def_roster, def_stats, image_url_fn=team_logo_url, my_guy_fn=lambda pid: is_my_guy(user_id, pid), my_guy_seasons_fn=lambda pid: my_guy_seasons(user_id, pid), in_bank_fn=in_bank_fn, in_strength_fn=in_strength_fn))
 
     # Adjusted Average: remove highest and lowest scoring weeks
     team_weekly_points = [weekly_points[week][rosters.index(team)] for week in weeks if weekly_points[week][rosters.index(team)] > 0]
@@ -1085,7 +1096,9 @@ for i, team in enumerate(rosters):
         continue
     starters = [s for s in match_entry.get('starters', []) if s and s != '0']
     ppw = match_entry.get('players_points', {}) or {}
-    bench_ids = [pid for pid in team['players'] if pid not in starters]
+    # NEU: historisch korrekter Kader dieser Woche statt aktueller Stand
+    week_roster_ids = match_entry.get('players') or team['players']
+    bench_ids = [pid for pid in week_roster_ids if pid not in starters]
 
     best_diff = 0
     for starter_pid in starters:
@@ -1120,9 +1133,11 @@ def optimal_lineup_points(team, match_entry):
     if not match_entry or not starting_slots:
         return None
     ppw = match_entry.get('players_points', {}) or {}
+    # NEU: historisch korrekter Kader dieser Woche statt aktueller Stand
+    week_roster_ids = match_entry.get('players') or team['players']
     pool = [
         (pid, players.get(pid, {}).get('position'), ppw.get(pid, 0))
-        for pid in team['players'] if pid in players
+        for pid in week_roster_ids if pid in players
     ]
     used = set()
     total = 0
@@ -1414,10 +1429,15 @@ if faab_remaining_list:
         )
 
 # 23) Kindergarten - meiste Rookies im Kader (years_exp == 0 laut Sleeper)
+# NEU: historisch korrekter Kader dieser Woche statt aktueller Stand
 rookie_counts = []
 for team in rosters:
+    match_entry = None
+    if current_week_matchups:
+        match_entry = next((m for m in current_week_matchups if m['roster_id'] == team['roster_id']), None)
+    week_roster_ids = (match_entry.get('players') if match_entry else None) or team.get('players', [])
     count = sum(
-        1 for pid in team.get('players', [])
+        1 for pid in week_roster_ids
         if players.get(pid, {}).get('years_exp') == 0
     )
     rookie_counts.append(count)
@@ -1431,11 +1451,16 @@ if rookie_counts and max(rookie_counts) > 0:
 
 # 24) Altersheim - ältester Kader im Schnitt (Sleeper liefert 'age' pro Spieler,
 # nicht bei jedem Spieler vorhanden - nur Spieler mit bekanntem Alter zählen)
+# NEU: historisch korrekter Kader dieser Woche statt aktueller Stand
 avg_ages = []
 for team in rosters:
+    match_entry = None
+    if current_week_matchups:
+        match_entry = next((m for m in current_week_matchups if m['roster_id'] == team['roster_id']), None)
+    week_roster_ids = (match_entry.get('players') if match_entry else None) or team.get('players', [])
     ages = [
         players.get(pid, {}).get('age')
-        for pid in team.get('players', [])
+        for pid in week_roster_ids
         if players.get(pid, {}).get('age') is not None
     ]
     avg_ages.append(sum(ages) / len(ages) if ages else None)
