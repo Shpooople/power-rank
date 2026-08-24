@@ -24,6 +24,16 @@ const colorForRank = (rank) => {
   return RANK_COLOR_SCALE[idx];
 };
 
+// NEU: dunklere, aber farblich ähnliche Variante einer Hex-Farbe - für die
+// Bank-Balken (Team-Depth), damit sie zum jeweiligen Positions-Balken passen
+const darkenColor = (hex, amount = 0.4) => {
+  const h = hex.replace('#', '');
+  const r = Math.round(parseInt(h.substring(0, 2), 16) * (1 - amount));
+  const g = Math.round(parseInt(h.substring(2, 4), 16) * (1 - amount));
+  const b = Math.round(parseInt(h.substring(4, 6), 16) * (1 - amount));
+  return `rgb(${r}, ${g}, ${b})`;
+};
+
 // Emoji-Zuordnung je Badge-Code (Script liefert Codes statt Emojis direkt,
 // damit Homer-Badges zusätzlich ein image_url-Feld fürs Team-Logo haben können)
 const BADGE_EMOJIS = {
@@ -243,6 +253,16 @@ const TeamSection = ({ team }) => {
     "WR Strength Count": wrCount,
     "TE Strength Count": teCount,
     "K Strength Count": kCount,
+    "QB Bench Strength": qbBench,
+    "RB Bench Strength": rbBench,
+    "WR Bench Strength": wrBench,
+    "TE Bench Strength": teBench,
+    "K Bench Strength": kBench,
+    "QB Bench Count": qbBenchCount,
+    "RB Bench Count": rbBenchCount,
+    "WR Bench Count": wrBenchCount,
+    "TE Bench Count": teBenchCount,
+    "K Bench Count": kBenchCount,
     "COMMENTS": comment,
     // NEU: Prediction-Quiz-Scores (Biggest Football Brain Contest) - Array
     // aus {name, score}, ein Eintrag pro Person (auch bei Co-Owner-Teams
@@ -271,10 +291,13 @@ const TeamSection = ({ team }) => {
   const strengthValues = [qbStrength, rbStrength, wrStrength, teStrength, kStrength];
   const strengthRanks = [qbRank, rbRank, wrRank, teRank, kRank];
   const strengthCounts = [qbCount, rbCount, wrCount, teCount, kCount];
+  const benchValues = [qbBench, rbBench, wrBench, teBench, kBench];
+  const benchCounts = [qbBenchCount, rbBenchCount, wrBenchCount, teBenchCount, kBenchCount];
   // Historische Wochen (Backfill) haben keine Positionsstärke-Daten
   const hasStrengthData = strengthValues.some((v) => v != null);
 
   const barColors = strengthRanks.map(colorForRank);
+  const benchBarColors = barColors.map((c) => darkenColor(c, 0.45));
 
   // NEU: Balken wachsen + Linie "fährt" sichtbar von Punkt zu Punkt, sobald
   // die Charts zum ersten Mal ins Bild scrollen (ein gemeinsamer Observer,
@@ -327,6 +350,7 @@ const TeamSection = ({ team }) => {
   }, []);
 
   const displayedStrengthValues = barsRevealed ? strengthValues : strengthValues.map(() => 0);
+  const displayedBenchValues = barsRevealed ? benchValues : benchValues.map(() => 0);
 
   // weekProgress = wie viele Segmente (Punkt-zu-Punkt-Strecken) bereits
   // "gefahren" wurden, inkl. Bruchteil für die aktuell laufende Strecke
@@ -435,21 +459,41 @@ const TeamSection = ({ team }) => {
             <Plot
               useResizeHandler={true}
               style={{ width: '100%', height: '100%' }}
-              data={[{
-                type: 'bar',
-                x: strengthCategories,
-                y: displayedStrengthValues,
-                customdata: strengthRanks,
-                text: strengthCounts.map((c) => (c != null ? `${c}` : '')),
-                textposition: 'outside',
-                textfont: { color: barColors, family: 'Roboto Condensed, sans-serif', size: 13, weight: 'bold' },
-                marker: { color: barColors },
-                hovertemplate: '<b>%{x}</b><br>Wert: %{y}/100<br>Rang %{customdata} von 12<br>Spieler gezählt: %{text}<extra></extra>'
-              }]}
+              data={[
+                {
+                  // Bank-Stärke (Team-Depth) - etwas breiter und leicht nach
+                  // links versetzt, damit sie hinter dem Starter-Balken
+                  // sichtbar hervorschaut
+                  type: 'bar',
+                  x: strengthCategories,
+                  y: displayedBenchValues,
+                  customdata: benchCounts,
+                  width: 0.55,
+                  offset: -0.42,
+                  marker: { color: benchBarColors },
+                  hovertemplate: '<b>%{x} Bank</b><br>Wert: %{y}/100<br>Spieler auf der Bank: %{customdata}<extra></extra>'
+                },
+                {
+                  // Starter-Stärke - schmalerer Balken vorne
+                  type: 'bar',
+                  x: strengthCategories,
+                  y: displayedStrengthValues,
+                  customdata: strengthRanks.map((r, i) => [r, strengthCounts[i]]),
+                  width: 0.4,
+                  offset: -0.2,
+                  text: strengthRanks.map((r) => (r != null ? `${r}` : '')),
+                  textposition: 'inside',
+                  insidetextanchor: 'middle',
+                  textfont: { color: '#12202E', family: 'Roboto Condensed, sans-serif', size: 13, weight: 'bold' },
+                  marker: { color: barColors },
+                  hovertemplate: '<b>%{x}</b><br>Wert: %{y}/100<br>Rang %{customdata[0]} von 12<br>Spieler gezählt: %{customdata[1]}<extra></extra>'
+                }
+              ]}
               layout={{
                 paper_bgcolor: 'transparent',
                 plot_bgcolor: 'transparent',
                 dragmode: false,
+                barmode: 'overlay',
                 transition: { duration: 800, easing: 'cubic-in-out' },
                 hovermode: 'closest',
                 hoverlabel: {
