@@ -93,6 +93,9 @@ const BADGE_EMOJIS = {
   money: '💰',
   ruin: '🏚️',
   shield: '🛡️',
+  hammer: '🔨',
+  kindergarten: '🧸',
+  oldfolks: '🦖',
 };
 
 // Kleines Badge-Icon mit Hover- (Desktop) bzw. Tap-Tooltip (Mobile)
