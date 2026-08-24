@@ -45,13 +45,12 @@ const darkenColor = (hex, amount = 0.4) => {
 // Team-Karten direkt vergleichbar sind (60 Punkte sind immer rot, egal bei
 // welchem Team).
 const LEAGUE_POINT_BANDS = [
-  { max: 60, color: '#B93A34' },   // 0-60: Rot
-  { max: 80, color: '#E2665B' },   // 60-80: Rot-Orange
-  { max: 100, color: '#D9D95C' },  // 80-100: Gelb
-  { max: 120, color: '#9CD95C' },  // 100-120: Gelb-Grün
-  { max: 140, color: '#6BD96B' },  // 120-140: Grün
-  { max: 160, color: '#4FD9D0' },  // 140-160: Türkis
-  { max: Infinity, color: '#5FD3F3' }, // ab 160: Blau
+  { max: 80, color: '#B93A34' },       // unter 80: Rot
+  { max: 100, color: '#E2665B' },      // 80-100: Rot-Orange
+  { max: 120, color: '#D4A657' },      // 100-120: Gelb-Orange
+  { max: 140, color: '#9CD95C' },      // 120-140: Gelb-Grün
+  { max: 160, color: '#6BD96B' },      // 140-160: Grün
+  { max: Infinity, color: '#4FD9D0' }, // ab 160: Türkis
 ];
 
 const colorForLeaguePoints = (v) => {
