@@ -34,6 +34,36 @@ const darkenColor = (hex, amount = 0.4) => {
   return `rgb(${r}, ${g}, ${b})`;
 };
 
+// NEU: Farbverlauf für den Saisonverlauf-Chart, entlang derselben Skala wie
+// die Positionsstärke (rot = wenig Punkte, blau = viele Punkte) - t=0..1
+// bezogen auf das jeweils EIGENE Min/Max der Saison eines Teams (individuelle
+// Skala bleibt erhalten, nur die Farbe macht den Vergleich zwischen Teams
+// auf den ersten Blick erkennbar).
+const hexToRgb = (hex) => {
+  const h = hex.replace('#', '');
+  return [parseInt(h.substring(0, 2), 16), parseInt(h.substring(2, 4), 16), parseInt(h.substring(4, 6), 16)];
+};
+
+const interpolateColors = (colorA, colorB, frac) => {
+  const [r1, g1, b1] = hexToRgb(colorA);
+  const [r2, g2, b2] = hexToRgb(colorB);
+  const r = Math.round(r1 + (r2 - r1) * frac);
+  const g = Math.round(g1 + (g2 - g1) * frac);
+  const b = Math.round(b1 + (b2 - b1) * frac);
+  return `rgb(${r}, ${g}, ${b})`;
+};
+
+// t=0 (schlechtester Wert der Saison) -> rot (Ende der Skala),
+// t=1 (bester Wert der Saison) -> blau (Anfang der Skala)
+const gradientColorForT = (t) => {
+  const clamped = Math.min(Math.max(t, 0), 1);
+  const pos = (1 - clamped) * (RANK_COLOR_SCALE.length - 1);
+  const lowIdx = Math.floor(pos);
+  const highIdx = Math.min(lowIdx + 1, RANK_COLOR_SCALE.length - 1);
+  const frac = pos - lowIdx;
+  return interpolateColors(RANK_COLOR_SCALE[lowIdx], RANK_COLOR_SCALE[highIdx], frac);
+};
+
 // Emoji-Zuordnung je Badge-Code (Script liefert Codes statt Emojis direkt,
 // damit Homer-Badges zusätzlich ein image_url-Feld fürs Team-Logo haben können)
 const BADGE_EMOJIS = {
@@ -253,16 +283,9 @@ const TeamSection = ({ team }) => {
     "WR Strength Count": wrCount,
     "TE Strength Count": teCount,
     "K Strength Count": kCount,
-    "QB Bench Strength": qbBench,
-    "RB Bench Strength": rbBench,
-    "WR Bench Strength": wrBench,
-    "TE Bench Strength": teBench,
-    "K Bench Strength": kBench,
-    "QB Bench Count": qbBenchCount,
-    "RB Bench Count": rbBenchCount,
-    "WR Bench Count": wrBenchCount,
-    "TE Bench Count": teBenchCount,
-    "K Bench Count": kBenchCount,
+    "Bench Strength": benchStrength,
+    "Bench Strength Rank": benchRank,
+    "Bench Strength Count": benchCount,
     "COMMENTS": comment,
     // NEU: Prediction-Quiz-Scores (Biggest Football Brain Contest) - Array
     // aus {name, score}, ein Eintrag pro Person (auch bei Co-Owner-Teams
@@ -287,12 +310,12 @@ const TeamSection = ({ team }) => {
   } = team;
 
   // NEU: Bar-Chart statt Pentagon - Kategorien, Werte, Ränge und Farbcodierung
-  const strengthCategories = ['QB', 'RB', 'WR', 'TE', 'K'];
-  const strengthValues = [qbStrength, rbStrength, wrStrength, teStrength, kStrength];
-  const strengthRanks = [qbRank, rbRank, wrRank, teRank, kRank];
-  const strengthCounts = [qbCount, rbCount, wrCount, teCount, kCount];
-  const benchValues = [qbBench, rbBench, wrBench, teBench, kBench];
-  const benchCounts = [qbBenchCount, rbBenchCount, wrBenchCount, teBenchCount, kBenchCount];
+  // Bank ist jetzt eine eigene 6. Kategorie (Top-4 Flex-Reserve), kein
+  // eigener Balken mehr pro Einzelposition.
+  const strengthCategories = ['QB', 'RB', 'WR', 'TE', 'K', 'Bank'];
+  const strengthValues = [qbStrength, rbStrength, wrStrength, teStrength, kStrength, benchStrength];
+  const strengthRanks = [qbRank, rbRank, wrRank, teRank, kRank, benchRank];
+  const strengthCounts = [qbCount, rbCount, wrCount, teCount, kCount, benchCount];
   // Historische Wochen (Backfill) haben keine Positionsstärke-Daten
   const hasStrengthData = strengthValues.some((v) => v != null);
 
@@ -350,7 +373,6 @@ const TeamSection = ({ team }) => {
   }, []);
 
   const displayedStrengthValues = barsRevealed ? strengthValues : strengthValues.map(() => 0);
-  const displayedBenchValues = barsRevealed ? benchValues : benchValues.map(() => 0);
 
   // weekProgress = wie viele Segmente (Punkt-zu-Punkt-Strecken) bereits
   // "gefahren" wurden, inkl. Bruchteil für die aktuell laufende Strecke
@@ -371,6 +393,30 @@ const TeamSection = ({ team }) => {
   const weekYMin = weekValues.length ? Math.min(...weekValues) : 0;
   const weekYMax = weekValues.length ? Math.max(...weekValues) : 100;
   const weekYPadding = (weekYMax - weekYMin) * 0.15 || 10;
+
+  // NEU: Farbverlauf im Saisonverlauf - Skala bleibt individuell (weekYMin/Max
+  // je Team), nur die Farbe zeigt auf einen Blick "gut" (blau) vs. "schlecht"
+  // (rot) an, in derselben Skala wie die Positionsstärke-Balken.
+  const colorForWeekValue = (v) => {
+    const t = weekYMax > weekYMin ? (v - weekYMin) / (weekYMax - weekYMin) : 0.5;
+    return gradientColorForT(t);
+  };
+  const weekPointColors = displayedWeekY.map(colorForWeekValue);
+  // Plotly unterstützt keine echten Verlaufslinien in einem Trace - daher
+  // wird die Linie in einzelne 2-Punkt-Segmente zerlegt, jedes eingefärbt
+  // mit der Mischfarbe seiner beiden Endpunkte.
+  const gradientLineSegments = [];
+  for (let i = 0; i < displayedWeekX.length - 1; i++) {
+    gradientLineSegments.push({
+      type: 'scatter',
+      x: [displayedWeekX[i], displayedWeekX[i + 1]],
+      y: [displayedWeekY[i], displayedWeekY[i + 1]],
+      mode: 'lines',
+      line: { color: interpolateColors(weekPointColors[i], weekPointColors[i + 1], 0.5), width: 3 },
+      hoverinfo: 'skip',
+      showlegend: false,
+    });
+  }
 
   return (
     <div className="team-section">
@@ -461,30 +507,14 @@ const TeamSection = ({ team }) => {
               style={{ width: '100%', height: '100%' }}
               data={[
                 {
-                  // Bank-Stärke (Team-Depth) - etwas breiter und leicht nach
-                  // links versetzt, damit sie hinter dem Starter-Balken
-                  // sichtbar hervorschaut
-                  type: 'bar',
-                  x: strengthCategories,
-                  y: displayedBenchValues,
-                  customdata: benchCounts,
-                  width: 0.55,
-                  offset: -0.42,
-                  marker: { color: benchBarColors },
-                  hovertemplate: '<b>%{x} Bank</b><br>Wert: %{y}/100<br>Spieler auf der Bank: %{customdata}<extra></extra>'
-                },
-                {
-                  // Starter-Stärke - schmalerer Balken vorne
                   type: 'bar',
                   x: strengthCategories,
                   y: displayedStrengthValues,
                   customdata: strengthRanks.map((r, i) => [r, strengthCounts[i]]),
-                  width: 0.4,
-                  offset: -0.2,
                   text: strengthRanks.map((r) => (r != null ? `${r}` : '')),
                   textposition: 'inside',
                   insidetextanchor: 'middle',
-                  textfont: { color: '#12202E', family: 'Roboto Condensed, sans-serif', size: 13, weight: 'bold' },
+                  textfont: { color: benchBarColors, family: 'Roboto Condensed, sans-serif', size: 22, weight: 'bold' },
                   marker: { color: barColors },
                   hovertemplate: '<b>%{x}</b><br>Wert: %{y}/100<br>Rang %{customdata[0]} von 12<br>Spieler gezählt: %{customdata[1]}<extra></extra>'
                 }
@@ -557,18 +587,19 @@ const TeamSection = ({ team }) => {
               useResizeHandler={true}
               style={{ width: '100%', height: '100%' }}
               data={[
+                ...gradientLineSegments,
                 {
                   type: 'scatter',
                   x: displayedWeekX,
                   y: displayedWeekY,
                   line: {
-                    color: CHART_COLORS.accent,
-                    width: 3
+                    color: 'transparent',
+                    width: 0
                   },
-                  mode: 'lines+markers',
+                  mode: 'markers',
                   marker: {
                     size: 9,
-                    color: CHART_COLORS.accent,
+                    color: weekPointColors,
                     line: { color: CHART_COLORS.surface, width: 2 }
                   },
                   hovertemplate: 'Woche %{x}<br>%{y} Punkte<extra></extra>'
