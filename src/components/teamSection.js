@@ -92,6 +92,7 @@ const BADGE_EMOJIS = {
   footboot: '👢',
   money: '💰',
   ruin: '🏚️',
+  shield: '🛡️',
 };
 
 // Kleines Badge-Icon mit Hover- (Desktop) bzw. Tap-Tooltip (Mobile)
@@ -532,14 +533,13 @@ const TeamSection = ({ team }) => {
                   x: strengthCategories,
                   y: displayedStrengthValues,
                   customdata: strengthRanks.map((r, i) => [r, strengthCounts[i]]),
-                  text: strengthRanks.map((r) => (r != null ? `${r}` : '')),
+                  text: strengthRanks.map((r) => (r != null ? `<b>${r}</b>` : '')),
                   textposition: 'inside',
-                  insidetextanchor: 'middle',
+                  insidetextanchor: 'start',
                   textfont: {
                     color: barColors.map((c) => darkenColorAlpha(c, 0.45, numbersOpacity)),
                     family: 'Roboto Condensed, sans-serif',
-                    size: 22,
-                    weight: 'bold'
+                    size: 22
                   },
                   marker: { color: barColors },
                   hovertemplate: '<b>%{x}</b><br>Wert: %{y}/100<br>Rang %{customdata[0]} von 12<br>Spieler gezählt: %{customdata[1]}<extra></extra>'
