@@ -2087,6 +2087,11 @@
         "description":"3 Niederlagen in Folge - der Ofen ist aus."
       },
       {
+        "icon":"shield",
+        "label":"Defense wins Championships",
+        "description":"Die Defense hat mit 34.5 Punkten sowohl den besten RB (21.8) als auch den besten WR (10.05) im Lineup überboten."
+      },
+      {
         "icon":"ruin",
         "label":"Ärmstes Team",
         "description":"Nur noch 0 FAAB übrig - Waiver-Wire-Bettler."
