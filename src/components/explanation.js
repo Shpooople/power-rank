@@ -30,23 +30,26 @@ const Explanation = () => {
         So wird ersichtlich, ob sich das Team kürzlich verbessert oder verschlechtert hat.
       </p>
       <p>
-        Die <strong>Aktuelle Teamstärke</strong> wird berechnet, indem die Punkte der besten Spieler eines Teams auf den jeweiligen Positionen summiert werden. Für jede Position wird eine bestimmte Anzahl an Top-Spielern berücksichtigt, basierend auf deren Gesamtpunkte in der Saison. Dabei werden folgende Positionen einbezogen:
+        Die <strong>Aktuelle Teamstärke</strong> wird jetzt flexibel anhand der tatsächlichen Aufstellungs-Regeln eurer Liga berechnet (also wie viele QB-, RB-, WR-, TE- und FLEX-Slots ihr wirklich habt), statt einer festen Anzahl Spieler pro Position. Für jedes Team werden alle Spieler nach Punkten pro Spiel (PPG) sortiert und wie in einer echten Aufstellung verteilt: zuerst die festen Positions-Slots, danach die FLEX-Slots mit den jeweils besten verbliebenen Spielern. Ein starker Running Back, der eigentlich in einen FLEX-Slot passt, zählt dabei weiterhin zur RB-Stärke. Hat ein Team also außergewöhnlich viele gute Spieler auf einer Position, können entsprechend mehr davon in die Wertung einfließen.
       </p>
       <ul>
-        <li><strong>Quarterbacks (QB)</strong>: Der Punktwert des besten Quarterbacks.</li>
-        <li><strong>Running Backs (RB)</strong>: Die Punktwerte der drei besten Running Backs.</li>
-        <li><strong>Wide Receivers (WR)</strong>: Die Punktwerte der vier besten Wide Receivers.</li>
-        <li><strong>Tight Ends (TE)</strong>: Der Punktwert des besten Tight Ends.</li>
-        <li><strong>Kicker (K)</strong>: Der Punktwert des besten Kickers.</li>
+        <li><strong>Quarterbacks (QB)</strong>, <strong>Running Backs (RB)</strong>, <strong>Wide Receivers (WR)</strong>, <strong>Tight Ends (TE)</strong> und <strong>Kicker (K)</strong> werden jeweils nach diesem Prinzip berechnet.</li>
+        <li><strong>Bank</strong>: eine sechste Kategorie, die die drei besten übrig gebliebenen Flex-Spieler (RB/WR/TE) zeigt, die es nicht in die Startaufstellung geschafft haben – ein Indikator dafür, wie gut ein Team im Verletzungsfall nachrücken kann.</li>
       </ul>
       <p>
-        Diese Summen der Punktwerte werden für jedes Team berechnet und geben die Stärke der jeweiligen Position wieder. Dazu werden die Werte auf einer Skala von eins bis 100 normalisiert, das Team mit dem höchsten Wert bekommt 100 Punkte und alle weiteren Teams bekommen prozentual weniger. Die stärksten Spieler auf diesen Positionen erhalten den größten Einfluss auf die berechnete Positionsstärke.
+        Die Werte werden pro Kategorie auf einer Skala von 1 bis 100 normalisiert (das ligaweit stärkste Team bekommt 100, alle anderen entsprechend weniger). Die Zahl in jedem Balken zeigt den Liga-Rang (1–12) auf dieser Position; wie viele Spieler konkret eingerechnet wurden, steht beim Darüberfahren mit der Maus (bzw. Antippen auf Mobilgeräten).
       </p>
       <h3>Warum die Positionsstärke nicht im Power Ranking berücksichtigt wird:</h3>
       <p>
         Die Positionsstärke allein zeigt zwar, wie gut ein Team auf bestimmten Positionen besetzt ist, aber sie spiegelt nicht den gesamten Erfolg eines Teams wider. Ein Team könnte zwar starke Einzelspieler haben, aber dennoch aufgrund von schwachen Gesamtleistungen, Verletzungen oder taktischen Entscheidungen in den Spielen nicht erfolgreich sein. Das <strong>Power Ranking</strong> soll hingegen eine ganzheitliche Bewertung liefern, die sowohl die erzielten Siege, die Gesamtoffensivleistung, den Trend und die Stärke der Gegner mit einbezieht. Die Positionsstärke beeinflusst indirekt den Erfolg eines Teams, ist jedoch keine direkte Messgröße im Power Ranking.
       </p>
-            <a href="#header" className="jump-to-top">
+      <p>
+        Der <strong>Saisonverlauf</strong> zeigt die wöchentlichen Punktzahlen eines Teams. Die Y-Achse ist für jedes Team individuell skaliert (damit auch konstante Teams mit wenig Schwankung gut lesbar bleiben), die <strong>Farbe</strong> der Linie und Punkte ist aber ligaweit einheitlich: 0–60 Punkte erscheinen rot, 60–80 rot-orange, 80–100 gelb, 100–120 gelb-grün, 120–140 grün, 140–160 türkis und ab 160 blau. So lässt sich auf einen Blick erkennen, ob eine Woche für ein Team stark oder schwach war – auch im Vergleich zu anderen Karten.
+      </p>
+      <p>
+        Neben Power Rank, Teamstärke und Saisonverlauf gibt es noch ein paar weitere Werte auf jeder Karte: das <strong>FAAB</strong>-Restbudget fürs Waiver-Bidding, der Score aus dem ligainternen <strong>Prediction-Quiz</strong> ("Biggest Football Brain Contest"), sowie diverse <strong>Badges</strong> für Auffälligkeiten der Woche oder Saison (z.B. besonders viele verletzte Spieler, ein besonders knapper Sieg oder ein Spieler, der schon seit Jahren treu im Kader steht – als "My Guy" golden markiert). Details zu jedem Badge gibt's beim Draufklicken bzw. -tippen.
+      </p>
+      <a href="#header" className="jump-to-top">
         Zurück nach oben
       </a>
     </section>
