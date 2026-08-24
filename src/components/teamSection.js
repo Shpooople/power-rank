@@ -33,7 +33,7 @@ const BADGE_EMOJIS = {
   rising: '📈',
   falling: '📉',
   giant_killer: '💥',
-  clutch: '🎯',
+  clutch: '🦷',
   fire: '🔥',
   cold: '🥶',
   rollercoaster: '🎢',
@@ -53,6 +53,8 @@ const BADGE_EMOJIS = {
   touchdown: '🏈',
   egg: '🥚',
   footboot: '👢',
+  money: '💰',
+  ruin: '🏚️',
 };
 
 // Kleines Badge-Icon mit Hover- (Desktop) bzw. Tap-Tooltip (Mobile)
@@ -234,11 +236,19 @@ const TeamSection = ({ team }) => {
     "WR Strength Rank": wrRank,
     "TE Strength Rank": teRank,
     "K Strength Rank": kRank,
+    // NEU: Anzahl der Spieler, die flexibel (inkl. FLEX-Slots) in die
+    // jeweilige Positionsstärke eingerechnet wurden
+    "QB Strength Count": qbCount,
+    "RB Strength Count": rbCount,
+    "WR Strength Count": wrCount,
+    "TE Strength Count": teCount,
+    "K Strength Count": kCount,
     "COMMENTS": comment,
     // NEU: Prediction-Quiz-Scores (Biggest Football Brain Contest) - Array
     // aus {name, score}, ein Eintrag pro Person (auch bei Co-Owner-Teams
     // mehrere möglich, da beim Quiz individuell abgestimmt wird)
     "QUIZ_SCORES": quizScores = [],
+    "FAAB_REMAINING": faabRemaining,
     // Performer-Felder
     "TOP_PERFORMERS": topPerformers = [],
     "BOTTOM_PERFORMERS": bottomPerformers = [],
@@ -260,6 +270,7 @@ const TeamSection = ({ team }) => {
   const strengthCategories = ['QB', 'RB', 'WR', 'TE', 'K'];
   const strengthValues = [qbStrength, rbStrength, wrStrength, teStrength, kStrength];
   const strengthRanks = [qbRank, rbRank, wrRank, teRank, kRank];
+  const strengthCounts = [qbCount, rbCount, wrCount, teCount, kCount];
   // Historische Wochen (Backfill) haben keine Positionsstärke-Daten
   const hasStrengthData = strengthValues.some((v) => v != null);
 
@@ -361,6 +372,10 @@ const TeamSection = ({ team }) => {
         </p>
       )}
 
+      {faabRemaining != null && (
+        <p className="faab-line">💰 FAAB: <strong>{faabRemaining}</strong></p>
+      )}
+
       {badges.length > 0 && (
         <div className="team-badges">
           {badges.map((badge, i) => (
@@ -425,8 +440,11 @@ const TeamSection = ({ team }) => {
                 x: strengthCategories,
                 y: displayedStrengthValues,
                 customdata: strengthRanks,
+                text: strengthCounts.map((c) => (c != null ? `${c}` : '')),
+                textposition: 'outside',
+                textfont: { color: barColors, family: 'Roboto Condensed, sans-serif', size: 13, weight: 'bold' },
                 marker: { color: barColors },
-                hovertemplate: '<b>%{x}</b><br>Wert: %{y}/100<br>Rang %{customdata} von 12<extra></extra>'
+                hovertemplate: '<b>%{x}</b><br>Wert: %{y}/100<br>Rang %{customdata} von 12<br>Spieler gezählt: %{text}<extra></extra>'
               }]}
               layout={{
                 paper_bgcolor: 'transparent',
