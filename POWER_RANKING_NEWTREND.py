@@ -219,15 +219,18 @@ def calculate_flexible_strength(team_players_by_pos):
 
     starters = {pos: (round(sum(vals), 1), len(vals)) for pos, vals in contribution.items()}
 
-    # NEU: Bankstärke - alle Spieler derselben Position, die NICHT für die
-    # Startaufstellung gebraucht wurden (Team-Depth abseits der Flex-Slots).
-    bench_contribution = {pos: [] for pos in team_players_by_pos}
-    for pid, pos, value in pool:
-        if pid not in used:
-            bench_contribution[pos].append(value)
-    bench = {pos: (round(sum(vals), 1), len(vals)) for pos, vals in bench_contribution.items()}
+    # NEU: Statt Bank pro Einzelposition gibt es eine einzige "Bank"-Kennzahl:
+    # die 4 besten übrig gebliebenen Flex-Spieler (RB/WR/TE), unabhängig von
+    # der genauen Position - spiegelt am ehesten wider, wie stark die Bank
+    # im Ernstfall (Verletzung eines Starters) einspringen könnte.
+    flex_bench_values = sorted(
+        (value for pid, pos, value in pool if pid not in used and pos in ("RB", "WR", "TE")),
+        reverse=True
+    )
+    top4 = flex_bench_values[:4]
+    bench_flex = (round(sum(top4), 1), len(top4))
 
-    return starters, bench
+    return starters, bench_flex
 
 # --- NEU: Detail-Stats + Spielerbild fürs Roster ---
 # Die _from-Varianten arbeiten auf einem rohen Stats-Dict (egal ob Saison-
@@ -324,8 +327,7 @@ team_weekly_points_list = []
 qb_list, rb_list, wr_list, te_list, k_list, def_list = [], [], [], [], [], []
 qb_strength, rb_strength, wr_strength, te_strength, k_strength = [], [], [], [], []
 qb_strength_count, rb_strength_count, wr_strength_count, te_strength_count, k_strength_count = [], [], [], [], []
-qb_bench_strength, rb_bench_strength, wr_bench_strength, te_bench_strength, k_bench_strength = [], [], [], [], []
-qb_bench_count, rb_bench_count, wr_bench_count, te_bench_count, k_bench_count = [], [], [], [], []
+bench_flex_strength, bench_flex_count = [], []
 top_performers_list, bottom_performers_list, benchwarmer_list = [], [], []
 last_week_opponent_list, last_week_result_list = [], []
 this_week_opponent_list, this_week_winprob_list = [], []
@@ -592,7 +594,7 @@ for team in rosters:
     # siehe calculate_flexible_strength() weiter oben. Zusätzlich Bankstärke
     # (Team-Depth) aus denselben Spielern, die NICHT in der Startaufstellung
     # gebraucht wurden.
-    flex_result, bench_result = calculate_flexible_strength({
+    flex_result, bench_flex_summary = calculate_flexible_strength({
         "QB": qb_ids, "RB": rb_ids, "WR": wr_ids, "TE": te_ids, "K": k_ids, "DEF": def_ids,
     })
     qb_pts, qb_cnt = flex_result.get("QB", (0, 0))
@@ -613,23 +615,9 @@ for team in rosters:
     te_strength_count.append(te_cnt)
     k_strength_count.append(k_cnt)
 
-    qb_bp, qb_bc = bench_result.get("QB", (0, 0))
-    rb_bp, rb_bc = bench_result.get("RB", (0, 0))
-    wr_bp, wr_bc = bench_result.get("WR", (0, 0))
-    te_bp, te_bc = bench_result.get("TE", (0, 0))
-    k_bp, k_bc = bench_result.get("K", (0, 0))
-
-    qb_bench_strength.append(qb_bp)
-    rb_bench_strength.append(rb_bp)
-    wr_bench_strength.append(wr_bp)
-    te_bench_strength.append(te_bp)
-    k_bench_strength.append(k_bp)
-
-    qb_bench_count.append(qb_bc)
-    rb_bench_count.append(rb_bc)
-    wr_bench_count.append(wr_bc)
-    te_bench_count.append(te_bc)
-    k_bench_count.append(k_bc)
+    bp, bc = bench_flex_summary
+    bench_flex_strength.append(bp)
+    bench_flex_count.append(bc)
 
     # Adjusted Average: remove highest and lowest scoring weeks
     team_weekly_points = [weekly_points[week][rosters.index(team)] for week in weeks if weekly_points[week][rosters.index(team)] > 0]
@@ -776,12 +764,7 @@ rb_strength_normalized = normalize_strength(rb_strength)
 wr_strength_normalized = normalize_strength(wr_strength)
 te_strength_normalized = normalize_strength(te_strength)
 k_strength_normalized = normalize_strength(k_strength)
-
-qb_bench_normalized = normalize_strength(qb_bench_strength)
-rb_bench_normalized = normalize_strength(rb_bench_strength)
-wr_bench_normalized = normalize_strength(wr_bench_strength)
-te_bench_normalized = normalize_strength(te_bench_strength)
-k_bench_normalized = normalize_strength(k_bench_strength)
+bench_flex_normalized = normalize_strength(bench_flex_strength)
 
 # Create DataFrame
 df = pd.DataFrame({
@@ -806,16 +789,8 @@ df = pd.DataFrame({
     "WR Strength Count": wr_strength_count,
     "TE Strength Count": te_strength_count,
     "K Strength Count": k_strength_count,
-    "QB Bench Strength": qb_bench_normalized,
-    "RB Bench Strength": rb_bench_normalized,
-    "WR Bench Strength": wr_bench_normalized,
-    "TE Bench Strength": te_bench_normalized,
-    "K Bench Strength": k_bench_normalized,
-    "QB Bench Count": qb_bench_count,
-    "RB Bench Count": rb_bench_count,
-    "WR Bench Count": wr_bench_count,
-    "TE Bench Count": te_bench_count,
-    "K Bench Count": k_bench_count,
+    "Bench Strength": bench_flex_normalized,
+    "Bench Strength Count": bench_flex_count,
     "QB": qb_list,
     "RB": rb_list,
     "WR": wr_list,
@@ -899,6 +874,7 @@ df["RB Strength Rank"] = df["RB Strength"].rank(ascending=False, method='min').a
 df["WR Strength Rank"] = df["WR Strength"].rank(ascending=False, method='min').astype(int)
 df["TE Strength Rank"] = df["TE Strength"].rank(ascending=False, method='min').astype(int)
 df["K Strength Rank"] = df["K Strength"].rank(ascending=False, method='min').astype(int)
+df["Bench Strength Rank"] = df["Bench Strength"].rank(ascending=False, method='min').astype(int)
 
 # NEU: Diese beiden Ränge werden intern schon für den Power-Rank-Score
 # gebraucht - jetzt zusätzlich als eigene Spalten rausgeben, damit das
