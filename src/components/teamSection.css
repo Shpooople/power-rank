@@ -136,6 +136,21 @@
     height: 60px;
     font-size: 34px;
   }
+
+  /* NEU: Meistgehaltene Spieler (Legacy Stats) - auf Desktop alle 9 Karten
+     in einer Reihe statt umzubrechen */
+  .legacy-most-owned-cards {
+    flex-wrap: nowrap;
+    gap: 8px;
+  }
+
+  .legacy-owned-player {
+    width: 72px;
+  }
+
+  .legacy-owned-player-name {
+    font-size: 10px;
+  }
 }
 
 .team-header-row {
