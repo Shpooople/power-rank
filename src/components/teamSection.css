@@ -136,23 +136,6 @@
     height: 60px;
     font-size: 34px;
   }
-
-  /* NEU: Lieblingsspieler (Legacy Stats) - auf Desktop alle 10 Karten in
-     zwei EXAKTEN Fünfer-Reihen. Ein festes 5-Spalten-Grid statt flex-wrap,
-     da flex-wrap je nach verfügbarer Breite auch 9+1 statt 5+5 anordnen kann. */
-  .legacy-most-owned-cards {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 14px;
-  }
-
-  .legacy-owned-player {
-    width: auto;
-  }
-
-  .legacy-owned-player-name {
-    font-size: 10px;
-  }
 }
 
 .team-header-row {
@@ -630,18 +613,21 @@
 .legacy-most-owned {
   font-size: 13px;
   color: var(--color-text);
-  margin-top: 10px;
+  margin-top: 16px;
 }
 
 .legacy-most-owned strong {
   color: var(--color-accent);
 }
 
+/* NEU: 2-Spalten-Grid statt flex-wrap - läuft in der schmalen Sidebar immer
+   exakt 2 pro Reihe (5 Reihen für 10 Karten), unabhängig von verfügbarer
+   Breite (flex-wrap hatte hier je nach Kontext unterschiedlich viele pro
+   Reihe reingepackt). */
 .legacy-most-owned-cards {
-  display: flex;
-  align-items: flex-end;
-  flex-wrap: wrap;
-  gap: 16px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
   margin-top: 10px;
 }
 
@@ -650,7 +636,6 @@
   flex-direction: column;
   align-items: center;
   gap: 4px;
-  width: 90px;
 }
 
 .legacy-owned-player-image {
@@ -659,21 +644,11 @@
   background-color: var(--color-border);
   border: 2px solid var(--color-border);
   max-width: 100%;
-  max-height: 64px;
-}
-
-/* Mobile: nur 9 der 10 Lieblingsspieler zeigen (10. wird ab Desktop-Breite
-   wieder eingeblendet, siehe @media (min-width: 768px) weiter oben).
-   Explizit in ein max-width Media Query statt eine unbedingte Regel, sonst
-   gewinnt diese wegen der Source-Reihenfolge auch auf Desktop. */
-@media (max-width: 767px) {
-  .legacy-owned-player:nth-child(10) {
-    display: none;
-  }
+  max-height: 52px;
 }
 
 .legacy-owned-player-name {
-  font-size: 11px;
+  font-size: 10px;
   font-weight: bold;
   color: var(--color-text);
   text-align: center;
@@ -681,8 +656,46 @@
 }
 
 .legacy-owned-player-weeks {
-  font-size: 10px;
+  font-size: 9px;
   color: var(--color-text-muted);
+}
+
+/* Mobile: nur 9 der 10 Lieblingsspieler zeigen (Desktop zeigt alle 10 in
+   der Sidebar) */
+@media (max-width: 767px) {
+  .legacy-owned-player:nth-child(10) {
+    display: none;
+  }
+}
+
+/* NEU: Gesamtlayout der Legacy Stats - auf Desktop zweispaltig (Hauptspalte
+   links mit Win%/Platzierungen/Scoring/Activity, Sidebar rechts mit
+   Angstgegner/Opfer + Lieblingsspieler darunter). Auf Mobile einfach
+   übereinander gestapelt (Sidebar-Inhalt zuerst, dann die Hauptspalte). */
+.legacy-content-grid {
+  display: block;
+}
+
+.legacy-sidebar-col {
+  margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+  .legacy-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 260px;
+    gap: 28px;
+    align-items: start;
+  }
+
+  .legacy-sidebar-col {
+    margin-bottom: 0;
+    order: 2;
+  }
+
+  .legacy-main-col {
+    order: 1;
+  }
 }
 
 /* --- Top/Flop-Performer & Benchwarmer (größere Bilder als im Roster) --- */
