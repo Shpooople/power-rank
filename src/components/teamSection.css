@@ -448,7 +448,7 @@
 .legacy-line {
   font-size: 13px;
   color: var(--color-text);
-  margin: 6px 0;
+  margin: 10px 0;
 }
 
 .legacy-line strong {
@@ -566,7 +566,7 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #FFFFFF;
-  margin: 18px 0 8px 0;
+  margin: 40px 0 14px 0;
   padding-bottom: 4px;
   border-bottom: 1px solid var(--color-border);
 }
@@ -644,7 +644,14 @@
   background-color: var(--color-border);
   border: 2px solid var(--color-border);
   max-width: 100%;
-  max-height: 52px;
+  max-height: 64px;
+}
+
+/* NEU: goldener Ring für Spieler, mit denen das Team eine Meisterschaft
+   gewonnen hat */
+.legacy-owned-player-image.champion-ring {
+  border: 3px solid #FFD700;
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
 }
 
 .legacy-owned-player-name {
@@ -658,14 +665,6 @@
 .legacy-owned-player-weeks {
   font-size: 9px;
   color: var(--color-text-muted);
-}
-
-/* Mobile: nur 9 der 10 Lieblingsspieler zeigen (Desktop zeigt alle 10 in
-   der Sidebar) */
-@media (max-width: 767px) {
-  .legacy-owned-player:nth-child(10) {
-    display: none;
-  }
 }
 
 /* NEU: Gesamtlayout der Legacy Stats - auf Desktop zweispaltig (Hauptspalte
