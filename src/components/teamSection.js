@@ -62,6 +62,37 @@ const SeasonBreakdownRow = ({ items, valueKey }) => (
   </div>
 );
 
+// NEU: Lieblingsspieler-Liste (Sidebar der Legacy Stats) - wiederverwendbar
+// für "meiste Wochen" und "meiste Punkte fürs Team". Spieler, mit denen das
+// Team eine Meisterschaft gewonnen hat, bekommen einen goldenen Ring.
+const FavoritePlayersList = ({ title, players, valueKey, valueSuffix }) => {
+  if (!players || players.length === 0) return null;
+  const maxValue = Math.max(...players.map((p) => p[valueKey]));
+  return (
+    <div className="legacy-most-owned">
+      <strong>{title}</strong>
+      <div className="legacy-most-owned-cards">
+        {players.map((p, i) => {
+          const size = 40 + (p[valueKey] / maxValue) * 24; // 40-64px
+          return (
+            <div className="legacy-owned-player" key={i}>
+              <img
+                src={p.image_url}
+                alt={p.name}
+                style={{ width: size, height: size }}
+                className={`legacy-owned-player-image${p.is_champion ? ' champion-ring' : ''}`}
+                onError={(e) => { e.target.src = './thf_color.svg'; }}
+              />
+              <span className="legacy-owned-player-name">{p.name}</span>
+              <span className="legacy-owned-player-weeks">{p[valueKey]}{valueSuffix}</span>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
 // NEU: dunklere, aber farblich ähnliche Variante einer Hex-Farbe - für die
 // Bank-Balken (Team-Depth), damit sie zum jeweiligen Positions-Balken passen
 // NEU: dunklere, aber farblich ähnliche Variante einer Hex-Farbe, mit
@@ -813,13 +844,30 @@ const TeamSection = ({ team }) => {
         </details>
       )}
 
-      {legacyStats && (legacyStats.win_pct != null || legacyStats.most_owned?.length > 0) && (
+      {legacyStats && (legacyStats.win_pct != null || legacyStats.most_weeks?.length > 0) && (
         <details className="collapsible team-legacy">
           <summary>Legacy Stats anzeigen</summary>
           <div className="collapsible-content">
 
             <div className="legacy-content-grid">
               <div className="legacy-sidebar-col">
+                <FavoritePlayersList
+                  title="Meiste Wochen im Kader"
+                  players={legacyStats.most_weeks}
+                  valueKey="weeks"
+                  valueSuffix=" Wochen"
+                />
+                <FavoritePlayersList
+                  title="Meiste Punkte fürs Team"
+                  players={legacyStats.most_points}
+                  valueKey="points"
+                  valueSuffix=" Pkt."
+                />
+              </div>
+
+              <div className="legacy-main-col">
+                <h4 className="legacy-section-title">Platzierungen und Erfolge</h4>
+
                 {(legacyStats.angstgegner || legacyStats.opfer) && (
                   <div className="legacy-rivals">
                     {legacyStats.angstgegner && (
@@ -850,35 +898,6 @@ const TeamSection = ({ team }) => {
                     )}
                   </div>
                 )}
-
-                {legacyStats.most_owned?.length > 0 && (
-                  <div className="legacy-most-owned">
-                    <strong>Lieblingsspieler</strong>
-                    <div className="legacy-most-owned-cards">
-                      {legacyStats.most_owned.map((p, i) => {
-                        const maxWeeks = Math.max(...legacyStats.most_owned.map((x) => x.weeks));
-                        const size = 28 + (p.weeks / maxWeeks) * 24; // 28-52px, nach Wochen skaliert
-                        return (
-                          <div className="legacy-owned-player" key={i}>
-                            <img
-                              src={p.image_url}
-                              alt={p.name}
-                              style={{ width: size, height: size }}
-                              className="legacy-owned-player-image"
-                              onError={(e) => { e.target.src = './thf_color.svg'; }}
-                            />
-                            <span className="legacy-owned-player-name">{p.name}</span>
-                            <span className="legacy-owned-player-weeks">{p.weeks} Wochen</span>
-                          </div>
-                        );
-                      })}
-                    </div>
-                  </div>
-                )}
-              </div>
-
-              <div className="legacy-main-col">
-                <h4 className="legacy-section-title">Platzierungen und Erfolge</h4>
 
                 {legacyStats.win_pct != null && (
                   <p className="legacy-line">
