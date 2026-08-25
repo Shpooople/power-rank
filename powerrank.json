@@ -397,6 +397,28 @@
       "losses":41,
       "ties":0,
       "all_time_points":8395.3,
+      "points_by_season":[
+        {
+          "season":"2025",
+          "points":1810.6
+        },
+        {
+          "season":"2024",
+          "points":1837.7
+        },
+        {
+          "season":"2023",
+          "points":1610.8
+        },
+        {
+          "season":"2022",
+          "points":1864.5
+        },
+        {
+          "season":"2021",
+          "points":1271.6
+        }
+      ],
       "avg_placement":4.0,
       "most_owned":[
         {
@@ -446,6 +468,51 @@
         }
       ],
       "waiver_moves":302,
+      "waiver_moves_by_season":[
+        {
+          "season":"2025",
+          "count":67
+        },
+        {
+          "season":"2024",
+          "count":56
+        },
+        {
+          "season":"2023",
+          "count":50
+        },
+        {
+          "season":"2022",
+          "count":60
+        },
+        {
+          "season":"2021",
+          "count":69
+        }
+      ],
+      "trades":12,
+      "trades_by_season":[
+        {
+          "season":"2025",
+          "count":2
+        },
+        {
+          "season":"2024",
+          "count":5
+        },
+        {
+          "season":"2023",
+          "count":3
+        },
+        {
+          "season":"2022",
+          "count":1
+        },
+        {
+          "season":"2021",
+          "count":1
+        }
+      ],
       "placements":[
         {
           "season":"2025",
@@ -498,6 +565,7 @@
       },
       "win_pct_rank":3,
       "waiver_moves_rank":1,
+      "trades_rank":2,
       "all_time_points_rank":4,
       "avg_placement_rank":1,
       "high_week_rank":8,
@@ -894,6 +962,28 @@
       "losses":50,
       "ties":0,
       "all_time_points":7917.4,
+      "points_by_season":[
+        {
+          "season":"2025",
+          "points":1646.1
+        },
+        {
+          "season":"2024",
+          "points":1612.9
+        },
+        {
+          "season":"2023",
+          "points":1695.0
+        },
+        {
+          "season":"2022",
+          "points":1663.0
+        },
+        {
+          "season":"2021",
+          "points":1300.3
+        }
+      ],
       "avg_placement":6.0,
       "most_owned":[
         {
@@ -943,6 +1033,47 @@
         }
       ],
       "waiver_moves":172,
+      "waiver_moves_by_season":[
+        {
+          "season":"2025",
+          "count":25
+        },
+        {
+          "season":"2024",
+          "count":41
+        },
+        {
+          "season":"2023",
+          "count":50
+        },
+        {
+          "season":"2022",
+          "count":27
+        },
+        {
+          "season":"2021",
+          "count":29
+        }
+      ],
+      "trades":7,
+      "trades_by_season":[
+        {
+          "season":"2024",
+          "count":3
+        },
+        {
+          "season":"2023",
+          "count":2
+        },
+        {
+          "season":"2022",
+          "count":1
+        },
+        {
+          "season":"2021",
+          "count":1
+        }
+      ],
       "placements":[
         {
           "season":"2025",
@@ -995,6 +1126,7 @@
       },
       "win_pct_rank":7,
       "waiver_moves_rank":4,
+      "trades_rank":3,
       "all_time_points_rank":9,
       "avg_placement_rank":5,
       "high_week_rank":3,
@@ -1395,6 +1527,28 @@
       "losses":52,
       "ties":0,
       "all_time_points":8053.2,
+      "points_by_season":[
+        {
+          "season":"2025",
+          "points":1632.6
+        },
+        {
+          "season":"2024",
+          "points":1709.0
+        },
+        {
+          "season":"2023",
+          "points":1524.5
+        },
+        {
+          "season":"2022",
+          "points":1822.6
+        },
+        {
+          "season":"2021",
+          "points":1364.5
+        }
+      ],
       "avg_placement":7.4,
       "most_owned":[
         {
@@ -1444,6 +1598,43 @@
         }
       ],
       "waiver_moves":125,
+      "waiver_moves_by_season":[
+        {
+          "season":"2025",
+          "count":25
+        },
+        {
+          "season":"2024",
+          "count":33
+        },
+        {
+          "season":"2023",
+          "count":28
+        },
+        {
+          "season":"2022",
+          "count":25
+        },
+        {
+          "season":"2021",
+          "count":14
+        }
+      ],
+      "trades":3,
+      "trades_by_season":[
+        {
+          "season":"2025",
+          "count":1
+        },
+        {
+          "season":"2024",
+          "count":1
+        },
+        {
+          "season":"2023",
+          "count":1
+        }
+      ],
       "placements":[
         {
           "season":"2025",
@@ -1496,6 +1687,7 @@
       },
       "win_pct_rank":8,
       "waiver_moves_rank":9,
+      "trades_rank":10,
       "all_time_points_rank":8,
       "avg_placement_rank":9,
       "high_week_rank":6,
@@ -1889,6 +2081,28 @@
       "losses":49,
       "ties":0,
       "all_time_points":8425.1,
+      "points_by_season":[
+        {
+          "season":"2025",
+          "points":1685.7
+        },
+        {
+          "season":"2024",
+          "points":1868.2
+        },
+        {
+          "season":"2023",
+          "points":1772.6
+        },
+        {
+          "season":"2022",
+          "points":1764.7
+        },
+        {
+          "season":"2021",
+          "points":1333.9
+        }
+      ],
       "avg_placement":5.8,
       "most_owned":[
         {
@@ -1938,6 +2152,43 @@
         }
       ],
       "waiver_moves":185,
+      "waiver_moves_by_season":[
+        {
+          "season":"2025",
+          "count":24
+        },
+        {
+          "season":"2024",
+          "count":34
+        },
+        {
+          "season":"2023",
+          "count":41
+        },
+        {
+          "season":"2022",
+          "count":45
+        },
+        {
+          "season":"2021",
+          "count":41
+        }
+      ],
+      "trades":5,
+      "trades_by_season":[
+        {
+          "season":"2024",
+          "count":1
+        },
+        {
+          "season":"2022",
+          "count":3
+        },
+        {
+          "season":"2021",
+          "count":1
+        }
+      ],
       "placements":[
         {
           "season":"2025",
@@ -1990,6 +2241,7 @@
       },
       "win_pct_rank":6,
       "waiver_moves_rank":3,
+      "trades_rank":8,
       "all_time_points_rank":3,
       "avg_placement_rank":4,
       "high_week_rank":5,
@@ -2400,6 +2652,28 @@
       "losses":37,
       "ties":0,
       "all_time_points":8738.6,
+      "points_by_season":[
+        {
+          "season":"2025",
+          "points":1710.8
+        },
+        {
+          "season":"2024",
+          "points":1850.3
+        },
+        {
+          "season":"2023",
+          "points":1671.2
+        },
+        {
+          "season":"2022",
+          "points":1831.7
+        },
+        {
+          "season":"2021",
+          "points":1674.7
+        }
+      ],
       "avg_placement":4.2,
       "most_owned":[
         {
@@ -2449,6 +2723,43 @@
         }
       ],
       "waiver_moves":144,
+      "waiver_moves_by_season":[
+        {
+          "season":"2025",
+          "count":37
+        },
+        {
+          "season":"2024",
+          "count":27
+        },
+        {
+          "season":"2023",
+          "count":22
+        },
+        {
+          "season":"2022",
+          "count":21
+        },
+        {
+          "season":"2021",
+          "count":37
+        }
+      ],
+      "trades":7,
+      "trades_by_season":[
+        {
+          "season":"2025",
+          "count":3
+        },
+        {
+          "season":"2023",
+          "count":2
+        },
+        {
+          "season":"2022",
+          "count":2
+        }
+      ],
       "placements":[
         {
           "season":"2025",
@@ -2501,6 +2812,7 @@
       },
       "win_pct_rank":2,
       "waiver_moves_rank":8,
+      "trades_rank":4,
       "all_time_points_rank":1,
       "avg_placement_rank":2,
       "high_week_rank":2,
@@ -2907,6 +3219,28 @@
       "losses":52,
       "ties":0,
       "all_time_points":8178.0,
+      "points_by_season":[
+        {
+          "season":"2025",
+          "points":1613.2
+        },
+        {
+          "season":"2024",
+          "points":1762.5
+        },
+        {
+          "season":"2023",
+          "points":1730.0
+        },
+        {
+          "season":"2022",
+          "points":1743.7
+        },
+        {
+          "season":"2021",
+          "points":1328.6
+        }
+      ],
       "avg_placement":7.0,
       "most_owned":[
         {
@@ -2956,6 +3290,47 @@
         }
       ],
       "waiver_moves":190,
+      "waiver_moves_by_season":[
+        {
+          "season":"2025",
+          "count":46
+        },
+        {
+          "season":"2024",
+          "count":43
+        },
+        {
+          "season":"2023",
+          "count":22
+        },
+        {
+          "season":"2022",
+          "count":40
+        },
+        {
+          "season":"2021",
+          "count":39
+        }
+      ],
+      "trades":6,
+      "trades_by_season":[
+        {
+          "season":"2025",
+          "count":3
+        },
+        {
+          "season":"2023",
+          "count":1
+        },
+        {
+          "season":"2022",
+          "count":1
+        },
+        {
+          "season":"2021",
+          "count":1
+        }
+      ],
       "placements":[
         {
           "season":"2025",
@@ -3008,6 +3383,7 @@
       },
       "win_pct_rank":9,
       "waiver_moves_rank":2,
+      "trades_rank":6,
       "all_time_points_rank":7,
       "avg_placement_rank":8,
       "high_week_rank":7,
@@ -3407,6 +3783,28 @@
       "losses":46,
       "ties":0,
       "all_time_points":8266.7,
+      "points_by_season":[
+        {
+          "season":"2025",
+          "points":1848.4
+        },
+        {
+          "season":"2024",
+          "points":1781.2
+        },
+        {
+          "season":"2023",
+          "points":1614.2
+        },
+        {
+          "season":"2022",
+          "points":1863.2
+        },
+        {
+          "season":"2021",
+          "points":1159.6
+        }
+      ],
       "avg_placement":6.2,
       "most_owned":[
         {
@@ -3456,6 +3854,39 @@
         }
       ],
       "waiver_moves":147,
+      "waiver_moves_by_season":[
+        {
+          "season":"2025",
+          "count":40
+        },
+        {
+          "season":"2024",
+          "count":50
+        },
+        {
+          "season":"2023",
+          "count":23
+        },
+        {
+          "season":"2022",
+          "count":20
+        },
+        {
+          "season":"2021",
+          "count":14
+        }
+      ],
+      "trades":4,
+      "trades_by_season":[
+        {
+          "season":"2025",
+          "count":1
+        },
+        {
+          "season":"2024",
+          "count":3
+        }
+      ],
       "placements":[
         {
           "season":"2025",
@@ -3508,6 +3939,7 @@
       },
       "win_pct_rank":4,
       "waiver_moves_rank":6,
+      "trades_rank":9,
       "all_time_points_rank":5,
       "avg_placement_rank":7,
       "high_week_rank":9,
@@ -3889,6 +4321,16 @@
       "losses":21,
       "ties":0,
       "all_time_points":3514.3,
+      "points_by_season":[
+        {
+          "season":"2025",
+          "points":1778.2
+        },
+        {
+          "season":"2024",
+          "points":1736.1
+        }
+      ],
       "avg_placement":5.0,
       "most_owned":[
         {
@@ -3938,6 +4380,23 @@
         }
       ],
       "waiver_moves":32,
+      "waiver_moves_by_season":[
+        {
+          "season":"2025",
+          "count":20
+        },
+        {
+          "season":"2024",
+          "count":12
+        }
+      ],
+      "trades":3,
+      "trades_by_season":[
+        {
+          "season":"2025",
+          "count":3
+        }
+      ],
       "placements":[
         {
           "season":"2025",
@@ -3978,6 +4437,7 @@
       },
       "win_pct_rank":1,
       "waiver_moves_rank":11,
+      "trades_rank":11,
       "all_time_points_rank":11,
       "avg_placement_rank":3,
       "high_week_rank":12,
@@ -4380,6 +4840,28 @@
       "losses":52,
       "ties":0,
       "all_time_points":8179.7,
+      "points_by_season":[
+        {
+          "season":"2025",
+          "points":1747.2
+        },
+        {
+          "season":"2024",
+          "points":1763.1
+        },
+        {
+          "season":"2023",
+          "points":1570.3
+        },
+        {
+          "season":"2022",
+          "points":1537.7
+        },
+        {
+          "season":"2021",
+          "points":1561.4
+        }
+      ],
       "avg_placement":7.4,
       "most_owned":[
         {
@@ -4429,6 +4911,47 @@
         }
       ],
       "waiver_moves":149,
+      "waiver_moves_by_season":[
+        {
+          "season":"2025",
+          "count":42
+        },
+        {
+          "season":"2024",
+          "count":34
+        },
+        {
+          "season":"2023",
+          "count":27
+        },
+        {
+          "season":"2022",
+          "count":27
+        },
+        {
+          "season":"2021",
+          "count":19
+        }
+      ],
+      "trades":13,
+      "trades_by_season":[
+        {
+          "season":"2025",
+          "count":6
+        },
+        {
+          "season":"2024",
+          "count":3
+        },
+        {
+          "season":"2023",
+          "count":2
+        },
+        {
+          "season":"2022",
+          "count":2
+        }
+      ],
       "placements":[
         {
           "season":"2025",
@@ -4481,6 +5004,7 @@
       },
       "win_pct_rank":10,
       "waiver_moves_rank":5,
+      "trades_rank":1,
       "all_time_points_rank":6,
       "avg_placement_rank":10,
       "high_week_rank":4,
@@ -4869,6 +5393,28 @@
       "losses":47,
       "ties":0,
       "all_time_points":8455.1,
+      "points_by_season":[
+        {
+          "season":"2025",
+          "points":1775.4
+        },
+        {
+          "season":"2024",
+          "points":1622.9
+        },
+        {
+          "season":"2023",
+          "points":1789.8
+        },
+        {
+          "season":"2022",
+          "points":1806.9
+        },
+        {
+          "season":"2021",
+          "points":1460.0
+        }
+      ],
       "avg_placement":6.0,
       "most_owned":[
         {
@@ -4918,6 +5464,39 @@
         }
       ],
       "waiver_moves":146,
+      "waiver_moves_by_season":[
+        {
+          "season":"2025",
+          "count":25
+        },
+        {
+          "season":"2024",
+          "count":31
+        },
+        {
+          "season":"2023",
+          "count":29
+        },
+        {
+          "season":"2022",
+          "count":53
+        },
+        {
+          "season":"2021",
+          "count":8
+        }
+      ],
+      "trades":7,
+      "trades_by_season":[
+        {
+          "season":"2024",
+          "count":4
+        },
+        {
+          "season":"2023",
+          "count":3
+        }
+      ],
       "placements":[
         {
           "season":"2025",
@@ -4970,6 +5549,7 @@
       },
       "win_pct_rank":5,
       "waiver_moves_rank":7,
+      "trades_rank":5,
       "all_time_points_rank":2,
       "avg_placement_rank":6,
       "high_week_rank":1,
@@ -5368,6 +5948,20 @@
       "losses":39,
       "ties":0,
       "all_time_points":4904.4,
+      "points_by_season":[
+        {
+          "season":"2025",
+          "points":1895.2
+        },
+        {
+          "season":"2024",
+          "points":1493.8
+        },
+        {
+          "season":"2023",
+          "points":1515.4
+        }
+      ],
       "avg_placement":8.0,
       "most_owned":[
         {
@@ -5417,6 +6011,35 @@
         }
       ],
       "waiver_moves":103,
+      "waiver_moves_by_season":[
+        {
+          "season":"2025",
+          "count":31
+        },
+        {
+          "season":"2024",
+          "count":38
+        },
+        {
+          "season":"2023",
+          "count":34
+        }
+      ],
+      "trades":6,
+      "trades_by_season":[
+        {
+          "season":"2025",
+          "count":1
+        },
+        {
+          "season":"2024",
+          "count":4
+        },
+        {
+          "season":"2023",
+          "count":1
+        }
+      ],
       "placements":[
         {
           "season":"2025",
@@ -5461,6 +6084,7 @@
       },
       "win_pct_rank":11,
       "waiver_moves_rank":10,
+      "trades_rank":7,
       "all_time_points_rank":10,
       "avg_placement_rank":11,
       "high_week_rank":11,
@@ -5863,6 +6487,16 @@
       "losses":32,
       "ties":0,
       "all_time_points":3320.1,
+      "points_by_season":[
+        {
+          "season":"2025",
+          "points":1781.1
+        },
+        {
+          "season":"2024",
+          "points":1539.0
+        }
+      ],
       "avg_placement":8.0,
       "most_owned":[
         {
@@ -5912,6 +6546,20 @@
         }
       ],
       "waiver_moves":24,
+      "waiver_moves_by_season":[
+        {
+          "season":"2025",
+          "count":11
+        },
+        {
+          "season":"2024",
+          "count":13
+        }
+      ],
+      "trades":0,
+      "trades_by_season":[
+
+      ],
       "placements":[
         {
           "season":"2025",
@@ -5952,6 +6600,7 @@
       },
       "win_pct_rank":12,
       "waiver_moves_rank":12,
+      "trades_rank":12,
       "all_time_points_rank":12,
       "avg_placement_rank":12,
       "high_week_rank":10,
