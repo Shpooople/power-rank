@@ -49,6 +49,19 @@ const PlacementRow = ({ placements }) => (
   </div>
 );
 
+// NEU: kleine Chip-Reihe für Pro-Saison-Aufschlüsselungen (z.B. Punkte oder
+// Waiver-Moves pro Saison) - wiederverwendbar über valueKey
+const SeasonBreakdownRow = ({ items, valueKey }) => (
+  <div className="season-breakdown-row">
+    {items.map((item, i) => (
+      <span className="season-breakdown-chip" key={i}>
+        <span className="season-breakdown-season">{item.season}</span>
+        <span className="season-breakdown-value">{item[valueKey]}</span>
+      </span>
+    ))}
+  </div>
+);
+
 // NEU: dunklere, aber farblich ähnliche Variante einer Hex-Farbe - für die
 // Bank-Balken (Team-Depth), damit sie zum jeweiligen Positions-Balken passen
 // NEU: dunklere, aber farblich ähnliche Variante einer Hex-Farbe, mit
@@ -805,6 +818,8 @@ const TeamSection = ({ team }) => {
           <summary>Legacy Stats anzeigen</summary>
           <div className="collapsible-content">
 
+            <h4 className="legacy-section-title">Platzierungen und Erfolge</h4>
+
             {(legacyStats.angstgegner || legacyStats.opfer) && (
               <div className="legacy-rivals">
                 {legacyStats.angstgegner && (
@@ -844,13 +859,6 @@ const TeamSection = ({ team }) => {
               </p>
             )}
 
-            {legacyStats.all_time_points != null && (
-              <p className="legacy-line">
-                <strong>All-Time Gesamtpunkte:</strong> {legacyStats.all_time_points}
-                <RankChip rank={legacyStats.all_time_points_rank} />
-              </p>
-            )}
-
             {legacyStats.avg_placement != null && (
               <p className="legacy-line">
                 <strong>Ø Endplatzierung:</strong> {legacyStats.avg_placement}
@@ -862,6 +870,18 @@ const TeamSection = ({ team }) => {
               <div className="legacy-line">
                 <strong>Platzierungen:</strong>
                 <PlacementRow placements={legacyStats.placements} />
+              </div>
+            )}
+
+            <h4 className="legacy-section-title">Scoring</h4>
+
+            {legacyStats.all_time_points != null && (
+              <div className="legacy-line">
+                <strong>All-Time Gesamtpunkte:</strong> {legacyStats.all_time_points}
+                <RankChip rank={legacyStats.all_time_points_rank} />
+                {legacyStats.points_by_season?.length > 0 && (
+                  <SeasonBreakdownRow items={legacyStats.points_by_season} valueKey="points" />
+                )}
               </div>
             )}
 
@@ -890,14 +910,27 @@ const TeamSection = ({ team }) => {
               </p>
             )}
 
-            <p className="legacy-line">
+            <h4 className="legacy-section-title">Activity</h4>
+
+            <div className="legacy-line">
               <strong>Waiver-Wire-Moves (all-time):</strong> {legacyStats.waiver_moves}
               <RankChip rank={legacyStats.waiver_moves_rank} />
-            </p>
+              {legacyStats.waiver_moves_by_season?.length > 0 && (
+                <SeasonBreakdownRow items={legacyStats.waiver_moves_by_season} valueKey="count" />
+              )}
+            </div>
+
+            <div className="legacy-line">
+              <strong>Trades (all-time):</strong> {legacyStats.trades}
+              <RankChip rank={legacyStats.trades_rank} />
+              {legacyStats.trades_by_season?.length > 0 && (
+                <SeasonBreakdownRow items={legacyStats.trades_by_season} valueKey="count" />
+              )}
+            </div>
 
             {legacyStats.most_owned?.length > 0 && (
               <div className="legacy-most-owned">
-                <strong>Meistgehaltene Spieler</strong>
+                <strong>Lieblingsspieler</strong>
                 <div className="legacy-most-owned-cards">
                   {legacyStats.most_owned.map((p, i) => {
                     const maxWeeks = Math.max(...legacyStats.most_owned.map((x) => x.weeks));
