@@ -396,26 +396,33 @@
       "wins":54,
       "losses":41,
       "ties":0,
+      "all_time_points":8395.3,
+      "avg_placement":4.0,
       "most_owned":[
         {
           "name":"Calvin Ridley",
-          "weeks":43
+          "weeks":43,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4981.jpg"
         },
         {
           "name":"George Pickens",
-          "weeks":37
+          "weeks":37,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8137.jpg"
         },
         {
           "name":"Terry McLaurin",
-          "weeks":33
+          "weeks":33,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5927.jpg"
         },
         {
           "name":"Jayden Reed",
-          "weeks":32
+          "weeks":32,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/10222.jpg"
         },
         {
           "name":"David Montgomery",
-          "weeks":32
+          "weeks":32,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5892.jpg"
         }
       ],
       "waiver_moves":302,
@@ -427,6 +434,10 @@
         {
           "season":"2024",
           "place":4
+        },
+        {
+          "season":"2023",
+          "place":7
         },
         {
           "season":"2022",
@@ -452,7 +463,26 @@
         "player":"Derrick Henry",
         "season":"2025",
         "week":17
-      }
+      },
+      "angstgegner":{
+        "name":"pk123",
+        "wins":6,
+        "losses":6,
+        "ties":0
+      },
+      "opfer":{
+        "name":"pk123",
+        "wins":6,
+        "losses":6,
+        "ties":0
+      },
+      "win_pct_rank":3,
+      "waiver_moves_rank":1,
+      "all_time_points_rank":4,
+      "avg_placement_rank":1,
+      "high_week_rank":8,
+      "low_week_rank":7,
+      "high_player_week_rank":8
     },
     "QUIZ_SCORES":[
       {
@@ -843,30 +873,41 @@
       "wins":45,
       "losses":50,
       "ties":0,
+      "all_time_points":7917.4,
+      "avg_placement":6.0,
       "most_owned":[
         {
           "name":"Los Angeles Rams",
-          "weeks":45
+          "weeks":45,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/LAR.jpg"
         },
         {
           "name":"Amon-Ra St. Brown",
-          "weeks":35
+          "weeks":35,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7547.jpg"
         },
         {
           "name":"George Kittle",
-          "weeks":34
+          "weeks":34,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4217.jpg"
         },
         {
           "name":"Buffalo Bills",
-          "weeks":34
+          "weeks":34,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/BUF.jpg"
         },
         {
           "name":"Jerry Jeudy",
-          "weeks":33
+          "weeks":33,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6783.jpg"
         }
       ],
       "waiver_moves":172,
       "placements":[
+        {
+          "season":"2025",
+          "place":10
+        },
         {
           "season":"2024",
           "place":1
@@ -874,6 +915,14 @@
         {
           "season":"2023",
           "place":2
+        },
+        {
+          "season":"2022",
+          "place":8
+        },
+        {
+          "season":"2021",
+          "place":9
         }
       ],
       "high_week":{
@@ -891,7 +940,26 @@
         "player":"Christian McCaffrey",
         "season":"2023",
         "week":4
-      }
+      },
+      "angstgegner":{
+        "name":"pk123",
+        "wins":7,
+        "losses":1,
+        "ties":0
+      },
+      "opfer":{
+        "name":"kobekope",
+        "wins":6,
+        "losses":3,
+        "ties":0
+      },
+      "win_pct_rank":7,
+      "waiver_moves_rank":4,
+      "all_time_points_rank":9,
+      "avg_placement_rank":5,
+      "high_week_rank":3,
+      "low_week_rank":3,
+      "high_player_week_rank":9
     },
     "QUIZ_SCORES":[
       {
@@ -1286,30 +1354,49 @@
       "wins":43,
       "losses":52,
       "ties":0,
+      "all_time_points":8053.2,
+      "avg_placement":7.4,
       "most_owned":[
         {
           "name":"Joe Mixon",
-          "weeks":34
+          "weeks":34,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4018.jpg"
         },
         {
           "name":"Lamar Jackson",
-          "weeks":34
+          "weeks":34,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4881.jpg"
         },
         {
           "name":"Travis Kelce",
-          "weeks":34
+          "weeks":34,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/1466.jpg"
         },
         {
           "name":"Diontae Johnson",
-          "weeks":34
+          "weeks":34,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5937.jpg"
         },
         {
           "name":"Jalen Hurts",
-          "weeks":34
+          "weeks":34,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6904.jpg"
         }
       ],
       "waiver_moves":125,
       "placements":[
+        {
+          "season":"2025",
+          "place":11
+        },
+        {
+          "season":"2024",
+          "place":7
+        },
+        {
+          "season":"2023",
+          "place":11
+        },
         {
           "season":"2022",
           "place":2
@@ -1334,7 +1421,26 @@
         "player":"Josh Allen",
         "season":"2024",
         "week":14
-      }
+      },
+      "angstgegner":{
+        "name":"jay88",
+        "wins":9,
+        "losses":4,
+        "ties":0
+      },
+      "opfer":{
+        "name":"kobekope",
+        "wins":6,
+        "losses":4,
+        "ties":0
+      },
+      "win_pct_rank":8,
+      "waiver_moves_rank":9,
+      "all_time_points_rank":8,
+      "avg_placement_rank":9,
+      "high_week_rank":6,
+      "low_week_rank":9,
+      "high_player_week_rank":3
     },
     "QUIZ_SCORES":[
       {
@@ -1722,30 +1828,41 @@
       "wins":46,
       "losses":49,
       "ties":0,
+      "all_time_points":8425.1,
+      "avg_placement":5.8,
       "most_owned":[
         {
           "name":"Alvin Kamara",
-          "weeks":51
+          "weeks":51,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4035.jpg"
         },
         {
           "name":"James Cook",
-          "weeks":34
+          "weeks":34,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8138.jpg"
         },
         {
           "name":"Joe Mixon",
-          "weeks":34
+          "weeks":34,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4018.jpg"
         },
         {
           "name":"Darren Waller",
-          "weeks":33
+          "weeks":33,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/2505.jpg"
         },
         {
           "name":"Jaylen Warren",
-          "weeks":30
+          "weeks":30,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8228.jpg"
         }
       ],
       "waiver_moves":185,
       "placements":[
+        {
+          "season":"2025",
+          "place":9
+        },
         {
           "season":"2024",
           "place":6
@@ -1753,6 +1870,10 @@
         {
           "season":"2023",
           "place":4
+        },
+        {
+          "season":"2022",
+          "place":9
         },
         {
           "season":"2021",
@@ -1774,7 +1895,26 @@
         "player":"Joe Mixon",
         "season":"2022",
         "week":9
-      }
+      },
+      "angstgegner":{
+        "name":"MomentumBln",
+        "wins":8,
+        "losses":4,
+        "ties":0
+      },
+      "opfer":{
+        "name":"jay88",
+        "wins":6,
+        "losses":1,
+        "ties":0
+      },
+      "win_pct_rank":6,
+      "waiver_moves_rank":3,
+      "all_time_points_rank":3,
+      "avg_placement_rank":4,
+      "high_week_rank":5,
+      "low_week_rank":11,
+      "high_player_week_rank":2
     },
     "QUIZ_SCORES":[
       {
@@ -2179,26 +2319,33 @@
       "wins":58,
       "losses":37,
       "ties":0,
+      "all_time_points":8738.6,
+      "avg_placement":4.2,
       "most_owned":[
         {
           "name":"Chris Godwin",
-          "weeks":51
+          "weeks":51,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4037.jpg"
         },
         {
           "name":"Marquise Brown",
-          "weeks":51
+          "weeks":51,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5848.jpg"
         },
         {
           "name":"Tyreek Hill",
-          "weeks":41
+          "weeks":41,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/3321.jpg"
         },
         {
           "name":"Marvin Harrison",
-          "weeks":34
+          "weeks":34,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11628.jpg"
         },
         {
           "name":"Josh Jacobs",
-          "weeks":34
+          "weeks":34,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5850.jpg"
         }
       ],
       "waiver_moves":144,
@@ -2239,7 +2386,26 @@
         "player":"Josh Jacobs",
         "season":"2022",
         "week":12
-      }
+      },
+      "angstgegner":{
+        "name":"Shpooople",
+        "wins":6,
+        "losses":6,
+        "ties":0
+      },
+      "opfer":{
+        "name":"Sternburg1000",
+        "wins":7,
+        "losses":1,
+        "ties":0
+      },
+      "win_pct_rank":2,
+      "waiver_moves_rank":8,
+      "all_time_points_rank":1,
+      "avg_placement_rank":2,
+      "high_week_rank":2,
+      "low_week_rank":10,
+      "high_player_week_rank":10
     },
     "QUIZ_SCORES":[
       {
@@ -2640,30 +2806,45 @@
       "wins":43,
       "losses":52,
       "ties":0,
+      "all_time_points":8178.0,
+      "avg_placement":7.0,
       "most_owned":[
         {
           "name":"Younghoe Koo",
-          "weeks":73
+          "weeks":73,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4666.jpg"
         },
         {
           "name":"Chuba Hubbard",
-          "weeks":39
+          "weeks":39,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7594.jpg"
         },
         {
           "name":"Breece Hall",
-          "weeks":34
+          "weeks":34,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8155.jpg"
         },
         {
           "name":"Jaylen Waddle",
-          "weeks":34
+          "weeks":34,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7526.jpg"
         },
         {
           "name":"Kyle Pitts",
-          "weeks":34
+          "weeks":34,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7553.jpg"
         }
       ],
       "waiver_moves":190,
       "placements":[
+        {
+          "season":"2025",
+          "place":12
+        },
+        {
+          "season":"2024",
+          "place":9
+        },
         {
           "season":"2023",
           "place":1
@@ -2671,6 +2852,10 @@
         {
           "season":"2022",
           "place":6
+        },
+        {
+          "season":"2021",
+          "place":7
         }
       ],
       "high_week":{
@@ -2688,7 +2873,26 @@
         "player":"Ja'Marr Chase",
         "season":"2021",
         "week":17
-      }
+      },
+      "angstgegner":{
+        "name":"Sternburg1000",
+        "wins":6,
+        "losses":4,
+        "ties":0
+      },
+      "opfer":{
+        "name":"MomentumBln",
+        "wins":6,
+        "losses":2,
+        "ties":0
+      },
+      "win_pct_rank":9,
+      "waiver_moves_rank":2,
+      "all_time_points_rank":7,
+      "avg_placement_rank":8,
+      "high_week_rank":7,
+      "low_week_rank":4,
+      "high_player_week_rank":6
     },
     "QUIZ_SCORES":[
       {
@@ -3082,26 +3286,33 @@
       "wins":49,
       "losses":46,
       "ties":0,
+      "all_time_points":8266.7,
+      "avg_placement":6.2,
       "most_owned":[
         {
           "name":"DeAndre Hopkins",
-          "weeks":34
+          "weeks":34,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/1426.jpg"
         },
         {
           "name":"Tyler Lockett",
-          "weeks":34
+          "weeks":34,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/2374.jpg"
         },
         {
           "name":"Josh Allen",
-          "weeks":34
+          "weeks":34,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4984.jpg"
         },
         {
           "name":"Clyde Edwards-Helaire",
-          "weeks":34
+          "weeks":34,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6820.jpg"
         },
         {
           "name":"Tampa Bay Buccaneers",
-          "weeks":30
+          "weeks":30,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/TB.jpg"
         }
       ],
       "waiver_moves":147,
@@ -3115,8 +3326,16 @@
           "place":2
         },
         {
+          "season":"2023",
+          "place":12
+        },
+        {
           "season":"2022",
           "place":5
+        },
+        {
+          "season":"2021",
+          "place":10
         }
       ],
       "high_week":{
@@ -3134,7 +3353,26 @@
         "player":"De'Von Achane",
         "season":"2023",
         "week":3
-      }
+      },
+      "angstgegner":{
+        "name":"pk123",
+        "wins":6,
+        "losses":0,
+        "ties":0
+      },
+      "opfer":{
+        "name":"jay88",
+        "wins":5,
+        "losses":5,
+        "ties":0
+      },
+      "win_pct_rank":4,
+      "waiver_moves_rank":6,
+      "all_time_points_rank":5,
+      "avg_placement_rank":7,
+      "high_week_rank":9,
+      "low_week_rank":1,
+      "high_player_week_rank":7
     },
     "QUIZ_SCORES":[
       {
@@ -3510,30 +3748,41 @@
       "wins":35,
       "losses":21,
       "ties":0,
+      "all_time_points":3514.3,
+      "avg_placement":5.0,
       "most_owned":[
         {
           "name":"A.J. Brown",
-          "weeks":34
+          "weeks":34,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5859.jpg"
         },
         {
           "name":"Christian Kirk",
-          "weeks":26
+          "weeks":26,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4950.jpg"
         },
         {
           "name":"Harrison Butker",
-          "weeks":22
+          "weeks":22,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4227.jpg"
         },
         {
           "name":"Rachaad White",
-          "weeks":20
+          "weeks":20,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8136.jpg"
         },
         {
           "name":"Quinshon Judkins",
-          "weeks":17
+          "weeks":17,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12512.jpg"
         }
       ],
       "waiver_moves":32,
       "placements":[
+        {
+          "season":"2025",
+          "place":7
+        },
         {
           "season":"2024",
           "place":3
@@ -3554,7 +3803,26 @@
         "player":"Josh Allen",
         "season":"2025",
         "week":11
-      }
+      },
+      "angstgegner":{
+        "name":"Sternburg1000",
+        "wins":4,
+        "losses":1,
+        "ties":0
+      },
+      "opfer":{
+        "name":"Shpooople",
+        "wins":5,
+        "losses":0,
+        "ties":0
+      },
+      "win_pct_rank":1,
+      "waiver_moves_rank":11,
+      "all_time_points_rank":11,
+      "avg_placement_rank":3,
+      "high_week_rank":12,
+      "low_week_rank":12,
+      "high_player_week_rank":4
     },
     "QUIZ_SCORES":[
       {
@@ -3951,30 +4219,53 @@
       "wins":43,
       "losses":52,
       "ties":0,
+      "all_time_points":8179.7,
+      "avg_placement":7.4,
       "most_owned":[
         {
           "name":"Dak Prescott",
-          "weeks":33
+          "weeks":33,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/3294.jpg"
         },
         {
           "name":"Stefon Diggs",
-          "weeks":29
+          "weeks":29,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/2449.jpg"
         },
         {
           "name":"Bijan Robinson",
-          "weeks":26
+          "weeks":26,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9509.jpg"
         },
         {
           "name":"Jonathan Taylor",
-          "weeks":25
+          "weeks":25,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6813.jpg"
         },
         {
           "name":"Zach Charbonnet",
-          "weeks":24
+          "weeks":24,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9753.jpg"
         }
       ],
       "waiver_moves":149,
       "placements":[
+        {
+          "season":"2025",
+          "place":8
+        },
+        {
+          "season":"2024",
+          "place":8
+        },
+        {
+          "season":"2023",
+          "place":8
+        },
+        {
+          "season":"2022",
+          "place":10
+        },
         {
           "season":"2021",
           "place":3
@@ -3995,7 +4286,26 @@
         "player":"Trevor Lawrence",
         "season":"2025",
         "week":15
-      }
+      },
+      "angstgegner":{
+        "name":"jay88",
+        "wins":6,
+        "losses":2,
+        "ties":0
+      },
+      "opfer":{
+        "name":"kobekope",
+        "wins":8,
+        "losses":4,
+        "ties":0
+      },
+      "win_pct_rank":10,
+      "waiver_moves_rank":5,
+      "all_time_points_rank":6,
+      "avg_placement_rank":10,
+      "high_week_rank":4,
+      "low_week_rank":8,
+      "high_player_week_rank":1
     },
     "QUIZ_SCORES":[
       {
@@ -4378,26 +4688,33 @@
       "wins":48,
       "losses":47,
       "ties":0,
+      "all_time_points":8455.1,
+      "avg_placement":6.0,
       "most_owned":[
         {
           "name":"Justin Tucker",
-          "weeks":51
+          "weeks":51,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/1264.jpg"
         },
         {
           "name":"Adam Thielen",
-          "weeks":34
+          "weeks":34,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/1689.jpg"
         },
         {
           "name":"Patrick Mahomes",
-          "weeks":34
+          "weeks":34,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4046.jpg"
         },
         {
           "name":"J.K. Dobbins",
-          "weeks":28
+          "weeks":28,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6806.jpg"
         },
         {
           "name":"C.J. Stroud",
-          "weeks":27
+          "weeks":27,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9758.jpg"
         }
       ],
       "waiver_moves":146,
@@ -4405,6 +4722,14 @@
         {
           "season":"2025",
           "place":4
+        },
+        {
+          "season":"2024",
+          "place":10
+        },
+        {
+          "season":"2023",
+          "place":10
         },
         {
           "season":"2022",
@@ -4430,7 +4755,26 @@
         "player":"Ja'Marr Chase",
         "season":"2023",
         "week":5
-      }
+      },
+      "angstgegner":{
+        "name":"kobekope",
+        "wins":6,
+        "losses":1,
+        "ties":0
+      },
+      "opfer":{
+        "name":"Schleckeracci",
+        "wins":9,
+        "losses":4,
+        "ties":0
+      },
+      "win_pct_rank":5,
+      "waiver_moves_rank":7,
+      "all_time_points_rank":2,
+      "avg_placement_rank":6,
+      "high_week_rank":1,
+      "low_week_rank":5,
+      "high_player_week_rank":11
     },
     "QUIZ_SCORES":[
       {
@@ -4823,26 +5167,33 @@
       "wins":31,
       "losses":39,
       "ties":0,
+      "all_time_points":4904.4,
+      "avg_placement":8.0,
       "most_owned":[
         {
           "name":"Cooper Kupp",
-          "weeks":30
+          "weeks":30,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4039.jpg"
         },
         {
           "name":"D'Andre Swift",
-          "weeks":29
+          "weeks":29,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6790.jpg"
         },
         {
           "name":"Ladd McConkey",
-          "weeks":28
+          "weeks":28,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11635.jpg"
         },
         {
           "name":"Rashee Rice",
-          "weeks":26
+          "weeks":26,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/10229.jpg"
         },
         {
           "name":"Denver Broncos",
-          "weeks":19
+          "weeks":19,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/DEN.jpg"
         }
       ],
       "waiver_moves":103,
@@ -4850,6 +5201,14 @@
         {
           "season":"2025",
           "place":3
+        },
+        {
+          "season":"2024",
+          "place":12
+        },
+        {
+          "season":"2023",
+          "place":9
         }
       ],
       "high_week":{
@@ -4867,7 +5226,26 @@
         "player":"Joe Flacco",
         "season":"2025",
         "week":9
-      }
+      },
+      "angstgegner":{
+        "name":"Sternburg1000",
+        "wins":4,
+        "losses":1,
+        "ties":0
+      },
+      "opfer":{
+        "name":"jay88",
+        "wins":5,
+        "losses":1,
+        "ties":0
+      },
+      "win_pct_rank":11,
+      "waiver_moves_rank":10,
+      "all_time_points_rank":10,
+      "avg_placement_rank":11,
+      "high_week_rank":11,
+      "low_week_rank":6,
+      "high_player_week_rank":12
     },
     "QUIZ_SCORES":[
       {
@@ -5264,26 +5642,33 @@
       "wins":24,
       "losses":32,
       "ties":0,
+      "all_time_points":3320.1,
+      "avg_placement":8.0,
       "most_owned":[
         {
           "name":"Bucky Irving",
-          "weeks":17
+          "weeks":17,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11584.jpg"
         },
         {
           "name":"Davante Adams",
-          "weeks":17
+          "weeks":17,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/2133.jpg"
         },
         {
           "name":"Patrick Mahomes",
-          "weeks":17
+          "weeks":17,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4046.jpg"
         },
         {
           "name":"T.J. Hockenson",
-          "weeks":17
+          "weeks":17,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5844.jpg"
         },
         {
           "name":"Tee Higgins",
-          "weeks":17
+          "weeks":17,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6801.jpg"
         }
       ],
       "waiver_moves":24,
@@ -5291,6 +5676,10 @@
         {
           "season":"2025",
           "place":5
+        },
+        {
+          "season":"2024",
+          "place":11
         }
       ],
       "high_week":{
@@ -5308,7 +5697,26 @@
         "player":"Ja'Marr Chase",
         "season":"2024",
         "week":10
-      }
+      },
+      "angstgegner":{
+        "name":"jay88",
+        "wins":4,
+        "losses":0,
+        "ties":0
+      },
+      "opfer":{
+        "name":"pk123",
+        "wins":4,
+        "losses":1,
+        "ties":0
+      },
+      "win_pct_rank":12,
+      "waiver_moves_rank":12,
+      "all_time_points_rank":12,
+      "avg_placement_rank":12,
+      "high_week_rank":10,
+      "low_week_rank":2,
+      "high_player_week_rank":5
     },
     "QUIZ_SCORES":[
       {
