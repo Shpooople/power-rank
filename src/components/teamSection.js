@@ -818,141 +818,147 @@ const TeamSection = ({ team }) => {
           <summary>Legacy Stats anzeigen</summary>
           <div className="collapsible-content">
 
-            <h4 className="legacy-section-title">Platzierungen und Erfolge</h4>
-
-            {(legacyStats.angstgegner || legacyStats.opfer) && (
-              <div className="legacy-rivals">
-                {legacyStats.angstgegner && (
-                  <div className="legacy-rival-card legacy-rival-nemesis">
-                    <span className="legacy-rival-emoji">😱</span>
-                    <div>
-                      <span className="legacy-rival-label">Angstgegner</span>
-                      <span className="legacy-rival-name">{legacyStats.angstgegner.name}</span>
-                      <span className="legacy-rival-record">
-                        {legacyStats.angstgegner.wins}-{legacyStats.angstgegner.losses}
-                        {legacyStats.angstgegner.ties > 0 ? `-${legacyStats.angstgegner.ties}` : ''}
-                      </span>
-                    </div>
-                  </div>
-                )}
-                {legacyStats.opfer && (
-                  <div className="legacy-rival-card legacy-rival-victim">
-                    <span className="legacy-rival-emoji">😈</span>
-                    <div>
-                      <span className="legacy-rival-label">Opfer</span>
-                      <span className="legacy-rival-name">{legacyStats.opfer.name}</span>
-                      <span className="legacy-rival-record">
-                        {legacyStats.opfer.wins}-{legacyStats.opfer.losses}
-                        {legacyStats.opfer.ties > 0 ? `-${legacyStats.opfer.ties}` : ''}
-                      </span>
-                    </div>
-                  </div>
-                )}
-              </div>
-            )}
-
-            {legacyStats.win_pct != null && (
-              <p className="legacy-line">
-                <strong>All-Time Win%:</strong> <span className="legacy-value">{legacyStats.win_pct}%</span>{' '}
-                ({legacyStats.wins}-{legacyStats.losses}{legacyStats.ties > 0 ? `-${legacyStats.ties}` : ''})
-                <RankChip rank={legacyStats.win_pct_rank} />
-              </p>
-            )}
-
-            {legacyStats.avg_placement != null && (
-              <p className="legacy-line">
-                <strong>Ø Endplatzierung:</strong> <span className="legacy-value">{legacyStats.avg_placement}</span>
-                <RankChip rank={legacyStats.avg_placement_rank} />
-              </p>
-            )}
-
-            {legacyStats.placements?.length > 0 && (
-              <div className="legacy-line">
-                <strong>Platzierungen:</strong>
-                <PlacementRow placements={legacyStats.placements} />
-              </div>
-            )}
-
-            <h4 className="legacy-section-title">Scoring</h4>
-
-            {legacyStats.all_time_points != null && (
-              <div className="legacy-line">
-                <strong>All-Time Gesamtpunkte:</strong> <span className="legacy-value">{legacyStats.all_time_points}</span>
-                <RankChip rank={legacyStats.all_time_points_rank} />
-                {legacyStats.points_by_season?.length > 0 && (
-                  <SeasonBreakdownRow items={legacyStats.points_by_season} valueKey="points" />
-                )}
-              </div>
-            )}
-
-            {legacyStats.high_week && (
-              <p className="legacy-line">
-                <strong>Höchster Wochenscore:</strong> <span className="legacy-value">{legacyStats.high_week.points}</span> Punkte{' '}
-                (Saison {legacyStats.high_week.season}, Woche {legacyStats.high_week.week})
-                <RankChip rank={legacyStats.high_week_rank} />
-              </p>
-            )}
-
-            {legacyStats.low_week && (
-              <p className="legacy-line">
-                <strong>Niedrigster Wochenscore:</strong> <span className="legacy-value">{legacyStats.low_week.points}</span> Punkte{' '}
-                (Saison {legacyStats.low_week.season}, Woche {legacyStats.low_week.week})
-                <RankChip rank={legacyStats.low_week_rank} />
-              </p>
-            )}
-
-            {legacyStats.high_player_week && (
-              <p className="legacy-line">
-                <strong>Bester Einzelspieler-Score:</strong>{' '}
-                <span className="legacy-value">{legacyStats.high_player_week.player}</span> mit{' '}
-                <span className="legacy-value">{legacyStats.high_player_week.points}</span> Punkten{' '}
-                (Saison {legacyStats.high_player_week.season}, Woche {legacyStats.high_player_week.week})
-                <RankChip rank={legacyStats.high_player_week_rank} />
-              </p>
-            )}
-
-            <h4 className="legacy-section-title">Activity</h4>
-
-            <div className="legacy-line">
-              <strong>Waiver-Wire-Moves (all-time):</strong> <span className="legacy-value">{legacyStats.waiver_moves}</span>
-              <RankChip rank={legacyStats.waiver_moves_rank} />
-              {legacyStats.waiver_moves_by_season?.length > 0 && (
-                <SeasonBreakdownRow items={legacyStats.waiver_moves_by_season} valueKey="count" />
-              )}
-            </div>
-
-            <div className="legacy-line">
-              <strong>Trades (all-time):</strong> {legacyStats.trades}
-              <RankChip rank={legacyStats.trades_rank} />
-              {legacyStats.trades_by_season?.length > 0 && (
-                <SeasonBreakdownRow items={legacyStats.trades_by_season} valueKey="count" />
-              )}
-            </div>
-
-            {legacyStats.most_owned?.length > 0 && (
-              <div className="legacy-most-owned">
-                <strong>Lieblingsspieler</strong>
-                <div className="legacy-most-owned-cards">
-                  {legacyStats.most_owned.map((p, i) => {
-                    const maxWeeks = Math.max(...legacyStats.most_owned.map((x) => x.weeks));
-                    const size = 32 + (p.weeks / maxWeeks) * 32; // 32-64px, nach Wochen skaliert
-                    return (
-                      <div className="legacy-owned-player" key={i}>
-                        <img
-                          src={p.image_url}
-                          alt={p.name}
-                          style={{ width: size, height: size }}
-                          className="legacy-owned-player-image"
-                          onError={(e) => { e.target.src = './thf_color.svg'; }}
-                        />
-                        <span className="legacy-owned-player-name">{p.name}</span>
-                        <span className="legacy-owned-player-weeks">{p.weeks} Wochen</span>
+            <div className="legacy-content-grid">
+              <div className="legacy-sidebar-col">
+                {(legacyStats.angstgegner || legacyStats.opfer) && (
+                  <div className="legacy-rivals">
+                    {legacyStats.angstgegner && (
+                      <div className="legacy-rival-card legacy-rival-nemesis">
+                        <span className="legacy-rival-emoji">😱</span>
+                        <div>
+                          <span className="legacy-rival-label">Angstgegner</span>
+                          <span className="legacy-rival-name">{legacyStats.angstgegner.name}</span>
+                          <span className="legacy-rival-record">
+                            {legacyStats.angstgegner.wins}-{legacyStats.angstgegner.losses}
+                            {legacyStats.angstgegner.ties > 0 ? `-${legacyStats.angstgegner.ties}` : ''}
+                          </span>
+                        </div>
                       </div>
-                    );
-                  })}
+                    )}
+                    {legacyStats.opfer && (
+                      <div className="legacy-rival-card legacy-rival-victim">
+                        <span className="legacy-rival-emoji">😈</span>
+                        <div>
+                          <span className="legacy-rival-label">Opfer</span>
+                          <span className="legacy-rival-name">{legacyStats.opfer.name}</span>
+                          <span className="legacy-rival-record">
+                            {legacyStats.opfer.wins}-{legacyStats.opfer.losses}
+                            {legacyStats.opfer.ties > 0 ? `-${legacyStats.opfer.ties}` : ''}
+                          </span>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                )}
+
+                {legacyStats.most_owned?.length > 0 && (
+                  <div className="legacy-most-owned">
+                    <strong>Lieblingsspieler</strong>
+                    <div className="legacy-most-owned-cards">
+                      {legacyStats.most_owned.map((p, i) => {
+                        const maxWeeks = Math.max(...legacyStats.most_owned.map((x) => x.weeks));
+                        const size = 28 + (p.weeks / maxWeeks) * 24; // 28-52px, nach Wochen skaliert
+                        return (
+                          <div className="legacy-owned-player" key={i}>
+                            <img
+                              src={p.image_url}
+                              alt={p.name}
+                              style={{ width: size, height: size }}
+                              className="legacy-owned-player-image"
+                              onError={(e) => { e.target.src = './thf_color.svg'; }}
+                            />
+                            <span className="legacy-owned-player-name">{p.name}</span>
+                            <span className="legacy-owned-player-weeks">{p.weeks} Wochen</span>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              <div className="legacy-main-col">
+                <h4 className="legacy-section-title">Platzierungen und Erfolge</h4>
+
+                {legacyStats.win_pct != null && (
+                  <p className="legacy-line">
+                    <strong>All-Time Win%:</strong> <span className="legacy-value">{legacyStats.win_pct}%</span>{' '}
+                    ({legacyStats.wins}-{legacyStats.losses}{legacyStats.ties > 0 ? `-${legacyStats.ties}` : ''})
+                    <RankChip rank={legacyStats.win_pct_rank} />
+                  </p>
+                )}
+
+                {legacyStats.avg_placement != null && (
+                  <p className="legacy-line">
+                    <strong>Ø Endplatzierung:</strong> <span className="legacy-value">{legacyStats.avg_placement}</span>
+                    <RankChip rank={legacyStats.avg_placement_rank} />
+                  </p>
+                )}
+
+                {legacyStats.placements?.length > 0 && (
+                  <div className="legacy-line">
+                    <strong>Platzierungen:</strong>
+                    <PlacementRow placements={legacyStats.placements} />
+                  </div>
+                )}
+
+                <h4 className="legacy-section-title">Scoring</h4>
+
+                {legacyStats.all_time_points != null && (
+                  <div className="legacy-line">
+                    <strong>All-Time Gesamtpunkte:</strong> <span className="legacy-value">{legacyStats.all_time_points}</span>
+                    <RankChip rank={legacyStats.all_time_points_rank} />
+                    {legacyStats.points_by_season?.length > 0 && (
+                      <SeasonBreakdownRow items={legacyStats.points_by_season} valueKey="points" />
+                    )}
+                  </div>
+                )}
+
+                {legacyStats.high_week && (
+                  <p className="legacy-line">
+                    <strong>Höchster Wochenscore:</strong> <span className="legacy-value">{legacyStats.high_week.points}</span> Punkte{' '}
+                    (Saison {legacyStats.high_week.season}, Woche {legacyStats.high_week.week})
+                    <RankChip rank={legacyStats.high_week_rank} />
+                  </p>
+                )}
+
+                {legacyStats.low_week && (
+                  <p className="legacy-line">
+                    <strong>Niedrigster Wochenscore:</strong> <span className="legacy-value">{legacyStats.low_week.points}</span> Punkte{' '}
+                    (Saison {legacyStats.low_week.season}, Woche {legacyStats.low_week.week})
+                    <RankChip rank={legacyStats.low_week_rank} />
+                  </p>
+                )}
+
+                {legacyStats.high_player_week && (
+                  <p className="legacy-line">
+                    <strong>Bester Einzelspieler-Score:</strong>{' '}
+                    <span className="legacy-value">{legacyStats.high_player_week.player}</span> mit{' '}
+                    <span className="legacy-value">{legacyStats.high_player_week.points}</span> Punkten{' '}
+                    (Saison {legacyStats.high_player_week.season}, Woche {legacyStats.high_player_week.week})
+                    <RankChip rank={legacyStats.high_player_week_rank} />
+                  </p>
+                )}
+
+                <h4 className="legacy-section-title">Activity</h4>
+
+                <div className="legacy-line">
+                  <strong>Waiver-Wire-Moves (all-time):</strong> <span className="legacy-value">{legacyStats.waiver_moves}</span>
+                  <RankChip rank={legacyStats.waiver_moves_rank} />
+                  {legacyStats.waiver_moves_by_season?.length > 0 && (
+                    <SeasonBreakdownRow items={legacyStats.waiver_moves_by_season} valueKey="count" />
+                  )}
+                </div>
+
+                <div className="legacy-line">
+                  <strong>Trades (all-time):</strong> {legacyStats.trades}
+                  <RankChip rank={legacyStats.trades_rank} />
+                  {legacyStats.trades_by_season?.length > 0 && (
+                    <SeasonBreakdownRow items={legacyStats.trades_by_season} valueKey="count" />
+                  )}
                 </div>
               </div>
-            )}
+            </div>
           </div>
         </details>
       )}
