@@ -93,6 +93,57 @@ const FavoritePlayersList = ({ title, players, valueKey, valueSuffix }) => {
   );
 };
 
+// NEU: Topscorer-Liste mit Positions-Filter (Alle/QB/RB/WR/TE/K/DEF) - "Alle"
+// zeigt die Top 6 gesamt, jede Position filtert auf die im Backend schon
+// vorbereitete Positions-Liste (QB/K/DEF/TE: Top 3, RB/WR: Top 6).
+const SCORER_POSITIONS = ['ALLE', 'QB', 'RB', 'WR', 'TE', 'K', 'DEF'];
+const TopScorersFilter = ({ overall, byPosition }) => {
+  const [filter, setFilter] = useState('ALLE');
+  const activeList = filter === 'ALLE' ? overall : (byPosition?.[filter] || []);
+  const maxValue = activeList.length > 0 ? Math.max(...activeList.map((p) => p.points)) : 1;
+
+  return (
+    <div className="legacy-most-owned">
+      <div className="scorer-filter-header">
+        <strong>Meiste Punkte fürs Team</strong>
+        <div className="scorer-filter-buttons">
+          {SCORER_POSITIONS.map((pos) => (
+            <button
+              type="button"
+              key={pos}
+              className={`scorer-filter-btn${filter === pos ? ' active' : ''}`}
+              onClick={() => setFilter(pos)}
+            >
+              {pos}
+            </button>
+          ))}
+        </div>
+      </div>
+      <div className="legacy-most-owned-cards">
+        {activeList.length === 0 && (
+          <span className="scorer-filter-empty">Keine Daten für diese Position.</span>
+        )}
+        {activeList.map((p, i) => {
+          const size = 40 + (p.points / maxValue) * 24; // 40-64px
+          return (
+            <div className="legacy-owned-player" key={i}>
+              <img
+                src={p.image_url}
+                alt={p.name}
+                style={{ width: size, height: size }}
+                className={`legacy-owned-player-image${p.is_champion ? ' champion-ring' : ''}`}
+                onError={(e) => { e.target.src = './thf_color.svg'; }}
+              />
+              <span className="legacy-owned-player-name">{p.name}</span>
+              <span className="legacy-owned-player-weeks">{p.points} Pkt.</span>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
 // NEU: dunklere, aber farblich ähnliche Variante einer Hex-Farbe - für die
 // Bank-Balken (Team-Depth), damit sie zum jeweiligen Positions-Balken passen
 // NEU: dunklere, aber farblich ähnliche Variante einer Hex-Farbe, mit
@@ -857,11 +908,9 @@ const TeamSection = ({ team }) => {
                   valueKey="weeks"
                   valueSuffix=" Wochen"
                 />
-                <FavoritePlayersList
-                  title="Meiste Punkte fürs Team"
-                  players={legacyStats.most_points}
-                  valueKey="points"
-                  valueSuffix=" Pkt."
+                <TopScorersFilter
+                  overall={legacyStats.most_points}
+                  byPosition={legacyStats.scorers_by_position}
                 />
               </div>
 
