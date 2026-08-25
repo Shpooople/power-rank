@@ -614,12 +614,17 @@ def get_legacy_stats(owner_id):
     most_owned = sorted(
         ((pid, wks) for (o, pid), wks in legacy_player_weeks.items() if o == owner_id),
         key=lambda x: x[1], reverse=True
-    )[:5]
+    )[:9]
     most_owned_named = [
         {
             "name": (f"{players.get(pid, {}).get('first_name', '')} {players.get(pid, {}).get('last_name', '')}".strip() or pid),
             "weeks": wks,
-            "image_url": f"https://sleepercdn.com/content/nfl/players/{pid}.jpg",
+            # DEF-Einträge nutzen die Team-Abkürzung als pid (z.B. "SF") -
+            # dafür braucht's das NFL-Team-Logo statt eines Spielerbilds.
+            "image_url": (
+                team_logo_url(pid) if players.get(pid, {}).get('position') == 'DEF'
+                else f"https://sleepercdn.com/content/nfl/players/{pid}.jpg"
+            ),
         }
         for pid, wks in most_owned
     ]
