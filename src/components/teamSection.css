@@ -138,18 +138,16 @@
   }
 
   /* NEU: Lieblingsspieler (Legacy Stats) - auf Desktop alle 10 Karten in
-     zwei Fünfer-Reihen statt nur 9 in einer engen Reihe */
+     zwei EXAKTEN Fünfer-Reihen. Ein festes 5-Spalten-Grid statt flex-wrap,
+     da flex-wrap je nach verfügbarer Breite auch 9+1 statt 5+5 anordnen kann. */
   .legacy-most-owned-cards {
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     gap: 14px;
   }
 
   .legacy-owned-player {
-    width: 80px;
-  }
-
-  .legacy-owned-player:nth-child(10) {
-    display: flex;
+    width: auto;
   }
 
   .legacy-owned-player-name {
@@ -665,9 +663,13 @@
 }
 
 /* Mobile: nur 9 der 10 Lieblingsspieler zeigen (10. wird ab Desktop-Breite
-   wieder eingeblendet, siehe Media Query) */
-.legacy-owned-player:nth-child(10) {
-  display: none;
+   wieder eingeblendet, siehe @media (min-width: 768px) weiter oben).
+   Explizit in ein max-width Media Query statt eine unbedingte Regel, sonst
+   gewinnt diese wegen der Source-Reihenfolge auch auf Desktop. */
+@media (max-width: 767px) {
+  .legacy-owned-player:nth-child(10) {
+    display: none;
+  }
 }
 
 .legacy-owned-player-name {
