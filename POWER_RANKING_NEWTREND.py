@@ -663,13 +663,14 @@ def get_legacy_stats(owner_id):
             else f"https://sleepercdn.com/content/nfl/players/{pid}.jpg"
         )
 
-    # NEU: zwei getrennte Top-5-Listen statt einer gemeinsamen Top-10 - einmal
+    # NEU: zwei getrennte Top-6-Listen statt einer gemeinsamen Top-10 - einmal
     # nach Wochen im Roster, einmal nach tatsächlich für das Team erzielten
-    # Punkten.
+    # Punkten. Zusätzlich eine Positions-Aufschlüsselung der Scorer-Liste
+    # fürs Filtern im Frontend (QB/K/DEF/TE: Top 3, RB/WR: Top 6).
     most_weeks = sorted(
         ((pid, wks) for (o, pid), wks in legacy_player_weeks.items() if o == owner_id),
         key=lambda x: x[1], reverse=True
-    )[:5]
+    )[:6]
     most_weeks_named = [
         {
             "name": player_display_name(pid),
@@ -683,7 +684,7 @@ def get_legacy_stats(owner_id):
     most_points = sorted(
         ((pid, pts) for (o, pid), pts in legacy_player_points.items() if o == owner_id),
         key=lambda x: x[1], reverse=True
-    )[:5]
+    )[:6]
     most_points_named = [
         {
             "name": player_display_name(pid),
@@ -693,6 +694,26 @@ def get_legacy_stats(owner_id):
         }
         for pid, pts in most_points
     ]
+
+    POSITION_SCORER_LIMITS = {"QB": 3, "K": 3, "DEF": 3, "TE": 3, "RB": 6, "WR": 6}
+    scorers_by_position = {}
+    for pos, limit in POSITION_SCORER_LIMITS.items():
+        pos_scorers = sorted(
+            (
+                (pid, pts) for (o, pid), pts in legacy_player_points.items()
+                if o == owner_id and players.get(pid, {}).get('position') == pos
+            ),
+            key=lambda x: x[1], reverse=True
+        )[:limit]
+        scorers_by_position[pos] = [
+            {
+                "name": player_display_name(pid),
+                "points": round(pts, 1),
+                "image_url": player_image(pid),
+                "is_champion": pid in championship_pids,
+            }
+            for pid, pts in pos_scorers
+        ]
 
     high = legacy_high_score.get(owner_id)
     low = legacy_low_score.get(owner_id)
@@ -745,6 +766,7 @@ def get_legacy_stats(owner_id):
         "avg_placement": avg_placement,
         "most_weeks": most_weeks_named,
         "most_points": most_points_named,
+        "scorers_by_position": scorers_by_position,
         "waiver_moves": legacy_waiver_moves.get(owner_id, 0),
         "waiver_moves_by_season": sorted(
             [{"season": s, "count": c} for s, c in legacy_waiver_moves_by_season.get(owner_id, {}).items()],
