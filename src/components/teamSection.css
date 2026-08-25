@@ -620,6 +620,51 @@
   color: var(--color-accent);
 }
 
+/* NEU: Filter-Buttons für die Topscorer-Liste */
+.scorer-filter-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.scorer-filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.scorer-filter-btn {
+  font-family: 'Roboto Condensed', Roboto, sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 3px 8px;
+  background-color: var(--color-surface-alt);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.scorer-filter-btn:hover {
+  border-color: var(--color-accent);
+  color: var(--color-text);
+}
+
+.scorer-filter-btn.active {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #12202E;
+}
+
+.scorer-filter-empty {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
 /* NEU: 2-Spalten-Grid statt flex-wrap - läuft in der schmalen Sidebar immer
    exakt 2 pro Reihe (5 Reihen für 10 Karten), unabhängig von verfügbarer
    Breite (flex-wrap hatte hier je nach Kontext unterschiedlich viele pro
