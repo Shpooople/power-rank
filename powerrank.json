@@ -391,6 +391,69 @@
     ],
     "COMMENTS":"TESTESTEST",
     "FAAB_REMAINING":0,
+    "LEGACY_STATS":{
+      "win_pct":56.8,
+      "wins":54,
+      "losses":41,
+      "ties":0,
+      "most_owned":[
+        {
+          "name":"Calvin Ridley",
+          "weeks":43
+        },
+        {
+          "name":"George Pickens",
+          "weeks":37
+        },
+        {
+          "name":"Terry McLaurin",
+          "weeks":33
+        },
+        {
+          "name":"Jayden Reed",
+          "weeks":32
+        },
+        {
+          "name":"David Montgomery",
+          "weeks":32
+        }
+      ],
+      "waiver_moves":302,
+      "placements":[
+        {
+          "season":"2025",
+          "place":1
+        },
+        {
+          "season":"2024",
+          "place":4
+        },
+        {
+          "season":"2022",
+          "place":4
+        },
+        {
+          "season":"2021",
+          "place":4
+        }
+      ],
+      "high_week":{
+        "points":185.97,
+        "season":"2022",
+        "week":5
+      },
+      "low_week":{
+        "points":66.17,
+        "season":"2023",
+        "week":16
+      },
+      "high_player_week":{
+        "points":48.1,
+        "player":"Derrick Henry",
+        "season":"2025",
+        "week":17
+      }
+    },
     "QUIZ_SCORES":[
       {
         "name":"Michi",
@@ -775,6 +838,61 @@
     ],
     "COMMENTS":"TESTESTETS",
     "FAAB_REMAINING":12,
+    "LEGACY_STATS":{
+      "win_pct":47.4,
+      "wins":45,
+      "losses":50,
+      "ties":0,
+      "most_owned":[
+        {
+          "name":"Los Angeles Rams",
+          "weeks":45
+        },
+        {
+          "name":"Amon-Ra St. Brown",
+          "weeks":35
+        },
+        {
+          "name":"George Kittle",
+          "weeks":34
+        },
+        {
+          "name":"Buffalo Bills",
+          "weeks":34
+        },
+        {
+          "name":"Jerry Jeudy",
+          "weeks":33
+        }
+      ],
+      "waiver_moves":172,
+      "placements":[
+        {
+          "season":"2024",
+          "place":1
+        },
+        {
+          "season":"2023",
+          "place":2
+        }
+      ],
+      "high_week":{
+        "points":206.03,
+        "season":"2025",
+        "week":15
+      },
+      "low_week":{
+        "points":57.36,
+        "season":"2024",
+        "week":7
+      },
+      "high_player_week":{
+        "points":47.95,
+        "player":"Christian McCaffrey",
+        "season":"2023",
+        "week":4
+      }
+    },
     "QUIZ_SCORES":[
       {
         "name":"Lücke",
@@ -1163,6 +1281,61 @@
     ],
     "COMMENTS":"Man würde meinen, dass die Founding Fathers nach einer 2-Punkte-Woche einen deutlichen Sprung nach oben in den Powerrankings machen müssten. Immerhin haben sie ihre Gesamtpunktzahl um ein Drittel erhöht.\nUnd jeder weiß, dass man in der THF nicht leicht an die heiß begehrten Doppelpunkte kommt. Aber das Powerranking-System sagt: „Ab nach unten mit euch.“\nWie kommt’s?\nDie Pioniere des Co-Managements haben in den letzten drei Wochen einen Schnitt von 106 Punkten. Das ist einfach zu wenig, auch wenn das in Woche 11 noch für zwei Punkte gesorgt hat.\nUnd dabei gibt es fantastische Performances von den Onesie-Positionen. QB, TE und K-Production sind jeweils Top-3, wenn nicht sogar besser. Hilft anscheinend nicht, wenn die RBs und WRs nicht mitspielen.\nUm die Playoffs zu erreichen, müssen sehr viele Würfel richtig fallen, es ist aber noch nicht vorbei.\nDer Deadline-Trade mit Mo gibt mir nochmal Hoffnung, aber ich befürchte, die Boys hätten früher Moves machen müssen und ihre Underperformer mit Big-Name-Value traden sollen.",
     "FAAB_REMAINING":17,
+    "LEGACY_STATS":{
+      "win_pct":45.3,
+      "wins":43,
+      "losses":52,
+      "ties":0,
+      "most_owned":[
+        {
+          "name":"Joe Mixon",
+          "weeks":34
+        },
+        {
+          "name":"Lamar Jackson",
+          "weeks":34
+        },
+        {
+          "name":"Travis Kelce",
+          "weeks":34
+        },
+        {
+          "name":"Diontae Johnson",
+          "weeks":34
+        },
+        {
+          "name":"Jalen Hurts",
+          "weeks":34
+        }
+      ],
+      "waiver_moves":125,
+      "placements":[
+        {
+          "season":"2022",
+          "place":2
+        },
+        {
+          "season":"2021",
+          "place":6
+        }
+      ],
+      "high_week":{
+        "points":194.55,
+        "season":"2022",
+        "week":15
+      },
+      "low_week":{
+        "points":69.2,
+        "season":"2021",
+        "week":17
+      },
+      "high_player_week":{
+        "points":53.73,
+        "player":"Josh Allen",
+        "season":"2024",
+        "week":14
+      }
+    },
     "QUIZ_SCORES":[
       {
         "name":"Till",
@@ -1544,6 +1717,65 @@
     ],
     "COMMENTS":"Nach drei Wochen hat er mal wieder die 120er Schallmauer durchbrochen. Herzlichen Glückwunsch. In einer Fantasywoche für die Geschichtsbücher hat eine 122 für das Matchup und den Median LOCKER gereicht.\nBei genauer Betrachtung des Rosters ist mir aufgefallen, dass Köppi quasi die bessere Version der FF Fathers hat. Super Onesies QB, TE und K, aber das Fundament, die Basis, scheint nicht ganz zu stimmen. Alvin Kamara denkt schon an die Piña Coladas in Cabo und Shaheed macht im Pacific North West noch Akklimatisierungsversuche.\nAber wir alle wissen, dass in Woche 12 gegen Michi wieder mindestens 130 Punkte drin sind.",
     "FAAB_REMAINING":19,
+    "LEGACY_STATS":{
+      "win_pct":48.4,
+      "wins":46,
+      "losses":49,
+      "ties":0,
+      "most_owned":[
+        {
+          "name":"Alvin Kamara",
+          "weeks":51
+        },
+        {
+          "name":"James Cook",
+          "weeks":34
+        },
+        {
+          "name":"Joe Mixon",
+          "weeks":34
+        },
+        {
+          "name":"Darren Waller",
+          "weeks":33
+        },
+        {
+          "name":"Jaylen Warren",
+          "weeks":30
+        }
+      ],
+      "waiver_moves":185,
+      "placements":[
+        {
+          "season":"2024",
+          "place":6
+        },
+        {
+          "season":"2023",
+          "place":4
+        },
+        {
+          "season":"2021",
+          "place":1
+        }
+      ],
+      "high_week":{
+        "points":198.52,
+        "season":"2022",
+        "week":9
+      },
+      "low_week":{
+        "points":79.29,
+        "season":"2023",
+        "week":6
+      },
+      "high_player_week":{
+        "points":55.6,
+        "player":"Joe Mixon",
+        "season":"2022",
+        "week":9
+      }
+    },
     "QUIZ_SCORES":[
       {
         "name":"Felix",
@@ -1942,6 +2174,73 @@
     ],
     "COMMENTS":"Philipp hat in unserem All-Time-Ranking die meisten Punkte und dann in den Playoffs immer Pech. Dieses Jahr steht er ganz gut in der Liga da, aber hauptsächlich weil er die wenigsten Points Against hat. Muss ein komisches Gefühl sein.\nSein Team ist wahnsinnig inkonsistent, mit vier Performances von 105 Punkten oder sogar deutlich weniger. Verletzungen spielen da auch eine große Rolle, zuletzt hat der Blinddarm von MHJ den Geist aufgegeben.\npk123, legendärer Teamname, wird das nicht stören, solange er in die Playoffs kommt. Wer mit 90 Punkten sein Matchup gewinnt, hat Fortuna definitiv auf seiner Seite.",
     "FAAB_REMAINING":0,
+    "LEGACY_STATS":{
+      "win_pct":61.1,
+      "wins":58,
+      "losses":37,
+      "ties":0,
+      "most_owned":[
+        {
+          "name":"Chris Godwin",
+          "weeks":51
+        },
+        {
+          "name":"Marquise Brown",
+          "weeks":51
+        },
+        {
+          "name":"Tyreek Hill",
+          "weeks":41
+        },
+        {
+          "name":"Marvin Harrison",
+          "weeks":34
+        },
+        {
+          "name":"Josh Jacobs",
+          "weeks":34
+        }
+      ],
+      "waiver_moves":144,
+      "placements":[
+        {
+          "season":"2025",
+          "place":6
+        },
+        {
+          "season":"2024",
+          "place":5
+        },
+        {
+          "season":"2023",
+          "place":5
+        },
+        {
+          "season":"2022",
+          "place":3
+        },
+        {
+          "season":"2021",
+          "place":2
+        }
+      ],
+      "high_week":{
+        "points":207.49,
+        "season":"2021",
+        "week":5
+      },
+      "low_week":{
+        "points":75.43,
+        "season":"2023",
+        "week":13
+      },
+      "high_player_week":{
+        "points":47.55,
+        "player":"Josh Jacobs",
+        "season":"2022",
+        "week":12
+      }
+    },
     "QUIZ_SCORES":[
       {
         "name":"Philipp",
@@ -2336,6 +2635,61 @@
     ],
     "COMMENTS":"Das Rennen um die „Football-in-die-Leisten-Trophy“ wird nochmal richtig spannend. In einem Blowout-100-Point-Swing ist Tine auf 8 Punkte rangekommen. Jetzt hält sie mit 66 Punkten den Negativrekord im Jahr 2025.\nNachdem die 2024 THF-Gewinnerin dem Injury Death entkommen schien, als sie Nabers getradet hatte, kam der zurück und hat sich seine Rache mit Zinsen geholt. Final Destination Style.\nYou can’t outrun the Injury Death.\nSkattebo, Wilson, zeitweise Egbuka, Pacheco und um ehrlich zu sein Chuba auch.\nDie Liste der Verluste ist lang und Tine spielt ab sofort einfach ihre Short Kings, auch wenn die vielleicht nicht die beste Option sind.\nGodspeed, little ones.",
     "FAAB_REMAINING":0,
+    "LEGACY_STATS":{
+      "win_pct":45.3,
+      "wins":43,
+      "losses":52,
+      "ties":0,
+      "most_owned":[
+        {
+          "name":"Younghoe Koo",
+          "weeks":73
+        },
+        {
+          "name":"Chuba Hubbard",
+          "weeks":39
+        },
+        {
+          "name":"Breece Hall",
+          "weeks":34
+        },
+        {
+          "name":"Jaylen Waddle",
+          "weeks":34
+        },
+        {
+          "name":"Kyle Pitts",
+          "weeks":34
+        }
+      ],
+      "waiver_moves":190,
+      "placements":[
+        {
+          "season":"2023",
+          "place":1
+        },
+        {
+          "season":"2022",
+          "place":6
+        }
+      ],
+      "high_week":{
+        "points":191.05,
+        "season":"2024",
+        "week":4
+      },
+      "low_week":{
+        "points":62.08,
+        "season":"2022",
+        "week":17
+      },
+      "high_player_week":{
+        "points":50.85,
+        "player":"Ja'Marr Chase",
+        "season":"2021",
+        "week":17
+      }
+    },
     "QUIZ_SCORES":[
       {
         "name":"Tine",
@@ -2723,6 +3077,65 @@
     ],
     "COMMENTS":"Kein Jonathan Taylor, kein Proble… oh Shit. 77 Punkte. Das macht JT doch sonst alleine.\nEs war keine gute Woche für Leos Team. Fehlt es etwa an Depth? Naja, jetzt ist der erste RB-MVP der NFL seit AP wieder da. Aber kann JT seine fantastische Fantasy-Performance für den Rest der Season beibehalten?\nDie Schedule der Colts scheint wohl deutlich schwerer zu werden.\nBei uns in der THF sieht die Sleeper-Projection Leo definitiv als großen Favoriten im Spitzenduell gegen Svens Wackeltruppe.",
     "FAAB_REMAINING":0,
+    "LEGACY_STATS":{
+      "win_pct":51.6,
+      "wins":49,
+      "losses":46,
+      "ties":0,
+      "most_owned":[
+        {
+          "name":"DeAndre Hopkins",
+          "weeks":34
+        },
+        {
+          "name":"Tyler Lockett",
+          "weeks":34
+        },
+        {
+          "name":"Josh Allen",
+          "weeks":34
+        },
+        {
+          "name":"Clyde Edwards-Helaire",
+          "weeks":34
+        },
+        {
+          "name":"Tampa Bay Buccaneers",
+          "weeks":30
+        }
+      ],
+      "waiver_moves":147,
+      "placements":[
+        {
+          "season":"2025",
+          "place":2
+        },
+        {
+          "season":"2024",
+          "place":2
+        },
+        {
+          "season":"2022",
+          "place":5
+        }
+      ],
+      "high_week":{
+        "points":184.73,
+        "season":"2022",
+        "week":2
+      },
+      "low_week":{
+        "points":50.27,
+        "season":"2023",
+        "week":15
+      },
+      "high_player_week":{
+        "points":50.55,
+        "player":"De'Von Achane",
+        "season":"2023",
+        "week":3
+      }
+    },
     "QUIZ_SCORES":[
       {
         "name":"Leo",
@@ -3092,6 +3505,57 @@
     ],
     "COMMENTS":"80 Punkte von zwei Spielern. Josh Allen mit 50 und CMC mit 30. Absolute Frechheit. Damit hätte Ben gegen Tine oder gegen Leo in Woche 11 gewonnen. Nimmt man Kelce mit seinen 20 noch dazu, hätte es auch für Peter, Sven und Philipp gereicht.\nDabei hatte Ben auch noch 27 von Gainwell und 17 von Santos auf der Bank. Fantastische Woche für unseren Sophomore-Youngster. Kann er daran anknüpfen?\nJosh hat dazu am Donnerstag schon mal ganz klar „NEIN“ gesagt.",
     "FAAB_REMAINING":30,
+    "LEGACY_STATS":{
+      "win_pct":62.5,
+      "wins":35,
+      "losses":21,
+      "ties":0,
+      "most_owned":[
+        {
+          "name":"A.J. Brown",
+          "weeks":34
+        },
+        {
+          "name":"Christian Kirk",
+          "weeks":26
+        },
+        {
+          "name":"Harrison Butker",
+          "weeks":22
+        },
+        {
+          "name":"Rachaad White",
+          "weeks":20
+        },
+        {
+          "name":"Quinshon Judkins",
+          "weeks":17
+        }
+      ],
+      "waiver_moves":32,
+      "placements":[
+        {
+          "season":"2024",
+          "place":3
+        }
+      ],
+      "high_week":{
+        "points":160.4,
+        "season":"2024",
+        "week":15
+      },
+      "low_week":{
+        "points":86.92,
+        "season":"2025",
+        "week":2
+      },
+      "high_player_week":{
+        "points":51.93,
+        "player":"Josh Allen",
+        "season":"2025",
+        "week":11
+      }
+    },
     "QUIZ_SCORES":[
       {
         "name":"Ben",
@@ -3482,6 +3946,57 @@
     ],
     "COMMENTS":"Da macht man mal 137 Punkte, die drittmeisten in der Woche, und man bekommt keinen Punkt. Halt doch – der Median. Was für eine Erleichterung. Doch nicht so kacke, oder Mo?\nBei Mo haben eigentlich nur 5 Spieler Punkte gemacht, den Rest hätte man auch auf 0 abrunden können. Wenn der QB 5 Punkte macht, hat man eigentlich schon verloren… außer man hat T-Mac und den Senfmann.\n(60 Points combined)\nEs sieht so aus, als würden B. Young und T-Mac jetzt richtig durchstarten. Vielleicht sollte Mo die beiden stacken in Justins BYE-Week.\nMo hätte schon längst aus gutem Grund aufgeben können, aber sein Team ist immer noch stark genug, um in die Playoffs zu kommen.\nVielleicht brauchen wir noch eine Trophy für den most resilient Manager (Arbeitstitel). Ein Voting-basierter Award für den besten Manager, der aus Scheiße Gold macht. Sowas wie Coach of the Year in der NFL.",
     "FAAB_REMAINING":0,
+    "LEGACY_STATS":{
+      "win_pct":45.3,
+      "wins":43,
+      "losses":52,
+      "ties":0,
+      "most_owned":[
+        {
+          "name":"Dak Prescott",
+          "weeks":33
+        },
+        {
+          "name":"Stefon Diggs",
+          "weeks":29
+        },
+        {
+          "name":"Bijan Robinson",
+          "weeks":26
+        },
+        {
+          "name":"Jonathan Taylor",
+          "weeks":25
+        },
+        {
+          "name":"Zach Charbonnet",
+          "weeks":24
+        }
+      ],
+      "waiver_moves":149,
+      "placements":[
+        {
+          "season":"2021",
+          "place":3
+        }
+      ],
+      "high_week":{
+        "points":204.58,
+        "season":"2021",
+        "week":5
+      },
+      "low_week":{
+        "points":67.6,
+        "season":"2023",
+        "week":5
+      },
+      "high_player_week":{
+        "points":55.9,
+        "player":"Trevor Lawrence",
+        "season":"2025",
+        "week":15
+      }
+    },
     "QUIZ_SCORES":[
       {
         "name":"Mo",
@@ -3858,6 +4373,65 @@
     ],
     "COMMENTS":"Nach einer der besten Drei-Spiele-Serien aus Woche 8, 9 und 10 mit 154 Punkten im Schnitt, kam Jays Team crashing down to Earth. Es wirkt aber wie eine Ausnahme, denn am Donnerstag haben die Texans schon 8 Sacks ausgepackt.\nJay ist back on track, würde man meinen. Aber ohne Waddle und Achane könnte es trotzdem eine sehr schwierige Woche werden. Zum Glück spielt er gegen Tines Team, da sollte eigentlich nichts anbrennen. (Definitiv kein Jinx-Versuch)",
     "FAAB_REMAINING":0,
+    "LEGACY_STATS":{
+      "win_pct":50.5,
+      "wins":48,
+      "losses":47,
+      "ties":0,
+      "most_owned":[
+        {
+          "name":"Justin Tucker",
+          "weeks":51
+        },
+        {
+          "name":"Adam Thielen",
+          "weeks":34
+        },
+        {
+          "name":"Patrick Mahomes",
+          "weeks":34
+        },
+        {
+          "name":"J.K. Dobbins",
+          "weeks":28
+        },
+        {
+          "name":"C.J. Stroud",
+          "weeks":27
+        }
+      ],
+      "waiver_moves":146,
+      "placements":[
+        {
+          "season":"2025",
+          "place":4
+        },
+        {
+          "season":"2022",
+          "place":1
+        },
+        {
+          "season":"2021",
+          "place":5
+        }
+      ],
+      "high_week":{
+        "points":212.33,
+        "season":"2023",
+        "week":5
+      },
+      "low_week":{
+        "points":63.19,
+        "season":"2024",
+        "week":7
+      },
+      "high_player_week":{
+        "points":47.45,
+        "player":"Ja'Marr Chase",
+        "season":"2023",
+        "week":5
+      }
+    },
     "QUIZ_SCORES":[
       {
         "name":"Jay",
@@ -4244,6 +4818,57 @@
     ],
     "COMMENTS":"Ohhh how the mighty have fallen. „On top of the world“ war der gute Sven noch vor einem Monat. Jetzt schmilzt der Abstand schneller als die Polarkappen.\nDie Teams, die nicht den perfekten Draft und Start in die Season hatten, haben Svens Truppe in Production schon eingeholt.\nIn der Liga ist er nur noch auf Platz zwei und eine halbe Woche vor den Verfolgern. Jetzt spielt er auch noch im Spitzenduell gegen Leos Truppe – ohne Llama Chase und Ladd McConkey.\nIch hoffe, Sven macht sich nicht zu viele Sorgen, er ist ja schon fast sicher in den Playoffs… fast sicher…",
     "FAAB_REMAINING":0,
+    "LEGACY_STATS":{
+      "win_pct":44.3,
+      "wins":31,
+      "losses":39,
+      "ties":0,
+      "most_owned":[
+        {
+          "name":"Cooper Kupp",
+          "weeks":30
+        },
+        {
+          "name":"D'Andre Swift",
+          "weeks":29
+        },
+        {
+          "name":"Ladd McConkey",
+          "weeks":28
+        },
+        {
+          "name":"Rashee Rice",
+          "weeks":26
+        },
+        {
+          "name":"Denver Broncos",
+          "weeks":19
+        }
+      ],
+      "waiver_moves":103,
+      "placements":[
+        {
+          "season":"2025",
+          "place":3
+        }
+      ],
+      "high_week":{
+        "points":171.14,
+        "season":"2025",
+        "week":5
+      },
+      "low_week":{
+        "points":64.9,
+        "season":"2023",
+        "week":9
+      },
+      "high_player_week":{
+        "points":42.5,
+        "player":"Joe Flacco",
+        "season":"2025",
+        "week":9
+      }
+    },
     "QUIZ_SCORES":[
       {
         "name":"Sven",
@@ -4634,6 +5259,57 @@
     ],
     "COMMENTS":"Peter hatte einfach eine dieser Wochen. Die drei folgenden Stats fassen das eigentlich ganz gut zusammen:\nDavante Adams 1\/8 Receptions für 1 Yard und 1 TD.\nDie Chargers-D mit -1 – ausgerechnet gegen Jacksonville ohne deren WR1 und WR2.\nKhalil Shakir mit 1\/3 Receptions für -3 Yards. Calvin Austin 1\/1 Receptions für 5 Yards.\nDas sind die Wochen, in denen man daran zweifelt, was man hier eigentlich macht. Wo man am liebsten das ganze Team traden würde und mit Football nichts zu tun haben möchte.\nAber dann kommt schon der nächste Mittwoch und man fängt wieder von vorne an.",
     "FAAB_REMAINING":40,
+    "LEGACY_STATS":{
+      "win_pct":42.9,
+      "wins":24,
+      "losses":32,
+      "ties":0,
+      "most_owned":[
+        {
+          "name":"Bucky Irving",
+          "weeks":17
+        },
+        {
+          "name":"Davante Adams",
+          "weeks":17
+        },
+        {
+          "name":"Patrick Mahomes",
+          "weeks":17
+        },
+        {
+          "name":"T.J. Hockenson",
+          "weeks":17
+        },
+        {
+          "name":"Tee Higgins",
+          "weeks":17
+        }
+      ],
+      "waiver_moves":24,
+      "placements":[
+        {
+          "season":"2025",
+          "place":5
+        }
+      ],
+      "high_week":{
+        "points":180.29,
+        "season":"2025",
+        "week":7
+      },
+      "low_week":{
+        "points":55.77,
+        "season":"2025",
+        "week":17
+      },
+      "high_player_week":{
+        "points":51.9,
+        "player":"Ja'Marr Chase",
+        "season":"2024",
+        "week":10
+      }
+    },
     "QUIZ_SCORES":[
       {
         "name":"Peter",
