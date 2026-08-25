@@ -599,6 +599,15 @@ for s_league_id in season_league_ids:
             qualifying_seasons_count[(owner_id, pid)] = qualifying_seasons_count.get((owner_id, pid), 0) + 1
         legacy_player_weeks[(owner_id, pid)] = legacy_player_weeks.get((owner_id, pid), 0) + wk_count
 
+# TEMPORÄRER DEBUG-PRINT - kann nach dem Diagnostizieren wieder raus
+_debug_owner = "716284640708587520"  # The ImBortles
+if _debug_owner in head_to_head:
+    print(f"DEBUG Head-to-Head für The ImBortles ({len(head_to_head[_debug_owner])} Gegner erfasst):")
+    for opp_id, rec in head_to_head[_debug_owner].items():
+        print(f"  vs {owner_id_to_name.get(opp_id, opp_id)} ({opp_id}): {rec}")
+else:
+    print("DEBUG: Keine Head-to-Head-Daten für The ImBortles gefunden.")
+
 def is_my_guy(owner_id, pid):
     return qualifying_seasons_count.get((owner_id, pid), 0) >= 3
 
