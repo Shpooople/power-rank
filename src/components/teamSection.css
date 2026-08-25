@@ -455,6 +455,107 @@
   color: var(--color-accent);
 }
 
+/* NEU: kleiner farbiger Rang-Chip */
+.rank-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 6px;
+  padding: 1px 7px;
+  font-size: 10px;
+  font-weight: bold;
+  color: #12202E;
+  border-radius: 10px;
+  vertical-align: middle;
+}
+
+/* NEU: Angstgegner/Opfer-Karten */
+.legacy-rivals {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 4px 0 14px 0;
+}
+
+.legacy-rival-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  flex: 1 1 180px;
+}
+
+.legacy-rival-nemesis {
+  background: linear-gradient(135deg, rgba(185, 58, 52, 0.18), rgba(185, 58, 52, 0.05));
+  border: 1px solid rgba(185, 58, 52, 0.4);
+}
+
+.legacy-rival-victim {
+  background: linear-gradient(135deg, rgba(107, 217, 107, 0.18), rgba(107, 217, 107, 0.05));
+  border: 1px solid rgba(107, 217, 107, 0.4);
+}
+
+.legacy-rival-emoji {
+  font-size: 26px;
+}
+
+.legacy-rival-card > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.legacy-rival-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-text-muted);
+}
+
+.legacy-rival-name {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--color-text);
+}
+
+.legacy-rival-record {
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+/* NEU: Platzierungs-Pokal-Reihe */
+.placement-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.placement-chip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4px 8px;
+  background-color: var(--color-surface-alt);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  min-width: 40px;
+}
+
+.placement-medal {
+  font-size: 16px;
+}
+
+.placement-season {
+  font-size: 10px;
+  color: var(--color-text-muted);
+}
+
+.legacy-rank {
+  color: var(--color-text-muted);
+  font-size: 12px;
+}
+
 .legacy-most-owned {
   font-size: 13px;
   color: var(--color-text);
@@ -465,13 +566,40 @@
   color: var(--color-accent);
 }
 
-.legacy-most-owned ul {
-  margin: 6px 0 0 0;
-  padding-left: 18px;
+.legacy-most-owned-cards {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 10px;
 }
 
-.legacy-most-owned li {
-  margin: 2px 0;
+.legacy-owned-player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  width: 90px;
+}
+
+.legacy-owned-player-image {
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: var(--color-border);
+  border: 2px solid var(--color-border);
+}
+
+.legacy-owned-player-name {
+  font-size: 11px;
+  font-weight: bold;
+  color: var(--color-text);
+  text-align: center;
+  line-height: 1.2;
+}
+
+.legacy-owned-player-weeks {
+  font-size: 10px;
+  color: var(--color-text-muted);
 }
 
 /* --- Top/Flop-Performer & Benchwarmer (größere Bilder als im Roster) --- */
