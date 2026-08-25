@@ -440,6 +440,40 @@
   margin: 0;
 }
 
+/* --- NEU: Legacy Stats --- */
+.team-legacy {
+  margin-top: 14px;
+}
+
+.legacy-line {
+  font-size: 13px;
+  color: var(--color-text);
+  margin: 6px 0;
+}
+
+.legacy-line strong {
+  color: var(--color-accent);
+}
+
+.legacy-most-owned {
+  font-size: 13px;
+  color: var(--color-text);
+  margin-top: 10px;
+}
+
+.legacy-most-owned strong {
+  color: var(--color-accent);
+}
+
+.legacy-most-owned ul {
+  margin: 6px 0 0 0;
+  padding-left: 18px;
+}
+
+.legacy-most-owned li {
+  margin: 2px 0;
+}
+
 /* --- Top/Flop-Performer & Benchwarmer (größere Bilder als im Roster) --- */
 .performers-section {
   margin-top: 20px;
