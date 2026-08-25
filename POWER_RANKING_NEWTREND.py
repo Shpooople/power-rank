@@ -455,32 +455,40 @@ qualifying_seasons_count = {}  # (owner_id, player_id) -> Anzahl qualifizierende
 # vergeben und kann bei einem Owner-Wechsel an eine andere Person gehen.
 # owner_id bleibt dagegen fest an den jeweiligen Sleeper-Account gebunden,
 # nur so lässt sich Historie korrekt einem Team zuordnen.
-legacy_wins = {}       # owner_id -> {'wins':,'losses':,'ties':}
+legacy_wins = {}       # owner_id -> {'wins':,'losses':,'ties':,'points_for':}
 legacy_player_weeks = {}   # (owner_id, pid) -> Gesamtwochen im Roster (alle Saisons)
 legacy_high_score = {}     # owner_id -> (points, season, week)
 legacy_low_score = {}      # owner_id -> (points, season, week)
 legacy_high_player_score = {}  # owner_id -> (points, player_name, season, week)
 legacy_placements = {}     # owner_id -> [(season, placement), ...]
 legacy_waiver_moves = {}   # owner_id -> Anzahl Adds (Waiver/Free Agent)
+head_to_head = {}          # owner_id -> {gegner_owner_id: {'wins':,'losses':,'ties':}}
+owner_id_to_name = {u.get('user_id'): u.get('display_name') for u in users}
 
 for s_league_id in season_league_ids:
     season_label = season_labels.get(s_league_id, "?")
     s_rosters = fetch_json_safe(f"https://api.sleeper.app/v1/league/{s_league_id}/rosters") or []
     s_roster_to_owner = {r['roster_id']: r['owner_id'] for r in s_rosters}
 
-    # Win/Loss/Tie nur für den TATSÄCHLICHEN Owner dieser Saison verbuchen
+    # Win/Loss/Tie/Punkte nur für den TATSÄCHLICHEN Owner dieser Saison verbuchen
     for r in s_rosters:
         owner_id = r.get('owner_id')
         if not owner_id:
             continue
         settings = r.get('settings', {}) or {}
-        entry = legacy_wins.setdefault(owner_id, {'wins': 0, 'losses': 0, 'ties': 0})
+        entry = legacy_wins.setdefault(owner_id, {'wins': 0, 'losses': 0, 'ties': 0, 'points_for': 0.0})
         entry['wins'] += settings.get('wins', 0)
         entry['losses'] += settings.get('losses', 0)
         entry['ties'] += settings.get('ties', 0)
+        entry['points_for'] += settings.get('fpts', 0) + settings.get('fpts_decimal', 0) / 100
 
-    # Platzierung dieser Saison (nur falls Playoffs schon abgeschlossen sind)
+    # Platzierung dieser Saison (nur falls Playoffs schon abgeschlossen sind).
+    # Playoff-Teams bekommen ihre Bracket-Platzierung, alle anderen (nicht in
+    # den Playoffs) werden danach nach Wins/Punkten sortiert eingeordnet -
+    # sonst fehlen genau diese Saisons komplett in der Durchschnitts-Platzierung.
     bracket = fetch_json_safe(f"https://api.sleeper.app/v1/league/{s_league_id}/winners_bracket") or []
+    assigned_owners_this_season = set()
+    max_place_this_season = 0
     for match in bracket:
         place = match.get('p')
         if not place:
@@ -489,8 +497,28 @@ for s_league_id in season_league_ids:
         loser_owner = s_roster_to_owner.get(match.get('l'))
         if winner_owner:
             legacy_placements.setdefault(winner_owner, []).append((season_label, place))
+            assigned_owners_this_season.add(winner_owner)
         if loser_owner:
             legacy_placements.setdefault(loser_owner, []).append((season_label, place + 1))
+            assigned_owners_this_season.add(loser_owner)
+        max_place_this_season = max(max_place_this_season, place, place + 1)
+
+    if bracket:  # nur wenn die Playoffs dieser Saison wirklich abgeschlossen sind
+        remaining = [
+            r for r in s_rosters
+            if r.get('owner_id') and r['owner_id'] not in assigned_owners_this_season
+        ]
+        remaining.sort(
+            key=lambda r: (
+                r.get('settings', {}).get('wins', 0),
+                r.get('settings', {}).get('fpts', 0)
+            ),
+            reverse=True
+        )
+        for offset, r in enumerate(remaining):
+            legacy_placements.setdefault(r['owner_id'], []).append(
+                (season_label, max_place_this_season + 1 + offset)
+            )
 
     weeks_on_roster = {}  # (owner_id, player_id) -> Anzahl Wochen DIESE Saison
     for wk in range(1, 18):  # großzügig; nicht existierende Wochen liefern einfach leer
@@ -522,6 +550,37 @@ for s_league_id in season_league_ids:
                     p_name = f"{p.get('first_name', '')} {p.get('last_name', '')}".strip() or pid
                     legacy_high_player_score[owner_id] = (pts, p_name, season_label, wk)
 
+        # NEU: Head-to-Head - Matchups dieser Woche nach matchup_id paaren,
+        # um zu wissen, wer gegen wen gespielt hat (nicht nur wer wie viele
+        # Punkte gemacht hat).
+        matchups_by_id = {}
+        for m in s_matchups:
+            mid = m.get('matchup_id')
+            if mid is None:
+                continue
+            matchups_by_id.setdefault(mid, []).append(m)
+
+        for mid, pair in matchups_by_id.items():
+            if len(pair) != 2:
+                continue
+            a, b = pair
+            owner_a = s_roster_to_owner.get(a.get('roster_id'))
+            owner_b = s_roster_to_owner.get(b.get('roster_id'))
+            pts_a, pts_b = a.get('points'), b.get('points')
+            if not owner_a or not owner_b or pts_a is None or pts_b is None:
+                continue
+            rec_a = head_to_head.setdefault(owner_a, {}).setdefault(owner_b, {'wins': 0, 'losses': 0, 'ties': 0})
+            rec_b = head_to_head.setdefault(owner_b, {}).setdefault(owner_a, {'wins': 0, 'losses': 0, 'ties': 0})
+            if pts_a > pts_b:
+                rec_a['wins'] += 1
+                rec_b['losses'] += 1
+            elif pts_b > pts_a:
+                rec_b['wins'] += 1
+                rec_a['losses'] += 1
+            else:
+                rec_a['ties'] += 1
+                rec_b['ties'] += 1
+
         # Waiver-/Free-Agent-Moves dieser Woche zählen
         s_transactions = fetch_json_safe(f"https://api.sleeper.app/v1/league/{s_league_id}/transactions/{wk}") or []
         for tx in s_transactions:
@@ -548,7 +607,7 @@ def my_guy_seasons(owner_id, pid):
 
 def get_legacy_stats(owner_id):
     """Baut das komplette Legacy-Stats-Paket für einen Owner."""
-    wl = legacy_wins.get(owner_id, {'wins': 0, 'losses': 0, 'ties': 0})
+    wl = legacy_wins.get(owner_id, {'wins': 0, 'losses': 0, 'ties': 0, 'points_for': 0.0})
     games = wl['wins'] + wl['losses'] + wl['ties']
     win_pct = round(wl['wins'] / games * 100, 1) if games > 0 else None
 
@@ -557,7 +616,11 @@ def get_legacy_stats(owner_id):
         key=lambda x: x[1], reverse=True
     )[:5]
     most_owned_named = [
-        {"name": (f"{players.get(pid, {}).get('first_name', '')} {players.get(pid, {}).get('last_name', '')}".strip() or pid), "weeks": wks}
+        {
+            "name": (f"{players.get(pid, {}).get('first_name', '')} {players.get(pid, {}).get('last_name', '')}".strip() or pid),
+            "weeks": wks,
+            "image_url": f"https://sleepercdn.com/content/nfl/players/{pid}.jpg",
+        }
         for pid, wks in most_owned
     ]
 
@@ -565,10 +628,31 @@ def get_legacy_stats(owner_id):
     low = legacy_low_score.get(owner_id)
     high_player = legacy_high_player_score.get(owner_id)
     placements = sorted(legacy_placements.get(owner_id, []), key=lambda x: x[0], reverse=True)
+    avg_placement = round(sum(p for _, p in placements) / len(placements), 1) if placements else None
+
+    # NEU: Angstgegner (schlägt uns am häufigsten) & Opfer (wir schlagen ihn
+    # am häufigsten), aus der Head-to-Head-Historie.
+    opponents = head_to_head.get(owner_id, {})
+    angstgegner, opfer = None, None
+    if opponents:
+        worst = max(opponents.items(), key=lambda kv: kv[1]['losses'], default=(None, None))
+        if worst[0] and worst[1]['losses'] > 0:
+            angstgegner = {
+                "name": owner_id_to_name.get(worst[0], "Unbekannt"),
+                "wins": worst[1]['losses'], "losses": worst[1]['wins'], "ties": worst[1]['ties'],
+            }
+        best = max(opponents.items(), key=lambda kv: kv[1]['wins'], default=(None, None))
+        if best[0] and best[1]['wins'] > 0:
+            opfer = {
+                "name": owner_id_to_name.get(best[0], "Unbekannt"),
+                "wins": best[1]['wins'], "losses": best[1]['losses'], "ties": best[1]['ties'],
+            }
 
     return {
         "win_pct": win_pct,
         "wins": wl['wins'], "losses": wl['losses'], "ties": wl['ties'],
+        "all_time_points": round(wl['points_for'], 1) if games > 0 else None,
+        "avg_placement": avg_placement,
         "most_owned": most_owned_named,
         "waiver_moves": legacy_waiver_moves.get(owner_id, 0),
         "placements": [{"season": s, "place": p} for s, p in placements],
@@ -578,6 +662,8 @@ def get_legacy_stats(owner_id):
             {"points": high_player[0], "player": high_player[1], "season": high_player[2], "week": high_player[3]}
             if high_player else None
         ),
+        "angstgegner": angstgegner,
+        "opfer": opfer,
     }
 
 def team_display(roster_id):
@@ -1580,7 +1666,31 @@ df["BADGES"] = badges_list
 
 df['COMMENTS'] = ""
 df['FAAB_REMAINING'] = faab_remaining_list
-df['LEGACY_STATS'] = [get_legacy_stats(team['owner_id']) for team in rosters]
+legacy_list = [get_legacy_stats(team['owner_id']) for team in rosters]
+
+# NEU: Ligaweiter Rang für die Legacy-Stats (außer "Meistgehaltene Spieler",
+# da eine Rangliste dort wenig Sinn ergibt).
+def add_rank(key, ascending=False):
+    indexed = [(i, ls[key]) for i, ls in enumerate(legacy_list) if ls.get(key) is not None]
+    indexed.sort(key=lambda x: x[1], reverse=not ascending)
+    for rank, (i, _) in enumerate(indexed, start=1):
+        legacy_list[i][f"{key}_rank"] = rank
+
+def add_nested_rank(key, subkey, out_key, ascending=False):
+    indexed = [(i, ls[key][subkey]) for i, ls in enumerate(legacy_list) if ls.get(key)]
+    indexed.sort(key=lambda x: x[1], reverse=not ascending)
+    for rank, (i, _) in enumerate(indexed, start=1):
+        legacy_list[i][out_key] = rank
+
+add_rank("win_pct", ascending=False)
+add_rank("waiver_moves", ascending=False)
+add_rank("all_time_points", ascending=False)
+add_rank("avg_placement", ascending=True)  # niedrigere Zahl = bessere Platzierung
+add_nested_rank("high_week", "points", "high_week_rank", ascending=False)
+add_nested_rank("low_week", "points", "low_week_rank", ascending=True)
+add_nested_rank("high_player_week", "points", "high_player_week_rank", ascending=False)
+
+df['LEGACY_STATS'] = legacy_list
 
 # --- NEU: Prediction-Quiz-Score einbinden ---
 # Kombinierte Export-Tabelle aus dem Prediction-Quiz-Sheet (Tab "QuizExport":
