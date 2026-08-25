@@ -861,7 +861,7 @@ const TeamSection = ({ team }) => {
 
             {legacyStats.avg_placement != null && (
               <p className="legacy-line">
-                <strong>Ø Endplatzierung:</strong> {legacyStats.avg_placement}
+                <strong>Ø Endplatzierung:</strong> <span className="legacy-value">{legacyStats.avg_placement}</span>
                 <RankChip rank={legacyStats.avg_placement_rank} />
               </p>
             )}
@@ -935,7 +935,7 @@ const TeamSection = ({ team }) => {
                 <div className="legacy-most-owned-cards">
                   {legacyStats.most_owned.map((p, i) => {
                     const maxWeeks = Math.max(...legacyStats.most_owned.map((x) => x.weeks));
-                    const size = 28 + (p.weeks / maxWeeks) * 28; // 28-56px, nach Wochen skaliert
+                    const size = 32 + (p.weeks / maxWeeks) * 32; // 32-64px, nach Wochen skaliert
                     return (
                       <div className="legacy-owned-player" key={i}>
                         <img
