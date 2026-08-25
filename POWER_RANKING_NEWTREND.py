@@ -423,13 +423,9 @@ except Exception:
     total_faab_budget = 100
 faab_remaining_list = []
 
-# --- NEU: "My Guy" - Spieler, die schon mehrfach beim selben Team (Owner)
-# im Roster waren. Eine Saison zählt nur, wenn der Spieler dort mindestens
-# 3 Wochen im Roster stand. Ab 3 qualifizierenden Saisons gilt er als
-# "My Guy". Läuft über die komplette Liga-Historie via previous_league_id
-# (bei dieser Liga bis 2021 zurück) - pro Saison ein Rosters-Call plus ein
-# Matchups-Call pro Woche, macht insgesamt einige Dutzend zusätzliche
-# API-Calls, aber alle ohne Auth-Limit.
+# --- NEU: "My Guy" + Legacy-Stats - läuft über die komplette Liga-Historie
+# via previous_league_id (bei dieser Liga bis 2021 zurück). Alles in EINER
+# Schleife berechnet, um nicht mehrfach dieselben Wochen/Saisons abzurufen.
 def fetch_json_safe(url):
     try:
         r = requests.get(url)
@@ -437,24 +433,66 @@ def fetch_json_safe(url):
     except Exception:
         return None
 
-season_league_ids = [league_id]
+season_league_ids = []
+season_labels = {}  # league_id (dieser Saison) -> Saison-Label, z.B. "2025"
 _walk_id = league_id
-while True:
-    _info = fetch_json_safe(f"https://api.sleeper.app/v1/league/{_walk_id}")
-    _prev = _info.get("previous_league_id") if _info else None
+_walk_info = fetch_json_safe(f"https://api.sleeper.app/v1/league/{_walk_id}")
+while _walk_id:
+    season_league_ids.append(_walk_id)
+    season_labels[_walk_id] = _walk_info.get("season") if _walk_info else None
+    _prev = _walk_info.get("previous_league_id") if _walk_info else None
     if not _prev:
         break
-    season_league_ids.append(_prev)
+    _walk_info = fetch_json_safe(f"https://api.sleeper.app/v1/league/{_prev}")
     _walk_id = _prev
 
-print(f"My Guy: {len(season_league_ids)} Saison(s) in der Liga-Historie gefunden.")
+print(f"Liga-Historie: {len(season_league_ids)} Saison(s) gefunden.")
 
-qualifying_seasons_count = {}  # (owner_id, player_id) -> Anzahl qualifizierender Saisons
+qualifying_seasons_count = {}  # (owner_id, player_id) -> Anzahl qualifizierender Saisons ("My Guy")
+
+# NEU: Legacy-Stats, jeweils keyed auf owner_id (NICHT roster_id!) - das ist
+# der Fix für den Win%-Bug: roster_id wird bei Sleeper pro Saison neu
+# vergeben und kann bei einem Owner-Wechsel an eine andere Person gehen.
+# owner_id bleibt dagegen fest an den jeweiligen Sleeper-Account gebunden,
+# nur so lässt sich Historie korrekt einem Team zuordnen.
+legacy_wins = {}       # owner_id -> {'wins':,'losses':,'ties':}
+legacy_player_weeks = {}   # (owner_id, pid) -> Gesamtwochen im Roster (alle Saisons)
+legacy_high_score = {}     # owner_id -> (points, season, week)
+legacy_low_score = {}      # owner_id -> (points, season, week)
+legacy_high_player_score = {}  # owner_id -> (points, player_name, season, week)
+legacy_placements = {}     # owner_id -> [(season, placement), ...]
+legacy_waiver_moves = {}   # owner_id -> Anzahl Adds (Waiver/Free Agent)
+
 for s_league_id in season_league_ids:
+    season_label = season_labels.get(s_league_id, "?")
     s_rosters = fetch_json_safe(f"https://api.sleeper.app/v1/league/{s_league_id}/rosters") or []
     s_roster_to_owner = {r['roster_id']: r['owner_id'] for r in s_rosters}
 
-    weeks_on_roster = {}  # (owner_id, player_id) -> Anzahl Wochen diese Saison
+    # Win/Loss/Tie nur für den TATSÄCHLICHEN Owner dieser Saison verbuchen
+    for r in s_rosters:
+        owner_id = r.get('owner_id')
+        if not owner_id:
+            continue
+        settings = r.get('settings', {}) or {}
+        entry = legacy_wins.setdefault(owner_id, {'wins': 0, 'losses': 0, 'ties': 0})
+        entry['wins'] += settings.get('wins', 0)
+        entry['losses'] += settings.get('losses', 0)
+        entry['ties'] += settings.get('ties', 0)
+
+    # Platzierung dieser Saison (nur falls Playoffs schon abgeschlossen sind)
+    bracket = fetch_json_safe(f"https://api.sleeper.app/v1/league/{s_league_id}/winners_bracket") or []
+    for match in bracket:
+        place = match.get('p')
+        if not place:
+            continue
+        winner_owner = s_roster_to_owner.get(match.get('w'))
+        loser_owner = s_roster_to_owner.get(match.get('l'))
+        if winner_owner:
+            legacy_placements.setdefault(winner_owner, []).append((season_label, place))
+        if loser_owner:
+            legacy_placements.setdefault(loser_owner, []).append((season_label, place + 1))
+
+    weeks_on_roster = {}  # (owner_id, player_id) -> Anzahl Wochen DIESE Saison
     for wk in range(1, 18):  # großzügig; nicht existierende Wochen liefern einfach leer
         s_matchups = fetch_json_safe(f"https://api.sleeper.app/v1/league/{s_league_id}/matchups/{wk}")
         if not s_matchups:
@@ -463,19 +501,84 @@ for s_league_id in season_league_ids:
             owner_id = s_roster_to_owner.get(m.get('roster_id'))
             if not owner_id:
                 continue
+
             for pid in (m.get('players') or []):
                 key = (owner_id, pid)
                 weeks_on_roster[key] = weeks_on_roster.get(key, 0) + 1
 
+            week_points = m.get('points')
+            if week_points is not None:
+                if owner_id not in legacy_high_score or week_points > legacy_high_score[owner_id][0]:
+                    legacy_high_score[owner_id] = (week_points, season_label, wk)
+                if owner_id not in legacy_low_score or week_points < legacy_low_score[owner_id][0]:
+                    legacy_low_score[owner_id] = (week_points, season_label, wk)
+
+            ppw = m.get('players_points', {}) or {}
+            for pid, pts in ppw.items():
+                if pts is None:
+                    continue
+                if owner_id not in legacy_high_player_score or pts > legacy_high_player_score[owner_id][0]:
+                    p = players.get(pid, {})
+                    p_name = f"{p.get('first_name', '')} {p.get('last_name', '')}".strip() or pid
+                    legacy_high_player_score[owner_id] = (pts, p_name, season_label, wk)
+
+        # Waiver-/Free-Agent-Moves dieser Woche zählen
+        s_transactions = fetch_json_safe(f"https://api.sleeper.app/v1/league/{s_league_id}/transactions/{wk}") or []
+        for tx in s_transactions:
+            if tx.get('type') not in ('waiver', 'free_agent'):
+                continue
+            if tx.get('status') != 'complete':
+                continue
+            adds = tx.get('adds') or {}
+            for roster_id in set(adds.values()):
+                owner_id = s_roster_to_owner.get(roster_id)
+                if owner_id:
+                    legacy_waiver_moves[owner_id] = legacy_waiver_moves.get(owner_id, 0) + 1
+
     for (owner_id, pid), wk_count in weeks_on_roster.items():
         if wk_count >= 3:
             qualifying_seasons_count[(owner_id, pid)] = qualifying_seasons_count.get((owner_id, pid), 0) + 1
+        legacy_player_weeks[(owner_id, pid)] = legacy_player_weeks.get((owner_id, pid), 0) + wk_count
 
 def is_my_guy(owner_id, pid):
     return qualifying_seasons_count.get((owner_id, pid), 0) >= 3
 
 def my_guy_seasons(owner_id, pid):
     return qualifying_seasons_count.get((owner_id, pid), 0)
+
+def get_legacy_stats(owner_id):
+    """Baut das komplette Legacy-Stats-Paket für einen Owner."""
+    wl = legacy_wins.get(owner_id, {'wins': 0, 'losses': 0, 'ties': 0})
+    games = wl['wins'] + wl['losses'] + wl['ties']
+    win_pct = round(wl['wins'] / games * 100, 1) if games > 0 else None
+
+    most_owned = sorted(
+        ((pid, wks) for (o, pid), wks in legacy_player_weeks.items() if o == owner_id),
+        key=lambda x: x[1], reverse=True
+    )[:5]
+    most_owned_named = [
+        {"name": (f"{players.get(pid, {}).get('first_name', '')} {players.get(pid, {}).get('last_name', '')}".strip() or pid), "weeks": wks}
+        for pid, wks in most_owned
+    ]
+
+    high = legacy_high_score.get(owner_id)
+    low = legacy_low_score.get(owner_id)
+    high_player = legacy_high_player_score.get(owner_id)
+    placements = sorted(legacy_placements.get(owner_id, []), key=lambda x: x[0], reverse=True)
+
+    return {
+        "win_pct": win_pct,
+        "wins": wl['wins'], "losses": wl['losses'], "ties": wl['ties'],
+        "most_owned": most_owned_named,
+        "waiver_moves": legacy_waiver_moves.get(owner_id, 0),
+        "placements": [{"season": s, "place": p} for s, p in placements],
+        "high_week": ({"points": high[0], "season": high[1], "week": high[2]} if high else None),
+        "low_week": ({"points": low[0], "season": low[1], "week": low[2]} if low else None),
+        "high_player_week": (
+            {"points": high_player[0], "player": high_player[1], "season": high_player[2], "week": high_player[3]}
+            if high_player else None
+        ),
+    }
 
 def team_display(roster_id):
     owner_id = roster_id_to_owner.get(roster_id)
@@ -1477,6 +1580,7 @@ df["BADGES"] = badges_list
 
 df['COMMENTS'] = ""
 df['FAAB_REMAINING'] = faab_remaining_list
+df['LEGACY_STATS'] = [get_legacy_stats(team['owner_id']) for team in rosters]
 
 # --- NEU: Prediction-Quiz-Score einbinden ---
 # Kombinierte Export-Tabelle aus dem Prediction-Quiz-Sheet (Tab "QuizExport":
