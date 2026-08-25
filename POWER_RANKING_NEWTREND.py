@@ -620,15 +620,6 @@ for s_league_id in season_league_ids:
             qualifying_seasons_count[(owner_id, pid)] = qualifying_seasons_count.get((owner_id, pid), 0) + 1
         legacy_player_weeks[(owner_id, pid)] = legacy_player_weeks.get((owner_id, pid), 0) + wk_count
 
-# TEMPORÄRER DEBUG-PRINT - kann nach dem Diagnostizieren wieder raus
-_debug_owner = "716284640708587520"  # The ImBortles
-if _debug_owner in head_to_head:
-    print(f"DEBUG Head-to-Head für The ImBortles ({len(head_to_head[_debug_owner])} Gegner erfasst):")
-    for opp_id, rec in head_to_head[_debug_owner].items():
-        print(f"  vs {owner_id_to_name.get(opp_id, opp_id)} ({opp_id}): {rec}")
-else:
-    print("DEBUG: Keine Head-to-Head-Daten für The ImBortles gefunden.")
-
 def is_my_guy(owner_id, pid):
     return qualifying_seasons_count.get((owner_id, pid), 0) >= 3
 
@@ -644,7 +635,7 @@ def get_legacy_stats(owner_id):
     most_owned = sorted(
         ((pid, wks) for (o, pid), wks in legacy_player_weeks.items() if o == owner_id),
         key=lambda x: x[1], reverse=True
-    )[:9]
+    )[:10]
     most_owned_named = [
         {
             "name": (f"{players.get(pid, {}).get('first_name', '')} {players.get(pid, {}).get('last_name', '')}".strip() or pid),
@@ -666,22 +657,40 @@ def get_legacy_stats(owner_id):
     avg_placement = round(sum(p for _, p in placements) / len(placements), 1) if placements else None
 
     # NEU: Angstgegner (schlägt uns am häufigsten) & Opfer (wir schlagen ihn
-    # am häufigsten), aus der Head-to-Head-Historie.
+    # am häufigsten), aus der Head-to-Head-Historie. Wichtig: nach VERHÄLTNIS
+    # (Winrate), nicht nach absoluter Anzahl - sonst gewinnt ein Gegner mit
+    # vielen Spielen und 50% Quote fälschlich gegen einen mit wenigen Spielen,
+    # aber 100% Quote. Eine Mindestanzahl an Spielen (3) verhindert außerdem,
+    # dass ein einzelnes Spiel (zwangsläufig 100% oder 0%) den Titel gewinnt.
     opponents = head_to_head.get(owner_id, {})
     angstgegner, opfer = None, None
     if opponents:
-        worst = max(opponents.items(), key=lambda kv: kv[1]['losses'], default=(None, None))
-        if worst[0] and worst[1]['losses'] > 0:
-            angstgegner = {
-                "name": owner_id_to_name.get(worst[0], "Unbekannt"),
-                "wins": worst[1]['losses'], "losses": worst[1]['wins'], "ties": worst[1]['ties'],
-            }
-        best = max(opponents.items(), key=lambda kv: kv[1]['wins'], default=(None, None))
-        if best[0] and best[1]['wins'] > 0:
-            opfer = {
-                "name": owner_id_to_name.get(best[0], "Unbekannt"),
-                "wins": best[1]['wins'], "losses": best[1]['losses'], "ties": best[1]['ties'],
-            }
+        MIN_GAMES = 3
+
+        def total_games(rec):
+            return rec['wins'] + rec['losses'] + rec['ties']
+
+        # Nur Gegner berücksichtigen, die aktuell noch in der Liga sind
+        # (owner_id_to_name kennt nur die JETZIGEN Mitglieder) - ehemalige
+        # Owner sollen nicht als Angstgegner/Opfer auftauchen.
+        current_opponents = {oid: rec for oid, rec in opponents.items() if oid in owner_id_to_name}
+
+        qualified = {oid: rec for oid, rec in current_opponents.items() if total_games(rec) >= MIN_GAMES}
+        pool = qualified if qualified else current_opponents  # Fallback, falls Liga noch zu jung ist
+
+        if pool:
+            worst = max(pool.items(), key=lambda kv: kv[1]['losses'] / total_games(kv[1]), default=(None, None))
+            if worst[0] and worst[1]['losses'] > 0:
+                angstgegner = {
+                    "name": owner_id_to_name.get(worst[0], "Unbekannt"),
+                    "wins": worst[1]['losses'], "losses": worst[1]['wins'], "ties": worst[1]['ties'],
+                }
+            best = max(pool.items(), key=lambda kv: kv[1]['wins'] / total_games(kv[1]), default=(None, None))
+            if best[0] and best[1]['wins'] > 0:
+                opfer = {
+                    "name": owner_id_to_name.get(best[0], "Unbekannt"),
+                    "wins": best[1]['wins'], "losses": best[1]['losses'], "ties": best[1]['ties'],
+                }
 
     return {
         "win_pct": win_pct,
