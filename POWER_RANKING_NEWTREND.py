@@ -456,12 +456,16 @@ qualifying_seasons_count = {}  # (owner_id, player_id) -> Anzahl qualifizierende
 # owner_id bleibt dagegen fest an den jeweiligen Sleeper-Account gebunden,
 # nur so lässt sich Historie korrekt einem Team zuordnen.
 legacy_wins = {}       # owner_id -> {'wins':,'losses':,'ties':,'points_for':}
+legacy_points_by_season = {}   # owner_id -> {season_label: points_for}
 legacy_player_weeks = {}   # (owner_id, pid) -> Gesamtwochen im Roster (alle Saisons)
 legacy_high_score = {}     # owner_id -> (points, season, week)
 legacy_low_score = {}      # owner_id -> (points, season, week)
 legacy_high_player_score = {}  # owner_id -> (points, player_name, season, week)
 legacy_placements = {}     # owner_id -> [(season, placement), ...]
 legacy_waiver_moves = {}   # owner_id -> Anzahl Adds (Waiver/Free Agent)
+legacy_waiver_moves_by_season = {}  # owner_id -> {season_label: Anzahl}
+legacy_trades = {}         # owner_id -> Anzahl Trades
+legacy_trades_by_season = {}   # owner_id -> {season_label: Anzahl}
 head_to_head = {}          # owner_id -> {gegner_owner_id: {'wins':,'losses':,'ties':}}
 owner_id_to_name = {u.get('user_id'): u.get('display_name') for u in users}
 
@@ -477,10 +481,12 @@ for s_league_id in season_league_ids:
             continue
         settings = r.get('settings', {}) or {}
         entry = legacy_wins.setdefault(owner_id, {'wins': 0, 'losses': 0, 'ties': 0, 'points_for': 0.0})
+        season_points = settings.get('fpts', 0) + settings.get('fpts_decimal', 0) / 100
+        legacy_points_by_season.setdefault(owner_id, {})[season_label] = round(season_points, 1)
         entry['wins'] += settings.get('wins', 0)
         entry['losses'] += settings.get('losses', 0)
         entry['ties'] += settings.get('ties', 0)
-        entry['points_for'] += settings.get('fpts', 0) + settings.get('fpts_decimal', 0) / 100
+        entry['points_for'] += season_points
 
     # Platzierung dieser Saison (nur falls Playoffs schon abgeschlossen sind).
     # Playoff-Teams bekommen ihre Bracket-Platzierung, alle anderen (nicht in
@@ -581,18 +587,33 @@ for s_league_id in season_league_ids:
                 rec_a['ties'] += 1
                 rec_b['ties'] += 1
 
-        # Waiver-/Free-Agent-Moves dieser Woche zählen
+        # Waiver-/Free-Agent-Moves und Trades dieser Woche zählen
         s_transactions = fetch_json_safe(f"https://api.sleeper.app/v1/league/{s_league_id}/transactions/{wk}") or []
         for tx in s_transactions:
-            if tx.get('type') not in ('waiver', 'free_agent'):
-                continue
             if tx.get('status') != 'complete':
                 continue
-            adds = tx.get('adds') or {}
-            for roster_id in set(adds.values()):
-                owner_id = s_roster_to_owner.get(roster_id)
-                if owner_id:
-                    legacy_waiver_moves[owner_id] = legacy_waiver_moves.get(owner_id, 0) + 1
+
+            if tx.get('type') in ('waiver', 'free_agent'):
+                adds = tx.get('adds') or {}
+                for roster_id in set(adds.values()):
+                    owner_id = s_roster_to_owner.get(roster_id)
+                    if owner_id:
+                        legacy_waiver_moves[owner_id] = legacy_waiver_moves.get(owner_id, 0) + 1
+                        season_moves = legacy_waiver_moves_by_season.setdefault(owner_id, {})
+                        season_moves[season_label] = season_moves.get(season_label, 0) + 1
+
+            elif tx.get('type') == 'trade':
+                involved_rosters = set(tx.get('roster_ids') or [])
+                if not involved_rosters:
+                    adds_t = tx.get('adds') or {}
+                    drops_t = tx.get('drops') or {}
+                    involved_rosters = set(adds_t.values()) | set(drops_t.values())
+                for roster_id in involved_rosters:
+                    owner_id = s_roster_to_owner.get(roster_id)
+                    if owner_id:
+                        legacy_trades[owner_id] = legacy_trades.get(owner_id, 0) + 1
+                        season_trades = legacy_trades_by_season.setdefault(owner_id, {})
+                        season_trades[season_label] = season_trades.get(season_label, 0) + 1
 
     for (owner_id, pid), wk_count in weeks_on_roster.items():
         if wk_count >= 3:
@@ -666,9 +687,22 @@ def get_legacy_stats(owner_id):
         "win_pct": win_pct,
         "wins": wl['wins'], "losses": wl['losses'], "ties": wl['ties'],
         "all_time_points": round(wl['points_for'], 1) if games > 0 else None,
+        "points_by_season": sorted(
+            [{"season": s, "points": p} for s, p in legacy_points_by_season.get(owner_id, {}).items()],
+            key=lambda x: x["season"], reverse=True
+        ),
         "avg_placement": avg_placement,
         "most_owned": most_owned_named,
         "waiver_moves": legacy_waiver_moves.get(owner_id, 0),
+        "waiver_moves_by_season": sorted(
+            [{"season": s, "count": c} for s, c in legacy_waiver_moves_by_season.get(owner_id, {}).items()],
+            key=lambda x: x["season"], reverse=True
+        ),
+        "trades": legacy_trades.get(owner_id, 0),
+        "trades_by_season": sorted(
+            [{"season": s, "count": c} for s, c in legacy_trades_by_season.get(owner_id, {}).items()],
+            key=lambda x: x["season"], reverse=True
+        ),
         "placements": [{"season": s, "place": p} for s, p in placements],
         "high_week": ({"points": high[0], "season": high[1], "week": high[2]} if high else None),
         "low_week": ({"points": low[0], "season": low[1], "week": low[2]} if low else None),
@@ -1698,6 +1732,7 @@ def add_nested_rank(key, subkey, out_key, ascending=False):
 
 add_rank("win_pct", ascending=False)
 add_rank("waiver_moves", ascending=False)
+add_rank("trades", ascending=False)
 add_rank("all_time_points", ascending=False)
 add_rank("avg_placement", ascending=True)  # niedrigere Zahl = bessere Platzierung
 add_nested_rank("high_week", "points", "high_week_rank", ascending=False)
