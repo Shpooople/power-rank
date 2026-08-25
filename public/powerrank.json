@@ -423,6 +423,26 @@
           "name":"David Montgomery",
           "weeks":32,
           "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5892.jpg"
+        },
+        {
+          "name":"Justin Jefferson",
+          "weeks":32,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6794.jpg"
+        },
+        {
+          "name":"Dalton Schultz",
+          "weeks":32,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5001.jpg"
+        },
+        {
+          "name":"Dameon Pierce",
+          "weeks":31,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8129.jpg"
+        },
+        {
+          "name":"Courtland Sutton",
+          "weeks":29,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5045.jpg"
         }
       ],
       "waiver_moves":302,
@@ -879,7 +899,7 @@
         {
           "name":"Los Angeles Rams",
           "weeks":45,
-          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/LAR.jpg"
+          "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/lar.png"
         },
         {
           "name":"Amon-Ra St. Brown",
@@ -894,12 +914,32 @@
         {
           "name":"Buffalo Bills",
           "weeks":34,
-          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/BUF.jpg"
+          "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/buf.png"
         },
         {
           "name":"Jerry Jeudy",
           "weeks":33,
           "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6783.jpg"
+        },
+        {
+          "name":"Zay Flowers",
+          "weeks":32,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9997.jpg"
+        },
+        {
+          "name":"Tony Pollard",
+          "weeks":31,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5967.jpg"
+        },
+        {
+          "name":"Garrett Wilson",
+          "weeks":30,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8146.jpg"
+        },
+        {
+          "name":"Brandon Aubrey",
+          "weeks":27,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11533.jpg"
         }
       ],
       "waiver_moves":172,
@@ -1381,6 +1421,26 @@
           "name":"Jalen Hurts",
           "weeks":34,
           "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6904.jpg"
+        },
+        {
+          "name":"CeeDee Lamb",
+          "weeks":34,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6786.jpg"
+        },
+        {
+          "name":"DeVonta Smith",
+          "weeks":34,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7525.jpg"
+        },
+        {
+          "name":"Chase McLaughlin",
+          "weeks":28,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6650.jpg"
+        },
+        {
+          "name":"Dalvin Cook",
+          "weeks":22,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4029.jpg"
         }
       ],
       "waiver_moves":125,
@@ -1855,6 +1915,26 @@
           "name":"Jaylen Warren",
           "weeks":30,
           "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8228.jpg"
+        },
+        {
+          "name":"Michael Thomas",
+          "weeks":27,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/3199.jpg"
+        },
+        {
+          "name":"Kyler Murray",
+          "weeks":25,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5849.jpg"
+        },
+        {
+          "name":"Ezekiel Elliott",
+          "weeks":22,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/3164.jpg"
+        },
+        {
+          "name":"Jake Ferguson",
+          "weeks":21,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8110.jpg"
         }
       ],
       "waiver_moves":185,
@@ -2346,6 +2426,26 @@
           "name":"Josh Jacobs",
           "weeks":34,
           "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5850.jpg"
+        },
+        {
+          "name":"Stefon Diggs",
+          "weeks":34,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/2449.jpg"
+        },
+        {
+          "name":"Buffalo Bills",
+          "weeks":34,
+          "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/buf.png"
+        },
+        {
+          "name":"Raheem Mostert",
+          "weeks":30,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/2749.jpg"
+        },
+        {
+          "name":"Mark Andrews",
+          "weeks":29,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5012.jpg"
         }
       ],
       "waiver_moves":144,
@@ -2833,6 +2933,26 @@
           "name":"Kyle Pitts",
           "weeks":34,
           "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7553.jpg"
+        },
+        {
+          "name":"Garrett Wilson",
+          "weeks":31,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8146.jpg"
+        },
+        {
+          "name":"Baker Mayfield",
+          "weeks":30,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4892.jpg"
+        },
+        {
+          "name":"Evan Engram",
+          "weeks":29,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4066.jpg"
+        },
+        {
+          "name":"Nico Collins",
+          "weeks":25,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7569.jpg"
         }
       ],
       "waiver_moves":190,
@@ -3312,7 +3432,27 @@
         {
           "name":"Tampa Bay Buccaneers",
           "weeks":30,
-          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/TB.jpg"
+          "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/tb.png"
+        },
+        {
+          "name":"Amon-Ra St. Brown",
+          "weeks":29,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7547.jpg"
+        },
+        {
+          "name":"Joe Burrow",
+          "weeks":28,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6770.jpg"
+        },
+        {
+          "name":"Devin Singletary",
+          "weeks":27,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6130.jpg"
+        },
+        {
+          "name":"Rome Odunze",
+          "weeks":25,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11620.jpg"
         }
       ],
       "waiver_moves":147,
@@ -3775,6 +3915,26 @@
           "name":"Quinshon Judkins",
           "weeks":17,
           "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12512.jpg"
+        },
+        {
+          "name":"Travis Kelce",
+          "weeks":17,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/1466.jpg"
+        },
+        {
+          "name":"Christian McCaffrey",
+          "weeks":17,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4034.jpg"
+        },
+        {
+          "name":"Josh Allen",
+          "weeks":17,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4984.jpg"
+        },
+        {
+          "name":"Jordan Addison",
+          "weeks":17,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9756.jpg"
         }
       ],
       "waiver_moves":32,
@@ -4246,6 +4406,26 @@
           "name":"Zach Charbonnet",
           "weeks":24,
           "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9753.jpg"
+        },
+        {
+          "name":"Minnesota Vikings",
+          "weeks":24,
+          "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/min.png"
+        },
+        {
+          "name":"Romeo Doubs",
+          "weeks":23,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8121.jpg"
+        },
+        {
+          "name":"Jakobi Meyers",
+          "weeks":21,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5947.jpg"
+        },
+        {
+          "name":"Darnell Mooney",
+          "weeks":20,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7090.jpg"
         }
       ],
       "waiver_moves":149,
@@ -4715,6 +4895,26 @@
           "name":"C.J. Stroud",
           "weeks":27,
           "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9758.jpg"
+        },
+        {
+          "name":"Jakobi Meyers",
+          "weeks":26,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5947.jpg"
+        },
+        {
+          "name":"DeVonta Smith",
+          "weeks":25,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7525.jpg"
+        },
+        {
+          "name":"Miles Sanders",
+          "weeks":24,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6151.jpg"
+        },
+        {
+          "name":"Kareem Hunt",
+          "weeks":22,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4098.jpg"
         }
       ],
       "waiver_moves":146,
@@ -5193,7 +5393,27 @@
         {
           "name":"Denver Broncos",
           "weeks":19,
-          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/DEN.jpg"
+          "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/den.png"
+        },
+        {
+          "name":"Brandon Aubrey",
+          "weeks":17,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11533.jpg"
+        },
+        {
+          "name":"Dallas Goedert",
+          "weeks":17,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5022.jpg"
+        },
+        {
+          "name":"David Montgomery",
+          "weeks":17,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5892.jpg"
+        },
+        {
+          "name":"Joe Burrow",
+          "weeks":17,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6770.jpg"
         }
       ],
       "waiver_moves":103,
@@ -5669,6 +5889,26 @@
           "name":"Tee Higgins",
           "weeks":17,
           "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6801.jpg"
+        },
+        {
+          "name":"Khalil Shakir",
+          "weeks":17,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8134.jpg"
+        },
+        {
+          "name":"Chris Olave",
+          "weeks":17,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8144.jpg"
+        },
+        {
+          "name":"Jahmyr Gibbs",
+          "weeks":17,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9221.jpg"
+        },
+        {
+          "name":"Sam LaPorta",
+          "weeks":17,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/10859.jpg"
         }
       ],
       "waiver_moves":24,
