@@ -458,6 +458,8 @@ qualifying_seasons_count = {}  # (owner_id, player_id) -> Anzahl qualifizierende
 legacy_wins = {}       # owner_id -> {'wins':,'losses':,'ties':,'points_for':}
 legacy_points_by_season = {}   # owner_id -> {season_label: points_for}
 legacy_player_weeks = {}   # (owner_id, pid) -> Gesamtwochen im Roster (alle Saisons)
+legacy_player_points = {}  # (owner_id, pid) -> Gesamtpunkte, die der Spieler FÜR dieses Team gemacht hat
+legacy_season_rosters = {}  # owner_id -> {season_label: {pid, pid, ...}} - für Championship-Ringe
 legacy_high_score = {}     # owner_id -> (points, season, week)
 legacy_low_score = {}      # owner_id -> (points, season, week)
 legacy_high_player_score = {}  # owner_id -> (points, player_name, season, week)
@@ -536,9 +538,16 @@ for s_league_id in season_league_ids:
             if not owner_id:
                 continue
 
+            ppw_for_points = m.get('players_points', {}) or {}
             for pid in (m.get('players') or []):
                 key = (owner_id, pid)
                 weeks_on_roster[key] = weeks_on_roster.get(key, 0) + 1
+                # NEU: tatsächliche Punkte, die dieser Spieler FÜR DIESES TEAM
+                # gemacht hat (nicht nur Anwesenheit im Roster)
+                legacy_player_points[key] = legacy_player_points.get(key, 0) + (ppw_for_points.get(pid, 0) or 0)
+                # NEU: welche Spieler waren in dieser Saison bei diesem Owner
+                # im Roster - für die Championship-Ring-Markierung gebraucht
+                legacy_season_rosters.setdefault(owner_id, {}).setdefault(season_label, set()).add(pid)
 
             week_points = m.get('points')
             if week_points is not None:
@@ -632,29 +641,62 @@ def get_legacy_stats(owner_id):
     games = wl['wins'] + wl['losses'] + wl['ties']
     win_pct = round(wl['wins'] / games * 100, 1) if games > 0 else None
 
-    most_owned = sorted(
+    placements = sorted(legacy_placements.get(owner_id, []), key=lambda x: x[0], reverse=True)
+    avg_placement = round(sum(p for _, p in placements) / len(placements), 1) if placements else None
+
+    # NEU: Spieler, mit denen dieses Team eine Meisterschaft gewonnen hat
+    # (Platzierung 1 in einer Saison) - die waren in dieser Saison laut
+    # legacy_season_rosters im Kader. Bekommen im Frontend einen goldenen Ring.
+    championship_seasons = [s for s, p in legacy_placements.get(owner_id, []) if p == 1]
+    championship_pids = set()
+    for s in championship_seasons:
+        championship_pids |= legacy_season_rosters.get(owner_id, {}).get(s, set())
+
+    def player_display_name(pid):
+        return f"{players.get(pid, {}).get('first_name', '')} {players.get(pid, {}).get('last_name', '')}".strip() or pid
+
+    def player_image(pid):
+        # DEF-Einträge nutzen die Team-Abkürzung als pid (z.B. "SF") - dafür
+        # braucht's das NFL-Team-Logo statt eines Spielerbilds.
+        return (
+            team_logo_url(pid) if players.get(pid, {}).get('position') == 'DEF'
+            else f"https://sleepercdn.com/content/nfl/players/{pid}.jpg"
+        )
+
+    # NEU: zwei getrennte Top-5-Listen statt einer gemeinsamen Top-10 - einmal
+    # nach Wochen im Roster, einmal nach tatsächlich für das Team erzielten
+    # Punkten.
+    most_weeks = sorted(
         ((pid, wks) for (o, pid), wks in legacy_player_weeks.items() if o == owner_id),
         key=lambda x: x[1], reverse=True
-    )[:10]
-    most_owned_named = [
+    )[:5]
+    most_weeks_named = [
         {
-            "name": (f"{players.get(pid, {}).get('first_name', '')} {players.get(pid, {}).get('last_name', '')}".strip() or pid),
+            "name": player_display_name(pid),
             "weeks": wks,
-            # DEF-Einträge nutzen die Team-Abkürzung als pid (z.B. "SF") -
-            # dafür braucht's das NFL-Team-Logo statt eines Spielerbilds.
-            "image_url": (
-                team_logo_url(pid) if players.get(pid, {}).get('position') == 'DEF'
-                else f"https://sleepercdn.com/content/nfl/players/{pid}.jpg"
-            ),
+            "image_url": player_image(pid),
+            "is_champion": pid in championship_pids,
         }
-        for pid, wks in most_owned
+        for pid, wks in most_weeks
+    ]
+
+    most_points = sorted(
+        ((pid, pts) for (o, pid), pts in legacy_player_points.items() if o == owner_id),
+        key=lambda x: x[1], reverse=True
+    )[:5]
+    most_points_named = [
+        {
+            "name": player_display_name(pid),
+            "points": round(pts, 1),
+            "image_url": player_image(pid),
+            "is_champion": pid in championship_pids,
+        }
+        for pid, pts in most_points
     ]
 
     high = legacy_high_score.get(owner_id)
     low = legacy_low_score.get(owner_id)
     high_player = legacy_high_player_score.get(owner_id)
-    placements = sorted(legacy_placements.get(owner_id, []), key=lambda x: x[0], reverse=True)
-    avg_placement = round(sum(p for _, p in placements) / len(placements), 1) if placements else None
 
     # NEU: Angstgegner (schlägt uns am häufigsten) & Opfer (wir schlagen ihn
     # am häufigsten), aus der Head-to-Head-Historie. Wichtig: nach VERHÄLTNIS
@@ -701,7 +743,8 @@ def get_legacy_stats(owner_id):
             key=lambda x: x["season"], reverse=True
         ),
         "avg_placement": avg_placement,
-        "most_owned": most_owned_named,
+        "most_weeks": most_weeks_named,
+        "most_points": most_points_named,
         "waiver_moves": legacy_waiver_moves.get(owner_id, 0),
         "waiver_moves_by_season": sorted(
             [{"season": s, "count": c} for s, c in legacy_waiver_moves_by_season.get(owner_id, {}).items()],
