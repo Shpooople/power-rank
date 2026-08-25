@@ -298,6 +298,7 @@ const TeamSection = ({ team }) => {
     // mehrere möglich, da beim Quiz individuell abgestimmt wird)
     "QUIZ_SCORES": quizScores = [],
     "FAAB_REMAINING": faabRemaining,
+    "LEGACY_STATS": legacyStats,
     // Performer-Felder
     "TOP_PERFORMERS": topPerformers = [],
     "BOTTOM_PERFORMERS": bottomPerformers = [],
@@ -768,6 +769,68 @@ const TeamSection = ({ team }) => {
                 <div className="performer-cards">
                   <PlayerCard player={benchwarmer} note="Bank" />
                 </div>
+              </div>
+            )}
+          </div>
+        </details>
+      )}
+
+      {legacyStats && (legacyStats.win_pct != null || legacyStats.most_owned?.length > 0) && (
+        <details className="collapsible team-legacy">
+          <summary>Legacy Stats anzeigen</summary>
+          <div className="collapsible-content">
+            {legacyStats.win_pct != null && (
+              <p className="legacy-line">
+                <strong>All-Time Win%:</strong> {legacyStats.win_pct}%{' '}
+                ({legacyStats.wins}-{legacyStats.losses}{legacyStats.ties > 0 ? `-${legacyStats.ties}` : ''})
+              </p>
+            )}
+
+            {legacyStats.placements?.length > 0 && (
+              <p className="legacy-line">
+                <strong>Platzierungen:</strong>{' '}
+                {legacyStats.placements.map((pl, i) => (
+                  <span key={i}>
+                    {pl.season}: #{pl.place}{i < legacyStats.placements.length - 1 ? ' · ' : ''}
+                  </span>
+                ))}
+              </p>
+            )}
+
+            {legacyStats.high_week && (
+              <p className="legacy-line">
+                <strong>Höchster Wochenscore:</strong> {legacyStats.high_week.points} Punkte{' '}
+                (Saison {legacyStats.high_week.season}, Woche {legacyStats.high_week.week})
+              </p>
+            )}
+
+            {legacyStats.low_week && (
+              <p className="legacy-line">
+                <strong>Niedrigster Wochenscore:</strong> {legacyStats.low_week.points} Punkte{' '}
+                (Saison {legacyStats.low_week.season}, Woche {legacyStats.low_week.week})
+              </p>
+            )}
+
+            {legacyStats.high_player_week && (
+              <p className="legacy-line">
+                <strong>Bester Einzelspieler-Score:</strong> {legacyStats.high_player_week.player} mit{' '}
+                {legacyStats.high_player_week.points} Punkten{' '}
+                (Saison {legacyStats.high_player_week.season}, Woche {legacyStats.high_player_week.week})
+              </p>
+            )}
+
+            <p className="legacy-line">
+              <strong>Waiver-Wire-Moves (all-time):</strong> {legacyStats.waiver_moves}
+            </p>
+
+            {legacyStats.most_owned?.length > 0 && (
+              <div className="legacy-most-owned">
+                <strong>Meistgehaltene Spieler (nach Wochen im Roster):</strong>
+                <ul>
+                  {legacyStats.most_owned.map((p, i) => (
+                    <li key={i}>{p.name} — {p.weeks} Wochen</li>
+                  ))}
+                </ul>
               </div>
             )}
           </div>
