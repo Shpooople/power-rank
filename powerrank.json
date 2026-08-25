@@ -450,6 +450,12 @@
           "weeks":32,
           "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5892.jpg",
           "is_champion":false
+        },
+        {
+          "name":"Justin Jefferson",
+          "weeks":32,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6794.jpg",
+          "is_champion":false
         }
       ],
       "most_points":[
@@ -482,8 +488,172 @@
           "points":378.1,
           "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5927.jpg",
           "is_champion":false
+        },
+        {
+          "name":"Jayden Daniels",
+          "points":354.4,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11566.jpg",
+          "is_champion":false
         }
       ],
+      "scorers_by_position":{
+        "QB":[
+          {
+            "name":"Tua Tagovailoa",
+            "points":475.4,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6768.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Jayden Daniels",
+            "points":354.4,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11566.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Justin Herbert",
+            "points":290.8,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6797.jpg",
+            "is_champion":false
+          }
+        ],
+        "K":[
+          {
+            "name":"Daniel Carlson",
+            "points":158.0,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5095.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Dustin Hopkins",
+            "points":91.0,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/1348.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Austin Seibert",
+            "points":83.9,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6219.jpg",
+            "is_champion":false
+          }
+        ],
+        "DEF":[
+          {
+            "name":"Dallas Cowboys",
+            "points":305.0,
+            "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/dal.png",
+            "is_champion":false
+          },
+          {
+            "name":"Chicago Bears",
+            "points":189.8,
+            "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/chi.png",
+            "is_champion":true
+          },
+          {
+            "name":"Cleveland Browns",
+            "points":129.0,
+            "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/cle.png",
+            "is_champion":true
+          }
+        ],
+        "TE":[
+          {
+            "name":"Dalton Schultz",
+            "points":215.5,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5001.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Sam LaPorta",
+            "points":158.3,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/10859.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Mark Andrews",
+            "points":115.6,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5012.jpg",
+            "is_champion":true
+          }
+        ],
+        "RB":[
+          {
+            "name":"David Montgomery",
+            "points":417.2,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5892.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Rhamondre Stevenson",
+            "points":300.7,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7611.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Derrick Henry",
+            "points":273.9,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/3198.jpg",
+            "is_champion":true
+          },
+          {
+            "name":"Dameon Pierce",
+            "points":232.1,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8129.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Jerome Ford",
+            "points":216.3,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8143.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Alvin Kamara",
+            "points":205.5,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4035.jpg",
+            "is_champion":false
+          }
+        ],
+        "WR":[
+          {
+            "name":"Justin Jefferson",
+            "points":552.0,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6794.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"George Pickens",
+            "points":441.5,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8137.jpg",
+            "is_champion":true
+          },
+          {
+            "name":"Terry McLaurin",
+            "points":378.1,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5927.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Davante Adams",
+            "points":286.2,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/2133.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Jayden Reed",
+            "points":283.7,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/10222.jpg",
+            "is_champion":true
+          },
+          {
+            "name":"Courtland Sutton",
+            "points":273.4,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5045.jpg",
+            "is_champion":false
+          }
+        ]
+      },
       "waiver_moves":302,
       "waiver_moves_by_season":[
         {
@@ -1032,6 +1202,12 @@
           "weeks":33,
           "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6783.jpg",
           "is_champion":false
+        },
+        {
+          "name":"Zay Flowers",
+          "weeks":32,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9997.jpg",
+          "is_champion":true
         }
       ],
       "most_points":[
@@ -1064,8 +1240,172 @@
           "points":380.1,
           "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4034.jpg",
           "is_champion":false
+        },
+        {
+          "name":"Tony Pollard",
+          "points":379.4,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5967.jpg",
+          "is_champion":false
         }
       ],
+      "scorers_by_position":{
+        "QB":[
+          {
+            "name":"Justin Fields",
+            "points":428.3,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7591.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Matthew Stafford",
+            "points":406.9,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/421.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Justin Herbert",
+            "points":392.7,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6797.jpg",
+            "is_champion":false
+          }
+        ],
+        "K":[
+          {
+            "name":"Brandon Aubrey",
+            "points":291.1,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11533.jpg",
+            "is_champion":true
+          },
+          {
+            "name":"Jason Myers",
+            "points":153.2,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/2747.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Tyler Bass",
+            "points":129.0,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7042.jpg",
+            "is_champion":false
+          }
+        ],
+        "DEF":[
+          {
+            "name":"Los Angeles Rams",
+            "points":319.2,
+            "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/lar.png",
+            "is_champion":false
+          },
+          {
+            "name":"Buffalo Bills",
+            "points":290.8,
+            "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/buf.png",
+            "is_champion":false
+          },
+          {
+            "name":"New York Jets",
+            "points":110.8,
+            "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/nyj.png",
+            "is_champion":true
+          }
+        ],
+        "TE":[
+          {
+            "name":"George Kittle",
+            "points":294.2,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4217.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Travis Kelce",
+            "points":217.4,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/1466.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"T.J. Hockenson",
+            "points":182.3,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5844.jpg",
+            "is_champion":false
+          }
+        ],
+        "RB":[
+          {
+            "name":"Christian McCaffrey",
+            "points":380.1,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4034.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Tony Pollard",
+            "points":379.4,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5967.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Austin Ekeler",
+            "points":325.2,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4663.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Kyren Williams",
+            "points":252.9,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8150.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"James Cook",
+            "points":251.7,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8138.jpg",
+            "is_champion":true
+          },
+          {
+            "name":"Jonathan Taylor",
+            "points":223.0,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6813.jpg",
+            "is_champion":true
+          }
+        ],
+        "WR":[
+          {
+            "name":"Amon-Ra St. Brown",
+            "points":529.2,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7547.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Zay Flowers",
+            "points":336.7,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9997.jpg",
+            "is_champion":true
+          },
+          {
+            "name":"Garrett Wilson",
+            "points":288.3,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8146.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Keenan Allen",
+            "points":209.9,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/1479.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Tee Higgins",
+            "points":187.1,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6801.jpg",
+            "is_champion":true
+          },
+          {
+            "name":"Puka Nacua",
+            "points":178.4,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9493.jpg",
+            "is_champion":true
+          }
+        ]
+      },
       "waiver_moves":172,
       "waiver_moves_by_season":[
         {
@@ -1614,6 +1954,12 @@
           "weeks":34,
           "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6904.jpg",
           "is_champion":false
+        },
+        {
+          "name":"CeeDee Lamb",
+          "weeks":34,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6786.jpg",
+          "is_champion":false
         }
       ],
       "most_points":[
@@ -1646,8 +1992,172 @@
           "points":406.5,
           "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4984.jpg",
           "is_champion":false
+        },
+        {
+          "name":"DeVonta Smith",
+          "points":364.7,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7525.jpg",
+          "is_champion":false
         }
       ],
+      "scorers_by_position":{
+        "QB":[
+          {
+            "name":"Jalen Hurts",
+            "points":789.0,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6904.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Lamar Jackson",
+            "points":516.7,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4881.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Josh Allen",
+            "points":406.5,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4984.jpg",
+            "is_champion":false
+          }
+        ],
+        "K":[
+          {
+            "name":"Chase McLaughlin",
+            "points":262.9,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6650.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Brandon McManus",
+            "points":130.0,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/1433.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Matt Gay",
+            "points":74.0,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6083.jpg",
+            "is_champion":false
+          }
+        ],
+        "DEF":[
+          {
+            "name":"Baltimore Ravens",
+            "points":181.0,
+            "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/bal.png",
+            "is_champion":false
+          },
+          {
+            "name":"Indianapolis Colts",
+            "points":159.5,
+            "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/ind.png",
+            "is_champion":false
+          },
+          {
+            "name":"Green Bay Packers",
+            "points":124.0,
+            "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/gb.png",
+            "is_champion":false
+          }
+        ],
+        "TE":[
+          {
+            "name":"Travis Kelce",
+            "points":455.2,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/1466.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Trey McBride",
+            "points":255.6,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8130.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"George Kittle",
+            "points":166.0,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4217.jpg",
+            "is_champion":false
+          }
+        ],
+        "RB":[
+          {
+            "name":"Christian McCaffrey",
+            "points":317.0,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4034.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Bijan Robinson",
+            "points":298.4,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9509.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Joe Mixon",
+            "points":278.9,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4018.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"AJ Dillon",
+            "points":238.3,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6828.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Dalvin Cook",
+            "points":209.7,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4029.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Jaylen Warren",
+            "points":196.7,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8228.jpg",
+            "is_champion":false
+          }
+        ],
+        "WR":[
+          {
+            "name":"CeeDee Lamb",
+            "points":449.7,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6786.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"DeVonta Smith",
+            "points":364.7,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7525.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Diontae Johnson",
+            "points":339.6,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5937.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Christian Kirk",
+            "points":191.7,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4950.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Jaylen Waddle",
+            "points":173.6,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7526.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Justin Jefferson",
+            "points":155.1,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6794.jpg",
+            "is_champion":false
+          }
+        ]
+      },
       "waiver_moves":125,
       "waiver_moves_by_season":[
         {
@@ -2185,6 +2695,12 @@
           "weeks":30,
           "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8228.jpg",
           "is_champion":false
+        },
+        {
+          "name":"Michael Thomas",
+          "weeks":27,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/3199.jpg",
+          "is_champion":true
         }
       ],
       "most_points":[
@@ -2217,8 +2733,172 @@
           "points":387.3,
           "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5849.jpg",
           "is_champion":false
+        },
+        {
+          "name":"Drake Maye",
+          "points":372.6,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11564.jpg",
+          "is_champion":false
         }
       ],
+      "scorers_by_position":{
+        "QB":[
+          {
+            "name":"Dak Prescott",
+            "points":400.8,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/3294.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Kyler Murray",
+            "points":387.3,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5849.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Drake Maye",
+            "points":372.6,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11564.jpg",
+            "is_champion":false
+          }
+        ],
+        "K":[
+          {
+            "name":"Ka'imi Fairbairn",
+            "points":171.8,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/3451.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Harrison Butker",
+            "points":118.0,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4227.jpg",
+            "is_champion":true
+          },
+          {
+            "name":"Michael Badgley",
+            "points":77.7,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5230.jpg",
+            "is_champion":false
+          }
+        ],
+        "DEF":[
+          {
+            "name":"Kansas City Chiefs",
+            "points":117.5,
+            "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/kc.png",
+            "is_champion":false
+          },
+          {
+            "name":"New England Patriots",
+            "points":101.8,
+            "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/ne.png",
+            "is_champion":true
+          },
+          {
+            "name":"Houston Texans",
+            "points":80.5,
+            "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/hou.png",
+            "is_champion":false
+          }
+        ],
+        "TE":[
+          {
+            "name":"George Kittle",
+            "points":204.1,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4217.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Darren Waller",
+            "points":189.3,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/2505.jpg",
+            "is_champion":true
+          },
+          {
+            "name":"Taysom Hill",
+            "points":173.4,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4381.jpg",
+            "is_champion":true
+          }
+        ],
+        "RB":[
+          {
+            "name":"Alvin Kamara",
+            "points":547.0,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4035.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"James Cook",
+            "points":514.5,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8138.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Joe Mixon",
+            "points":439.4,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4018.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Ezekiel Elliott",
+            "points":277.3,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/3164.jpg",
+            "is_champion":true
+          },
+          {
+            "name":"Najee Harris",
+            "points":274.0,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7528.jpg",
+            "is_champion":true
+          },
+          {
+            "name":"Jaylen Warren",
+            "points":271.1,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8228.jpg",
+            "is_champion":false
+          }
+        ],
+        "WR":[
+          {
+            "name":"A.J. Brown",
+            "points":255.1,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5859.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Nico Collins",
+            "points":199.4,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7569.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Courtland Sutton",
+            "points":193.0,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5045.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Davante Adams",
+            "points":190.5,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/2133.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Chris Olave",
+            "points":187.2,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8144.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"CeeDee Lamb",
+            "points":172.2,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6786.jpg",
+            "is_champion":false
+          }
+        ]
+      },
       "waiver_moves":185,
       "waiver_moves_by_season":[
         {
@@ -2773,6 +3453,12 @@
           "weeks":34,
           "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5850.jpg",
           "is_champion":false
+        },
+        {
+          "name":"Stefon Diggs",
+          "weeks":34,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/2449.jpg",
+          "is_champion":false
         }
       ],
       "most_points":[
@@ -2805,8 +3491,172 @@
           "points":404.4,
           "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/167.jpg",
           "is_champion":false
+        },
+        {
+          "name":"Cooper Kupp",
+          "points":361.1,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4039.jpg",
+          "is_champion":false
         }
       ],
+      "scorers_by_position":{
+        "QB":[
+          {
+            "name":"Sam Darnold",
+            "points":411.8,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4943.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Tom Brady",
+            "points":404.4,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/167.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Lamar Jackson",
+            "points":358.3,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4881.jpg",
+            "is_champion":false
+          }
+        ],
+        "K":[
+          {
+            "name":"Nick Folk",
+            "points":137.0,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/650.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Brett Maher",
+            "points":94.0,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4958.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Tyler Loop",
+            "points":90.0,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12711.jpg",
+            "is_champion":false
+          }
+        ],
+        "DEF":[
+          {
+            "name":"Buffalo Bills",
+            "points":275.0,
+            "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/buf.png",
+            "is_champion":false
+          },
+          {
+            "name":"Philadelphia Eagles",
+            "points":99.0,
+            "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/phi.png",
+            "is_champion":false
+          },
+          {
+            "name":"Green Bay Packers",
+            "points":97.2,
+            "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/gb.png",
+            "is_champion":false
+          }
+        ],
+        "TE":[
+          {
+            "name":"Mark Andrews",
+            "points":281.7,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5012.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Brock Bowers",
+            "points":207.7,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11604.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Dallas Goedert",
+            "points":145.5,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5022.jpg",
+            "is_champion":false
+          }
+        ],
+        "RB":[
+          {
+            "name":"Josh Jacobs",
+            "points":547.6,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5850.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Raheem Mostert",
+            "points":316.8,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/2749.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Jahmyr Gibbs",
+            "points":310.7,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9221.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Austin Ekeler",
+            "points":293.4,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4663.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"James Robinson",
+            "points":235.5,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6955.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Breece Hall",
+            "points":235.2,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8155.jpg",
+            "is_champion":false
+          }
+        ],
+        "WR":[
+          {
+            "name":"Tyreek Hill",
+            "points":603.5,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/3321.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Chris Godwin",
+            "points":417.7,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4037.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Cooper Kupp",
+            "points":361.1,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4039.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Stefon Diggs",
+            "points":324.6,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/2449.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Marquise Brown",
+            "points":313.7,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5848.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Puka Nacua",
+            "points":306.5,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9493.jpg",
+            "is_champion":false
+          }
+        ]
+      },
       "waiver_moves":144,
       "waiver_moves_by_season":[
         {
@@ -3357,6 +4207,12 @@
           "weeks":34,
           "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7553.jpg",
           "is_champion":false
+        },
+        {
+          "name":"Garrett Wilson",
+          "weeks":31,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8146.jpg",
+          "is_champion":false
         }
       ],
       "most_points":[
@@ -3389,8 +4245,172 @@
           "points":377.6,
           "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6770.jpg",
           "is_champion":false
+        },
+        {
+          "name":"CeeDee Lamb",
+          "points":322.4,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6786.jpg",
+          "is_champion":true
         }
       ],
+      "scorers_by_position":{
+        "QB":[
+          {
+            "name":"Baker Mayfield",
+            "points":610.9,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4892.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Joe Burrow",
+            "points":377.6,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6770.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Kyler Murray",
+            "points":299.0,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5849.jpg",
+            "is_champion":false
+          }
+        ],
+        "K":[
+          {
+            "name":"Younghoe Koo",
+            "points":516.7,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4666.jpg",
+            "is_champion":true
+          },
+          {
+            "name":"Matt Prater",
+            "points":59.2,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/17.jpg",
+            "is_champion":true
+          },
+          {
+            "name":"Jake Bates",
+            "points":40.3,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11539.jpg",
+            "is_champion":false
+          }
+        ],
+        "DEF":[
+          {
+            "name":"Seattle Seahawks",
+            "points":200.5,
+            "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/sea.png",
+            "is_champion":false
+          },
+          {
+            "name":"New York Jets",
+            "points":147.5,
+            "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/nyj.png",
+            "is_champion":true
+          },
+          {
+            "name":"Baltimore Ravens",
+            "points":133.0,
+            "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/bal.png",
+            "is_champion":false
+          }
+        ],
+        "TE":[
+          {
+            "name":"Evan Engram",
+            "points":237.8,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4066.jpg",
+            "is_champion":true
+          },
+          {
+            "name":"Kyle Pitts",
+            "points":217.4,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7553.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Trey McBride",
+            "points":192.3,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8130.jpg",
+            "is_champion":false
+          }
+        ],
+        "RB":[
+          {
+            "name":"Chuba Hubbard",
+            "points":404.2,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7594.jpg",
+            "is_champion":true
+          },
+          {
+            "name":"Breece Hall",
+            "points":319.3,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8155.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Derrick Henry",
+            "points":316.0,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/3198.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Jamaal Williams",
+            "points":220.7,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4149.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Najee Harris",
+            "points":209.6,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7528.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Antonio Gibson",
+            "points":209.2,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6945.jpg",
+            "is_champion":false
+          }
+        ],
+        "WR":[
+          {
+            "name":"Jaylen Waddle",
+            "points":419.8,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7526.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"CeeDee Lamb",
+            "points":322.4,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6786.jpg",
+            "is_champion":true
+          },
+          {
+            "name":"Stefon Diggs",
+            "points":315.0,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/2449.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Ja'Marr Chase",
+            "points":269.5,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7564.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Garrett Wilson",
+            "points":244.7,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8146.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Nico Collins",
+            "points":240.0,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7569.jpg",
+            "is_champion":false
+          }
+        ]
+      },
       "waiver_moves":190,
       "waiver_moves_by_season":[
         {
@@ -3938,6 +4958,12 @@
           "weeks":30,
           "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/tb.png",
           "is_champion":false
+        },
+        {
+          "name":"Amon-Ra St. Brown",
+          "weeks":29,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7547.jpg",
+          "is_champion":false
         }
       ],
       "most_points":[
@@ -3970,8 +4996,172 @@
           "points":352.4,
           "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6813.jpg",
           "is_champion":false
+        },
+        {
+          "name":"Tyler Lockett",
+          "points":345.0,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/2374.jpg",
+          "is_champion":false
         }
       ],
+      "scorers_by_position":{
+        "QB":[
+          {
+            "name":"Josh Allen",
+            "points":825.5,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4984.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Joe Burrow",
+            "points":550.4,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6770.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Jalen Hurts",
+            "points":371.6,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6904.jpg",
+            "is_champion":false
+          }
+        ],
+        "K":[
+          {
+            "name":"Chris Boswell",
+            "points":94.0,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/1945.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Jake Elliott",
+            "points":93.0,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4195.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Harrison Butker",
+            "points":88.8,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4227.jpg",
+            "is_champion":false
+          }
+        ],
+        "DEF":[
+          {
+            "name":"Tampa Bay Buccaneers",
+            "points":193.2,
+            "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/tb.png",
+            "is_champion":false
+          },
+          {
+            "name":"Denver Broncos",
+            "points":158.5,
+            "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/den.png",
+            "is_champion":false
+          },
+          {
+            "name":"Minnesota Vikings",
+            "points":69.0,
+            "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/min.png",
+            "is_champion":false
+          }
+        ],
+        "TE":[
+          {
+            "name":"Tucker Kraft",
+            "points":211.4,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9484.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Kyle Pitts",
+            "points":154.3,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7553.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Mike Gesicki",
+            "points":134.3,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4993.jpg",
+            "is_champion":false
+          }
+        ],
+        "RB":[
+          {
+            "name":"Jonathan Taylor",
+            "points":352.4,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6813.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"De'Von Achane",
+            "points":298.4,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9226.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Derrick Henry",
+            "points":285.0,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/3198.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Devin Singletary",
+            "points":282.7,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6130.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"James Conner",
+            "points":245.8,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4137.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Chase Brown",
+            "points":235.1,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9224.jpg",
+            "is_champion":false
+          }
+        ],
+        "WR":[
+          {
+            "name":"Amon-Ra St. Brown",
+            "points":426.2,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7547.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Tyler Lockett",
+            "points":345.0,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/2374.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Tyreek Hill",
+            "points":316.5,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/3321.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"DeAndre Hopkins",
+            "points":314.2,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/1426.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Jameson Williams",
+            "points":222.1,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8148.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Rome Odunze",
+            "points":191.9,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11620.jpg",
+            "is_champion":false
+          }
+        ]
+      },
       "waiver_moves":147,
       "waiver_moves_by_season":[
         {
@@ -4481,6 +5671,12 @@
           "weeks":17,
           "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12512.jpg",
           "is_champion":false
+        },
+        {
+          "name":"Travis Kelce",
+          "weeks":17,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/1466.jpg",
+          "is_champion":false
         }
       ],
       "most_points":[
@@ -4513,8 +5709,172 @@
           "points":340.2,
           "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6904.jpg",
           "is_champion":false
+        },
+        {
+          "name":"Brian Thomas",
+          "points":237.4,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11631.jpg",
+          "is_champion":false
         }
       ],
+      "scorers_by_position":{
+        "QB":[
+          {
+            "name":"Josh Allen",
+            "points":443.8,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4984.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Jalen Hurts",
+            "points":340.2,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6904.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Caleb Williams",
+            "points":219.2,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11560.jpg",
+            "is_champion":false
+          }
+        ],
+        "K":[
+          {
+            "name":"Harrison Butker",
+            "points":185.6,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4227.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Tyler Bass",
+            "points":92.0,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7042.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Cairo Santos",
+            "points":27.3,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/2020.jpg",
+            "is_champion":false
+          }
+        ],
+        "DEF":[
+          {
+            "name":"Philadelphia Eagles",
+            "points":167.5,
+            "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/phi.png",
+            "is_champion":false
+          },
+          {
+            "name":"Pittsburgh Steelers",
+            "points":51.5,
+            "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/pit.png",
+            "is_champion":false
+          },
+          {
+            "name":"New York Giants",
+            "points":33.5,
+            "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/nyg.png",
+            "is_champion":false
+          }
+        ],
+        "TE":[
+          {
+            "name":"Travis Kelce",
+            "points":162.2,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/1466.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Hunter Henry",
+            "points":121.9,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/3214.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"David Njoku",
+            "points":121.0,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4033.jpg",
+            "is_champion":false
+          }
+        ],
+        "RB":[
+          {
+            "name":"Christian McCaffrey",
+            "points":380.1,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4034.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Saquon Barkley",
+            "points":357.5,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4866.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Rachaad White",
+            "points":203.7,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8136.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Quinshon Judkins",
+            "points":169.3,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12512.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Kimani Vidal",
+            "points":113.2,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11647.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Kenny Gainwell",
+            "points":110.8,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7567.jpg",
+            "is_champion":false
+          }
+        ],
+        "WR":[
+          {
+            "name":"A.J. Brown",
+            "points":385.7,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5859.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Brian Thomas",
+            "points":237.4,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11631.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"DK Metcalf",
+            "points":165.4,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5846.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Tank Dell",
+            "points":123.2,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9502.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Jordan Addison",
+            "points":118.8,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9756.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Alec Pierce",
+            "points":98.2,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8142.jpg",
+            "is_champion":false
+          }
+        ]
+      },
       "waiver_moves":32,
       "waiver_moves_by_season":[
         {
@@ -5029,6 +6389,12 @@
           "weeks":24,
           "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9753.jpg",
           "is_champion":false
+        },
+        {
+          "name":"Minnesota Vikings",
+          "weeks":24,
+          "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/min.png",
+          "is_champion":false
         }
       ],
       "most_points":[
@@ -5061,8 +6427,172 @@
           "points":346.0,
           "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/2449.jpg",
           "is_champion":false
+        },
+        {
+          "name":"Deebo Samuel",
+          "points":283.0,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5872.jpg",
+          "is_champion":false
         }
       ],
+      "scorers_by_position":{
+        "QB":[
+          {
+            "name":"Dak Prescott",
+            "points":642.7,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/3294.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Justin Herbert",
+            "points":346.4,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6797.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Trevor Lawrence",
+            "points":173.3,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7523.jpg",
+            "is_champion":false
+          }
+        ],
+        "K":[
+          {
+            "name":"Chris Boswell",
+            "points":152.9,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/1945.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Ka'imi Fairbairn",
+            "points":118.4,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/3451.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Jake Moody",
+            "points":80.5,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/10937.jpg",
+            "is_champion":false
+          }
+        ],
+        "DEF":[
+          {
+            "name":"Minnesota Vikings",
+            "points":221.8,
+            "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/min.png",
+            "is_champion":false
+          },
+          {
+            "name":"New England Patriots",
+            "points":119.8,
+            "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/ne.png",
+            "is_champion":false
+          },
+          {
+            "name":"Miami Dolphins",
+            "points":111.5,
+            "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/mia.png",
+            "is_champion":false
+          }
+        ],
+        "TE":[
+          {
+            "name":"Mark Andrews",
+            "points":249.8,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5012.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Tyler Warren",
+            "points":153.9,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12518.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Rob Gronkowski",
+            "points":132.2,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/515.jpg",
+            "is_champion":false
+          }
+        ],
+        "RB":[
+          {
+            "name":"Bijan Robinson",
+            "points":453.4,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9509.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Jonathan Taylor",
+            "points":427.1,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6813.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Kyren Williams",
+            "points":271.8,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8150.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Rachaad White",
+            "points":237.3,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8136.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Leonard Fournette",
+            "points":236.2,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/3969.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Chase Brown",
+            "points":226.7,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9224.jpg",
+            "is_champion":false
+          }
+        ],
+        "WR":[
+          {
+            "name":"Stefon Diggs",
+            "points":346.0,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/2449.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Deebo Samuel",
+            "points":283.0,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5872.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Justin Jefferson",
+            "points":271.8,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6794.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Malik Nabers",
+            "points":218.4,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11632.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Amari Cooper",
+            "points":201.3,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/2309.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Mike Evans",
+            "points":198.7,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/2216.jpg",
+            "is_champion":false
+          }
+        ]
+      },
       "waiver_moves":149,
       "waiver_moves_by_season":[
         {
@@ -5599,6 +7129,12 @@
           "weeks":27,
           "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9758.jpg",
           "is_champion":false
+        },
+        {
+          "name":"Jakobi Meyers",
+          "weeks":26,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5947.jpg",
+          "is_champion":false
         }
       ],
       "most_points":[
@@ -5631,8 +7167,172 @@
           "points":305.0,
           "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9226.jpg",
           "is_champion":false
+        },
+        {
+          "name":"Miles Sanders",
+          "points":268.2,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6151.jpg",
+          "is_champion":true
         }
       ],
+      "scorers_by_position":{
+        "QB":[
+          {
+            "name":"Patrick Mahomes",
+            "points":801.0,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4046.jpg",
+            "is_champion":true
+          },
+          {
+            "name":"C.J. Stroud",
+            "points":408.2,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9758.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Brock Purdy",
+            "points":219.3,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8183.jpg",
+            "is_champion":false
+          }
+        ],
+        "K":[
+          {
+            "name":"Justin Tucker",
+            "points":447.0,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/1264.jpg",
+            "is_champion":true
+          },
+          {
+            "name":"Jake Bates",
+            "points":130.3,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11539.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Chris Boswell",
+            "points":47.0,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/1945.jpg",
+            "is_champion":false
+          }
+        ],
+        "DEF":[
+          {
+            "name":"Philadelphia Eagles",
+            "points":160.2,
+            "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/phi.png",
+            "is_champion":false
+          },
+          {
+            "name":"San Francisco 49ers",
+            "points":139.0,
+            "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/sf.png",
+            "is_champion":false
+          },
+          {
+            "name":"Los Angeles Chargers",
+            "points":101.8,
+            "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/lac.png",
+            "is_champion":false
+          }
+        ],
+        "TE":[
+          {
+            "name":"George Kittle",
+            "points":180.0,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4217.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Brock Bowers",
+            "points":151.5,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11604.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"T.J. Hockenson",
+            "points":121.8,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5844.jpg",
+            "is_champion":false
+          }
+        ],
+        "RB":[
+          {
+            "name":"De'Von Achane",
+            "points":305.0,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9226.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Miles Sanders",
+            "points":268.2,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6151.jpg",
+            "is_champion":true
+          },
+          {
+            "name":"Nick Chubb",
+            "points":262.9,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4988.jpg",
+            "is_champion":true
+          },
+          {
+            "name":"Travis Etienne",
+            "points":256.9,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7543.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Saquon Barkley",
+            "points":226.3,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4866.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Leonard Fournette",
+            "points":204.4,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/3969.jpg",
+            "is_champion":true
+          }
+        ],
+        "WR":[
+          {
+            "name":"Adam Thielen",
+            "points":318.6,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/1689.jpg",
+            "is_champion":true
+          },
+          {
+            "name":"DeVonta Smith",
+            "points":260.9,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7525.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Jakobi Meyers",
+            "points":248.1,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5947.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"DJ Moore",
+            "points":243.1,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4983.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Ja'Marr Chase",
+            "points":221.6,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7564.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Drake London",
+            "points":216.3,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8112.jpg",
+            "is_champion":true
+          }
+        ]
+      },
       "waiver_moves":146,
       "waiver_moves_by_season":[
         {
@@ -6163,6 +7863,12 @@
           "weeks":19,
           "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/den.png",
           "is_champion":false
+        },
+        {
+          "name":"Brandon Aubrey",
+          "weeks":17,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11533.jpg",
+          "is_champion":false
         }
       ],
       "most_points":[
@@ -6195,8 +7901,172 @@
           "points":297.7,
           "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8183.jpg",
           "is_champion":false
+        },
+        {
+          "name":"Ja'Marr Chase",
+          "points":246.2,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7564.jpg",
+          "is_champion":false
         }
       ],
+      "scorers_by_position":{
+        "QB":[
+          {
+            "name":"Patrick Mahomes",
+            "points":316.9,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4046.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Brock Purdy",
+            "points":297.7,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8183.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Joe Burrow",
+            "points":153.3,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6770.jpg",
+            "is_champion":false
+          }
+        ],
+        "K":[
+          {
+            "name":"Brandon Aubrey",
+            "points":188.8,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11533.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Justin Tucker",
+            "points":109.0,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/1264.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Jake Elliott",
+            "points":96.6,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4195.jpg",
+            "is_champion":false
+          }
+        ],
+        "DEF":[
+          {
+            "name":"Denver Broncos",
+            "points":179.8,
+            "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/den.png",
+            "is_champion":false
+          },
+          {
+            "name":"Miami Dolphins",
+            "points":98.8,
+            "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/mia.png",
+            "is_champion":false
+          },
+          {
+            "name":"Baltimore Ravens",
+            "points":47.5,
+            "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/bal.png",
+            "is_champion":false
+          }
+        ],
+        "TE":[
+          {
+            "name":"David Njoku",
+            "points":168.0,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4033.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Dallas Goedert",
+            "points":160.9,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5022.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Mark Andrews",
+            "points":144.4,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5012.jpg",
+            "is_champion":false
+          }
+        ],
+        "RB":[
+          {
+            "name":"D'Andre Swift",
+            "points":305.9,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6790.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Travis Etienne",
+            "points":242.3,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7543.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Javonte Williams",
+            "points":240.6,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7588.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Aaron Jones",
+            "points":218.9,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4199.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Jahmyr Gibbs",
+            "points":218.6,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9221.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"James Conner",
+            "points":171.8,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4137.jpg",
+            "is_champion":false
+          }
+        ],
+        "WR":[
+          {
+            "name":"Ladd McConkey",
+            "points":303.6,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11635.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Jaxon Smith-Njigba",
+            "points":303.5,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9488.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Ja'Marr Chase",
+            "points":246.2,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7564.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Cooper Kupp",
+            "points":212.2,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4039.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"DK Metcalf",
+            "points":201.6,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5846.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Rashee Rice",
+            "points":184.0,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/10229.jpg",
+            "is_champion":false
+          }
+        ]
+      },
       "waiver_moves":103,
       "waiver_moves_by_season":[
         {
@@ -6715,6 +8585,12 @@
           "weeks":17,
           "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6801.jpg",
           "is_champion":false
+        },
+        {
+          "name":"Khalil Shakir",
+          "weeks":17,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8134.jpg",
+          "is_champion":false
         }
       ],
       "most_points":[
@@ -6747,8 +8623,172 @@
           "points":230.0,
           "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8144.jpg",
           "is_champion":false
+        },
+        {
+          "name":"Davante Adams",
+          "points":202.2,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/2133.jpg",
+          "is_champion":false
         }
       ],
+      "scorers_by_position":{
+        "QB":[
+          {
+            "name":"Lamar Jackson",
+            "points":431.1,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4881.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Patrick Mahomes",
+            "points":357.8,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4046.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Jared Goff",
+            "points":120.9,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/3163.jpg",
+            "is_champion":false
+          }
+        ],
+        "K":[
+          {
+            "name":"Cameron Dicker",
+            "points":118.7,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8259.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Jason Sanders",
+            "points":102.7,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5119.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Evan McPherson",
+            "points":55.5,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7839.jpg",
+            "is_champion":false
+          }
+        ],
+        "DEF":[
+          {
+            "name":"Buffalo Bills",
+            "points":162.8,
+            "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/buf.png",
+            "is_champion":false
+          },
+          {
+            "name":"Detroit Lions",
+            "points":76.0,
+            "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/det.png",
+            "is_champion":false
+          },
+          {
+            "name":"Kansas City Chiefs",
+            "points":34.0,
+            "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/kc.png",
+            "is_champion":false
+          }
+        ],
+        "TE":[
+          {
+            "name":"Sam LaPorta",
+            "points":142.0,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/10859.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"T.J. Hockenson",
+            "points":92.0,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5844.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Dalton Schultz",
+            "points":56.4,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5001.jpg",
+            "is_champion":false
+          }
+        ],
+        "RB":[
+          {
+            "name":"Jahmyr Gibbs",
+            "points":323.9,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9221.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Javonte Williams",
+            "points":131.6,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7588.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Bucky Irving",
+            "points":120.2,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11584.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Austin Ekeler",
+            "points":114.3,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4663.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Travis Etienne",
+            "points":112.5,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7543.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Emanuel Wilson",
+            "points":60.3,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11435.jpg",
+            "is_champion":false
+          }
+        ],
+        "WR":[
+          {
+            "name":"Ja'Marr Chase",
+            "points":333.1,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7564.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Chris Olave",
+            "points":230.0,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8144.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Davante Adams",
+            "points":202.2,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/2133.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Tee Higgins",
+            "points":173.2,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6801.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Khalil Shakir",
+            "points":136.4,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8134.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Michael Pittman",
+            "points":128.3,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6819.jpg",
+            "is_champion":false
+          }
+        ]
+      },
       "waiver_moves":24,
       "waiver_moves_by_season":[
         {
