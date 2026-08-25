@@ -566,6 +566,53 @@
   color: var(--color-text-muted);
 }
 
+/* NEU: Zwischenüberschriften in den Legacy Stats */
+.legacy-section-title {
+  font-family: 'Roboto Condensed', Roboto, sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin: 18px 0 8px 0;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.legacy-section-title:first-child {
+  margin-top: 0;
+}
+
+/* NEU: Pro-Saison-Aufschlüsselung als kleine Chip-Reihe */
+.season-breakdown-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.season-breakdown-chip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3px 7px;
+  background-color: var(--color-surface-alt);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  min-width: 34px;
+}
+
+.season-breakdown-season {
+  font-size: 9px;
+  color: var(--color-text-muted);
+}
+
+.season-breakdown-value {
+  font-size: 11px;
+  font-weight: bold;
+  color: var(--color-text);
+}
+
 .legacy-rank {
   color: var(--color-text-muted);
   font-size: 12px;
