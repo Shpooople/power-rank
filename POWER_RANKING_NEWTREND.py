@@ -1008,7 +1008,7 @@ for team in rosters:
     top_performers, bottom_performers, benchwarmer = [], [], None
 
     if match_entry:
-        starters = [s for s in match_entry.get('starters', []) if s and s != '0']
+        starters = [s for s in (match_entry.get('starters') or []) if s and s != '0']
         players_points_week = match_entry.get('players_points', {}) or {}
 
         starter_scores = [(pid, players_points_week.get(pid, 0)) for pid in starters]
@@ -1072,7 +1072,7 @@ for team in rosters:
 
     own_projected_total = 0
     if this_match_entry:
-        this_week_starters = [s for s in this_match_entry.get('starters', []) if s and s != '0']
+        this_week_starters = [s for s in (this_match_entry.get('starters') or []) if s and s != '0']
         own_projected_total = sum(projections_by_player.get(pid, 0) for pid in this_week_starters)
 
     if this_opp_roster_id is not None:
@@ -1083,7 +1083,7 @@ for team in rosters:
 
         opp_projected_total = 0
         if opp_match_entry_this:
-            opp_starters = [s for s in opp_match_entry_this.get('starters', []) if s and s != '0']
+            opp_starters = [s for s in (opp_match_entry_this.get('starters') or []) if s and s != '0']
             opp_projected_total = sum(projections_by_player.get(pid, 0) for pid in opp_starters)
 
         diff = own_projected_total - opp_projected_total
@@ -1405,7 +1405,7 @@ for i, team in enumerate(rosters):
         match_entry = next((m for m in current_week_matchups if m['roster_id'] == team['roster_id']), None)
     if not match_entry:
         continue
-    starters = [s for s in match_entry.get('starters', []) if s and s != '0']
+    starters = [s for s in (match_entry.get('starters') or []) if s and s != '0']
     ppw = match_entry.get('players_points', {}) or {}
     # NEU: historisch korrekter Kader dieser Woche statt aktueller Stand
     week_roster_ids = match_entry.get('players') or team['players']
@@ -1485,7 +1485,7 @@ for i, team in enumerate(rosters):
         match_entry = next((m for m in current_week_matchups if m['roster_id'] == team['roster_id']), None)
     if not match_entry:
         continue
-    starters = [s for s in match_entry.get('starters', []) if s and s != '0']
+    starters = [s for s in (match_entry.get('starters') or []) if s and s != '0']
     ppw = match_entry.get('players_points', {}) or {}
     actual_points = sum(ppw.get(pid, 0) for pid in starters)
     optimal_points = optimal_lineup_points(team, match_entry)
@@ -1512,7 +1512,7 @@ for i, team in enumerate(rosters):
         match_entry = next((m for m in current_week_matchups if m['roster_id'] == team['roster_id']), None)
     if not match_entry:
         continue
-    starters = [s for s in match_entry.get('starters', []) if s and s != '0']
+    starters = [s for s in (match_entry.get('starters') or []) if s and s != '0']
     ppw = match_entry.get('players_points', {}) or {}
     for pid in starters:
         all_starter_scores.append((i, pid, ppw.get(pid, 0)))
@@ -1580,7 +1580,7 @@ if current_week_matchups:
         idx = next((i for i, r in enumerate(rosters) if r['roster_id'] == m['roster_id']), None)
         if idx is None:
             continue
-        starters = [s for s in m.get('starters', []) if s and s != '0']
+        starters = [s for s in (m.get('starters') or []) if s and s != '0']
         ppw = m.get('players_points', {}) or {}
         total_pts = sum(ppw.get(pid, 0) for pid in starters)
         if not total_pts:
@@ -1609,7 +1609,7 @@ if current_week_matchups:
         idx = next((i for i, r in enumerate(rosters) if r['roster_id'] == m['roster_id']), None)
         if idx is None:
             continue
-        starters = [s for s in m.get('starters', []) if s and s != '0']
+        starters = [s for s in (m.get('starters') or []) if s and s != '0']
         total_td = 0
         for pid in starters:
             stats = current_week_player_stats.get(pid, {})
@@ -1634,7 +1634,7 @@ if current_week_matchups:
         idx = next((i for i, r in enumerate(rosters) if r['roster_id'] == m['roster_id']), None)
         if idx is None:
             continue
-        starters = [s for s in m.get('starters', []) if s and s != '0']
+        starters = [s for s in (m.get('starters') or []) if s and s != '0']
         ppw = m.get('players_points', {}) or {}
         zero_players = [pid for pid in starters if ppw.get(pid, 0) == 0]
         if zero_players:
@@ -1655,7 +1655,7 @@ if current_week_matchups:
         idx = next((i for i, r in enumerate(rosters) if r['roster_id'] == m['roster_id']), None)
         if idx is None:
             continue
-        starters = [s for s in m.get('starters', []) if s and s != '0']
+        starters = [s for s in (m.get('starters') or []) if s and s != '0']
         ppw = m.get('players_points', {}) or {}
         kicker_pts, rb_pts, wr_pts, qb_pts = None, [], [], []
         for pid in starters:
@@ -1690,7 +1690,7 @@ if current_week_matchups:
         idx = next((i for i, r in enumerate(rosters) if r['roster_id'] == m['roster_id']), None)
         if idx is None:
             continue
-        starters = [s for s in m.get('starters', []) if s and s != '0']
+        starters = [s for s in (m.get('starters') or []) if s and s != '0']
         ppw = m.get('players_points', {}) or {}
         def_pts, rb_pts_d, wr_pts_d, qb_pts_d = None, [], [], []
         for pid in starters:
