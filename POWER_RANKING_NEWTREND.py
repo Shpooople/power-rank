@@ -1208,7 +1208,20 @@ df["POWER_RANK_DELTA"] = df.apply(lambda row: rank_delta_for(row["User ID"], row
 # Archivieren nur beim automatischen Zeitplan-Lauf UND nur mit echten
 # Saison-Daten - solange nur der Vorsaison-Fallback aktiv ist, gibt es
 # nichts Sinnvolles zu archivieren.
-should_archive = os.environ.get("ARCHIVE_SNAPSHOT") == "true" and not using_previous_season_chart_data
+# NEU: Zusätzlich prüfen, ob in der aktuellen Woche überhaupt schon jemand
+# Punkte gemacht hat. Lücke: Sleeper meldet "season_type: regular" bereits
+# ab Kickoff der Woche 1 - VOR den ersten Ergebnissen. Der Vorsaison-Fallback
+# greift dann nicht mehr, es gibt aber noch keine echten Daten. Ohne diese
+# Prüfung würde in genau diesem kurzen Fenster ein leerer Wochen-Schnappschuss
+# dauerhaft archiviert werden.
+current_week_has_scores = any(pts > 0 for pts in weekly_points.get(current_week, []))
+should_archive = (
+    os.environ.get("ARCHIVE_SNAPSHOT") == "true"
+    and not using_previous_season_chart_data
+    and current_week_has_scores
+)
+if os.environ.get("ARCHIVE_SNAPSHOT") == "true" and not using_previous_season_chart_data and not current_week_has_scores:
+    print(f"Archivierung übersprungen: Woche {current_week} hat noch keine Ergebnisse (Saison hat gerade erst begonnen).")
 
 # --- NEU: Rang pro Position (1 = stärkstes Team der Liga in dieser Kategorie) ---
 # Wird für die farbcodierte Bar-Chart-Anzeige gebraucht (Wert + Rang beim Tap/Hover)
