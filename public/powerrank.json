@@ -3,36 +3,36 @@
     "User ID":"716284640708587520",
     "Display Name":"Shpooople",
     "Team Name":"Schlemmerfilet Bortleaise",
-    "Wins":0,
+    "Wins":2,
     "Losses":0,
     "Ties":0,
-    "Points For":0,
-    "Points Against":0,
+    "Points For":182,
+    "Points Against":118,
     "Adjusted Average":0,
     "TREND":"NO TREND",
     "Trend Percentage":0,
-    "QB Strength":0,
-    "RB Strength":0,
-    "WR Strength":0,
+    "QB Strength":100,
+    "RB Strength":100,
+    "WR Strength":71,
     "TE Strength":0,
-    "K Strength":0,
+    "K Strength":53,
     "QB Strength Count":1,
-    "RB Strength Count":4,
-    "WR Strength Count":2,
+    "RB Strength Count":3,
+    "WR Strength Count":3,
     "TE Strength Count":1,
     "K Strength Count":1,
-    "Bench Strength":0,
+    "Bench Strength":45,
     "Bench Strength Count":3,
     "QB":[
       {
         "name":"Caleb Williams",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11560.jpg",
-        "total_pts":0,
-        "comp":0,
-        "att":0,
-        "pass_yd":0,
-        "rush_yd":0,
-        "td":0,
+        "total_pts":37.3,
+        "comp":21,
+        "att":29,
+        "pass_yd":269,
+        "rush_yd":65,
+        "td":4,
         "my_guy":true,
         "my_guy_seasons":3,
         "in_bank":false,
@@ -43,11 +43,11 @@
       {
         "name":"Derrick Henry",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/3198.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
-        "td":0,
+        "total_pts":34.8,
+        "att":24,
+        "yd":144,
+        "ypc":6.0,
+        "td":3,
         "my_guy":false,
         "my_guy_seasons":2,
         "in_bank":false,
@@ -56,24 +56,24 @@
       {
         "name":"Tony Pollard",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5967.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
+        "total_pts":3.9,
+        "att":7,
+        "yd":35,
+        "ypc":5.0,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
-        "in_bank":false,
-        "in_strength":true
+        "in_bank":true,
+        "in_strength":false
       },
       {
         "name":"D'Andre Swift",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6790.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
-        "td":0,
+        "total_pts":31.9,
+        "att":18,
+        "yd":124,
+        "ypc":6.9,
+        "td":3,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
@@ -82,11 +82,11 @@
       {
         "name":"Chase Brown",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9224.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
-        "td":0,
+        "total_pts":16.3,
+        "att":16,
+        "yd":56,
+        "ypc":3.5,
+        "td":1,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
@@ -95,14 +95,14 @@
       {
         "name":"Keaton Mitchell",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9511.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
+        "total_pts":0.9,
+        "att":4,
+        "yd":9,
+        "ypc":2.2,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":2,
-        "in_bank":true,
+        "in_bank":false,
         "in_strength":false
       }
     ],
@@ -110,10 +110,10 @@
       {
         "name":"Michael Wilson",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/10232.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
+        "total_pts":8.1,
+        "targets":7,
+        "catches":5,
+        "yd":56,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
@@ -123,15 +123,28 @@
       {
         "name":"Ja'Kobi Lane",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/13293.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
+        "total_pts":1.6,
+        "targets":3,
+        "catches":1,
+        "yd":11,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
-        "in_strength":true
+        "in_strength":false
+      },
+      {
+        "name":"Chris Bell",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/13311.jpg",
+        "total_pts":3.0,
+        "targets":2,
+        "catches":1,
+        "yd":25,
+        "td":0,
+        "my_guy":false,
+        "my_guy_seasons":1,
+        "in_bank":true,
+        "in_strength":false
       },
       {
         "name":"De'Zhaun Stribling",
@@ -142,17 +155,17 @@
         "yd":0,
         "td":0,
         "my_guy":false,
-        "my_guy_seasons":1,
-        "in_bank":true,
+        "my_guy_seasons":0,
+        "in_bank":false,
         "in_strength":false
       },
       {
         "name":"Davante Adams",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/2133.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
+        "total_pts":4.1,
+        "targets":6,
+        "catches":3,
+        "yd":26,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":2,
@@ -162,28 +175,28 @@
       {
         "name":"Deebo Samuel",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5872.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
-        "td":0,
+        "total_pts":15.0,
+        "targets":7,
+        "catches":6,
+        "yd":48,
+        "td":1,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
-        "in_strength":false
+        "in_strength":true
       },
       {
         "name":"Parker Washington",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9487.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
-        "td":0,
+        "total_pts":16.8,
+        "targets":6,
+        "catches":5,
+        "yd":83,
+        "td":1,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
-        "in_strength":false
+        "in_strength":true
       }
     ],
     "TE":[
@@ -191,7 +204,7 @@
         "name":"Colston Loveland",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12517.jpg",
         "total_pts":0,
-        "targets":0,
+        "targets":2,
         "catches":0,
         "yd":0,
         "td":0,
@@ -205,11 +218,11 @@
       {
         "name":"Eddy Pineiro",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5189.jpg",
-        "total_pts":0,
-        "fgm":0,
-        "fga":0,
-        "xpm":0,
-        "xpa":0,
+        "total_pts":10.0,
+        "fgm":2,
+        "fga":3,
+        "xpm":3,
+        "xpa":3,
         "my_guy":false,
         "my_guy_seasons":2,
         "in_bank":false,
@@ -218,15 +231,15 @@
     ],
     "DEF":[
       {
-        "name":"Detroit Lions",
-        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/det.png",
-        "total_pts":0,
-        "sack":0,
-        "int":0,
-        "fum_rec":0,
+        "name":"Las Vegas Raiders",
+        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/lv.png",
+        "total_pts":15.0,
+        "sack":5,
+        "int":1,
+        "fum_rec":1,
         "td":0,
         "my_guy":false,
-        "my_guy_seasons":2,
+        "my_guy_seasons":1,
         "in_bank":false,
         "in_strength":true
       }
@@ -235,103 +248,102 @@
       {
         "name":"Caleb Williams",
         "position":"QB",
-        "points":0.0,
+        "points":42.9,
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11560.jpg",
-        "total_pts":0,
-        "comp":0,
-        "att":0,
-        "pass_yd":0,
-        "rush_yd":0,
-        "td":0
+        "total_pts":37.3,
+        "comp":21,
+        "att":29,
+        "pass_yd":269,
+        "rush_yd":65,
+        "td":4
       },
       {
         "name":"Derrick Henry",
         "position":"RB",
-        "points":0.0,
+        "points":36.0,
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/3198.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
-        "td":0
+        "total_pts":34.8,
+        "att":24,
+        "yd":144,
+        "ypc":6.0,
+        "td":3
       },
       {
-        "name":"Chase Brown",
+        "name":"D'Andre Swift",
         "position":"RB",
-        "points":0.0,
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9224.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
-        "td":0
+        "points":32.6,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6790.jpg",
+        "total_pts":31.9,
+        "att":18,
+        "yd":124,
+        "ypc":6.9,
+        "td":3
       }
     ],
     "BOTTOM_PERFORMERS":[
       {
-        "name":"Caleb Williams",
-        "position":"QB",
+        "name":"Colston Loveland",
+        "position":"TE",
         "points":0.0,
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11560.jpg",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12517.jpg",
         "total_pts":0,
-        "comp":0,
-        "att":0,
-        "pass_yd":0,
-        "rush_yd":0,
+        "targets":2,
+        "catches":0,
+        "yd":0,
         "td":0
       },
       {
-        "name":"Derrick Henry",
+        "name":"Tony Pollard",
         "position":"RB",
-        "points":0.0,
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/3198.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
+        "points":4.2,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5967.jpg",
+        "total_pts":3.9,
+        "att":7,
+        "yd":35,
+        "ypc":5.0,
         "td":0
       },
       {
-        "name":"Chase Brown",
-        "position":"RB",
-        "points":0.0,
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9224.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
+        "name":"Davante Adams",
+        "position":"WR",
+        "points":4.3,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/2133.jpg",
+        "total_pts":4.1,
+        "targets":6,
+        "catches":3,
+        "yd":26,
         "td":0
       }
     ],
     "BENCHWARMER":{
-      "name":"Michael Wilson",
+      "name":"Deebo Samuel",
       "position":"WR",
-      "points":0.0,
-      "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/10232.jpg",
-      "total_pts":0,
-      "targets":0,
-      "catches":0,
-      "yd":0,
-      "td":0
+      "points":15.8,
+      "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5872.jpg",
+      "total_pts":15.0,
+      "targets":7,
+      "catches":6,
+      "yd":48,
+      "td":1
     },
-    "LAST_WEEK_OPPONENT":"Addison Rae",
+    "LAST_WEEK_OPPONENT":"BurrowButker and the Boys",
     "LAST_WEEK_RESULT":{
-      "own_points":0.0,
-      "opponent_points":0.0,
-      "outcome":"Unentschieden"
+      "own_points":182.5,
+      "opponent_points":118.5,
+      "outcome":"Sieg"
     },
     "THIS_WEEK_OPPONENT":"SalvationIsLuthersBurden",
-    "THIS_WEEK_WIN_PROB":47.0,
-    "POWER RANK":6,
-    "Power Rank Score":6.5,
+    "THIS_WEEK_WIN_PROB":47.9,
+    "POWER RANK":2,
+    "Power Rank Score":4.3,
     "LAST_WEEK_POWER_RANK":null,
     "POWER_RANK_DELTA":null,
     "QB Strength Rank":1,
     "RB Strength Rank":1,
-    "WR Strength Rank":1,
-    "TE Strength Rank":1,
-    "K Strength Rank":1,
-    "Bench Strength Rank":1,
+    "WR Strength Rank":7,
+    "TE Strength Rank":11,
+    "K Strength Rank":4,
+    "Bench Strength Rank":10,
     "TREND Rank":6,
     "Adjusted Average Rank":6,
     "BADGES":[
@@ -348,48 +360,73 @@
         "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/sf.png"
       },
       {
-        "icon":"bench",
-        "label":"Bankdrücker",
-        "description":"0.0 Punkte auf der Bank liegen gelassen - autsch."
+        "icon":"hammer",
+        "label":"Kantersieg",
+        "description":"Sieg mit 64.0 Punkten Vorsprung - eine klare Machtdemonstration."
       },
       {
         "icon":"crown",
         "label":"Liga-Krösus",
-        "description":"0.0 Punkte - Highscore der Liga in dieser Woche."
+        "description":"182.51 Punkte - Highscore der Liga in dieser Woche."
       },
       {
         "icon":"bigbang",
         "label":"Big Bang",
-        "description":"Caleb Williams mit 0.0 Punkten - die stärkste Einzelleistung der Liga diese Woche."
+        "description":"Caleb Williams mit 42.86 Punkten - die stärkste Einzelleistung der Liga diese Woche."
       },
       {
         "icon":"bust",
         "label":"Totalausfall",
-        "description":"Caleb Williams mit nur 0.0 Punkten - schwächste Starter-Leistung der Liga diese Woche."
+        "description":"Colston Loveland mit nur 0.0 Punkten - schwächste Starter-Leistung der Liga diese Woche."
+      },
+      {
+        "icon":"dragon",
+        "label":"Angstgegner",
+        "description":"182.5 Punkte Schnitt pro Woche - das Team, das niemand gerne trifft."
+      },
+      {
+        "icon":"wizard",
+        "label":"Waiver-Wire-Wizard",
+        "description":"2 Waiver-Adds diese Saison - der fleißigste Kader-Bastler der Liga."
+      },
+      {
+        "icon":"groundpound",
+        "label":"Ground and Pound",
+        "description":"49.3% der Punkte diese Woche kamen von den RBs - volle Kontrolle am Boden."
+      },
+      {
+        "icon":"touchdown",
+        "label":"Touchdown Overflow",
+        "description":"12 Touchdowns in der vergangenen Woche - der meiste Endzonen-Spaß der Liga."
       },
       {
         "icon":"egg",
         "label":"Klingeling, hier kommt der Eiermann",
-        "description":"Caleb Williams, Derrick Henry, Chase Brown, Davante Adams, Parker Washington, Colston Loveland, D'Andre Swift, Tony Pollard, Eddy Pineiro, Detroit Lions mit 0 Punkten in der Startaufstellung - ein Ei gelegt."
+        "description":"Colston Loveland mit 0 Punkten in der Startaufstellung - ein Ei gelegt."
       },
       {
         "icon":"ruin",
         "label":"Ärmstes Team",
         "description":"Nur noch 100 FAAB übrig - Waiver-Wire-Bettler."
+      },
+      {
+        "icon":"kindergarten",
+        "label":"Kindergarten",
+        "description":"3 Rookies im Kader - die Zukunft der Liga (hoffentlich)."
       }
     ],
     "COMMENTS":"TESTESTEST",
     "FAAB_REMAINING":100,
     "LEGACY_STATS":{
-      "win_pct":56.8,
-      "wins":54,
+      "win_pct":57.7,
+      "wins":56,
       "losses":41,
       "ties":0,
-      "all_time_points":8395.3,
+      "all_time_points":8577.8,
       "points_by_season":[
         {
           "season":"2026",
-          "points":0.0
+          "points":182.5
         },
         {
           "season":"2025",
@@ -578,16 +615,16 @@
             "is_champion":false
           },
           {
+            "name":"Derrick Henry",
+            "points":309.9,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/3198.jpg",
+            "is_champion":true
+          },
+          {
             "name":"Rhamondre Stevenson",
             "points":300.7,
             "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7611.jpg",
             "is_champion":false
-          },
-          {
-            "name":"Derrick Henry",
-            "points":273.9,
-            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/3198.jpg",
-            "is_champion":true
           },
           {
             "name":"Dameon Pierce",
@@ -629,7 +666,7 @@
           },
           {
             "name":"Davante Adams",
-            "points":286.2,
+            "points":290.6,
             "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/2133.jpg",
             "is_champion":false
           },
@@ -647,8 +684,12 @@
           }
         ]
       },
-      "waiver_moves":302,
+      "waiver_moves":304,
       "waiver_moves_by_season":[
+        {
+          "season":"2026",
+          "count":2
+        },
         {
           "season":"2025",
           "count":67
@@ -731,7 +772,7 @@
       "low_week":{
         "points":0.0,
         "season":"2026",
-        "week":1
+        "week":2
       },
       "high_player_week":{
         "points":48.1,
@@ -742,8 +783,8 @@
       "angstgegner":{
         "name":"benjyalf",
         "wins":5,
-        "losses":0,
-        "ties":2
+        "losses":1,
+        "ties":1
       },
       "opfer":{
         "name":"TinyDancerTiez",
@@ -754,7 +795,7 @@
       "win_pct_rank":3,
       "waiver_moves_rank":1,
       "trades_rank":1,
-      "all_time_points_rank":4,
+      "all_time_points_rank":3,
       "avg_placement_rank":1,
       "high_week_rank":8,
       "low_week_rank":1,
@@ -763,10 +804,10 @@
     "QUIZ_SCORES":[
       {
         "name":"Michi",
-        "score":0
+        "score":2
       }
     ],
-    "Week 1":0.0,
+    "Week 1":182.51,
     "DISPLAY_WEEK_LABEL":"Woche 1"
   },
   {
@@ -774,34 +815,34 @@
     "Display Name":"Sternburg1000",
     "Team Name":"Always sunny´n Scarycity",
     "Wins":0,
-    "Losses":0,
+    "Losses":2,
     "Ties":0,
-    "Points For":0,
-    "Points Against":0,
+    "Points For":95,
+    "Points Against":153,
     "Adjusted Average":0,
     "TREND":"NO TREND",
     "Trend Percentage":0,
-    "QB Strength":0,
-    "RB Strength":0,
-    "WR Strength":0,
-    "TE Strength":0,
-    "K Strength":0,
+    "QB Strength":14,
+    "RB Strength":43,
+    "WR Strength":84,
+    "TE Strength":14,
+    "K Strength":5,
     "QB Strength Count":1,
-    "RB Strength Count":4,
-    "WR Strength Count":2,
+    "RB Strength Count":3,
+    "WR Strength Count":3,
     "TE Strength Count":1,
     "K Strength Count":1,
-    "Bench Strength":0,
+    "Bench Strength":23,
     "Bench Strength Count":3,
     "QB":[
       {
         "name":"Matthew Stafford",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/421.jpg",
-        "total_pts":0,
-        "comp":0,
-        "att":0,
-        "pass_yd":0,
-        "rush_yd":0,
+        "total_pts":5.1,
+        "comp":15,
+        "att":25,
+        "pass_yd":155,
+        "rush_yd":-1,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":2,
@@ -813,10 +854,10 @@
       {
         "name":"Blake Corum",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11586.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
+        "total_pts":5.4,
+        "att":10,
+        "yd":54,
+        "ypc":5.4,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
@@ -834,28 +875,28 @@
         "my_guy":false,
         "my_guy_seasons":2,
         "in_bank":false,
-        "in_strength":true
+        "in_strength":false
       },
       {
         "name":"Kenny Gainwell",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7567.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
+        "total_pts":2.3,
+        "att":5,
+        "yd":15,
+        "ypc":3.0,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
-        "in_bank":false,
-        "in_strength":true
+        "in_bank":true,
+        "in_strength":false
       },
       {
         "name":"Brian Robinson",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8154.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
+        "total_pts":3.1,
+        "att":9,
+        "yd":31,
+        "ypc":3.4,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":2,
@@ -872,32 +913,32 @@
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
-        "in_bank":true,
+        "in_bank":false,
         "in_strength":false
       },
       {
         "name":"Bijan Robinson",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9509.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
-        "td":0,
+        "total_pts":27.3,
+        "att":21,
+        "yd":83,
+        "ypc":4.0,
+        "td":1,
         "my_guy":false,
         "my_guy_seasons":1,
-        "in_bank":true,
-        "in_strength":false
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "WR":[
       {
         "name":"Ladd McConkey",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11635.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
-        "td":0,
+        "total_pts":16.7,
+        "targets":7,
+        "catches":5,
+        "yd":82,
+        "td":1,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
@@ -906,10 +947,36 @@
       {
         "name":"Terry McLaurin",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5927.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
+        "total_pts":2.4,
+        "targets":4,
+        "catches":2,
+        "yd":14,
+        "td":0,
+        "my_guy":false,
+        "my_guy_seasons":2,
+        "in_bank":true,
+        "in_strength":false
+      },
+      {
+        "name":"Khalil Shakir",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8134.jpg",
+        "total_pts":7.0,
+        "targets":6,
+        "catches":4,
+        "yd":50,
+        "td":0,
+        "my_guy":false,
+        "my_guy_seasons":1,
+        "in_bank":false,
+        "in_strength":true
+      },
+      {
+        "name":"Chris Olave",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8144.jpg",
+        "total_pts":23.2,
+        "targets":13,
+        "catches":10,
+        "yd":182,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":2,
@@ -917,42 +984,16 @@
         "in_strength":true
       },
       {
-        "name":"Khalil Shakir",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8134.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
-        "td":0,
-        "my_guy":false,
-        "my_guy_seasons":1,
-        "in_bank":true,
-        "in_strength":false
-      },
-      {
-        "name":"Chris Olave",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8144.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
-        "td":0,
-        "my_guy":false,
-        "my_guy_seasons":2,
-        "in_bank":false,
-        "in_strength":false
-      },
-      {
         "name":"Rashid Shaheed",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8676.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
+        "total_pts":0.9,
+        "targets":3,
+        "catches":1,
+        "yd":4,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":2,
-        "in_bank":false,
+        "in_bank":true,
         "in_strength":false
       }
     ],
@@ -968,6 +1009,19 @@
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
+        "in_strength":false
+      },
+      {
+        "name":"Michael Mayer",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9482.jpg",
+        "total_pts":6.2,
+        "targets":7,
+        "catches":6,
+        "yd":32,
+        "td":0,
+        "my_guy":false,
+        "my_guy_seasons":1,
+        "in_bank":false,
         "in_strength":true
       }
     ],
@@ -975,11 +1029,11 @@
       {
         "name":"Brandon Aubrey",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11533.jpg",
-        "total_pts":0,
+        "total_pts":1.0,
         "fgm":0,
         "fga":0,
-        "xpm":0,
-        "xpa":0,
+        "xpm":2,
+        "xpa":3,
         "my_guy":true,
         "my_guy_seasons":3,
         "in_bank":false,
@@ -990,134 +1044,124 @@
       {
         "name":"Los Angeles Rams",
         "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/lar.png",
-        "total_pts":0,
+        "total_pts":2.0,
         "sack":0,
-        "int":0,
+        "int":1,
         "fum_rec":0,
         "td":0,
         "my_guy":true,
         "my_guy_seasons":4,
         "in_bank":false,
         "in_strength":true
-      },
-      {
-        "name":"Minnesota Vikings",
-        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/min.png",
-        "total_pts":0,
-        "sack":0,
-        "int":0,
-        "fum_rec":0,
-        "td":0,
-        "my_guy":false,
-        "my_guy_seasons":1,
-        "in_bank":false,
-        "in_strength":false
       }
     ],
     "TOP_PERFORMERS":[
       {
-        "name":"Matthew Stafford",
-        "position":"QB",
-        "points":0.0,
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/421.jpg",
-        "total_pts":0,
-        "comp":0,
-        "att":0,
-        "pass_yd":0,
-        "rush_yd":0,
-        "td":0
-      },
-      {
         "name":"Bijan Robinson",
         "position":"RB",
-        "points":0.0,
+        "points":27.3,
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9509.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
+        "total_pts":27.3,
+        "att":21,
+        "yd":83,
+        "ypc":4.0,
+        "td":1
+      },
+      {
+        "name":"Chris Olave",
+        "position":"WR",
+        "points":24.9,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8144.jpg",
+        "total_pts":23.2,
+        "targets":13,
+        "catches":10,
+        "yd":182,
         "td":0
       },
       {
-        "name":"Kenny Gainwell",
-        "position":"RB",
-        "points":0.0,
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7567.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
-        "td":0
+        "name":"Ladd McConkey",
+        "position":"WR",
+        "points":17.7,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11635.jpg",
+        "total_pts":16.7,
+        "targets":7,
+        "catches":5,
+        "yd":82,
+        "td":1
       }
     ],
     "BOTTOM_PERFORMERS":[
       {
-        "name":"Matthew Stafford",
-        "position":"QB",
-        "points":0.0,
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/421.jpg",
-        "total_pts":0,
-        "comp":0,
-        "att":0,
-        "pass_yd":0,
-        "rush_yd":0,
-        "td":0
+        "name":"Brandon Aubrey",
+        "position":"K",
+        "points":1.0,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11533.jpg",
+        "total_pts":1.0,
+        "fgm":0,
+        "fga":0,
+        "xpm":2,
+        "xpa":3
       },
       {
-        "name":"Bijan Robinson",
-        "position":"RB",
-        "points":0.0,
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9509.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
+        "name":"Los Angeles Rams",
+        "position":"DEF",
+        "points":1.2,
+        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/lar.png",
+        "total_pts":2.0,
+        "sack":0,
+        "int":1,
+        "fum_rec":0,
         "td":0
       },
       {
         "name":"Kenny Gainwell",
         "position":"RB",
-        "points":0.0,
+        "points":2.5,
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7567.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
+        "total_pts":2.3,
+        "att":5,
+        "yd":15,
+        "ypc":3.0,
         "td":0
       }
     ],
     "BENCHWARMER":{
-      "name":"James Conner",
-      "position":"RB",
-      "points":0.0,
-      "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4137.jpg",
-      "total_pts":0,
-      "att":0,
-      "yd":0,
-      "ypc":0,
+      "name":"Khalil Shakir",
+      "position":"WR",
+      "points":7.5,
+      "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8134.jpg",
+      "total_pts":7.0,
+      "targets":6,
+      "catches":4,
+      "yd":50,
       "td":0
     },
     "LAST_WEEK_OPPONENT":"Two Daddies One Bride ",
     "LAST_WEEK_RESULT":{
-      "own_points":0.0,
-      "opponent_points":0.0,
-      "outcome":"Unentschieden"
+      "own_points":95.8,
+      "opponent_points":153.8,
+      "outcome":"Niederlage"
     },
     "THIS_WEEK_OPPONENT":"sandmann1ps",
-    "THIS_WEEK_WIN_PROB":40.3,
-    "POWER RANK":6,
-    "Power Rank Score":6.5,
+    "THIS_WEEK_WIN_PROB":36.0,
+    "POWER RANK":11,
+    "Power Rank Score":8.5,
     "LAST_WEEK_POWER_RANK":null,
     "POWER_RANK_DELTA":null,
-    "QB Strength Rank":1,
-    "RB Strength Rank":1,
-    "WR Strength Rank":1,
-    "TE Strength Rank":1,
-    "K Strength Rank":1,
-    "Bench Strength Rank":1,
+    "QB Strength Rank":12,
+    "RB Strength Rank":7,
+    "WR Strength Rank":4,
+    "TE Strength Rank":8,
+    "K Strength Rank":11,
+    "Bench Strength Rank":12,
     "TREND Rank":6,
     "Adjusted Average Rank":6,
     "BADGES":[
+      {
+        "icon":"hospital",
+        "label":"The Hospital",
+        "description":"4 verletzte Spieler im Kader (Out\/IR\/Questionable\/Doubtful) - die größte Krankenstation der Liga."
+      },
       {
         "icon":"homer",
         "label":"LAR-Homer",
@@ -1125,9 +1169,9 @@
         "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/lar.png"
       },
       {
-        "icon":"egg",
-        "label":"Klingeling, hier kommt der Eiermann",
-        "description":"Matthew Stafford, Bijan Robinson, Kenny Gainwell, Chris Olave, Ladd McConkey, Brock Bowers, Terry McLaurin, Blake Corum, Brandon Aubrey, Minnesota Vikings mit 0 Punkten in der Startaufstellung - ein Ei gelegt."
+        "icon":"airraid",
+        "label":"Air Raid",
+        "description":"47.3% der Punkte diese Woche kamen von den WRs - reine Luftshow."
       },
       {
         "icon":"ruin",
@@ -1138,15 +1182,15 @@
     "COMMENTS":"TESTESTETS",
     "FAAB_REMAINING":100,
     "LEGACY_STATS":{
-      "win_pct":47.4,
+      "win_pct":46.4,
       "wins":45,
-      "losses":50,
+      "losses":52,
       "ties":0,
-      "all_time_points":7917.4,
+      "all_time_points":8013.3,
       "points_by_season":[
         {
           "season":"2026",
-          "points":0.0
+          "points":95.8
         },
         {
           "season":"2025",
@@ -1169,7 +1213,7 @@
           "points":1300.3
         }
       ],
-      "avg_placement":6.3,
+      "avg_placement":8.0,
       "most_weeks":[
         {
           "name":"Los Angeles Rams",
@@ -1223,7 +1267,7 @@
         },
         {
           "name":"Matthew Stafford",
-          "points":406.9,
+          "points":412.5,
           "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/421.jpg",
           "is_champion":false
         },
@@ -1256,7 +1300,7 @@
           },
           {
             "name":"Matthew Stafford",
-            "points":406.9,
+            "points":412.5,
             "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/421.jpg",
             "is_champion":false
           },
@@ -1270,7 +1314,7 @@
         "K":[
           {
             "name":"Brandon Aubrey",
-            "points":291.1,
+            "points":292.1,
             "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11533.jpg",
             "is_champion":true
           },
@@ -1290,7 +1334,7 @@
         "DEF":[
           {
             "name":"Los Angeles Rams",
-            "points":319.2,
+            "points":320.5,
             "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/lar.png",
             "is_champion":false
           },
@@ -1397,18 +1441,18 @@
             "is_champion":true
           },
           {
-            "name":"Puka Nacua",
-            "points":178.4,
-            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9493.jpg",
-            "is_champion":true
+            "name":"Chris Olave",
+            "points":185.4,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8144.jpg",
+            "is_champion":false
           }
         ]
       },
-      "waiver_moves":173,
+      "waiver_moves":174,
       "waiver_moves_by_season":[
         {
           "season":"2026",
-          "count":1
+          "count":2
         },
         {
           "season":"2025",
@@ -1457,7 +1501,7 @@
       "placements":[
         {
           "season":"2026",
-          "place":8
+          "place":18
         },
         {
           "season":"2025",
@@ -1488,7 +1532,7 @@
       "low_week":{
         "points":0.0,
         "season":"2026",
-        "week":1
+        "week":2
       },
       "high_player_week":{
         "points":47.95,
@@ -1512,7 +1556,7 @@
       "waiver_moves_rank":4,
       "trades_rank":3,
       "all_time_points_rank":9,
-      "avg_placement_rank":3,
+      "avg_placement_rank":6,
       "high_week_rank":3,
       "low_week_rank":2,
       "high_player_week_rank":9
@@ -1523,71 +1567,71 @@
         "score":0
       }
     ],
-    "Week 1":0.0,
+    "Week 1":95.85,
     "DISPLAY_WEEK_LABEL":"Woche 1"
   },
   {
     "User ID":"718524962947801088",
     "Display Name":"Schleckeracci",
     "Team Name":"Two Daddies One Bride ",
-    "Wins":0,
+    "Wins":2,
     "Losses":0,
     "Ties":0,
-    "Points For":0,
-    "Points Against":0,
+    "Points For":153,
+    "Points Against":95,
     "Adjusted Average":0,
     "TREND":"NO TREND",
     "Trend Percentage":0,
-    "QB Strength":0,
-    "RB Strength":0,
-    "WR Strength":0,
-    "TE Strength":0,
-    "K Strength":0,
+    "QB Strength":41,
+    "RB Strength":65,
+    "WR Strength":43,
+    "TE Strength":44,
+    "K Strength":63,
     "QB Strength Count":1,
     "RB Strength Count":4,
     "WR Strength Count":2,
     "TE Strength Count":1,
     "K Strength Count":1,
-    "Bench Strength":0,
+    "Bench Strength":46,
     "Bench Strength Count":3,
     "QB":[
       {
         "name":"Bo Nix",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11563.jpg",
-        "total_pts":0,
-        "comp":0,
-        "att":0,
-        "pass_yd":0,
-        "rush_yd":0,
-        "td":0,
+        "total_pts":6.4,
+        "comp":17,
+        "att":28,
+        "pass_yd":131,
+        "rush_yd":2,
+        "td":1,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
-        "in_strength":true
+        "in_strength":false
       },
       {
         "name":"Dak Prescott",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/3294.jpg",
-        "total_pts":0,
-        "comp":0,
-        "att":0,
-        "pass_yd":0,
-        "rush_yd":0,
-        "td":0,
+        "total_pts":15.4,
+        "comp":22,
+        "att":34,
+        "pass_yd":175,
+        "rush_yd":14,
+        "td":2,
         "my_guy":false,
         "my_guy_seasons":2,
         "in_bank":false,
-        "in_strength":false
+        "in_strength":true
       }
     ],
     "RB":[
       {
         "name":"Quinshon Judkins",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12512.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
+        "total_pts":6.0,
+        "att":12,
+        "yd":33,
+        "ypc":2.8,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
@@ -1597,11 +1641,11 @@
       {
         "name":"Jacory Croskey-Merritt",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12533.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
-        "td":0,
+        "total_pts":12.1,
+        "att":16,
+        "yd":63,
+        "ypc":3.9,
+        "td":1,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
@@ -1610,11 +1654,11 @@
       {
         "name":"Jonathan Taylor",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6813.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
-        "td":0,
+        "total_pts":23.6,
+        "att":19,
+        "yd":98,
+        "ypc":5.2,
+        "td":2,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
@@ -1623,10 +1667,10 @@
       {
         "name":"Rhamondre Stevenson",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7611.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
+        "total_pts":12.0,
+        "att":18,
+        "yd":51,
+        "ypc":2.8,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
@@ -1638,36 +1682,36 @@
       {
         "name":"Xavier Worthy",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11624.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
+        "total_pts":3.3,
+        "targets":6,
+        "catches":3,
+        "yd":18,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
-        "in_bank":false,
-        "in_strength":true
+        "in_bank":true,
+        "in_strength":false
       },
       {
         "name":"Courtland Sutton",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5045.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
+        "total_pts":2.1,
+        "targets":5,
+        "catches":2,
+        "yd":11,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":2,
         "in_bank":false,
-        "in_strength":true
+        "in_strength":false
       },
       {
         "name":"Jerry Jeudy",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6783.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
+        "total_pts":3.6,
+        "targets":4,
+        "catches":2,
+        "yd":26,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
@@ -1677,67 +1721,67 @@
       {
         "name":"Nico Collins",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7569.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
-        "td":0,
-        "my_guy":false,
-        "my_guy_seasons":1,
-        "in_bank":true,
-        "in_strength":false
-      },
-      {
-        "name":"Jameson Williams",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8148.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
-        "td":0,
-        "my_guy":false,
-        "my_guy_seasons":1,
-        "in_bank":true,
-        "in_strength":false
-      }
-    ],
-    "TE":[
-      {
-        "name":"Oronde Gadsden",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12493.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
-        "td":0,
+        "total_pts":17.7,
+        "targets":10,
+        "catches":7,
+        "yd":75,
+        "td":1,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
         "in_strength":true
       },
       {
+        "name":"Jameson Williams",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8148.jpg",
+        "total_pts":6.5,
+        "targets":9,
+        "catches":4,
+        "yd":45,
+        "td":0,
+        "my_guy":false,
+        "my_guy_seasons":1,
+        "in_bank":false,
+        "in_strength":true
+      }
+    ],
+    "TE":[
+      {
+        "name":"Oronde Gadsden",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12493.jpg",
+        "total_pts":4.2,
+        "targets":2,
+        "catches":2,
+        "yd":32,
+        "td":0,
+        "my_guy":false,
+        "my_guy_seasons":1,
+        "in_bank":true,
+        "in_strength":false
+      },
+      {
         "name":"Trey McBride",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8130.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
-        "td":0,
+        "total_pts":20.0,
+        "targets":13,
+        "catches":9,
+        "yd":95,
+        "td":1,
         "my_guy":false,
         "my_guy_seasons":2,
         "in_bank":false,
-        "in_strength":false
+        "in_strength":true
       }
     ],
     "K":[
       {
         "name":"Cam Little",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11786.jpg",
-        "total_pts":0,
-        "fgm":0,
-        "fga":0,
-        "xpm":0,
-        "xpa":0,
+        "total_pts":12.0,
+        "fgm":2,
+        "fga":2,
+        "xpm":4,
+        "xpa":4,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
@@ -1748,10 +1792,10 @@
       {
         "name":"Jacksonville Jaguars",
         "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/jax.png",
-        "total_pts":0,
-        "sack":0,
-        "int":0,
-        "fum_rec":0,
+        "total_pts":15.0,
+        "sack":5,
+        "int":1,
+        "fum_rec":1,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":2,
@@ -1761,113 +1805,117 @@
     ],
     "TOP_PERFORMERS":[
       {
-        "name":"Dak Prescott",
-        "position":"QB",
-        "points":0.0,
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/3294.jpg",
-        "total_pts":0,
-        "comp":0,
-        "att":0,
-        "pass_yd":0,
-        "rush_yd":0,
-        "td":0
-      },
-      {
         "name":"Jonathan Taylor",
         "position":"RB",
-        "points":0.0,
+        "points":24.9,
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6813.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
-        "td":0
+        "total_pts":23.6,
+        "att":19,
+        "yd":98,
+        "ypc":5.2,
+        "td":2
       },
       {
-        "name":"Rhamondre Stevenson",
-        "position":"RB",
-        "points":0.0,
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7611.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
-        "td":0
+        "name":"Trey McBride",
+        "position":"TE",
+        "points":21.2,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8130.jpg",
+        "total_pts":20.0,
+        "targets":13,
+        "catches":9,
+        "yd":95,
+        "td":1
+      },
+      {
+        "name":"Dak Prescott",
+        "position":"QB",
+        "points":20.6,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/3294.jpg",
+        "total_pts":15.4,
+        "comp":22,
+        "att":34,
+        "pass_yd":175,
+        "rush_yd":14,
+        "td":2
       }
     ],
     "BOTTOM_PERFORMERS":[
       {
-        "name":"Dak Prescott",
-        "position":"QB",
-        "points":0.0,
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/3294.jpg",
-        "total_pts":0,
-        "comp":0,
-        "att":0,
-        "pass_yd":0,
-        "rush_yd":0,
+        "name":"Quinshon Judkins",
+        "position":"RB",
+        "points":6.5,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12512.jpg",
+        "total_pts":6.0,
+        "att":12,
+        "yd":33,
+        "ypc":2.8,
         "td":0
       },
       {
-        "name":"Jonathan Taylor",
-        "position":"RB",
-        "points":0.0,
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6813.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
+        "name":"Jameson Williams",
+        "position":"WR",
+        "points":7.0,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8148.jpg",
+        "total_pts":6.5,
+        "targets":9,
+        "catches":4,
+        "yd":45,
         "td":0
       },
       {
-        "name":"Rhamondre Stevenson",
+        "name":"Jacory Croskey-Merritt",
         "position":"RB",
-        "points":0.0,
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7611.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
-        "td":0
+        "points":12.6,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12533.jpg",
+        "total_pts":12.1,
+        "att":16,
+        "yd":63,
+        "ypc":3.9,
+        "td":1
       }
     ],
     "BENCHWARMER":{
       "name":"Bo Nix",
       "position":"QB",
-      "points":0.0,
+      "points":6.9,
       "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11563.jpg",
-      "total_pts":0,
-      "comp":0,
-      "att":0,
-      "pass_yd":0,
-      "rush_yd":0,
-      "td":0
+      "total_pts":6.4,
+      "comp":17,
+      "att":28,
+      "pass_yd":131,
+      "rush_yd":2,
+      "td":1
     },
     "LAST_WEEK_OPPONENT":"Always sunny´n Scarycity",
     "LAST_WEEK_RESULT":{
-      "own_points":0.0,
-      "opponent_points":0.0,
-      "outcome":"Unentschieden"
+      "own_points":153.8,
+      "opponent_points":95.8,
+      "outcome":"Sieg"
     },
     "THIS_WEEK_OPPONENT":"pk123",
-    "THIS_WEEK_WIN_PROB":54.8,
-    "POWER RANK":6,
-    "Power Rank Score":6.5,
+    "THIS_WEEK_WIN_PROB":53.6,
+    "POWER RANK":4,
+    "Power Rank Score":5.55,
     "LAST_WEEK_POWER_RANK":null,
     "POWER_RANK_DELTA":null,
-    "QB Strength Rank":1,
-    "RB Strength Rank":1,
-    "WR Strength Rank":1,
-    "TE Strength Rank":1,
-    "K Strength Rank":1,
-    "Bench Strength Rank":1,
+    "QB Strength Rank":8,
+    "RB Strength Rank":4,
+    "WR Strength Rank":10,
+    "TE Strength Rank":3,
+    "K Strength Rank":3,
+    "Bench Strength Rank":9,
     "TREND Rank":6,
     "Adjusted Average Rank":6,
     "BADGES":[
       {
-        "icon":"egg",
-        "label":"Klingeling, hier kommt der Eiermann",
-        "description":"Dak Prescott, Jonathan Taylor, Rhamondre Stevenson, Nico Collins, Jameson Williams, Trey McBride, Quinshon Judkins, Jacory Croskey-Merritt, Cam Little, Jacksonville Jaguars mit 0 Punkten in der Startaufstellung - ein Ei gelegt."
+        "icon":"perfect",
+        "label":"Perfektes Lineup",
+        "description":"100.0% der bestmöglichen Aufstellung ausgeschöpft - kaum Verbesserungspotenzial."
+      },
+      {
+        "icon":"lock",
+        "label":"Punktgenau",
+        "description":"Sieg gegen ein 7 Plätze schlechter platziertes Team - der Favorit hat geliefert."
       },
       {
         "icon":"ruin",
@@ -1878,15 +1926,15 @@
     "COMMENTS":"Man würde meinen, dass die Founding Fathers nach einer 2-Punkte-Woche einen deutlichen Sprung nach oben in den Powerrankings machen müssten. Immerhin haben sie ihre Gesamtpunktzahl um ein Drittel erhöht.\nUnd jeder weiß, dass man in der THF nicht leicht an die heiß begehrten Doppelpunkte kommt. Aber das Powerranking-System sagt: „Ab nach unten mit euch.“\nWie kommt’s?\nDie Pioniere des Co-Managements haben in den letzten drei Wochen einen Schnitt von 106 Punkten. Das ist einfach zu wenig, auch wenn das in Woche 11 noch für zwei Punkte gesorgt hat.\nUnd dabei gibt es fantastische Performances von den Onesie-Positionen. QB, TE und K-Production sind jeweils Top-3, wenn nicht sogar besser. Hilft anscheinend nicht, wenn die RBs und WRs nicht mitspielen.\nUm die Playoffs zu erreichen, müssen sehr viele Würfel richtig fallen, es ist aber noch nicht vorbei.\nDer Deadline-Trade mit Mo gibt mir nochmal Hoffnung, aber ich befürchte, die Boys hätten früher Moves machen müssen und ihre Underperformer mit Big-Name-Value traden sollen.",
     "FAAB_REMAINING":100,
     "LEGACY_STATS":{
-      "win_pct":45.3,
-      "wins":43,
+      "win_pct":46.4,
+      "wins":45,
       "losses":52,
       "ties":0,
-      "all_time_points":8053.2,
+      "all_time_points":8206.9,
       "points_by_season":[
         {
           "season":"2026",
-          "points":0.0
+          "points":153.8
         },
         {
           "season":"2025",
@@ -2056,7 +2104,7 @@
           },
           {
             "name":"Trey McBride",
-            "points":255.6,
+            "points":276.9,
             "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8130.jpg",
             "is_champion":false
           },
@@ -2216,7 +2264,7 @@
       "low_week":{
         "points":0.0,
         "season":"2026",
-        "week":1
+        "week":2
       },
       "high_player_week":{
         "points":53.73,
@@ -2231,16 +2279,16 @@
         "ties":1
       },
       "opfer":{
-        "name":"kobekope",
-        "wins":6,
-        "losses":4,
+        "name":"Sternburg1000",
+        "wins":5,
+        "losses":2,
         "ties":1
       },
       "win_pct_rank":8,
       "waiver_moves_rank":9,
       "trades_rank":10,
       "all_time_points_rank":8,
-      "avg_placement_rank":6,
+      "avg_placement_rank":5,
       "high_week_rank":6,
       "low_week_rank":3,
       "high_player_week_rank":3
@@ -2248,50 +2296,50 @@
     "QUIZ_SCORES":[
       {
         "name":"Till",
-        "score":0
+        "score":1
       },
       {
         "name":"Semih",
         "score":0
       }
     ],
-    "Week 1":0.0,
+    "Week 1":153.75,
     "DISPLAY_WEEK_LABEL":"Woche 1"
   },
   {
     "User ID":"718516055202418688",
     "Display Name":"kobekope",
-    "Team Name":"Alvin had a little Lamb",
+    "Team Name":"𓇳𓋹𓎡𓅓𓂋",
     "Wins":0,
-    "Losses":0,
+    "Losses":2,
     "Ties":0,
-    "Points For":0,
-    "Points Against":0,
+    "Points For":117,
+    "Points Against":135,
     "Adjusted Average":0,
     "TREND":"NO TREND",
     "Trend Percentage":0,
-    "QB Strength":0,
-    "RB Strength":0,
-    "WR Strength":0,
-    "TE Strength":0,
-    "K Strength":0,
+    "QB Strength":47,
+    "RB Strength":43,
+    "WR Strength":68,
+    "TE Strength":47,
+    "K Strength":32,
     "QB Strength Count":1,
-    "RB Strength Count":4,
+    "RB Strength Count":3,
     "WR Strength Count":2,
-    "TE Strength Count":1,
+    "TE Strength Count":2,
     "K Strength Count":1,
-    "Bench Strength":0,
+    "Bench Strength":57,
     "Bench Strength Count":3,
     "QB":[
       {
         "name":"Jayden Daniels",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11566.jpg",
-        "total_pts":0,
-        "comp":0,
-        "att":0,
-        "pass_yd":0,
-        "rush_yd":0,
-        "td":0,
+        "total_pts":17.7,
+        "comp":18,
+        "att":34,
+        "pass_yd":164,
+        "rush_yd":31,
+        "td":2,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
@@ -2302,24 +2350,24 @@
       {
         "name":"MarShawn Lloyd",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11581.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
+        "total_pts":3.7,
+        "att":13,
+        "yd":37,
+        "ypc":2.8,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
-        "in_bank":false,
-        "in_strength":true
+        "in_bank":true,
+        "in_strength":false
       },
       {
         "name":"Bucky Irving",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11584.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
-        "td":0,
+        "total_pts":16.8,
+        "att":8,
+        "yd":45,
+        "ypc":5.6,
+        "td":1,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
@@ -2336,15 +2384,15 @@
         "my_guy":true,
         "my_guy_seasons":4,
         "in_bank":false,
-        "in_strength":true
+        "in_strength":false
       },
       {
         "name":"Travis Etienne",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7543.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
+        "total_pts":11.3,
+        "att":9,
+        "yd":46,
+        "ypc":5.1,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
@@ -2354,27 +2402,27 @@
       {
         "name":"Jaylen Warren",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8228.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
+        "total_pts":7.8,
+        "att":10,
+        "yd":46,
+        "ypc":4.6,
         "td":0,
         "my_guy":true,
         "my_guy_seasons":3,
-        "in_bank":true,
-        "in_strength":false
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Tank Bigsby",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9225.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
+        "total_pts":0.3,
+        "att":1,
+        "yd":3,
+        "ypc":3.0,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
-        "in_bank":true,
+        "in_bank":false,
         "in_strength":false
       },
       {
@@ -2387,7 +2435,7 @@
         "td":0,
         "my_guy":false,
         "my_guy_seasons":2,
-        "in_bank":true,
+        "in_bank":false,
         "in_strength":false
       }
     ],
@@ -2403,69 +2451,69 @@
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
-        "in_strength":true
+        "in_strength":false
       },
       {
         "name":"DK Metcalf",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5846.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
+        "total_pts":6.0,
+        "targets":10,
+        "catches":4,
+        "yd":40,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":2,
-        "in_bank":false,
-        "in_strength":true
+        "in_bank":true,
+        "in_strength":false
       },
       {
         "name":"A.J. Brown",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5859.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
+        "total_pts":4.1,
+        "targets":4,
+        "catches":3,
+        "yd":26,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":2,
-        "in_bank":false,
+        "in_bank":true,
         "in_strength":false
       },
       {
         "name":"Amon-Ra St. Brown",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7547.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
-        "td":0,
+        "total_pts":23.7,
+        "targets":14,
+        "catches":10,
+        "yd":67,
+        "td":2,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
-        "in_strength":false
+        "in_strength":true
       },
       {
         "name":"Dontayvion Wicks",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9486.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
-        "td":0,
+        "total_pts":14.3,
+        "targets":4,
+        "catches":2,
+        "yd":73,
+        "td":1,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
-        "in_strength":false
+        "in_strength":true
       }
     ],
     "TE":[
       {
         "name":"Travis Kelce",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/1466.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
+        "total_pts":8.6,
+        "targets":5,
+        "catches":3,
+        "yd":71,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
@@ -2475,26 +2523,26 @@
       {
         "name":"Juwan Johnson",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7002.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
-        "td":0,
+        "total_pts":12.9,
+        "targets":7,
+        "catches":3,
+        "yd":54,
+        "td":1,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
-        "in_strength":false
+        "in_strength":true
       }
     ],
     "K":[
       {
         "name":"Spencer Shrader",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12185.jpg",
-        "total_pts":0,
-        "fgm":0,
-        "fga":0,
-        "xpm":0,
-        "xpa":0,
+        "total_pts":6.0,
+        "fgm":1,
+        "fga":1,
+        "xpm":2,
+        "xpa":3,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
@@ -2505,10 +2553,10 @@
       {
         "name":"Chicago Bears",
         "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/chi.png",
-        "total_pts":0,
-        "sack":0,
-        "int":0,
-        "fum_rec":0,
+        "total_pts":6.0,
+        "sack":2,
+        "int":1,
+        "fum_rec":1,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
@@ -2518,105 +2566,104 @@
     ],
     "TOP_PERFORMERS":[
       {
-        "name":"Jayden Daniels",
-        "position":"QB",
-        "points":0.0,
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11566.jpg",
-        "total_pts":0,
-        "comp":0,
-        "att":0,
-        "pass_yd":0,
-        "rush_yd":0,
-        "td":0
+        "name":"Amon-Ra St. Brown",
+        "position":"WR",
+        "points":24.2,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7547.jpg",
+        "total_pts":23.7,
+        "targets":14,
+        "catches":10,
+        "yd":67,
+        "td":2
       },
       {
-        "name":"Travis Etienne",
-        "position":"RB",
-        "points":0.0,
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7543.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
-        "td":0
+        "name":"Jayden Daniels",
+        "position":"QB",
+        "points":22.7,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11566.jpg",
+        "total_pts":17.7,
+        "comp":18,
+        "att":34,
+        "pass_yd":164,
+        "rush_yd":31,
+        "td":2
       },
       {
         "name":"Bucky Irving",
         "position":"RB",
-        "points":0.0,
+        "points":17.8,
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11584.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
-        "td":0
+        "total_pts":16.8,
+        "att":8,
+        "yd":45,
+        "ypc":5.6,
+        "td":1
       }
     ],
     "BOTTOM_PERFORMERS":[
       {
-        "name":"Jayden Daniels",
-        "position":"QB",
-        "points":0.0,
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11566.jpg",
-        "total_pts":0,
-        "comp":0,
-        "att":0,
-        "pass_yd":0,
-        "rush_yd":0,
+        "name":"A.J. Brown",
+        "position":"WR",
+        "points":4.6,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5859.jpg",
+        "total_pts":4.1,
+        "targets":4,
+        "catches":3,
+        "yd":26,
         "td":0
       },
       {
-        "name":"Travis Etienne",
-        "position":"RB",
-        "points":0.0,
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7543.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
+        "name":"Chicago Bears",
+        "position":"DEF",
+        "points":5.0,
+        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/chi.png",
+        "total_pts":6.0,
+        "sack":2,
+        "int":1,
+        "fum_rec":1,
         "td":0
       },
       {
-        "name":"Bucky Irving",
-        "position":"RB",
-        "points":0.0,
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11584.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
+        "name":"DK Metcalf",
+        "position":"WR",
+        "points":6.5,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5846.jpg",
+        "total_pts":6.0,
+        "targets":10,
+        "catches":4,
+        "yd":40,
         "td":0
       }
     ],
     "BENCHWARMER":{
-      "name":"MarShawn Lloyd",
-      "position":"RB",
-      "points":0.0,
-      "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11581.jpg",
-      "total_pts":0,
-      "att":0,
-      "yd":0,
-      "ypc":0,
-      "td":0
+      "name":"Dontayvion Wicks",
+      "position":"WR",
+      "points":14.6,
+      "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9486.jpg",
+      "total_pts":14.3,
+      "targets":4,
+      "catches":2,
+      "yd":73,
+      "td":1
     },
     "LAST_WEEK_OPPONENT":"The PUK-A-BOOs",
     "LAST_WEEK_RESULT":{
-      "own_points":0.0,
-      "opponent_points":0.0,
-      "outcome":"Unentschieden"
+      "own_points":117.8,
+      "opponent_points":136.0,
+      "outcome":"Niederlage"
     },
     "THIS_WEEK_OPPONENT":"TrevorMutantNinjaTutens",
-    "THIS_WEEK_WIN_PROB":49.8,
-    "POWER RANK":6,
-    "Power Rank Score":6.5,
+    "THIS_WEEK_WIN_PROB":48.9,
+    "POWER RANK":8,
+    "Power Rank Score":7.7,
     "LAST_WEEK_POWER_RANK":null,
     "POWER_RANK_DELTA":null,
-    "QB Strength Rank":1,
-    "RB Strength Rank":1,
-    "WR Strength Rank":1,
-    "TE Strength Rank":1,
-    "K Strength Rank":1,
-    "Bench Strength Rank":1,
+    "QB Strength Rank":7,
+    "RB Strength Rank":7,
+    "WR Strength Rank":9,
+    "TE Strength Rank":2,
+    "K Strength Rank":9,
+    "Bench Strength Rank":5,
     "TREND Rank":6,
     "Adjusted Average Rank":6,
     "BADGES":[
@@ -2627,16 +2674,6 @@
         "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/no.png"
       },
       {
-        "icon":"wizard",
-        "label":"Waiver-Wire-Wizard",
-        "description":"2 Waiver-Adds diese Saison - der fleißigste Kader-Bastler der Liga."
-      },
-      {
-        "icon":"egg",
-        "label":"Klingeling, hier kommt der Eiermann",
-        "description":"Jayden Daniels, Travis Etienne, Bucky Irving, Amon-Ra St. Brown, A.J. Brown, Travis Kelce, Jaylen Warren, DK Metcalf, Spencer Shrader, Chicago Bears mit 0 Punkten in der Startaufstellung - ein Ei gelegt."
-      },
-      {
         "icon":"ruin",
         "label":"Ärmstes Team",
         "description":"Nur noch 100 FAAB übrig - Waiver-Wire-Bettler."
@@ -2645,15 +2682,15 @@
     "COMMENTS":"Nach drei Wochen hat er mal wieder die 120er Schallmauer durchbrochen. Herzlichen Glückwunsch. In einer Fantasywoche für die Geschichtsbücher hat eine 122 für das Matchup und den Median LOCKER gereicht.\nBei genauer Betrachtung des Rosters ist mir aufgefallen, dass Köppi quasi die bessere Version der FF Fathers hat. Super Onesies QB, TE und K, aber das Fundament, die Basis, scheint nicht ganz zu stimmen. Alvin Kamara denkt schon an die Piña Coladas in Cabo und Shaheed macht im Pacific North West noch Akklimatisierungsversuche.\nAber wir alle wissen, dass in Woche 12 gegen Michi wieder mindestens 130 Punkte drin sind.",
     "FAAB_REMAINING":100,
     "LEGACY_STATS":{
-      "win_pct":48.4,
+      "win_pct":47.4,
       "wins":46,
-      "losses":49,
+      "losses":51,
       "ties":0,
-      "all_time_points":8425.1,
+      "all_time_points":8542.9,
       "points_by_season":[
         {
           "season":"2026",
-          "points":0.0
+          "points":117.8
         },
         {
           "season":"2025",
@@ -2676,7 +2713,7 @@
           "points":1333.9
         }
       ],
-      "avg_placement":6.5,
+      "avg_placement":7.3,
       "most_weeks":[
         {
           "name":"Alvin Kamara",
@@ -2854,6 +2891,12 @@
             "is_champion":false
           },
           {
+            "name":"Jaylen Warren",
+            "points":279.9,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8228.jpg",
+            "is_champion":false
+          },
+          {
             "name":"Ezekiel Elliott",
             "points":277.3,
             "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/3164.jpg",
@@ -2864,18 +2907,12 @@
             "points":274.0,
             "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7528.jpg",
             "is_champion":true
-          },
-          {
-            "name":"Jaylen Warren",
-            "points":271.1,
-            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8228.jpg",
-            "is_champion":false
           }
         ],
         "WR":[
           {
             "name":"A.J. Brown",
-            "points":255.1,
+            "points":259.7,
             "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5859.jpg",
             "is_champion":false
           },
@@ -2956,7 +2993,7 @@
       "placements":[
         {
           "season":"2026",
-          "place":10
+          "place":15
         },
         {
           "season":"2025",
@@ -2987,7 +3024,7 @@
       "low_week":{
         "points":0.0,
         "season":"2026",
-        "week":1
+        "week":2
       },
       "high_player_week":{
         "points":55.6,
@@ -3004,13 +3041,13 @@
       "opfer":{
         "name":"jay88",
         "wins":6,
-        "losses":1,
-        "ties":2
+        "losses":2,
+        "ties":1
       },
       "win_pct_rank":6,
       "waiver_moves_rank":3,
       "trades_rank":8,
-      "all_time_points_rank":3,
+      "all_time_points_rank":4,
       "avg_placement_rank":4,
       "high_week_rank":5,
       "low_week_rank":4,
@@ -3019,46 +3056,46 @@
     "QUIZ_SCORES":[
       {
         "name":"Felix",
-        "score":0
+        "score":1
       }
     ],
-    "Week 1":0.0,
+    "Week 1":117.81,
     "DISPLAY_WEEK_LABEL":"Woche 1"
   },
   {
     "User ID":"718795712124510208",
     "Display Name":"pk123",
     "Team Name":"No Team Name",
-    "Wins":0,
+    "Wins":2,
     "Losses":0,
     "Ties":0,
-    "Points For":0,
-    "Points Against":0,
+    "Points For":152,
+    "Points Against":107,
     "Adjusted Average":0,
     "TREND":"NO TREND",
     "Trend Percentage":0,
-    "QB Strength":0,
-    "RB Strength":0,
-    "WR Strength":0,
-    "TE Strength":0,
-    "K Strength":0,
+    "QB Strength":61,
+    "RB Strength":27,
+    "WR Strength":88,
+    "TE Strength":31,
+    "K Strength":100,
     "QB Strength Count":1,
-    "RB Strength Count":4,
-    "WR Strength Count":2,
-    "TE Strength Count":1,
+    "RB Strength Count":2,
+    "WR Strength Count":3,
+    "TE Strength Count":2,
     "K Strength Count":1,
-    "Bench Strength":0,
+    "Bench Strength":54,
     "Bench Strength Count":3,
     "QB":[
       {
         "name":"Patrick Mahomes",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4046.jpg",
-        "total_pts":0,
-        "comp":0,
-        "att":0,
-        "pass_yd":0,
-        "rush_yd":0,
-        "td":0,
+        "total_pts":22.7,
+        "comp":15,
+        "att":27,
+        "pass_yd":184,
+        "rush_yd":23,
+        "td":3,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
@@ -3069,11 +3106,11 @@
       {
         "name":"Cam Skattebo",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12481.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
-        "td":0,
+        "total_pts":14.1,
+        "att":18,
+        "yd":81,
+        "ypc":4.5,
+        "td":1,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
@@ -3082,15 +3119,15 @@
       {
         "name":"Mike Washington",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/13305.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
+        "total_pts":4.1,
+        "att":7,
+        "yd":41,
+        "ypc":5.9,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
-        "in_bank":false,
-        "in_strength":true
+        "in_bank":true,
+        "in_strength":false
       },
       {
         "name":"Jonah Coleman",
@@ -3103,7 +3140,7 @@
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
-        "in_strength":true
+        "in_strength":false
       },
       {
         "name":"Josh Jacobs",
@@ -3116,44 +3153,44 @@
         "my_guy":true,
         "my_guy_seasons":3,
         "in_bank":false,
-        "in_strength":true
+        "in_strength":false
       },
       {
         "name":"De'Von Achane",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9226.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
+        "total_pts":8.6,
+        "att":11,
+        "yd":36,
+        "ypc":3.3,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
-        "in_bank":true,
-        "in_strength":false
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "WR":[
       {
         "name":"Chris Godwin",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4037.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
+        "total_pts":6.3,
+        "targets":4,
+        "catches":4,
+        "yd":40,
         "td":0,
         "my_guy":true,
         "my_guy_seasons":4,
-        "in_bank":false,
-        "in_strength":true
+        "in_bank":true,
+        "in_strength":false
       },
       {
         "name":"CeeDee Lamb",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6786.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
-        "td":0,
+        "total_pts":12.9,
+        "targets":8,
+        "catches":5,
+        "yd":44,
+        "td":1,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
@@ -3162,40 +3199,40 @@
       {
         "name":"DeVonta Smith",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7525.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
+        "total_pts":6.8,
+        "targets":6,
+        "catches":3,
+        "yd":53,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
-        "in_bank":true,
-        "in_strength":false
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Christian Watson",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8167.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
-        "td":0,
+        "total_pts":29.7,
+        "targets":8,
+        "catches":6,
+        "yd":147,
+        "td":2,
         "my_guy":false,
         "my_guy_seasons":1,
-        "in_bank":true,
-        "in_strength":false
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Quentin Johnston",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9754.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
+        "total_pts":2.7,
+        "targets":6,
+        "catches":2,
+        "yd":17,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":2,
-        "in_bank":false,
+        "in_bank":true,
         "in_strength":false
       }
     ],
@@ -3203,10 +3240,10 @@
       {
         "name":"Sam LaPorta",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/10859.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
+        "total_pts":7.3,
+        "targets":8,
+        "catches":5,
+        "yd":48,
         "td":0,
         "my_guy":true,
         "my_guy_seasons":3,
@@ -3216,26 +3253,26 @@
       {
         "name":"Mark Andrews",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5012.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
+        "total_pts":6.9,
+        "targets":6,
+        "catches":4,
+        "yd":49,
         "td":0,
         "my_guy":true,
         "my_guy_seasons":3,
         "in_bank":false,
-        "in_strength":false
+        "in_strength":true
       }
     ],
     "K":[
       {
         "name":"Evan McPherson",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7839.jpg",
-        "total_pts":0,
-        "fgm":0,
-        "fga":0,
-        "xpm":0,
-        "xpa":0,
+        "total_pts":19.0,
+        "fgm":4,
+        "fga":4,
+        "xpm":3,
+        "xpa":3,
         "my_guy":false,
         "my_guy_seasons":2,
         "in_bank":false,
@@ -3246,10 +3283,10 @@
       {
         "name":"Kansas City Chiefs",
         "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/kc.png",
-        "total_pts":0,
-        "sack":0,
-        "int":0,
-        "fum_rec":0,
+        "total_pts":13.0,
+        "sack":4,
+        "int":1,
+        "fum_rec":1,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
@@ -3259,112 +3296,116 @@
     ],
     "TOP_PERFORMERS":[
       {
+        "name":"Christian Watson",
+        "position":"WR",
+        "points":30.4,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8167.jpg",
+        "total_pts":29.7,
+        "targets":8,
+        "catches":6,
+        "yd":147,
+        "td":2
+      },
+      {
         "name":"Patrick Mahomes",
         "position":"QB",
-        "points":0.0,
+        "points":27.4,
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4046.jpg",
-        "total_pts":0,
-        "comp":0,
-        "att":0,
-        "pass_yd":0,
-        "rush_yd":0,
-        "td":0
+        "total_pts":22.7,
+        "comp":15,
+        "att":27,
+        "pass_yd":184,
+        "rush_yd":23,
+        "td":3
       },
       {
-        "name":"Cam Skattebo",
-        "position":"RB",
-        "points":0.0,
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12481.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
-        "td":0
-      },
-      {
-        "name":"De'Von Achane",
-        "position":"RB",
-        "points":0.0,
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9226.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
-        "td":0
+        "name":"Evan McPherson",
+        "position":"K",
+        "points":20.5,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7839.jpg",
+        "total_pts":19.0,
+        "fgm":4,
+        "fga":4,
+        "xpm":3,
+        "xpa":3
       }
     ],
     "BOTTOM_PERFORMERS":[
       {
-        "name":"Patrick Mahomes",
-        "position":"QB",
-        "points":0.0,
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4046.jpg",
-        "total_pts":0,
-        "comp":0,
-        "att":0,
-        "pass_yd":0,
-        "rush_yd":0,
+        "name":"Chris Godwin",
+        "position":"WR",
+        "points":6.8,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4037.jpg",
+        "total_pts":6.3,
+        "targets":4,
+        "catches":4,
+        "yd":40,
         "td":0
       },
       {
-        "name":"Cam Skattebo",
-        "position":"RB",
-        "points":0.0,
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12481.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
+        "name":"DeVonta Smith",
+        "position":"WR",
+        "points":7.0,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7525.jpg",
+        "total_pts":6.8,
+        "targets":6,
+        "catches":3,
+        "yd":53,
         "td":0
       },
       {
-        "name":"De'Von Achane",
-        "position":"RB",
-        "points":0.0,
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9226.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
+        "name":"Sam LaPorta",
+        "position":"TE",
+        "points":7.8,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/10859.jpg",
+        "total_pts":7.3,
+        "targets":8,
+        "catches":5,
+        "yd":48,
         "td":0
       }
     ],
     "BENCHWARMER":{
-      "name":"Mike Washington",
-      "position":"RB",
-      "points":0.0,
-      "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/13305.jpg",
-      "total_pts":0,
-      "att":0,
-      "yd":0,
-      "ypc":0,
+      "name":"Mark Andrews",
+      "position":"TE",
+      "points":7.4,
+      "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5012.jpg",
+      "total_pts":6.9,
+      "targets":6,
+      "catches":4,
+      "yd":49,
       "td":0
     },
-    "LAST_WEEK_OPPONENT":"It's Swiftney bitch",
+    "LAST_WEEK_OPPONENT":"Gonna be golden",
     "LAST_WEEK_RESULT":{
-      "own_points":0.0,
-      "opponent_points":0.0,
-      "outcome":"Unentschieden"
+      "own_points":152.9,
+      "opponent_points":107.2,
+      "outcome":"Sieg"
     },
     "THIS_WEEK_OPPONENT":"Two Daddies One Bride ",
-    "THIS_WEEK_WIN_PROB":45.2,
-    "POWER RANK":6,
-    "Power Rank Score":6.5,
+    "THIS_WEEK_WIN_PROB":46.4,
+    "POWER RANK":4,
+    "Power Rank Score":5.55,
     "LAST_WEEK_POWER_RANK":null,
     "POWER_RANK_DELTA":null,
-    "QB Strength Rank":1,
-    "RB Strength Rank":1,
-    "WR Strength Rank":1,
-    "TE Strength Rank":1,
+    "QB Strength Rank":6,
+    "RB Strength Rank":11,
+    "WR Strength Rank":3,
+    "TE Strength Rank":6,
     "K Strength Rank":1,
-    "Bench Strength Rank":1,
+    "Bench Strength Rank":6,
     "TREND Rank":6,
     "Adjusted Average Rank":6,
     "BADGES":[
       {
-        "icon":"egg",
-        "label":"Klingeling, hier kommt der Eiermann",
-        "description":"Patrick Mahomes, Cam Skattebo, De'Von Achane, CeeDee Lamb, DeVonta Smith, Sam LaPorta, Quentin Johnston, Christian Watson, Evan McPherson, Kansas City Chiefs mit 0 Punkten in der Startaufstellung - ein Ei gelegt."
+        "icon":"footboot",
+        "label":"Das heißt nicht umsonst FOOTball",
+        "description":"Der Kicker war mit 20.5 Punkten besser als jeden Running Back (14.35 Pkt.)."
+      },
+      {
+        "icon":"shield",
+        "label":"Defense wins Championships",
+        "description":"Die Defense war mit 15.25 Punkten besser als jeden Running Back (14.35 Pkt.)."
       },
       {
         "icon":"ruin",
@@ -3375,15 +3416,15 @@
     "COMMENTS":"Philipp hat in unserem All-Time-Ranking die meisten Punkte und dann in den Playoffs immer Pech. Dieses Jahr steht er ganz gut in der Liga da, aber hauptsächlich weil er die wenigsten Points Against hat. Muss ein komisches Gefühl sein.\nSein Team ist wahnsinnig inkonsistent, mit vier Performances von 105 Punkten oder sogar deutlich weniger. Verletzungen spielen da auch eine große Rolle, zuletzt hat der Blinddarm von MHJ den Geist aufgegeben.\npk123, legendärer Teamname, wird das nicht stören, solange er in die Playoffs kommt. Wer mit 90 Punkten sein Matchup gewinnt, hat Fortuna definitiv auf seiner Seite.",
     "FAAB_REMAINING":100,
     "LEGACY_STATS":{
-      "win_pct":61.1,
-      "wins":58,
+      "win_pct":61.9,
+      "wins":60,
       "losses":37,
       "ties":0,
-      "all_time_points":8738.6,
+      "all_time_points":8891.5,
       "points_by_season":[
         {
           "season":"2026",
-          "points":0.0
+          "points":152.9
         },
         {
           "season":"2025",
@@ -3406,7 +3447,7 @@
           "points":1674.7
         }
       ],
-      "avg_placement":5.3,
+      "avg_placement":5.2,
       "most_weeks":[
         {
           "name":"Chris Godwin",
@@ -3460,7 +3501,7 @@
         },
         {
           "name":"Chris Godwin",
-          "points":417.7,
+          "points":424.5,
           "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4037.jpg",
           "is_champion":false
         },
@@ -3547,7 +3588,7 @@
         "TE":[
           {
             "name":"Mark Andrews",
-            "points":281.7,
+            "points":289.1,
             "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5012.jpg",
             "is_champion":false
           },
@@ -3611,7 +3652,7 @@
           },
           {
             "name":"Chris Godwin",
-            "points":417.7,
+            "points":424.5,
             "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4037.jpg",
             "is_champion":false
           },
@@ -3682,7 +3723,7 @@
       "placements":[
         {
           "season":"2026",
-          "place":11
+          "place":10
         },
         {
           "season":"2025",
@@ -3713,7 +3754,7 @@
       "low_week":{
         "points":0.0,
         "season":"2026",
-        "week":1
+        "week":2
       },
       "high_player_week":{
         "points":47.55,
@@ -3733,7 +3774,7 @@
         "losses":1,
         "ties":1
       },
-      "win_pct_rank":2,
+      "win_pct_rank":1,
       "waiver_moves_rank":8,
       "trades_rank":4,
       "all_time_points_rank":1,
@@ -3748,43 +3789,43 @@
         "score":0
       }
     ],
-    "Week 1":0.0,
+    "Week 1":152.86,
     "DISPLAY_WEEK_LABEL":"Woche 1"
   },
   {
     "User ID":"722748718910083072",
     "Display Name":"TinyDancerTiez",
-    "Team Name":"It's Swiftney bitch",
+    "Team Name":"Gonna be golden",
     "Wins":0,
-    "Losses":0,
+    "Losses":2,
     "Ties":0,
-    "Points For":0,
-    "Points Against":0,
+    "Points For":107,
+    "Points Against":152,
     "Adjusted Average":0,
     "TREND":"NO TREND",
     "Trend Percentage":0,
-    "QB Strength":0,
-    "RB Strength":0,
-    "WR Strength":0,
-    "TE Strength":0,
-    "K Strength":0,
+    "QB Strength":96,
+    "RB Strength":63,
+    "WR Strength":26,
+    "TE Strength":39,
+    "K Strength":5,
     "QB Strength Count":1,
-    "RB Strength Count":4,
+    "RB Strength Count":3,
     "WR Strength Count":2,
-    "TE Strength Count":1,
+    "TE Strength Count":2,
     "K Strength Count":1,
-    "Bench Strength":0,
+    "Bench Strength":73,
     "Bench Strength Count":3,
     "QB":[
       {
         "name":"Josh Allen",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4984.jpg",
-        "total_pts":0,
-        "comp":0,
-        "att":0,
-        "pass_yd":0,
-        "rush_yd":0,
-        "td":0,
+        "total_pts":35.7,
+        "comp":20,
+        "att":29,
+        "pass_yd":334,
+        "rush_yd":23,
+        "td":4,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
@@ -3795,49 +3836,49 @@
       {
         "name":"Jadarian Price",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/13286.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
+        "total_pts":6.8,
+        "att":10,
+        "yd":52,
+        "ypc":5.2,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
-        "in_bank":false,
-        "in_strength":true
+        "in_bank":true,
+        "in_strength":false
       },
       {
         "name":"Emmett Johnson",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/13337.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
+        "total_pts":7.8,
+        "att":8,
+        "yd":24,
+        "ypc":3.0,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
-        "in_bank":false,
-        "in_strength":true
+        "in_bank":true,
+        "in_strength":false
       },
       {
         "name":"Rico Dowdle",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7021.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
+        "total_pts":3.1,
+        "att":8,
+        "yd":15,
+        "ypc":1.9,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
-        "in_bank":false,
-        "in_strength":true
+        "in_bank":true,
+        "in_strength":false
       },
       {
         "name":"Tyler Allgeier",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8132.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
+        "total_pts":8.0,
+        "att":17,
+        "yd":61,
+        "ypc":3.6,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
@@ -3847,38 +3888,38 @@
       {
         "name":"Kenneth Walker",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8151.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
-        "td":0,
+        "total_pts":32.6,
+        "att":23,
+        "yd":173,
+        "ypc":7.5,
+        "td":2,
         "my_guy":true,
         "my_guy_seasons":3,
-        "in_bank":true,
-        "in_strength":false
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Jordan Mason",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8408.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
-        "td":0,
+        "total_pts":11.9,
+        "att":15,
+        "yd":59,
+        "ypc":3.9,
+        "td":1,
         "my_guy":false,
         "my_guy_seasons":1,
-        "in_bank":true,
-        "in_strength":false
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "WR":[
       {
         "name":"Matthew Golden",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12501.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
+        "total_pts":12.5,
+        "targets":12,
+        "catches":6,
+        "yd":95,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
@@ -3888,34 +3929,34 @@
       {
         "name":"Jaylen Waddle",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7526.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
+        "total_pts":0.7,
+        "targets":3,
+        "catches":1,
+        "yd":2,
         "td":0,
         "my_guy":true,
         "my_guy_seasons":3,
         "in_bank":false,
-        "in_strength":true
+        "in_strength":false
       },
       {
         "name":"Ja'Marr Chase",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7564.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
+        "total_pts":2.2,
+        "targets":4,
+        "catches":2,
+        "yd":12,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":2,
-        "in_bank":true,
-        "in_strength":false
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Jordan Addison",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9756.jpg",
         "total_pts":0,
-        "targets":0,
+        "targets":2,
         "catches":0,
         "yd":0,
         "td":0,
@@ -3929,11 +3970,11 @@
       {
         "name":"Kenyon Sadiq",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/13330.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
-        "td":0,
+        "total_pts":9.9,
+        "targets":3,
+        "catches":3,
+        "yd":21,
+        "td":1,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
@@ -3942,26 +3983,26 @@
       {
         "name":"Tucker Kraft",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9484.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
+        "total_pts":8.0,
+        "targets":6,
+        "catches":3,
+        "yd":65,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
-        "in_strength":false
+        "in_strength":true
       }
     ],
     "K":[
       {
         "name":"Harrison Mevis",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12015.jpg",
-        "total_pts":0,
+        "total_pts":1.0,
         "fgm":0,
         "fga":0,
-        "xpm":0,
-        "xpa":0,
+        "xpm":1,
+        "xpa":1,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
@@ -3972,10 +4013,10 @@
       {
         "name":"Baltimore Ravens",
         "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/bal.png",
-        "total_pts":0,
-        "sack":0,
-        "int":0,
-        "fum_rec":0,
+        "total_pts":7.0,
+        "sack":2,
+        "int":1,
+        "fum_rec":1,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":2,
@@ -3987,134 +4028,138 @@
       {
         "name":"Josh Allen",
         "position":"QB",
-        "points":0.0,
+        "points":39.8,
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4984.jpg",
-        "total_pts":0,
-        "comp":0,
-        "att":0,
-        "pass_yd":0,
-        "rush_yd":0,
-        "td":0
+        "total_pts":35.7,
+        "comp":20,
+        "att":29,
+        "pass_yd":334,
+        "rush_yd":23,
+        "td":4
       },
       {
         "name":"Kenneth Walker",
         "position":"RB",
-        "points":0.0,
+        "points":34.6,
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8151.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
-        "td":0
+        "total_pts":32.6,
+        "att":23,
+        "yd":173,
+        "ypc":7.5,
+        "td":2
       },
       {
-        "name":"Jadarian Price",
-        "position":"RB",
-        "points":0.0,
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/13286.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
+        "name":"Baltimore Ravens",
+        "position":"DEF",
+        "points":9.0,
+        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/bal.png",
+        "total_pts":7.0,
+        "sack":2,
+        "int":1,
+        "fum_rec":1,
         "td":0
       }
     ],
     "BOTTOM_PERFORMERS":[
       {
-        "name":"Josh Allen",
-        "position":"QB",
+        "name":"Jordan Addison",
+        "position":"WR",
         "points":0.0,
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4984.jpg",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9756.jpg",
         "total_pts":0,
-        "comp":0,
-        "att":0,
-        "pass_yd":0,
-        "rush_yd":0,
+        "targets":2,
+        "catches":0,
+        "yd":0,
         "td":0
       },
       {
-        "name":"Kenneth Walker",
-        "position":"RB",
-        "points":0.0,
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8151.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
+        "name":"Jaylen Waddle",
+        "position":"WR",
+        "points":0.7,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7526.jpg",
+        "total_pts":0.7,
+        "targets":3,
+        "catches":1,
+        "yd":2,
         "td":0
       },
       {
-        "name":"Jadarian Price",
-        "position":"RB",
-        "points":0.0,
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/13286.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
-        "td":0
+        "name":"Harrison Mevis",
+        "position":"K",
+        "points":1.0,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12015.jpg",
+        "total_pts":1.0,
+        "fgm":0,
+        "fga":0,
+        "xpm":1,
+        "xpa":1
       }
     ],
     "BENCHWARMER":{
       "name":"Matthew Golden",
       "position":"WR",
-      "points":0.0,
+      "points":13.5,
       "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12501.jpg",
-      "total_pts":0,
-      "targets":0,
-      "catches":0,
-      "yd":0,
+      "total_pts":12.5,
+      "targets":12,
+      "catches":6,
+      "yd":95,
       "td":0
     },
     "LAST_WEEK_OPPONENT":"pk123",
     "LAST_WEEK_RESULT":{
-      "own_points":0.0,
-      "opponent_points":0.0,
-      "outcome":"Unentschieden"
+      "own_points":107.2,
+      "opponent_points":152.9,
+      "outcome":"Niederlage"
     },
-    "THIS_WEEK_OPPONENT":"Addison Rae",
-    "THIS_WEEK_WIN_PROB":47.8,
-    "POWER RANK":6,
-    "Power Rank Score":6.5,
+    "THIS_WEEK_OPPONENT":"BurrowButker and the Boys",
+    "THIS_WEEK_WIN_PROB":45.7,
+    "POWER RANK":10,
+    "Power Rank Score":7.98,
     "LAST_WEEK_POWER_RANK":null,
     "POWER_RANK_DELTA":null,
-    "QB Strength Rank":1,
-    "RB Strength Rank":1,
-    "WR Strength Rank":1,
-    "TE Strength Rank":1,
-    "K Strength Rank":1,
-    "Bench Strength Rank":1,
+    "QB Strength Rank":2,
+    "RB Strength Rank":5,
+    "WR Strength Rank":12,
+    "TE Strength Rank":4,
+    "K Strength Rank":11,
+    "Bench Strength Rank":4,
     "TREND Rank":6,
     "Adjusted Average Rank":6,
     "BADGES":[
       {
+        "icon":"groundpound",
+        "label":"Ground and Pound",
+        "description":"42.5% der Punkte diese Woche kamen von den RBs - volle Kontrolle am Boden."
+      },
+      {
         "icon":"egg",
         "label":"Klingeling, hier kommt der Eiermann",
-        "description":"Josh Allen, Kenneth Walker, Jadarian Price, Ja'Marr Chase, Jaylen Waddle, Tucker Kraft, Rico Dowdle, Jordan Addison, Harrison Mevis, Baltimore Ravens mit 0 Punkten in der Startaufstellung - ein Ei gelegt."
+        "description":"Jordan Addison mit 0 Punkten in der Startaufstellung - ein Ei gelegt."
+      },
+      {
+        "icon":"shield",
+        "label":"Defense wins Championships",
+        "description":"Die Defense war mit 9.0 Punkten besser als jeden Wide Receiver (2.45 Pkt.)."
       },
       {
         "icon":"ruin",
         "label":"Ärmstes Team",
         "description":"Nur noch 100 FAAB übrig - Waiver-Wire-Bettler."
-      },
-      {
-        "icon":"kindergarten",
-        "label":"Kindergarten",
-        "description":"3 Rookies im Kader - die Zukunft der Liga (hoffentlich)."
       }
     ],
     "COMMENTS":"Das Rennen um die „Football-in-die-Leisten-Trophy“ wird nochmal richtig spannend. In einem Blowout-100-Point-Swing ist Tine auf 8 Punkte rangekommen. Jetzt hält sie mit 66 Punkten den Negativrekord im Jahr 2025.\nNachdem die 2024 THF-Gewinnerin dem Injury Death entkommen schien, als sie Nabers getradet hatte, kam der zurück und hat sich seine Rache mit Zinsen geholt. Final Destination Style.\nYou can’t outrun the Injury Death.\nSkattebo, Wilson, zeitweise Egbuka, Pacheco und um ehrlich zu sein Chuba auch.\nDie Liste der Verluste ist lang und Tine spielt ab sofort einfach ihre Short Kings, auch wenn die vielleicht nicht die beste Option sind.\nGodspeed, little ones.",
     "FAAB_REMAINING":100,
     "LEGACY_STATS":{
-      "win_pct":45.3,
+      "win_pct":44.3,
       "wins":43,
-      "losses":52,
+      "losses":54,
       "ties":0,
-      "all_time_points":8178.0,
+      "all_time_points":8285.2,
       "points_by_season":[
         {
           "season":"2026",
-          "points":0.0
+          "points":107.2
         },
         {
           "season":"2025",
@@ -4137,7 +4182,7 @@
           "points":1328.6
         }
       ],
-      "avg_placement":7.8,
+      "avg_placement":8.5,
       "most_weeks":[
         {
           "name":"Younghoe Koo",
@@ -4191,7 +4236,7 @@
         },
         {
           "name":"Jaylen Waddle",
-          "points":419.8,
+          "points":420.5,
           "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7526.jpg",
           "is_champion":false
         },
@@ -4270,7 +4315,7 @@
           },
           {
             "name":"Baltimore Ravens",
-            "points":133.0,
+            "points":142.0,
             "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/bal.png",
             "is_champion":false
           }
@@ -4315,6 +4360,12 @@
             "is_champion":false
           },
           {
+            "name":"Kenneth Walker",
+            "points":227.9,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8151.jpg",
+            "is_champion":true
+          },
+          {
             "name":"Jamaal Williams",
             "points":220.7,
             "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4149.jpg",
@@ -4325,18 +4376,12 @@
             "points":209.6,
             "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7528.jpg",
             "is_champion":false
-          },
-          {
-            "name":"Antonio Gibson",
-            "points":209.2,
-            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6945.jpg",
-            "is_champion":false
           }
         ],
         "WR":[
           {
             "name":"Jaylen Waddle",
-            "points":419.8,
+            "points":420.5,
             "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7526.jpg",
             "is_champion":false
           },
@@ -4354,7 +4399,7 @@
           },
           {
             "name":"Ja'Marr Chase",
-            "points":269.5,
+            "points":272.0,
             "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7564.jpg",
             "is_champion":false
           },
@@ -4421,7 +4466,7 @@
       "placements":[
         {
           "season":"2026",
-          "place":12
+          "place":16
         },
         {
           "season":"2025",
@@ -4452,7 +4497,7 @@
       "low_week":{
         "points":0.0,
         "season":"2026",
-        "week":1
+        "week":2
       },
       "high_player_week":{
         "points":50.85,
@@ -4472,11 +4517,11 @@
         "losses":0,
         "ties":1
       },
-      "win_pct_rank":9,
+      "win_pct_rank":11,
       "waiver_moves_rank":2,
       "trades_rank":5,
       "all_time_points_rank":7,
-      "avg_placement_rank":8,
+      "avg_placement_rank":11,
       "high_week_rank":7,
       "low_week_rank":6,
       "high_player_week_rank":6
@@ -4484,10 +4529,10 @@
     "QUIZ_SCORES":[
       {
         "name":"Tine",
-        "score":0
+        "score":1
       }
     ],
-    "Week 1":0.0,
+    "Week 1":107.16,
     "DISPLAY_WEEK_LABEL":"Woche 1"
   },
   {
@@ -4495,35 +4540,35 @@
     "Display Name":"oppossumfrank",
     "Team Name":"Pandan Buns",
     "Wins":0,
-    "Losses":0,
+    "Losses":2,
     "Ties":0,
-    "Points For":0,
-    "Points Against":0,
+    "Points For":105,
+    "Points Against":107,
     "Adjusted Average":0,
     "TREND":"NO TREND",
     "Trend Percentage":0,
-    "QB Strength":0,
-    "RB Strength":0,
-    "WR Strength":0,
+    "QB Strength":34,
+    "RB Strength":43,
+    "WR Strength":80,
     "TE Strength":0,
-    "K Strength":0,
+    "K Strength":11,
     "QB Strength Count":1,
-    "RB Strength Count":4,
-    "WR Strength Count":2,
+    "RB Strength Count":2,
+    "WR Strength Count":4,
     "TE Strength Count":1,
     "K Strength Count":1,
-    "Bench Strength":0,
+    "Bench Strength":51,
     "Bench Strength Count":3,
     "QB":[
       {
         "name":"Drake Maye",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11564.jpg",
-        "total_pts":0,
-        "comp":0,
-        "att":0,
-        "pass_yd":0,
-        "rush_yd":0,
-        "td":0,
+        "total_pts":12.8,
+        "comp":23,
+        "att":33,
+        "pass_yd":178,
+        "rush_yd":47,
+        "td":1,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
@@ -4534,24 +4579,24 @@
       {
         "name":"Tyrone Tracy",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11655.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
+        "total_pts":-0.6,
+        "att":2,
+        "yd":14,
+        "ypc":7.0,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
-        "in_strength":true
+        "in_strength":false
       },
       {
         "name":"Omarion Hampton",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12507.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
-        "td":0,
+        "total_pts":8.3,
+        "att":12,
+        "yd":43,
+        "ypc":3.6,
+        "td":1,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
@@ -4560,11 +4605,11 @@
       {
         "name":"David Montgomery",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5892.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
-        "td":0,
+        "total_pts":27.4,
+        "att":20,
+        "yd":60,
+        "ypc":3.0,
+        "td":3,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
@@ -4573,26 +4618,26 @@
       {
         "name":"J.K. Dobbins",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6806.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
+        "total_pts":3.6,
+        "att":8,
+        "yd":36,
+        "ypc":4.5,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
-        "in_bank":false,
-        "in_strength":true
+        "in_bank":true,
+        "in_strength":false
       }
     ],
     "WR":[
       {
         "name":"Rashee Rice",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/10229.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
-        "td":0,
+        "total_pts":8.9,
+        "targets":2,
+        "catches":2,
+        "yd":19,
+        "td":1,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
@@ -4601,79 +4646,79 @@
       {
         "name":"Rome Odunze",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11620.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
+        "total_pts":6.2,
+        "targets":3,
+        "catches":2,
+        "yd":52,
         "td":0,
         "my_guy":true,
         "my_guy_seasons":3,
-        "in_bank":false,
-        "in_strength":true
+        "in_bank":true,
+        "in_strength":false
       },
       {
         "name":"Makai Lemon",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/13294.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
+        "total_pts":1.0,
+        "targets":4,
+        "catches":3,
+        "yd":-5,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
-        "in_bank":true,
+        "in_bank":false,
         "in_strength":false
       },
       {
         "name":"Michael Pittman",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6819.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
+        "total_pts":7.3,
+        "targets":3,
+        "catches":3,
+        "yd":58,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
-        "in_bank":true,
-        "in_strength":false
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Wan'Dale Robinson",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8126.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
+        "total_pts":6.3,
+        "targets":6,
+        "catches":5,
+        "yd":38,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":2,
-        "in_bank":true,
-        "in_strength":false
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Jaxon Smith-Njigba",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9488.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
-        "td":0,
+        "total_pts":22.2,
+        "targets":11,
+        "catches":8,
+        "yd":122,
+        "td":1,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
-        "in_strength":false
+        "in_strength":true
       },
       {
         "name":"Kayshon Boutte",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9504.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
+        "total_pts":2.6,
+        "targets":2,
+        "catches":1,
+        "yd":21,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
-        "in_bank":false,
+        "in_bank":true,
         "in_strength":false
       }
     ],
@@ -4682,7 +4727,7 @@
         "name":"Kyle Pitts",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7553.jpg",
         "total_pts":0,
-        "targets":0,
+        "targets":1,
         "catches":0,
         "yd":0,
         "td":0,
@@ -4696,11 +4741,11 @@
       {
         "name":"Cameron Dicker",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8259.jpg",
-        "total_pts":0,
+        "total_pts":2.0,
         "fgm":0,
         "fga":0,
-        "xpm":0,
-        "xpa":0,
+        "xpm":2,
+        "xpa":2,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
@@ -4711,8 +4756,8 @@
       {
         "name":"New England Patriots",
         "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/ne.png",
-        "total_pts":0,
-        "sack":0,
+        "total_pts":6.0,
+        "sack":2,
         "int":0,
         "fum_rec":0,
         "td":0,
@@ -4724,117 +4769,111 @@
     ],
     "TOP_PERFORMERS":[
       {
-        "name":"Drake Maye",
-        "position":"QB",
-        "points":0.0,
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11564.jpg",
-        "total_pts":0,
-        "comp":0,
-        "att":0,
-        "pass_yd":0,
-        "rush_yd":0,
-        "td":0
-      },
-      {
-        "name":"Omarion Hampton",
-        "position":"RB",
-        "points":0.0,
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12507.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
-        "td":0
-      },
-      {
         "name":"David Montgomery",
         "position":"RB",
-        "points":0.0,
+        "points":27.9,
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5892.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
-        "td":0
+        "total_pts":27.4,
+        "att":20,
+        "yd":60,
+        "ypc":3.0,
+        "td":3
+      },
+      {
+        "name":"Jaxon Smith-Njigba",
+        "position":"WR",
+        "points":23.2,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9488.jpg",
+        "total_pts":22.2,
+        "targets":11,
+        "catches":8,
+        "yd":122,
+        "td":1
+      },
+      {
+        "name":"Drake Maye",
+        "position":"QB",
+        "points":16.9,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11564.jpg",
+        "total_pts":12.8,
+        "comp":23,
+        "att":33,
+        "pass_yd":178,
+        "rush_yd":47,
+        "td":1
       }
     ],
     "BOTTOM_PERFORMERS":[
       {
-        "name":"Drake Maye",
-        "position":"QB",
+        "name":"Kyle Pitts",
+        "position":"TE",
         "points":0.0,
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11564.jpg",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7553.jpg",
         "total_pts":0,
-        "comp":0,
-        "att":0,
-        "pass_yd":0,
-        "rush_yd":0,
+        "targets":1,
+        "catches":0,
+        "yd":0,
         "td":0
       },
       {
-        "name":"Omarion Hampton",
-        "position":"RB",
-        "points":0.0,
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12507.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
-        "td":0
+        "name":"Cameron Dicker",
+        "position":"K",
+        "points":2.0,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8259.jpg",
+        "total_pts":2.0,
+        "fgm":0,
+        "fga":0,
+        "xpm":2,
+        "xpa":2
       },
       {
-        "name":"David Montgomery",
+        "name":"J.K. Dobbins",
         "position":"RB",
-        "points":0.0,
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5892.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
+        "points":3.9,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6806.jpg",
+        "total_pts":3.6,
+        "att":8,
+        "yd":36,
+        "ypc":4.5,
         "td":0
       }
     ],
     "BENCHWARMER":{
-      "name":"Tyrone Tracy",
-      "position":"RB",
-      "points":0.0,
-      "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11655.jpg",
-      "total_pts":0,
-      "att":0,
-      "yd":0,
-      "ypc":0,
+      "name":"Michael Pittman",
+      "position":"WR",
+      "points":7.8,
+      "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6819.jpg",
+      "total_pts":7.3,
+      "targets":3,
+      "catches":3,
+      "yd":58,
       "td":0
     },
     "LAST_WEEK_OPPONENT":"sandmann1ps",
     "LAST_WEEK_RESULT":{
-      "own_points":0.0,
-      "opponent_points":0.0,
-      "outcome":"Unentschieden"
+      "own_points":105.2,
+      "opponent_points":107.5,
+      "outcome":"Niederlage"
     },
     "THIS_WEEK_OPPONENT":"The PUK-A-BOOs",
-    "THIS_WEEK_WIN_PROB":51.0,
-    "POWER RANK":6,
-    "Power Rank Score":6.5,
+    "THIS_WEEK_WIN_PROB":1.0,
+    "POWER RANK":12,
+    "Power Rank Score":8.8,
     "LAST_WEEK_POWER_RANK":null,
     "POWER_RANK_DELTA":null,
-    "QB Strength Rank":1,
-    "RB Strength Rank":1,
-    "WR Strength Rank":1,
-    "TE Strength Rank":1,
-    "K Strength Rank":1,
-    "Bench Strength Rank":1,
+    "QB Strength Rank":11,
+    "RB Strength Rank":7,
+    "WR Strength Rank":5,
+    "TE Strength Rank":11,
+    "K Strength Rank":10,
+    "Bench Strength Rank":8,
     "TREND Rank":6,
     "Adjusted Average Rank":6,
     "BADGES":[
       {
-        "icon":"hospital",
-        "label":"The Hospital",
-        "description":"5 verletzte Spieler im Kader (Out\/IR\/Questionable\/Doubtful) - die größte Krankenstation der Liga."
-      },
-      {
         "icon":"egg",
         "label":"Klingeling, hier kommt der Eiermann",
-        "description":"Drake Maye, Omarion Hampton, David Montgomery, Jaxon Smith-Njigba, Rashee Rice, Kyle Pitts, Rome Odunze, J.K. Dobbins, Cameron Dicker, New England Patriots mit 0 Punkten in der Startaufstellung - ein Ei gelegt."
+        "description":"Kyle Pitts mit 0 Punkten in der Startaufstellung - ein Ei gelegt."
       },
       {
         "icon":"ruin",
@@ -4845,15 +4884,15 @@
     "COMMENTS":"Kein Jonathan Taylor, kein Proble… oh Shit. 77 Punkte. Das macht JT doch sonst alleine.\nEs war keine gute Woche für Leos Team. Fehlt es etwa an Depth? Naja, jetzt ist der erste RB-MVP der NFL seit AP wieder da. Aber kann JT seine fantastische Fantasy-Performance für den Rest der Season beibehalten?\nDie Schedule der Colts scheint wohl deutlich schwerer zu werden.\nBei uns in der THF sieht die Sleeper-Projection Leo definitiv als großen Favoriten im Spitzenduell gegen Svens Wackeltruppe.",
     "FAAB_REMAINING":100,
     "LEGACY_STATS":{
-      "win_pct":51.6,
+      "win_pct":50.5,
       "wins":49,
-      "losses":46,
+      "losses":48,
       "ties":0,
-      "all_time_points":8266.7,
+      "all_time_points":8371.9,
       "points_by_season":[
         {
           "season":"2026",
-          "points":0.0
+          "points":105.2
         },
         {
           "season":"2025",
@@ -4876,7 +4915,7 @@
           "points":1159.6
         }
       ],
-      "avg_placement":7.3,
+      "avg_placement":8.0,
       "most_weeks":[
         {
           "name":"Rome Odunze",
@@ -5105,7 +5144,7 @@
           },
           {
             "name":"Rome Odunze",
-            "points":191.9,
+            "points":198.3,
             "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11620.jpg",
             "is_champion":false
           }
@@ -5148,7 +5187,7 @@
       "placements":[
         {
           "season":"2026",
-          "place":13
+          "place":17
         },
         {
           "season":"2025",
@@ -5179,7 +5218,7 @@
       "low_week":{
         "points":0.0,
         "season":"2026",
-        "week":1
+        "week":2
       },
       "high_player_week":{
         "points":50.55,
@@ -5196,14 +5235,14 @@
       "opfer":{
         "name":"sandmann1ps",
         "wins":2,
-        "losses":0,
-        "ties":2
+        "losses":1,
+        "ties":1
       },
-      "win_pct_rank":4,
+      "win_pct_rank":5,
       "waiver_moves_rank":6,
       "trades_rank":9,
       "all_time_points_rank":5,
-      "avg_placement_rank":5,
+      "avg_placement_rank":7,
       "high_week_rank":9,
       "low_week_rank":7,
       "high_player_week_rank":7
@@ -5214,43 +5253,43 @@
         "score":0
       }
     ],
-    "Week 1":0.0,
+    "Week 1":105.22,
     "DISPLAY_WEEK_LABEL":"Woche 1"
   },
   {
     "User ID":"1127992026114461696",
     "Display Name":"benjyalf",
-    "Team Name":"Addison Rae",
+    "Team Name":"BurrowButker and the Boys",
     "Wins":0,
-    "Losses":0,
+    "Losses":2,
     "Ties":0,
-    "Points For":0,
-    "Points Against":0,
+    "Points For":118,
+    "Points Against":182,
     "Adjusted Average":0,
     "TREND":"NO TREND",
     "Trend Percentage":0,
-    "QB Strength":0,
-    "RB Strength":0,
-    "WR Strength":0,
-    "TE Strength":0,
-    "K Strength":0,
+    "QB Strength":41,
+    "RB Strength":83,
+    "WR Strength":69,
+    "TE Strength":7,
+    "K Strength":37,
     "QB Strength Count":1,
-    "RB Strength Count":4,
-    "WR Strength Count":2,
+    "RB Strength Count":3,
+    "WR Strength Count":3,
     "TE Strength Count":1,
     "K Strength Count":1,
-    "Bench Strength":0,
+    "Bench Strength":100,
     "Bench Strength Count":3,
     "QB":[
       {
         "name":"Joe Burrow",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6770.jpg",
-        "total_pts":0,
-        "comp":0,
-        "att":0,
-        "pass_yd":0,
-        "rush_yd":0,
-        "td":0,
+        "total_pts":15.2,
+        "comp":25,
+        "att":35,
+        "pass_yd":254,
+        "rush_yd":20,
+        "td":1,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
@@ -5261,11 +5300,11 @@
       {
         "name":"Kyle Monangai",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12534.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
-        "td":0,
+        "total_pts":19.4,
+        "att":10,
+        "yd":100,
+        "ypc":10.0,
+        "td":1,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
@@ -5274,24 +5313,24 @@
       {
         "name":"Rachaad White",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8136.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
+        "total_pts":3.7,
+        "att":7,
+        "yd":22,
+        "ypc":3.1,
         "td":0,
         "my_guy":true,
         "my_guy_seasons":3,
         "in_bank":false,
-        "in_strength":true
+        "in_strength":false
       },
       {
         "name":"Breece Hall",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8155.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
-        "td":0,
+        "total_pts":18.8,
+        "att":22,
+        "yd":102,
+        "ypc":4.6,
+        "td":1,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
@@ -5300,11 +5339,11 @@
       {
         "name":"Jahmyr Gibbs",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9221.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
-        "td":0,
+        "total_pts":31.1,
+        "att":29,
+        "yd":156,
+        "ypc":5.4,
+        "td":2,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
@@ -5315,23 +5354,23 @@
       {
         "name":"Emeka Egbuka",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12514.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
+        "total_pts":8.8,
+        "targets":6,
+        "catches":5,
+        "yd":63,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
-        "in_bank":false,
-        "in_strength":true
+        "in_bank":true,
+        "in_strength":false
       },
       {
         "name":"Caleb Douglas",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/13296.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
+        "total_pts":11.9,
+        "targets":7,
+        "catches":5,
+        "yd":94,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
@@ -5341,37 +5380,37 @@
       {
         "name":"Denzel Boston",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/13346.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
-        "td":0,
+        "total_pts":12.9,
+        "targets":4,
+        "catches":2,
+        "yd":59,
+        "td":1,
         "my_guy":false,
         "my_guy_seasons":1,
-        "in_bank":true,
-        "in_strength":false
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Mike Evans",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/2216.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
-        "td":0,
+        "total_pts":13.9,
+        "targets":7,
+        "catches":6,
+        "yd":49,
+        "td":1,
         "my_guy":false,
         "my_guy_seasons":1,
-        "in_bank":true,
-        "in_strength":false
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Jakobi Meyers",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5947.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
-        "td":0,
+        "total_pts":11.2,
+        "targets":2,
+        "catches":2,
+        "yd":40,
+        "td":1,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":true,
@@ -5381,7 +5420,7 @@
         "name":"Romeo Doubs",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8121.jpg",
         "total_pts":0,
-        "targets":0,
+        "targets":3,
         "catches":0,
         "yd":0,
         "td":0,
@@ -5393,14 +5432,14 @@
       {
         "name":"George Pickens",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8137.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
+        "total_pts":4.3,
+        "targets":6,
+        "catches":3,
+        "yd":28,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
-        "in_bank":false,
+        "in_bank":true,
         "in_strength":false
       }
     ],
@@ -5408,10 +5447,10 @@
       {
         "name":"Harold Fannin",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12506.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
+        "total_pts":3.1,
+        "targets":3,
+        "catches":2,
+        "yd":21,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
@@ -5423,11 +5462,11 @@
       {
         "name":"Harrison Butker",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4227.jpg",
-        "total_pts":0,
-        "fgm":0,
-        "fga":0,
-        "xpm":0,
-        "xpa":0,
+        "total_pts":7.0,
+        "fgm":1,
+        "fga":1,
+        "xpm":4,
+        "xpa":4,
         "my_guy":true,
         "my_guy_seasons":3,
         "in_bank":false,
@@ -5438,8 +5477,8 @@
       {
         "name":"Philadelphia Eagles",
         "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/phi.png",
-        "total_pts":0,
-        "sack":0,
+        "total_pts":4.0,
+        "sack":1,
         "int":0,
         "fum_rec":0,
         "td":0,
@@ -5451,112 +5490,116 @@
     ],
     "TOP_PERFORMERS":[
       {
-        "name":"Joe Burrow",
-        "position":"QB",
-        "points":0.0,
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6770.jpg",
-        "total_pts":0,
-        "comp":0,
-        "att":0,
-        "pass_yd":0,
-        "rush_yd":0,
-        "td":0
-      },
-      {
         "name":"Jahmyr Gibbs",
         "position":"RB",
-        "points":0.0,
+        "points":34.4,
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9221.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
-        "td":0
+        "total_pts":31.1,
+        "att":29,
+        "yd":156,
+        "ypc":5.4,
+        "td":2
       },
       {
         "name":"Breece Hall",
         "position":"RB",
-        "points":0.0,
+        "points":20.3,
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8155.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
-        "td":0
+        "total_pts":18.8,
+        "att":22,
+        "yd":102,
+        "ypc":4.6,
+        "td":1
+      },
+      {
+        "name":"Joe Burrow",
+        "position":"QB",
+        "points":19.5,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6770.jpg",
+        "total_pts":15.2,
+        "comp":25,
+        "att":35,
+        "pass_yd":254,
+        "rush_yd":20,
+        "td":1
       }
     ],
     "BOTTOM_PERFORMERS":[
       {
-        "name":"Joe Burrow",
-        "position":"QB",
+        "name":"Romeo Doubs",
+        "position":"WR",
         "points":0.0,
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6770.jpg",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8121.jpg",
         "total_pts":0,
-        "comp":0,
-        "att":0,
-        "pass_yd":0,
-        "rush_yd":0,
+        "targets":3,
+        "catches":0,
+        "yd":0,
         "td":0
       },
       {
-        "name":"Jahmyr Gibbs",
-        "position":"RB",
-        "points":0.0,
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9221.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
+        "name":"Harold Fannin",
+        "position":"TE",
+        "points":3.4,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12506.jpg",
+        "total_pts":3.1,
+        "targets":3,
+        "catches":2,
+        "yd":21,
         "td":0
       },
       {
-        "name":"Breece Hall",
-        "position":"RB",
-        "points":0.0,
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8155.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
+        "name":"Philadelphia Eagles",
+        "position":"DEF",
+        "points":4.5,
+        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/phi.png",
+        "total_pts":4.0,
+        "sack":1,
+        "int":0,
+        "fum_rec":0,
         "td":0
       }
     ],
     "BENCHWARMER":{
-      "name":"Emeka Egbuka",
-      "position":"WR",
-      "points":0.0,
-      "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12514.jpg",
-      "total_pts":0,
-      "targets":0,
-      "catches":0,
-      "yd":0,
-      "td":0
+      "name":"Kyle Monangai",
+      "position":"RB",
+      "points":19.9,
+      "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12534.jpg",
+      "total_pts":19.4,
+      "att":10,
+      "yd":100,
+      "ypc":10.0,
+      "td":1
     },
     "LAST_WEEK_OPPONENT":"Schlemmerfilet Bortleaise",
     "LAST_WEEK_RESULT":{
-      "own_points":0.0,
-      "opponent_points":0.0,
-      "outcome":"Unentschieden"
+      "own_points":118.5,
+      "opponent_points":182.5,
+      "outcome":"Niederlage"
     },
-    "THIS_WEEK_OPPONENT":"It's Swiftney bitch",
-    "THIS_WEEK_WIN_PROB":52.2,
-    "POWER RANK":6,
-    "Power Rank Score":6.5,
+    "THIS_WEEK_OPPONENT":"Gonna be golden",
+    "THIS_WEEK_WIN_PROB":54.3,
+    "POWER RANK":7,
+    "Power Rank Score":6.95,
     "LAST_WEEK_POWER_RANK":null,
     "POWER_RANK_DELTA":null,
-    "QB Strength Rank":1,
-    "RB Strength Rank":1,
-    "WR Strength Rank":1,
-    "TE Strength Rank":1,
-    "K Strength Rank":1,
+    "QB Strength Rank":8,
+    "RB Strength Rank":2,
+    "WR Strength Rank":8,
+    "TE Strength Rank":10,
+    "K Strength Rank":6,
     "Bench Strength Rank":1,
     "TREND Rank":6,
     "Adjusted Average Rank":6,
     "BADGES":[
       {
+        "icon":"groundpound",
+        "label":"Ground and Pound",
+        "description":"46.1% der Punkte diese Woche kamen von den RBs - volle Kontrolle am Boden."
+      },
+      {
         "icon":"egg",
         "label":"Klingeling, hier kommt der Eiermann",
-        "description":"Joe Burrow, Jahmyr Gibbs, Breece Hall, George Pickens, Mike Evans, Harold Fannin, Rachaad White, Romeo Doubs, Harrison Butker, Philadelphia Eagles mit 0 Punkten in der Startaufstellung - ein Ei gelegt."
+        "description":"Romeo Doubs mit 0 Punkten in der Startaufstellung - ein Ei gelegt."
       },
       {
         "icon":"ruin",
@@ -5567,15 +5610,15 @@
     "COMMENTS":"80 Punkte von zwei Spielern. Josh Allen mit 50 und CMC mit 30. Absolute Frechheit. Damit hätte Ben gegen Tine oder gegen Leo in Woche 11 gewonnen. Nimmt man Kelce mit seinen 20 noch dazu, hätte es auch für Peter, Sven und Philipp gereicht.\nDabei hatte Ben auch noch 27 von Gainwell und 17 von Santos auf der Bank. Fantastische Woche für unseren Sophomore-Youngster. Kann er daran anknüpfen?\nJosh hat dazu am Donnerstag schon mal ganz klar „NEIN“ gesagt.",
     "FAAB_REMAINING":100,
     "LEGACY_STATS":{
-      "win_pct":62.5,
+      "win_pct":60.3,
       "wins":35,
-      "losses":21,
+      "losses":23,
       "ties":0,
-      "all_time_points":3514.3,
+      "all_time_points":3632.8,
       "points_by_season":[
         {
           "season":"2026",
-          "points":0.0
+          "points":118.5
         },
         {
           "season":"2025",
@@ -5687,7 +5730,7 @@
         "K":[
           {
             "name":"Harrison Butker",
-            "points":185.6,
+            "points":192.6,
             "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4227.jpg",
             "is_champion":false
           },
@@ -5707,7 +5750,7 @@
         "DEF":[
           {
             "name":"Philadelphia Eagles",
-            "points":167.5,
+            "points":172.0,
             "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/phi.png",
             "is_champion":false
           },
@@ -5759,7 +5802,7 @@
           },
           {
             "name":"Rachaad White",
-            "points":203.7,
+            "points":207.7,
             "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8136.jpg",
             "is_champion":false
           },
@@ -5861,7 +5904,7 @@
       "low_week":{
         "points":0.0,
         "season":"2026",
-        "week":1
+        "week":2
       },
       "high_player_week":{
         "points":51.93,
@@ -5878,14 +5921,14 @@
       "opfer":{
         "name":"Shpooople",
         "wins":5,
-        "losses":0,
-        "ties":2
+        "losses":1,
+        "ties":1
       },
-      "win_pct_rank":1,
+      "win_pct_rank":2,
       "waiver_moves_rank":11,
       "trades_rank":11,
       "all_time_points_rank":11,
-      "avg_placement_rank":9,
+      "avg_placement_rank":8,
       "high_week_rank":12,
       "low_week_rank":8,
       "high_player_week_rank":4
@@ -5897,46 +5940,46 @@
       },
       {
         "name":"Peterle",
-        "score":0
+        "score":1
       }
     ],
-    "Week 1":0.0,
+    "Week 1":118.46,
     "DISPLAY_WEEK_LABEL":"Woche 1"
   },
   {
     "User ID":"723153820145758208",
     "Display Name":"MomentumBln",
     "Team Name":"SalvationIsLuthersBurden",
-    "Wins":0,
-    "Losses":0,
+    "Wins":1,
+    "Losses":1,
     "Ties":0,
-    "Points For":0,
-    "Points Against":0,
+    "Points For":154,
+    "Points Against":159,
     "Adjusted Average":0,
     "TREND":"NO TREND",
     "Trend Percentage":0,
-    "QB Strength":0,
-    "RB Strength":0,
-    "WR Strength":0,
-    "TE Strength":0,
-    "K Strength":0,
+    "QB Strength":38,
+    "RB Strength":49,
+    "WR Strength":72,
+    "TE Strength":34,
+    "K Strength":74,
     "QB Strength Count":1,
-    "RB Strength Count":4,
-    "WR Strength Count":2,
+    "RB Strength Count":3,
+    "WR Strength Count":3,
     "TE Strength Count":1,
     "K Strength Count":1,
-    "Bench Strength":0,
+    "Bench Strength":75,
     "Bench Strength Count":3,
     "QB":[
       {
         "name":"Justin Herbert",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6797.jpg",
-        "total_pts":0,
-        "comp":0,
-        "att":0,
-        "pass_yd":0,
-        "rush_yd":0,
-        "td":0,
+        "total_pts":14.3,
+        "comp":17,
+        "att":27,
+        "pass_yd":209,
+        "rush_yd":29,
+        "td":1,
         "my_guy":false,
         "my_guy_seasons":2,
         "in_bank":false,
@@ -5947,36 +5990,36 @@
       {
         "name":"Chris Rodriguez",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/10219.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
+        "total_pts":2.3,
+        "att":6,
+        "yd":23,
+        "ypc":3.8,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
-        "in_strength":true
+        "in_strength":false
       },
       {
         "name":"Jonathon Brooks",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11583.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
+        "total_pts":6.7,
+        "att":4,
+        "yd":14,
+        "ypc":3.5,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
-        "in_bank":false,
-        "in_strength":true
+        "in_bank":true,
+        "in_strength":false
       },
       {
         "name":"Kaelon Black",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/13414.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
+        "total_pts":7.5,
+        "att":14,
+        "yd":65,
+        "ypc":4.6,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
@@ -5986,10 +6029,10 @@
       {
         "name":"Christian McCaffrey",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4034.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
+        "total_pts":11.3,
+        "att":10,
+        "yd":68,
+        "ypc":6.8,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
@@ -5999,25 +6042,25 @@
       {
         "name":"Javonte Williams",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7588.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
-        "td":0,
+        "total_pts":21.7,
+        "att":12,
+        "yd":41,
+        "ypc":3.4,
+        "td":2,
         "my_guy":false,
         "my_guy_seasons":1,
-        "in_bank":true,
-        "in_strength":false
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "WR":[
       {
         "name":"Malik Nabers",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11632.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
+        "total_pts":9.9,
+        "targets":9,
+        "catches":6,
+        "yd":69,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":2,
@@ -6027,10 +6070,10 @@
       {
         "name":"Luther Burden",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12519.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
+        "total_pts":7.0,
+        "targets":5,
+        "catches":5,
+        "yd":63,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
@@ -6040,10 +6083,10 @@
       {
         "name":"Carnell Tate",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/13279.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
+        "total_pts":5.8,
+        "targets":6,
+        "catches":4,
+        "yd":38,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
@@ -6053,10 +6096,10 @@
       {
         "name":"KC Concepcion",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/13298.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
+        "total_pts":5.8,
+        "targets":5,
+        "catches":4,
+        "yd":43,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
@@ -6066,10 +6109,10 @@
       {
         "name":"Jalen Nailor",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8180.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
+        "total_pts":4.2,
+        "targets":5,
+        "catches":3,
+        "yd":27,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
@@ -6079,25 +6122,25 @@
       {
         "name":"Zay Flowers",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9997.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
-        "td":0,
+        "total_pts":23.5,
+        "targets":6,
+        "catches":5,
+        "yd":150,
+        "td":1,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
-        "in_strength":false
+        "in_strength":true
       }
     ],
     "TE":[
       {
         "name":"Dalton Kincaid",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/10236.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
+        "total_pts":15.5,
+        "targets":6,
+        "catches":5,
+        "yd":130,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
@@ -6109,11 +6152,11 @@
       {
         "name":"Tyler Loop",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12711.jpg",
-        "total_pts":0,
-        "fgm":0,
-        "fga":0,
-        "xpm":0,
-        "xpa":0,
+        "total_pts":14.0,
+        "fgm":2,
+        "fga":2,
+        "xpm":5,
+        "xpa":5,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
@@ -6124,11 +6167,11 @@
       {
         "name":"Pittsburgh Steelers",
         "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/pit.png",
-        "total_pts":0,
-        "sack":0,
-        "int":0,
+        "total_pts":20.0,
+        "sack":4,
+        "int":2,
         "fum_rec":0,
-        "td":0,
+        "td":1,
         "my_guy":false,
         "my_guy_seasons":2,
         "in_bank":false,
@@ -6137,112 +6180,115 @@
     ],
     "TOP_PERFORMERS":[
       {
-        "name":"Justin Herbert",
-        "position":"QB",
-        "points":0.0,
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6797.jpg",
-        "total_pts":0,
-        "comp":0,
-        "att":0,
-        "pass_yd":0,
-        "rush_yd":0,
-        "td":0
-      },
-      {
-        "name":"Christian McCaffrey",
-        "position":"RB",
-        "points":0.0,
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4034.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
-        "td":0
+        "name":"Zay Flowers",
+        "position":"WR",
+        "points":24.5,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9997.jpg",
+        "total_pts":23.5,
+        "targets":6,
+        "catches":5,
+        "yd":150,
+        "td":1
       },
       {
         "name":"Javonte Williams",
         "position":"RB",
-        "points":0.0,
+        "points":22.2,
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7588.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
-        "td":0
+        "total_pts":21.7,
+        "att":12,
+        "yd":41,
+        "ypc":3.4,
+        "td":2
+      },
+      {
+        "name":"Pittsburgh Steelers",
+        "position":"DEF",
+        "points":21.8,
+        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/pit.png",
+        "total_pts":20.0,
+        "sack":4,
+        "int":2,
+        "fum_rec":0,
+        "td":1
       }
     ],
     "BOTTOM_PERFORMERS":[
       {
-        "name":"Justin Herbert",
-        "position":"QB",
-        "points":0.0,
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6797.jpg",
-        "total_pts":0,
-        "comp":0,
-        "att":0,
-        "pass_yd":0,
-        "rush_yd":0,
+        "name":"Jonathon Brooks",
+        "position":"RB",
+        "points":7.0,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11583.jpg",
+        "total_pts":6.7,
+        "att":4,
+        "yd":14,
+        "ypc":3.5,
         "td":0
       },
       {
-        "name":"Christian McCaffrey",
-        "position":"RB",
-        "points":0.0,
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4034.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
+        "name":"Luther Burden",
+        "position":"WR",
+        "points":7.5,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12519.jpg",
+        "total_pts":7.0,
+        "targets":5,
+        "catches":5,
+        "yd":63,
         "td":0
       },
       {
-        "name":"Javonte Williams",
-        "position":"RB",
-        "points":0.0,
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7588.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
+        "name":"Malik Nabers",
+        "position":"WR",
+        "points":10.7,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11632.jpg",
+        "total_pts":9.9,
+        "targets":9,
+        "catches":6,
+        "yd":69,
         "td":0
       }
     ],
     "BENCHWARMER":{
-      "name":"Chris Rodriguez",
+      "name":"Kaelon Black",
       "position":"RB",
-      "points":0.0,
-      "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/10219.jpg",
-      "total_pts":0,
-      "att":0,
-      "yd":0,
-      "ypc":0,
+      "points":8.2,
+      "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/13414.jpg",
+      "total_pts":7.5,
+      "att":14,
+      "yd":65,
+      "ypc":4.6,
       "td":0
     },
     "LAST_WEEK_OPPONENT":"TrevorMutantNinjaTutens",
     "LAST_WEEK_RESULT":{
-      "own_points":0.0,
-      "opponent_points":0.0,
-      "outcome":"Unentschieden"
+      "own_points":154.4,
+      "opponent_points":159.6,
+      "outcome":"Niederlage"
     },
     "THIS_WEEK_OPPONENT":"Schlemmerfilet Bortleaise",
-    "THIS_WEEK_WIN_PROB":53.0,
-    "POWER RANK":6,
-    "Power Rank Score":6.5,
+    "THIS_WEEK_WIN_PROB":52.1,
+    "POWER RANK":3,
+    "Power Rank Score":5.18,
     "LAST_WEEK_POWER_RANK":null,
     "POWER_RANK_DELTA":null,
-    "QB Strength Rank":1,
-    "RB Strength Rank":1,
-    "WR Strength Rank":1,
-    "TE Strength Rank":1,
-    "K Strength Rank":1,
-    "Bench Strength Rank":1,
+    "QB Strength Rank":10,
+    "RB Strength Rank":6,
+    "WR Strength Rank":6,
+    "TE Strength Rank":5,
+    "K Strength Rank":2,
+    "Bench Strength Rank":3,
     "TREND Rank":6,
     "Adjusted Average Rank":6,
     "BADGES":[
       {
-        "icon":"egg",
-        "label":"Klingeling, hier kommt der Eiermann",
-        "description":"Justin Herbert, Christian McCaffrey, Javonte Williams, Malik Nabers, Luther Burden, Dalton Kincaid, Zay Flowers, Carnell Tate, Tyler Loop, Pittsburgh Steelers mit 0 Punkten in der Startaufstellung - ein Ei gelegt."
+        "icon":"unlucky",
+        "label":"Pechvogel der Woche",
+        "description":"154.4 Punkte - mehr als die halbe Liga - und trotzdem verloren."
+      },
+      {
+        "icon":"shield",
+        "label":"Defense wins Championships",
+        "description":"Die Defense war mit 21.75 Punkten besser als den Quarterback (17.31 Pkt.)."
       },
       {
         "icon":"ruin",
@@ -6253,15 +6299,15 @@
     "COMMENTS":"Da macht man mal 137 Punkte, die drittmeisten in der Woche, und man bekommt keinen Punkt. Halt doch – der Median. Was für eine Erleichterung. Doch nicht so kacke, oder Mo?\nBei Mo haben eigentlich nur 5 Spieler Punkte gemacht, den Rest hätte man auch auf 0 abrunden können. Wenn der QB 5 Punkte macht, hat man eigentlich schon verloren… außer man hat T-Mac und den Senfmann.\n(60 Points combined)\nEs sieht so aus, als würden B. Young und T-Mac jetzt richtig durchstarten. Vielleicht sollte Mo die beiden stacken in Justins BYE-Week.\nMo hätte schon längst aus gutem Grund aufgeben können, aber sein Team ist immer noch stark genug, um in die Playoffs zu kommen.\nVielleicht brauchen wir noch eine Trophy für den most resilient Manager (Arbeitstitel). Ein Voting-basierter Award für den besten Manager, der aus Scheiße Gold macht. Sowas wie Coach of the Year in der NFL.",
     "FAAB_REMAINING":100,
     "LEGACY_STATS":{
-      "win_pct":45.3,
-      "wins":43,
-      "losses":52,
+      "win_pct":45.4,
+      "wins":44,
+      "losses":53,
       "ties":0,
-      "all_time_points":8179.7,
+      "all_time_points":8334.0,
       "points_by_season":[
         {
           "season":"2026",
-          "points":0.0
+          "points":154.4
         },
         {
           "season":"2025",
@@ -6284,7 +6330,7 @@
           "points":1561.4
         }
       ],
-      "avg_placement":8.7,
+      "avg_placement":8.2,
       "most_weeks":[
         {
           "name":"Malik Nabers",
@@ -6344,7 +6390,7 @@
         },
         {
           "name":"Justin Herbert",
-          "points":346.4,
+          "points":363.7,
           "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6797.jpg",
           "is_champion":false
         },
@@ -6371,7 +6417,7 @@
           },
           {
             "name":"Justin Herbert",
-            "points":346.4,
+            "points":363.7,
             "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6797.jpg",
             "is_champion":false
           },
@@ -6501,7 +6547,7 @@
           },
           {
             "name":"Malik Nabers",
-            "points":218.4,
+            "points":229.1,
             "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11632.jpg",
             "is_champion":false
           },
@@ -6568,7 +6614,7 @@
       "placements":[
         {
           "season":"2026",
-          "place":15
+          "place":12
         },
         {
           "season":"2025",
@@ -6599,7 +6645,7 @@
       "low_week":{
         "points":0.0,
         "season":"2026",
-        "week":1
+        "week":2
       },
       "high_player_week":{
         "points":55.9,
@@ -6608,9 +6654,9 @@
         "week":15
       },
       "angstgegner":{
-        "name":"benjyalf",
-        "wins":2,
-        "losses":0,
+        "name":"flashdw3",
+        "wins":5,
+        "losses":1,
         "ties":1
       },
       "opfer":{
@@ -6631,46 +6677,46 @@
     "QUIZ_SCORES":[
       {
         "name":"Mo",
-        "score":0
+        "score":2
       }
     ],
-    "Week 1":0.0,
+    "Week 1":154.36,
     "DISPLAY_WEEK_LABEL":"Woche 1"
   },
   {
     "User ID":"723213691029368832",
     "Display Name":"jay88",
     "Team Name":"The PUK-A-BOOs",
-    "Wins":0,
+    "Wins":2,
     "Losses":0,
     "Ties":0,
-    "Points For":0,
-    "Points Against":0,
+    "Points For":135,
+    "Points Against":117,
     "Adjusted Average":0,
     "TREND":"NO TREND",
     "Trend Percentage":0,
-    "QB Strength":0,
-    "RB Strength":0,
-    "WR Strength":0,
-    "TE Strength":0,
-    "K Strength":0,
+    "QB Strength":71,
+    "RB Strength":22,
+    "WR Strength":100,
+    "TE Strength":19,
+    "K Strength":37,
     "QB Strength Count":1,
-    "RB Strength Count":4,
-    "WR Strength Count":2,
+    "RB Strength Count":2,
+    "WR Strength Count":4,
     "TE Strength Count":1,
     "K Strength Count":1,
-    "Bench Strength":0,
+    "Bench Strength":25,
     "Bench Strength Count":3,
     "QB":[
       {
         "name":"Jaxson Dart",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12508.jpg",
-        "total_pts":0,
-        "comp":0,
-        "att":0,
-        "pass_yd":0,
-        "rush_yd":0,
-        "td":0,
+        "total_pts":26.6,
+        "comp":23,
+        "att":29,
+        "pass_yd":230,
+        "rush_yd":54,
+        "td":3,
         "my_guy":false,
         "my_guy_seasons":2,
         "in_bank":false,
@@ -6679,12 +6725,12 @@
       {
         "name":"Lamar Jackson",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4881.jpg",
-        "total_pts":0,
-        "comp":0,
-        "att":0,
-        "pass_yd":0,
-        "rush_yd":0,
-        "td":0,
+        "total_pts":25.0,
+        "comp":17,
+        "att":25,
+        "pass_yd":324,
+        "rush_yd":40,
+        "td":2,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
@@ -6702,29 +6748,29 @@
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
-        "in_bank":false,
-        "in_strength":true
+        "in_bank":true,
+        "in_strength":false
       },
       {
         "name":"Woody Marks",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12474.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
+        "total_pts":4.5,
+        "att":9,
+        "yd":42,
+        "ypc":4.7,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
-        "in_bank":false,
-        "in_strength":true
+        "in_bank":true,
+        "in_strength":false
       },
       {
         "name":"RJ Harvey",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12489.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
+        "total_pts":6.1,
+        "att":3,
+        "yd":18,
+        "ypc":6.0,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
@@ -6742,20 +6788,20 @@
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
-        "in_strength":true
+        "in_strength":false
       },
       {
         "name":"Jeremiyah Love",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/13287.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
-        "td":0,
+        "total_pts":12.0,
+        "att":11,
+        "yd":41,
+        "ypc":3.7,
+        "td":1,
         "my_guy":false,
         "my_guy_seasons":1,
-        "in_bank":true,
-        "in_strength":false
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Isiah Pacheco",
@@ -6767,7 +6813,7 @@
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
-        "in_bank":true,
+        "in_bank":false,
         "in_strength":false
       }
     ],
@@ -6775,10 +6821,10 @@
       {
         "name":"Brian Thomas",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11631.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
+        "total_pts":5.5,
+        "targets":3,
+        "catches":3,
+        "yd":40,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
@@ -6788,11 +6834,11 @@
       {
         "name":"Stefon Diggs",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/2449.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
-        "td":0,
+        "total_pts":13.5,
+        "targets":9,
+        "catches":4,
+        "yd":55,
+        "td":1,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
@@ -6801,39 +6847,39 @@
       {
         "name":"Justin Jefferson",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6794.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
-        "td":0,
+        "total_pts":27.2,
+        "targets":9,
+        "catches":8,
+        "yd":92,
+        "td":2,
         "my_guy":false,
         "my_guy_seasons":1,
-        "in_bank":true,
-        "in_strength":false
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Puka Nacua",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9493.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
+        "total_pts":9.9,
+        "targets":9,
+        "catches":5,
+        "yd":74,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
-        "in_strength":false
+        "in_strength":true
       }
     ],
     "TE":[
       {
         "name":"Tyler Warren",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12518.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
-        "td":0,
+        "total_pts":8.8,
+        "targets":5,
+        "catches":3,
+        "yd":13,
+        "td":1,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
@@ -6842,14 +6888,14 @@
       {
         "name":"Jake Ferguson",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8110.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
+        "total_pts":1.6,
+        "targets":2,
+        "catches":2,
+        "yd":6,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
-        "in_bank":false,
+        "in_bank":true,
         "in_strength":false
       }
     ],
@@ -6857,11 +6903,11 @@
       {
         "name":"Jason Myers",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/2747.jpg",
-        "total_pts":0,
-        "fgm":0,
-        "fga":0,
-        "xpm":0,
-        "xpa":0,
+        "total_pts":7.0,
+        "fgm":2,
+        "fga":2,
+        "xpm":1,
+        "xpa":1,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
@@ -6872,9 +6918,9 @@
       {
         "name":"Seattle Seahawks",
         "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/sea.png",
-        "total_pts":0,
-        "sack":0,
-        "int":0,
+        "total_pts":13.0,
+        "sack":3,
+        "int":3,
         "fum_rec":0,
         "td":0,
         "my_guy":false,
@@ -6887,110 +6933,120 @@
       {
         "name":"Lamar Jackson",
         "position":"QB",
-        "points":0.0,
+        "points":28.5,
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4881.jpg",
-        "total_pts":0,
-        "comp":0,
-        "att":0,
-        "pass_yd":0,
-        "rush_yd":0,
-        "td":0
+        "total_pts":25.0,
+        "comp":17,
+        "att":25,
+        "pass_yd":324,
+        "rush_yd":40,
+        "td":2
       },
       {
-        "name":"Jeremiyah Love",
-        "position":"RB",
-        "points":0.0,
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/13287.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
-        "td":0
+        "name":"Justin Jefferson",
+        "position":"WR",
+        "points":27.9,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6794.jpg",
+        "total_pts":27.2,
+        "targets":9,
+        "catches":8,
+        "yd":92,
+        "td":2
       },
       {
-        "name":"RJ Harvey",
-        "position":"RB",
-        "points":0.0,
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12489.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
+        "name":"Seattle Seahawks",
+        "position":"DEF",
+        "points":15.2,
+        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/sea.png",
+        "total_pts":13.0,
+        "sack":3,
+        "int":3,
+        "fum_rec":0,
         "td":0
       }
     ],
     "BOTTOM_PERFORMERS":[
       {
-        "name":"Lamar Jackson",
-        "position":"QB",
-        "points":0.0,
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4881.jpg",
-        "total_pts":0,
-        "comp":0,
-        "att":0,
-        "pass_yd":0,
-        "rush_yd":0,
-        "td":0
-      },
-      {
-        "name":"Jeremiyah Love",
-        "position":"RB",
-        "points":0.0,
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/13287.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
+        "name":"Brian Thomas",
+        "position":"WR",
+        "points":5.2,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11631.jpg",
+        "total_pts":5.5,
+        "targets":3,
+        "catches":3,
+        "yd":40,
         "td":0
       },
       {
         "name":"RJ Harvey",
         "position":"RB",
-        "points":0.0,
+        "points":6.3,
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12489.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
+        "total_pts":6.1,
+        "att":3,
+        "yd":18,
+        "ypc":6.0,
         "td":0
+      },
+      {
+        "name":"Jason Myers",
+        "position":"K",
+        "points":7.0,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/2747.jpg",
+        "total_pts":7.0,
+        "fgm":2,
+        "fga":2,
+        "xpm":1,
+        "xpa":1
       }
     ],
     "BENCHWARMER":{
-      "name":"Roschon Johnson",
-      "position":"RB",
-      "points":0.0,
-      "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/10235.jpg",
-      "total_pts":0,
-      "att":0,
-      "yd":0,
-      "ypc":0,
-      "td":0
+      "name":"Jaxson Dart",
+      "position":"QB",
+      "points":33.7,
+      "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12508.jpg",
+      "total_pts":26.6,
+      "comp":23,
+      "att":29,
+      "pass_yd":230,
+      "rush_yd":54,
+      "td":3
     },
-    "LAST_WEEK_OPPONENT":"Alvin had a little Lamb",
+    "LAST_WEEK_OPPONENT":"𓇳𓋹𓎡𓅓𓂋",
     "LAST_WEEK_RESULT":{
-      "own_points":0.0,
-      "opponent_points":0.0,
-      "outcome":"Unentschieden"
+      "own_points":136.0,
+      "opponent_points":117.8,
+      "outcome":"Sieg"
     },
     "THIS_WEEK_OPPONENT":"Pandan Buns",
-    "THIS_WEEK_WIN_PROB":49.0,
+    "THIS_WEEK_WIN_PROB":99.0,
     "POWER RANK":6,
-    "Power Rank Score":6.5,
+    "Power Rank Score":5.65,
     "LAST_WEEK_POWER_RANK":null,
     "POWER_RANK_DELTA":null,
-    "QB Strength Rank":1,
-    "RB Strength Rank":1,
+    "QB Strength Rank":3,
+    "RB Strength Rank":12,
     "WR Strength Rank":1,
-    "TE Strength Rank":1,
-    "K Strength Rank":1,
-    "Bench Strength Rank":1,
+    "TE Strength Rank":7,
+    "K Strength Rank":6,
+    "Bench Strength Rank":11,
     "TREND Rank":6,
     "Adjusted Average Rank":6,
     "BADGES":[
       {
-        "icon":"egg",
-        "label":"Klingeling, hier kommt der Eiermann",
-        "description":"Lamar Jackson, Jeremiyah Love, RJ Harvey, Puka Nacua, Justin Jefferson, Tyler Warren, Stefon Diggs, Brian Thomas, Jason Myers, Seattle Seahawks mit 0 Punkten in der Startaufstellung - ein Ei gelegt."
+        "icon":"bench",
+        "label":"Bankdrücker",
+        "description":"33.7 Punkte auf der Bank liegen gelassen - autsch."
+      },
+      {
+        "icon":"airraid",
+        "label":"Air Raid",
+        "description":"42.5% der Punkte diese Woche kamen von den WRs - reine Luftshow."
+      },
+      {
+        "icon":"shield",
+        "label":"Defense wins Championships",
+        "description":"Die Defense war mit 15.25 Punkten besser als jeden Running Back (12.25 Pkt.)."
       },
       {
         "icon":"ruin",
@@ -7001,15 +7057,15 @@
     "COMMENTS":"Nach einer der besten Drei-Spiele-Serien aus Woche 8, 9 und 10 mit 154 Punkten im Schnitt, kam Jays Team crashing down to Earth. Es wirkt aber wie eine Ausnahme, denn am Donnerstag haben die Texans schon 8 Sacks ausgepackt.\nJay ist back on track, würde man meinen. Aber ohne Waddle und Achane könnte es trotzdem eine sehr schwierige Woche werden. Zum Glück spielt er gegen Tines Team, da sollte eigentlich nichts anbrennen. (Definitiv kein Jinx-Versuch)",
     "FAAB_REMAINING":100,
     "LEGACY_STATS":{
-      "win_pct":50.5,
-      "wins":48,
+      "win_pct":51.5,
+      "wins":50,
       "losses":47,
       "ties":0,
-      "all_time_points":8455.1,
+      "all_time_points":8591.1,
       "points_by_season":[
         {
           "season":"2026",
-          "points":0.0
+          "points":136.0
         },
         {
           "season":"2025",
@@ -7032,7 +7088,7 @@
           "points":1460.0
         }
       ],
-      "avg_placement":7.7,
+      "avg_placement":6.8,
       "most_weeks":[
         {
           "name":"Justin Tucker",
@@ -7308,7 +7364,7 @@
       "placements":[
         {
           "season":"2026",
-          "place":16
+          "place":11
         },
         {
           "season":"2025",
@@ -7339,7 +7395,7 @@
       "low_week":{
         "points":0.0,
         "season":"2026",
-        "week":1
+        "week":2
       },
       "high_player_week":{
         "points":47.45,
@@ -7359,11 +7415,11 @@
         "losses":0,
         "ties":1
       },
-      "win_pct_rank":5,
+      "win_pct_rank":4,
       "waiver_moves_rank":7,
       "trades_rank":6,
       "all_time_points_rank":2,
-      "avg_placement_rank":7,
+      "avg_placement_rank":3,
       "high_week_rank":1,
       "low_week_rank":10,
       "high_player_week_rank":11
@@ -7374,43 +7430,43 @@
         "score":0
       }
     ],
-    "Week 1":0.0,
+    "Week 1":135.96,
     "DISPLAY_WEEK_LABEL":"Woche 1"
   },
   {
     "User ID":"986549581037002752",
     "Display Name":"flashdw3",
     "Team Name":"TrevorMutantNinjaTutens",
-    "Wins":0,
+    "Wins":2,
     "Losses":0,
     "Ties":0,
-    "Points For":0,
-    "Points Against":0,
+    "Points For":159,
+    "Points Against":154,
     "Adjusted Average":0,
     "TREND":"NO TREND",
     "Trend Percentage":0,
-    "QB Strength":0,
-    "RB Strength":0,
-    "WR Strength":0,
-    "TE Strength":0,
-    "K Strength":0,
+    "QB Strength":70,
+    "RB Strength":74,
+    "WR Strength":34,
+    "TE Strength":100,
+    "K Strength":37,
     "QB Strength Count":1,
-    "RB Strength Count":4,
+    "RB Strength Count":3,
     "WR Strength Count":2,
-    "TE Strength Count":1,
+    "TE Strength Count":2,
     "K Strength Count":1,
-    "Bench Strength":0,
+    "Bench Strength":88,
     "Bench Strength Count":3,
     "QB":[
       {
         "name":"Trevor Lawrence",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7523.jpg",
-        "total_pts":0,
-        "comp":0,
-        "att":0,
-        "pass_yd":0,
-        "rush_yd":0,
-        "td":0,
+        "total_pts":26.1,
+        "comp":18,
+        "att":23,
+        "pass_yd":245,
+        "rush_yd":3,
+        "td":4,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
@@ -7421,10 +7477,10 @@
       {
         "name":"Bhayshul Tuten",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12490.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
+        "total_pts":9.3,
+        "att":15,
+        "yd":66,
+        "ypc":4.4,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":2,
@@ -7434,11 +7490,11 @@
       {
         "name":"Ashton Jeanty",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12527.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
-        "td":0,
+        "total_pts":29.7,
+        "att":23,
+        "yd":102,
+        "ypc":4.4,
+        "td":2,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
@@ -7447,24 +7503,24 @@
       {
         "name":"Saquon Barkley",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4866.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
+        "total_pts":8.5,
+        "att":15,
+        "yd":83,
+        "ypc":5.5,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
-        "in_bank":false,
-        "in_strength":true
+        "in_bank":true,
+        "in_strength":false
       },
       {
         "name":"Chuba Hubbard",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7594.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
-        "td":0,
+        "total_pts":22.2,
+        "att":10,
+        "yd":49,
+        "ypc":4.9,
+        "td":2,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
@@ -7475,36 +7531,36 @@
       {
         "name":"Malik Washington",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11610.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
+        "total_pts":4.8,
+        "targets":8,
+        "catches":3,
+        "yd":53,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
-        "in_bank":false,
-        "in_strength":true
+        "in_bank":true,
+        "in_strength":false
       },
       {
         "name":"Marvin Harrison",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11628.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
+        "total_pts":3.8,
+        "targets":3,
+        "catches":1,
+        "yd":33,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
-        "in_strength":true
+        "in_strength":false
       },
       {
         "name":"Tetairoa McMillan",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12526.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
+        "total_pts":8.0,
+        "targets":8,
+        "catches":5,
+        "yd":75,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
@@ -7514,39 +7570,39 @@
       {
         "name":"Alec Pierce",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8142.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
+        "total_pts":8.1,
+        "targets":6,
+        "catches":4,
+        "yd":61,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
-        "in_bank":true,
-        "in_strength":false
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Garrett Wilson",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8146.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
+        "total_pts":10.9,
+        "targets":7,
+        "catches":6,
+        "yd":79,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
-        "in_bank":true,
-        "in_strength":false
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "TE":[
       {
         "name":"Dallas Goedert",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5022.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
-        "td":0,
+        "total_pts":21.7,
+        "targets":5,
+        "catches":4,
+        "yd":77,
+        "td":2,
         "my_guy":false,
         "my_guy_seasons":2,
         "in_bank":false,
@@ -7555,26 +7611,26 @@
       {
         "name":"Isaiah Likely",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8131.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
-        "td":0,
+        "total_pts":23.8,
+        "targets":8,
+        "catches":8,
+        "yd":78,
+        "td":2,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
-        "in_strength":false
+        "in_strength":true
       }
     ],
     "K":[
       {
         "name":"Will Reichard",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11792.jpg",
-        "total_pts":0,
-        "fgm":0,
-        "fga":0,
-        "xpm":0,
-        "xpa":0,
+        "total_pts":7.0,
+        "fgm":1,
+        "fga":1,
+        "xpm":4,
+        "xpa":4,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
@@ -7585,21 +7641,8 @@
       {
         "name":"Houston Texans",
         "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/hou.png",
-        "total_pts":0,
-        "sack":0,
-        "int":0,
-        "fum_rec":0,
-        "td":0,
-        "my_guy":false,
-        "my_guy_seasons":1,
-        "in_bank":false,
-        "in_strength":true
-      },
-      {
-        "name":"Los Angeles Chargers",
-        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/lac.png",
-        "total_pts":0,
-        "sack":0,
+        "total_pts":-1.0,
+        "sack":2,
         "int":0,
         "fum_rec":0,
         "td":0,
@@ -7607,116 +7650,128 @@
         "my_guy_seasons":1,
         "in_bank":false,
         "in_strength":false
+      },
+      {
+        "name":"Los Angeles Chargers",
+        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/lac.png",
+        "total_pts":1.0,
+        "sack":1,
+        "int":0,
+        "fum_rec":0,
+        "td":0,
+        "my_guy":false,
+        "my_guy_seasons":1,
+        "in_bank":false,
+        "in_strength":true
       }
     ],
     "TOP_PERFORMERS":[
       {
         "name":"Trevor Lawrence",
         "position":"QB",
-        "points":0.0,
+        "points":35.2,
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7523.jpg",
-        "total_pts":0,
-        "comp":0,
-        "att":0,
-        "pass_yd":0,
-        "rush_yd":0,
-        "td":0
-      },
-      {
-        "name":"Saquon Barkley",
-        "position":"RB",
-        "points":0.0,
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4866.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
-        "td":0
+        "total_pts":26.1,
+        "comp":18,
+        "att":23,
+        "pass_yd":245,
+        "rush_yd":3,
+        "td":4
       },
       {
         "name":"Ashton Jeanty",
         "position":"RB",
-        "points":0.0,
+        "points":31.4,
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12527.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
-        "td":0
+        "total_pts":29.7,
+        "att":23,
+        "yd":102,
+        "ypc":4.4,
+        "td":2
+      },
+      {
+        "name":"Chuba Hubbard",
+        "position":"RB",
+        "points":22.7,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7594.jpg",
+        "total_pts":22.2,
+        "att":10,
+        "yd":49,
+        "ypc":4.9,
+        "td":2
       }
     ],
     "BOTTOM_PERFORMERS":[
       {
-        "name":"Trevor Lawrence",
-        "position":"QB",
-        "points":0.0,
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7523.jpg",
-        "total_pts":0,
-        "comp":0,
-        "att":0,
-        "pass_yd":0,
-        "rush_yd":0,
+        "name":"Los Angeles Chargers",
+        "position":"DEF",
+        "points":0.2,
+        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/lac.png",
+        "total_pts":1.0,
+        "sack":1,
+        "int":0,
+        "fum_rec":0,
         "td":0
+      },
+      {
+        "name":"Will Reichard",
+        "position":"K",
+        "points":7.8,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11792.jpg",
+        "total_pts":7.0,
+        "fgm":1,
+        "fga":1,
+        "xpm":4,
+        "xpa":4
       },
       {
         "name":"Saquon Barkley",
         "position":"RB",
-        "points":0.0,
+        "points":9.0,
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4866.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
-        "td":0
-      },
-      {
-        "name":"Ashton Jeanty",
-        "position":"RB",
-        "points":0.0,
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12527.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
+        "total_pts":8.5,
+        "att":15,
+        "yd":83,
+        "ypc":5.5,
         "td":0
       }
     ],
     "BENCHWARMER":{
-      "name":"Malik Washington",
-      "position":"WR",
-      "points":0.0,
-      "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11610.jpg",
-      "total_pts":0,
-      "targets":0,
-      "catches":0,
-      "yd":0,
-      "td":0
+      "name":"Isaiah Likely",
+      "position":"TE",
+      "points":23.8,
+      "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8131.jpg",
+      "total_pts":23.8,
+      "targets":8,
+      "catches":8,
+      "yd":78,
+      "td":2
     },
     "LAST_WEEK_OPPONENT":"SalvationIsLuthersBurden",
     "LAST_WEEK_RESULT":{
-      "own_points":0.0,
-      "opponent_points":0.0,
-      "outcome":"Unentschieden"
+      "own_points":159.6,
+      "opponent_points":154.4,
+      "outcome":"Sieg"
     },
-    "THIS_WEEK_OPPONENT":"Alvin had a little Lamb",
-    "THIS_WEEK_WIN_PROB":50.2,
-    "POWER RANK":6,
-    "Power Rank Score":6.5,
+    "THIS_WEEK_OPPONENT":"𓇳𓋹𓎡𓅓𓂋",
+    "THIS_WEEK_WIN_PROB":51.1,
+    "POWER RANK":1,
+    "Power Rank Score":4.15,
     "LAST_WEEK_POWER_RANK":null,
     "POWER_RANK_DELTA":null,
-    "QB Strength Rank":1,
-    "RB Strength Rank":1,
-    "WR Strength Rank":1,
+    "QB Strength Rank":4,
+    "RB Strength Rank":3,
+    "WR Strength Rank":11,
     "TE Strength Rank":1,
-    "K Strength Rank":1,
-    "Bench Strength Rank":1,
+    "K Strength Rank":6,
+    "Bench Strength Rank":2,
     "TREND Rank":6,
     "Adjusted Average Rank":6,
     "BADGES":[
       {
-        "icon":"egg",
-        "label":"Klingeling, hier kommt der Eiermann",
-        "description":"Trevor Lawrence, Saquon Barkley, Ashton Jeanty, Tetairoa McMillan, Garrett Wilson, Dallas Goedert, Bhayshul Tuten, Chuba Hubbard, Will Reichard, Los Angeles Chargers mit 0 Punkten in der Startaufstellung - ein Ei gelegt."
+        "icon":"groundpound",
+        "label":"Ground and Pound",
+        "description":"46.2% der Punkte diese Woche kamen von den RBs - volle Kontrolle am Boden."
       },
       {
         "icon":"ruin",
@@ -7727,15 +7782,15 @@
     "COMMENTS":"Ohhh how the mighty have fallen. „On top of the world“ war der gute Sven noch vor einem Monat. Jetzt schmilzt der Abstand schneller als die Polarkappen.\nDie Teams, die nicht den perfekten Draft und Start in die Season hatten, haben Svens Truppe in Production schon eingeholt.\nIn der Liga ist er nur noch auf Platz zwei und eine halbe Woche vor den Verfolgern. Jetzt spielt er auch noch im Spitzenduell gegen Leos Truppe – ohne Llama Chase und Ladd McConkey.\nIch hoffe, Sven macht sich nicht zu viele Sorgen, er ist ja schon fast sicher in den Playoffs… fast sicher…",
     "FAAB_REMAINING":100,
     "LEGACY_STATS":{
-      "win_pct":44.3,
-      "wins":31,
+      "win_pct":45.8,
+      "wins":33,
       "losses":39,
       "ties":0,
-      "all_time_points":4904.4,
+      "all_time_points":5064.0,
       "points_by_season":[
         {
           "season":"2026",
-          "points":0.0
+          "points":159.6
         },
         {
           "season":"2025",
@@ -7750,7 +7805,7 @@
           "points":1515.4
         }
       ],
-      "avg_placement":10.2,
+      "avg_placement":8.0,
       "most_weeks":[
         {
           "name":"Dallas Goedert",
@@ -7890,15 +7945,15 @@
         ],
         "TE":[
           {
-            "name":"David Njoku",
-            "points":168.0,
-            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4033.jpg",
+            "name":"Dallas Goedert",
+            "points":182.8,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5022.jpg",
             "is_champion":false
           },
           {
-            "name":"Dallas Goedert",
-            "points":160.9,
-            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5022.jpg",
+            "name":"David Njoku",
+            "points":168.0,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4033.jpg",
             "is_champion":false
           },
           {
@@ -8018,7 +8073,7 @@
       "placements":[
         {
           "season":"2026",
-          "place":17
+          "place":8
         },
         {
           "season":"2025",
@@ -8041,7 +8096,7 @@
       "low_week":{
         "points":0.0,
         "season":"2026",
-        "week":1
+        "week":2
       },
       "high_player_week":{
         "points":42.5,
@@ -8056,16 +8111,16 @@
         "ties":1
       },
       "opfer":{
-        "name":"jay88",
+        "name":"MomentumBln",
         "wins":5,
         "losses":1,
         "ties":1
       },
-      "win_pct_rank":11,
+      "win_pct_rank":9,
       "waiver_moves_rank":10,
       "trades_rank":7,
       "all_time_points_rank":10,
-      "avg_placement_rank":11,
+      "avg_placement_rank":9,
       "high_week_rank":11,
       "low_week_rank":11,
       "high_player_week_rank":12
@@ -8076,43 +8131,43 @@
         "score":0
       }
     ],
-    "Week 1":0.0,
+    "Week 1":159.6,
     "DISPLAY_WEEK_LABEL":"Woche 1"
   },
   {
     "User ID":"1137349364512509952",
     "Display Name":"sandmann1ps",
     "Team Name":"No Team Name",
-    "Wins":0,
-    "Losses":0,
+    "Wins":1,
+    "Losses":1,
     "Ties":0,
-    "Points For":0,
-    "Points Against":0,
+    "Points For":107,
+    "Points Against":105,
     "Adjusted Average":0,
     "TREND":"NO TREND",
     "Trend Percentage":0,
-    "QB Strength":0,
-    "RB Strength":0,
-    "WR Strength":0,
-    "TE Strength":0,
-    "K Strength":0,
+    "QB Strength":66,
+    "RB Strength":39,
+    "WR Strength":99,
+    "TE Strength":9,
+    "K Strength":47,
     "QB Strength Count":1,
     "RB Strength Count":3,
     "WR Strength Count":3,
     "TE Strength Count":1,
     "K Strength Count":1,
-    "Bench Strength":0,
+    "Bench Strength":52,
     "Bench Strength Count":3,
     "QB":[
       {
         "name":"Jalen Hurts",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6904.jpg",
-        "total_pts":0,
-        "comp":0,
-        "att":0,
-        "pass_yd":0,
-        "rush_yd":0,
-        "td":0,
+        "total_pts":24.7,
+        "comp":14,
+        "att":25,
+        "pass_yd":203,
+        "rush_yd":46,
+        "td":3,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
@@ -8121,12 +8176,12 @@
       {
         "name":"Brock Purdy",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8183.jpg",
-        "total_pts":0,
-        "comp":0,
-        "att":0,
-        "pass_yd":0,
-        "rush_yd":0,
-        "td":0,
+        "total_pts":22.1,
+        "comp":25,
+        "att":34,
+        "pass_yd":205,
+        "rush_yd":29,
+        "td":3,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
@@ -8137,11 +8192,11 @@
       {
         "name":"Aaron Jones",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4199.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
-        "td":0,
+        "total_pts":10.0,
+        "att":12,
+        "yd":40,
+        "ypc":3.3,
+        "td":1,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
@@ -8150,10 +8205,10 @@
       {
         "name":"James Cook",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8138.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
+        "total_pts":8.4,
+        "att":13,
+        "yd":57,
+        "ypc":4.4,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
@@ -8163,11 +8218,11 @@
       {
         "name":"Kyren Williams",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8150.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
-        "td":0,
+        "total_pts":14.0,
+        "att":11,
+        "yd":41,
+        "ypc":3.7,
+        "td":1,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
@@ -8178,24 +8233,24 @@
       {
         "name":"Jayden Reed",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/10222.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
+        "total_pts":3.5,
+        "targets":7,
+        "catches":3,
+        "yd":20,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
-        "in_bank":false,
-        "in_strength":true
+        "in_bank":true,
+        "in_strength":false
       },
       {
         "name":"Jalen Coker",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11646.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
-        "td":0,
+        "total_pts":29.8,
+        "targets":9,
+        "catches":8,
+        "yd":138,
+        "td":2,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
@@ -8204,11 +8259,11 @@
       {
         "name":"DJ Moore",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4983.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
-        "td":0,
+        "total_pts":18.5,
+        "targets":8,
+        "catches":5,
+        "yd":100,
+        "td":1,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
@@ -8217,23 +8272,23 @@
       {
         "name":"Tee Higgins",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6801.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
+        "total_pts":7.4,
+        "targets":6,
+        "catches":3,
+        "yd":59,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":2,
-        "in_bank":true,
-        "in_strength":false
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Drake London",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8112.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
+        "total_pts":4.5,
+        "targets":4,
+        "catches":2,
+        "yd":29,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
@@ -8243,10 +8298,10 @@
       {
         "name":"Josh Downs",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9500.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
+        "total_pts":4.7,
+        "targets":4,
+        "catches":2,
+        "yd":37,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
@@ -8258,10 +8313,10 @@
       {
         "name":"Hunter Henry",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/3214.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
+        "total_pts":4.1,
+        "targets":3,
+        "catches":3,
+        "yd":26,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
@@ -8271,10 +8326,10 @@
       {
         "name":"George Kittle",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4217.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
+        "total_pts":2.2,
+        "targets":5,
+        "catches":2,
+        "yd":12,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
@@ -8286,11 +8341,11 @@
       {
         "name":"Ka'imi Fairbairn",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/3451.jpg",
-        "total_pts":0,
-        "fgm":0,
-        "fga":0,
-        "xpm":0,
-        "xpa":0,
+        "total_pts":9.0,
+        "fgm":1,
+        "fga":1,
+        "xpm":4,
+        "xpa":4,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
@@ -8301,9 +8356,9 @@
       {
         "name":"Denver Broncos",
         "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/den.png",
-        "total_pts":0,
-        "sack":0,
-        "int":0,
+        "total_pts":3.0,
+        "sack":2,
+        "int":1,
         "fum_rec":0,
         "td":0,
         "my_guy":false,
@@ -8316,110 +8371,114 @@
       {
         "name":"Jalen Hurts",
         "position":"QB",
-        "points":0.0,
+        "points":31.5,
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6904.jpg",
-        "total_pts":0,
-        "comp":0,
-        "att":0,
-        "pass_yd":0,
-        "rush_yd":0,
-        "td":0
+        "total_pts":24.7,
+        "comp":14,
+        "att":25,
+        "pass_yd":203,
+        "rush_yd":46,
+        "td":3
       },
       {
-        "name":"James Cook",
-        "position":"RB",
-        "points":0.0,
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8138.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
-        "td":0
+        "name":"DJ Moore",
+        "position":"WR",
+        "points":19.2,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4983.jpg",
+        "total_pts":18.5,
+        "targets":8,
+        "catches":5,
+        "yd":100,
+        "td":1
       },
       {
         "name":"Kyren Williams",
         "position":"RB",
-        "points":0.0,
+        "points":14.8,
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8150.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
-        "td":0
+        "total_pts":14.0,
+        "att":11,
+        "yd":41,
+        "ypc":3.7,
+        "td":1
       }
     ],
     "BOTTOM_PERFORMERS":[
       {
-        "name":"Jalen Hurts",
-        "position":"QB",
-        "points":0.0,
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6904.jpg",
-        "total_pts":0,
-        "comp":0,
-        "att":0,
-        "pass_yd":0,
-        "rush_yd":0,
+        "name":"George Kittle",
+        "position":"TE",
+        "points":2.2,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4217.jpg",
+        "total_pts":2.2,
+        "targets":5,
+        "catches":2,
+        "yd":12,
         "td":0
       },
       {
-        "name":"James Cook",
-        "position":"RB",
-        "points":0.0,
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8138.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
+        "name":"Denver Broncos",
+        "position":"DEF",
+        "points":3.2,
+        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/den.png",
+        "total_pts":3.0,
+        "sack":2,
+        "int":1,
+        "fum_rec":0,
         "td":0
       },
       {
-        "name":"Kyren Williams",
-        "position":"RB",
-        "points":0.0,
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8150.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
+        "name":"Drake London",
+        "position":"WR",
+        "points":4.8,
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8112.jpg",
+        "total_pts":4.5,
+        "targets":4,
+        "catches":2,
+        "yd":29,
         "td":0
       }
     ],
     "BENCHWARMER":{
       "name":"Jalen Coker",
       "position":"WR",
-      "points":0.0,
+      "points":30.8,
       "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11646.jpg",
-      "total_pts":0,
-      "targets":0,
-      "catches":0,
-      "yd":0,
-      "td":0
+      "total_pts":29.8,
+      "targets":9,
+      "catches":8,
+      "yd":138,
+      "td":2
     },
     "LAST_WEEK_OPPONENT":"Pandan Buns",
     "LAST_WEEK_RESULT":{
-      "own_points":0.0,
-      "opponent_points":0.0,
-      "outcome":"Unentschieden"
+      "own_points":107.5,
+      "opponent_points":105.2,
+      "outcome":"Sieg"
     },
     "THIS_WEEK_OPPONENT":"Always sunny´n Scarycity",
-    "THIS_WEEK_WIN_PROB":59.7,
-    "POWER RANK":6,
-    "Power Rank Score":6.5,
+    "THIS_WEEK_WIN_PROB":64.0,
+    "POWER RANK":8,
+    "Power Rank Score":7.7,
     "LAST_WEEK_POWER_RANK":null,
     "POWER_RANK_DELTA":null,
-    "QB Strength Rank":1,
-    "RB Strength Rank":1,
-    "WR Strength Rank":1,
-    "TE Strength Rank":1,
-    "K Strength Rank":1,
-    "Bench Strength Rank":1,
+    "QB Strength Rank":5,
+    "RB Strength Rank":10,
+    "WR Strength Rank":2,
+    "TE Strength Rank":9,
+    "K Strength Rank":5,
+    "Bench Strength Rank":7,
     "TREND Rank":6,
     "Adjusted Average Rank":6,
     "BADGES":[
       {
-        "icon":"egg",
-        "label":"Klingeling, hier kommt der Eiermann",
-        "description":"Jalen Hurts, James Cook, Kyren Williams, Drake London, Tee Higgins, George Kittle, DJ Moore, Jayden Reed, Ka'imi Fairbairn, Denver Broncos mit 0 Punkten in der Startaufstellung - ein Ei gelegt."
+        "icon":"clutch",
+        "label":"Nervenstark",
+        "description":"Sieg mit nur 2.3 Punkten Vorsprung - knapper geht's kaum."
+      },
+      {
+        "icon":"blunder",
+        "label":"Bank-Patzer",
+        "description":"Ein Bankspieler hätte 26.1 Punkte mehr gebracht als der Starter auf derselben Position."
       },
       {
         "icon":"ruin",
@@ -8435,15 +8494,15 @@
     "COMMENTS":"Peter hatte einfach eine dieser Wochen. Die drei folgenden Stats fassen das eigentlich ganz gut zusammen:\nDavante Adams 1\/8 Receptions für 1 Yard und 1 TD.\nDie Chargers-D mit -1 – ausgerechnet gegen Jacksonville ohne deren WR1 und WR2.\nKhalil Shakir mit 1\/3 Receptions für -3 Yards. Calvin Austin 1\/1 Receptions für 5 Yards.\nDas sind die Wochen, in denen man daran zweifelt, was man hier eigentlich macht. Wo man am liebsten das ganze Team traden würde und mit Football nichts zu tun haben möchte.\nAber dann kommt schon der nächste Mittwoch und man fängt wieder von vorne an.",
     "FAAB_REMAINING":100,
     "LEGACY_STATS":{
-      "win_pct":42.9,
-      "wins":24,
-      "losses":32,
+      "win_pct":43.1,
+      "wins":25,
+      "losses":33,
       "ties":0,
-      "all_time_points":3320.1,
+      "all_time_points":3427.6,
       "points_by_season":[
         {
           "season":"2026",
-          "points":0.0
+          "points":107.5
         },
         {
           "season":"2025",
@@ -8454,7 +8513,7 @@
           "points":1539.0
         }
       ],
-      "avg_placement":11.3,
+      "avg_placement":9.7,
       "most_weeks":[
         {
           "name":"Tee Higgins",
@@ -8671,7 +8730,7 @@
           },
           {
             "name":"Tee Higgins",
-            "points":173.2,
+            "points":181.3,
             "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6801.jpg",
             "is_champion":false
           },
@@ -8707,7 +8766,7 @@
       "placements":[
         {
           "season":"2026",
-          "place":18
+          "place":13
         },
         {
           "season":"2025",
@@ -8726,7 +8785,7 @@
       "low_week":{
         "points":0.0,
         "season":"2026",
-        "week":1
+        "week":2
       },
       "high_player_week":{
         "points":51.9,
@@ -8761,7 +8820,7 @@
         "score":0
       }
     ],
-    "Week 1":0.0,
+    "Week 1":107.52,
     "DISPLAY_WEEK_LABEL":"Woche 1"
   }
 ]
