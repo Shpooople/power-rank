@@ -8,7 +8,7 @@
     "Ties":0,
     "Points For":182,
     "Points Against":118,
-    "Adjusted Average":0,
+    "Adjusted Average":182.5,
     "TREND":"NO TREND",
     "Trend Percentage":0,
     "QB Strength":100,
@@ -333,9 +333,9 @@
       "outcome":"Sieg"
     },
     "THIS_WEEK_OPPONENT":"SalvationIsLuthersBurden",
-    "THIS_WEEK_WIN_PROB":47.9,
+    "THIS_WEEK_WIN_PROB":46.7,
     "POWER RANK":2,
-    "Power Rank Score":4.3,
+    "Power Rank Score":3.91,
     "LAST_WEEK_POWER_RANK":null,
     "POWER_RANK_DELTA":null,
     "QB Strength Rank":1,
@@ -345,7 +345,7 @@
     "K Strength Rank":4,
     "Bench Strength Rank":10,
     "TREND Rank":6,
-    "Adjusted Average Rank":6,
+    "Adjusted Average Rank":1,
     "BADGES":[
       {
         "icon":"homer",
@@ -819,7 +819,7 @@
     "Ties":0,
     "Points For":95,
     "Points Against":153,
-    "Adjusted Average":0,
+    "Adjusted Average":95.8,
     "TREND":"NO TREND",
     "Trend Percentage":0,
     "QB Strength":14,
@@ -1143,9 +1143,9 @@
       "outcome":"Niederlage"
     },
     "THIS_WEEK_OPPONENT":"sandmann1ps",
-    "THIS_WEEK_WIN_PROB":36.0,
+    "THIS_WEEK_WIN_PROB":36.1,
     "POWER RANK":11,
-    "Power Rank Score":8.5,
+    "Power Rank Score":8.85,
     "LAST_WEEK_POWER_RANK":null,
     "POWER_RANK_DELTA":null,
     "QB Strength Rank":12,
@@ -1155,7 +1155,7 @@
     "K Strength Rank":11,
     "Bench Strength Rank":12,
     "TREND Rank":6,
-    "Adjusted Average Rank":6,
+    "Adjusted Average Rank":12,
     "BADGES":[
       {
         "icon":"hospital",
@@ -1564,7 +1564,7 @@
     "QUIZ_SCORES":[
       {
         "name":"Lücke",
-        "score":0
+        "score":1
       }
     ],
     "Week 1":95.85,
@@ -1579,7 +1579,7 @@
     "Ties":0,
     "Points For":153,
     "Points Against":95,
-    "Adjusted Average":0,
+    "Adjusted Average":153.8,
     "TREND":"NO TREND",
     "Trend Percentage":0,
     "QB Strength":41,
@@ -1893,9 +1893,9 @@
       "outcome":"Sieg"
     },
     "THIS_WEEK_OPPONENT":"pk123",
-    "THIS_WEEK_WIN_PROB":53.6,
+    "THIS_WEEK_WIN_PROB":53.2,
     "POWER RANK":4,
-    "Power Rank Score":5.55,
+    "Power Rank Score":5.38,
     "LAST_WEEK_POWER_RANK":null,
     "POWER_RANK_DELTA":null,
     "QB Strength Rank":8,
@@ -1905,7 +1905,7 @@
     "K Strength Rank":3,
     "Bench Strength Rank":9,
     "TREND Rank":6,
-    "Adjusted Average Rank":6,
+    "Adjusted Average Rank":4,
     "BADGES":[
       {
         "icon":"perfect",
@@ -2296,7 +2296,7 @@
     "QUIZ_SCORES":[
       {
         "name":"Till",
-        "score":1
+        "score":2
       },
       {
         "name":"Semih",
@@ -2315,7 +2315,7 @@
     "Ties":0,
     "Points For":117,
     "Points Against":135,
-    "Adjusted Average":0,
+    "Adjusted Average":117.8,
     "TREND":"NO TREND",
     "Trend Percentage":0,
     "QB Strength":47,
@@ -2653,9 +2653,9 @@
       "outcome":"Niederlage"
     },
     "THIS_WEEK_OPPONENT":"TrevorMutantNinjaTutens",
-    "THIS_WEEK_WIN_PROB":48.9,
-    "POWER RANK":8,
-    "Power Rank Score":7.7,
+    "THIS_WEEK_WIN_PROB":48.7,
+    "POWER RANK":9,
+    "Power Rank Score":7.91,
     "LAST_WEEK_POWER_RANK":null,
     "POWER_RANK_DELTA":null,
     "QB Strength Rank":7,
@@ -2665,7 +2665,7 @@
     "K Strength Rank":9,
     "Bench Strength Rank":5,
     "TREND Rank":6,
-    "Adjusted Average Rank":6,
+    "Adjusted Average Rank":8,
     "BADGES":[
       {
         "icon":"homer",
@@ -3071,7 +3071,7 @@
     "Ties":0,
     "Points For":152,
     "Points Against":107,
-    "Adjusted Average":0,
+    "Adjusted Average":152.9,
     "TREND":"NO TREND",
     "Trend Percentage":0,
     "QB Strength":61,
@@ -3383,9 +3383,9 @@
       "outcome":"Sieg"
     },
     "THIS_WEEK_OPPONENT":"Two Daddies One Bride ",
-    "THIS_WEEK_WIN_PROB":46.4,
+    "THIS_WEEK_WIN_PROB":46.8,
     "POWER RANK":4,
-    "Power Rank Score":5.55,
+    "Power Rank Score":5.38,
     "LAST_WEEK_POWER_RANK":null,
     "POWER_RANK_DELTA":null,
     "QB Strength Rank":6,
@@ -3395,7 +3395,7 @@
     "K Strength Rank":1,
     "Bench Strength Rank":6,
     "TREND Rank":6,
-    "Adjusted Average Rank":6,
+    "Adjusted Average Rank":5,
     "BADGES":[
       {
         "icon":"footboot",
@@ -3801,7 +3801,7 @@
     "Ties":0,
     "Points For":107,
     "Points Against":152,
-    "Adjusted Average":0,
+    "Adjusted Average":107.2,
     "TREND":"NO TREND",
     "Trend Percentage":0,
     "QB Strength":96,
@@ -4113,9 +4113,9 @@
       "outcome":"Niederlage"
     },
     "THIS_WEEK_OPPONENT":"BurrowButker and the Boys",
-    "THIS_WEEK_WIN_PROB":45.7,
+    "THIS_WEEK_WIN_PROB":46.2,
     "POWER RANK":10,
-    "Power Rank Score":7.98,
+    "Power Rank Score":8.24,
     "LAST_WEEK_POWER_RANK":null,
     "POWER_RANK_DELTA":null,
     "QB Strength Rank":2,
@@ -4125,7 +4125,7 @@
     "K Strength Rank":11,
     "Bench Strength Rank":4,
     "TREND Rank":6,
-    "Adjusted Average Rank":6,
+    "Adjusted Average Rank":10,
     "BADGES":[
       {
         "icon":"groundpound",
@@ -4544,7 +4544,7 @@
     "Ties":0,
     "Points For":105,
     "Points Against":107,
-    "Adjusted Average":0,
+    "Adjusted Average":105.2,
     "TREND":"NO TREND",
     "Trend Percentage":0,
     "QB Strength":34,
@@ -4858,7 +4858,7 @@
     "THIS_WEEK_OPPONENT":"The PUK-A-BOOs",
     "THIS_WEEK_WIN_PROB":1.0,
     "POWER RANK":12,
-    "Power Rank Score":8.8,
+    "Power Rank Score":9.21,
     "LAST_WEEK_POWER_RANK":null,
     "POWER_RANK_DELTA":null,
     "QB Strength Rank":11,
@@ -4868,7 +4868,7 @@
     "K Strength Rank":10,
     "Bench Strength Rank":8,
     "TREND Rank":6,
-    "Adjusted Average Rank":6,
+    "Adjusted Average Rank":11,
     "BADGES":[
       {
         "icon":"egg",
@@ -5250,7 +5250,7 @@
     "QUIZ_SCORES":[
       {
         "name":"Leo",
-        "score":0
+        "score":1
       }
     ],
     "Week 1":105.22,
@@ -5265,7 +5265,7 @@
     "Ties":0,
     "Points For":118,
     "Points Against":182,
-    "Adjusted Average":0,
+    "Adjusted Average":118.5,
     "TREND":"NO TREND",
     "Trend Percentage":0,
     "QB Strength":41,
@@ -5577,9 +5577,9 @@
       "outcome":"Niederlage"
     },
     "THIS_WEEK_OPPONENT":"Gonna be golden",
-    "THIS_WEEK_WIN_PROB":54.3,
+    "THIS_WEEK_WIN_PROB":53.8,
     "POWER RANK":7,
-    "Power Rank Score":6.95,
+    "Power Rank Score":7.03,
     "LAST_WEEK_POWER_RANK":null,
     "POWER_RANK_DELTA":null,
     "QB Strength Rank":8,
@@ -5589,7 +5589,7 @@
     "K Strength Rank":6,
     "Bench Strength Rank":1,
     "TREND Rank":6,
-    "Adjusted Average Rank":6,
+    "Adjusted Average Rank":7,
     "BADGES":[
       {
         "icon":"groundpound",
@@ -5955,7 +5955,7 @@
     "Ties":0,
     "Points For":154,
     "Points Against":159,
-    "Adjusted Average":0,
+    "Adjusted Average":154.4,
     "TREND":"NO TREND",
     "Trend Percentage":0,
     "QB Strength":38,
@@ -6266,9 +6266,9 @@
       "outcome":"Niederlage"
     },
     "THIS_WEEK_OPPONENT":"Schlemmerfilet Bortleaise",
-    "THIS_WEEK_WIN_PROB":52.1,
+    "THIS_WEEK_WIN_PROB":53.3,
     "POWER RANK":3,
-    "Power Rank Score":5.18,
+    "Power Rank Score":4.94,
     "LAST_WEEK_POWER_RANK":null,
     "POWER_RANK_DELTA":null,
     "QB Strength Rank":10,
@@ -6278,7 +6278,7 @@
     "K Strength Rank":2,
     "Bench Strength Rank":3,
     "TREND Rank":6,
-    "Adjusted Average Rank":6,
+    "Adjusted Average Rank":3,
     "BADGES":[
       {
         "icon":"unlucky",
@@ -6677,7 +6677,7 @@
     "QUIZ_SCORES":[
       {
         "name":"Mo",
-        "score":2
+        "score":3
       }
     ],
     "Week 1":154.36,
@@ -6692,7 +6692,7 @@
     "Ties":0,
     "Points For":135,
     "Points Against":117,
-    "Adjusted Average":0,
+    "Adjusted Average":136.0,
     "TREND":"NO TREND",
     "Trend Percentage":0,
     "QB Strength":71,
@@ -7021,7 +7021,7 @@
     "THIS_WEEK_OPPONENT":"Pandan Buns",
     "THIS_WEEK_WIN_PROB":99.0,
     "POWER RANK":6,
-    "Power Rank Score":5.65,
+    "Power Rank Score":5.5,
     "LAST_WEEK_POWER_RANK":null,
     "POWER_RANK_DELTA":null,
     "QB Strength Rank":3,
@@ -7442,7 +7442,7 @@
     "Ties":0,
     "Points For":159,
     "Points Against":154,
-    "Adjusted Average":0,
+    "Adjusted Average":159.6,
     "TREND":"NO TREND",
     "Trend Percentage":0,
     "QB Strength":70,
@@ -7754,9 +7754,9 @@
       "outcome":"Sieg"
     },
     "THIS_WEEK_OPPONENT":"𓇳𓋹𓎡𓅓𓂋",
-    "THIS_WEEK_WIN_PROB":51.1,
+    "THIS_WEEK_WIN_PROB":51.3,
     "POWER RANK":1,
-    "Power Rank Score":4.15,
+    "Power Rank Score":3.74,
     "LAST_WEEK_POWER_RANK":null,
     "POWER_RANK_DELTA":null,
     "QB Strength Rank":4,
@@ -7766,7 +7766,7 @@
     "K Strength Rank":6,
     "Bench Strength Rank":2,
     "TREND Rank":6,
-    "Adjusted Average Rank":6,
+    "Adjusted Average Rank":2,
     "BADGES":[
       {
         "icon":"groundpound",
@@ -8128,7 +8128,7 @@
     "QUIZ_SCORES":[
       {
         "name":"Sven",
-        "score":0
+        "score":1
       }
     ],
     "Week 1":159.6,
@@ -8143,7 +8143,7 @@
     "Ties":0,
     "Points For":107,
     "Points Against":105,
-    "Adjusted Average":0,
+    "Adjusted Average":107.5,
     "TREND":"NO TREND",
     "Trend Percentage":0,
     "QB Strength":66,
@@ -8456,9 +8456,9 @@
       "outcome":"Sieg"
     },
     "THIS_WEEK_OPPONENT":"Always sunny´n Scarycity",
-    "THIS_WEEK_WIN_PROB":64.0,
+    "THIS_WEEK_WIN_PROB":63.9,
     "POWER RANK":8,
-    "Power Rank Score":7.7,
+    "Power Rank Score":7.91,
     "LAST_WEEK_POWER_RANK":null,
     "POWER_RANK_DELTA":null,
     "QB Strength Rank":5,
@@ -8468,7 +8468,7 @@
     "K Strength Rank":5,
     "Bench Strength Rank":7,
     "TREND Rank":6,
-    "Adjusted Average Rank":6,
+    "Adjusted Average Rank":9,
     "BADGES":[
       {
         "icon":"clutch",
