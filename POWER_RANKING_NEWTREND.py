@@ -818,8 +818,12 @@ except Exception as e:
 # Streuung der bisherigen Wochenpunkte liga-weit (Basis für die Win-Probability)
 all_played_scores = [pts for wk in weeks for pts in weekly_points[wk] if pts > 0]
 league_stdev = statistics.pstdev(all_played_scores) if len(all_played_scores) >= 2 else 0
-if league_stdev == 0:
-    league_stdev = 15  # Fallback-Annahme für die sehr frühe Saisonphase
+# NEU: Mindest-Streuung von 18 Punkten - bei wenigen gespielten Wochen (früh
+# in der Saison) ist der berechnete Wert statistisch noch sehr instabil und
+# kann zufällig ungewöhnlich klein ausfallen, was die Win-Probability dann
+# unrealistisch extrem ausschlagen lässt.
+MIN_LEAGUE_STDEV = 18
+league_stdev = max(league_stdev, MIN_LEAGUE_STDEV)
 
 def player_info(pid):
     p = players.get(pid, {})
@@ -972,35 +976,25 @@ for team in rosters:
 
     average_points_list.append(round(average_points, 1))
 
-    # Trend: Vergleich eines GEWICHTETEN Durchschnitts der letzten 2 Wochen mit
-    # dem EIGENEN bisherigen Schnitt (Baseline = alles davor). Die aktuellste
-    # Woche zählt voll, die davor nur halb so viel (Gewichte 1.0 / 0.5).
-    if len(team_weekly_points) > 2:
-        baseline_weeks = team_weekly_points[:-2]
-        own_baseline_average = sum(baseline_weeks) / len(baseline_weeks) if baseline_weeks else 0
-
-        RECENT_WEIGHTS = [1.0, 0.5]  # aktuellste zuerst
+    # NEU: "Aktuelle Form" - gewichteter Durchschnitt der letzten 2 Wochen
+    # (aktuellste Woche zählt voll, die davor halb so viel). Die Einstufung
+    # UP/DOWN/NO TREND passiert NICHT mehr gegen die eigene Baseline, sondern
+    # weiter unten ligaweit im Rang-Vergleich (Top 4 = UP, Bottom 4 = DOWN).
+    RECENT_WEIGHTS = [1.0, 0.5]  # aktuellste zuerst
+    if len(team_weekly_points) >= 2:
         recent_weeks_newest_first = team_weekly_points[-2:][::-1]
         weighted_sum = sum(w * p for w, p in zip(RECENT_WEIGHTS, recent_weeks_newest_first))
-        weighted_recent_average = weighted_sum / sum(RECENT_WEIGHTS)
-
-        if own_baseline_average > 0:
-            trend_percentage = ((weighted_recent_average - own_baseline_average) / own_baseline_average) * 100
-        else:
-            trend_percentage = 0
-
-        if trend_percentage > 7:
-            trend = "UP"
-        elif trend_percentage < -7:
-            trend = "DOWN"
-        else:
-            trend = "NO TREND"
+        recent_form_value = weighted_sum / sum(RECENT_WEIGHTS)
+    elif len(team_weekly_points) == 1:
+        recent_form_value = team_weekly_points[0]
     else:
-        trend = "NO TREND"
-        trend_percentage = 0
+        recent_form_value = None
+
+    trend = None  # wird weiter unten ligaweit nachgetragen
+    trend_percentage = round(recent_form_value, 1) if recent_form_value is not None else None
 
     trends.append(trend)
-    trend_percentages.append(round(trend_percentage, 1))
+    trend_percentages.append(trend_percentage)
 
     # --- NEU: Top/Flop-Performer, Benchwarmer, Gegner & Win-Probability ---
     roster_id = team['roster_id']
@@ -1152,6 +1146,24 @@ df = pd.DataFrame({
     "THIS_WEEK_WIN_PROB": this_week_winprob_list
 })
 
+# NEU: "Aktuelle Form" (früher "Trend") wird jetzt ligaweit eingestuft statt
+# gegen die eigene Baseline. Top 4 nach gewichtetem Punkteschnitt der letzten
+# 2 Wochen = UP, Bottom 4 = DOWN, alle dazwischen = NO TREND. Teams ohne
+# genug Daten (noch keine gespielte Woche) bleiben NO TREND.
+_n_teams = len(df)
+_recent_form_rank = df['Trend Percentage'].rank(ascending=False, method='min')
+
+def _classify_recent_form(rank):
+    if pd.isna(rank):
+        return "NO TREND"
+    if rank <= 4:
+        return "UP"
+    if rank > _n_teams - 4:
+        return "DOWN"
+    return "NO TREND"
+
+df['TREND'] = _recent_form_rank.apply(_classify_recent_form)
+
 # Power Rank calculations
 power_rankings = pd.DataFrame()
 power_rankings['Wins Rank'] = df['Wins'].rank(ascending=False)
@@ -1300,20 +1312,21 @@ if week_scores_for_pech:
             f"{last_week_result_list[idx]['own_points']} Punkte - mehr als die halbe Liga - und trotzdem verloren."
         )
 
-# 4) Rising Star - stärkster positiver Trend
-if trend_percentages and max(trend_percentages) > 7:
-    idx = trend_percentages.index(max(trend_percentages))
+# 4) Rising Star - beste Aktuelle Form der Liga (Rang 1)
+_valid_form = [(i, v) for i, v in enumerate(trend_percentages) if v is not None]
+if _valid_form:
+    idx, best_val = max(_valid_form, key=lambda x: x[1])
     add_badge(
         idx, "rising", "Rising Star",
-        f"Trend von +{trend_percentages[idx]}% - aktuell das heißeste Team der Liga."
+        f"{best_val} Punkte gewichteter Schnitt der letzten 2 Wochen - aktuell die beste Form der Liga."
     )
 
-# 5) Free Fall - stärkster negativer Trend
-if trend_percentages and min(trend_percentages) < -7:
-    idx = trend_percentages.index(min(trend_percentages))
+# 5) Free Fall - schwächste Aktuelle Form der Liga (letzter Rang)
+if _valid_form:
+    idx, worst_val = min(_valid_form, key=lambda x: x[1])
     add_badge(
         idx, "falling", "Free Fall",
-        f"Trend von {trend_percentages[idx]}% - der Sinkflug hält an."
+        f"{worst_val} Punkte gewichteter Schnitt der letzten 2 Wochen - aktuell die schwächste Form der Liga."
     )
 
 # 6) Giant Killer - Sieg gegen ein deutlich besser platziertes Team
