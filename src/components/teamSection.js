@@ -382,8 +382,8 @@ const TeamSection = ({ team }) => {
     "TREND": trend,
     "Trend Percentage": trenPercentage,
     "TREND Rank": trendRank,
-    "Adjusted Average": adjustedAvg,
-    "Adjusted Average Rank": aavgRank,
+    "Average Points": avgPoints,
+    "Average Points Rank": avgPointsRank,
     "BADGES": badges = [],
     // Roster-Felder: jetzt Arrays mit {name, image_url, ...stats} statt Strings
     "QB": qb = [],
@@ -418,6 +418,8 @@ const TeamSection = ({ team }) => {
     // mehrere möglich, da beim Quiz individuell abgestimmt wird)
     "QUIZ_SCORES": quizScores = [],
     "FAAB_REMAINING": faabRemaining,
+    "IS_DRAFT_PHASE": isDraftPhase,
+    "DRAFT_SCORE": draftScore,
     "LEGACY_STATS": legacyStats,
     // Performer-Felder
     "TOP_PERFORMERS": topPerformers = [],
@@ -577,7 +579,17 @@ const TeamSection = ({ team }) => {
         </h2>
       </div>
 
-      {lastWeekPowerRank != null && (
+      {isDraftPhase && (
+        <div className="draft-score-banner">
+          <span className="draft-score-emoji">🏈</span>
+          <div>
+            <span className="draft-score-label">Draft Score (Saison-Projection, kompletter Kader)</span>
+            <span className="draft-score-value">{draftScore}</span>
+          </div>
+        </div>
+      )}
+
+      {!isDraftPhase && lastWeekPowerRank != null && (
         <p className="rank-movement">
           Letzte Woche Rang {lastWeekPowerRank}{' '}
           {powerRankDelta === 0 ? (
@@ -602,9 +614,9 @@ const TeamSection = ({ team }) => {
         </div>
       )}
 
-      <p>
-        Trend: <TrendIndicator value={trenPercentage} rank={trendRank} /> | AAvg.:{' '}
-        <span style={{ color: colorForRank(aavgRank), fontWeight: 'bold' }}>{adjustedAvg}</span>
+      <p className="trend-line">
+        Trend: <TrendIndicator value={trenPercentage} rank={trendRank} /> | Ø Punkte:{' '}
+        <span style={{ color: colorForRank(avgPointsRank), fontWeight: 'bold' }}>{avgPoints}</span>
       </p>
 
       {quizScores.length > 0 && (
@@ -978,6 +990,16 @@ const TeamSection = ({ team }) => {
                     <RankChip rank={legacyStats.all_time_points_rank} />
                     {legacyStats.points_by_season?.length > 0 && (
                       <SeasonBreakdownRow items={legacyStats.points_by_season} valueKey="points" />
+                    )}
+                  </div>
+                )}
+
+                {legacyStats.all_time_points_against != null && (
+                  <div className="legacy-line">
+                    <strong>All-Time Gegenpunkte:</strong> <span className="legacy-value">{legacyStats.all_time_points_against}</span>
+                    <RankChip rank={legacyStats.all_time_points_against_rank} />
+                    {legacyStats.points_against_by_season?.length > 0 && (
+                      <SeasonBreakdownRow items={legacyStats.points_against_by_season} valueKey="points" />
                     )}
                   </div>
                 )}
