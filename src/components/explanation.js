@@ -10,8 +10,8 @@ const Explanation = () => {
       </p>
       <ol>
         <li><strong>Erzielte Punkte (Points For)</strong> – 50 % Gewichtung: Die Offensivstärke wird durch die erzielten Punkte reflektiert. Teams, die regelmäßig viele Punkte erzielen, werden höher eingestuft.</li>
-        <li><strong>Siege (Wins)</strong> – 25 % Gewichtung: Teams mit mehr Siegen erhalten einen höheren Rang, da dies ein direkter Indikator für Erfolg ist.</li>
-        <li><strong>Trend (Trend Percentage)</strong> – 15 % Gewichtung: Der aktuelle Trend der Mannschaft wird berücksichtigt. Wenn ein Team in den letzten Wochen besser abgeschnitten hat als im Durchschnitt der Saison, deutet das auf eine positive Entwicklung hin.</li>
+        <li><strong>Siege (Wins)</strong> – 15 % Gewichtung: Teams mit mehr Siegen erhalten einen höheren Rang, da dies ein direkter Indikator für Erfolg ist.</li>
+        <li><strong>Trend (Trend Percentage)</strong> – 25 % Gewichtung: Der aktuelle Trend der Mannschaft wird berücksichtigt. Wenn ein Team in den letzten Wochen besser abgeschnitten hat als im Durchschnitt der Saison, deutet das auf eine positive Entwicklung hin.</li>
         <li><strong>Gegnerische Punkte (Points Against)</strong> – 10 % Gewichtung: Dieser Wert gibt an, wie stark die bisherigen Gegner waren und wie viel Pech das Team möglicherweise hatte. Wenn ein Team viele Punkte gegen sich hatte, könnte das darauf hindeuten, dass es gegen besonders starke Gegner antreten musste, was den bisherigen Erfolg beeinträchtigen kann.</li>
       </ol>
       <p>
@@ -21,7 +21,7 @@ const Explanation = () => {
         Diese Gewichtung macht Sinn, da sie sowohl den langfristigen Erfolg (Siege, erzielte Punkte) als auch kurzfristige Entwicklungen (Trend) und die Schwierigkeit der bisherigen Gegner (gegnerische Punkte) miteinbezieht. Der <strong>POWER RANK</strong> gibt somit eine ausgewogene Darstellung der Leistungsfähigkeit eines Teams und hilft, Stärken und Schwächen klar zu identifizieren sowie den bisherigen Spielverlauf zu berücksichtigen.
       </p>
       <p>
-        Der <strong>Trend</strong> wird berechnet, indem die Leistung der letzten zwei Wochen mit dem bisherigen Saisondurchschnitt verglichen wird. Dazu wird der Durchschnitt der Punkte aus den letzten zwei Wochen ermittelt und mit dem Durchschnitt der restlichen Saisonpunkte verglichen.
+        Der <strong>Trend</strong> wird berechnet, indem ein <strong>gewichteter Durchschnitt der letzten 2 Wochen</strong> mit dem bisherigen Schnitt des Teams (alle Wochen davor) verglichen wird. Die aktuellste Woche zählt dabei voll, die Woche davor nur halb so viel (Gewichtung 100 % / 50 %) – so bleibt der Trend aktuell, ohne dass eine einzelne Ausreißerwoche zu stark durchschlägt.
       </p>
       <ul>
         <li>Ist der Prozentsatz <strong>über +7 %</strong>, zeigt der Trend "<strong>UP</strong>" an (bessere Leistung).</li>
