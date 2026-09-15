@@ -327,7 +327,7 @@ def build_roster_entries(ids, names, extra_stats_fn=None, image_url_fn=None, my_
 # Initialize lists for data collection
 user_ids, team_names, display_names = [], [], []
 wins, losses, ties, points_for, points_against = [], [], [], [], []
-adjusted_averages, trends, trend_percentages = [], [], []
+average_points_list, trends, trend_percentages = [], [], []
 # NEU: Sammel-Listen für die Badge-Berechnungen weiter unten
 injury_counts, homer_team_counts_list = [], []
 team_weekly_points_list = []
@@ -962,21 +962,15 @@ for team in rosters:
     k_list.append(build_roster_entries(k_ids, k_roster, k_stats, my_guy_fn=lambda pid: is_my_guy(user_id, pid), my_guy_seasons_fn=lambda pid: my_guy_seasons(user_id, pid), in_bank_fn=in_bank_fn, in_strength_fn=in_strength_fn))
     def_list.append(build_roster_entries(def_ids, def_roster, def_stats, image_url_fn=team_logo_url, my_guy_fn=lambda pid: is_my_guy(user_id, pid), my_guy_seasons_fn=lambda pid: my_guy_seasons(user_id, pid), in_bank_fn=in_bank_fn, in_strength_fn=in_strength_fn))
 
-    # Adjusted Average: remove highest and lowest scoring weeks
+    # NEU: statt des früheren "Adjusted Average" (beste+schlechteste Woche
+    # ausgeschlossen) wird jetzt einfach der normale Durchschnitt der
+    # bisherigen Wochenpunkte angezeigt - einfacher zu verstehen, und ohne
+    # die Kanten bei wenigen gespielten Wochen (siehe vorheriger Bugfix).
     team_weekly_points = [weekly_points[week][rosters.index(team)] for week in weeks if weekly_points[week][rosters.index(team)] > 0]
     team_weekly_points_list.append(team_weekly_points)
-    if len(team_weekly_points) > 2:
-        adjusted_points = sorted(team_weekly_points)[1:-1]
-        adjusted_average = sum(adjusted_points) / len(adjusted_points) if adjusted_points else 0
-    elif team_weekly_points:
-        # Zu wenige Wochen (1-2), um sinnvoll Highs/Lows auszuschließen (da
-        # sonst gar keine Wochen mehr übrig blieben) - Fallback auf den
-        # normalen Durchschnitt der bisherigen Wochen statt hart auf 0.
-        adjusted_average = sum(team_weekly_points) / len(team_weekly_points)
-    else:
-        adjusted_average = 0
+    average_points = sum(team_weekly_points) / len(team_weekly_points) if team_weekly_points else 0
 
-    adjusted_averages.append(round(adjusted_average, 1))
+    average_points_list.append(round(average_points, 1))
 
     # Trend: Vergleich der letzten 2 Wochen mit dem EIGENEN bisherigen Schnitt
     # (statt bisher mit dem Liga-Durchschnitt) - zeigt jetzt "besser/schlechter
@@ -1124,7 +1118,7 @@ df = pd.DataFrame({
     "Ties": ties,
     "Points For": points_for,
     "Points Against": points_against,
-    "Adjusted Average": adjusted_averages,
+    "Average Points": average_points_list,
     "TREND": trends,
     "Trend Percentage": trend_percentages,
     "QB Strength": qb_strength_normalized,
@@ -1160,18 +1154,15 @@ power_rankings['Wins Rank'] = df['Wins'].rank(ascending=False)
 power_rankings['Points For Rank'] = df['Points For'].rank(ascending=False)
 power_rankings['Trend Percentage Rank'] = df['Trend Percentage'].rank(ascending=False)
 power_rankings['Points Against Rank'] = df['Points Against'].rank(ascending=False)
-power_rankings['Adjusted Average Rank'] = df['Adjusted Average'].rank(ascending=False)
+power_rankings['Average Points Rank'] = df['Average Points'].rank(ascending=False)
 
 power_rankings['Power Rank Score'] = (
-    # NEU: Adjusted Average fließt nicht mehr in den Power Rank ein (bei einer
-    # 17-Wochen-Saison mit teils noch wenigen gespielten Wochen war "höchste
-    # und niedrigste Woche ausschließen" statistisch zu wackelig). Die
-    # verbleibenden Gewichte (25/25/25/10 = 85) werden proportional auf 100%
-    # hochskaliert, das Verhältnis zueinander bleibt also exakt gleich.
-    power_rankings['Wins Rank'] * (0.25 / 0.85) +
-    power_rankings['Points For Rank'] * (0.25 / 0.85) +
-    power_rankings['Trend Percentage Rank'] * (0.25 / 0.85) +
-    power_rankings['Points Against Rank'] * (0.10 / 0.85)
+    # NEU: Points For deutlich stärker gewichtet (40%), Wins und Trend je 25%,
+    # Points Against 10% - Summe ergibt exakt 100%, keine Normierung nötig.
+    power_rankings['Wins Rank'] * 0.25 +
+    power_rankings['Points For Rank'] * 0.40 +
+    power_rankings['Trend Percentage Rank'] * 0.25 +
+    power_rankings['Points Against Rank'] * 0.10
 )
 
 df["POWER RANK"] = power_rankings['Power Rank Score'].rank(ascending=True).astype(int)
@@ -1233,7 +1224,7 @@ df["Bench Strength Rank"] = df["Bench Strength"].rank(ascending=False, method='m
 # Frontend Trend und AAvg mit demselben Rang-Farbschema (Blau bis Rot)
 # einfärben kann wie die Teamstärke.
 df["TREND Rank"] = power_rankings['Trend Percentage Rank'].astype(int)
-df["Adjusted Average Rank"] = power_rankings['Adjusted Average Rank'].astype(int)
+df["Average Points Rank"] = power_rankings['Average Points Rank'].astype(int)
 
 # --- NEU: Spaßige Badges pro Team ---
 # Jedes Badge wird an genau EIN Team pro Kategorie vergeben (den "Sieger"
