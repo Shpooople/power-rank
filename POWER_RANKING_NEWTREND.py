@@ -968,6 +968,11 @@ for team in rosters:
     if len(team_weekly_points) > 2:
         adjusted_points = sorted(team_weekly_points)[1:-1]
         adjusted_average = sum(adjusted_points) / len(adjusted_points) if adjusted_points else 0
+    elif team_weekly_points:
+        # Zu wenige Wochen (1-2), um sinnvoll Highs/Lows auszuschließen (da
+        # sonst gar keine Wochen mehr übrig blieben) - Fallback auf den
+        # normalen Durchschnitt der bisherigen Wochen statt hart auf 0.
+        adjusted_average = sum(team_weekly_points) / len(team_weekly_points)
     else:
         adjusted_average = 0
 
@@ -1158,11 +1163,15 @@ power_rankings['Points Against Rank'] = df['Points Against'].rank(ascending=Fals
 power_rankings['Adjusted Average Rank'] = df['Adjusted Average'].rank(ascending=False)
 
 power_rankings['Power Rank Score'] = (
-    power_rankings['Wins Rank'] * 0.25 +
-    power_rankings['Points For Rank'] * 0.25 +
-    power_rankings['Trend Percentage Rank'] * 0.25 +
-    power_rankings['Points Against Rank'] * 0.1 +
-    power_rankings['Adjusted Average Rank'] * 0.15
+    # NEU: Adjusted Average fließt nicht mehr in den Power Rank ein (bei einer
+    # 17-Wochen-Saison mit teils noch wenigen gespielten Wochen war "höchste
+    # und niedrigste Woche ausschließen" statistisch zu wackelig). Die
+    # verbleibenden Gewichte (25/25/25/10 = 85) werden proportional auf 100%
+    # hochskaliert, das Verhältnis zueinander bleibt also exakt gleich.
+    power_rankings['Wins Rank'] * (0.25 / 0.85) +
+    power_rankings['Points For Rank'] * (0.25 / 0.85) +
+    power_rankings['Trend Percentage Rank'] * (0.25 / 0.85) +
+    power_rankings['Points Against Rank'] * (0.10 / 0.85)
 )
 
 df["POWER RANK"] = power_rankings['Power Rank Score'].rank(ascending=True).astype(int)
