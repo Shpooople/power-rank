@@ -9,9 +9,9 @@ const Explanation = () => {
         Der <strong>POWER RANK</strong> wird anhand einer umfassenden Analyse mehrerer Metriken berechnet, um die Leistung und den Erfolg einer Mannschaft ganzheitlich darzustellen. Die Berechnung basiert auf vier gewichteten Faktoren, die unterschiedliche Aspekte des Erfolgs berücksichtigen:
       </p>
       <ol>
-        <li><strong>Erzielte Punkte (Points For)</strong> – 50 % Gewichtung: Die Offensivstärke wird durch die erzielten Punkte reflektiert. Teams, die regelmäßig viele Punkte erzielen, werden höher eingestuft.</li>
+        <li><strong>Erzielte Punkte (Points For)</strong> – 40 % Gewichtung: Die Offensivstärke wird durch die erzielten Punkte reflektiert. Teams, die regelmäßig viele Punkte erzielen, werden höher eingestuft.</li>
         <li><strong>Siege (Wins)</strong> – 15 % Gewichtung: Teams mit mehr Siegen erhalten einen höheren Rang, da dies ein direkter Indikator für Erfolg ist.</li>
-        <li><strong>Aktuelle Form (früher "Trend")</strong> – 25 % Gewichtung: Ein gewichteter Durchschnitt der letzten 2 Wochen (siehe unten) wird ligaweit mit allen anderen Teams verglichen - je besser die aktuelle Form im Liga-Vergleich, desto höher die Einstufung.</li>
+        <li><strong>Aktuelle Form (früher "Trend")</strong> – 35 % Gewichtung: Ein gewichteter Durchschnitt der letzten 2 Wochen (siehe unten) wird ligaweit mit allen anderen Teams verglichen - je besser die aktuelle Form im Liga-Vergleich, desto höher die Einstufung.</li>
         <li><strong>Gegnerische Punkte (Points Against)</strong> – 10 % Gewichtung: Dieser Wert gibt an, wie stark die bisherigen Gegner waren und wie viel Pech das Team möglicherweise hatte. Wenn ein Team viele Punkte gegen sich hatte, könnte das darauf hindeuten, dass es gegen besonders starke Gegner antreten musste, was den bisherigen Erfolg beeinträchtigen kann.</li>
       </ol>
       <p>
