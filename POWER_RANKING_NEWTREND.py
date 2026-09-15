@@ -972,16 +972,20 @@ for team in rosters:
 
     average_points_list.append(round(average_points, 1))
 
-    # Trend: Vergleich der letzten 2 Wochen mit dem EIGENEN bisherigen Schnitt
-    # (statt bisher mit dem Liga-Durchschnitt) - zeigt jetzt "besser/schlechter
-    # als die eigene bisherige Form", nicht "besser/schlechter als die Liga".
+    # Trend: Vergleich eines GEWICHTETEN Durchschnitts der letzten 2 Wochen mit
+    # dem EIGENEN bisherigen Schnitt (Baseline = alles davor). Die aktuellste
+    # Woche zählt voll, die davor nur halb so viel (Gewichte 1.0 / 0.5).
     if len(team_weekly_points) > 2:
         baseline_weeks = team_weekly_points[:-2]
         own_baseline_average = sum(baseline_weeks) / len(baseline_weeks) if baseline_weeks else 0
-        last_two_weeks_average = sum(team_weekly_points[-2:]) / 2
+
+        RECENT_WEIGHTS = [1.0, 0.5]  # aktuellste zuerst
+        recent_weeks_newest_first = team_weekly_points[-2:][::-1]
+        weighted_sum = sum(w * p for w, p in zip(RECENT_WEIGHTS, recent_weeks_newest_first))
+        weighted_recent_average = weighted_sum / sum(RECENT_WEIGHTS)
 
         if own_baseline_average > 0:
-            trend_percentage = ((last_two_weeks_average - own_baseline_average) / own_baseline_average) * 100
+            trend_percentage = ((weighted_recent_average - own_baseline_average) / own_baseline_average) * 100
         else:
             trend_percentage = 0
 
@@ -1157,11 +1161,11 @@ power_rankings['Points Against Rank'] = df['Points Against'].rank(ascending=Fals
 power_rankings['Average Points Rank'] = df['Average Points'].rank(ascending=False)
 
 power_rankings['Power Rank Score'] = (
-    # NEU: Points For 50%, Wins 25%, Trend 15%, Points Against 10% -
+    # NEU: Points For 50%, Trend 25%, Wins 15%, Points Against 10% -
     # Summe ergibt exakt 100%, keine Normierung nötig.
-    power_rankings['Wins Rank'] * 0.25 +
+    power_rankings['Wins Rank'] * 0.15 +
     power_rankings['Points For Rank'] * 0.50 +
-    power_rankings['Trend Percentage Rank'] * 0.15 +
+    power_rankings['Trend Percentage Rank'] * 0.25 +
     power_rankings['Points Against Rank'] * 0.10
 )
 
