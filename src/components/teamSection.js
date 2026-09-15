@@ -247,15 +247,16 @@ const BadgeIcon = ({ badge }) => {
   );
 };
 
-// Kleine Helfer-Komponente für die Trend-Anzeige (Dreieck + fetter Wert,
-// eingefärbt nach Liga-Rang des Trends)
-const TrendIndicator = ({ value, rank }) => {
-  const isUp = value >= 0;
+// Kleine Helfer-Komponente für die "Aktuelle Form"-Anzeige (Dreieck + fetter
+// Wert, eingefärbt nach Liga-Rang) - Pfeilrichtung folgt der ligaweiten
+// UP/DOWN/NO TREND-Einstufung (Top 4 / Bottom 4), nicht mehr dem Vorzeichen
+// des Werts selbst (der ist jetzt ein reiner Punktestand, immer positiv).
+const TrendIndicator = ({ value, rank, trend }) => {
   const color = colorForRank(rank);
-  const sign = value > 0 ? '+' : '';
+  const arrow = trend === 'UP' ? '▲' : trend === 'DOWN' ? '▼' : '▬';
   return (
     <span style={{ color, fontWeight: 'bold' }}>
-      {isUp ? '▲' : '▼'} {sign}{value}%
+      {arrow} {value} Pkt.
     </span>
   );
 };
@@ -283,6 +284,15 @@ const PlayerCard = ({ player, note }) => {
       </div>
     </div>
   );
+};
+
+// NEU: Bei sehr einseitigen Gewinnwahrscheinlichkeiten (unter 40% / über
+// 60%) wird nur noch der Bereich angezeigt statt der exakten Zahl - die
+// Prognose ist in diesen Extrembereichen ohnehin nur eine grobe Tendenz.
+const formatWinProb = (value) => {
+  if (value < 40) return 'unter 40%';
+  if (value > 60) return 'über 60%';
+  return `${value}%`;
 };
 
 const outcomeClass = (outcome) => {
@@ -378,7 +388,6 @@ const TeamSection = ({ team }) => {
     "Losses": losses,
     "Points For": pointsFor,
     "Points Against": pointsAgainst,
-    // eslint-disable-next-line no-unused-vars
     "TREND": trend,
     "Trend Percentage": trenPercentage,
     "TREND Rank": trendRank,
@@ -615,7 +624,12 @@ const TeamSection = ({ team }) => {
       )}
 
       <p className="trend-line">
-        Trend: <TrendIndicator value={trenPercentage} rank={trendRank} /> | Ø Punkte:{' '}
+        Aktuelle Form:{' '}
+        {trenPercentage != null ? (
+          <TrendIndicator value={trenPercentage} rank={trendRank} trend={trend} />
+        ) : (
+          <span>noch keine Daten</span>
+        )} | Ø Punkte:{' '}
         <span style={{ color: colorForRank(avgPointsRank), fontWeight: 'bold' }}>{avgPoints}</span>
       </p>
 
@@ -646,7 +660,7 @@ const TeamSection = ({ team }) => {
             <p>
               <strong>Diese Woche:</strong> {thisWeekOpponent}
               {thisWeekWinProb != null && (
-                <span className="win-prob"> · {thisWeekWinProb}% Gewinnchance</span>
+                <span className="win-prob"> · {formatWinProb(thisWeekWinProb)} Gewinnchance</span>
               )}
             </p>
           )}
