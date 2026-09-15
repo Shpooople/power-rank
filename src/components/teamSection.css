@@ -133,6 +133,13 @@
     justify-content: flex-end;
   }
 
+  /* NEU: extra Abstand nach oben, damit die Trend-Zeile nicht mit einem
+     mehrzeiligen Badge-Block kollidiert (Badges sind position:absolute und
+     "drücken" den Fließtext sonst nicht nach unten) */
+  .trend-line {
+    margin-top: 48px;
+  }
+
   .badge-icon {
     width: 60px;
     height: 60px;
