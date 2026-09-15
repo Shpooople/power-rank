@@ -6,15 +6,17 @@ const Explanation = () => {
     <section id="explanation" className="explanation">
       <h2>Erklärung des Power Rankings</h2>
       <p>
-        Der <strong>POWER RANK</strong> wird anhand einer umfassenden Analyse mehrerer Metriken berechnet, um die Leistung und den Erfolg einer Mannschaft ganzheitlich darzustellen. Die Berechnung basiert auf fünf gewichteten Faktoren, die unterschiedliche Aspekte des Erfolgs berücksichtigen:
+        Der <strong>POWER RANK</strong> wird anhand einer umfassenden Analyse mehrerer Metriken berechnet, um die Leistung und den Erfolg einer Mannschaft ganzheitlich darzustellen. Die Berechnung basiert auf vier gewichteten Faktoren, die unterschiedliche Aspekte des Erfolgs berücksichtigen:
       </p>
       <ol>
-        <li><strong>Siege (Wins)</strong> – 25 % Gewichtung: Teams mit mehr Siegen erhalten einen höheren Rang, da dies ein direkter Indikator für Erfolg ist.</li>
-        <li><strong>Erzielte Punkte (Points For)</strong> – 25 % Gewichtung: Die Offensivstärke wird durch die erzielten Punkte reflektiert. Teams, die regelmäßig viele Punkte erzielen, werden höher eingestuft.</li>
-        <li><strong>Trend (Trend Percentage)</strong> – 25 % Gewichtung: Der aktuelle Trend der Mannschaft wird berücksichtigt. Wenn ein Team in den letzten Wochen besser abgeschnitten hat als im Durchschnitt der Saison, deutet das auf eine positive Entwicklung hin.</li>
-        <li><strong>Gegnerische Punkte (Points Against)</strong> – 10 % Gewichtung: Dieser Wert gibt an, wie stark die bisherigen Gegner waren und wie viel Pech das Team möglicherweise hatte. Wenn ein Team viele Punkte gegen sich hatte, könnte das darauf hindeuten, dass es gegen besonders starke Gegner antreten musste, was den bisherigen Erfolg beeinträchtigen kann.</li>
-        <li><strong>Angepasster Durchschnitt (Adjusted Average)</strong> – 15 % Gewichtung: Hier wird ein Durchschnittswert der wöchentlichen Punkte berechnet, bei dem die besten und schlechtesten Wochen ausgeschlossen werden, um die Konstanz einer Mannschaft zu bewerten.</li>
+        <li><strong>Siege (Wins)</strong> – ca. 29 % Gewichtung: Teams mit mehr Siegen erhalten einen höheren Rang, da dies ein direkter Indikator für Erfolg ist.</li>
+        <li><strong>Erzielte Punkte (Points For)</strong> – ca. 29 % Gewichtung: Die Offensivstärke wird durch die erzielten Punkte reflektiert. Teams, die regelmäßig viele Punkte erzielen, werden höher eingestuft.</li>
+        <li><strong>Trend (Trend Percentage)</strong> – ca. 29 % Gewichtung: Der aktuelle Trend der Mannschaft wird berücksichtigt. Wenn ein Team in den letzten Wochen besser abgeschnitten hat als im Durchschnitt der Saison, deutet das auf eine positive Entwicklung hin.</li>
+        <li><strong>Gegnerische Punkte (Points Against)</strong> – ca. 12 % Gewichtung: Dieser Wert gibt an, wie stark die bisherigen Gegner waren und wie viel Pech das Team möglicherweise hatte. Wenn ein Team viele Punkte gegen sich hatte, könnte das darauf hindeuten, dass es gegen besonders starke Gegner antreten musste, was den bisherigen Erfolg beeinträchtigen kann.</li>
       </ol>
+      <p>
+        Der <strong>Angepasste Durchschnitt (Adjusted Average)</strong> wird zwar weiterhin auf jeder Team-Karte angezeigt, fließt aber <strong>nicht mehr</strong> in die POWER-RANK-Berechnung ein. Bei einer 17-Wochen-Saison mit anfangs noch sehr wenigen gespielten Wochen war das Ausschließen der besten und schlechtesten Woche statistisch zu instabil, um verlässlich in ein Ranking einzufließen. Die übrigen vier Faktoren wurden proportional so hochskaliert, dass ihr Verhältnis zueinander exakt gleich bleibt (25:25:25:10 wie zuvor, nur auf 100 % statt 85 % normiert).
+      </p>
       <p>
         Diese Gewichtung macht Sinn, da sie sowohl den langfristigen Erfolg (Siege, erzielte Punkte) als auch kurzfristige Entwicklungen (Trend) und die Schwierigkeit der bisherigen Gegner (gegnerische Punkte) miteinbezieht. Der <strong>POWER RANK</strong> gibt somit eine ausgewogene Darstellung der Leistungsfähigkeit eines Teams und hilft, Stärken und Schwächen klar zu identifizieren sowie den bisherigen Spielverlauf zu berücksichtigen.
       </p>
