@@ -1157,11 +1157,11 @@ power_rankings['Points Against Rank'] = df['Points Against'].rank(ascending=Fals
 power_rankings['Average Points Rank'] = df['Average Points'].rank(ascending=False)
 
 power_rankings['Power Rank Score'] = (
-    # NEU: Points For deutlich stärker gewichtet (40%), Wins und Trend je 25%,
-    # Points Against 10% - Summe ergibt exakt 100%, keine Normierung nötig.
+    # NEU: Points For 50%, Wins 25%, Trend 15%, Points Against 10% -
+    # Summe ergibt exakt 100%, keine Normierung nötig.
     power_rankings['Wins Rank'] * 0.25 +
-    power_rankings['Points For Rank'] * 0.40 +
-    power_rankings['Trend Percentage Rank'] * 0.25 +
+    power_rankings['Points For Rank'] * 0.50 +
+    power_rankings['Trend Percentage Rank'] * 0.15 +
     power_rankings['Points Against Rank'] * 0.10
 )
 
