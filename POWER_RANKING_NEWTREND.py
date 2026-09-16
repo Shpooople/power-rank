@@ -888,12 +888,19 @@ for team in rosters:
     # Woche. Der Matchup-Eintrag dieser Woche (current_week_matchups) hat
     # dagegen sein eigenes 'players'-Feld, das den Kader GENAU zum Zeitpunkt
     # dieser Woche zeigt - das ist die historisch korrekte Quelle.
+    # WICHTIG: Das gilt nur für den Vorsaison-Fallback (using_previous_season_
+    # chart_data), wo "diese Woche" wirklich eine abgeschlossene, vergangene
+    # Woche ist. Für die AKTUELL LAUFENDE Saison nutzen wir stattdessen
+    # garantiert /rosters (team['players']) - live, unabhängig davon, ob
+    # Sleeper den Matchup-Snapshot während der laufenden Woche live
+    # mitaktualisiert oder beim Wochenstart einfriert. So zeigt das Roster
+    # verlässlich sofort neue Waiver-Adds/Drops, sobald der Workflow erneut läuft.
     current_match_entry = None
     if current_week_matchups:
         current_match_entry = next(
             (m for m in current_week_matchups if m['roster_id'] == team['roster_id']), None
         )
-    if current_match_entry and current_match_entry.get('players'):
+    if using_previous_season_chart_data and current_match_entry and current_match_entry.get('players'):
         roster_player_ids = current_match_entry['players']
     else:
         roster_player_ids = team['players']
