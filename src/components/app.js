@@ -6,6 +6,7 @@ import Header from './header';
 import TeamSection from './teamSection';
 import Explanation from './explanation';
 import BigBrainTop3 from './BigBrainTop3';
+import FloatingNav from './FloatingNav';
 
 const App = () => {
   const [teams, setTeams] = useState([]);
@@ -74,8 +75,10 @@ const App = () => {
 
       <BigBrainTop3 entries={topBigBrain} />
 
+      <FloatingNav teams={teams} />
+
       {teams.map((team, index) => (
-        <TeamSection key={index} team={team} />
+        <TeamSection key={index} team={team} anchorId={`team-anchor-${index}`} />
       ))}
 
       <Explanation />
