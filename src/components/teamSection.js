@@ -372,7 +372,7 @@ const CHART_COLORS = {
   surface: '#1E3349',
 };
 
-const TeamSection = ({ team }) => {
+const TeamSection = ({ team, anchorId }) => {
 
   // Adjusting to match the JSON structure
   const {
@@ -578,7 +578,7 @@ const TeamSection = ({ team }) => {
   }
 
   return (
-    <div className="team-section">
+    <div className="team-section" id={anchorId}>
 
       <div className="team-header-row">
         <span className="rank-badge">#{team["POWER RANK"]}</span>
