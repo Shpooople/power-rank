@@ -490,43 +490,51 @@ for s_league_id in season_league_ids:
         entry['ties'] += settings.get('ties', 0)
         entry['points_for'] += season_points
 
-    # Platzierung dieser Saison (nur falls Playoffs schon abgeschlossen sind).
-    # Playoff-Teams bekommen ihre Bracket-Platzierung, alle anderen (nicht in
-    # den Playoffs) werden danach nach Wins/Punkten sortiert eingeordnet -
-    # sonst fehlen genau diese Saisons komplett in der Durchschnitts-Platzierung.
-    bracket = fetch_json_safe(f"https://api.sleeper.app/v1/league/{s_league_id}/winners_bracket") or []
-    assigned_owners_this_season = set()
-    max_place_this_season = 0
-    for match in bracket:
-        place = match.get('p')
-        if not place:
-            continue
-        winner_owner = s_roster_to_owner.get(match.get('w'))
-        loser_owner = s_roster_to_owner.get(match.get('l'))
-        if winner_owner:
-            legacy_placements.setdefault(winner_owner, []).append((season_label, place))
-            assigned_owners_this_season.add(winner_owner)
-        if loser_owner:
-            legacy_placements.setdefault(loser_owner, []).append((season_label, place + 1))
-            assigned_owners_this_season.add(loser_owner)
-        max_place_this_season = max(max_place_this_season, place, place + 1)
+    # Platzierung dieser Saison - NUR für abgeschlossene, vergangene Saisons
+    # (niemals für die aktuell laufende Saison!). Playoff-Teams bekommen ihre
+    # Bracket-Platzierung, alle anderen (nicht in den Playoffs) werden danach
+    # nach Wins/Punkten sortiert eingeordnet - sonst fehlen genau diese
+    # Saisons komplett in der Durchschnitts-Platzierung.
+    # WICHTIG: s_league_id != league_id prüft "ist das eine vergangene
+    # Saison" - Sleeper legt die Playoff-Bracket-STRUKTUR nämlich schon vor
+    # den eigentlichen Playoffs an (mit unentschiedenen Platzhalter-Spielen),
+    # ein einfaches "bracket ist nicht leer" reicht als Abschlusskriterium
+    # also NICHT aus (hat zu Fantasie-Platzierungen mitten in der laufenden
+    # Saison geführt).
+    if s_league_id != league_id:
+        bracket = fetch_json_safe(f"https://api.sleeper.app/v1/league/{s_league_id}/winners_bracket") or []
+        assigned_owners_this_season = set()
+        max_place_this_season = 0
+        for match in bracket:
+            place = match.get('p')
+            if not place:
+                continue
+            winner_owner = s_roster_to_owner.get(match.get('w'))
+            loser_owner = s_roster_to_owner.get(match.get('l'))
+            if winner_owner:
+                legacy_placements.setdefault(winner_owner, []).append((season_label, place))
+                assigned_owners_this_season.add(winner_owner)
+            if loser_owner:
+                legacy_placements.setdefault(loser_owner, []).append((season_label, place + 1))
+                assigned_owners_this_season.add(loser_owner)
+            max_place_this_season = max(max_place_this_season, place, place + 1)
 
-    if bracket:  # nur wenn die Playoffs dieser Saison wirklich abgeschlossen sind
-        remaining = [
-            r for r in s_rosters
-            if r.get('owner_id') and r['owner_id'] not in assigned_owners_this_season
-        ]
-        remaining.sort(
-            key=lambda r: (
-                r.get('settings', {}).get('wins', 0),
-                r.get('settings', {}).get('fpts', 0)
-            ),
-            reverse=True
-        )
-        for offset, r in enumerate(remaining):
-            legacy_placements.setdefault(r['owner_id'], []).append(
-                (season_label, max_place_this_season + 1 + offset)
+        if bracket:  # abgeschlossene Saison, aber sicherstellen dass wirklich Ergebnisse da sind
+            remaining = [
+                r for r in s_rosters
+                if r.get('owner_id') and r['owner_id'] not in assigned_owners_this_season
+            ]
+            remaining.sort(
+                key=lambda r: (
+                    r.get('settings', {}).get('wins', 0),
+                    r.get('settings', {}).get('fpts', 0)
+                ),
+                reverse=True
             )
+            for offset, r in enumerate(remaining):
+                legacy_placements.setdefault(r['owner_id'], []).append(
+                    (season_label, max_place_this_season + 1 + offset)
+                )
 
     weeks_on_roster = {}  # (owner_id, player_id) -> Anzahl Wochen DIESE Saison
     for wk in range(1, 18):  # großzügig; nicht existierende Wochen liefern einfach leer
