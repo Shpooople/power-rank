@@ -550,7 +550,11 @@ for s_league_id in season_league_ids:
                 legacy_season_rosters.setdefault(owner_id, {}).setdefault(season_label, set()).add(pid)
 
             week_points = m.get('points')
-            if week_points is not None:
+            # NEU: 0 Punkte bedeutet i.d.R. eine noch nicht gespielte
+            # (zukünftige) Woche, kein echtes Ergebnis - sonst würde jede
+            # Saison fälschlich einen "0-Punkte-Rekord" für den niedrigsten
+            # Wochenscore bekommen.
+            if week_points is not None and week_points > 0:
                 if owner_id not in legacy_high_score or week_points > legacy_high_score[owner_id][0]:
                     legacy_high_score[owner_id] = (week_points, season_label, wk)
                 if owner_id not in legacy_low_score or week_points < legacy_low_score[owner_id][0]:
@@ -582,7 +586,11 @@ for s_league_id in season_league_ids:
             owner_a = s_roster_to_owner.get(a.get('roster_id'))
             owner_b = s_roster_to_owner.get(b.get('roster_id'))
             pts_a, pts_b = a.get('points'), b.get('points')
-            if not owner_a or not owner_b or pts_a is None or pts_b is None:
+            # NEU: 0:0 ist kein echtes Unentschieden, sondern eine noch nicht
+            # gespielte Woche (Sleeper legt die komplette Saison-Struktur
+            # inkl. zukünftiger Wochen schon vorab an, mit 0 Punkten auf
+            # beiden Seiten) - die müssen übersprungen werden.
+            if not owner_a or not owner_b or pts_a is None or pts_b is None or (pts_a == 0 and pts_b == 0):
                 continue
             rec_a = head_to_head.setdefault(owner_a, {}).setdefault(owner_b, {'wins': 0, 'losses': 0, 'ties': 0})
             rec_b = head_to_head.setdefault(owner_b, {}).setdefault(owner_a, {'wins': 0, 'losses': 0, 'ties': 0})
