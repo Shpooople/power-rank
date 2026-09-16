@@ -13,7 +13,7 @@
     "Trend Percentage":182.5,
     "QB Strength":100,
     "RB Strength":100,
-    "WR Strength":71,
+    "WR Strength":68,
     "TE Strength":0,
     "K Strength":53,
     "QB Strength Count":1,
@@ -21,7 +21,7 @@
     "WR Strength Count":3,
     "TE Strength Count":1,
     "K Strength Count":1,
-    "Bench Strength":45,
+    "Bench Strength":60,
     "Bench Strength Count":3,
     "QB":[
       {
@@ -52,6 +52,19 @@
         "my_guy_seasons":2,
         "in_bank":false,
         "in_strength":true
+      },
+      {
+        "name":"Samaje Perine",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4147.jpg",
+        "total_pts":6.5,
+        "att":5,
+        "yd":20,
+        "ypc":4.0,
+        "td":0,
+        "my_guy":false,
+        "my_guy_seasons":1,
+        "in_bank":true,
+        "in_strength":false
       },
       {
         "name":"Tony Pollard",
@@ -134,32 +147,6 @@
         "in_strength":false
       },
       {
-        "name":"Chris Bell",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/13311.jpg",
-        "total_pts":3.0,
-        "targets":2,
-        "catches":1,
-        "yd":25,
-        "td":0,
-        "my_guy":false,
-        "my_guy_seasons":0,
-        "in_bank":true,
-        "in_strength":false
-      },
-      {
-        "name":"De'Zhaun Stribling",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/13417.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
-        "td":0,
-        "my_guy":false,
-        "my_guy_seasons":0,
-        "in_bank":false,
-        "in_strength":false
-      },
-      {
         "name":"Davante Adams",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/2133.jpg",
         "total_pts":4.1,
@@ -231,15 +218,15 @@
     ],
     "DEF":[
       {
-        "name":"Las Vegas Raiders",
-        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/lv.png",
-        "total_pts":15.0,
-        "sack":5,
+        "name":"Tampa Bay Buccaneers",
+        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/tb.png",
+        "total_pts":9.0,
+        "sack":1,
         "int":1,
-        "fum_rec":1,
-        "td":0,
+        "fum_rec":0,
+        "td":1,
         "my_guy":false,
-        "my_guy_seasons":0,
+        "my_guy_seasons":1,
         "in_bank":false,
         "in_strength":true
       }
@@ -340,10 +327,10 @@
     "POWER_RANK_DELTA":null,
     "QB Strength Rank":1,
     "RB Strength Rank":1,
-    "WR Strength Rank":7,
+    "WR Strength Rank":6,
     "TE Strength Rank":11,
-    "K Strength Rank":4,
-    "Bench Strength Rank":10,
+    "K Strength Rank":5,
+    "Bench Strength Rank":6,
     "TREND Rank":1,
     "Average Points Rank":1,
     "BADGES":[
@@ -352,12 +339,6 @@
         "label":"CHI-Homer",
         "description":"3 Spieler von CHI im Kader - eindeutig ein Fan.",
         "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/chi.png"
-      },
-      {
-        "icon":"homer",
-        "label":"SF-Homer",
-        "description":"3 Spieler von SF im Kader - eindeutig ein Fan.",
-        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/sf.png"
       },
       {
         "icon":"rising",
@@ -820,7 +801,7 @@
     "Trend Percentage":95.8,
     "QB Strength":14,
     "RB Strength":43,
-    "WR Strength":84,
+    "WR Strength":79,
     "TE Strength":14,
     "K Strength":5,
     "QB Strength Count":1,
@@ -1576,7 +1557,7 @@
     "Trend Percentage":153.8,
     "QB Strength":41,
     "RB Strength":65,
-    "WR Strength":43,
+    "WR Strength":41,
     "TE Strength":44,
     "K Strength":63,
     "QB Strength Count":1,
@@ -1895,7 +1876,7 @@
     "WR Strength Rank":10,
     "TE Strength Rank":3,
     "K Strength Rank":3,
-    "Bench Strength Rank":9,
+    "Bench Strength Rank":11,
     "TREND Rank":4,
     "Average Points Rank":4,
     "BADGES":[
@@ -2303,9 +2284,9 @@
     "Trend Percentage":117.8,
     "QB Strength":47,
     "RB Strength":43,
-    "WR Strength":68,
+    "WR Strength":64,
     "TE Strength":47,
-    "K Strength":32,
+    "K Strength":58,
     "QB Strength Count":1,
     "RB Strength Count":3,
     "WR Strength Count":2,
@@ -2519,30 +2500,30 @@
     ],
     "K":[
       {
-        "name":"Spencer Shrader",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12185.jpg",
-        "total_pts":6.0,
-        "fgm":1,
-        "fga":1,
-        "xpm":2,
+        "name":"Chase McLaughlin",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6650.jpg",
+        "total_pts":11.0,
+        "fgm":2,
+        "fga":2,
+        "xpm":3,
         "xpa":3,
         "my_guy":false,
-        "my_guy_seasons":0,
+        "my_guy_seasons":1,
         "in_bank":false,
         "in_strength":true
       }
     ],
     "DEF":[
       {
-        "name":"Chicago Bears",
-        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/chi.png",
-        "total_pts":6.0,
-        "sack":2,
+        "name":"Green Bay Packers",
+        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/gb.png",
+        "total_pts":1.0,
+        "sack":3,
         "int":1,
-        "fum_rec":1,
+        "fum_rec":0,
         "td":0,
         "my_guy":false,
-        "my_guy_seasons":0,
+        "my_guy_seasons":1,
         "in_bank":false,
         "in_strength":true
       }
@@ -2645,8 +2626,8 @@
     "RB Strength Rank":7,
     "WR Strength Rank":9,
     "TE Strength Rank":2,
-    "K Strength Rank":9,
-    "Bench Strength Rank":5,
+    "K Strength Rank":4,
+    "Bench Strength Rank":7,
     "TREND Rank":8,
     "Average Points Rank":8,
     "BADGES":[
@@ -3050,7 +3031,7 @@
     "Trend Percentage":152.9,
     "QB Strength":61,
     "RB Strength":27,
-    "WR Strength":88,
+    "WR Strength":100,
     "TE Strength":31,
     "K Strength":100,
     "QB Strength Count":1,
@@ -3058,7 +3039,7 @@
     "WR Strength Count":3,
     "TE Strength Count":2,
     "K Strength Count":1,
-    "Bench Strength":54,
+    "Bench Strength":71,
     "Bench Strength Count":3,
     "QB":[
       {
@@ -3104,19 +3085,6 @@
         "in_strength":false
       },
       {
-        "name":"Jonah Coleman",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/13345.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
-        "td":0,
-        "my_guy":false,
-        "my_guy_seasons":0,
-        "in_bank":false,
-        "in_strength":false
-      },
-      {
         "name":"Josh Jacobs",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5850.jpg",
         "total_pts":0,
@@ -3144,6 +3112,19 @@
       }
     ],
     "WR":[
+      {
+        "name":"Devaughn Vele",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11834.jpg",
+        "total_pts":16.4,
+        "targets":9,
+        "catches":7,
+        "yd":69,
+        "td":1,
+        "my_guy":false,
+        "my_guy_seasons":1,
+        "in_bank":false,
+        "in_strength":true
+      },
       {
         "name":"Chris Godwin",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4037.jpg",
@@ -3180,8 +3161,8 @@
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
-        "in_bank":false,
-        "in_strength":true
+        "in_bank":true,
+        "in_strength":false
       },
       {
         "name":"Christian Watson",
@@ -3206,7 +3187,7 @@
         "td":0,
         "my_guy":false,
         "my_guy_seasons":2,
-        "in_bank":true,
+        "in_bank":false,
         "in_strength":false
       }
     ],
@@ -3363,11 +3344,11 @@
     "LAST_WEEK_POWER_RANK":null,
     "POWER_RANK_DELTA":null,
     "QB Strength Rank":6,
-    "RB Strength Rank":11,
-    "WR Strength Rank":3,
+    "RB Strength Rank":12,
+    "WR Strength Rank":1,
     "TE Strength Rank":6,
     "K Strength Rank":1,
-    "Bench Strength Rank":6,
+    "Bench Strength Rank":5,
     "TREND Rank":5,
     "Average Points Rank":5,
     "BADGES":[
@@ -3780,7 +3761,7 @@
     "Trend Percentage":107.2,
     "QB Strength":96,
     "RB Strength":63,
-    "WR Strength":26,
+    "WR Strength":25,
     "TE Strength":39,
     "K Strength":5,
     "QB Strength Count":1,
@@ -4514,7 +4495,7 @@
     "Trend Percentage":105.2,
     "QB Strength":34,
     "RB Strength":43,
-    "WR Strength":80,
+    "WR Strength":76,
     "TE Strength":0,
     "K Strength":11,
     "QB Strength Count":1,
@@ -4831,7 +4812,7 @@
     "WR Strength Rank":5,
     "TE Strength Rank":11,
     "K Strength Rank":10,
-    "Bench Strength Rank":8,
+    "Bench Strength Rank":9,
     "TREND Rank":11,
     "Average Points Rank":11,
     "BADGES":[
@@ -5226,7 +5207,7 @@
     "Trend Percentage":118.5,
     "QB Strength":41,
     "RB Strength":83,
-    "WR Strength":69,
+    "WR Strength":66,
     "TE Strength":7,
     "K Strength":37,
     "QB Strength Count":1,
@@ -5542,7 +5523,7 @@
     "RB Strength Rank":2,
     "WR Strength Rank":8,
     "TE Strength Rank":10,
-    "K Strength Rank":6,
+    "K Strength Rank":7,
     "Bench Strength Rank":1,
     "TREND Rank":7,
     "Average Points Rank":7,
@@ -5907,7 +5888,7 @@
     "Trend Percentage":154.4,
     "QB Strength":38,
     "RB Strength":49,
-    "WR Strength":72,
+    "WR Strength":68,
     "TE Strength":34,
     "K Strength":74,
     "QB Strength Count":1,
@@ -6634,16 +6615,16 @@
     "TREND":"NO TREND",
     "Trend Percentage":136.0,
     "QB Strength":71,
-    "RB Strength":22,
-    "WR Strength":100,
+    "RB Strength":36,
+    "WR Strength":86,
     "TE Strength":19,
     "K Strength":37,
     "QB Strength Count":1,
-    "RB Strength Count":2,
-    "WR Strength Count":4,
+    "RB Strength Count":3,
+    "WR Strength Count":3,
     "TE Strength Count":1,
     "K Strength Count":1,
-    "Bench Strength":25,
+    "Bench Strength":48,
     "Bench Strength Count":3,
     "QB":[
       {
@@ -6676,19 +6657,6 @@
       }
     ],
     "RB":[
-      {
-        "name":"Roschon Johnson",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/10235.jpg",
-        "total_pts":0,
-        "att":0,
-        "yd":0,
-        "ypc":0,
-        "td":0,
-        "my_guy":false,
-        "my_guy_seasons":0,
-        "in_bank":true,
-        "in_strength":false
-      },
       {
         "name":"Woody Marks",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12474.jpg",
@@ -6742,6 +6710,19 @@
         "in_strength":true
       },
       {
+        "name":"Devin Singletary",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6130.jpg",
+        "total_pts":11.8,
+        "att":6,
+        "yd":16,
+        "ypc":2.7,
+        "td":1,
+        "my_guy":false,
+        "my_guy_seasons":1,
+        "in_bank":false,
+        "in_strength":true
+      },
+      {
         "name":"Isiah Pacheco",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8205.jpg",
         "total_pts":0,
@@ -6766,8 +6747,8 @@
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
-        "in_bank":false,
-        "in_strength":true
+        "in_bank":true,
+        "in_strength":false
       },
       {
         "name":"Stefon Diggs",
@@ -6963,11 +6944,11 @@
     "LAST_WEEK_POWER_RANK":null,
     "POWER_RANK_DELTA":null,
     "QB Strength Rank":3,
-    "RB Strength Rank":12,
-    "WR Strength Rank":1,
+    "RB Strength Rank":11,
+    "WR Strength Rank":3,
     "TE Strength Rank":7,
-    "K Strength Rank":6,
-    "Bench Strength Rank":11,
+    "K Strength Rank":7,
+    "Bench Strength Rank":10,
     "TREND Rank":6,
     "Average Points Rank":6,
     "BADGES":[
@@ -7376,7 +7357,7 @@
     "Trend Percentage":159.6,
     "QB Strength":70,
     "RB Strength":74,
-    "WR Strength":34,
+    "WR Strength":32,
     "TE Strength":100,
     "K Strength":37,
     "QB Strength Count":1,
@@ -7581,15 +7562,15 @@
         "in_strength":false
       },
       {
-        "name":"Los Angeles Chargers",
-        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/lac.png",
-        "total_pts":1.0,
-        "sack":1,
-        "int":0,
-        "fum_rec":0,
+        "name":"San Francisco 49ers",
+        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/sf.png",
+        "total_pts":10.0,
+        "sack":0,
+        "int":1,
+        "fum_rec":1,
         "td":0,
         "my_guy":false,
-        "my_guy_seasons":0,
+        "my_guy_seasons":1,
         "in_bank":false,
         "in_strength":true
       }
@@ -7692,7 +7673,7 @@
     "RB Strength Rank":3,
     "WR Strength Rank":11,
     "TE Strength Rank":1,
-    "K Strength Rank":6,
+    "K Strength Rank":7,
     "Bench Strength Rank":2,
     "TREND Rank":2,
     "Average Points Rank":2,
@@ -8072,7 +8053,7 @@
     "Trend Percentage":107.5,
     "QB Strength":66,
     "RB Strength":39,
-    "WR Strength":99,
+    "WR Strength":94,
     "TE Strength":9,
     "K Strength":47,
     "QB Strength Count":1,
@@ -8389,8 +8370,8 @@
     "RB Strength Rank":10,
     "WR Strength Rank":2,
     "TE Strength Rank":9,
-    "K Strength Rank":5,
-    "Bench Strength Rank":7,
+    "K Strength Rank":6,
+    "Bench Strength Rank":8,
     "TREND Rank":9,
     "Average Points Rank":9,
     "BADGES":[
