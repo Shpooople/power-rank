@@ -84,14 +84,6 @@
   min-height: 380px;
 }
 
-/* NEU: Plotly's tickfont-Konfiguration unterstützt kein 'weight' - die
-   Achsenbeschriftung wird deshalb hier direkt über die gerenderten SVG-
-   Textelemente fett gemacht (Farbe kommt schon über tickfont im JS). */
-.league-stats-chart-wrapper .xtick text,
-.league-stats-chart-wrapper .ytick text {
-  font-weight: bold !important;
-}
-
 .league-stats-team-filter {
   display: flex;
   flex-wrap: wrap;
