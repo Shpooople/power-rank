@@ -218,6 +218,19 @@
     ],
     "DEF":[
       {
+        "name":"Detroit Lions",
+        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/det.png",
+        "total_pts":11.0,
+        "sack":5,
+        "int":2,
+        "fum_rec":1,
+        "td":0,
+        "my_guy":false,
+        "my_guy_seasons":2,
+        "in_bank":false,
+        "in_strength":true
+      },
+      {
         "name":"Tampa Bay Buccaneers",
         "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/tb.png",
         "total_pts":9.0,
@@ -228,7 +241,7 @@
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
-        "in_strength":true
+        "in_strength":false
       }
     ],
     "TOP_PERFORMERS":[
@@ -320,7 +333,7 @@
       "outcome":"Sieg"
     },
     "THIS_WEEK_OPPONENT":"SalvationIsLuthersBurden",
-    "THIS_WEEK_WIN_PROB":52.0,
+    "THIS_WEEK_WIN_PROB":51.8,
     "POWER RANK":1,
     "Power Rank Score":1.9,
     "LAST_WEEK_POWER_RANK":null,
@@ -665,11 +678,11 @@
           }
         ]
       },
-      "waiver_moves":306,
+      "waiver_moves":307,
       "waiver_moves_by_season":[
         {
           "season":"2026",
-          "count":4
+          "count":5
         },
         {
           "season":"2025",
@@ -785,12 +798,15 @@
       }
     ],
     "Week 1":182.51,
+    "Week 1 Against":118.46,
+    "Week 1 Waiver":4,
+    "INJURY_COUNT":3,
     "DISPLAY_WEEK_LABEL":"Woche 1"
   },
   {
     "User ID":"718519453150679040",
     "Display Name":"Sternburg1000",
-    "Team Name":"Always sunny´n Scarycity",
+    "Team Name":"Robinson Corum Adventures",
     "Wins":0,
     "Losses":2,
     "Ties":0,
@@ -800,16 +816,16 @@
     "TREND":"DOWN",
     "Trend Percentage":95.8,
     "QB Strength":14,
-    "RB Strength":43,
-    "WR Strength":79,
-    "TE Strength":14,
+    "RB Strength":39,
+    "WR Strength":100,
+    "TE Strength":36,
     "K Strength":5,
     "QB Strength Count":1,
-    "RB Strength Count":3,
-    "WR Strength Count":3,
+    "RB Strength Count":2,
+    "WR Strength Count":4,
     "TE Strength Count":1,
     "K Strength Count":1,
-    "Bench Strength":23,
+    "Bench Strength":32,
     "Bench Strength Count":3,
     "QB":[
       {
@@ -877,8 +893,8 @@
         "td":0,
         "my_guy":false,
         "my_guy_seasons":2,
-        "in_bank":false,
-        "in_strength":true
+        "in_bank":true,
+        "in_strength":false
       },
       {
         "name":"Malik Davis",
@@ -915,6 +931,19 @@
         "targets":7,
         "catches":5,
         "yd":82,
+        "td":1,
+        "my_guy":false,
+        "my_guy_seasons":1,
+        "in_bank":false,
+        "in_strength":true
+      },
+      {
+        "name":"Demarcus Robinson",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/3286.jpg",
+        "total_pts":12.0,
+        "targets":3,
+        "catches":2,
+        "yd":50,
         "td":1,
         "my_guy":false,
         "my_guy_seasons":1,
@@ -970,7 +999,7 @@
         "td":0,
         "my_guy":false,
         "my_guy_seasons":2,
-        "in_bank":true,
+        "in_bank":false,
         "in_strength":false
       }
     ],
@@ -989,13 +1018,13 @@
         "in_strength":false
       },
       {
-        "name":"Michael Mayer",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9482.jpg",
-        "total_pts":6.2,
+        "name":"Mike Gesicki",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4993.jpg",
+        "total_pts":16.3,
         "targets":7,
-        "catches":6,
-        "yd":32,
-        "td":0,
+        "catches":5,
+        "yd":78,
+        "td":1,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
@@ -1120,17 +1149,17 @@
       "outcome":"Niederlage"
     },
     "THIS_WEEK_OPPONENT":"sandmann1ps",
-    "THIS_WEEK_WIN_PROB":36.8,
+    "THIS_WEEK_WIN_PROB":36.2,
     "POWER RANK":12,
     "Power Rank Score":10.9,
     "LAST_WEEK_POWER_RANK":null,
     "POWER_RANK_DELTA":null,
     "QB Strength Rank":12,
-    "RB Strength Rank":7,
-    "WR Strength Rank":4,
-    "TE Strength Rank":8,
+    "RB Strength Rank":9,
+    "WR Strength Rank":1,
+    "TE Strength Rank":5,
     "K Strength Rank":11,
-    "Bench Strength Rank":12,
+    "Bench Strength Rank":11,
     "TREND Rank":12,
     "Average Points Rank":12,
     "BADGES":[
@@ -1425,11 +1454,11 @@
           }
         ]
       },
-      "waiver_moves":174,
+      "waiver_moves":176,
       "waiver_moves_by_season":[
         {
           "season":"2026",
-          "count":2
+          "count":4
         },
         {
           "season":"2025",
@@ -1541,6 +1570,9 @@
       }
     ],
     "Week 1":95.85,
+    "Week 1 Against":153.75,
+    "Week 1 Waiver":2,
+    "INJURY_COUNT":4,
     "DISPLAY_WEEK_LABEL":"Woche 1"
   },
   {
@@ -1565,8 +1597,8 @@
     "WR Strength Count":2,
     "TE Strength Count":1,
     "K Strength Count":1,
-    "Bench Strength":46,
-    "Bench Strength Count":3,
+    "Bench Strength":22,
+    "Bench Strength Count":2,
     "QB":[
       {
         "name":"Bo Nix",
@@ -1675,19 +1707,6 @@
         "td":0,
         "my_guy":false,
         "my_guy_seasons":2,
-        "in_bank":false,
-        "in_strength":false
-      },
-      {
-        "name":"Jerry Jeudy",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6783.jpg",
-        "total_pts":3.6,
-        "targets":4,
-        "catches":2,
-        "yd":26,
-        "td":0,
-        "my_guy":false,
-        "my_guy_seasons":1,
         "in_bank":true,
         "in_strength":false
       },
@@ -1720,19 +1739,6 @@
     ],
     "TE":[
       {
-        "name":"Oronde Gadsden",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12493.jpg",
-        "total_pts":4.2,
-        "targets":2,
-        "catches":2,
-        "yd":32,
-        "td":0,
-        "my_guy":false,
-        "my_guy_seasons":1,
-        "in_bank":true,
-        "in_strength":false
-      },
-      {
         "name":"Trey McBride",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8130.jpg",
         "total_pts":20.0,
@@ -1759,6 +1765,19 @@
         "my_guy_seasons":1,
         "in_bank":false,
         "in_strength":true
+      },
+      {
+        "name":"Cairo Santos",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/2020.jpg",
+        "total_pts":12.0,
+        "fgm":1,
+        "fga":1,
+        "xpm":8,
+        "xpa":8,
+        "my_guy":false,
+        "my_guy_seasons":1,
+        "in_bank":false,
+        "in_strength":false
       }
     ],
     "DEF":[
@@ -1774,6 +1793,19 @@
         "my_guy_seasons":2,
         "in_bank":false,
         "in_strength":true
+      },
+      {
+        "name":"Las Vegas Raiders",
+        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/lv.png",
+        "total_pts":15.0,
+        "sack":5,
+        "int":1,
+        "fum_rec":1,
+        "td":0,
+        "my_guy":false,
+        "my_guy_seasons":1,
+        "in_bank":false,
+        "in_strength":false
       }
     ],
     "TOP_PERFORMERS":[
@@ -1859,24 +1891,24 @@
       "rush_yd":2,
       "td":1
     },
-    "LAST_WEEK_OPPONENT":"Always sunny´n Scarycity",
+    "LAST_WEEK_OPPONENT":"Robinson Corum Adventures",
     "LAST_WEEK_RESULT":{
       "own_points":153.8,
       "opponent_points":95.8,
       "outcome":"Sieg"
     },
     "THIS_WEEK_OPPONENT":"pk123",
-    "THIS_WEEK_WIN_PROB":53.5,
+    "THIS_WEEK_WIN_PROB":53.6,
     "POWER RANK":4,
     "Power Rank Score":4.65,
     "LAST_WEEK_POWER_RANK":null,
     "POWER_RANK_DELTA":null,
     "QB Strength Rank":8,
     "RB Strength Rank":4,
-    "WR Strength Rank":10,
+    "WR Strength Rank":11,
     "TE Strength Rank":3,
     "K Strength Rank":3,
-    "Bench Strength Rank":11,
+    "Bench Strength Rank":12,
     "TREND Rank":4,
     "Average Points Rank":4,
     "BADGES":[
@@ -1892,7 +1924,7 @@
       }
     ],
     "COMMENTS":"In einer Fantasy-Football-Welt, die wenig mit Fantasie, sondern eher mit Statistiken zu tun hat, ist eigentlich wenig Platz für Gefühle, Vibes oder was die jungen Leute von heute Aura nennen.\nDer Draftprozess der Two Daddies scheint eher im Bereich der Gefühlswelt zu leben. Till, mit der längsten Kommt-mir-nicht-ins-Haus-Liste der Liga, und Semih mit 54 Wochen geballter Fantasy-Erfahrung haben nach eigenen Worten keinen Platz für Spreadsheets und Analytics in ihrem Draftprozess.\nStattdessen geht es bei beiden eher um die Arbeit der rechten Gehirnhälfte. Kreativität und Gefühle, eben um die bereits erwähnte Aura.\nDa kommt dann so was wie der Draft in der letzten Saison bei rum.\n\nABER dieses Mal ist alles anders. Die Daddies haben ein stabiles Team um die drei wichtigen Stars McBride, Taylor und Collins gedraftet. Vielleicht das beste RB1-WR1-TE1-Kombinat der Liga?\nIn Woche 1 gab es durchaus viel Hilfe von den Browns bzw. Groper Cleveland, aber die brauchten sie auch nicht wirklich gegen Lücke.\nNächste Woche wartet PK123, der diese Woche fast identische Punkte gemacht hat. Geiles Matchup.",
-    "FAAB_REMAINING":100,
+    "FAAB_REMAINING":96,
     "LEGACY_STATS":{
       "win_pct":46.4,
       "wins":45,
@@ -2160,8 +2192,12 @@
           }
         ]
       },
-      "waiver_moves":125,
+      "waiver_moves":127,
       "waiver_moves_by_season":[
+        {
+          "season":"2026",
+          "count":2
+        },
         {
           "season":"2025",
           "count":25
@@ -2268,6 +2304,9 @@
       }
     ],
     "Week 1":153.75,
+    "Week 1 Against":95.85,
+    "Week 1 Waiver":0,
+    "INJURY_COUNT":1,
     "DISPLAY_WEEK_LABEL":"Woche 1"
   },
   {
@@ -2617,7 +2656,7 @@
       "outcome":"Niederlage"
     },
     "THIS_WEEK_OPPONENT":"TrevorMutantNinjaTutens",
-    "THIS_WEEK_WIN_PROB":47.2,
+    "THIS_WEEK_WIN_PROB":47.4,
     "POWER RANK":8,
     "Power Rank Score":8.1,
     "LAST_WEEK_POWER_RANK":null,
@@ -3015,6 +3054,9 @@
       }
     ],
     "Week 1":117.81,
+    "Week 1 Against":135.96,
+    "Week 1 Waiver":4,
+    "INJURY_COUNT":3,
     "DISPLAY_WEEK_LABEL":"Woche 1"
   },
   {
@@ -3338,7 +3380,7 @@
       "outcome":"Sieg"
     },
     "THIS_WEEK_OPPONENT":"Two Daddies One Bride ",
-    "THIS_WEEK_WIN_PROB":46.5,
+    "THIS_WEEK_WIN_PROB":46.4,
     "POWER RANK":5,
     "Power Rank Score":5.15,
     "LAST_WEEK_POWER_RANK":null,
@@ -3346,7 +3388,7 @@
     "QB Strength Rank":6,
     "RB Strength Rank":12,
     "WR Strength Rank":1,
-    "TE Strength Rank":6,
+    "TE Strength Rank":7,
     "K Strength Rank":1,
     "Bench Strength Rank":5,
     "TREND Rank":5,
@@ -3745,6 +3787,9 @@
       }
     ],
     "Week 1":152.86,
+    "Week 1 Against":107.16,
+    "Week 1 Waiver":1,
+    "INJURY_COUNT":0,
     "DISPLAY_WEEK_LABEL":"Woche 1"
   },
   {
@@ -3761,7 +3806,7 @@
     "Trend Percentage":107.2,
     "QB Strength":96,
     "RB Strength":63,
-    "WR Strength":25,
+    "WR Strength":42,
     "TE Strength":39,
     "K Strength":5,
     "QB Strength Count":1,
@@ -3882,6 +3927,19 @@
         "in_strength":true
       },
       {
+        "name":"Kalif Raymond",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/3634.jpg",
+        "total_pts":12.4,
+        "targets":9,
+        "catches":8,
+        "yd":84,
+        "td":0,
+        "my_guy":false,
+        "my_guy_seasons":1,
+        "in_bank":false,
+        "in_strength":true
+      },
+      {
         "name":"Jaylen Waddle",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7526.jpg",
         "total_pts":0.7,
@@ -3905,7 +3963,7 @@
         "my_guy":false,
         "my_guy_seasons":2,
         "in_bank":false,
-        "in_strength":true
+        "in_strength":false
       },
       {
         "name":"Jordan Addison",
@@ -4068,14 +4126,14 @@
       "outcome":"Niederlage"
     },
     "THIS_WEEK_OPPONENT":"BurrowButker and the Boys",
-    "THIS_WEEK_WIN_PROB":41.7,
+    "THIS_WEEK_WIN_PROB":46.7,
     "POWER RANK":10,
     "Power Rank Score":9.3,
     "LAST_WEEK_POWER_RANK":null,
     "POWER_RANK_DELTA":null,
     "QB Strength Rank":2,
     "RB Strength Rank":5,
-    "WR Strength Rank":12,
+    "WR Strength Rank":10,
     "TE Strength Rank":4,
     "K Strength Rank":11,
     "Bench Strength Rank":4,
@@ -4367,8 +4425,12 @@
           }
         ]
       },
-      "waiver_moves":190,
+      "waiver_moves":191,
       "waiver_moves_by_season":[
+        {
+          "season":"2026",
+          "count":1
+        },
         {
           "season":"2025",
           "count":46
@@ -4479,6 +4541,9 @@
       }
     ],
     "Week 1":107.16,
+    "Week 1 Against":152.86,
+    "Week 1 Waiver":0,
+    "INJURY_COUNT":1,
     "DISPLAY_WEEK_LABEL":"Woche 1"
   },
   {
@@ -4802,7 +4867,7 @@
       "outcome":"Niederlage"
     },
     "THIS_WEEK_OPPONENT":"The PUK-A-BOOs",
-    "THIS_WEEK_WIN_PROB":51.6,
+    "THIS_WEEK_WIN_PROB":51.0,
     "POWER RANK":11,
     "Power Rank Score":10.7,
     "LAST_WEEK_POWER_RANK":null,
@@ -5191,6 +5256,9 @@
       }
     ],
     "Week 1":105.22,
+    "Week 1 Against":107.52,
+    "Week 1 Waiver":0,
+    "INJURY_COUNT":2,
     "DISPLAY_WEEK_LABEL":"Woche 1"
   },
   {
@@ -5514,7 +5582,7 @@
       "outcome":"Niederlage"
     },
     "THIS_WEEK_OPPONENT":"Gonna be golden",
-    "THIS_WEEK_WIN_PROB":58.3,
+    "THIS_WEEK_WIN_PROB":53.3,
     "POWER RANK":7,
     "Power Rank Score":6.85,
     "LAST_WEEK_POWER_RANK":null,
@@ -5872,6 +5940,9 @@
       }
     ],
     "Week 1":118.46,
+    "Week 1 Against":182.51,
+    "Week 1 Waiver":0,
+    "INJURY_COUNT":3,
     "DISPLAY_WEEK_LABEL":"Woche 1"
   },
   {
@@ -6194,7 +6265,7 @@
       "outcome":"Niederlage"
     },
     "THIS_WEEK_OPPONENT":"Schlemmerfilet Bortleaise",
-    "THIS_WEEK_WIN_PROB":48.0,
+    "THIS_WEEK_WIN_PROB":48.2,
     "POWER RANK":3,
     "Power Rank Score":3.42,
     "LAST_WEEK_POWER_RANK":null,
@@ -6202,7 +6273,7 @@
     "QB Strength Rank":10,
     "RB Strength Rank":6,
     "WR Strength Rank":6,
-    "TE Strength Rank":5,
+    "TE Strength Rank":6,
     "K Strength Rank":2,
     "Bench Strength Rank":3,
     "TREND Rank":3,
@@ -6600,6 +6671,9 @@
       }
     ],
     "Week 1":154.36,
+    "Week 1 Against":159.6,
+    "Week 1 Waiver":0,
+    "INJURY_COUNT":1,
     "DISPLAY_WEEK_LABEL":"Woche 1"
   },
   {
@@ -6938,15 +7012,15 @@
       "outcome":"Sieg"
     },
     "THIS_WEEK_OPPONENT":"Pandan Buns",
-    "THIS_WEEK_WIN_PROB":48.4,
+    "THIS_WEEK_WIN_PROB":49.0,
     "POWER RANK":6,
     "Power Rank Score":5.75,
     "LAST_WEEK_POWER_RANK":null,
     "POWER_RANK_DELTA":null,
     "QB Strength Rank":3,
     "RB Strength Rank":11,
-    "WR Strength Rank":3,
-    "TE Strength Rank":7,
+    "WR Strength Rank":4,
+    "TE Strength Rank":8,
     "K Strength Rank":7,
     "Bench Strength Rank":10,
     "TREND Rank":6,
@@ -7341,6 +7415,9 @@
       }
     ],
     "Week 1":135.96,
+    "Week 1 Against":117.81,
+    "Week 1 Waiver":2,
+    "INJURY_COUNT":3,
     "DISPLAY_WEEK_LABEL":"Woche 1"
   },
   {
@@ -7664,14 +7741,14 @@
       "outcome":"Sieg"
     },
     "THIS_WEEK_OPPONENT":"𓇳𓋹𓎡𓅓𓂋",
-    "THIS_WEEK_WIN_PROB":52.8,
+    "THIS_WEEK_WIN_PROB":52.6,
     "POWER RANK":2,
     "Power Rank Score":2.25,
     "LAST_WEEK_POWER_RANK":null,
     "POWER_RANK_DELTA":null,
     "QB Strength Rank":4,
     "RB Strength Rank":3,
-    "WR Strength Rank":11,
+    "WR Strength Rank":12,
     "TE Strength Rank":1,
     "K Strength Rank":7,
     "Bench Strength Rank":2,
@@ -8037,6 +8114,9 @@
       }
     ],
     "Week 1":159.6,
+    "Week 1 Against":154.36,
+    "Week 1 Waiver":1,
+    "INJURY_COUNT":0,
     "DISPLAY_WEEK_LABEL":"Woche 1"
   },
   {
@@ -8191,7 +8271,7 @@
         "name":"Drake London",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8112.jpg",
         "total_pts":4.5,
-        "targets":4,
+        "targets":5,
         "catches":2,
         "yd":29,
         "td":0,
@@ -8337,7 +8417,7 @@
         "points":4.8,
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8112.jpg",
         "total_pts":4.5,
-        "targets":4,
+        "targets":5,
         "catches":2,
         "yd":29,
         "td":0
@@ -8360,15 +8440,15 @@
       "opponent_points":105.2,
       "outcome":"Sieg"
     },
-    "THIS_WEEK_OPPONENT":"Always sunny´n Scarycity",
-    "THIS_WEEK_WIN_PROB":63.2,
+    "THIS_WEEK_OPPONENT":"Robinson Corum Adventures",
+    "THIS_WEEK_WIN_PROB":63.8,
     "POWER RANK":9,
     "Power Rank Score":9.02,
     "LAST_WEEK_POWER_RANK":null,
     "POWER_RANK_DELTA":null,
     "QB Strength Rank":5,
-    "RB Strength Rank":10,
-    "WR Strength Rank":2,
+    "RB Strength Rank":9,
+    "WR Strength Rank":3,
     "TE Strength Rank":9,
     "K Strength Rank":6,
     "Bench Strength Rank":8,
@@ -8717,6 +8797,9 @@
       }
     ],
     "Week 1":107.52,
+    "Week 1 Against":105.22,
+    "Week 1 Waiver":0,
+    "INJURY_COUNT":2,
     "DISPLAY_WEEK_LABEL":"Woche 1"
   }
 ]
