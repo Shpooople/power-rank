@@ -402,6 +402,35 @@ for week in weeks:
         for roster_id in set((tx.get('adds') or {}).values()):
             weekly_waiver_moves[week][roster_id] = weekly_waiver_moves[week].get(roster_id, 0) + 1
 
+# NEU: current_week/weeks nachträglich korrigieren. Sleepers globaler NFL-
+# Wochenzähler (nfl_state["week"]) zählt manchmal schneller hoch, als für
+# DIESE Liga tatsächlich Ergebnisse vorliegen (z.B. bei ungewöhnlichem
+# Spielplan) - current_week würde dann Wochen als "gespielt" behandeln, die
+# in Wahrheit noch komplett leer sind (alle Teams 0 Punkte). Das hat sich
+# u.a. im individuellen Saisonverlauf-Chart als Phantom-Wochen gezeigt.
+# Deshalb: von hinten die letzten Wochen abschneiden, in denen WIRKLICH
+# JEDES Team 0 Punkte hat - das kann bei einer echt gespielten Woche
+# praktisch nie vorkommen.
+_real_last_week = current_week
+for _wk in range(current_week, 0, -1):
+    if any(pts > 0 for pts in weekly_points.get(_wk, [])):
+        _real_last_week = _wk
+        break
+else:
+    _real_last_week = 0
+
+if _real_last_week < current_week:
+    print(
+        f"Korrektur: current_week war {current_week}, aber Wochen "
+        f"{_real_last_week + 1}-{current_week} haben noch keine echten "
+        f"Ergebnisse (alle Teams 0 Punkte) - current_week auf {_real_last_week} gesetzt."
+    )
+    current_week = max(_real_last_week, 1)
+    weeks = range(1, current_week + 1)
+    weekly_points = {w: weekly_points[w] for w in weeks}
+    weekly_points_against = {w: weekly_points_against[w] for w in weeks}
+    weekly_waiver_moves = {w: weekly_waiver_moves[w] for w in weeks}
+
 # --- NEU: Vorbereitung für Top/Flop-Performer, Benchwarmer, Gegner & Win-Probability ---
 
 def fetch_matchups(week):
