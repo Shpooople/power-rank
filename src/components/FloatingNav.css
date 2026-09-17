@@ -57,6 +57,17 @@
   background-color: var(--color-surface-alt);
 }
 
+.floating-nav-special {
+  font-weight: bold;
+  color: var(--color-accent);
+}
+
+.floating-nav-divider {
+  height: 1px;
+  background-color: var(--color-border);
+  margin: 4px 0;
+}
+
 .floating-nav-rank {
   color: var(--color-accent);
   font-weight: bold;
