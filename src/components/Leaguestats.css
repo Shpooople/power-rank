@@ -1,0 +1,148 @@
+.league-stats-section {
+  max-width: 1000px;
+  margin: 20px auto 0 auto;
+  padding: 20px 24px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  box-sizing: border-box;
+}
+
+.league-stats-section summary {
+  cursor: pointer;
+  font-family: 'Roboto Condensed', Roboto, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  color: #FFFFFF;
+  list-style: none;
+}
+
+.league-stats-section summary::-webkit-details-marker {
+  display: none;
+}
+
+.league-stats-section summary::before {
+  content: '▶ ';
+  color: var(--color-accent);
+}
+
+.league-stats-section[open] summary::before {
+  content: '▼ ';
+}
+
+.league-stats-content {
+  margin-top: 16px;
+}
+
+.league-stats-metric-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.league-stats-metric-btn {
+  font-family: 'Roboto Condensed', Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 6px 14px;
+  background-color: var(--color-surface-alt);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.league-stats-metric-btn:hover {
+  border-color: var(--color-accent);
+  color: var(--color-text);
+}
+
+.league-stats-metric-btn.active {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #12202E;
+}
+
+.league-stats-note {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  font-style: italic;
+  margin: 0 0 12px 0;
+}
+
+.league-stats-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.league-stats-chart-wrapper {
+  width: 100%;
+  min-height: 380px;
+}
+
+.league-stats-team-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-content: flex-start;
+}
+
+.league-stats-team-filter-title {
+  width: 100%;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-text-muted);
+  margin-bottom: 4px;
+}
+
+.league-stats-team-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 10px;
+  background-color: var(--color-surface-alt);
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  color: var(--color-text);
+  font-family: 'Roboto Condensed', Roboto, sans-serif;
+  font-size: 12px;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.league-stats-team-toggle.hidden {
+  opacity: 0.35;
+}
+
+.league-stats-team-swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+@media (min-width: 900px) {
+  .league-stats-layout {
+    flex-direction: row;
+  }
+
+  .league-stats-chart-wrapper {
+    flex: 1;
+  }
+
+  .league-stats-team-filter {
+    width: 200px;
+    flex-shrink: 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .league-stats-team-toggle {
+    width: 100%;
+  }
+}
