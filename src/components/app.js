@@ -7,6 +7,7 @@ import TeamSection from './teamSection';
 import Explanation from './explanation';
 import BigBrainTop3 from './BigBrainTop3';
 import FloatingNav from './FloatingNav';
+import LeagueStats from './LeagueStats';
 
 const App = () => {
   const [teams, setTeams] = useState([]);
@@ -74,6 +75,8 @@ const App = () => {
       />
 
       <BigBrainTop3 entries={topBigBrain} />
+
+      <LeagueStats teams={teams} historyIndex={historyIndex} />
 
       <FloatingNav teams={teams} />
 
