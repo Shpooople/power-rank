@@ -18,7 +18,7 @@ const Explanation = () => {
         Statt des früheren "Angepassten Durchschnitts" (bei dem die beste und schlechteste Woche ausgeschlossen wurden) zeigt jede Team-Karte jetzt einfach die <strong>durchschnittlichen Punkte pro Woche (Ø Punkte)</strong> – einfacher nachvollziehbar und ohne die Kanten, die das Ausschließen von Wochen bei einer 17-Wochen-Saison mit anfangs noch sehr wenigen gespielten Wochen mit sich brachte. Dieser Wert fließt <strong>nicht</strong> in die POWER-RANK-Berechnung ein, ist rein informativ.
       </p>
       <p>
-        Diese Gewichtung macht Sinn, da sie sowohl den langfristigen Erfolg (Siege, erzielte Punkte) als auch kurzfristige Entwicklungen (Trend) und die Schwierigkeit der bisherigen Gegner (gegnerische Punkte) miteinbezieht. Der <strong>POWER RANK</strong> gibt somit eine ausgewogene Darstellung der Leistungsfähigkeit eines Teams und hilft, Stärken und Schwächen klar zu identifizieren sowie den bisherigen Spielverlauf zu berücksichtigen.
+        Diese Gewichtung macht Sinn, da sie sowohl den langfristigen Erfolg (Siege, erzielte Punkte) als auch kurzfristige Entwicklungen (Aktuelle Form) und die Schwierigkeit der bisherigen Gegner (gegnerische Punkte) miteinbezieht. Der <strong>POWER RANK</strong> gibt somit eine ausgewogene Darstellung der Leistungsfähigkeit eines Teams und hilft, Stärken und Schwächen klar zu identifizieren sowie den bisherigen Spielverlauf zu berücksichtigen.
       </p>
       <p>
         Die <strong>Aktuelle Form</strong> (früher "Trend" genannt) wird berechnet, indem zunächst ein <strong>gewichteter Durchschnitt der letzten 2 Wochen</strong> pro Team ermittelt wird: Die aktuellste Woche zählt voll, die Woche davor nur halb so viel (Gewichtung 100 % / 50 %). Dieser Wert wird dann <strong>ligaweit verglichen</strong>: Die 4 Teams mit dem besten Wert bekommen "UP" (▲), die 4 Teams mit dem schwächsten Wert "DOWN" (▼), alle dazwischen "NO TREND" (▬).
@@ -43,8 +43,66 @@ const Explanation = () => {
       <p>
         Der <strong>Saisonverlauf</strong> zeigt die wöchentlichen Punktzahlen eines Teams. Die Y-Achse ist für jedes Team individuell skaliert (damit auch konstante Teams mit wenig Schwankung gut lesbar bleiben), die <strong>Farbe</strong> der Linie und Punkte ist aber ligaweit einheitlich: unter 80 Punkte erscheinen rot, 80–100 rot-orange, 100–120 gelb-orange, 120–140 gelb-grün, 140–160 grün und ab 160 türkis. So lässt sich auf einen Blick erkennen, ob eine Woche für ein Team stark oder schwach war – auch im Vergleich zu anderen Karten.
       </p>
+
+      <h3>Roster: Bank-Markierung und "My Guy"</h3>
       <p>
-        Neben Power Rank, Teamstärke und Saisonverlauf gibt es noch ein paar weitere Werte auf jeder Karte: das <strong>FAAB</strong>-Restbudget fürs Waiver-Bidding, der Score aus dem ligainternen <strong>Prediction-Quiz</strong> ("Biggest Football Brain Contest"), sowie diverse <strong>Badges</strong> für Auffälligkeiten der Woche oder Saison (z.B. besonders viele verletzte Spieler, ein besonders knapper Sieg oder ein Spieler, der schon seit Jahren treu im Kader steht – als "My Guy" golden markiert). Details zu jedem Badge gibt's beim Draufklicken bzw. -tippen.
+        Im ausklappbaren <strong>Roster</strong> jeder Karte sind die Spieler pro Position nach Fantasy-Punkten sortiert. Manche Spieler sind <strong>gedimmt</strong> dargestellt – das sind alle, die weder als Starter noch als Top-3-Bank-Spieler in die weiter oben beschriebene Teamstärke-Berechnung einfließen. Die drei Spieler, die genau die "Bank"-Kategorie im Balkendiagramm ausmachen, bekommen zusätzlich ein kleines <strong>"Bank"-Label</strong> neben dem Namen und werden (im Gegensatz zu den übrigen gedimmten Spielern) <strong>nicht</strong> abgedunkelt – sie sind ja aktiv Teil der Wertung.
+      </p>
+      <p>
+        Spieler, die schon seit mindestens 3 Saisons durchgehend bei diesem Team im Kader stehen (mindestens 3 Wochen pro Saison, laut Liga-Historie), werden golden mit dem Zusatz <strong>"My Guy"</strong> markiert – beim Draufhalten mit der Maus (bzw. Antippen) zeigt ein Tooltip, in der wievielten Saison der Spieler schon dabei ist.
+      </p>
+      <p>
+        In den <strong>Legacy Stats</strong> (Lieblingsspieler-Listen) bekommen Spieler außerdem einen <strong>goldenen Ring</strong> um ihr Foto, wenn sie in einer Saison, in der das Team eine Meisterschaft gewonnen hat, im Kader standen – zu unterscheiden von "My Guy" (goldener Text wegen Kader-Treue) und dem goldenen Rand beim Superfan-Badge (siehe unten, wegen Häufung von Spielern eines NFL-Teams).
+      </p>
+
+      <h3>Alle Badges im Überblick</h3>
+      <p>
+        Badges erscheinen oben auf jeder Team-Karte und markieren Auffälligkeiten der aktuellen Woche oder der bisherigen Saison. Details (inkl. genauer Zahl) gibt's beim Antippen/Draufhalten auf das jeweilige Icon.
+      </p>
+      <p><strong>Saison- und Kader-Badges:</strong></p>
+      <ul>
+        <li>🩹 <strong>The Hospital</strong> – die meisten verletzten Spieler im Kader (Out/IR/Questionable/Doubtful)</li>
+        <li>🏟️ <strong>[NFL-Team]-Homer</strong> – 3 oder mehr Spieler von einem echten NFL-Team im Kader</li>
+        <li>🏟️ <strong>[NFL-Team]-Superfan</strong> – noch eine Stufe drüber: 5 oder mehr Spieler von einem NFL-Team (goldener Rand statt normalem Rahmen)</li>
+        <li>🐉 <strong>Angstgegner</strong> – höchster Punkteschnitt pro Woche der bisherigen Saison ligaweit (Achtung: nicht zu verwechseln mit dem "Angstgegner" in den Legacy Stats – dort geht's um den Gegner, der dich am häufigsten schlägt)</li>
+        <li>🎣 <strong>Waiver-Wire-Wizard</strong> – die meisten Waiver-/Free-Agent-Adds der bisherigen Saison</li>
+        <li>💰 <strong>Reichstes Team</strong> – meiste FAAB übrig (bei Gleichstand bekommt niemand das Badge)</li>
+        <li>🏚️ <strong>Ärmstes Team</strong> – wenigste FAAB übrig</li>
+        <li>🧸 <strong>Kindergarten</strong> – die meisten Rookies im Kader</li>
+        <li>🦖 <strong>Altersheim</strong> – höchstes Kader-Durchschnittsalter</li>
+      </ul>
+      <p><strong>Form- und Serien-Badges:</strong></p>
+      <ul>
+        <li>📈 <strong>Rising Star</strong> – aktuell beste "Aktuelle Form" der Liga</li>
+        <li>📉 <strong>Free Fall</strong> – aktuell schwächste "Aktuelle Form" der Liga</li>
+        <li>🔥 <strong>On Fire</strong> – mindestens 2 Siege in Folge</li>
+        <li>🥶 <strong>Cold Streak</strong> – mindestens 2 Niederlagen in Folge</li>
+        <li>🎢 <strong>Rollercoaster</strong> – größte Wochen-zu-Wochen-Schwankung der Saison</li>
+        <li>⚓ <strong>Mr. Consistent</strong> – kleinste Wochen-zu-Wochen-Schwankung der Saison</li>
+      </ul>
+      <p><strong>Wochen-Badges (Matchup & Lineup):</strong></p>
+      <ul>
+        <li>👑 <strong>Liga-Krösus</strong> – höchste Punktzahl der aktuellen Woche ligaweit</li>
+        <li>🍀 <strong>Pechvogel der Woche</strong> – mehr Punkte als der Liga-Median dieser Woche, trotzdem verloren</li>
+        <li>💥 <strong>Giant Killer</strong> – Sieg gegen ein deutlich besser platziertes Team</li>
+        <li>🔒 <strong>Punktgenau</strong> – Sieg als klar besser platziertes Team (Favoritensieg bestätigt)</li>
+        <li>🦷 <strong>Nervenstark</strong> – knappster Sieg der Woche</li>
+        <li>🔨 <strong>Kantersieg</strong> – größter Punkteabstand bei einem Sieg</li>
+        <li>🪑 <strong>Bankdrücker</strong> – meiste Punkte auf der eigenen Bank liegen gelassen</li>
+        <li>🤡 <strong>Bank-Patzer</strong> – ein Bankspieler hätte den Starter derselben Position übertroffen</li>
+        <li>🥇 <strong>Perfektes Lineup</strong> – mindestens 97% der bestmöglichen Aufstellung aus dem eigenen Kader ausgeschöpft</li>
+        <li>💣 <strong>Big Bang</strong> – stärkste Einzel-Starter-Leistung der Liga diese Woche</li>
+        <li>🫠 <strong>Totalausfall</strong> – schwächste Einzel-Starter-Leistung der Liga diese Woche</li>
+        <li>🎯 <strong>Air Raid</strong> – mindestens 40% der Wochenpunkte kamen von den WRs</li>
+        <li>🚜 <strong>Ground and Pound</strong> – mindestens 40% der Wochenpunkte kamen von den RBs</li>
+        <li>🏈 <strong>Touchdown Overflow</strong> – meiste Touchdowns (Starter) der vergangenen Woche</li>
+        <li>🥚 <strong>Klingeling, hier kommt der Eiermann</strong> – ein Starter kam auf 0 Punkte</li>
+        <li>👢 <strong>Das heißt nicht umsonst FOOTball</strong> – der eigene Kicker war besser als der beste RB, WR oder der QB im Lineup</li>
+        <li>🛡️ <strong>Defense wins Championships</strong> – die eigene Defense war besser als der beste RB, WR oder der QB im Lineup</li>
+      </ul>
+
+      <p>
+        Neben Power Rank, Teamstärke und Saisonverlauf gibt es noch ein paar weitere Werte auf jeder Karte: das <strong>FAAB</strong>-Restbudget fürs Waiver-Bidding und der Score aus dem ligainternen <strong>Prediction-Quiz</strong> ("Biggest Football Brain Contest").
       </p>
       <a href="#header" className="jump-to-top">
         Zurück nach oben
