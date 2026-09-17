@@ -468,8 +468,13 @@ const TeamSection = ({ team, anchorId }) => {
   const [weekProgress, setWeekProgress] = useState(0);
   const chartsContainerRef = useRef(null);
 
-  const weekKeys = Object.keys(weekData);
-  const weekValues = Object.values(weekData);
+  // NEU: weekData enthält ALLES, was nicht explizit oben destrukturiert
+  // wurde - seit der Liga-Statistik auch "Week N Against"/"Week N Waiver".
+  // Hier deshalb sauber auf die echten "Week N"-Spalten filtern (mit
+  // optionalem "(Vorsaison)"-Zusatz), damit die nicht versehentlich als
+  // zusätzliche Saisonverlauf-Wochen durchgehen.
+  const weekKeys = Object.keys(weekData).filter((k) => /^Week \d+( \(Vorsaison\))?$/.test(k));
+  const weekValues = weekKeys.map((k) => weekData[k]);
 
   useEffect(() => {
     const el = chartsContainerRef.current;
