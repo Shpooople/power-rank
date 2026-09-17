@@ -350,6 +350,10 @@ user_data_dict = {
 
 # Collect weekly points
 weekly_points = {week: [] for week in weeks}
+# NEU: Gegnerpunkte und Waiver-Moves pro Woche (für die Liga-Statistik) -
+# gleiche Struktur wie weekly_points, ein Wert pro Team und Woche.
+weekly_points_against = {week: {} for week in weeks}
+weekly_waiver_moves = {week: {} for week in weeks}
 weekly_results_by_roster = {r['roster_id']: [] for r in rosters}  # 'W'/'L'/'T' pro Woche, für Serien-Badges
 current_week_matchups = None
 for week in weeks:
@@ -366,6 +370,7 @@ for week in weeks:
         weekly_points[week].append(week_points.get(roster_id, 0))
 
     # NEU: Sieg/Niederlage pro Team fuer diese Woche ermitteln (Serien-Badges)
+    # UND gleich die Gegnerpunkte dieser Woche für die Liga-Statistik.
     matchup_groups = {}
     for m in matchups:
         matchup_groups.setdefault(m['matchup_id'], []).append(m)
@@ -381,6 +386,21 @@ for week in weeks:
                 res_a, res_b = 'T', 'T'
             weekly_results_by_roster.setdefault(a['roster_id'], []).append(res_a)
             weekly_results_by_roster.setdefault(b['roster_id'], []).append(res_b)
+            weekly_points_against[week][a['roster_id']] = b_pts
+            weekly_points_against[week][b['roster_id']] = a_pts
+
+    # NEU: Waiver-/Free-Agent-Moves dieser Woche zählen (für die Liga-Statistik)
+    try:
+        week_transactions = requests.get(
+            f"https://api.sleeper.app/v1/league/{league_id}/transactions/{week}"
+        ).json()
+    except Exception:
+        week_transactions = []
+    for tx in (week_transactions or []):
+        if tx.get('type') not in ('waiver', 'free_agent') or tx.get('status') != 'complete':
+            continue
+        for roster_id in set((tx.get('adds') or {}).values()):
+            weekly_waiver_moves[week][roster_id] = weekly_waiver_moves[week].get(roster_id, 0) + 1
 
 # --- NEU: Vorbereitung für Top/Flop-Performer, Benchwarmer, Gegner & Win-Probability ---
 
@@ -1916,6 +1936,30 @@ weekly_points_df = pd.DataFrame(weekly_points)
 weekly_points_df.columns = [f'Week {week}{week_column_suffix}' for week in weeks]
 
 df = pd.concat([df, weekly_points_df], axis=1)
+
+# NEU: Für die Liga-Statistik (Verlaufs-Graph) - Punkte-gegen und Waiver-Moves
+# pro Woche, im gleichen "Week N"-Spaltenmuster wie oben, aber mit eigenem
+# Präfix. roster_id -> Index in rosters, damit die Reihenfolge exakt zu den
+# anderen Spalten passt.
+_roster_id_order = [team['roster_id'] for team in rosters]
+weekly_against_data = {
+    f'Week {week} Against{week_column_suffix}': [
+        weekly_points_against[week].get(rid, 0) for rid in _roster_id_order
+    ]
+    for week in weeks
+}
+weekly_waiver_data = {
+    f'Week {week} Waiver{week_column_suffix}': [
+        weekly_waiver_moves[week].get(rid, 0) for rid in _roster_id_order
+    ]
+    for week in weeks
+}
+df = pd.concat([df, pd.DataFrame(weekly_against_data), pd.DataFrame(weekly_waiver_data)], axis=1)
+
+# NEU: Verletzungen - Sleeper speichert nur den AKTUELLEN Status, nicht
+# rückwirkend pro Woche. Die Liga-Statistik kann diese Kurve deshalb nur ab
+# jetzt (ab dieser Woche) aufbauen, nicht rückwirkend für die ganze Saison.
+df["INJURY_COUNT"] = injury_counts
 
 # Eindeutiges Anzeige-Label fürs Frontend (statt Woche aus Spaltenanzahl zu raten)
 df["DISPLAY_WEEK_LABEL"] = "Vorsaison" if using_previous_season_chart_data else f"Woche {current_week}"
