@@ -179,7 +179,7 @@ const LeagueStats = ({ teams, historyIndex }) => {
                   tickvals: weekNumbers,
                   showgrid: false,
                   fixedrange: true,
-                  tickfont: { family: 'Roboto, sans-serif', size: 12, color: CHART_COLORS.textMuted },
+                  tickfont: { family: 'Roboto, sans-serif', size: 12, color: '#5FD3F3' },
                   linecolor: CHART_COLORS.grid,
                 },
                 yaxis: {
@@ -187,7 +187,7 @@ const LeagueStats = ({ teams, historyIndex }) => {
                   autorange: metric === 'rank' ? 'reversed' : true,
                   gridcolor: CHART_COLORS.grid,
                   fixedrange: true,
-                  tickfont: { family: 'Roboto, sans-serif', size: 12, color: CHART_COLORS.textMuted },
+                  tickfont: { family: 'Roboto, sans-serif', size: 12, color: '#5FD3F3' },
                 },
                 margin: { l: 50, r: 20, t: 10, b: 40 },
                 height: 380,
