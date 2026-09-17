@@ -130,7 +130,7 @@ const LeagueStats = ({ teams, historyIndex }) => {
   const currentMetric = METRICS.find((m) => m.key === metric);
 
   return (
-    <details className="league-stats-section" onToggle={(e) => setOpen(e.target.open)}>
+    <details className="league-stats-section" id="league-stats-anchor" onToggle={(e) => setOpen(e.target.open)}>
       <summary>Liga Statistik anzeigen</summary>
       <div className="league-stats-content">
         <div className="league-stats-metric-buttons">
@@ -175,19 +175,22 @@ const LeagueStats = ({ teams, historyIndex }) => {
                   font: { color: CHART_COLORS.text, family: 'Roboto, sans-serif', size: 12 }
                 },
                 xaxis: {
-                  title: 'Woche',
+                  title: { text: 'Woche', font: { family: 'Roboto, sans-serif', size: 13, color: CHART_COLORS.text } },
                   tickvals: weekNumbers,
                   showgrid: false,
                   fixedrange: true,
-                  tickfont: { family: 'Roboto, sans-serif', size: 12, color: '#5FD3F3' },
+                  tickfont: { family: 'Roboto, sans-serif', size: 12, color: CHART_COLORS.textMuted },
                   linecolor: CHART_COLORS.grid,
                 },
                 yaxis: {
-                  title: currentMetric ? currentMetric.label : '',
+                  title: {
+                    text: currentMetric ? currentMetric.label : '',
+                    font: { family: 'Roboto, sans-serif', size: 13, color: CHART_COLORS.text }
+                  },
                   autorange: metric === 'rank' ? 'reversed' : true,
                   gridcolor: CHART_COLORS.grid,
                   fixedrange: true,
-                  tickfont: { family: 'Roboto, sans-serif', size: 12, color: '#5FD3F3' },
+                  tickfont: { family: 'Roboto, sans-serif', size: 12, color: CHART_COLORS.textMuted },
                 },
                 margin: { l: 50, r: 20, t: 10, b: 40 },
                 height: 380,
