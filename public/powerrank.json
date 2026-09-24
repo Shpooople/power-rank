@@ -21,7 +21,7 @@
     "WR Strength Count":2,
     "TE Strength Count":1,
     "K Strength Count":1,
-    "Bench Strength":70,
+    "Bench Strength":66,
     "Bench Strength Count":3,
     "QB":[
       {
@@ -332,7 +332,7 @@
       "outcome":"Sieg"
     },
     "THIS_WEEK_OPPONENT":"TrevorMutantNinjaTutens",
-    "THIS_WEEK_WIN_PROB":32.3,
+    "THIS_WEEK_WIN_PROB":31.1,
     "POWER RANK":3,
     "Power Rank Score":3.42,
     "LAST_WEEK_POWER_RANK":1,
@@ -378,7 +378,7 @@
         "description":"48.6% der Punkte diese Woche kamen von den WRs - reine Luftshow."
       }
     ],
-    "COMMENTS":null,
+    "COMMENTS":"Dafür, dass ich bislang ohne TE gespielt habe, läuft die Season eigentlich ganz gut. Es sah zwar für 24h so aus, als wäre es wieder eine klassische zweite Woche mit Season Ender eines Starters geworden, aber dann haben mich ausgerechnet Davante Adams und Calebs Drang zur Dramatik gerettet.\nDas ist eben der Nachteil, wenn man so viel Investment in ein Team hat. Ein Regenspiel gegen den besten DC der Liga, und man verliert fast gegen Mo. Das wäre peinlich gewesen.\nJetzt, wo mein All-Time-Scoring-Leader-TE wieder bei mir ist, kann mich nichts mehr aufhalten. Naja, ein QB für die nächsten paar Wochen wäre nicht schlecht, aber abgesehen davon bin ich zufrieden mit meiner Truppe.\nIn Woche drei geht es gegen meinen Mock-Partner Sven, der sich dazu entschieden hat, mir Jared Goff vorzuenthalten. Absoluter Bitch Move, aber das kann ich respektieren. Hätte ich auch gemacht.\nGame recognizes Game.",
     "FAAB_REMAINING":62,
     "LEGACY_STATS":{
       "win_pct":57.6,
@@ -772,7 +772,7 @@
     "Week 2 Against":90.53,
     "Week 1 Waiver":4,
     "Week 2 Waiver":4,
-    "INJURY_COUNT":2,
+    "INJURY_COUNT":4,
     "DISPLAY_WEEK_LABEL":"Woche 2"
   },
   {
@@ -797,7 +797,7 @@
     "WR Strength Count":4,
     "TE Strength Count":1,
     "K Strength Count":1,
-    "Bench Strength":58,
+    "Bench Strength":55,
     "Bench Strength Count":3,
     "QB":[
       {
@@ -1122,12 +1122,12 @@
       "outcome":"Sieg"
     },
     "THIS_WEEK_OPPONENT":"The PUK-A-BOOs",
-    "THIS_WEEK_WIN_PROB":35.4,
+    "THIS_WEEK_WIN_PROB":33.9,
     "POWER RANK":10,
     "Power Rank Score":9.0,
     "LAST_WEEK_POWER_RANK":12,
     "POWER_RANK_DELTA":2,
-    "QB Strength Rank":9,
+    "QB Strength Rank":10,
     "RB Strength Rank":10,
     "WR Strength Rank":3,
     "TE Strength Rank":12,
@@ -1136,11 +1136,6 @@
     "TREND Rank":8,
     "Average Points Rank":12,
     "BADGES":[
-      {
-        "icon":"hospital",
-        "label":"The Hospital",
-        "description":"4 verletzte Spieler im Kader (Out\/IR\/Questionable\/Doubtful) - die größte Krankenstation der Liga."
-      },
       {
         "icon":"homer",
         "label":"LAR-Homer",
@@ -1173,7 +1168,7 @@
         "description":"Durchschnittsalter 28.1 Jahre - der erfahrenste Kader der Liga."
       }
     ],
-    "COMMENTS":null,
+    "COMMENTS":"Zwei Plätze nach oben geht es diese Woche für die Lücke. Ein Trend der sich vermutlich fortsetzen wird, wenn man bedenkt, dass sehr bald Brock Bowers mit frisch frisiertem Miniskus wieder mitmischt.\nGut ausgeschlafen ging es in der zweiten Woche aber auch bei Lückes geliebten Rams planmäßig zur Sache, was sich direkt in Fantasy Points umrechnen lässt. Es gibt wenig zu bemängeln. Guter QB1, Super RB1, Super WR1, Super TE1, Super K, Super D.\nEinziger und entscheidender Schwachpunkt: Lückes Team ist ziemlich Top Heavy. Mit Olave, Bijan und Bowers könnte das Team noch stabiler auf den 1er Positionen sein als die Daddies, ist dafür aber zwei Injuries vom Totalausfall entfernt.\nLückes RB2 ist Blake Corum und seine WR 2+3+4 machen zusammen quasi so viele Punkte wie Olave. Man dieser Olave, den würde ich auf jeden Fall nicht traden.\nWenn sich Scary Terry und Ladd noch zusammenreißen, dann könnte aus dem Team ein Contender werden.\nWobei ich an Lückes Stelle einen der underperforming WR für einen halbwegs brauchbaren RB2\/3 traden würde. Irgendjemand wird ja schon RB im Überschuß haben.",
     "FAAB_REMAINING":100,
     "LEGACY_STATS":{
       "win_pct":47.5,
@@ -1588,7 +1583,7 @@
     "WR Strength Count":2,
     "TE Strength Count":1,
     "K Strength Count":1,
-    "Bench Strength":61,
+    "Bench Strength":57,
     "Bench Strength Count":3,
     "QB":[
       {
@@ -1889,12 +1884,12 @@
       "outcome":"Niederlage"
     },
     "THIS_WEEK_OPPONENT":"BurrowButker and the Boys",
-    "THIS_WEEK_WIN_PROB":51.7,
+    "THIS_WEEK_WIN_PROB":51.3,
     "POWER RANK":2,
     "Power Rank Score":2.88,
     "LAST_WEEK_POWER_RANK":4,
     "POWER_RANK_DELTA":2,
-    "QB Strength Rank":7,
+    "QB Strength Rank":8,
     "RB Strength Rank":2,
     "WR Strength Rank":11,
     "TE Strength Rank":4,
@@ -1919,7 +1914,7 @@
         "description":"Die Defense war mit 16.0 Punkten besser als jeden Wide Receiver (4.8 Pkt.)."
       }
     ],
-    "COMMENTS":null,
+    "COMMENTS":"Die Daddies und ganz besonders auch Till alleine betreten absolutes Neuland in den THF Power Rankings. Rang 2. Ja, richtig. Die beiden Clowns vom letzten Jahr sind jetzt gut.\nGetragen von Elite Performances von JT und ihren Defenses, machen die Daddies bislang wenig Fehler. Das Vertrauen in die Raiders gegen die Lappentruppe der Chargers war ein cleverer Move, den sich nicht jeder getraut hätte.\nNa gut, 40 Buletten von Dak Prescott helfen natürlich auch.\nOhne Median Scoring wäre es eine bittere Woche gewesen, aber zum Glück hat die Demokratie in unserer Liga funktioniert und sich für den richtigen Weg entschieden.\nIch freue mich persönlich sehr auf das Co-Owner-Match in Woche 3. Laut Projections scheint es eine knappe Nummer zu werden.",
     "FAAB_REMAINING":96,
     "LEGACY_STATS":{
       "win_pct":46.5,
@@ -2330,7 +2325,7 @@
     "WR Strength Count":2,
     "TE Strength Count":2,
     "K Strength Count":1,
-    "Bench Strength":75,
+    "Bench Strength":71,
     "Bench Strength Count":3,
     "QB":[
       {
@@ -2655,7 +2650,7 @@
       "outcome":"Sieg"
     },
     "THIS_WEEK_OPPONENT":"Pandan Buns",
-    "THIS_WEEK_WIN_PROB":53.1,
+    "THIS_WEEK_WIN_PROB":54.7,
     "POWER RANK":5,
     "Power Rank Score":5.2,
     "LAST_WEEK_POWER_RANK":8,
@@ -2665,10 +2660,15 @@
     "WR Strength Rank":8,
     "TE Strength Rank":2,
     "K Strength Rank":2,
-    "Bench Strength Rank":5,
+    "Bench Strength Rank":6,
     "TREND Rank":4,
     "Average Points Rank":5,
     "BADGES":[
+      {
+        "icon":"hospital",
+        "label":"The Hospital",
+        "description":"5 verletzte Spieler im Kader (Out\/IR\/Questionable\/Doubtful) - die größte Krankenstation der Liga."
+      },
       {
         "icon":"homer",
         "label":"NO-Homer",
@@ -2692,7 +2692,7 @@
         "description":"Der Kicker war mit 17.6 Punkten besser als jeden Running Back (11.75 Pkt.) und den Quarterback (17.29 Pkt.)."
       }
     ],
-    "COMMENTS":null,
+    "COMMENTS":"Köppis gebete wurden erhört. Die milde Opfergabe eines Ellenbogengelenks hat gereicht um den Sonnengott auf seine Seite zu bringen. Ra lässt ihn nicht mehr im Stich. Jede Woche ein Gelenk und der 140er Schnitt gehört dir.\nVertrauen in das Heiligtum ist bei Kööpi volles Programm. Ob altes Ägypten oder die Jungs in Black and Gold aus Lousiana. 5 Spieler von einem Team, da gibt's doch glatt ein neues Badge.\nIn Vorbereitung auf unseren Tripp nach Paris hat Köppi schonmal sein Team ge-Saints-maxxed (sorry). Und das scheint ein guter Plan zu sein. Das Team aus dem Big Easy macht zwar reichlich Punkte, aber nur in 50% der Viertel. \nWo geht der Trend jetzt hin? Bei mir werden Erinnerungen an die Derrick Carr Saints wach, die in 2024 mit 44 und 47 Punkten gestartet sind und danach fürchterlich eingebrochen sind.\nKöppis Erfolg ist jedenfall direkt an den der Saints gebunden. Da werden wohl einige Gebete oder Ellenbogen Opfer benötigt.",
     "FAAB_REMAINING":80,
     "LEGACY_STATS":{
       "win_pct":48.5,
@@ -3074,7 +3074,7 @@
     "Week 2 Against":100.36,
     "Week 1 Waiver":4,
     "Week 2 Waiver":1,
-    "INJURY_COUNT":3,
+    "INJURY_COUNT":5,
     "DISPLAY_WEEK_LABEL":"Woche 2"
   },
   {
@@ -3099,7 +3099,7 @@
     "WR Strength Count":4,
     "TE Strength Count":1,
     "K Strength Count":1,
-    "Bench Strength":75,
+    "Bench Strength":100,
     "Bench Strength Count":3,
     "QB":[
       {
@@ -3130,19 +3130,6 @@
         "my_guy_seasons":1,
         "in_bank":false,
         "in_strength":true
-      },
-      {
-        "name":"Mike Washington",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/13305.jpg",
-        "total_pts":4.8,
-        "att":10,
-        "yd":48,
-        "ypc":4.8,
-        "td":0,
-        "my_guy":false,
-        "my_guy_seasons":1,
-        "in_bank":true,
-        "in_strength":false
       },
       {
         "name":"Josh Jacobs",
@@ -3223,6 +3210,19 @@
         "my_guy_seasons":1,
         "in_bank":false,
         "in_strength":true
+      },
+      {
+        "name":"Rashod Bateman",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7571.jpg",
+        "total_pts":18.3,
+        "targets":10,
+        "catches":7,
+        "yd":88,
+        "td":1,
+        "my_guy":false,
+        "my_guy_seasons":1,
+        "in_bank":true,
+        "in_strength":false
       },
       {
         "name":"Christian Watson",
@@ -3398,7 +3398,7 @@
       "outcome":"Sieg"
     },
     "THIS_WEEK_OPPONENT":"sandmann1ps",
-    "THIS_WEEK_WIN_PROB":55.6,
+    "THIS_WEEK_WIN_PROB":54.3,
     "POWER RANK":1,
     "Power Rank Score":1.6,
     "LAST_WEEK_POWER_RANK":5,
@@ -3408,7 +3408,7 @@
     "WR Strength Rank":1,
     "TE Strength Rank":7,
     "K Strength Rank":1,
-    "Bench Strength Rank":5,
+    "Bench Strength Rank":1,
     "TREND Rank":1,
     "Average Points Rank":1,
     "BADGES":[
@@ -3448,8 +3448,8 @@
         "description":"Der Kicker war mit 12.8 Punkten besser als jeden Running Back (11.55 Pkt.)."
       }
     ],
-    "COMMENTS":null,
-    "FAAB_REMAINING":84,
+    "COMMENTS":"PK123 hat nach zwei Wochen das beste Team der Liga. Und das mit dem schlechtesten RB-Room. Wenn jetzt noch Josh Jacobs mitspielen darf, dürfte PK123 der klare Favorit auf den Titel sein.\nWird sein Playoff-Fluch endlich gebrochen? Ich hoffe, ich jinxe jetzt hier nichts, aber er ist eigentlich schon sicher in den Playoffs. Aber das war ja für PK123 bislang nie das Problem.\nSollte er sich dieses Jahr vielleicht speziell auf die Postseason vorbereiten und Spieler mit easy Schedules in den letzten Wochen sammeln?\nQuatsch beiseite: Patrick Mahomes in den zweistelligen Runden liegen zu lassen, war vermutlich einer der größeren Fehler der Fantasy-Football-Cognoscenti.\nUnd wenn einer so ein Geschenk annimmt, dann ist das Phillipp.\nDazu noch Watson und später Josh Jacobs. Richtige Value Picks. Ekelhafte Picks, aber mega Value.",
+    "FAAB_REMAINING":78,
     "LEGACY_STATS":{
       "win_pct":62.6,
       "wins":62,
@@ -3717,11 +3717,11 @@
           }
         ]
       },
-      "waiver_moves":145,
+      "waiver_moves":146,
       "waiver_moves_by_season":[
         {
           "season":"2026",
-          "count":1
+          "count":2
         },
         {
           "season":"2025",
@@ -3855,7 +3855,7 @@
     "WR Strength Count":4,
     "TE Strength Count":1,
     "K Strength Count":0,
-    "Bench Strength":78,
+    "Bench Strength":74,
     "Bench Strength Count":3,
     "QB":[
       {
@@ -3874,6 +3874,19 @@
       }
     ],
     "RB":[
+      {
+        "name":"Emanuel Wilson",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11435.jpg",
+        "total_pts":9.5,
+        "att":23,
+        "yd":95,
+        "ypc":4.1,
+        "td":0,
+        "my_guy":false,
+        "my_guy_seasons":1,
+        "in_bank":false,
+        "in_strength":false
+      },
       {
         "name":"Jadarian Price",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/13286.jpg",
@@ -4053,19 +4066,6 @@
     ],
     "DEF":[
       {
-        "name":"Baltimore Ravens",
-        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/bal.png",
-        "total_pts":10.0,
-        "sack":5,
-        "int":1,
-        "fum_rec":1,
-        "td":0,
-        "my_guy":false,
-        "my_guy_seasons":2,
-        "in_bank":false,
-        "in_strength":false
-      },
-      {
         "name":"Cincinnati Bengals",
         "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/cin.png",
         "total_pts":33.0,
@@ -4168,7 +4168,7 @@
       "outcome":"Sieg"
     },
     "THIS_WEEK_OPPONENT":"Luther is my Burden",
-    "THIS_WEEK_WIN_PROB":49.9,
+    "THIS_WEEK_WIN_PROB":49.3,
     "POWER RANK":6,
     "Power Rank Score":5.35,
     "LAST_WEEK_POWER_RANK":10,
@@ -4178,7 +4178,7 @@
     "WR Strength Rank":7,
     "TE Strength Rank":9,
     "K Strength Rank":12,
-    "Bench Strength Rank":4,
+    "Bench Strength Rank":5,
     "TREND Rank":5,
     "Average Points Rank":6,
     "BADGES":[
@@ -4193,8 +4193,8 @@
         "description":"3 Rookies im Kader - die Zukunft der Liga (hoffentlich)."
       }
     ],
-    "COMMENTS":null,
-    "FAAB_REMAINING":87,
+    "COMMENTS":"We're goin' up, up, up, it's our moment.\nYou know together we're glowin'.\nGonna be, gonna be golden.\n\nAufwärts geht's allemal für das K-Pop-Demonhunter-Tribute-Team. Es sieht so aus, als hätte es bei Tine keinen Griff ins Klo gegeben bei diesem Draft. Fast alle Early Picks haben nach zwei Wochen mindestens einmal abgeliefert.\nJamar Chase hat wieder zu alter Form gefunden, und das direkt mit dem Catch des Jahres. Jaylen Waddle wurde endlich dem Off-Season-Hype gerecht. Aber das ist Tine alles egal, denn die wichtigste Position auf dem Platz ist die, die dem Sport den Namen gibt.\nAn dieser Position ist Tine noch auf der Suche. Der Thicker Kicker ist es einfach nicht. Scheiß auf die 48 Punkte von Josh Allen. Nie werden sie die Leere in Tines Herzen füllen können.\nGuckt euch einfach die scheiß Falcons an. Seitdem sie unseren goldenen Jungen entlassen haben: nur Müll. Bring back the Koo.\nAber im Ernst, Tines Team ist mega gefährlich und wird uns allen noch Probleme bereiten.",
+    "FAAB_REMAINING":84,
     "LEGACY_STATS":{
       "win_pct":45.5,
       "wins":45,
@@ -4260,9 +4260,9 @@
           "is_champion":false
         },
         {
-          "name":"Baltimore Ravens",
+          "name":"Breece Hall",
           "weeks":34,
-          "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/bal.png",
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8155.jpg",
           "is_champion":false
         }
       ],
@@ -4462,11 +4462,11 @@
           }
         ]
       },
-      "waiver_moves":192,
+      "waiver_moves":193,
       "waiver_moves_by_season":[
         {
           "season":"2026",
-          "count":2
+          "count":3
         },
         {
           "season":"2025",
@@ -4574,7 +4574,7 @@
     "QUIZ_SCORES":[
       {
         "name":"Tine",
-        "score":1
+        "score":2
       }
     ],
     "Week 1":107.16,
@@ -4608,7 +4608,7 @@
     "WR Strength Count":4,
     "TE Strength Count":1,
     "K Strength Count":1,
-    "Bench Strength":51,
+    "Bench Strength":48,
     "Bench Strength Count":3,
     "QB":[
       {
@@ -4906,7 +4906,7 @@
       "outcome":"Sieg"
     },
     "THIS_WEEK_OPPONENT":"𓇳𓋹𓎡𓅓𓂋",
-    "THIS_WEEK_WIN_PROB":46.9,
+    "THIS_WEEK_WIN_PROB":45.3,
     "POWER RANK":11,
     "Power Rank Score":9.82,
     "LAST_WEEK_POWER_RANK":11,
@@ -4936,7 +4936,7 @@
         "description":"Die Defense war mit 24.5 Punkten besser als jeden Running Back (18.0 Pkt.) und den Quarterback (9.87 Pkt.)."
       }
     ],
-    "COMMENTS":"Leos Team besteht aktuell mehr oder weniger aus einem Spieler: JSN. Der dynamischte WR der Liga macht da weiter, wo er letztes Jahr aufgehört hat. Unguardable und shifty, selbst mit Drew fucking Lock ist JSN ein Superstar.\nDas ist Leos Rettung, denn sein Investment in zwei Chargers, das Texans Run Game (Monty mit 6 Carries für ZEHN yards), Drake \"The Schedule\" Maye und Kyle \"Minus 5 FAAB\" Pitts trägt aktuell noch nicht so richtig Früchte.\nSo spiegelt es sich auch in der aktuellen Positionsstärke wieder. Leos Bank hat in Woche 2 ganze 8,75 Punkte gemacht. Das klingt fast danach als müsste da jemand mal in der Grabbelkiste der Waiver Wire nach Schmuckstücken suchen.\nFür Leo absolut kein Neuland. Ich kann mich noch gut erinnern, wie er mit einen Rookie Waiver Wire Fund namens George Kittle und Fantasy Monster Todd Gurley zum Titel gestürmt ist.\nDas waren aber noch ganz andere Zeiten.\n",
+    "COMMENTS":"Leos Team besteht aktuell mehr oder weniger aus einem Spieler: JSN. Der dynamischste WR der Liga macht da weiter, wo er letztes Jahr aufgehört hat. Unguardable und shifty, selbst mit Drew fucking Lock ist JSN ein Superstar.\nDas ist Leos Rettung, denn sein Investment in zwei Chargers, das Texans-Run-Game (Monty mit 6 Carries für ZEHN Yards), Drake „The Schedule\" Maye und Kyle „Minus 5 FAAB\" Pitts trägt aktuell noch nicht so richtig Früchte.\nSo spiegelt es sich auch in der aktuellen Positionsstärke wider. Leos Bank hat in Woche 2 ganze 8,75 Punkte gemacht. Das klingt fast danach, als müsste da jemand mal in der Grabbelkiste der Waiver Wire nach Schmuckstücken suchen.\nFür Leo absolut kein Neuland. Ich kann mich noch gut erinnern, wie er mit einem Rookie-Waiver-Wire-Fund namens George Kittle und Fantasy-Monster Todd Gurley zum Titel gestürmt ist.\nDas waren aber noch ganz andere, more casual, Zeiten.",
     "FAAB_REMAINING":100,
     "LEGACY_STATS":{
       "win_pct":50.5,
@@ -5335,7 +5335,7 @@
     "WR Strength Count":4,
     "TE Strength Count":1,
     "K Strength Count":1,
-    "Bench Strength":100,
+    "Bench Strength":94,
     "Bench Strength Count":3,
     "QB":[
       {
@@ -5634,7 +5634,7 @@
       "outcome":"Niederlage"
     },
     "THIS_WEEK_OPPONENT":"Two Daddies One Bride ",
-    "THIS_WEEK_WIN_PROB":48.3,
+    "THIS_WEEK_WIN_PROB":48.7,
     "POWER RANK":7,
     "Power Rank Score":6.98,
     "LAST_WEEK_POWER_RANK":7,
@@ -5644,7 +5644,7 @@
     "WR Strength Rank":4,
     "TE Strength Rank":10,
     "K Strength Rank":3,
-    "Bench Strength Rank":1,
+    "Bench Strength Rank":2,
     "TREND Rank":6,
     "Average Points Rank":8,
     "BADGES":[
@@ -5659,7 +5659,7 @@
         "description":"Der Kicker war mit 16.7 Punkten besser als jeden Wide Receiver (8.8 Pkt.)."
       }
     ],
-    "COMMENTS":null,
+    "COMMENTS":"Konstant mittelmäßig läuft es für das neueste Duo der Liga. 120er-Schnitt mit wenig Abweichungen. Auf dem Median balancieren sozusagen. Auffällig ist dabei, wie viele gute Spieler auf der Bank sitzen.\nWas zunächst als „Gibbs und der Rest\" galt, ist vielleicht das deepeste Team der Liga. Quasi das Gegenteil von Lückes Team. Denzel Boston könnte tatsächlich der beste Sleeper Pick der Liga sein, und das ausgerechnet bei den Brownies.\nDie Frage ist, ob die beiden wirklich 8 WR brauchen. Das habe ich vor unserem Trade gar nicht gesehen. Sell high on Denzel? Wie hoch ist eigentlich die Chance, dass der nach Denzel Washington benannt ist?\nIch schweife ab. Jedenfalls ist Joe Burrow wieder mal eine Enttäuschung angesichts der Draftposition, aber keine Liability wie Drake Maye oder Justin Herbert für das Fantasyteam.\nZugegebenermaßen könnten meine Brudis auch 4-0 stehen mit etwas leichteren Matchups, aber der Football-Gott zielt zielgerichtet auf die Leisten der beiden Halbbrüder. 100 Punkte nur von QBs in ZWEI Wochen kassiert.\nGelegenheit für noch mehr Leistenbälle gibt es beim TAG TEAM SHOWDOWN in Woche 4 gegen die Boys. Doppelte Möglichkeiten für Trashtalk, wenn Peter und Ben irgendwas in irgendeinen Chat schreiben würden.",
     "FAAB_REMAINING":100,
     "LEGACY_STATS":{
       "win_pct":60.0,
@@ -6001,7 +6001,7 @@
     "Week 2 Against":140.67,
     "Week 1 Waiver":0,
     "Week 2 Waiver":0,
-    "INJURY_COUNT":2,
+    "INJURY_COUNT":3,
     "DISPLAY_WEEK_LABEL":"Woche 2"
   },
   {
@@ -6026,7 +6026,7 @@
     "WR Strength Count":3,
     "TE Strength Count":1,
     "K Strength Count":1,
-    "Bench Strength":75,
+    "Bench Strength":71,
     "Bench Strength Count":3,
     "QB":[
       {
@@ -6324,7 +6324,7 @@
       "outcome":"Niederlage"
     },
     "THIS_WEEK_OPPONENT":"Gonna be golden",
-    "THIS_WEEK_WIN_PROB":50.1,
+    "THIS_WEEK_WIN_PROB":50.7,
     "POWER RANK":9,
     "Power Rank Score":8.98,
     "LAST_WEEK_POWER_RANK":3,
@@ -6334,7 +6334,7 @@
     "WR Strength Rank":5,
     "TE Strength Rank":4,
     "K Strength Rank":4,
-    "Bench Strength Rank":5,
+    "Bench Strength Rank":6,
     "TREND Rank":12,
     "Average Points Rank":7,
     "BADGES":[
@@ -6359,7 +6359,7 @@
         "description":"Nur noch 2 FAAB übrig - Waiver-Wire-Bettler."
       }
     ],
-    "COMMENTS":null,
+    "COMMENTS":"Wenn ihr ganz still seid und ganz genau hinhört, dann könnt ihr vielleicht das Rauschen von Mo's meteoritenhaftem freiem Fall hören. Sechs Ränge bergab ging es für den Two-FAAB-Man.\nDas passiert, wenn man als einziges Team die 100er-Marke nicht knackt. „Aber woran hat's gelegen?\", fragt man sich. Falsch aufgestellt? Ne, die gesamte Bank hat 7,55 Punkte erzielt. Auch bitter, aber anderes Thema.\nEs lag vermutlich an Nabers' 0,6 Punkten, Flowers' bestehender Verletzung und Justin Herbert. Und dem Fakt, dass Mo risky, flashy Draft Picks liebt: Carnell Tate, Jonathan Brooks, Luther Burden, KC Concepcion und dann noch für Nabers traden.\nAlles unproven, high upside & super risky Picks. Auf der positiven Seite: Dalton Kincaid, Flowers und CMC werden vermutlich abliefern.\nMit besserem QB und Injury Luck schwingt das Pendel wieder in die andere Richtung, da bin ich mir sicher.",
     "FAAB_REMAINING":2,
     "LEGACY_STATS":{
       "win_pct":44.4,
@@ -6740,7 +6740,7 @@
     "QUIZ_SCORES":[
       {
         "name":"Mo",
-        "score":3
+        "score":4
       }
     ],
     "Week 1":154.36,
@@ -6749,7 +6749,7 @@
     "Week 2 Against":113.37,
     "Week 1 Waiver":0,
     "Week 2 Waiver":4,
-    "INJURY_COUNT":2,
+    "INJURY_COUNT":3,
     "DISPLAY_WEEK_LABEL":"Woche 2"
   },
   {
@@ -6774,7 +6774,7 @@
     "WR Strength Count":3,
     "TE Strength Count":2,
     "K Strength Count":1,
-    "Bench Strength":81,
+    "Bench Strength":76,
     "Bench Strength Count":3,
     "QB":[
       {
@@ -6891,7 +6891,7 @@
         "name":"Brian Thomas",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11631.jpg",
         "total_pts":11.0,
-        "targets":11,
+        "targets":12,
         "catches":6,
         "yd":80,
         "td":0,
@@ -7076,7 +7076,7 @@
         "points":6.2,
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11631.jpg",
         "total_pts":11.0,
-        "targets":8,
+        "targets":9,
         "catches":3,
         "yd":40,
         "td":0
@@ -7100,23 +7100,23 @@
       "outcome":"Niederlage"
     },
     "THIS_WEEK_OPPONENT":"Robinson Corum Adventures",
-    "THIS_WEEK_WIN_PROB":64.6,
+    "THIS_WEEK_WIN_PROB":66.1,
     "POWER RANK":8,
     "Power Rank Score":8.8,
     "LAST_WEEK_POWER_RANK":6,
     "POWER_RANK_DELTA":-2,
-    "QB Strength Rank":8,
+    "QB Strength Rank":9,
     "RB Strength Rank":11,
     "WR Strength Rank":5,
     "TE Strength Rank":3,
     "K Strength Rank":10,
-    "Bench Strength Rank":3,
+    "Bench Strength Rank":4,
     "TREND Rank":10,
     "Average Points Rank":9,
     "BADGES":[
 
     ],
-    "COMMENTS":null,
+    "COMMENTS":"Die Chance, dass Jay mal das „Ground & Pound\"-Badge bekommt, geht gegen null. Abgesehen von Bye Weeks und Verletzungen werden vermutlich weniger RBs ihren Weg in Jays Flex-Spot finden. Devin Singletary, holy shit.\nDafür ist sein WR-Room einfach zu gut und seine RBs viiiiieeeeeeelll zu schlecht. Auf den Onesie-Positionen (QB & TE) hat Jay aber vielleicht ein Luxusproblem. Na ja, bei QB jetzt nicht mehr. Jaxon Dart kann sich wieder mehr seiner Liebe zu Donald Trump widmen. Aber hey, zwei startbare TEs zu haben, muss ein gutes Gefühl sein.\nI would never know. In Woche 3 gibt es hoffentlich das Comeback-Duell zwischen Puka und Bowers mit der Lücke.",
     "FAAB_REMAINING":93,
     "LEGACY_STATS":{
       "win_pct":50.5,
@@ -7494,7 +7494,7 @@
     "Week 2 Against":119.47,
     "Week 1 Waiver":2,
     "Week 2 Waiver":1,
-    "INJURY_COUNT":4,
+    "INJURY_COUNT":5,
     "DISPLAY_WEEK_LABEL":"Woche 2"
   },
   {
@@ -7509,7 +7509,7 @@
     "Average Points":130.0,
     "TREND":"NO TREND",
     "Trend Percentage":120.1,
-    "QB Strength":43,
+    "QB Strength":60,
     "RB Strength":66,
     "WR Strength":33,
     "TE Strength":100,
@@ -7519,9 +7519,23 @@
     "WR Strength Count":2,
     "TE Strength Count":2,
     "K Strength Count":1,
-    "Bench Strength":73,
+    "Bench Strength":69,
     "Bench Strength Count":3,
     "QB":[
+      {
+        "name":"Jared Goff",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/3163.jpg",
+        "total_pts":46.2,
+        "comp":52,
+        "att":77,
+        "pass_yd":533,
+        "rush_yd":9,
+        "td":6,
+        "my_guy":false,
+        "my_guy_seasons":2,
+        "in_bank":false,
+        "in_strength":true
+      },
       {
         "name":"Trevor Lawrence",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7523.jpg",
@@ -7534,7 +7548,7 @@
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
-        "in_strength":true
+        "in_strength":false
       }
     ],
     "RB":[
@@ -7663,7 +7677,7 @@
         "name":"Dallas Goedert",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5022.jpg",
         "total_pts":22.6,
-        "targets":7,
+        "targets":8,
         "catches":5,
         "yd":81,
         "td":2,
@@ -7771,7 +7785,7 @@
         "points":0.9,
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5022.jpg",
         "total_pts":22.6,
-        "targets":2,
+        "targets":3,
         "catches":1,
         "yd":4,
         "td":0
@@ -7818,12 +7832,12 @@
       "outcome":"Niederlage"
     },
     "THIS_WEEK_OPPONENT":"Schlemmerfilet Bortleaise",
-    "THIS_WEEK_WIN_PROB":67.7,
+    "THIS_WEEK_WIN_PROB":68.9,
     "POWER RANK":4,
     "Power Rank Score":5.15,
     "LAST_WEEK_POWER_RANK":2,
     "POWER_RANK_DELTA":-2,
-    "QB Strength Rank":9,
+    "QB Strength Rank":6,
     "RB Strength Rank":2,
     "WR Strength Rank":12,
     "TE Strength Rank":1,
@@ -7843,7 +7857,7 @@
         "description":"Die Defense war mit 10.75 Punkten besser als den Quarterback (8.21 Pkt.)."
       }
     ],
-    "COMMENTS":null,
+    "COMMENTS":"Ich weiß nicht, wie nah Sven am Umspannwerk in Malchow wohnt, aber vielleicht sollte mal ein Experte da vorbeischauen und kontrollieren, ob die Strahlung nicht negative Auswirkungen auf seine Spieler hat.\nGleich drei Verletzungen für ziemlich wichtige Spieler in einer Woche. Das sind ja schon Mo Numbers.\nIn Woche zwei hat es dadurch gerade so für die 100er-Marke gereicht. Aber nicht nur die eigenen Verletzungen können das Team schwächen. Wenn der QB für die Season raus ist, leiden die Pass-Catcher.\nWas zunächst nach TE1 und TE2 Overall aussah, könnte jetzt zur Schwachstelle von Sven werden. Goedert raus, und Likely mit Jameis Winston.\nWenn Sven nicht gerade Jared Goff von der Waiver Wire geholt hätte, würde ich jetzt noch was Positives schreiben. Den wollte ich eigentlich am Sonntag aufnehmen, wenn Caleb auf OUT gesetzt wird.\nDann muss wohl der halslose Case Keenum dir am Wochenende 4 Dinger einschenken.",
     "FAAB_REMAINING":89,
     "LEGACY_STATS":{
       "win_pct":44.6,
@@ -8104,11 +8118,11 @@
           }
         ]
       },
-      "waiver_moves":105,
+      "waiver_moves":106,
       "waiver_moves_by_season":[
         {
           "season":"2026",
-          "count":2
+          "count":3
         },
         {
           "season":"2025",
@@ -8192,7 +8206,7 @@
     "QUIZ_SCORES":[
       {
         "name":"Sven",
-        "score":1
+        "score":2
       }
     ],
     "Week 1":159.6,
@@ -8226,7 +8240,7 @@
     "WR Strength Count":3,
     "TE Strength Count":1,
     "K Strength Count":1,
-    "Bench Strength":82,
+    "Bench Strength":78,
     "Bench Strength Count":3,
     "QB":[
       {
@@ -8527,7 +8541,7 @@
       "outcome":"Niederlage"
     },
     "THIS_WEEK_OPPONENT":"pk123",
-    "THIS_WEEK_WIN_PROB":44.4,
+    "THIS_WEEK_WIN_PROB":45.7,
     "POWER RANK":12,
     "Power Rank Score":10.82,
     "LAST_WEEK_POWER_RANK":9,
@@ -8537,7 +8551,7 @@
     "WR Strength Rank":8,
     "TE Strength Rank":8,
     "K Strength Rank":8,
-    "Bench Strength Rank":2,
+    "Bench Strength Rank":3,
     "TREND Rank":11,
     "Average Points Rank":11,
     "BADGES":[
@@ -8557,7 +8571,7 @@
         "description":"41.9% der Punkte diese Woche kamen von den RBs - volle Kontrolle am Boden."
       }
     ],
-    "COMMENTS":"Wenn man auf die Aktuelle Teamstärke schaut, dann würde man denken Peters Team müsste im Mittelfeld liegen, vielleicht sogar vorderes Mittelfeld. Macht man die Rosterübersicht auf, zeichnet sich eigentlich das gleiche Bild ab.\nKeine Schwäche im Roster zu erkennen, ein grundsolides Team. Wie kann das sein? \"Michi deine scheiß bekackten Powerrankings sind kaputt\". \nNe, sind sie nicht. Peter ist einfach der Meister des schlechten Aufstellens. Back-to-back \"Worst Manager\". Klingt erstmal schlecht, ist es auch, ist aber gleichzeitig ein Zeichen für ein breit aufgestelltes Team, und die Zahlen bestätigen das bei Peter.\nMit der Verletzung von DJ Moore fällt jetzt zwar ein Starter aus, aber dafür fällt die Entscheidung, wen man aufstellen sollte durchaus leichter.\n\nSchafft der Sandmann das Triple und holt nochmal den Titel des schlechtesten Managers? Lieber nicht, denn diese Woche geht es gegen den Spitzenreiter der Powerrankings.\nIch drück die Daumen und bin offen für einen Drake London Trade. Call me, xoxo.",
+    "COMMENTS":"Wenn man auf die aktuelle Teamstärke schaut, dann würde man denken, Peters Team müsste im Mittelfeld liegen, vielleicht sogar vorderes Mittelfeld. Macht man die Rosterübersicht auf, zeichnet sich eigentlich das gleiche Bild ab. Keine Schwäche im Roster zu erkennen, ein grundsolides Team. Wie kann das sein? „Michi, deine scheiß bekackten Powerrankings sind kaputt.\" Ne, sind sie nicht. Peter ist einfach der Meister des schlechten Aufstellens. Back-to-Back „Worst Manager\". Klingt erstmal schlecht, ist es auch, ist aber gleichzeitig ein Zeichen für ein breit aufgestelltes Team, und die Zahlen bestätigen das bei Peter. Mit der Verletzung von DJ Moore fällt jetzt zwar ein Starter aus, aber dafür fällt die Entscheidung, wen man aufstellen sollte, durchaus leichter. Schafft der Sandmann das Triple und holt nochmal den Titel des schlechtesten Managers? Lieber nicht, denn diese Woche geht es gegen den Spitzenreiter der Powerrankings. Ich drück die Daumen und bin offen für einen Drake-London-Trade. Call me, xoxo.",
     "FAAB_REMAINING":95,
     "LEGACY_STATS":{
       "win_pct":41.7,
@@ -8892,7 +8906,7 @@
     "Week 2 Against":126.68,
     "Week 1 Waiver":0,
     "Week 2 Waiver":1,
-    "INJURY_COUNT":2,
+    "INJURY_COUNT":4,
     "DISPLAY_WEEK_LABEL":"Woche 2"
   }
 ]
