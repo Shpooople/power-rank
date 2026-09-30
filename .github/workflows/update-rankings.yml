@@ -1,12 +1,12 @@
 name: Update Power Rankings
 
-# Manuell per Klick auf "Run workflow" auslösbar, zusätzlich jeden Mittwoch
-# um 08:00 UTC automatisch (~10:00 Uhr deutscher Zeit, im Winter ~9:00 Uhr,
-# da GitHub Actions nicht automatisch auf Winterzeit umstellt).
+# Manuell per Klick auf "Run workflow" auslösbar, zusätzlich jeden Montag
+# um 06:00 UTC automatisch (~08:00 Uhr deutscher Zeit im Sommer, ~07:00 Uhr
+# im Winter, da GitHub Actions nicht automatisch auf Winterzeit umstellt).
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 8 * * 3"
+    - cron: "0 6 * * 1"
 
 permissions:
   contents: write
