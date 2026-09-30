@@ -10,5 +10,11 @@
     "week": 2,
     "file": "2026-week-2.json",
     "label": "2026 - Woche 2"
+  },
+  {
+    "season": "2026",
+    "week": 3,
+    "file": "2026-week-3.json",
+    "label": "2026 - Woche 3"
   }
 ]
