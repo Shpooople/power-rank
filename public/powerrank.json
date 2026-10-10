@@ -347,7 +347,7 @@
       "outcome":"Niederlage"
     },
     "THIS_WEEK_OPPONENT":"Two Daddies One Bride ",
-    "THIS_WEEK_WIN_PROB":41.4,
+    "THIS_WEEK_WIN_PROB":52.7,
     "POWER RANK":7,
     "Power Rank Score":6.32,
     "LAST_WEEK_POWER_RANK":1,
@@ -361,11 +361,6 @@
     "TREND Rank":9,
     "Average Points Rank":4,
     "BADGES":[
-      {
-        "icon":"hospital",
-        "label":"The Hospital",
-        "description":"5 verletzte Spieler im Kader (Out\/IR\/Questionable\/Doubtful) - die größte Krankenstation der Liga."
-      },
       {
         "icon":"homer",
         "label":"CHI-Homer",
@@ -394,7 +389,7 @@
         "description":"14 Waiver-Adds diese Saison - der fleißigste Kader-Bastler der Liga."
       }
     ],
-    "COMMENTS":null,
+    "COMMENTS":"Die Achterbahn fährt hoch und runter. Eine Woche heiß, die nächste wird abgestunken. Rinse and repeat. Bei mir gabs einige Ausfälle und dafür dann Ausrastung auf der Bank. Jetzt bin ich wiedermal letzter in der Start Sit Accuracy. Quasi der schlechteste Manager. \nAber ich sehe das, wie immer, als Zeichen für eine stabile Bank. Wenn Caleb wieder kommt, dann beginnt meine Season erst so richtig. Vielleicht führt mich der vierte starting TE endlich ins gelobte (Love)Land. Also Mike Gesicke, gib dir Mühe. Ach und ein Kicker der mehr als 6 Punkte macht, das wäre doch mal was.",
     "FAAB_REMAINING":57,
     "LEGACY_STATS":{
       "win_pct":57.3,
@@ -762,9 +757,9 @@
         "ties":0
       },
       "opfer":{
-        "name":"Schleckeracci",
+        "name":"TinyDancerTiez",
         "wins":5,
-        "losses":1,
+        "losses":2,
         "ties":0
       },
       "win_pct_rank":3,
@@ -773,7 +768,7 @@
       "all_time_points_rank":2,
       "avg_placement_rank":1,
       "high_week_rank":8,
-      "low_week_rank":7,
+      "low_week_rank":12,
       "high_player_week_rank":8
     },
     "QUIZ_SCORES":[
@@ -794,7 +789,7 @@
     "Week 2 Waiver":4,
     "Week 3 Waiver":3,
     "Week 4 Waiver":3,
-    "INJURY_COUNT":5,
+    "INJURY_COUNT":3,
     "DISPLAY_WEEK_LABEL":"Woche 4"
   },
   {
@@ -1130,7 +1125,7 @@
       "outcome":"Sieg"
     },
     "THIS_WEEK_OPPONENT":"Pandan Buns",
-    "THIS_WEEK_WIN_PROB":57.1,
+    "THIS_WEEK_WIN_PROB":59.0,
     "POWER RANK":9,
     "Power Rank Score":7.82,
     "LAST_WEEK_POWER_RANK":5,
@@ -1171,7 +1166,7 @@
         "description":"Durchschnittsalter 27.9 Jahre - der erfahrenste Kader der Liga."
       }
     ],
-    "COMMENTS":null,
+    "COMMENTS":"Ich hab garnicht auf unsere Fantasy Scores geguckt und hab nur die B.Robinson Party gesehen und dachte: \"WOW, Lücke hatte ja mal ne Woche\" Aber ähnlich wie mein Monangai, hat hier auch einer richtig ordentlich die Bank gewärmt. Passiert den Besten.\nEs scheint so als hätte Lücke dieses Jahr seine Trades deutlich gewonnen. Bowers und Olave sind DIE DUDES. Dazu noch Bijan. *Chefs Kiss*. Leider wars das dann aber auch schon. Danach kommt NÜSCHT. Deswegen ist Lückes Truppe auch auf Platz 9. Ob Brain Robinson nochmal so abliefert, will ich erstmal sehen, aber vielleicht wird es ja eine Sonic & Knuckles Combo a la Detroit Lions der letzten Jahre.\n",
     "FAAB_REMAINING":55,
     "LEGACY_STATS":{
       "win_pct":48.5,
@@ -1306,7 +1301,7 @@
         "K":[
           {
             "name":"Brandon Aubrey",
-            "points":331.2,
+            "points":336.3,
             "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11533.jpg",
             "is_champion":true
           },
@@ -1518,9 +1513,9 @@
         "week":15
       },
       "low_week":{
-        "points":57.36,
-        "season":"2024",
-        "week":7
+        "points":5.1,
+        "season":"2026",
+        "week":5
       },
       "high_player_week":{
         "points":47.95,
@@ -1546,7 +1541,7 @@
       "all_time_points_rank":9,
       "avg_placement_rank":5,
       "high_week_rank":3,
-      "low_week_rank":3,
+      "low_week_rank":1,
       "high_player_week_rank":9
     },
     "QUIZ_SCORES":[
@@ -1567,7 +1562,7 @@
     "Week 2 Waiver":3,
     "Week 3 Waiver":1,
     "Week 4 Waiver":5,
-    "INJURY_COUNT":4,
+    "INJURY_COUNT":3,
     "DISPLAY_WEEK_LABEL":"Woche 4"
   },
   {
@@ -1885,14 +1880,14 @@
       "ypc":3.1,
       "td":1
     },
-    "LAST_WEEK_OPPONENT":"Luther is my Burden",
+    "LAST_WEEK_OPPONENT":"Bryce Girls",
     "LAST_WEEK_RESULT":{
       "own_points":150.2,
       "opponent_points":161.0,
       "outcome":"Niederlage"
     },
     "THIS_WEEK_OPPONENT":"Schlemmerfilet Bortleaise",
-    "THIS_WEEK_WIN_PROB":58.6,
+    "THIS_WEEK_WIN_PROB":47.3,
     "POWER RANK":6,
     "Power Rank Score":5.35,
     "LAST_WEEK_POWER_RANK":9,
@@ -1917,7 +1912,7 @@
         "description":"3 Niederlagen in Folge - der Ofen ist aus."
       }
     ],
-    "COMMENTS":"Running Backs von schlechten Teams",
+    "COMMENTS":"Eigentlich wollte ich darüber schreiben wie die Daddies nur RBs von schlechten Teams haben. Aber bei näherer Betrachtung ist mir dann aufgefallen, dass sie Quinshon Judkins haben. Schon komisch, die Browns vorne mit dabei.\nDas muss man erstmal richtig verarbeiten. Nen bisschen so wie die Daddies in dieser Saison. Natürlich ohne die problematischen Signal Caller, das ist ja klar. Können die Daddies, ähnlich wie ihr Spirit Team Browns weiterhin diese stabile Form halten oder rutschen sie wieder unter 90 Punkte ab?\nDak Prescott hat bereits mittelmäßig vorgelegt. Sehr zu meiner Freude. Bitte so weitermachen.",
     "FAAB_REMAINING":94,
     "LEGACY_STATS":{
       "win_pct":45.6,
@@ -2256,9 +2251,9 @@
         "week":15
       },
       "low_week":{
-        "points":69.2,
-        "season":"2021",
-        "week":17
+        "points":17.74,
+        "season":"2026",
+        "week":5
       },
       "high_player_week":{
         "points":53.73,
@@ -2267,9 +2262,9 @@
         "week":14
       },
       "angstgegner":{
-        "name":"Shpooople",
-        "wins":5,
-        "losses":1,
+        "name":"pk123",
+        "wins":7,
+        "losses":2,
         "ties":0
       },
       "opfer":{
@@ -2284,7 +2279,7 @@
       "all_time_points_rank":8,
       "avg_placement_rank":9,
       "high_week_rank":6,
-      "low_week_rank":9,
+      "low_week_rank":4,
       "high_player_week_rank":3
     },
     "QUIZ_SCORES":[
@@ -2309,7 +2304,7 @@
     "Week 2 Waiver":3,
     "Week 3 Waiver":2,
     "Week 4 Waiver":1,
-    "INJURY_COUNT":2,
+    "INJURY_COUNT":1,
     "DISPLAY_WEEK_LABEL":"Woche 4"
   },
   {
@@ -2558,15 +2553,15 @@
     ],
     "DEF":[
       {
-        "name":"Baltimore Ravens",
-        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/bal.png",
-        "total_pts":23.0,
-        "sack":7,
-        "int":2,
-        "fum_rec":3,
+        "name":"Dallas Cowboys",
+        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/dal.png",
+        "total_pts":12.0,
+        "sack":4,
+        "int":0,
+        "fum_rec":2,
         "td":0,
         "my_guy":false,
-        "my_guy_seasons":2,
+        "my_guy_seasons":1,
         "in_bank":false,
         "in_strength":true
       }
@@ -2660,7 +2655,7 @@
       "outcome":"Niederlage"
     },
     "THIS_WEEK_OPPONENT":"pk123",
-    "THIS_WEEK_WIN_PROB":44.6,
+    "THIS_WEEK_WIN_PROB":46.9,
     "POWER RANK":11,
     "Power Rank Score":10.4,
     "LAST_WEEK_POWER_RANK":8,
@@ -2687,7 +2682,7 @@
         "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/no.png"
       }
     ],
-    "COMMENTS":null,
+    "COMMENTS":"Köppi hat's mir in einer PM schon selber perfekt zusammengefasst: \"boah wenn man 18 faab für allgeier ausgibt weiß man dass es schlecht aussieht… mein team ey…\" \nSoooo schlimm ist es doch garnicht. Naja, vielleicht sinds dann doch zu viele Spieler aus dem Paris Game geworden. Wobei die Steelers Offense langsam Punkte macht. Auch scheint Köppi bei der Wahl des Steelers RBs die bessere Wahl getroffen zu haben.\nEin kleines Luxusproblem und eine Chance zur Verbesserung: Beide TEs in Köppis Truppe sind besser als sein RB2 oder WR2. Vielleicht mal einen Trade probieren und Juwan nach Kelces BYE traden? Es gibt ja bekanntlich TE needy teams.\n",
     "FAAB_REMAINING":57,
     "LEGACY_STATS":{
       "win_pct":47.6,
@@ -2956,11 +2951,11 @@
           }
         ]
       },
-      "waiver_moves":193,
+      "waiver_moves":194,
       "waiver_moves_by_season":[
         {
           "season":"2026",
-          "count":8
+          "count":9
         },
         {
           "season":"2025",
@@ -3026,9 +3021,9 @@
         "week":9
       },
       "low_week":{
-        "points":79.29,
-        "season":"2023",
-        "week":6
+        "points":39.85,
+        "season":"2026",
+        "week":5
       },
       "high_player_week":{
         "points":55.6,
@@ -3054,7 +3049,7 @@
       "all_time_points_rank":4,
       "avg_placement_rank":4,
       "high_week_rank":5,
-      "low_week_rank":11,
+      "low_week_rank":6,
       "high_player_week_rank":2
     },
     "QUIZ_SCORES":[
@@ -3075,7 +3070,7 @@
     "Week 2 Waiver":1,
     "Week 3 Waiver":2,
     "Week 4 Waiver":1,
-    "INJURY_COUNT":5,
+    "INJURY_COUNT":4,
     "DISPLAY_WEEK_LABEL":"Woche 4"
   },
   {
@@ -3100,7 +3095,7 @@
     "WR Strength Count":4,
     "TE Strength Count":1,
     "K Strength Count":1,
-    "Bench Strength":71,
+    "Bench Strength":73,
     "Bench Strength Count":3,
     "QB":[
       {
@@ -3133,6 +3128,19 @@
       }
     ],
     "RB":[
+      {
+        "name":"Roschon Johnson",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/10235.jpg",
+        "total_pts":2.8,
+        "att":4,
+        "yd":16,
+        "ypc":4.0,
+        "td":0,
+        "my_guy":false,
+        "my_guy_seasons":1,
+        "in_bank":false,
+        "in_strength":false
+      },
       {
         "name":"Cam Skattebo",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12481.jpg",
@@ -3186,6 +3194,19 @@
         "my_guy_seasons":1,
         "in_bank":false,
         "in_strength":true
+      },
+      {
+        "name":"Efton Chism",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12542.jpg",
+        "total_pts":12.7,
+        "targets":7,
+        "catches":4,
+        "yd":41,
+        "td":1,
+        "my_guy":false,
+        "my_guy_seasons":1,
+        "in_bank":true,
+        "in_strength":false
       },
       {
         "name":"Chris Godwin",
@@ -3249,7 +3270,7 @@
         "td":0,
         "my_guy":false,
         "my_guy_seasons":2,
-        "in_bank":true,
+        "in_bank":false,
         "in_strength":false
       }
     ],
@@ -3400,7 +3421,7 @@
       "outcome":"Sieg"
     },
     "THIS_WEEK_OPPONENT":"𓇳𓋹𓎡𓅓𓂋",
-    "THIS_WEEK_WIN_PROB":55.4,
+    "THIS_WEEK_WIN_PROB":53.1,
     "POWER RANK":3,
     "Power Rank Score":3.28,
     "LAST_WEEK_POWER_RANK":3,
@@ -3410,7 +3431,7 @@
     "WR Strength Rank":1,
     "TE Strength Rank":6,
     "K Strength Rank":3,
-    "Bench Strength Rank":10,
+    "Bench Strength Rank":8,
     "TREND Rank":5,
     "Average Points Rank":2,
     "BADGES":[
@@ -3420,7 +3441,7 @@
         "description":"45.3% der Punkte diese Woche kamen von den WRs - reine Luftshow."
       }
     ],
-    "COMMENTS":null,
+    "COMMENTS":"Philipps RB Room besteht aus Cam Skattebo und Ollie Gordon. Das muss man erstmal sacken lassen. Es sieht auch irgendwie nicht so aus, als würde Josh Jacobs dieses Jahr noch spielen.\nNa da bin ich mal gespannt auf die Streaming Options in den kommenden Wochen. Letzte Woche hat CeeDee Lamb alleine für den Sieg gesorgt. 17 Catches. Anscheinend haben die Football Götter sich auch direkt revangiert in Woche 5...die scheiß Cowboys, \"Embarrassing\"\nVele und Watson sind weiterhin Steals und punkten deutlich über ADP Value. Aber ich bin gespannt ob die Truppe diese Woche die 140 knackt mit Jake Briskett statt Patty Mahomes. Anscheinend nötig, denn Bucky hat shcon ordentlich vorgelegt.",
     "FAAB_REMAINING":42,
     "LEGACY_STATS":{
       "win_pct":62.1,
@@ -3508,7 +3529,7 @@
         },
         {
           "name":"Chris Godwin",
-          "points":443.4,
+          "points":449.4,
           "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4037.jpg",
           "is_champion":false
         },
@@ -3659,7 +3680,7 @@
           },
           {
             "name":"Chris Godwin",
-            "points":443.4,
+            "points":449.4,
             "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4037.jpg",
             "is_champion":false
           },
@@ -3689,11 +3710,11 @@
           }
         ]
       },
-      "waiver_moves":151,
+      "waiver_moves":153,
       "waiver_moves_by_season":[
         {
           "season":"2026",
-          "count":7
+          "count":9
         },
         {
           "season":"2025",
@@ -3759,9 +3780,9 @@
         "week":5
       },
       "low_week":{
-        "points":75.43,
-        "season":"2023",
-        "week":13
+        "points":7.9,
+        "season":"2026",
+        "week":5
       },
       "high_player_week":{
         "points":47.55,
@@ -3787,7 +3808,7 @@
       "all_time_points_rank":1,
       "avg_placement_rank":2,
       "high_week_rank":2,
-      "low_week_rank":10,
+      "low_week_rank":2,
       "high_player_week_rank":10
     },
     "QUIZ_SCORES":[
@@ -4158,7 +4179,7 @@
       "outcome":"Sieg"
     },
     "THIS_WEEK_OPPONENT":"TrevorMutantNinjaTutens",
-    "THIS_WEEK_WIN_PROB":59.5,
+    "THIS_WEEK_WIN_PROB":57.0,
     "POWER RANK":5,
     "Power Rank Score":5.13,
     "LAST_WEEK_POWER_RANK":6,
@@ -4172,6 +4193,11 @@
     "TREND Rank":4,
     "Average Points Rank":7,
     "BADGES":[
+      {
+        "icon":"hospital",
+        "label":"The Hospital",
+        "description":"5 verletzte Spieler im Kader (Out\/IR\/Questionable\/Doubtful) - die größte Krankenstation der Liga."
+      },
       {
         "icon":"groundpound",
         "label":"Ground and Pound",
@@ -4193,7 +4219,7 @@
         "description":"Der Kicker war mit 17.4 Punkten besser als jeden Wide Receiver (12.0 Pkt.)."
       }
     ],
-    "COMMENTS":null,
+    "COMMENTS":"Tine hat diese Woche mal einen Einblick, wie ihr Team so abschneiden würde, wenn K9 sich verletzt. Denn die BYE Weeks haben begonnen. Emanuel Wilson und Rico Dowdle müssen also diese Woche als Starter ran.\nWenn jetzt Jamar Chase noch fehlt, dann wirds richtig dunkel. Da könnte der Kalif aktiviert werden. Nach drei sehr stabilen Performances könnte es diese Woche mal wieder bergab gehen, aber so ist das halt, wenn die besten Spieler fehlen.\nQuasi nix zu verlieren. \n ",
     "FAAB_REMAINING":84,
     "LEGACY_STATS":{
       "win_pct":47.6,
@@ -4568,7 +4594,7 @@
       "all_time_points_rank":6,
       "avg_placement_rank":8,
       "high_week_rank":7,
-      "low_week_rank":4,
+      "low_week_rank":9,
       "high_player_week_rank":6
     },
     "QUIZ_SCORES":[
@@ -4913,7 +4939,7 @@
       "outcome":"Niederlage"
     },
     "THIS_WEEK_OPPONENT":"Robinson Corum Adventures",
-    "THIS_WEEK_WIN_PROB":42.9,
+    "THIS_WEEK_WIN_PROB":41.0,
     "POWER RANK":12,
     "Power Rank Score":11.6,
     "LAST_WEEK_POWER_RANK":12,
@@ -4953,7 +4979,7 @@
         "description":"Der Kicker war mit 13.5 Punkten besser als jeden Running Back (13.05 Pkt.) und jeden Wide Receiver (13.4 Pkt.)."
       }
     ],
-    "COMMENTS":"Leos Team ist nach drei Wochen einfach furchtbar. Abgesehen von JSN ist da abolut nichts Gutes dabei. Keiner seiner RBs hat mehr als 4 YPC, Monty hat sogar nur 2,7. Bei den Wide Receivern gibt es neben dem OPOY auch nur Leidensgeschichten:\nRome hat Backsteine als Hände, Wandale ist im Nashville Psych Ward gefangen, und Pittman hat wohl Aaron Rodgers Globuli geklaut. Und das sind nichtmal die schlimmsten Positionen. Drake \"600% INT Rate\" Maye und Kyle \"1 Pt pro Woche\" Pitts machen den Supergau komplett.\nDa muss sich dringend was ändern, wenn die Playoffs noch erreicht werden wollen. Vielleicht JSN für viele Assests traden. Aber will man seinen einzigen guten Spieler verhökern? ",
+    "COMMENTS":"Ich mach's kurz: Leos Team ist furchtbar. Genau wenn Drake Maye endlich mal klarkommt, macht JSN eine Woche Pause. Es hilft auch einfach nicht, wenn man die RBs der schlechtesten Rushing Attacks der Liga hat.\nMein geheimer Hoffnungsträger für Leos Team: Rome Odunze. Er hat letzte Woche ordentlich gespielt und seine Snap% steigt stetig. Ansonsten holt mich da nicht wirklich was ab. Kyle Pitts hat 9 fucking Punkte nach 4 Wochen. Die Truppe brauch mal ne saftige Ansage. ",
     "FAAB_REMAINING":48,
     "LEGACY_STATS":{
       "win_pct":48.5,
@@ -5316,7 +5342,7 @@
       "all_time_points_rank":7,
       "avg_placement_rank":7,
       "high_week_rank":9,
-      "low_week_rank":1,
+      "low_week_rank":7,
       "high_player_week_rank":7
     },
     "QUIZ_SCORES":[
@@ -5337,7 +5363,7 @@
     "Week 2 Waiver":0,
     "Week 3 Waiver":2,
     "Week 4 Waiver":1,
-    "INJURY_COUNT":2,
+    "INJURY_COUNT":3,
     "DISPLAY_WEEK_LABEL":"Woche 4"
   },
   {
@@ -5654,14 +5680,14 @@
       "yd":58,
       "td":2
     },
-    "LAST_WEEK_OPPONENT":"sandmann1ps",
+    "LAST_WEEK_OPPONENT":"Love Hurts, Purdy Heals",
     "LAST_WEEK_RESULT":{
       "own_points":112.9,
       "opponent_points":170.9,
       "outcome":"Niederlage"
     },
     "THIS_WEEK_OPPONENT":"The PUK-A-BOOs",
-    "THIS_WEEK_WIN_PROB":54.1,
+    "THIS_WEEK_WIN_PROB":55.5,
     "POWER RANK":8,
     "Power Rank Score":7.45,
     "LAST_WEEK_POWER_RANK":4,
@@ -5691,7 +5717,7 @@
         "description":"98 FAAB übrig - der Wal der Liga."
       }
     ],
-    "COMMENTS":null,
+    "COMMENTS":"Peter und Ben haben nach vier Wochen schon 150 Punkte mehr kassiert als Köppi. Also quasi eine ganze highscoring Woche extra an Gegentreffern. Da machste einfach nix. Die Jungs haben aber eigentlich eine gute Truppe, wobei bald ein RB her muss, sonst sieht's während der Bye-Week schlecht aus.\nMit 5 ordentlichen WR sollten sie doch ein Tradepartner finden können. Ich weiß nur nicht ob die Eagles D die Antwort ist. Man kann auch die Defense wechseln Jungs, ist nicht verboten. Wobei die letztes Jahr auch am Anfang scheiße waren, ich es hier ähnlich kommentiert habe und die dann steil gegangen sind.\n",
     "FAAB_REMAINING":98,
     "LEGACY_STATS":{
       "win_pct":59.4,
@@ -5898,7 +5924,7 @@
           },
           {
             "name":"Kenny Gainwell",
-            "points":120.4,
+            "points":125.0,
             "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7567.jpg",
             "is_champion":false
           },
@@ -5990,9 +6016,9 @@
         "week":15
       },
       "low_week":{
-        "points":86.92,
-        "season":"2025",
-        "week":2
+        "points":29.3,
+        "season":"2026",
+        "week":5
       },
       "high_player_week":{
         "points":51.93,
@@ -6018,7 +6044,7 @@
       "all_time_points_rank":11,
       "avg_placement_rank":3,
       "high_week_rank":12,
-      "low_week_rank":12,
+      "low_week_rank":5,
       "high_player_week_rank":4
     },
     "QUIZ_SCORES":[
@@ -6043,13 +6069,13 @@
     "Week 2 Waiver":0,
     "Week 3 Waiver":0,
     "Week 4 Waiver":2,
-    "INJURY_COUNT":2,
+    "INJURY_COUNT":1,
     "DISPLAY_WEEK_LABEL":"Woche 4"
   },
   {
     "User ID":"723153820145758208",
     "Display Name":"MomentumBln",
-    "Team Name":"Luther is my Burden",
+    "Team Name":"Bryce Girls",
     "Wins":3,
     "Losses":5,
     "Ties":0,
@@ -6393,8 +6419,8 @@
       "opponent_points":150.2,
       "outcome":"Sieg"
     },
-    "THIS_WEEK_OPPONENT":"sandmann1ps",
-    "THIS_WEEK_WIN_PROB":25.9,
+    "THIS_WEEK_OPPONENT":"Love Hurts, Purdy Heals",
+    "THIS_WEEK_WIN_PROB":46.4,
     "POWER RANK":4,
     "Power Rank Score":5.1,
     "LAST_WEEK_POWER_RANK":10,
@@ -6434,7 +6460,7 @@
         "description":"4 Rookies im Kader - die Zukunft der Liga (hoffentlich)."
       }
     ],
-    "COMMENTS":null,
+    "COMMENTS":"Der Bryce Young hype geht ganz schön steil. Jetzt werden schon Teams nach ihm benannt, während er in der BYE Week auf der Bank gestached wird, damit sich den ja keiner holt. Was für eine Transformation. Aber ich vertraue der Nummer auch nicht so richtig. Das gilt eigentlich für Mo's ganzes Team.\nIrgendwie scheint bei der Kalkulation der BANK auch was nicht zu stimmen, denn Mo hat garantiert nicht die besten Ersatzspieler. Das muss ich mir nochmal anschauen. Jetzt zum Abschluß noch was Positives: Der Teamname ist 10\/10 und Zay Flowers ist ein Top 5 WR (Hoffentlich ist Lamar nicht lange verletzt)\n\n",
     "FAAB_REMAINING":2,
     "LEGACY_STATS":{
       "win_pct":44.7,
@@ -6781,8 +6807,8 @@
         "week":5
       },
       "low_week":{
-        "points":67.6,
-        "season":"2023",
+        "points":13.95,
+        "season":"2026",
         "week":5
       },
       "high_player_week":{
@@ -6809,7 +6835,7 @@
       "all_time_points_rank":5,
       "avg_placement_rank":10,
       "high_week_rank":4,
-      "low_week_rank":8,
+      "low_week_rank":3,
       "high_player_week_rank":1
     },
     "QUIZ_SCORES":[
@@ -6830,7 +6856,7 @@
     "Week 2 Waiver":4,
     "Week 3 Waiver":2,
     "Week 4 Waiver":1,
-    "INJURY_COUNT":5,
+    "INJURY_COUNT":4,
     "DISPLAY_WEEK_LABEL":"Woche 4"
   },
   {
@@ -6952,6 +6978,19 @@
         "my_guy_seasons":1,
         "in_bank":false,
         "in_strength":true
+      },
+      {
+        "name":"Dameon Pierce",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8129.jpg",
+        "total_pts":0,
+        "att":0,
+        "yd":0,
+        "ypc":0,
+        "td":0,
+        "my_guy":false,
+        "my_guy_seasons":1,
+        "in_bank":false,
+        "in_strength":false
       },
       {
         "name":"Isiah Pacheco",
@@ -7168,7 +7207,7 @@
       "outcome":"Niederlage"
     },
     "THIS_WEEK_OPPONENT":"BurrowButker and the Boys",
-    "THIS_WEEK_WIN_PROB":45.9,
+    "THIS_WEEK_WIN_PROB":44.5,
     "POWER RANK":10,
     "Power Rank Score":10.15,
     "LAST_WEEK_POWER_RANK":11,
@@ -7178,14 +7217,14 @@
     "WR Strength Rank":6,
     "TE Strength Rank":10,
     "K Strength Rank":11,
-    "Bench Strength Rank":9,
+    "Bench Strength Rank":10,
     "TREND Rank":10,
     "Average Points Rank":11,
     "BADGES":[
 
     ],
-    "COMMENTS":"Ohne first Round Puka läufts einfach nicht bei Jay. Niemand weiß auch so richtig was bei Nacua kaputt ist. Eine ominöse Groin Injury, die aber irgendwie auch alles mögliche sein kann. \nAngeblich könnte er vielleicht sogar noch operiert werden. Sollte Jay vielleicht auch seinem Team rumdoktorn? BTJ kann definitv weggeschnitten werden.\n",
-    "FAAB_REMAINING":83,
+    "COMMENTS":"Namesake Puka ist endlich da und hat direkt abgeliefert. Aber angeblich hat er eine Pre-Hernia also fast eine Hernia. Ihr fragt euch sicherlich, was ist Hernia? Ich habs gegooglet und es ist ein \"Austritt von inneren Organen oder Gewebe (wie Darmteilen) aus der Bauchhöhle\". \nKlingt erstmal nicht so geil. Da sollte man sich doch am besten 15 mal pro Spiel tacklen lassen, um die ganze Sache zu beruhigen. Alles in die richtige Positionen zurück drücken, sozusagen.\nIn diesem Sinne die Note für Jays Team: Pre-Scheiße. Also nicht Scheiße, aber wenn sich Puka verletzen sollte, dann ist es vermutlich Scheiße.",
+    "FAAB_REMAINING":80,
     "LEGACY_STATS":{
       "win_pct":48.5,
       "wins":50,
@@ -7453,11 +7492,11 @@
           }
         ]
       },
-      "waiver_moves":153,
+      "waiver_moves":154,
       "waiver_moves_by_season":[
         {
           "season":"2026",
-          "count":7
+          "count":8
         },
         {
           "season":"2025",
@@ -7547,7 +7586,7 @@
       "all_time_points_rank":3,
       "avg_placement_rank":6,
       "high_week_rank":1,
-      "low_week_rank":5,
+      "low_week_rank":10,
       "high_player_week_rank":11
     },
     "QUIZ_SCORES":[
@@ -7568,7 +7607,7 @@
     "Week 2 Waiver":1,
     "Week 3 Waiver":1,
     "Week 4 Waiver":2,
-    "INJURY_COUNT":5,
+    "INJURY_COUNT":4,
     "DISPLAY_WEEK_LABEL":"Woche 4"
   },
   {
@@ -7593,7 +7632,7 @@
     "WR Strength Count":2,
     "TE Strength Count":2,
     "K Strength Count":1,
-    "Bench Strength":80,
+    "Bench Strength":73,
     "Bench Strength Count":3,
     "QB":[
       {
@@ -7650,6 +7689,19 @@
         "my_guy_seasons":1,
         "in_bank":false,
         "in_strength":true
+      },
+      {
+        "name":"Mike Washington",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/13305.jpg",
+        "total_pts":18.4,
+        "att":24,
+        "yd":120,
+        "ypc":5.0,
+        "td":1,
+        "my_guy":false,
+        "my_guy_seasons":1,
+        "in_bank":false,
+        "in_strength":false
       },
       {
         "name":"Saquon Barkley",
@@ -7719,19 +7771,6 @@
         "in_strength":true
       },
       {
-        "name":"Darius Cooper",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/13150.jpg",
-        "total_pts":26.4,
-        "targets":10,
-        "catches":5,
-        "yd":59,
-        "td":3,
-        "my_guy":false,
-        "my_guy_seasons":1,
-        "in_bank":true,
-        "in_strength":false
-      },
-      {
         "name":"Tyreek Hill",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/3321.jpg",
         "total_pts":0,
@@ -7754,7 +7793,7 @@
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
-        "in_bank":false,
+        "in_bank":true,
         "in_strength":false
       },
       {
@@ -7917,7 +7956,7 @@
       "outcome":"Sieg"
     },
     "THIS_WEEK_OPPONENT":"Gonna be golden",
-    "THIS_WEEK_WIN_PROB":40.5,
+    "THIS_WEEK_WIN_PROB":43.0,
     "POWER RANK":2,
     "Power Rank Score":2.98,
     "LAST_WEEK_POWER_RANK":7,
@@ -7927,14 +7966,14 @@
     "WR Strength Rank":10,
     "TE Strength Rank":2,
     "K Strength Rank":2,
-    "Bench Strength Rank":7,
+    "Bench Strength Rank":8,
     "TREND Rank":2,
     "Average Points Rank":3,
     "BADGES":[
       {
         "icon":"homer",
         "label":"PHI-Homer",
-        "description":"4 Spieler von PHI im Kader - eindeutig ein Fan.",
+        "description":"3 Spieler von PHI im Kader - eindeutig ein Fan.",
         "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/phi.png"
       },
       {
@@ -7953,7 +7992,7 @@
         "description":"Der Kicker war mit 20.1 Punkten besser als den Quarterback (16.33 Pkt.)."
       }
     ],
-    "COMMENTS":null,
+    "COMMENTS":"Getragen von zwei Panthers und dem Vikings Kicker, hat Sven wieder den Sprung nach oben geschafft. Panthers und Vikings Kicker. Historische Fantasy Liabilities. Wieder ein Zeichen für den Umschwung in der Liga.\nDie Panthers sind der neue heiße Scheiß, aber die diese Woche im Bye. Deswegen packt Sven eine Flex Kombo der Superlative aus: Shipley und Likely. Wow. Aber ich hab schon schlimmeres gesehen. \nIch spüre eine dominante Performance der wahnsinnig teuren Texans Defense, aktuell D\/ST #20, gegen die dreckigen Titans. Wenn die hier keine 15 Punkte abliefern, sollte Sven sich vielleicht mal nach einer anderen Truppe umschauen.",
     "FAAB_REMAINING":54,
     "LEGACY_STATS":{
       "win_pct":46.2,
@@ -8214,11 +8253,11 @@
           }
         ]
       },
-      "waiver_moves":112,
+      "waiver_moves":113,
       "waiver_moves_by_season":[
         {
           "season":"2026",
-          "count":9
+          "count":10
         },
         {
           "season":"2025",
@@ -8296,7 +8335,7 @@
       "all_time_points_rank":10,
       "avg_placement_rank":11,
       "high_week_rank":11,
-      "low_week_rank":6,
+      "low_week_rank":11,
       "high_player_week_rank":12
     },
     "QUIZ_SCORES":[
@@ -8323,7 +8362,7 @@
   {
     "User ID":"1137349364512509952",
     "Display Name":"sandmann1ps",
-    "Team Name":"No Team Name",
+    "Team Name":"Love Hurts, Purdy Heals",
     "Wins":5,
     "Losses":3,
     "Ties":0,
@@ -8416,19 +8455,6 @@
       }
     ],
     "WR":[
-      {
-        "name":"Jayden Reed",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/10222.jpg",
-        "total_pts":4.4,
-        "targets":8,
-        "catches":4,
-        "yd":24,
-        "td":0,
-        "my_guy":false,
-        "my_guy_seasons":1,
-        "in_bank":false,
-        "in_strength":false
-      },
       {
         "name":"Jalen Coker",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11646.jpg",
@@ -8655,8 +8681,8 @@
       "opponent_points":112.9,
       "outcome":"Sieg"
     },
-    "THIS_WEEK_OPPONENT":"Luther is my Burden",
-    "THIS_WEEK_WIN_PROB":74.1,
+    "THIS_WEEK_OPPONENT":"Bryce Girls",
+    "THIS_WEEK_WIN_PROB":53.6,
     "POWER RANK":1,
     "Power Rank Score":2.42,
     "LAST_WEEK_POWER_RANK":2,
@@ -8691,7 +8717,7 @@
         "description":"143.3 Punkte Schnitt pro Woche - das Team, das niemand gerne trifft."
       }
     ],
-    "COMMENTS":null,
+    "COMMENTS":"Er hat nicht nur schnell gedraftet, er hat auch noch gut gedraftet. Zwei monströse Performances machen den Sandmann zur neuen Nummer 1. Ich denke das sollte niemanden überraschen.\nIch würde den plötzlichen Erfolg an 3 Faktoren festmachen:Brock Purdy spielt auf MVP Level, George Kittle hat schon vergessen, dass er sich die Achillessehne gerissen hatte, und Drake London wird endlich von Penix mit Targets übersäht.\nAußerdem hat Kyren Williams in jedem Spiel mehr Punkte gemacht als in dem davor. Diese Woche also 40? oder gehts wieder bei 14 los?\nFreut mich das der Peter solche Erfolge bei uns in der Liga feiern kann, aber das reicht dann auch. Jetzt bitte wieder 120.\n",
     "FAAB_REMAINING":83,
     "LEGACY_STATS":{
       "win_pct":45.3,
@@ -8722,12 +8748,6 @@
           "is_champion":false
         },
         {
-          "name":"Jayden Reed",
-          "weeks":17,
-          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/10222.jpg",
-          "is_champion":false
-        },
-        {
           "name":"Jalen Coker",
           "weeks":17,
           "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11646.jpg",
@@ -8749,6 +8769,12 @@
           "name":"George Kittle",
           "weeks":17,
           "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4217.jpg",
+          "is_champion":false
+        },
+        {
+          "name":"DJ Moore",
+          "weeks":17,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4983.jpg",
           "is_champion":false
         }
       ],
@@ -9011,7 +9037,7 @@
       "all_time_points_rank":12,
       "avg_placement_rank":12,
       "high_week_rank":10,
-      "low_week_rank":2,
+      "low_week_rank":8,
       "high_player_week_rank":5
     },
     "QUIZ_SCORES":[
@@ -9032,7 +9058,7 @@
     "Week 2 Waiver":1,
     "Week 3 Waiver":0,
     "Week 4 Waiver":3,
-    "INJURY_COUNT":4,
+    "INJURY_COUNT":3,
     "DISPLAY_WEEK_LABEL":"Woche 4"
   }
 ]
