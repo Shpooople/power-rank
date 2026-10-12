@@ -39,14 +39,14 @@
         "in_strength":true
       },
       {
-        "name":"Aaron Rodgers",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/96.jpg",
-        "total_pts":65.2,
-        "comp":88,
-        "att":153,
-        "pass_yd":999,
-        "rush_yd":12,
-        "td":7,
+        "name":"Sam Darnold",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4943.jpg",
+        "total_pts":44.5,
+        "comp":45,
+        "att":69,
+        "pass_yd":560,
+        "rush_yd":11,
+        "td":6,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
@@ -347,7 +347,7 @@
       "outcome":"Niederlage"
     },
     "THIS_WEEK_OPPONENT":"Two Daddies One Bride ",
-    "THIS_WEEK_WIN_PROB":52.7,
+    "THIS_WEEK_WIN_PROB":47.3,
     "POWER RANK":7,
     "Power Rank Score":6.32,
     "LAST_WEEK_POWER_RANK":1,
@@ -488,16 +488,16 @@
           "is_champion":false
         },
         {
+          "name":"Derrick Henry",
+          "points":386.9,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/3198.jpg",
+          "is_champion":true
+        },
+        {
           "name":"Terry McLaurin",
           "points":378.1,
           "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5927.jpg",
           "is_champion":false
-        },
-        {
-          "name":"Derrick Henry",
-          "points":365.7,
-          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/3198.jpg",
-          "is_champion":true
         }
       ],
       "scorers_by_position":{
@@ -590,7 +590,7 @@
           },
           {
             "name":"Derrick Henry",
-            "points":365.7,
+            "points":386.9,
             "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/3198.jpg",
             "is_champion":true
           },
@@ -658,11 +658,11 @@
           }
         ]
       },
-      "waiver_moves":317,
+      "waiver_moves":318,
       "waiver_moves_by_season":[
         {
           "season":"2026",
-          "count":15
+          "count":16
         },
         {
           "season":"2025",
@@ -768,7 +768,7 @@
       "all_time_points_rank":2,
       "avg_placement_rank":1,
       "high_week_rank":8,
-      "low_week_rank":12,
+      "low_week_rank":7,
       "high_player_week_rank":8
     },
     "QUIZ_SCORES":[
@@ -1125,7 +1125,7 @@
       "outcome":"Sieg"
     },
     "THIS_WEEK_OPPONENT":"Pandan Buns",
-    "THIS_WEEK_WIN_PROB":59.0,
+    "THIS_WEEK_WIN_PROB":55.2,
     "POWER RANK":9,
     "Power Rank Score":7.82,
     "LAST_WEEK_POWER_RANK":5,
@@ -1134,7 +1134,7 @@
     "RB Strength Rank":7,
     "WR Strength Rank":5,
     "TE Strength Rank":3,
-    "K Strength Rank":7,
+    "K Strength Rank":8,
     "Bench Strength Rank":12,
     "TREND Rank":7,
     "Average Points Rank":9,
@@ -1417,7 +1417,7 @@
           },
           {
             "name":"Chris Olave",
-            "points":239.0,
+            "points":246.6,
             "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8144.jpg",
             "is_champion":false
           },
@@ -1513,9 +1513,9 @@
         "week":15
       },
       "low_week":{
-        "points":5.1,
-        "season":"2026",
-        "week":5
+        "points":57.36,
+        "season":"2024",
+        "week":7
       },
       "high_player_week":{
         "points":47.95,
@@ -1541,7 +1541,7 @@
       "all_time_points_rank":9,
       "avg_placement_rank":5,
       "high_week_rank":3,
-      "low_week_rank":1,
+      "low_week_rank":3,
       "high_player_week_rank":9
     },
     "QUIZ_SCORES":[
@@ -1562,7 +1562,7 @@
     "Week 2 Waiver":3,
     "Week 3 Waiver":1,
     "Week 4 Waiver":5,
-    "INJURY_COUNT":3,
+    "INJURY_COUNT":2,
     "DISPLAY_WEEK_LABEL":"Woche 4"
   },
   {
@@ -1587,7 +1587,7 @@
     "WR Strength Count":2,
     "TE Strength Count":1,
     "K Strength Count":1,
-    "Bench Strength":80,
+    "Bench Strength":77,
     "Bench Strength Count":3,
     "QB":[
       {
@@ -1701,13 +1701,13 @@
         "in_strength":false
       },
       {
-        "name":"Tre' Harris",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12509.jpg",
-        "total_pts":27.4,
-        "targets":21,
-        "catches":13,
-        "yd":209,
-        "td":0,
+        "name":"Antonio Williams",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/13301.jpg",
+        "total_pts":24.4,
+        "targets":19,
+        "catches":12,
+        "yd":124,
+        "td":1,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":true,
@@ -1782,20 +1782,20 @@
         "my_guy":false,
         "my_guy_seasons":2,
         "in_bank":false,
-        "in_strength":false
+        "in_strength":true
       },
       {
-        "name":"Las Vegas Raiders",
-        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/lv.png",
-        "total_pts":48.0,
-        "sack":12,
+        "name":"Kansas City Chiefs",
+        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/kc.png",
+        "total_pts":27.0,
+        "sack":4,
         "int":4,
-        "fum_rec":5,
+        "fum_rec":2,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
-        "in_strength":true
+        "in_strength":false
       }
     ],
     "TOP_PERFORMERS":[
@@ -1887,7 +1887,7 @@
       "outcome":"Niederlage"
     },
     "THIS_WEEK_OPPONENT":"Schlemmerfilet Bortleaise",
-    "THIS_WEEK_WIN_PROB":47.3,
+    "THIS_WEEK_WIN_PROB":52.7,
     "POWER RANK":6,
     "Power Rank Score":5.35,
     "LAST_WEEK_POWER_RANK":9,
@@ -1896,7 +1896,7 @@
     "RB Strength Rank":3,
     "WR Strength Rank":9,
     "TE Strength Rank":5,
-    "K Strength Rank":7,
+    "K Strength Rank":8,
     "Bench Strength Rank":7,
     "TREND Rank":6,
     "Average Points Rank":5,
@@ -2079,7 +2079,7 @@
           },
           {
             "name":"Jacksonville Jaguars",
-            "points":146.2,
+            "points":150.5,
             "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/jax.png",
             "is_champion":false
           }
@@ -2093,7 +2093,7 @@
           },
           {
             "name":"Trey McBride",
-            "points":310.8,
+            "points":328.7,
             "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8130.jpg",
             "is_champion":false
           },
@@ -2181,11 +2181,11 @@
           }
         ]
       },
-      "waiver_moves":131,
+      "waiver_moves":133,
       "waiver_moves_by_season":[
         {
           "season":"2026",
-          "count":6
+          "count":8
         },
         {
           "season":"2025",
@@ -2251,9 +2251,9 @@
         "week":15
       },
       "low_week":{
-        "points":17.74,
-        "season":"2026",
-        "week":5
+        "points":69.2,
+        "season":"2021",
+        "week":17
       },
       "high_player_week":{
         "points":53.73,
@@ -2279,7 +2279,7 @@
       "all_time_points_rank":8,
       "avg_placement_rank":9,
       "high_week_rank":6,
-      "low_week_rank":4,
+      "low_week_rank":9,
       "high_player_week_rank":3
     },
     "QUIZ_SCORES":[
@@ -2655,7 +2655,7 @@
       "outcome":"Niederlage"
     },
     "THIS_WEEK_OPPONENT":"pk123",
-    "THIS_WEEK_WIN_PROB":46.9,
+    "THIS_WEEK_WIN_PROB":53.9,
     "POWER RANK":11,
     "Power Rank Score":10.4,
     "LAST_WEEK_POWER_RANK":8,
@@ -2758,7 +2758,7 @@
       "most_points":[
         {
           "name":"Alvin Kamara",
-          "points":577.8,
+          "points":579.4,
           "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4035.jpg",
           "is_champion":false
         },
@@ -2877,7 +2877,7 @@
         "RB":[
           {
             "name":"Alvin Kamara",
-            "points":577.8,
+            "points":579.4,
             "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4035.jpg",
             "is_champion":false
           },
@@ -2895,7 +2895,7 @@
           },
           {
             "name":"Jaylen Warren",
-            "points":326.0,
+            "points":360.5,
             "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8228.jpg",
             "is_champion":false
           },
@@ -3021,9 +3021,9 @@
         "week":9
       },
       "low_week":{
-        "points":39.85,
-        "season":"2026",
-        "week":5
+        "points":79.29,
+        "season":"2023",
+        "week":6
       },
       "high_player_week":{
         "points":55.6,
@@ -3049,7 +3049,7 @@
       "all_time_points_rank":4,
       "avg_placement_rank":4,
       "high_week_rank":5,
-      "low_week_rank":6,
+      "low_week_rank":11,
       "high_player_week_rank":2
     },
     "QUIZ_SCORES":[
@@ -3070,7 +3070,7 @@
     "Week 2 Waiver":1,
     "Week 3 Waiver":2,
     "Week 4 Waiver":1,
-    "INJURY_COUNT":4,
+    "INJURY_COUNT":3,
     "DISPLAY_WEEK_LABEL":"Woche 4"
   },
   {
@@ -3421,7 +3421,7 @@
       "outcome":"Sieg"
     },
     "THIS_WEEK_OPPONENT":"𓇳𓋹𓎡𓅓𓂋",
-    "THIS_WEEK_WIN_PROB":53.1,
+    "THIS_WEEK_WIN_PROB":46.1,
     "POWER RANK":3,
     "Power Rank Score":3.28,
     "LAST_WEEK_POWER_RANK":3,
@@ -3616,7 +3616,7 @@
         "TE":[
           {
             "name":"Mark Andrews",
-            "points":313.6,
+            "points":316.9,
             "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5012.jpg",
             "is_champion":false
           },
@@ -3628,7 +3628,7 @@
           },
           {
             "name":"Sam LaPorta",
-            "points":175.8,
+            "points":193.6,
             "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/10859.jpg",
             "is_champion":false
           }
@@ -3780,9 +3780,9 @@
         "week":5
       },
       "low_week":{
-        "points":7.9,
-        "season":"2026",
-        "week":5
+        "points":75.43,
+        "season":"2023",
+        "week":13
       },
       "high_player_week":{
         "points":47.55,
@@ -3808,7 +3808,7 @@
       "all_time_points_rank":1,
       "avg_placement_rank":2,
       "high_week_rank":2,
-      "low_week_rank":2,
+      "low_week_rank":10,
       "high_player_week_rank":10
     },
     "QUIZ_SCORES":[
@@ -3829,7 +3829,7 @@
     "Week 2 Waiver":0,
     "Week 3 Waiver":2,
     "Week 4 Waiver":3,
-    "INJURY_COUNT":3,
+    "INJURY_COUNT":4,
     "DISPLAY_WEEK_LABEL":"Woche 4"
   },
   {
@@ -4179,7 +4179,7 @@
       "outcome":"Sieg"
     },
     "THIS_WEEK_OPPONENT":"TrevorMutantNinjaTutens",
-    "THIS_WEEK_WIN_PROB":57.0,
+    "THIS_WEEK_WIN_PROB":52.8,
     "POWER RANK":5,
     "Power Rank Score":5.13,
     "LAST_WEEK_POWER_RANK":6,
@@ -4307,7 +4307,7 @@
         },
         {
           "name":"Jaylen Waddle",
-          "points":457.7,
+          "points":461.7,
           "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7526.jpg",
           "is_champion":false
         },
@@ -4324,10 +4324,10 @@
           "is_champion":false
         },
         {
-          "name":"CeeDee Lamb",
-          "points":322.4,
-          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6786.jpg",
-          "is_champion":true
+          "name":"Ja'Marr Chase",
+          "points":338.4,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7564.jpg",
+          "is_champion":false
         }
       ],
       "scorers_by_position":{
@@ -4359,16 +4359,16 @@
             "is_champion":true
           },
           {
+            "name":"Spencer Shrader",
+            "points":59.4,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12185.jpg",
+            "is_champion":false
+          },
+          {
             "name":"Matt Prater",
             "points":59.2,
             "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/17.jpg",
             "is_champion":true
-          },
-          {
-            "name":"Jake Bates",
-            "points":40.3,
-            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11539.jpg",
-            "is_champion":false
           }
         ],
         "DEF":[
@@ -4452,8 +4452,14 @@
         "WR":[
           {
             "name":"Jaylen Waddle",
-            "points":457.7,
+            "points":461.7,
             "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7526.jpg",
+            "is_champion":false
+          },
+          {
+            "name":"Ja'Marr Chase",
+            "points":338.4,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7564.jpg",
             "is_champion":false
           },
           {
@@ -4461,12 +4467,6 @@
             "points":322.4,
             "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6786.jpg",
             "is_champion":true
-          },
-          {
-            "name":"Ja'Marr Chase",
-            "points":321.2,
-            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7564.jpg",
-            "is_champion":false
           },
           {
             "name":"Stefon Diggs",
@@ -4594,7 +4594,7 @@
       "all_time_points_rank":6,
       "avg_placement_rank":8,
       "high_week_rank":7,
-      "low_week_rank":9,
+      "low_week_rank":4,
       "high_player_week_rank":6
     },
     "QUIZ_SCORES":[
@@ -4634,7 +4634,7 @@
     "RB Strength":33,
     "WR Strength":77,
     "TE Strength":10,
-    "K Strength":45,
+    "K Strength":74,
     "QB Strength Count":1,
     "RB Strength Count":2,
     "WR Strength Count":4,
@@ -4822,13 +4822,13 @@
     ],
     "K":[
       {
-        "name":"Cameron Dicker",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8259.jpg",
-        "total_pts":24.0,
-        "fgm":6,
-        "fga":8,
-        "xpm":7,
-        "xpa":7,
+        "name":"Jake Bates",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11539.jpg",
+        "total_pts":39.0,
+        "fgm":7,
+        "fga":7,
+        "xpm":14,
+        "xpa":14,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
@@ -4836,6 +4836,19 @@
       }
     ],
     "DEF":[
+      {
+        "name":"Cleveland Browns",
+        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/cle.png",
+        "total_pts":23.0,
+        "sack":12,
+        "int":4,
+        "fum_rec":0,
+        "td":0,
+        "my_guy":false,
+        "my_guy_seasons":1,
+        "in_bank":false,
+        "in_strength":true
+      },
       {
         "name":"New Orleans Saints",
         "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/no.png",
@@ -4847,7 +4860,7 @@
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
-        "in_strength":true
+        "in_strength":false
       }
     ],
     "TOP_PERFORMERS":[
@@ -4939,7 +4952,7 @@
       "outcome":"Niederlage"
     },
     "THIS_WEEK_OPPONENT":"Robinson Corum Adventures",
-    "THIS_WEEK_WIN_PROB":41.0,
+    "THIS_WEEK_WIN_PROB":44.8,
     "POWER RANK":12,
     "Power Rank Score":11.6,
     "LAST_WEEK_POWER_RANK":12,
@@ -4948,7 +4961,7 @@
     "RB Strength Rank":11,
     "WR Strength Rank":2,
     "TE Strength Rank":12,
-    "K Strength Rank":12,
+    "K Strength Rank":6,
     "Bench Strength Rank":11,
     "TREND Rank":12,
     "Average Points Rank":12,
@@ -5160,7 +5173,7 @@
           },
           {
             "name":"Kyle Pitts",
-            "points":164.3,
+            "points":177.2,
             "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7553.jpg",
             "is_champion":false
           },
@@ -5236,7 +5249,7 @@
           },
           {
             "name":"Rome Odunze",
-            "points":224.4,
+            "points":228.4,
             "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11620.jpg",
             "is_champion":false
           },
@@ -5248,11 +5261,11 @@
           }
         ]
       },
-      "waiver_moves":150,
+      "waiver_moves":152,
       "waiver_moves_by_season":[
         {
           "season":"2026",
-          "count":3
+          "count":5
         },
         {
           "season":"2025",
@@ -5342,7 +5355,7 @@
       "all_time_points_rank":7,
       "avg_placement_rank":7,
       "high_week_rank":9,
-      "low_week_rank":7,
+      "low_week_rank":1,
       "high_player_week_rank":7
     },
     "QUIZ_SCORES":[
@@ -5696,7 +5709,7 @@
     "RB Strength Rank":6,
     "WR Strength Rank":4,
     "TE Strength Rank":7,
-    "K Strength Rank":7,
+    "K Strength Rank":8,
     "Bench Strength Rank":2,
     "TREND Rank":8,
     "Average Points Rank":8,
@@ -5860,7 +5873,7 @@
         "DEF":[
           {
             "name":"Philadelphia Eagles",
-            "points":183.8,
+            "points":191.8,
             "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/phi.png",
             "is_champion":false
           },
@@ -5923,15 +5936,15 @@
             "is_champion":false
           },
           {
-            "name":"Kenny Gainwell",
-            "points":125.0,
-            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7567.jpg",
+            "name":"Jahmyr Gibbs",
+            "points":149.7,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9221.jpg",
             "is_champion":false
           },
           {
-            "name":"Kimani Vidal",
-            "points":113.2,
-            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11647.jpg",
+            "name":"Kenny Gainwell",
+            "points":125.0,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7567.jpg",
             "is_champion":false
           }
         ],
@@ -6016,9 +6029,9 @@
         "week":15
       },
       "low_week":{
-        "points":29.3,
-        "season":"2026",
-        "week":5
+        "points":86.92,
+        "season":"2025",
+        "week":2
       },
       "high_player_week":{
         "points":51.93,
@@ -6044,7 +6057,7 @@
       "all_time_points_rank":11,
       "avg_placement_rank":3,
       "high_week_rank":12,
-      "low_week_rank":5,
+      "low_week_rank":12,
       "high_player_week_rank":4
     },
     "QUIZ_SCORES":[
@@ -6069,7 +6082,7 @@
     "Week 2 Waiver":0,
     "Week 3 Waiver":0,
     "Week 4 Waiver":2,
-    "INJURY_COUNT":1,
+    "INJURY_COUNT":2,
     "DISPLAY_WEEK_LABEL":"Woche 4"
   },
   {
@@ -6420,7 +6433,7 @@
       "outcome":"Sieg"
     },
     "THIS_WEEK_OPPONENT":"Love Hurts, Purdy Heals",
-    "THIS_WEEK_WIN_PROB":46.4,
+    "THIS_WEEK_WIN_PROB":47.5,
     "POWER RANK":4,
     "Power Rank Score":5.1,
     "LAST_WEEK_POWER_RANK":10,
@@ -6429,7 +6442,7 @@
     "RB Strength Rank":8,
     "WR Strength Rank":3,
     "TE Strength Rank":9,
-    "K Strength Rank":6,
+    "K Strength Rank":7,
     "Bench Strength Rank":1,
     "TREND Rank":3,
     "Average Points Rank":6,
@@ -6704,15 +6717,15 @@
             "is_champion":false
           },
           {
-            "name":"Justin Jefferson",
-            "points":271.8,
-            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6794.jpg",
+            "name":"Malik Nabers",
+            "points":281.4,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11632.jpg",
             "is_champion":false
           },
           {
-            "name":"Malik Nabers",
-            "points":256.3,
-            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11632.jpg",
+            "name":"Justin Jefferson",
+            "points":271.8,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6794.jpg",
             "is_champion":false
           },
           {
@@ -6807,8 +6820,8 @@
         "week":5
       },
       "low_week":{
-        "points":13.95,
-        "season":"2026",
+        "points":67.6,
+        "season":"2023",
         "week":5
       },
       "high_player_week":{
@@ -6835,7 +6848,7 @@
       "all_time_points_rank":5,
       "avg_placement_rank":10,
       "high_week_rank":4,
-      "low_week_rank":3,
+      "low_week_rank":8,
       "high_player_week_rank":1
     },
     "QUIZ_SCORES":[
@@ -6856,7 +6869,7 @@
     "Week 2 Waiver":4,
     "Week 3 Waiver":2,
     "Week 4 Waiver":1,
-    "INJURY_COUNT":4,
+    "INJURY_COUNT":3,
     "DISPLAY_WEEK_LABEL":"Woche 4"
   },
   {
@@ -7216,7 +7229,7 @@
     "RB Strength Rank":10,
     "WR Strength Rank":6,
     "TE Strength Rank":10,
-    "K Strength Rank":11,
+    "K Strength Rank":12,
     "Bench Strength Rank":10,
     "TREND Rank":10,
     "Average Points Rank":11,
@@ -7369,9 +7382,9 @@
             "is_champion":false
           },
           {
-            "name":"Chris Boswell",
-            "points":47.0,
-            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/1945.jpg",
+            "name":"Jason Myers",
+            "points":54.5,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/2747.jpg",
             "is_champion":false
           }
         ],
@@ -7586,7 +7599,7 @@
       "all_time_points_rank":3,
       "avg_placement_rank":6,
       "high_week_rank":1,
-      "low_week_rank":10,
+      "low_week_rank":5,
       "high_player_week_rank":11
     },
     "QUIZ_SCORES":[
@@ -7956,7 +7969,7 @@
       "outcome":"Sieg"
     },
     "THIS_WEEK_OPPONENT":"Gonna be golden",
-    "THIS_WEEK_WIN_PROB":43.0,
+    "THIS_WEEK_WIN_PROB":47.2,
     "POWER RANK":2,
     "Power Rank Score":2.98,
     "LAST_WEEK_POWER_RANK":7,
@@ -8150,16 +8163,16 @@
             "is_champion":false
           },
           {
-            "name":"Baltimore Ravens",
-            "points":47.5,
-            "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/bal.png",
+            "name":"Houston Texans",
+            "points":50.5,
+            "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/hou.png",
             "is_champion":false
           }
         ],
         "TE":[
           {
             "name":"Dallas Goedert",
-            "points":183.7,
+            "points":191.2,
             "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/5022.jpg",
             "is_champion":false
           },
@@ -8335,7 +8348,7 @@
       "all_time_points_rank":10,
       "avg_placement_rank":11,
       "high_week_rank":11,
-      "low_week_rank":11,
+      "low_week_rank":6,
       "high_player_week_rank":12
     },
     "QUIZ_SCORES":[
@@ -8682,7 +8695,7 @@
       "outcome":"Sieg"
     },
     "THIS_WEEK_OPPONENT":"Bryce Girls",
-    "THIS_WEEK_WIN_PROB":53.6,
+    "THIS_WEEK_WIN_PROB":52.5,
     "POWER RANK":1,
     "Power Rank Score":2.42,
     "LAST_WEEK_POWER_RANK":2,
@@ -8691,7 +8704,7 @@
     "RB Strength Rank":2,
     "WR Strength Rank":6,
     "TE Strength Rank":4,
-    "K Strength Rank":10,
+    "K Strength Rank":11,
     "Bench Strength Rank":6,
     "TREND Rank":1,
     "Average Points Rank":1,
@@ -8805,7 +8818,7 @@
         },
         {
           "name":"Tee Higgins",
-          "points":236.5,
+          "points":240.0,
           "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6801.jpg",
           "is_champion":false
         },
@@ -8832,7 +8845,7 @@
           },
           {
             "name":"Brock Purdy",
-            "points":129.9,
+            "points":152.0,
             "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8183.jpg",
             "is_champion":false
           }
@@ -8851,9 +8864,9 @@
             "is_champion":false
           },
           {
-            "name":"Evan McPherson",
-            "points":55.5,
-            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7839.jpg",
+            "name":"Ka'imi Fairbairn",
+            "points":57.7,
+            "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/3451.jpg",
             "is_champion":false
           }
         ],
@@ -8892,7 +8905,7 @@
           },
           {
             "name":"George Kittle",
-            "points":57.9,
+            "points":63.0,
             "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4217.jpg",
             "is_champion":false
           }
@@ -8944,7 +8957,7 @@
           },
           {
             "name":"Tee Higgins",
-            "points":236.5,
+            "points":240.0,
             "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6801.jpg",
             "is_champion":false
           },
@@ -9037,7 +9050,7 @@
       "all_time_points_rank":12,
       "avg_placement_rank":12,
       "high_week_rank":10,
-      "low_week_rank":8,
+      "low_week_rank":2,
       "high_player_week_rank":5
     },
     "QUIZ_SCORES":[
