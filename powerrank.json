@@ -14,7 +14,7 @@
     "QB Strength":78,
     "RB Strength":100,
     "WR Strength":50,
-    "TE Strength":39,
+    "TE Strength":34,
     "K Strength":69,
     "QB Strength Count":1,
     "RB Strength Count":4,
@@ -37,20 +37,6 @@
         "my_guy_seasons":3,
         "in_bank":false,
         "in_strength":true
-      },
-      {
-        "name":"Sam Darnold",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4943.jpg",
-        "total_pts":54.8,
-        "comp":63,
-        "att":98,
-        "pass_yd":755,
-        "rush_yd":16,
-        "td":7,
-        "my_guy":false,
-        "my_guy_seasons":1,
-        "in_bank":false,
-        "in_strength":false
       }
     ],
     "RB":[
@@ -202,15 +188,15 @@
         "in_strength":false
       },
       {
-        "name":"Mike Gesicki",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4993.jpg",
-        "total_pts":45.9,
-        "targets":17,
-        "catches":12,
-        "yd":159,
-        "td":4,
+        "name":"Brenton Strange",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9480.jpg",
+        "total_pts":40.0,
+        "targets":26,
+        "catches":21,
+        "yd":235,
+        "td":1,
         "my_guy":false,
-        "my_guy_seasons":1,
+        "my_guy_seasons":2,
         "in_bank":false,
         "in_strength":true
       }
@@ -346,7 +332,7 @@
       "outcome":"Sieg"
     },
     "THIS_WEEK_OPPONENT":"Love Hurts, Purdy Heals",
-    "THIS_WEEK_WIN_PROB":53.4,
+    "THIS_WEEK_WIN_PROB":40.5,
     "POWER RANK":7,
     "Power Rank Score":6.58,
     "LAST_WEEK_POWER_RANK":7,
@@ -354,7 +340,7 @@
     "QB Strength Rank":4,
     "RB Strength Rank":1,
     "WR Strength Rank":9,
-    "TE Strength Rank":8,
+    "TE Strength Rank":10,
     "K Strength Rank":6,
     "Bench Strength Rank":2,
     "TREND Rank":10,
@@ -365,12 +351,6 @@
         "label":"CHI-Homer",
         "description":"4 Spieler von CHI im Kader - eindeutig ein Fan.",
         "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/chi.png"
-      },
-      {
-        "icon":"homer",
-        "label":"CIN-Homer",
-        "description":"3 Spieler von CIN im Kader - eindeutig ein Fan.",
-        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/cin.png"
       },
       {
         "icon":"giant_killer",
@@ -395,7 +375,7 @@
       {
         "icon":"wizard",
         "label":"Waiver-Wire-Wizard",
-        "description":"16 Waiver-Adds diese Saison - der fleißigste Kader-Bastler der Liga."
+        "description":"18 Waiver-Adds diese Saison - der fleißigste Kader-Bastler der Liga."
       },
       {
         "icon":"airraid",
@@ -408,8 +388,8 @@
         "description":"Die Defense war mit 14.0 Punkten besser als den Quarterback (13.1 Pkt.)."
       }
     ],
-    "COMMENTS":"Die Achterbahn fährt hoch und runter. Eine Woche heiß, die nächste wird abgestunken. Rinse and repeat. Bei mir gabs einige Ausfälle und dafür dann Ausrastung auf der Bank. Jetzt bin ich wiedermal letzter in der Start Sit Accuracy. Quasi der schlechteste Manager. \nAber ich sehe das, wie immer, als Zeichen für eine stabile Bank. Wenn Caleb wieder kommt, dann beginnt meine Season erst so richtig. Vielleicht führt mich der vierte starting TE endlich ins gelobte (Love)Land. Also Mike Gesicke, gib dir Mühe. Ach und ein Kicker der mehr als 6 Punkte macht, das wäre doch mal was.",
-    "FAAB_REMAINING":57,
+    "COMMENTS":"Wenn ich nicht den alten unsympatischen Mann nicht kurz vor Anpfiff für den aktuellen Super Bowl Champ getauscht hätte, würde die Presse Lobeslieder über mein Team schreiben.\nSo bleibt leider nur der eine Punkt aus dem direkten Duell mit den Daddies. Es war eine fürchterliche Woche mit ekelhaften Game Scripts. Swift und Brown dürften quasi nur eine Hälfte spielen, Michael Wilson mit einer schwachen Leistung gegen die Lions und Matt Gay verkickt seinen ersten Kick der Saison, Dank eines perfekt vorgetragenen Announcer Curses.\nZur Belohnung gibt es diese Woche den Sandmann mit seinem Superteam mit Brock Purdy und Kittle gegen die Commanders Montag Nacht. Das kann ja was werden. Muss ich wohl 180 machen.\nBitte Caleb, du bist meine letzte Hoffnung.",
+    "FAAB_REMAINING":46,
     "LEGACY_STATS":{
       "win_pct":57.1,
       "wins":60,
@@ -677,11 +657,11 @@
           }
         ]
       },
-      "waiver_moves":318,
+      "waiver_moves":320,
       "waiver_moves_by_season":[
         {
           "season":"2026",
-          "count":16
+          "count":18
         },
         {
           "season":"2025",
@@ -793,7 +773,7 @@
     "QUIZ_SCORES":[
       {
         "name":"Michi",
-        "score":5
+        "score":7
       }
     ],
     "Week 1":182.51,
@@ -810,7 +790,7 @@
     "Week 2 Waiver":4,
     "Week 3 Waiver":3,
     "Week 4 Waiver":3,
-    "Week 5 Waiver":2,
+    "Week 5 Waiver":4,
     "INJURY_COUNT":3,
     "DISPLAY_WEEK_LABEL":"Woche 5"
   },
@@ -836,7 +816,7 @@
     "WR Strength Count":4,
     "TE Strength Count":1,
     "K Strength Count":1,
-    "Bench Strength":74,
+    "Bench Strength":77,
     "Bench Strength Count":3,
     "QB":[
       {
@@ -949,13 +929,26 @@
         "in_strength":true
       },
       {
-        "name":"Dohnte Meyers",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/13264.jpg",
-        "total_pts":21.6,
-        "targets":18,
-        "catches":13,
-        "yd":141,
+        "name":"Ryan Flournoy",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11783.jpg",
+        "total_pts":27.4,
+        "targets":27,
+        "catches":16,
+        "yd":194,
         "td":0,
+        "my_guy":false,
+        "my_guy_seasons":1,
+        "in_bank":true,
+        "in_strength":false
+      },
+      {
+        "name":"Brandin Cooks",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/2197.jpg",
+        "total_pts":7.2,
+        "targets":3,
+        "catches":1,
+        "yd":7,
+        "td":1,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
@@ -1010,7 +1003,7 @@
         "td":1,
         "my_guy":false,
         "my_guy_seasons":2,
-        "in_bank":true,
+        "in_bank":false,
         "in_strength":false
       }
     ],
@@ -1148,17 +1141,17 @@
       "outcome":"Niederlage"
     },
     "THIS_WEEK_OPPONENT":"TrevorMutantNinjaTutens",
-    "THIS_WEEK_WIN_PROB":60.4,
+    "THIS_WEEK_WIN_PROB":43.8,
     "POWER RANK":10,
     "Power Rank Score":10.07,
     "LAST_WEEK_POWER_RANK":9,
     "POWER_RANK_DELTA":-1,
     "QB Strength Rank":10,
-    "RB Strength Rank":9,
+    "RB Strength Rank":8,
     "WR Strength Rank":6,
     "TE Strength Rank":3,
     "K Strength Rank":11,
-    "Bench Strength Rank":9,
+    "Bench Strength Rank":10,
     "TREND Rank":12,
     "Average Points Rank":10,
     "BADGES":[
@@ -1189,7 +1182,7 @@
         "description":"Durchschnittsalter 27.5 Jahre - der erfahrenste Kader der Liga."
       }
     ],
-    "COMMENTS":"Ich hab garnicht auf unsere Fantasy Scores geguckt und hab nur die B.Robinson Party gesehen und dachte: \"WOW, Lücke hatte ja mal ne Woche\" Aber ähnlich wie mein Monangai, hat hier auch einer richtig ordentlich die Bank gewärmt. Passiert den Besten.\nEs scheint so als hätte Lücke dieses Jahr seine Trades deutlich gewonnen. Bowers und Olave sind DIE DUDES. Dazu noch Bijan. *Chefs Kiss*. Leider wars das dann aber auch schon. Danach kommt NÜSCHT. Deswegen ist Lückes Truppe auch auf Platz 9. Ob Brain Robinson nochmal so abliefert, will ich erstmal sehen, aber vielleicht wird es ja eine Sonic & Knuckles Combo a la Detroit Lions der letzten Jahre.\n",
+    "COMMENTS":"Matt Stafford ist immernoch einer der besten Pure-Passers der Liga. Wenn die Rams in OT nicht super dumm gewesen wären, hätte er vielleicht noch einen TD mehr und 45 Punkte für Lücke gemacht. Aber Sean McVay wollte unbedingt Josh Allen seinen ersten OT Win EVER ermöglichen.\nHätte er mal mehr auf seine Rams Offense vertraut. Genauso wie Lücke mehr auf Blake Corum statt Brian Robinson vertrauen hätte sollen. Zwei Backup RBs zur Auswahl und Lücke nimmt den dirty Bird, statt des Rammbocks? Klar wird das bestraft.\nHätte, hätte, Fahrradkette. Bei Fantasy ist man am Ende immer schlauer. Wie eigentlich überall im Leben. I'm 14 and this is deep. Als Bears Fan muss ich mir leider eine schlechte Woche für Lucke wünschen, denn sein Bijan spielt gegen die Monsters of the Midway. ",
     "FAAB_REMAINING":55,
     "LEGACY_STATS":{
       "win_pct":47.6,
@@ -1458,11 +1451,11 @@
           }
         ]
       },
-      "waiver_moves":183,
+      "waiver_moves":185,
       "waiver_moves_by_season":[
         {
           "season":"2026",
-          "count":11
+          "count":13
         },
         {
           "season":"2025",
@@ -1564,13 +1557,13 @@
       "all_time_points_rank":9,
       "avg_placement_rank":5,
       "high_week_rank":3,
-      "low_week_rank":3,
+      "low_week_rank":5,
       "high_player_week_rank":9
     },
     "QUIZ_SCORES":[
       {
         "name":"Lücke",
-        "score":2
+        "score":4
       }
     ],
     "Week 1":95.85,
@@ -1616,20 +1609,6 @@
     "Bench Strength":84,
     "Bench Strength Count":3,
     "QB":[
-      {
-        "name":"Bo Nix",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11563.jpg",
-        "total_pts":68.2,
-        "comp":97,
-        "att":162,
-        "pass_yd":942,
-        "rush_yd":35,
-        "td":7,
-        "my_guy":false,
-        "my_guy_seasons":1,
-        "in_bank":false,
-        "in_strength":false
-      },
       {
         "name":"Dak Prescott",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/3294.jpg",
@@ -1724,6 +1703,19 @@
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":true,
+        "in_strength":false
+      },
+      {
+        "name":"Germie Bernard",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/13274.jpg",
+        "total_pts":20.9,
+        "targets":20,
+        "catches":13,
+        "yd":140,
+        "td":0,
+        "my_guy":false,
+        "my_guy_seasons":1,
+        "in_bank":false,
         "in_strength":false
       },
       {
@@ -1913,17 +1905,17 @@
       "outcome":"Niederlage"
     },
     "THIS_WEEK_OPPONENT":"Gonna be golden",
-    "THIS_WEEK_WIN_PROB":63.1,
+    "THIS_WEEK_WIN_PROB":60.0,
     "POWER RANK":5,
     "Power Rank Score":6.0,
     "LAST_WEEK_POWER_RANK":6,
     "POWER_RANK_DELTA":1,
     "QB Strength Rank":9,
     "RB Strength Rank":4,
-    "WR Strength Rank":11,
+    "WR Strength Rank":10,
     "TE Strength Rank":4,
-    "K Strength Rank":10,
-    "Bench Strength Rank":6,
+    "K Strength Rank":9,
+    "Bench Strength Rank":7,
     "TREND Rank":6,
     "Average Points Rank":6,
     "BADGES":[
@@ -1938,8 +1930,8 @@
         "description":"40.7% der Punkte diese Woche kamen von den RBs - volle Kontrolle am Boden."
       }
     ],
-    "COMMENTS":"Eigentlich wollte ich darüber schreiben wie die Daddies nur RBs von schlechten Teams haben. Aber bei näherer Betrachtung ist mir dann aufgefallen, dass sie Quinshon Judkins haben. Schon komisch, die Browns vorne mit dabei.\nDas muss man erstmal richtig verarbeiten. Nen bisschen so wie die Daddies in dieser Saison. Natürlich ohne die problematischen Signal Caller, das ist ja klar. Können die Daddies, ähnlich wie ihr Spirit Team Browns weiterhin diese stabile Form halten oder rutschen sie wieder unter 90 Punkte ab?\nDak Prescott hat bereits mittelmäßig vorgelegt. Sehr zu meiner Freude. Bitte so weitermachen.",
-    "FAAB_REMAINING":94,
+    "COMMENTS":"\n21 FAAB für Jerem...Gerry....aäääh Germie Bernard. The Nard-dog. Der erste große Einkauf für die Daddies. Man muss sich halt auch mal was gönnen. Man bekommt ja keine Zinsen drauf. Historisch gesehen ist wenig Roster Movement bei den Daddies und vorher bei Tilley alleine los. Platz 9 in Waiver Wire Moves und 11 in Trades. Das sind total Numbers. Ben ist seit kaum mehr als 2 Jahren dabei und hat shcon mehr Trades gemacht. Sind die Daddies zu verliebt in ihre Spieler? Dieses Jahr ist das vielleicht sogar eine gute Sache. Das Team ist competitve und es gab wirklich nur eine schlechte Performance in Woche 3. Außerdem sehe ich auch aktuell keinen Sell High candidate, sondern viele gute Spieler bei schlechten Teams, wodurch das Ceiling leicht limitiert wird. Das kann sich aber noch ändern, die Season ist noch lang.\n",
+    "FAAB_REMAINING":73,
     "LEGACY_STATS":{
       "win_pct":44.8,
       "wins":47,
@@ -2207,11 +2199,11 @@
           }
         ]
       },
-      "waiver_moves":133,
+      "waiver_moves":134,
       "waiver_moves_by_season":[
         {
           "season":"2026",
-          "count":8
+          "count":9
         },
         {
           "season":"2025",
@@ -2311,7 +2303,7 @@
     "QUIZ_SCORES":[
       {
         "name":"Till",
-        "score":3
+        "score":4
       },
       {
         "name":"Semih",
@@ -2332,8 +2324,8 @@
     "Week 2 Waiver":3,
     "Week 3 Waiver":2,
     "Week 4 Waiver":1,
-    "Week 5 Waiver":2,
-    "INJURY_COUNT":1,
+    "Week 5 Waiver":3,
+    "INJURY_COUNT":2,
     "DISPLAY_WEEK_LABEL":"Woche 5"
   },
   {
@@ -2582,12 +2574,12 @@
     ],
     "DEF":[
       {
-        "name":"Dallas Cowboys",
-        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/dal.png",
-        "total_pts":13.0,
-        "sack":5,
-        "int":0,
-        "fum_rec":2,
+        "name":"Indianapolis Colts",
+        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/ind.png",
+        "total_pts":15.0,
+        "sack":10,
+        "int":1,
+        "fum_rec":1,
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
@@ -2684,17 +2676,17 @@
       "outcome":"Niederlage"
     },
     "THIS_WEEK_OPPONENT":"BurrowButker and the Boys",
-    "THIS_WEEK_WIN_PROB":67.9,
+    "THIS_WEEK_WIN_PROB":86.1,
     "POWER RANK":11,
     "Power Rank Score":10.22,
     "LAST_WEEK_POWER_RANK":11,
     "POWER_RANK_DELTA":0,
     "QB Strength Rank":5,
     "RB Strength Rank":7,
-    "WR Strength Rank":12,
+    "WR Strength Rank":11,
     "TE Strength Rank":2,
-    "K Strength Rank":9,
-    "Bench Strength Rank":4,
+    "K Strength Rank":8,
+    "Bench Strength Rank":5,
     "TREND Rank":11,
     "Average Points Rank":9,
     "BADGES":[
@@ -2716,7 +2708,7 @@
         "description":"54.9% der Punkte diese Woche kamen von den RBs - volle Kontrolle am Boden."
       }
     ],
-    "COMMENTS":"Köppi hat's mir in einer PM schon selber perfekt zusammengefasst: \"boah wenn man 18 faab für allgeier ausgibt weiß man dass es schlecht aussieht… mein team ey…\" \nSoooo schlimm ist es doch garnicht. Naja, vielleicht sinds dann doch zu viele Spieler aus dem Paris Game geworden. Wobei die Steelers Offense langsam Punkte macht. Auch scheint Köppi bei der Wahl des Steelers RBs die bessere Wahl getroffen zu haben.\nEin kleines Luxusproblem und eine Chance zur Verbesserung: Beide TEs in Köppis Truppe sind besser als sein RB2 oder WR2. Vielleicht mal einen Trade probieren und Juwan nach Kelces BYE traden? Es gibt ja bekanntlich TE needy teams.\n",
+    "COMMENTS":"Tut euch einen Gefallen und guckt euch Köppis Performances von letzter Woche an. Es beginnt mit drei MONSTER Performances von Jayden Daniel5, Bucky Irving und Jaylen Warren. Alle mit 30-Burgers.\nDanach kommt ein Trauerspiel was seines gleichen sucht. Nur Duds, selbst vom Namensgeber Sungod...Naja ca. 9 Punkte, aber von dem erwartet man auch mehr in einem Blowout win gegen die tiny Birds. Abgesehen vom Kicker hat der Rest ZUSAMMEN keine 10 Punkte gemacht. Bitter. \nAber die altägyptischen Schedule Gods haben Köppi ein goldenes Los geschickt: In Woche 6 darf er gegen die Boys ran: Ohne Gibbs,Hall und Burrow. Das kann ja garnicht schief gehen. Da sollte ein Punkt quasi garantiert sein.",
     "FAAB_REMAINING":57,
     "LEGACY_STATS":{
       "win_pct":46.7,
@@ -2985,11 +2977,11 @@
           }
         ]
       },
-      "waiver_moves":194,
+      "waiver_moves":195,
       "waiver_moves_by_season":[
         {
           "season":"2026",
-          "count":9
+          "count":10
         },
         {
           "season":"2025",
@@ -3107,7 +3099,7 @@
     "Week 3 Waiver":2,
     "Week 4 Waiver":1,
     "Week 5 Waiver":1,
-    "INJURY_COUNT":3,
+    "INJURY_COUNT":4,
     "DISPLAY_WEEK_LABEL":"Woche 5"
   },
   {
@@ -3132,23 +3124,9 @@
     "WR Strength Count":4,
     "TE Strength Count":1,
     "K Strength Count":1,
-    "Bench Strength":72,
+    "Bench Strength":65,
     "Bench Strength Count":3,
     "QB":[
-      {
-        "name":"Jacoby Brissett",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/3257.jpg",
-        "total_pts":88.8,
-        "comp":132,
-        "att":199,
-        "pass_yd":1110,
-        "rush_yd":62,
-        "td":10,
-        "my_guy":false,
-        "my_guy_seasons":1,
-        "in_bank":false,
-        "in_strength":false
-      },
       {
         "name":"Patrick Mahomes",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4046.jpg",
@@ -3165,19 +3143,6 @@
       }
     ],
     "RB":[
-      {
-        "name":"Roschon Johnson",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/10235.jpg",
-        "total_pts":9.3,
-        "att":9,
-        "yd":22,
-        "ypc":2.4,
-        "td":0,
-        "my_guy":false,
-        "my_guy_seasons":1,
-        "in_bank":false,
-        "in_strength":false
-      },
       {
         "name":"Cam Skattebo",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12481.jpg",
@@ -3216,6 +3181,19 @@
         "my_guy_seasons":3,
         "in_bank":false,
         "in_strength":false
+      },
+      {
+        "name":"Tyjae Spears",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9508.jpg",
+        "total_pts":18.3,
+        "att":17,
+        "yd":65,
+        "ypc":3.8,
+        "td":0,
+        "my_guy":false,
+        "my_guy_seasons":1,
+        "in_bank":true,
+        "in_strength":false
       }
     ],
     "WR":[
@@ -3231,19 +3209,6 @@
         "my_guy_seasons":1,
         "in_bank":false,
         "in_strength":true
-      },
-      {
-        "name":"Efton Chism",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12542.jpg",
-        "total_pts":21.1,
-        "targets":13,
-        "catches":9,
-        "yd":98,
-        "td":1,
-        "my_guy":false,
-        "my_guy_seasons":1,
-        "in_bank":true,
-        "in_strength":false
       },
       {
         "name":"Chris Godwin",
@@ -3296,19 +3261,6 @@
         "my_guy_seasons":1,
         "in_bank":false,
         "in_strength":true
-      },
-      {
-        "name":"Quentin Johnston",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9754.jpg",
-        "total_pts":14.6,
-        "targets":19,
-        "catches":7,
-        "yd":108,
-        "td":0,
-        "my_guy":false,
-        "my_guy_seasons":2,
-        "in_bank":false,
-        "in_strength":false
       }
     ],
     "TE":[
@@ -3341,6 +3293,19 @@
     ],
     "K":[
       {
+        "name":"Nick Folk",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/650.jpg",
+        "total_pts":42.0,
+        "fgm":9,
+        "fga":12,
+        "xpm":12,
+        "xpa":12,
+        "my_guy":true,
+        "my_guy_seasons":3,
+        "in_bank":false,
+        "in_strength":false
+      },
+      {
         "name":"Evan McPherson",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7839.jpg",
         "total_pts":54.0,
@@ -3356,15 +3321,15 @@
     ],
     "DEF":[
       {
-        "name":"New York Jets",
-        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/nyj.png",
-        "total_pts":43.0,
-        "sack":17,
-        "int":1,
-        "fum_rec":4,
+        "name":"Baltimore Ravens",
+        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/bal.png",
+        "total_pts":30.0,
+        "sack":10,
+        "int":3,
+        "fum_rec":3,
         "td":0,
         "my_guy":false,
-        "my_guy_seasons":1,
+        "my_guy_seasons":2,
         "in_bank":false,
         "in_strength":true
       }
@@ -3458,17 +3423,17 @@
       "outcome":"Sieg"
     },
     "THIS_WEEK_OPPONENT":"Pandan Buns",
-    "THIS_WEEK_WIN_PROB":48.6,
+    "THIS_WEEK_WIN_PROB":70.9,
     "POWER RANK":3,
     "Power Rank Score":2.6,
     "LAST_WEEK_POWER_RANK":3,
     "POWER_RANK_DELTA":0,
     "QB Strength Rank":6,
-    "RB Strength Rank":11,
+    "RB Strength Rank":10,
     "WR Strength Rank":1,
     "TE Strength Rank":5,
     "K Strength Rank":3,
-    "Bench Strength Rank":10,
+    "Bench Strength Rank":12,
     "TREND Rank":3,
     "Average Points Rank":2,
     "BADGES":[
@@ -3483,7 +3448,7 @@
         "description":"Die Defense war mit 21.5 Punkten besser als jeden Running Back (16.05 Pkt.)."
       }
     ],
-    "COMMENTS":"Philipps RB Room besteht aus Cam Skattebo und Ollie Gordon. Das muss man erstmal sacken lassen. Es sieht auch irgendwie nicht so aus, als würde Josh Jacobs dieses Jahr noch spielen.\nNa da bin ich mal gespannt auf die Streaming Options in den kommenden Wochen. Letzte Woche hat CeeDee Lamb alleine für den Sieg gesorgt. 17 Catches. Anscheinend haben die Football Götter sich auch direkt revangiert in Woche 5...die scheiß Cowboys, \"Embarrassing\"\nVele und Watson sind weiterhin Steals und punkten deutlich über ADP Value. Aber ich bin gespannt ob die Truppe diese Woche die 140 knackt mit Jake Briskett statt Patty Mahomes. Anscheinend nötig, denn Bucky hat shcon ordentlich vorgelegt.",
+    "COMMENTS":"Josh Jacobs scheint wirklich wieder zu kommen. Ekelhaft. Philipps Team war schon gut genug. Außerdem werden die Packers dadurch vermutlich auch besser. Es sei denn Jacobs bringt einen Watson-esque stink zu den Packers und Philipps Team. Dann bin ich natürlich komplett dabei.\nEs ist wirklich bemerkenswert, wie Philipp jedes Jahr ein gutes Team hat. Diese Woche hat er aber Probleme mit Byes und seine Projection ist im Keller. Praktisch, dass das Tabellenschlußlicht gegen ihn spielt. ZUFALL? Ich sehe da eine größere Verschwörung.\n",
     "FAAB_REMAINING":42,
     "LEGACY_STATS":{
       "win_pct":62.9,
@@ -3752,11 +3717,11 @@
           }
         ]
       },
-      "waiver_moves":153,
+      "waiver_moves":156,
       "waiver_moves_by_season":[
         {
           "season":"2026",
-          "count":9
+          "count":12
         },
         {
           "season":"2025",
@@ -3839,13 +3804,13 @@
         "ties":0
       },
       "opfer":{
-        "name":"oppossumfrank",
-        "wins":6,
-        "losses":0,
+        "name":"Sternburg1000",
+        "wins":7,
+        "losses":1,
         "ties":0
       },
       "win_pct_rank":1,
-      "waiver_moves_rank":7,
+      "waiver_moves_rank":6,
       "trades_rank":4,
       "all_time_points_rank":1,
       "avg_placement_rank":2,
@@ -3873,8 +3838,8 @@
     "Week 2 Waiver":0,
     "Week 3 Waiver":2,
     "Week 4 Waiver":3,
-    "Week 5 Waiver":3,
-    "INJURY_COUNT":4,
+    "Week 5 Waiver":5,
+    "INJURY_COUNT":2,
     "DISPLAY_WEEK_LABEL":"Woche 5"
   },
   {
@@ -3899,7 +3864,7 @@
     "WR Strength Count":3,
     "TE Strength Count":1,
     "K Strength Count":1,
-    "Bench Strength":86,
+    "Bench Strength":82,
     "Bench Strength Count":3,
     "QB":[
       {
@@ -3932,6 +3897,19 @@
         "in_strength":true
       },
       {
+        "name":"Jaleel McLaughlin",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11439.jpg",
+        "total_pts":9.1,
+        "att":2,
+        "yd":31,
+        "ypc":15.5,
+        "td":1,
+        "my_guy":false,
+        "my_guy_seasons":1,
+        "in_bank":false,
+        "in_strength":false
+      },
+      {
         "name":"Jadarian Price",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/13286.jpg",
         "total_pts":12.0,
@@ -3954,19 +3932,6 @@
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
-        "in_bank":false,
-        "in_strength":false
-      },
-      {
-        "name":"Austin Ekeler",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4663.jpg",
-        "total_pts":6.4,
-        "att":7,
-        "yd":28,
-        "ypc":4.0,
-        "td":0,
-        "my_guy":false,
-        "my_guy_seasons":2,
         "in_bank":false,
         "in_strength":false
       },
@@ -4038,6 +4003,19 @@
         "in_strength":true
       },
       {
+        "name":"Kendrick Bourne",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4454.jpg",
+        "total_pts":26.3,
+        "targets":22,
+        "catches":17,
+        "yd":178,
+        "td":0,
+        "my_guy":false,
+        "my_guy_seasons":1,
+        "in_bank":true,
+        "in_strength":false
+      },
+      {
         "name":"Jaylen Waddle",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7526.jpg",
         "total_pts":39.7,
@@ -4079,19 +4057,6 @@
     ],
     "TE":[
       {
-        "name":"Kenyon Sadiq",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/13330.jpg",
-        "total_pts":31.9,
-        "targets":21,
-        "catches":14,
-        "yd":146,
-        "td":2,
-        "my_guy":false,
-        "my_guy_seasons":1,
-        "in_bank":true,
-        "in_strength":false
-      },
-      {
         "name":"Tucker Kraft",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9484.jpg",
         "total_pts":37.7,
@@ -4122,15 +4087,15 @@
     ],
     "DEF":[
       {
-        "name":"Cincinnati Bengals",
-        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/cin.png",
-        "total_pts":51.0,
-        "sack":17,
+        "name":"San Francisco 49ers",
+        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/sf.png",
+        "total_pts":45.0,
+        "sack":11,
         "int":3,
-        "fum_rec":5,
+        "fum_rec":3,
         "td":1,
         "my_guy":false,
-        "my_guy_seasons":1,
+        "my_guy_seasons":2,
         "in_bank":false,
         "in_strength":true
       }
@@ -4224,7 +4189,7 @@
       "outcome":"Niederlage"
     },
     "THIS_WEEK_OPPONENT":"Two Daddies One Bride ",
-    "THIS_WEEK_WIN_PROB":36.9,
+    "THIS_WEEK_WIN_PROB":40.0,
     "POWER RANK":8,
     "Power Rank Score":6.62,
     "LAST_WEEK_POWER_RANK":5,
@@ -4234,15 +4199,10 @@
     "WR Strength Rank":8,
     "TE Strength Rank":11,
     "K Strength Rank":1,
-    "Bench Strength Rank":5,
+    "Bench Strength Rank":8,
     "TREND Rank":7,
     "Average Points Rank":7,
     "BADGES":[
-      {
-        "icon":"hospital",
-        "label":"The Hospital",
-        "description":"5 verletzte Spieler im Kader (Out\/IR\/Questionable\/Doubtful) - die größte Krankenstation der Liga."
-      },
       {
         "icon":"consistent",
         "label":"Mr. Consistent",
@@ -4259,8 +4219,8 @@
         "description":"Der Kicker war mit 22.3 Punkten besser als jeden Running Back (12.95 Pkt.) und jeden Wide Receiver (18.55 Pkt.)."
       }
     ],
-    "COMMENTS":"Tine hat diese Woche mal einen Einblick, wie ihr Team so abschneiden würde, wenn K9 sich verletzt. Denn die BYE Weeks haben begonnen. Emanuel Wilson und Rico Dowdle müssen also diese Woche als Starter ran.\nWenn jetzt Jamar Chase noch fehlt, dann wirds richtig dunkel. Da könnte der Kalif aktiviert werden. Nach drei sehr stabilen Performances könnte es diese Woche mal wieder bergab gehen, aber so ist das halt, wenn die besten Spieler fehlen.\nQuasi nix zu verlieren. \n ",
-    "FAAB_REMAINING":84,
+    "COMMENTS":"Es ist vielleicht immer eine gute Idee, den besten Spieler der Liga in seinem Fantasy Team zu haben. Manche Spieler haben einfach die göttliche Gabe, nicht nur physisch aber auch mental. Selten hat ein Spieler so sehr seine Genaration geprägt und hätte schon viel öfter für seine Leistungen belohnt werden. Selbst ohne Ring bzw. Super Bowl Appearance ist er jetzt schon First Ballot Hall of Famer. Ihr könnt euch sicherlich denken von wem ich spreche.\nEs geht natürlich um Spencer Shrader. Der Mann mit dem rechten Huf. Passend, dass der bei den Colts spielt. Tine hat endlich ihren neuen Koo gefunden, und dieser sorgt ordentlich für Punkte. Egal wen sie sonst aufstellen muss, Josh Allen und Spencer Shrader machen zusammen immer 50.",
+    "FAAB_REMAINING":49,
     "LEGACY_STATS":{
       "win_pct":46.7,
       "wins":49,
@@ -4347,7 +4307,7 @@
         },
         {
           "name":"Jaylen Waddle",
-          "points":461.7,
+          "points":466.1,
           "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7526.jpg",
           "is_champion":false
         },
@@ -4492,7 +4452,7 @@
         "WR":[
           {
             "name":"Jaylen Waddle",
-            "points":461.7,
+            "points":466.1,
             "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7526.jpg",
             "is_champion":false
           },
@@ -4528,11 +4488,11 @@
           }
         ]
       },
-      "waiver_moves":195,
+      "waiver_moves":198,
       "waiver_moves_by_season":[
         {
           "season":"2026",
-          "count":5
+          "count":8
         },
         {
           "season":"2025",
@@ -4606,9 +4566,9 @@
         "week":4
       },
       "low_week":{
-        "points":62.08,
-        "season":"2022",
-        "week":17
+        "points":10.85,
+        "season":"2026",
+        "week":6
       },
       "high_player_week":{
         "points":50.85,
@@ -4634,13 +4594,13 @@
       "all_time_points_rank":6,
       "avg_placement_rank":8,
       "high_week_rank":7,
-      "low_week_rank":4,
+      "low_week_rank":1,
       "high_player_week_rank":6
     },
     "QUIZ_SCORES":[
       {
         "name":"Tine",
-        "score":4
+        "score":5
       }
     ],
     "Week 1":107.16,
@@ -4657,7 +4617,7 @@
     "Week 2 Waiver":2,
     "Week 3 Waiver":2,
     "Week 4 Waiver":1,
-    "Week 5 Waiver":0,
+    "Week 5 Waiver":3,
     "INJURY_COUNT":5,
     "DISPLAY_WEEK_LABEL":"Woche 5"
   },
@@ -4677,7 +4637,7 @@
     "RB Strength":29,
     "WR Strength":79,
     "TE Strength":19,
-    "K Strength":66,
+    "K Strength":58,
     "QB Strength Count":1,
     "RB Strength Count":2,
     "WR Strength Count":4,
@@ -4865,13 +4825,13 @@
     ],
     "K":[
       {
-        "name":"Jake Bates",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11539.jpg",
-        "total_pts":49.0,
-        "fgm":8,
-        "fga":8,
-        "xpm":20,
-        "xpa":20,
+        "name":"Tyler Bass",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7042.jpg",
+        "total_pts":43.0,
+        "fgm":9,
+        "fga":9,
+        "xpm":15,
+        "xpa":17,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
@@ -4995,17 +4955,17 @@
       "outcome":"Sieg"
     },
     "THIS_WEEK_OPPONENT":"pk123",
-    "THIS_WEEK_WIN_PROB":51.4,
+    "THIS_WEEK_WIN_PROB":29.1,
     "POWER RANK":12,
     "Power Rank Score":10.52,
     "LAST_WEEK_POWER_RANK":12,
     "POWER_RANK_DELTA":0,
     "QB Strength Rank":11,
-    "RB Strength Rank":12,
-    "WR Strength Rank":2,
+    "RB Strength Rank":11,
+    "WR Strength Rank":4,
     "TE Strength Rank":12,
-    "K Strength Rank":8,
-    "Bench Strength Rank":10,
+    "K Strength Rank":10,
+    "Bench Strength Rank":11,
     "TREND Rank":9,
     "Average Points Rank":12,
     "BADGES":[
@@ -5030,7 +4990,7 @@
         "description":"Die Defense war mit 15.0 Punkten besser als jeden Running Back (14.9 Pkt.)."
       }
     ],
-    "COMMENTS":"Ich mach's kurz: Leos Team ist furchtbar. Genau wenn Drake Maye endlich mal klarkommt, macht JSN eine Woche Pause. Es hilft auch einfach nicht, wenn man die RBs der schlechtesten Rushing Attacks der Liga hat.\nMein geheimer Hoffnungsträger für Leos Team: Rome Odunze. Er hat letzte Woche ordentlich gespielt und seine Snap% steigt stetig. Ansonsten holt mich da nicht wirklich was ab. Kyle Pitts hat 9 fucking Punkte nach 4 Wochen. Die Truppe brauch mal ne saftige Ansage. ",
+    "COMMENTS":"Da ist das Ding! Leos erster persönlicher Meilenstein wurde diese Woche ist erreicht. 140 Punkte und den Doppelsieg, Hammer. Und woran hat's gelegen? Drake Maye (49), Die Browns(15) und JSN(21) machen zu dritt 85 Punkte.\nGepaart mit ein paar schwachen und mittelmäßigen, naja teilweise auch soliden, Performances und schon hat man eine vorzeigbare Woche. Kommt jetzt die Wende? Noch bin ich skeptisch. Denn Drake wird nicht jede Woche fast 50 Dinger machen. Und Leos RBs sind quasi nicht existent.\nAber es gibt mir auf jeden Fall Hoffnung, dass Leos Team wieder wettbewerbsfähig ist. Außerdem beneide ich Leo um seine Geduld. Ich rolle in Woche 6 meinen vierten TE aus und Leo ist seinem Kyle Pitts treu geblieben und wurde mit kanpp 13 Buletten belohnt.\n",
     "FAAB_REMAINING":48,
     "LEGACY_STATS":{
       "win_pct":49.5,
@@ -5299,11 +5259,11 @@
           }
         ]
       },
-      "waiver_moves":152,
+      "waiver_moves":153,
       "waiver_moves_by_season":[
         {
           "season":"2026",
-          "count":5
+          "count":6
         },
         {
           "season":"2025",
@@ -5365,9 +5325,9 @@
         "week":2
       },
       "low_week":{
-        "points":50.27,
-        "season":"2023",
-        "week":15
+        "points":33.75,
+        "season":"2026",
+        "week":6
       },
       "high_player_week":{
         "points":50.55,
@@ -5376,9 +5336,9 @@
         "week":3
       },
       "angstgegner":{
-        "name":"pk123",
+        "name":"kobekope",
         "wins":6,
-        "losses":0,
+        "losses":1,
         "ties":0
       },
       "opfer":{
@@ -5393,7 +5353,7 @@
       "all_time_points_rank":7,
       "avg_placement_rank":7,
       "high_week_rank":9,
-      "low_week_rank":1,
+      "low_week_rank":4,
       "high_player_week_rank":7
     },
     "QUIZ_SCORES":[
@@ -5417,7 +5377,7 @@
     "Week 3 Waiver":2,
     "Week 4 Waiver":1,
     "Week 5 Waiver":2,
-    "INJURY_COUNT":4,
+    "INJURY_COUNT":3,
     "DISPLAY_WEEK_LABEL":"Woche 5"
   },
   {
@@ -5446,6 +5406,20 @@
     "Bench Strength Count":3,
     "QB":[
       {
+        "name":"Kirk Cousins",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/1166.jpg",
+        "total_pts":96.6,
+        "comp":112,
+        "att":172,
+        "pass_yd":1269,
+        "rush_yd":-2,
+        "td":12,
+        "my_guy":false,
+        "my_guy_seasons":1,
+        "in_bank":false,
+        "in_strength":false
+      },
+      {
         "name":"Joe Burrow",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6770.jpg",
         "total_pts":104.2,
@@ -5461,6 +5435,19 @@
       }
     ],
     "RB":[
+      {
+        "name":"Kimani Vidal",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11647.jpg",
+        "total_pts":25.2,
+        "att":14,
+        "yd":88,
+        "ypc":6.3,
+        "td":2,
+        "my_guy":false,
+        "my_guy_seasons":2,
+        "in_bank":false,
+        "in_strength":false
+      },
       {
         "name":"Kenny Gainwell",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7567.jpg",
@@ -5741,15 +5728,15 @@
       "outcome":"Sieg"
     },
     "THIS_WEEK_OPPONENT":"𓇳𓋹𓎡𓅓𓂋",
-    "THIS_WEEK_WIN_PROB":32.1,
+    "THIS_WEEK_WIN_PROB":13.9,
     "POWER RANK":4,
     "Power Rank Score":4.82,
     "LAST_WEEK_POWER_RANK":8,
     "POWER_RANK_DELTA":4,
     "QB Strength Rank":7,
     "RB Strength Rank":6,
-    "WR Strength Rank":3,
-    "TE Strength Rank":9,
+    "WR Strength Rank":5,
+    "TE Strength Rank":8,
     "K Strength Rank":11,
     "Bench Strength Rank":1,
     "TREND Rank":5,
@@ -5771,7 +5758,7 @@
         "description":"98 FAAB übrig - der Wal der Liga."
       }
     ],
-    "COMMENTS":"Peter und Ben haben nach vier Wochen schon 150 Punkte mehr kassiert als Köppi. Also quasi eine ganze highscoring Woche extra an Gegentreffern. Da machste einfach nix. Die Jungs haben aber eigentlich eine gute Truppe, wobei bald ein RB her muss, sonst sieht's während der Bye-Week schlecht aus.\nMit 5 ordentlichen WR sollten sie doch ein Tradepartner finden können. Ich weiß nur nicht ob die Eagles D die Antwort ist. Man kann auch die Defense wechseln Jungs, ist nicht verboten. Wobei die letztes Jahr auch am Anfang scheiße waren, ich es hier ähnlich kommentiert habe und die dann steil gegangen sind.\n",
+    "COMMENTS":"Diese Woche sieht es wirklich nicht gut aus für die Boys. Kein Gibbs, Kein Burrow aber zwei Kicker im Team. Absurd dabei: Weder Santos oder Butker haben einen Bye.\nDas riecht für mich nach wenig Investment. Mehr muss ich dazu nicht sagen. Wenn Kenny Gainwell und Vidal nicht magische Wochen haben, sehe ich hier eine low scoring Performance kommen.\nNur 3 Non-QBs im Team haben eine zweistellige Projection. Bitter.",
     "FAAB_REMAINING":98,
     "LEGACY_STATS":{
       "win_pct":60.6,
@@ -5826,9 +5813,9 @@
           "is_champion":false
         },
         {
-          "name":"Kenny Gainwell",
-          "weeks":22,
-          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/7567.jpg",
+          "name":"Kimani Vidal",
+          "weeks":24,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11647.jpg",
           "is_champion":false
         }
       ],
@@ -6028,11 +6015,11 @@
           }
         ]
       },
-      "waiver_moves":34,
+      "waiver_moves":36,
       "waiver_moves_by_season":[
         {
           "season":"2026",
-          "count":2
+          "count":4
         },
         {
           "season":"2025",
@@ -6125,8 +6112,8 @@
     "Week 2 Waiver":0,
     "Week 3 Waiver":0,
     "Week 4 Waiver":2,
-    "Week 5 Waiver":0,
-    "INJURY_COUNT":2,
+    "Week 5 Waiver":1,
+    "INJURY_COUNT":3,
     "DISPLAY_WEEK_LABEL":"Woche 5"
   },
   {
@@ -6142,8 +6129,8 @@
     "TREND":"UP",
     "Trend Percentage":140.6,
     "QB Strength":79,
-    "RB Strength":55,
-    "WR Strength":76,
+    "RB Strength":53,
+    "WR Strength":86,
     "TE Strength":35,
     "K Strength":70,
     "QB Strength Count":1,
@@ -6185,6 +6172,32 @@
     ],
     "RB":[
       {
+        "name":"Ashton Jeanty",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12527.jpg",
+        "total_pts":73.6,
+        "att":88,
+        "yd":291,
+        "ypc":3.3,
+        "td":2,
+        "my_guy":false,
+        "my_guy_seasons":1,
+        "in_bank":false,
+        "in_strength":true
+      },
+      {
+        "name":"Mike Washington",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/13305.jpg",
+        "total_pts":19.9,
+        "att":25,
+        "yd":125,
+        "ypc":5.0,
+        "td":1,
+        "my_guy":false,
+        "my_guy_seasons":1,
+        "in_bank":false,
+        "in_strength":false
+      },
+      {
         "name":"Jonah Coleman",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/13345.jpg",
         "total_pts":13.3,
@@ -6196,32 +6209,6 @@
         "my_guy_seasons":1,
         "in_bank":true,
         "in_strength":false
-      },
-      {
-        "name":"Kaelon Black",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/13414.jpg",
-        "total_pts":14.6,
-        "att":37,
-        "yd":136,
-        "ypc":3.7,
-        "td":0,
-        "my_guy":false,
-        "my_guy_seasons":1,
-        "in_bank":false,
-        "in_strength":false
-      },
-      {
-        "name":"Christian McCaffrey",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4034.jpg",
-        "total_pts":81.8,
-        "att":61,
-        "yd":286,
-        "ypc":4.7,
-        "td":5,
-        "my_guy":false,
-        "my_guy_seasons":1,
-        "in_bank":false,
-        "in_strength":true
       },
       {
         "name":"Javonte Williams",
@@ -6291,15 +6278,15 @@
         "in_strength":true
       },
       {
-        "name":"Luther Burden",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12519.jpg",
-        "total_pts":44.3,
-        "targets":35,
-        "catches":23,
-        "yd":266,
-        "td":1,
+        "name":"Tetairoa McMillan",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12526.jpg",
+        "total_pts":61.5,
+        "targets":39,
+        "catches":26,
+        "yd":385,
+        "td":2,
         "my_guy":false,
-        "my_guy_seasons":1,
+        "my_guy_seasons":2,
         "in_bank":false,
         "in_strength":true
       },
@@ -6477,7 +6464,7 @@
       "outcome":"Niederlage"
     },
     "THIS_WEEK_OPPONENT":"The PUK-A-BOOs",
-    "THIS_WEEK_WIN_PROB":72.8,
+    "THIS_WEEK_WIN_PROB":52.9,
     "POWER RANK":6,
     "Power Rank Score":6.38,
     "LAST_WEEK_POWER_RANK":4,
@@ -6485,16 +6472,22 @@
     "QB Strength Rank":3,
     "RB Strength Rank":8,
     "WR Strength Rank":3,
-    "TE Strength Rank":10,
+    "TE Strength Rank":9,
     "K Strength Rank":5,
     "Bench Strength Rank":3,
     "TREND Rank":4,
     "Average Points Rank":8,
     "BADGES":[
       {
+        "icon":"homer",
+        "label":"LV-Homer",
+        "description":"3 Spieler von LV im Kader - eindeutig ein Fan.",
+        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/lv.png"
+      },
+      {
         "icon":"ruin",
         "label":"Ärmstes Team",
-        "description":"Nur noch 2 FAAB übrig - Waiver-Wire-Bettler."
+        "description":"Nur noch 27 FAAB übrig - Waiver-Wire-Bettler."
       },
       {
         "icon":"kindergarten",
@@ -6502,8 +6495,8 @@
         "description":"4 Rookies im Kader - die Zukunft der Liga (hoffentlich)."
       }
     ],
-    "COMMENTS":"Der Bryce Young hype geht ganz schön steil. Jetzt werden schon Teams nach ihm benannt, während er in der BYE Week auf der Bank gestached wird, damit sich den ja keiner holt. Was für eine Transformation. Aber ich vertraue der Nummer auch nicht so richtig. Das gilt eigentlich für Mo's ganzes Team.\nIrgendwie scheint bei der Kalkulation der BANK auch was nicht zu stimmen, denn Mo hat garantiert nicht die besten Ersatzspieler. Das muss ich mir nochmal anschauen. Jetzt zum Abschluß noch was Positives: Der Teamname ist 10\/10 und Zay Flowers ist ein Top 5 WR (Hoffentlich ist Lamar nicht lange verletzt)\n\n",
-    "FAAB_REMAINING":2,
+    "COMMENTS":"\"Dieses Jahr trade ich nicht\"....famous last words. Naja, nun ist der Stack perfekt. Bryce Young zu TMac. Das könnte eine gefährliche Kombo sein, jeder TD mindestens 13 Punkte. Es war ein echter Blockbuster Trade, den man aus Mo's Perspektive nicht zwangsläufig verstehen muss, aber er war sicherlich nicht unfair oder sinnlos. \nDoch ein bereits schwacher RB Room ist noch schwächer geworden, auf der anderen Seite gibt es dafür bei den WR jetzt noch mehr Firepower. Mo will einfach das Air Raid Team sein. Als Beilage gibt es dazu zwei Running Backs die ausschließlich über Volume überzeugen.\nJavonte (3,7) und Ashton (3,3) machen wenig Yards, die dann aber ganz oft. High floor, low ceiling. ",
+    "FAAB_REMAINING":27,
     "LEGACY_STATS":{
       "win_pct":43.8,
       "wins":46,
@@ -6551,6 +6544,12 @@
           "is_champion":false
         },
         {
+          "name":"Tetairoa McMillan",
+          "weeks":29,
+          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12526.jpg",
+          "is_champion":false
+        },
+        {
           "name":"Stefon Diggs",
           "weeks":29,
           "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/2449.jpg",
@@ -6566,12 +6565,6 @@
           "name":"Jonathan Taylor",
           "weeks":25,
           "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6813.jpg",
-          "is_champion":false
-        },
-        {
-          "name":"Zach Charbonnet",
-          "weeks":24,
-          "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/9753.jpg",
           "is_champion":false
         }
       ],
@@ -6798,11 +6791,11 @@
           "count":19
         }
       ],
-      "trades":14,
+      "trades":15,
       "trades_by_season":[
         {
           "season":"2026",
-          "count":1
+          "count":2
         },
         {
           "season":"2025",
@@ -6872,7 +6865,7 @@
         "ties":0
       },
       "win_pct_rank":12,
-      "waiver_moves_rank":5,
+      "waiver_moves_rank":7,
       "trades_rank":2,
       "all_time_points_rank":5,
       "avg_placement_rank":10,
@@ -6883,7 +6876,7 @@
     "QUIZ_SCORES":[
       {
         "name":"Mo",
-        "score":5
+        "score":7
       }
     ],
     "Week 1":154.36,
@@ -6901,7 +6894,7 @@
     "Week 3 Waiver":2,
     "Week 4 Waiver":1,
     "Week 5 Waiver":0,
-    "INJURY_COUNT":3,
+    "INJURY_COUNT":2,
     "DISPLAY_WEEK_LABEL":"Woche 5"
   },
   {
@@ -6917,32 +6910,18 @@
     "TREND":"NO TREND",
     "Trend Percentage":132.4,
     "QB Strength":68,
-    "RB Strength":40,
-    "WR Strength":74,
+    "RB Strength":27,
+    "WR Strength":87,
     "TE Strength":47,
     "K Strength":69,
     "QB Strength Count":1,
-    "RB Strength Count":3,
-    "WR Strength Count":3,
+    "RB Strength Count":2,
+    "WR Strength Count":4,
     "TE Strength Count":1,
     "K Strength Count":1,
-    "Bench Strength":77,
+    "Bench Strength":86,
     "Bench Strength Count":3,
     "QB":[
-      {
-        "name":"Kirk Cousins",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/1166.jpg",
-        "total_pts":96.6,
-        "comp":112,
-        "att":172,
-        "pass_yd":1269,
-        "rush_yd":-2,
-        "td":12,
-        "my_guy":false,
-        "my_guy_seasons":1,
-        "in_bank":false,
-        "in_strength":false
-      },
       {
         "name":"Lamar Jackson",
         "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4881.jpg",
@@ -6956,6 +6935,20 @@
         "my_guy_seasons":1,
         "in_bank":false,
         "in_strength":true
+      },
+      {
+        "name":"Jordan Love",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6804.jpg",
+        "total_pts":93.1,
+        "comp":112,
+        "att":185,
+        "pass_yd":1408,
+        "rush_yd":-2,
+        "td":10,
+        "my_guy":false,
+        "my_guy_seasons":1,
+        "in_bank":false,
+        "in_strength":false
       }
     ],
     "RB":[
@@ -6969,8 +6962,8 @@
         "td":3,
         "my_guy":false,
         "my_guy_seasons":1,
-        "in_bank":false,
-        "in_strength":true
+        "in_bank":true,
+        "in_strength":false
       },
       {
         "name":"Woody Marks",
@@ -7060,23 +7053,23 @@
         "td":2,
         "my_guy":false,
         "my_guy_seasons":1,
-        "in_bank":true,
+        "in_bank":false,
         "in_strength":false
       }
     ],
     "WR":[
       {
-        "name":"Brian Thomas",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/11631.jpg",
-        "total_pts":21.0,
-        "targets":18,
-        "catches":9,
-        "yd":105,
-        "td":1,
+        "name":"Darius Cooper",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/13150.jpg",
+        "total_pts":40.5,
+        "targets":13,
+        "catches":7,
+        "yd":130,
+        "td":4,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
-        "in_strength":false
+        "in_strength":true
       },
       {
         "name":"Stefon Diggs",
@@ -7251,20 +7244,25 @@
       "outcome":"Niederlage"
     },
     "THIS_WEEK_OPPONENT":"Bryce Girls",
-    "THIS_WEEK_WIN_PROB":27.2,
+    "THIS_WEEK_WIN_PROB":47.1,
     "POWER RANK":9,
     "Power Rank Score":9.18,
     "LAST_WEEK_POWER_RANK":10,
     "POWER_RANK_DELTA":1,
     "QB Strength Rank":8,
-    "RB Strength Rank":10,
-    "WR Strength Rank":5,
+    "RB Strength Rank":12,
+    "WR Strength Rank":2,
     "TE Strength Rank":7,
     "K Strength Rank":6,
-    "Bench Strength Rank":8,
+    "Bench Strength Rank":6,
     "TREND Rank":8,
     "Average Points Rank":11,
     "BADGES":[
+      {
+        "icon":"hospital",
+        "label":"The Hospital",
+        "description":"6 verletzte Spieler im Kader (Out\/IR\/Questionable\/Doubtful) - die größte Krankenstation der Liga."
+      },
       {
         "icon":"unlucky",
         "label":"Pechvogel der Woche",
@@ -7276,8 +7274,8 @@
         "description":"Der Kicker war mit 25.0 Punkten besser als jeden Running Back (16.7 Pkt.) und den Quarterback (15.62 Pkt.)."
       }
     ],
-    "COMMENTS":"Namesake Puka ist endlich da und hat direkt abgeliefert. Aber angeblich hat er eine Pre-Hernia also fast eine Hernia. Ihr fragt euch sicherlich, was ist Hernia? Ich habs gegooglet und es ist ein \"Austritt von inneren Organen oder Gewebe (wie Darmteilen) aus der Bauchhöhle\". \nKlingt erstmal nicht so geil. Da sollte man sich doch am besten 15 mal pro Spiel tacklen lassen, um die ganze Sache zu beruhigen. Alles in die richtige Positionen zurück drücken, sozusagen.\nIn diesem Sinne die Note für Jays Team: Pre-Scheiße. Also nicht Scheiße, aber wenn sich Puka verletzen sollte, dann ist es vermutlich Scheiße.",
-    "FAAB_REMAINING":80,
+    "COMMENTS":"Das beste Mittel um das Verletzungsrisiko des Super Star WR zu minimieren? 24 Targets! Puka wurde letzte Woche gefüttert, wie eine Gans im Südwesten Frankreichs. Schön viel getacklet werden. Der einzige in Jays Team, der noch mehr zu tun hatte war Jason Meyers.\nSieben Kicks, davon fünf Field Goals von 40 Yards oder mehr. Alle drin. Das ist FOOTBALL. Jays Saisonverlauf hat die steilste Wachstumskurve in den letzten zwei Wochen hingelegt und is womöglich ein Indikator weitere Verbesserungen. Der RB Room ist zwar reichlich gefüllt, aber eher mit Discounter Ware. Was die Jungs jeder in 5 Wochen zusammengesammelt haben, mach Gibbs in einer guten Woche.\nIch würde ja mit einem RB heavy Team traden. Sowas muss es doch in unserer Liga geben.",
+    "FAAB_REMAINING":73,
     "LEGACY_STATS":{
       "win_pct":48.6,
       "wins":51,
@@ -7423,7 +7421,7 @@
           },
           {
             "name":"Jason Myers",
-            "points":54.5,
+            "points":62.4,
             "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/2747.jpg",
             "is_champion":false
           }
@@ -7545,11 +7543,11 @@
           }
         ]
       },
-      "waiver_moves":154,
+      "waiver_moves":157,
       "waiver_moves_by_season":[
         {
           "season":"2026",
-          "count":8
+          "count":11
         },
         {
           "season":"2025",
@@ -7611,9 +7609,9 @@
         "week":5
       },
       "low_week":{
-        "points":63.19,
-        "season":"2024",
-        "week":7
+        "points":12.65,
+        "season":"2026",
+        "week":6
       },
       "high_player_week":{
         "points":47.45,
@@ -7634,12 +7632,12 @@
         "ties":0
       },
       "win_pct_rank":5,
-      "waiver_moves_rank":6,
+      "waiver_moves_rank":5,
       "trades_rank":6,
       "all_time_points_rank":3,
       "avg_placement_rank":6,
       "high_week_rank":1,
-      "low_week_rank":5,
+      "low_week_rank":2,
       "high_player_week_rank":11
     },
     "QUIZ_SCORES":[
@@ -7662,8 +7660,8 @@
     "Week 2 Waiver":1,
     "Week 3 Waiver":1,
     "Week 4 Waiver":2,
-    "Week 5 Waiver":2,
-    "INJURY_COUNT":4,
+    "Week 5 Waiver":4,
+    "INJURY_COUNT":6,
     "DISPLAY_WEEK_LABEL":"Woche 5"
   },
   {
@@ -7679,8 +7677,8 @@
     "TREND":"UP",
     "Trend Percentage":157.2,
     "QB Strength":61,
-    "RB Strength":74,
-    "WR Strength":48,
+    "RB Strength":76,
+    "WR Strength":38,
     "TE Strength":100,
     "K Strength":92,
     "QB Strength Count":1,
@@ -7688,7 +7686,7 @@
     "WR Strength Count":2,
     "TE Strength Count":2,
     "K Strength Count":1,
-    "Bench Strength":72,
+    "Bench Strength":81,
     "Bench Strength Count":3,
     "QB":[
       {
@@ -7721,30 +7719,30 @@
         "in_strength":true
       },
       {
-        "name":"Ashton Jeanty",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12527.jpg",
-        "total_pts":73.6,
-        "att":88,
-        "yd":291,
-        "ypc":3.3,
-        "td":2,
-        "my_guy":false,
-        "my_guy_seasons":1,
-        "in_bank":false,
-        "in_strength":true
-      },
-      {
-        "name":"Mike Washington",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/13305.jpg",
-        "total_pts":19.9,
-        "att":25,
-        "yd":125,
-        "ypc":5.0,
-        "td":1,
+        "name":"Kaelon Black",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/13414.jpg",
+        "total_pts":14.6,
+        "att":37,
+        "yd":136,
+        "ypc":3.7,
+        "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
         "in_strength":false
+      },
+      {
+        "name":"Christian McCaffrey",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/4034.jpg",
+        "total_pts":81.8,
+        "att":61,
+        "yd":286,
+        "ypc":4.7,
+        "td":5,
+        "my_guy":false,
+        "my_guy_seasons":1,
+        "in_bank":false,
+        "in_strength":true
       },
       {
         "name":"Saquon Barkley",
@@ -7771,6 +7769,19 @@
         "my_guy_seasons":1,
         "in_bank":false,
         "in_strength":true
+      },
+      {
+        "name":"Rachaad White",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/8136.jpg",
+        "total_pts":28.1,
+        "att":29,
+        "yd":118,
+        "ypc":4.1,
+        "td":1,
+        "my_guy":false,
+        "my_guy_seasons":1,
+        "in_bank":true,
+        "in_strength":false
       }
     ],
     "WR":[
@@ -7801,30 +7812,17 @@
         "in_strength":false
       },
       {
-        "name":"Tetairoa McMillan",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12526.jpg",
-        "total_pts":61.5,
-        "targets":39,
-        "catches":26,
-        "yd":385,
-        "td":2,
+        "name":"Luther Burden",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12519.jpg",
+        "total_pts":44.3,
+        "targets":35,
+        "catches":23,
+        "yd":266,
+        "td":1,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
         "in_strength":true
-      },
-      {
-        "name":"Tyreek Hill",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/3321.jpg",
-        "total_pts":0,
-        "targets":0,
-        "catches":0,
-        "yd":0,
-        "td":0,
-        "my_guy":false,
-        "my_guy_seasons":2,
-        "in_bank":false,
-        "in_strength":false
       },
       {
         "name":"Alec Pierce",
@@ -7836,7 +7834,7 @@
         "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
-        "in_bank":true,
+        "in_bank":false,
         "in_strength":false
       },
       {
@@ -7894,6 +7892,19 @@
         "my_guy_seasons":1,
         "in_bank":false,
         "in_strength":true
+      },
+      {
+        "name":"Dominic Zvada",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/13833.jpg",
+        "total_pts":48.0,
+        "fgm":11,
+        "fga":14,
+        "xpm":8,
+        "xpa":8,
+        "my_guy":false,
+        "my_guy_seasons":1,
+        "in_bank":false,
+        "in_strength":false
       }
     ],
     "DEF":[
@@ -8000,17 +8011,17 @@
       "outcome":"Sieg"
     },
     "THIS_WEEK_OPPONENT":"Robinson Corum Adventures",
-    "THIS_WEEK_WIN_PROB":39.6,
+    "THIS_WEEK_WIN_PROB":56.2,
     "POWER RANK":1,
     "Power Rank Score":2.43,
     "LAST_WEEK_POWER_RANK":2,
     "POWER_RANK_DELTA":1,
     "QB Strength Rank":12,
     "RB Strength Rank":5,
-    "WR Strength Rank":10,
+    "WR Strength Rank":12,
     "TE Strength Rank":1,
     "K Strength Rank":2,
-    "Bench Strength Rank":10,
+    "Bench Strength Rank":9,
     "TREND Rank":1,
     "Average Points Rank":3,
     "BADGES":[
@@ -8033,10 +8044,15 @@
         "icon":"shield",
         "label":"Defense wins Championships",
         "description":"Die Defense war mit 19.75 Punkten besser als jeden Running Back (12.1 Pkt.)."
+      },
+      {
+        "icon":"ruin",
+        "label":"Ärmstes Team",
+        "description":"Nur noch 27 FAAB übrig - Waiver-Wire-Bettler."
       }
     ],
-    "COMMENTS":"Getragen von zwei Panthers und dem Vikings Kicker, hat Sven wieder den Sprung nach oben geschafft. Panthers und Vikings Kicker. Historische Fantasy Liabilities. Wieder ein Zeichen für den Umschwung in der Liga.\nDie Panthers sind der neue heiße Scheiß, aber die diese Woche im Bye. Deswegen packt Sven eine Flex Kombo der Superlative aus: Shipley und Likely. Wow. Aber ich hab schon schlimmeres gesehen. \nIch spüre eine dominante Performance der wahnsinnig teuren Texans Defense, aktuell D\/ST #20, gegen die dreckigen Titans. Wenn die hier keine 15 Punkte abliefern, sollte Sven sich vielleicht mal nach einer anderen Truppe umschauen.",
-    "FAAB_REMAINING":54,
+    "COMMENTS":"Absurde Performances haben Svens Truppe letzte Woche getragen. Likely mit 27 Punkten und die Texans mit knapp 20. Aber die Texans spielen nicht jede Woche gegen Cam Ward. Nein, diese Woche spielen sie gegen seinen QB. EIn Conflict of Interest wartet heute Nachmittag auf Sven. Guckt sich immer am besten.\nAber das dürfte nicht Svens größtes Problem sein. Sein MVP, der Scoring Leader der NFL, Will fucking Reichard fehlt. Bei näherer Betrachtung von Svens Team, wenn man sich mal die Graphen und letzten Performances anschaut, dann macht Sven einen Großteil seiner Punkte mit den folgenden Postions: K, D\/ST und TE. \nIch bin gespannt ob das so weiter geht. CMC statt Jeanty kann definitv nicht schaden. ",
+    "FAAB_REMAINING":27,
     "LEGACY_STATS":{
       "win_pct":47.5,
       "wins":38,
@@ -8296,11 +8312,11 @@
           }
         ]
       },
-      "waiver_moves":113,
+      "waiver_moves":115,
       "waiver_moves_by_season":[
         {
           "season":"2026",
-          "count":10
+          "count":12
         },
         {
           "season":"2025",
@@ -8315,8 +8331,12 @@
           "count":34
         }
       ],
-      "trades":6,
+      "trades":7,
       "trades_by_season":[
+        {
+          "season":"2026",
+          "count":1
+        },
         {
           "season":"2025",
           "count":1
@@ -8384,7 +8404,7 @@
     "QUIZ_SCORES":[
       {
         "name":"Sven",
-        "score":2
+        "score":3
       }
     ],
     "Week 1":159.6,
@@ -8401,8 +8421,8 @@
     "Week 2 Waiver":1,
     "Week 3 Waiver":5,
     "Week 4 Waiver":1,
-    "Week 5 Waiver":2,
-    "INJURY_COUNT":3,
+    "Week 5 Waiver":3,
+    "INJURY_COUNT":2,
     "DISPLAY_WEEK_LABEL":"Woche 5"
   },
   {
@@ -8427,7 +8447,7 @@
     "WR Strength Count":3,
     "TE Strength Count":1,
     "K Strength Count":1,
-    "Bench Strength":80,
+    "Bench Strength":89,
     "Bench Strength Count":3,
     "QB":[
       {
@@ -8515,12 +8535,12 @@
         "in_strength":true
       },
       {
-        "name":"Malachi Fields",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/13285.jpg",
-        "total_pts":25.6,
-        "targets":17,
-        "catches":10,
-        "yd":146,
+        "name":"Keenan Allen",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/1479.jpg",
+        "total_pts":29.5,
+        "targets":29,
+        "catches":18,
+        "yd":145,
         "td":1,
         "my_guy":false,
         "my_guy_seasons":1,
@@ -8728,7 +8748,7 @@
       "outcome":"Sieg"
     },
     "THIS_WEEK_OPPONENT":"Schlemmerfilet Bortleaise",
-    "THIS_WEEK_WIN_PROB":46.6,
+    "THIS_WEEK_WIN_PROB":59.5,
     "POWER RANK":2,
     "Power Rank Score":2.58,
     "LAST_WEEK_POWER_RANK":1,
@@ -8738,7 +8758,7 @@
     "WR Strength Rank":7,
     "TE Strength Rank":6,
     "K Strength Rank":4,
-    "Bench Strength Rank":7,
+    "Bench Strength Rank":4,
     "TREND Rank":2,
     "Average Points Rank":1,
     "BADGES":[
@@ -8768,8 +8788,8 @@
         "description":"Die Defense war mit 19.0 Punkten besser als jeden Wide Receiver (17.05 Pkt.)."
       }
     ],
-    "COMMENTS":"Er hat nicht nur schnell gedraftet, er hat auch noch gut gedraftet. Zwei monströse Performances machen den Sandmann zur neuen Nummer 1. Ich denke das sollte niemanden überraschen.\nIch würde den plötzlichen Erfolg an 3 Faktoren festmachen:Brock Purdy spielt auf MVP Level, George Kittle hat schon vergessen, dass er sich die Achillessehne gerissen hatte, und Drake London wird endlich von Penix mit Targets übersäht.\nAußerdem hat Kyren Williams in jedem Spiel mehr Punkte gemacht als in dem davor. Diese Woche also 40? oder gehts wieder bei 14 los?\nFreut mich das der Peter solche Erfolge bei uns in der Liga feiern kann, aber das reicht dann auch. Jetzt bitte wieder 120.\n",
-    "FAAB_REMAINING":83,
+    "COMMENTS":"Peter hat sehr gute Performances in der letzten drei Wochen hingelegt. Der Trend zeigt aber leicht nach unten. 148? Peter machts nurnoch über 170. Alles andere ist totales Versagen. Leider kommen jetzt die ersten Byes. Aber ich glaube das wird kein Problem sein und Peter ist Dank Monster Performances Brock Purdy und George Kittle wieder bei seinen üblichen 170 Punkten. Die Projection am Sonntag Morgen ist ja schon bei knapp 160. Hauptsache Drake London lässt meine Bears in Ruhe.\n",
+    "FAAB_REMAINING":78,
     "LEGACY_STATS":{
       "win_pct":47.0,
       "wins":31,
@@ -8922,9 +8942,9 @@
             "is_champion":false
           },
           {
-            "name":"Kansas City Chiefs",
-            "points":34.0,
-            "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/kc.png",
+            "name":"Denver Broncos",
+            "points":45.8,
+            "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/den.png",
             "is_champion":false
           }
         ],
@@ -9025,11 +9045,11 @@
           }
         ]
       },
-      "waiver_moves":29,
+      "waiver_moves":30,
       "waiver_moves_by_season":[
         {
           "season":"2026",
-          "count":5
+          "count":6
         },
         {
           "season":"2025",
@@ -9060,9 +9080,9 @@
         "week":7
       },
       "low_week":{
-        "points":55.77,
-        "season":"2025",
-        "week":17
+        "points":14.25,
+        "season":"2026",
+        "week":6
       },
       "high_player_week":{
         "points":51.9,
@@ -9088,7 +9108,7 @@
       "all_time_points_rank":12,
       "avg_placement_rank":12,
       "high_week_rank":10,
-      "low_week_rank":2,
+      "low_week_rank":3,
       "high_player_week_rank":5
     },
     "QUIZ_SCORES":[
@@ -9111,7 +9131,7 @@
     "Week 2 Waiver":1,
     "Week 3 Waiver":0,
     "Week 4 Waiver":3,
-    "Week 5 Waiver":1,
+    "Week 5 Waiver":2,
     "INJURY_COUNT":3,
     "DISPLAY_WEEK_LABEL":"Woche 5"
   }
