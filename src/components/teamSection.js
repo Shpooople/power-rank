@@ -422,6 +422,7 @@ const TeamSection = ({ team, anchorId }) => {
     "Bench Strength Rank": benchRank,
     "Bench Strength Count": benchCount,
     "STARTER_POINTS_BY_POS": starterPoints,
+    "TEAM_STATS": teamStats,
     "COMMENTS": comment,
     // NEU: Prediction-Quiz-Scores (Biggest Football Brain Contest) - Array
     // aus {name, score}, ein Eintrag pro Person (auch bei Co-Owner-Teams
@@ -468,6 +469,17 @@ const TeamSection = ({ team, anchorId }) => {
   const hasStarterPoints = !!starterPoints && RADAR_POSITIONS.every((pos) => starterPoints[pos]);
   const radarNorm = hasStarterPoints ? RADAR_POSITIONS.map((pos) => starterPoints[pos].norm) : [];
   const radarPts = hasStarterPoints ? RADAR_POSITIONS.map((pos) => starterPoints[pos].pts) : [];
+  // NEU: 2x2-Kennzahlen neben dem Radar (Zahl groß, Titel klein, Rang darunter)
+  const fmtStat = (v, digits = 1) =>
+    v == null ? '–' : Number(v).toLocaleString('de-DE', { minimumFractionDigits: digits, maximumFractionDigits: digits });
+  const statTiles = teamStats
+    ? [
+        { key: 'pf', label: 'Points scored', value: fmtStat(teamStats.pf?.value), rank: teamStats.pf?.rank },
+        { key: 'pa', label: 'Points against', value: fmtStat(teamStats.pa?.value), rank: teamStats.pa?.rank },
+        { key: 'max', label: 'Max points for', value: fmtStat(teamStats.max?.value), rank: teamStats.max?.rank },
+        { key: 'acc', label: 'Start/Sit accuracy', value: `${fmtStat(teamStats.acc?.value)} %`, rank: teamStats.acc?.rank },
+      ]
+    : [];
   const radarRanks = hasStarterPoints ? RADAR_POSITIONS.map((pos) => starterPoints[pos].rank) : [];
 
   // NEU: Balken wachsen + Linie "fährt" sichtbar von Punkt zu Punkt, sobald
@@ -692,7 +704,7 @@ const TeamSection = ({ team, anchorId }) => {
           {/* Positionsstärke als farbcodierter Bar-Chart - nur wenn Daten vorhanden (fehlt bei historischen Wochen) */}
           <div className="strength-column">
           {hasStrengthData && (
-          <div className="chart-touch-wrapper">
+          <div className="chart-touch-wrapper chart-strength">
             <Plot
               useResizeHandler={true}
               style={{ width: '100%', height: '100%' }}
@@ -778,7 +790,7 @@ const TeamSection = ({ team, anchorId }) => {
           )}
           {/* Radar: Punkte pro Position (nur Starter, ganze Saison) - direkt unter der Teamstärke */}
           {hasStarterPoints && (
-          <div className="chart-touch-wrapper">
+          <div className="chart-touch-wrapper chart-radar">
             <Plot
               useResizeHandler={true}
               style={{ width: '100%', height: '100%' }}
@@ -859,8 +871,20 @@ const TeamSection = ({ team, anchorId }) => {
           </div>
           )}
           </div>
+          {/* 2x2-Kennzahlen: Mobile direkt unter dem Radar, Desktop rechts daneben */}
+          {statTiles.length > 0 && (
+            <div className="team-stats-grid">
+              {statTiles.map((t) => (
+                <div className="team-stat-tile" key={t.key}>
+                  <div className="team-stat-label">{t.label}</div>
+                  <div className="team-stat-value">{t.value}</div>
+                  {t.rank != null && <div className="team-stat-rank">Rang {t.rank}</div>}
+                </div>
+              ))}
+            </div>
+          )}
           {/* Line Chart */}
-          <div className="chart-touch-wrapper">
+          <div className="chart-touch-wrapper chart-line">
             <Plot
               useResizeHandler={true}
               style={{ width: '100%', height: '100%' }}
