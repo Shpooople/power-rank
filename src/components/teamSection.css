@@ -278,6 +278,13 @@
 
 /* NEU: verhindert, dass ein Scroll-Swipe auf einem Chart als Drag/Zoom-Geste
    abgefangen wird - der Browser übernimmt vertikales Scrollen direkt */
+.strength-column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
 .chart-touch-wrapper {
   touch-action: pan-y;
   width: 100%;
