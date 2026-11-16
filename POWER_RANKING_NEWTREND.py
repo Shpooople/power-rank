@@ -1649,6 +1649,43 @@ def optimal_lineup_points(team, match_entry):
 
     return total
 
+# --- NEU: Saison-Kennzahlen fürs Frontend (2x2-Kacheln neben dem Radar) ---
+# Max Points For = Summe der bestmöglichen Aufstellungen aller Wochen (gleiche
+# Greedy-Näherung wie "Perfektes Lineup"), Start/Sit Accuracy = tatsächliche
+# Starterpunkte / Max Points For. Rang 1 = bester Wert der Liga; bei Points
+# Against ist Rang 1 = WENIGSTE Gegenpunkte.
+_season_actual, _season_max = [], []
+for team in rosters:
+    _act, _opt = 0.0, 0.0
+    for _wk in weeks:
+        _me = next((m for m in (all_week_matchups.get(_wk) or []) if m['roster_id'] == team['roster_id']), None)
+        if not _me:
+            continue
+        _ppw = _me.get('players_points', {}) or {}
+        _wk_act = sum((_ppw.get(pid, 0) or 0) for pid in (_me.get('starters') or []) if pid and pid != '0')
+        _wk_opt = optimal_lineup_points(team, _me) or 0
+        _act += _wk_act
+        _opt += max(_wk_opt, _wk_act)  # Greedy-Näherung darf die echte Aufstellung nicht unterbieten
+    _season_actual.append(_act)
+    _season_max.append(_opt)
+
+_stats_df = pd.DataFrame({
+    "pf": df["Points For"].astype(float),
+    "pa": df["Points Against"].astype(float),
+    "max": _season_max,
+    "acc": [min(a / m * 100, 100) if m > 0 else 0 for a, m in zip(_season_actual, _season_max)],
+})
+_stats_rank = {
+    "pf": _stats_df["pf"].rank(ascending=False, method='min'),
+    "pa": _stats_df["pa"].rank(ascending=True, method='min'),
+    "max": _stats_df["max"].rank(ascending=False, method='min'),
+    "acc": _stats_df["acc"].rank(ascending=False, method='min'),
+}
+df["TEAM_STATS"] = [
+    {k: {"value": round(float(_stats_df[k].iloc[i]), 1), "rank": int(_stats_rank[k].iloc[i])} for k in _stats_df.columns}
+    for i in range(len(df))
+]
+
 lineup_efficiency_candidates = []
 for i, team in enumerate(rosters):
     match_entry = None
