@@ -1050,7 +1050,7 @@
       "outcome":"Sieg"
     },
     "THIS_WEEK_OPPONENT":"Robinson Corum Adventures",
-    "THIS_WEEK_WIN_PROB":53.8,
+    "THIS_WEEK_WIN_PROB":53.6,
     "POWER RANK":4,
     "Power Rank Score":5.52,
     "LAST_WEEK_POWER_RANK":1,
@@ -1063,6 +1063,24 @@
     "Bench Strength Rank":1,
     "TREND Rank":8,
     "Average Points Rank":3,
+    "TEAM_STATS":{
+      "pf":{
+        "value":1211.0,
+        "rank":3
+      },
+      "pa":{
+        "value":1098.0,
+        "rank":3
+      },
+      "max":{
+        "value":1351.5,
+        "rank":2
+      },
+      "acc":{
+        "value":89.7,
+        "rank":10
+      }
+    },
     "BADGES":[
       {
         "icon":"homer",
@@ -2641,7 +2659,7 @@
       "outcome":"Sieg"
     },
     "THIS_WEEK_OPPONENT":"Schlemmerfilet Bortleaise",
-    "THIS_WEEK_WIN_PROB":46.2,
+    "THIS_WEEK_WIN_PROB":46.4,
     "POWER RANK":8,
     "Power Rank Score":7.18,
     "LAST_WEEK_POWER_RANK":11,
@@ -2654,6 +2672,24 @@
     "Bench Strength Rank":12,
     "TREND Rank":3,
     "Average Points Rank":10,
+    "TEAM_STATS":{
+      "pf":{
+        "value":1063.0,
+        "rank":10
+      },
+      "pa":{
+        "value":1141.0,
+        "rank":6
+      },
+      "max":{
+        "value":1166.2,
+        "rank":9
+      },
+      "acc":{
+        "value":91.2,
+        "rank":7
+      }
+    },
     "BADGES":[
       {
         "icon":"homer",
@@ -4182,10 +4218,28 @@
     "RB Strength Rank":3,
     "WR Strength Rank":10,
     "TE Strength Rank":3,
-    "K Strength Rank":6,
+    "K Strength Rank":7,
     "Bench Strength Rank":6,
     "TREND Rank":9,
     "Average Points Rank":4,
+    "TEAM_STATS":{
+      "pf":{
+        "value":1189.0,
+        "rank":4
+      },
+      "pa":{
+        "value":1221.0,
+        "rank":11
+      },
+      "max":{
+        "value":1307.4,
+        "rank":4
+      },
+      "acc":{
+        "value":91.0,
+        "rank":8
+      }
+    },
     "BADGES":[
       {
         "icon":"bench",
@@ -4624,7 +4678,7 @@
     "RB Strength":85,
     "WR Strength":37,
     "TE Strength":59,
-    "K Strength":83,
+    "K Strength":96,
     "QB Strength Count":1,
     "RB Strength Count":4,
     "WR Strength Count":2,
@@ -5407,36 +5461,36 @@
     ],
     "K":[
       {
-        "name":"Chris Boswell",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/1945.jpg",
-        "total_pts":77.0,
-        "games":8,
-        "ppg":9.6,
+        "name":"Chase McLaughlin",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/6650.jpg",
+        "total_pts":99.0,
+        "games":9,
+        "ppg":11.0,
         "week_log":[
           {
             "week":1,
             "status":"gp",
-            "pts":8.0
+            "pts":11.0
           },
           {
             "week":2,
             "status":"gp",
-            "pts":4.0
+            "pts":16.0
           },
           {
             "week":3,
             "status":"gp",
-            "pts":13.0
+            "pts":12.0
           },
           {
             "week":4,
             "status":"gp",
-            "pts":3.0
+            "pts":2.0
           },
           {
             "week":5,
             "status":"gp",
-            "pts":13.0
+            "pts":7.0
           },
           {
             "week":6,
@@ -5446,18 +5500,23 @@
           {
             "week":7,
             "status":"gp",
-            "pts":11.0
+            "pts":12.0
           },
           {
             "week":8,
             "status":"gp",
-            "pts":8.0
+            "pts":12.0
+          },
+          {
+            "week":9,
+            "status":"gp",
+            "pts":10.0
           }
         ],
-        "fgm":18,
-        "fga":23,
-        "xpm":16,
-        "xpa":16,
+        "fgm":22,
+        "fga":22,
+        "xpm":18,
+        "xpa":18,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
@@ -5622,22 +5681,34 @@
     "RB Strength Rank":2,
     "WR Strength Rank":12,
     "TE Strength Rank":6,
-    "K Strength Rank":6,
+    "K Strength Rank":5,
     "Bench Strength Rank":9,
     "TREND Rank":7,
     "Average Points Rank":9,
+    "TEAM_STATS":{
+      "pf":{
+        "value":1087.0,
+        "rank":9
+      },
+      "pa":{
+        "value":1102.0,
+        "rank":4
+      },
+      "max":{
+        "value":1188.8,
+        "rank":8
+      },
+      "acc":{
+        "value":91.5,
+        "rank":6
+      }
+    },
     "BADGES":[
       {
         "icon":"homer",
         "label":"NO-Homer",
         "description":"5 Spieler von NO im Kader - eindeutig ein Fan.",
         "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/no.png"
-      },
-      {
-        "icon":"homer",
-        "label":"PIT-Homer",
-        "description":"3 Spieler von PIT im Kader - eindeutig ein Fan.",
-        "image_url":"https:\/\/sleepercdn.com\/images\/team_logos\/nfl\/pit.png"
       },
       {
         "icon":"superfan",
@@ -5662,7 +5733,7 @@
       }
     ],
     "COMMENTS":null,
-    "FAAB_REMAINING":48,
+    "FAAB_REMAINING":36,
     "LEGACY_STATS":{
       "win_pct":46.0,
       "wins":52,
@@ -5930,11 +6001,11 @@
           }
         ]
       },
-      "waiver_moves":200,
+      "waiver_moves":201,
       "waiver_moves_by_season":[
         {
           "season":"2026",
-          "count":15
+          "count":16
         },
         {
           "season":"2025",
@@ -7209,7 +7280,7 @@
       "outcome":"Niederlage"
     },
     "THIS_WEEK_OPPONENT":"Berlindianapolis Colts",
-    "THIS_WEEK_WIN_PROB":40.9,
+    "THIS_WEEK_WIN_PROB":41.3,
     "POWER RANK":9,
     "Power Rank Score":8.22,
     "LAST_WEEK_POWER_RANK":7,
@@ -7222,6 +7293,24 @@
     "Bench Strength Rank":2,
     "TREND Rank":11,
     "Average Points Rank":8,
+    "TEAM_STATS":{
+      "pf":{
+        "value":1104.0,
+        "rank":8
+      },
+      "pa":{
+        "value":1190.0,
+        "rank":9
+      },
+      "max":{
+        "value":1150.8,
+        "rank":10
+      },
+      "acc":{
+        "value":96.0,
+        "rank":2
+      }
+    },
     "BADGES":[
       {
         "icon":"rollercoaster",
@@ -8756,6 +8845,24 @@
     "Bench Strength Rank":10,
     "TREND Rank":1,
     "Average Points Rank":5,
+    "TEAM_STATS":{
+      "pf":{
+        "value":1132.0,
+        "rank":5
+      },
+      "pa":{
+        "value":1128.0,
+        "rank":5
+      },
+      "max":{
+        "value":1272.2,
+        "rank":6
+      },
+      "acc":{
+        "value":89.0,
+        "rank":11
+      }
+    },
     "BADGES":[
       {
         "icon":"homer",
@@ -10252,10 +10359,28 @@
     "RB Strength Rank":12,
     "WR Strength Rank":2,
     "TE Strength Rank":12,
-    "K Strength Rank":5,
+    "K Strength Rank":6,
     "Bench Strength Rank":8,
     "TREND Rank":10,
     "Average Points Rank":12,
+    "TEAM_STATS":{
+      "pf":{
+        "value":1042.0,
+        "rank":12
+      },
+      "pa":{
+        "value":975.0,
+        "rank":1
+      },
+      "max":{
+        "value":1084.1,
+        "rank":12
+      },
+      "acc":{
+        "value":96.2,
+        "rank":1
+      }
+    },
     "BADGES":[
       {
         "icon":"footboot",
@@ -11749,6 +11874,24 @@
     "Bench Strength Rank":3,
     "TREND Rank":5,
     "Average Points Rank":6,
+    "TEAM_STATS":{
+      "pf":{
+        "value":1128.0,
+        "rank":6
+      },
+      "pa":{
+        "value":1168.0,
+        "rank":8
+      },
+      "max":{
+        "value":1283.6,
+        "rank":5
+      },
+      "acc":{
+        "value":87.9,
+        "rank":12
+      }
+    },
     "BADGES":[
       {
         "icon":"egg",
@@ -13292,7 +13435,7 @@
       "outcome":"Niederlage"
     },
     "THIS_WEEK_OPPONENT":"pk123",
-    "THIS_WEEK_WIN_PROB":59.1,
+    "THIS_WEEK_WIN_PROB":58.7,
     "POWER RANK":11,
     "Power Rank Score":8.78,
     "LAST_WEEK_POWER_RANK":6,
@@ -13305,6 +13448,24 @@
     "Bench Strength Rank":6,
     "TREND Rank":12,
     "Average Points Rank":7,
+    "TEAM_STATS":{
+      "pf":{
+        "value":1106.0,
+        "rank":7
+      },
+      "pa":{
+        "value":1190.0,
+        "rank":9
+      },
+      "max":{
+        "value":1229.3,
+        "rank":7
+      },
+      "acc":{
+        "value":90.0,
+        "rank":9
+      }
+    },
     "BADGES":[
       {
         "icon":"falling",
@@ -14827,6 +14988,24 @@
     "Bench Strength Rank":5,
     "TREND Rank":2,
     "Average Points Rank":11,
+    "TEAM_STATS":{
+      "pf":{
+        "value":1056.0,
+        "rank":11
+      },
+      "pa":{
+        "value":1227.0,
+        "rank":12
+      },
+      "max":{
+        "value":1132.8,
+        "rank":11
+      },
+      "acc":{
+        "value":93.3,
+        "rank":4
+      }
+    },
     "BADGES":[
       {
         "icon":"hospital",
@@ -16407,6 +16586,24 @@
     "Bench Strength Rank":11,
     "TREND Rank":6,
     "Average Points Rank":1,
+    "TEAM_STATS":{
+      "pf":{
+        "value":1270.0,
+        "rank":1
+      },
+      "pa":{
+        "value":1147.0,
+        "rank":7
+      },
+      "max":{
+        "value":1352.9,
+        "rank":1
+      },
+      "acc":{
+        "value":93.9,
+        "rank":3
+      }
+    },
     "BADGES":[
       {
         "icon":"homer",
@@ -17837,6 +18034,24 @@
     "Bench Strength Rank":4,
     "TREND Rank":4,
     "Average Points Rank":2,
+    "TEAM_STATS":{
+      "pf":{
+        "value":1237.0,
+        "rank":2
+      },
+      "pa":{
+        "value":1038.0,
+        "rank":2
+      },
+      "max":{
+        "value":1349.2,
+        "rank":3
+      },
+      "acc":{
+        "value":91.7,
+        "rank":5
+      }
+    },
     "BADGES":[
       {
         "icon":"homer",
