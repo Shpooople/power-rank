@@ -276,8 +276,6 @@
   box-sizing: border-box;
 }
 
-/* NEU: verhindert, dass ein Scroll-Swipe auf einem Chart als Drag/Zoom-Geste
-   abgefangen wird - der Browser übernimmt vertikales Scrollen direkt */
 .strength-column {
   display: flex;
   flex-direction: column;
@@ -285,10 +283,54 @@
   width: 100%;
 }
 
+/* NEU: verhindert, dass ein Scroll-Swipe auf einem Chart als Drag/Zoom-Geste
+   abgefangen wird - der Browser übernimmt vertikales Scrollen direkt */
 .chart-touch-wrapper {
   touch-action: pan-y;
   width: 100%;
   height: 350px;
+}
+
+/* NEU: 2x2-Kennzahlen (Points scored, Points against, Max points for, Start/Sit accuracy) */
+.team-stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 1fr;
+  gap: 12px;
+  width: 100%;
+  height: 350px;
+}
+
+.team-stat-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 8px;
+  background-color: var(--color-surface-alt);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.team-stat-label {
+  font-size: 0.85rem;
+  font-weight: normal;
+  color: var(--color-text-muted);
+}
+
+.team-stat-value {
+  margin: 4px 0 2px;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.1;
+  color: var(--color-text);
+}
+
+.team-stat-rank {
+  font-size: 0.8rem;
+  color: var(--color-accent);
 }
 
 .trend-up {
@@ -861,16 +903,24 @@
 
 /* For larger screens: Charts nebeneinander, Roster als horizontales Grid */
 @media (min-width: 768px) {
+  /* Desktop: 2 Spalten - links Teamstärke + Radar, rechts Saisonverlauf +
+     2x2-Kennzahlen (neben dem Radar). Mobile bleibt eine Spalte in der
+     DOM-Reihenfolge: Teamstärke, Radar, Kennzahlen, Saisonverlauf. */
   .charts-container {
-    flex-direction: row;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
     gap: 24px;
   }
 
-  .charts-container > * {
-    flex: 1 1 0;
-    min-width: 0;
+  .strength-column {
+    display: contents;
   }
+
+  .chart-strength { grid-column: 1; grid-row: 1; }
+  .chart-radar { grid-column: 1; grid-row: 2; }
+  .chart-line { grid-column: 2; grid-row: 1; }
+  .team-stats-grid { grid-column: 2; grid-row: 2; }
 
   .team-roster .collapsible-content {
     display: grid;
