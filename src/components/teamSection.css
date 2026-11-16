@@ -330,7 +330,7 @@
 
 .team-stat-rank {
   font-size: 0.8rem;
-  color: var(--color-accent);
+  color: var(--color-text-muted);
 }
 
 .trend-up {
