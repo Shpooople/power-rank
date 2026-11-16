@@ -114,6 +114,10 @@ using_previous_season_chart_data = season_type != "regular"
 # Spieler-IDs statt über (fehleranfällige) Namensvergleiche.
 games_played_by_player = {}
 total_points_by_player = {}
+# NEU: pro Spieler und Woche protokollieren, WARUM eine Woche als verfügbar
+# bzw. als Ausfall gezählt wurde (Diagnose für die Bankstärke).
+# Eintrag: (woche, status, punkte) mit status = "gp" | "aktivitaet" | "ausfall" | "bye"
+week_log_by_player = {}
 
 # --- NEU: Rohstats für die Roster-Anzeige (Comp/Att, Yards, TDs etc.) ---
 # Werden in derselben Schleife mitgesammelt - kein zusätzlicher API-Call nötig.
@@ -163,6 +167,11 @@ for wk in weeks:
                 games_played_by_player[pid] = games_played_by_player.get(pid, 0) + 1
             pts = stats.get('pts_half_ppr', stats.get('pts_std', stats.get('pts_ppr', 0))) or 0
             total_points_by_player[pid] = total_points_by_player.get(pid, 0) + pts
+            if stats.get('gp') is not None:
+                _status = "gp" if played else "ausfall"
+            else:
+                _status = "aktivitaet" if played else "ausfall"
+            week_log_by_player.setdefault(pid, []).append((wk, _status, round(pts, 2)))
 
             player_season = season_stats_by_player.setdefault(pid, {k: 0 for k in SEASON_STAT_KEYS})
             for k in SEASON_STAT_KEYS:
@@ -175,6 +184,21 @@ def ppg(pid):
     if games <= 0:
         return 0
     return total_points_by_player.get(pid, 0) / games
+
+# --- NEU: Bank-Wert = Punkte pro VERFÜGBARER Woche ---
+# Verfügbar = Bye, Verletzung und Inactive zählen NICHT (die Woche fällt aus der
+# Rechnung), eine Woche mit 0,00 Punkten zählt dagegen als gespielt und senkt
+# den Schnitt. Wochen ohne Stats-Eintrag (Bye) tauchen im Log gar nicht auf.
+# Die Erkennung läuft über week_log_by_player (siehe oben), damit sie sich
+# später an einer Stelle anpassen lässt.
+def available_weeks(pid):
+    return sum(1 for _wk, status, _pts in week_log_by_player.get(pid, []) if status != "ausfall")
+
+def bank_value(pid):
+    weeks_avail = available_weeks(pid)
+    if weeks_avail <= 0:
+        return 0
+    return total_points_by_player.get(pid, 0) / weeks_avail
 
 # Helper function to calculate position strength based on points-per-game
 # --- NEU: Flexible Positionsstärke statt hardcoded Spieleranzahl ---
@@ -225,11 +249,16 @@ def calculate_flexible_strength(team_players_by_pos):
     # im Ernstfall (Verletzung eines Starters) einspringen könnte.
     flex_bench_candidates = sorted(
         (p for p in pool if p[0] not in used and p[1] in ("RB", "WR", "TE")),
-        key=lambda p: p[2], reverse=True
+        key=lambda p: bank_value(p[0]), reverse=True
     )
     top3 = flex_bench_candidates[:3]
-    bench_flex = (round(sum(p[2] for p in top3), 1), len(top3))
+    bench_flex = (round(sum(bank_value(p[0]) for p in top3), 1), len(top3))
     bank_pids = {p[0] for p in top3}
+    # Diagnose: Bankspieler mit Wochen-Log in den Actions-Log schreiben
+    for _pid, _pos, _ in top3:
+        print(f"[BANK] {_pid} ({_pos}): {round(total_points_by_player.get(_pid, 0), 2)} Pkt. / "
+              f"{available_weeks(_pid)} verfügbare Wochen = {round(bank_value(_pid), 2)} | "
+              f"{week_log_by_player.get(_pid, [])}")
 
     return starters, bench_flex, used, bank_pids
 
@@ -310,6 +339,9 @@ def build_roster_entries(ids, names, extra_stats_fn=None, image_url_fn=None, my_
             "name": player_name,
             "image_url": image_url,
             "total_pts": round(total_points_by_player.get(pid, 0), 1),
+            "games": available_weeks(pid),
+            "ppg": round(bank_value(pid), 1),
+            "week_log": [{"week": w, "status": st, "pts": p} for w, st, p in week_log_by_player.get(pid, [])],
         }
         if extra_stats_fn:
             entry.update(extra_stats_fn(pid))
@@ -356,6 +388,7 @@ weekly_points_against = {week: {} for week in weeks}
 weekly_waiver_moves = {week: {} for week in weeks}
 weekly_results_by_roster = {r['roster_id']: [] for r in rosters}  # 'W'/'L'/'T' pro Woche, für Serien-Badges
 current_week_matchups = None
+all_week_matchups = {}
 for week in weeks:
     url_matchups = f"https://api.sleeper.app/v1/league/{league_id}/matchups/{week}"
     response_matchups = requests.get(url_matchups)
@@ -363,6 +396,7 @@ for week in weeks:
 
     if week == current_week:
         current_week_matchups = matchups  # für Performer- & Gegner-Auswertung weiter unten
+    all_week_matchups[week] = matchups  # NEU: für "Punkte pro Position" (Starter, ganze Saison)
 
     week_points = {matchup['roster_id']: matchup['points'] for matchup in matchups}
     for team in rosters:
@@ -430,6 +464,40 @@ if _real_last_week < current_week:
     weekly_points = {w: weekly_points[w] for w in weeks}
     weekly_points_against = {w: weekly_points_against[w] for w in weeks}
     weekly_waiver_moves = {w: weekly_waiver_moves[w] for w in weeks}
+
+# --- NEU: Punkte pro Position (nur Starter, ganze Saison) ---
+# Summe der tatsächlich erzielten Punkte aller Spieler, die in der jeweiligen
+# Woche in der Startaufstellung standen (Bank zählt nicht). Die Position wird
+# über den Spieler selbst bestimmt - ein RB im FLEX-Slot zählt also zu RB.
+STARTER_POS_ORDER = ["QB", "RB", "WR", "TE", "K", "DEF"]
+starter_points_by_roster = {r['roster_id']: {pos: 0.0 for pos in STARTER_POS_ORDER} for r in rosters}
+for _wk in weeks:
+    for _m in (all_week_matchups.get(_wk) or []):
+        _rid = _m.get('roster_id')
+        if _rid not in starter_points_by_roster:
+            continue
+        _ppw = _m.get('players_points', {}) or {}
+        for _pid in (_m.get('starters') or []):
+            if not _pid or _pid == '0':
+                continue
+            _pos = players.get(_pid, {}).get('position')
+            if _pos in starter_points_by_roster[_rid]:
+                starter_points_by_roster[_rid][_pos] += _ppw.get(_pid, 0) or 0
+
+# Rang (1 = meiste Punkte der Liga auf dieser Position) und Radar-Wert
+# (0-100, bester Wert der Liga je Position = 100, damit QB mit ~400 Punkten
+# nicht die K mit ~100 Punkten optisch erdrückt).
+starter_points_summary = {}
+for _pos in STARTER_POS_ORDER:
+    _vals = {rid: pts[_pos] for rid, pts in starter_points_by_roster.items()}
+    _max = max(_vals.values()) if _vals else 0
+    _sorted = sorted(_vals.values(), reverse=True)
+    for rid, v in _vals.items():
+        starter_points_summary.setdefault(rid, {})[_pos] = {
+            "pts": round(v, 1),
+            "rank": _sorted.index(v) + 1,
+            "norm": round(v / _max * 100) if _max > 0 else 0,
+        }
 
 # --- NEU: Vorbereitung für Top/Flop-Performer, Benchwarmer, Gegner & Win-Probability ---
 
@@ -1203,6 +1271,7 @@ df = pd.DataFrame({
     "K Strength Count": k_strength_count,
     "Bench Strength": bench_flex_normalized,
     "Bench Strength Count": bench_flex_count,
+    "STARTER_POINTS_BY_POS": [starter_points_summary.get(r['roster_id']) for r in rosters],
     "QB": qb_list,
     "RB": rb_list,
     "WR": wr_list,
