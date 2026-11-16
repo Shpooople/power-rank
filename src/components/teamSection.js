@@ -421,6 +421,7 @@ const TeamSection = ({ team, anchorId }) => {
     "Bench Strength": benchStrength,
     "Bench Strength Rank": benchRank,
     "Bench Strength Count": benchCount,
+    "STARTER_POINTS_BY_POS": starterPoints,
     "COMMENTS": comment,
     // NEU: Prediction-Quiz-Scores (Biggest Football Brain Contest) - Array
     // aus {name, score}, ein Eintrag pro Person (auch bei Co-Owner-Teams
@@ -458,6 +459,16 @@ const TeamSection = ({ team, anchorId }) => {
   const hasStrengthData = strengthValues.some((v) => v != null);
 
   const barColors = strengthRanks.map(colorForRank);
+
+  // NEU: Radar "Punkte pro Position" - tatsächliche Saisonpunkte der Starter
+  // (ohne Bank). Radius = 0-100 relativ zum besten Team je Position, damit
+  // QB (viele Punkte) und K/DEF (wenige) vergleichbar bleiben; Hover zeigt
+  // die echten Punkte und den Liga-Rang.
+  const RADAR_POSITIONS = ['QB', 'RB', 'WR', 'TE', 'K', 'DEF'];
+  const hasStarterPoints = !!starterPoints && RADAR_POSITIONS.every((pos) => starterPoints[pos]);
+  const radarNorm = hasStarterPoints ? RADAR_POSITIONS.map((pos) => starterPoints[pos].norm) : [];
+  const radarPts = hasStarterPoints ? RADAR_POSITIONS.map((pos) => starterPoints[pos].pts) : [];
+  const radarRanks = hasStarterPoints ? RADAR_POSITIONS.map((pos) => starterPoints[pos].rank) : [];
 
   // NEU: Balken wachsen + Linie "fährt" sichtbar von Punkt zu Punkt, sobald
   // die Charts zum ersten Mal ins Bild scrollen (ein gemeinsamer Observer,
@@ -679,6 +690,7 @@ const TeamSection = ({ team, anchorId }) => {
 
         <div className="charts-container" ref={chartsContainerRef}>
           {/* Positionsstärke als farbcodierter Bar-Chart - nur wenn Daten vorhanden (fehlt bei historischen Wochen) */}
+          <div className="strength-column">
           {hasStrengthData && (
           <div className="chart-touch-wrapper">
             <Plot
@@ -764,6 +776,89 @@ const TeamSection = ({ team, anchorId }) => {
             />
           </div>
           )}
+          {/* Radar: Punkte pro Position (nur Starter, ganze Saison) - direkt unter der Teamstärke */}
+          {hasStarterPoints && (
+          <div className="chart-touch-wrapper">
+            <Plot
+              useResizeHandler={true}
+              style={{ width: '100%', height: '100%' }}
+              data={[
+                {
+                  type: 'scatterpolar',
+                  mode: 'lines+markers',
+                  // Linie schließen: ersten Punkt am Ende wiederholen
+                  theta: [...RADAR_POSITIONS, RADAR_POSITIONS[0]],
+                  r: [...radarNorm, radarNorm[0]].map((v) => (barsRevealed ? v : 0)),
+                  customdata: [...RADAR_POSITIONS, RADAR_POSITIONS[0]].map((_, i) => {
+                    const j = i % RADAR_POSITIONS.length;
+                    return [radarPts[j], radarRanks[j]];
+                  }),
+                  fill: 'toself',
+                  fillcolor: 'rgba(212, 166, 87, 0.25)',
+                  line: { color: CHART_COLORS.accent, width: 2 },
+                  marker: {
+                    size: 9,
+                    color: [...radarRanks, radarRanks[0]].map(colorForRank),
+                    line: { color: CHART_COLORS.surface, width: 1 }
+                  },
+                  hovertemplate: '<b>%{theta}</b><br>%{customdata[0]} Pkt. (Starter)<br>Rang %{customdata[1]} von 12<extra></extra>'
+                }
+              ]}
+              layout={{
+                paper_bgcolor: 'transparent',
+                plot_bgcolor: 'transparent',
+                dragmode: false,
+                hovermode: 'closest',
+                transition: { duration: 800, easing: 'cubic-in-out' },
+                hoverlabel: {
+                  bgcolor: CHART_COLORS.surface,
+                  bordercolor: CHART_COLORS.accent,
+                  font: { color: CHART_COLORS.text, family: 'Roboto, sans-serif', size: 13 }
+                },
+                title: {
+                  text: 'PUNKTE PRO POSITION',
+                  y: 0.95,
+                  yanchor: 'top',
+                  font: {
+                    family: 'Roboto, sans-serif',
+                    weight: 'bold',
+                    size: 16,
+                    color: CHART_COLORS.text
+                  }
+                },
+                polar: {
+                  bgcolor: 'transparent',
+                  radialaxis: {
+                    range: [0, 100],
+                    showticklabels: false,
+                    gridcolor: CHART_COLORS.grid,
+                    linecolor: CHART_COLORS.grid,
+                    ticks: ''
+                  },
+                  angularaxis: {
+                    gridcolor: CHART_COLORS.grid,
+                    linecolor: CHART_COLORS.grid,
+                    tickfont: {
+                      family: 'Roboto, sans-serif',
+                      size: 13,
+                      color: CHART_COLORS.text
+                    }
+                  }
+                },
+                showlegend: false,
+                height: 350,
+                margin: { l: 40, r: 40, t: 60, b: 30 },
+              }}
+              config={{
+                displayModeBar: false,
+                responsive: true,
+                scrollZoom: false,
+                doubleClick: false
+              }}
+            />
+          </div>
+          )}
+          </div>
           {/* Line Chart */}
           <div className="chart-touch-wrapper">
             <Plot
