@@ -877,7 +877,7 @@ const TeamSection = ({ team, anchorId }) => {
               {statTiles.map((t) => (
                 <div className="team-stat-tile" key={t.key}>
                   <div className="team-stat-label">{t.label}</div>
-                  <div className="team-stat-value">{t.value}</div>
+                  <div className="team-stat-value" style={t.rank != null ? { color: colorForRank(t.rank) } : undefined}>{t.value}</div>
                   {t.rank != null && <div className="team-stat-rank">Rang {t.rank}</div>}
                 </div>
               ))}
