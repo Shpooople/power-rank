@@ -15827,57 +15827,62 @@
         "in_strength":true
       },
       {
-        "name":"Chimere Dike",
-        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/12540.jpg",
-        "total_pts":19.9,
-        "games":8,
-        "ppg":2.5,
+        "name":"Ja'Kobi Lane",
+        "image_url":"https:\/\/sleepercdn.com\/content\/nfl\/players\/13293.jpg",
+        "total_pts":13.4,
+        "games":5,
+        "ppg":2.7,
         "week_log":[
           {
             "week":1,
             "status":"gp",
-            "pts":-0.8
+            "pts":1.6
           },
           {
             "week":2,
-            "status":"gp",
+            "status":"ausfall",
             "pts":0
           },
           {
             "week":3,
-            "status":"gp",
-            "pts":-1.2
+            "status":"ausfall",
+            "pts":0
           },
           {
             "week":4,
-            "status":"gp",
-            "pts":2.0
+            "status":"ausfall",
+            "pts":0
           },
           {
             "week":5,
-            "status":"gp",
-            "pts":4.3
+            "status":"ausfall",
+            "pts":0
           },
           {
             "week":6,
             "status":"gp",
-            "pts":0
+            "pts":6.0
           },
           {
             "week":7,
             "status":"gp",
-            "pts":0
+            "pts":4.0
           },
           {
             "week":8,
             "status":"gp",
-            "pts":15.6
+            "pts":1.8
+          },
+          {
+            "week":9,
+            "status":"gp",
+            "pts":0
           }
         ],
         "targets":14,
-        "catches":11,
-        "yd":124,
-        "td":1,
+        "catches":9,
+        "yd":89,
+        "td":0,
         "my_guy":false,
         "my_guy_seasons":1,
         "in_bank":false,
@@ -16686,11 +16691,11 @@
           }
         ]
       },
-      "waiver_moves":124,
+      "waiver_moves":125,
       "waiver_moves_by_season":[
         {
           "season":"2026",
-          "count":21
+          "count":22
         },
         {
           "season":"2025",
